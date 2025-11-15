@@ -34,7 +34,7 @@
 ---@field ToggleVoiceChat UBPAnvilKeyEntryWidget_C
 ---@field Upgrade UBPAnvilKeyEntryWidget_C
 ---@field UseInteract UBPAnvilKeyEntryWidget_C
-UBPOptionsMenuKeybindWidget_C = {}
+local UBPOptionsMenuKeybindWidget_C = {}
 
 
 

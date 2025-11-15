@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field ComboHorizontalBox UHorizontalBox
 ---@field LabelBorder UBorder
-UBPAnvilDropdownEntryWidget_C = {}
+local UBPAnvilDropdownEntryWidget_C = {}
 
 ---@param IsDesignTime boolean
 function UBPAnvilDropdownEntryWidget_C:PreConstruct(IsDesignTime) end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCoreWoodHard_C : UItemTemplate
-UCoreWoodHard_C = {}
+local UCoreWoodHard_C = {}
 
 

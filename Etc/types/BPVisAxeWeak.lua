@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisAxeWeak_C : UVisItem
-UBPVisAxeWeak_C = {}
+local UBPVisAxeWeak_C = {}
 
 

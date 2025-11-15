@@ -1,5 +1,5 @@
 ---@enum EPropertyValueCategory
-EPropertyValueCategory = {
+local EPropertyValueCategory = {
     Undefined = 0,
     Generic = 1,
     RelativeLocation = 2,

@@ -1,5 +1,5 @@
 ---@enum ELocalFileReplayResult
-ELocalFileReplayResult = {
+local ELocalFileReplayResult = {
     Success = 0,
     InvalidReplayInfo = 1,
     StreamChunkIndexMismatch = 2,

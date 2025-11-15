@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMapPost_C : UEntityTemplate
-UBPMapPost_C = {}
+local UBPMapPost_C = {}
 
 

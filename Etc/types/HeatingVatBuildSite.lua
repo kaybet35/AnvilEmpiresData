@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHeatingVatBuildSite_C : UBPBaseBuildSiteEntity_C
-UHeatingVatBuildSite_C = {}
+local UHeatingVatBuildSite_C = {}
 
 

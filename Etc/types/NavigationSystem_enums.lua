@@ -1,5 +1,5 @@
 ---@enum ENavCostDisplay
-ENavCostDisplay = {
+local ENavCostDisplay = {
     TotalCost = 0,
     HeuristicOnly = 1,
     RealCostOnly = 2,
@@ -7,7 +7,7 @@ ENavCostDisplay = {
 }
 
 ---@enum ENavSystemOverridePolicy
-ENavSystemOverridePolicy = {
+local ENavSystemOverridePolicy = {
     Override = 0,
     Append = 1,
     Skip = 2,
@@ -15,7 +15,7 @@ ENavSystemOverridePolicy = {
 }
 
 ---@enum ERecastPartitioning
-ERecastPartitioning = {
+local ERecastPartitioning = {
     Monotone = 0,
     Watershed = 1,
     ChunkyMonotone = 2,
@@ -23,7 +23,7 @@ ERecastPartitioning = {
 }
 
 ---@enum ERuntimeGenerationType
-ERuntimeGenerationType = {
+local ERuntimeGenerationType = {
     Static = 0,
     DynamicModifiersOnly = 1,
     Dynamic = 2,

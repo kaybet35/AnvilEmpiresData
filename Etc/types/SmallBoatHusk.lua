@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USmallBoatHusk_C : UEntityTemplate
-USmallBoatHusk_C = {}
+local USmallBoatHusk_C = {}
 
 

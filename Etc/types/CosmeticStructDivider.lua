@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCosmeticStructDivider_C : UBPBaseStructureEntity_C
-UCosmeticStructDivider_C = {}
+local UCosmeticStructDivider_C = {}
 
 

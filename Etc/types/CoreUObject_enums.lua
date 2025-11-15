@@ -1,9 +1,9 @@
 ---@enum Default__Enum
-Default__Enum = {
+local Default__Enum = {
 }
 
 ---@enum EAppMsgType
-EAppMsgType = {
+local EAppMsgType = {
     Ok = 0,
     YesNo = 1,
     OkCancel = 2,
@@ -16,7 +16,7 @@ EAppMsgType = {
 }
 
 ---@enum EAppReturnType
-EAppReturnType = {
+local EAppReturnType = {
     No = 0,
     Yes = 1,
     YesAll = 2,
@@ -29,7 +29,7 @@ EAppReturnType = {
 }
 
 ---@enum EAutomationEventType
-EAutomationEventType = {
+local EAutomationEventType = {
     Info = 0,
     Warning = 1,
     Error = 2,
@@ -37,7 +37,7 @@ EAutomationEventType = {
 }
 
 ---@enum EAxis
-EAxis = {
+local EAxis = {
     None = 0,
     X = 1,
     Y = 2,
@@ -46,7 +46,7 @@ EAxis = {
 }
 
 ---@enum EAxisList
-EAxisList = {
+local EAxisList = {
     None = 0,
     X = 1,
     Y = 2,
@@ -63,7 +63,7 @@ EAxisList = {
 }
 
 ---@enum EDataValidationResult
-EDataValidationResult = {
+local EDataValidationResult = {
     Invalid = 0,
     Valid = 1,
     NotValidated = 2,
@@ -71,7 +71,7 @@ EDataValidationResult = {
 }
 
 ---@enum EInputDeviceConnectionState
-EInputDeviceConnectionState = {
+local EInputDeviceConnectionState = {
     Invalid = 0,
     Unknown = 1,
     Disconnected = 2,
@@ -80,7 +80,7 @@ EInputDeviceConnectionState = {
 }
 
 ---@enum EInterpCurveMode
-EInterpCurveMode = {
+local EInterpCurveMode = {
     CIM_Linear = 0,
     CIM_CurveAuto = 1,
     CIM_Constant = 2,
@@ -91,7 +91,7 @@ EInterpCurveMode = {
 }
 
 ---@enum ELifetimeCondition
-ELifetimeCondition = {
+local ELifetimeCondition = {
     COND_None = 0,
     COND_InitialOnly = 1,
     COND_OwnerOnly = 2,
@@ -112,7 +112,7 @@ ELifetimeCondition = {
 }
 
 ---@enum ELocalizedTextSourceCategory
-ELocalizedTextSourceCategory = {
+local ELocalizedTextSourceCategory = {
     Game = 0,
     Engine = 1,
     Editor = 2,
@@ -120,7 +120,7 @@ ELocalizedTextSourceCategory = {
 }
 
 ---@enum ELogTimes
-ELogTimes = {
+local ELogTimes = {
     None = 0,
     UTC = 1,
     SinceGStartTime = 2,
@@ -129,7 +129,7 @@ ELogTimes = {
 }
 
 ---@enum EMouseCursor
-EMouseCursor = {
+local EMouseCursor = {
     None = 0,
     Default = 1,
     TextEditBeam = 2,
@@ -148,7 +148,7 @@ EMouseCursor = {
 }
 
 ---@enum EPixelFormat
-EPixelFormat = {
+local EPixelFormat = {
     PF_Unknown = 0,
     PF_A32B32G32R32F = 1,
     PF_B8G8R8A8 = 2,
@@ -234,7 +234,7 @@ EPixelFormat = {
 }
 
 ---@enum EPropertyAccessChangeNotifyMode
-EPropertyAccessChangeNotifyMode = {
+local EPropertyAccessChangeNotifyMode = {
     Default = 0,
     Never = 1,
     Always = 2,
@@ -242,7 +242,7 @@ EPropertyAccessChangeNotifyMode = {
 }
 
 ---@enum ERangeBoundTypes
-ERangeBoundTypes = {
+local ERangeBoundTypes = {
     Exclusive = 0,
     Inclusive = 1,
     Open = 2,
@@ -250,21 +250,21 @@ ERangeBoundTypes = {
 }
 
 ---@enum ESearchCase
-ESearchCase = {
+local ESearchCase = {
     CaseSensitive = 0,
     IgnoreCase = 1,
     ESearchCase_MAX = 2,
 }
 
 ---@enum ESearchDir
-ESearchDir = {
+local ESearchDir = {
     FromStart = 0,
     FromEnd = 1,
     ESearchDir_MAX = 2,
 }
 
 ---@enum EUnit
-EUnit = {
+local EUnit = {
     Micrometers = 0,
     Millimeters = 1,
     Centimeters = 2,

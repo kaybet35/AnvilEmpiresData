@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTorchProjectile_C : UEntityTemplate
-UTorchProjectile_C = {}
+local UTorchProjectile_C = {}
 
 

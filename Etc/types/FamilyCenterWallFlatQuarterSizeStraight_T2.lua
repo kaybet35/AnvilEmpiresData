@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterWallFlatQuarterSizeStraight_T2_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterWallFlatQuarterSizeStraight_T2_C = {}
+local UFamilyCenterWallFlatQuarterSizeStraight_T2_C = {}
 
 

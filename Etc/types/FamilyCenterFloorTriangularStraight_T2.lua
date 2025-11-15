@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterFloorTriangularStraight_T2_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterFloorTriangularStraight_T2_C = {}
+local UFamilyCenterFloorTriangularStraight_T2_C = {}
 
 

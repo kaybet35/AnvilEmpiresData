@@ -5,7 +5,7 @@
 ---@field BPVisFamilyMeshComponent1 UBPVisFamilyMeshComponent_C
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisResourceStockpileT2_C = {}
+local ABPVisResourceStockpileT2_C = {}
 
 
 

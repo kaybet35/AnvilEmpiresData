@@ -12,7 +12,7 @@
 ---@field TownWell4 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ---@field Scene USceneComponent
-APalisade01_C = {}
+local APalisade01_C = {}
 
 
 

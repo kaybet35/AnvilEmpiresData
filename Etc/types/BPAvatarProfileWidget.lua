@@ -2,7 +2,7 @@
 
 ---@class UBPAvatarProfileWidget_C : UAvatarProfileWidget
 ---@field ProfileButton UButton
-UBPAvatarProfileWidget_C = {}
+local UBPAvatarProfileWidget_C = {}
 
 
 

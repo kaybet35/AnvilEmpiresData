@@ -5,7 +5,7 @@
 ---@field Niagara UNiagaraComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisForge_C = {}
+local ABPVisForge_C = {}
 
 
 

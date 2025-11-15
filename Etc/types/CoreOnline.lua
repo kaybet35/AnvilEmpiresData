@@ -8,11 +8,11 @@
 ---@field bJoinViaPresenceFriendsOnly boolean
 ---@field MaxPlayers int32
 ---@field MaxPartySize int32
-FJoinabilitySettings = {}
+local FJoinabilitySettings = {}
 
 
 
 ---@class FUniqueNetIdWrapper
-FUniqueNetIdWrapper = {}
+local FUniqueNetIdWrapper = {}
 
 

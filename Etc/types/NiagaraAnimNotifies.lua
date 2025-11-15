@@ -3,7 +3,7 @@
 ---@class FCurveParameterPair
 ---@field AnimCurveName FName
 ---@field UserVariableName FName
-FCurveParameterPair = {}
+local FCurveParameterPair = {}
 
 
 
@@ -13,7 +13,7 @@ FCurveParameterPair = {}
 ---@field LocationOffset FVector
 ---@field RotationOffset FRotator
 ---@field bDestroyAtEnd boolean
-UAnimNotifyState_TimedNiagaraEffect = {}
+local UAnimNotifyState_TimedNiagaraEffect = {}
 
 ---@param MeshComp UMeshComponent
 ---@return UFXSystemComponent
@@ -24,7 +24,7 @@ function UAnimNotifyState_TimedNiagaraEffect:GetSpawnedEffect(MeshComp) end
 ---@field bEnableNormalizedNotifyProgress boolean
 ---@field NotifyProgressUserParameter FName
 ---@field AnimCurves TArray<FCurveParameterPair>
-UAnimNotifyState_TimedNiagaraEffectAdvanced = {}
+local UAnimNotifyState_TimedNiagaraEffectAdvanced = {}
 
 ---@param MeshComp UMeshComponent
 ---@return float
@@ -39,7 +39,7 @@ function UAnimNotifyState_TimedNiagaraEffectAdvanced:GetNotifyProgress(MeshComp)
 ---@field bAbsoluteScale boolean
 ---@field Attached boolean
 ---@field SocketName FName
-UAnimNotify_PlayNiagaraEffect = {}
+local UAnimNotify_PlayNiagaraEffect = {}
 
 ---@return UFXSystemComponent
 function UAnimNotify_PlayNiagaraEffect:GetSpawnedEffect() end

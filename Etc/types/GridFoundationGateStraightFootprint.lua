@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationGateStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationGateStraightFootprint_C = {}
+local AGridFoundationGateStraightFootprint_C = {}
 
 
 

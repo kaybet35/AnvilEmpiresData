@@ -2,7 +2,7 @@
 
 ---@class AMagicBoxFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AMagicBoxFootprint_C = {}
+local AMagicBoxFootprint_C = {}
 
 
 

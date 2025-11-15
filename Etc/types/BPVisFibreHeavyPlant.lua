@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFibreHeavyPlant_C : AVisResource
-ABPVisFibreHeavyPlant_C = {}
+local ABPVisFibreHeavyPlant_C = {}
 
 

@@ -5,7 +5,7 @@
 ---@field AnnouncementTextAnimation UWidgetAnimation
 ---@field BlackBG UImage
 ---@field Logo UImage
-UBPOpeningScreen_C = {}
+local UBPOpeningScreen_C = {}
 
 function UBPOpeningScreen_C:Construct() end
 ---@param EntryPoint int32

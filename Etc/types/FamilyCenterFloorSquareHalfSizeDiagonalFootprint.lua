@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterFloorSquareHalfSizeDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterFloorSquareHalfSizeDiagonalFootprint_C = {}
+local AFamilyCenterFloorSquareHalfSizeDiagonalFootprint_C = {}
 
 
 

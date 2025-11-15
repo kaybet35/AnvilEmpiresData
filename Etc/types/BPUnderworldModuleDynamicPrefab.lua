@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPUnderworldModuleDynamicPrefab_C : AUnderworldModuleDynamicPrefab
-ABPUnderworldModuleDynamicPrefab_C = {}
+local ABPUnderworldModuleDynamicPrefab_C = {}
 
 

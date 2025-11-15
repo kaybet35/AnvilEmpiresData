@@ -2,7 +2,7 @@
 
 ---@class ABpVisPlayer_C : AVisPlayer
 ---@field UberGraphFrame FPointerToUberGraphFrame
-ABpVisPlayer_C = {}
+local ABpVisPlayer_C = {}
 
 function ABpVisPlayer_C:BP_UpdateNightShroudMaterials() end
 ---@param EntryPoint int32

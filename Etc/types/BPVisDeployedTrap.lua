@@ -2,7 +2,7 @@
 
 ---@class ABPVisDeployedTrap_C : AVisTrap
 ---@field PickupDataComponent UPickupDataComponent
-ABPVisDeployedTrap_C = {}
+local ABPVisDeployedTrap_C = {}
 
 
 

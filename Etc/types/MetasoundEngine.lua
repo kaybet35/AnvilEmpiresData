@@ -2,25 +2,25 @@
 
 ---@class FDefaultMetaSoundAssetAutoUpdateSettings
 ---@field Metasound FSoftObjectPath
-FDefaultMetaSoundAssetAutoUpdateSettings = {}
+local FDefaultMetaSoundAssetAutoUpdateSettings = {}
 
 
 
 ---@class FMetaSoundAssetDirectory
 ---@field Directory FDirectoryPath
-FMetaSoundAssetDirectory = {}
+local FMetaSoundAssetDirectory = {}
 
 
 
 ---@class FMetaSoundAsyncAssetDependencies
 ---@field Metasound UObject
-FMetaSoundAsyncAssetDependencies = {}
+local FMetaSoundAsyncAssetDependencies = {}
 
 
 
 ---@class UMetaSoundAssetSubsystem : UEngineSubsystem
 ---@field LoadingDependencies TArray<FMetaSoundAsyncAssetDependencies>
-UMetaSoundAssetSubsystem = {}
+local UMetaSoundAssetSubsystem = {}
 
 ---@param Directories TArray<FMetaSoundAssetDirectory>
 function UMetaSoundAssetSubsystem:UnregisterAssetClassesInDirectories(Directories) end
@@ -34,7 +34,7 @@ function UMetaSoundAssetSubsystem:RegisterAssetClassesInDirectories(Directories)
 ---@field ReferencedAssetClassObjects TSet<UObject>
 ---@field ReferenceAssetClassCache TSet<FSoftObjectPath>
 ---@field AssetClassID FGuid
-UMetaSoundPatch = {}
+local UMetaSoundPatch = {}
 
 
 
@@ -45,7 +45,7 @@ UMetaSoundPatch = {}
 ---@field bAutoUpdateLogWarningOnDroppedConnection boolean
 ---@field DirectoriesToRegister TArray<FDirectoryPath>
 ---@field DenyListCacheChangeID int32
-UMetaSoundSettings = {}
+local UMetaSoundSettings = {}
 
 
 
@@ -56,11 +56,11 @@ UMetaSoundSettings = {}
 ---@field ReferenceAssetClassCache TSet<FSoftObjectPath>
 ---@field OutputFormat EMetasoundSourceAudioFormat
 ---@field AssetClassID FGuid
-UMetaSoundSource = {}
+local UMetaSoundSource = {}
 
 
 
 ---@class UMetasoundEditorGraphBase : UEdGraph
-UMetasoundEditorGraphBase = {}
+local UMetasoundEditorGraphBase = {}
 
 

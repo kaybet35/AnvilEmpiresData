@@ -11,7 +11,7 @@
 ---@field RefiningAssets UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field Campfire_Cue UAudioComponent
-ABPVisFirepitT1_C = {}
+local ABPVisFirepitT1_C = {}
 
 function ABPVisFirepitT1_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

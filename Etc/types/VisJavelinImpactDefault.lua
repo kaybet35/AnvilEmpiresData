@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisJavelinImpactDefault_C : AVisEffect
-AVisJavelinImpactDefault_C = {}
+local AVisJavelinImpactDefault_C = {}
 
 

@@ -1,5 +1,5 @@
 ---@enum ETypedElementChildInclusionMethod
-ETypedElementChildInclusionMethod = {
+local ETypedElementChildInclusionMethod = {
     None = 0,
     Immediate = 1,
     Recursive = 2,
@@ -7,7 +7,7 @@ ETypedElementChildInclusionMethod = {
 }
 
 ---@enum ETypedElementSelectionMethod
-ETypedElementSelectionMethod = {
+local ETypedElementSelectionMethod = {
     Primary = 0,
     Secondary = 1,
     ETypedElementSelectionMethod_MAX = 2,

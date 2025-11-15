@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationQuarterCeilingStraight_C : UBPBaseFoundationModularEntity_C
-UGridFoundationQuarterCeilingStraight_C = {}
+local UGridFoundationQuarterCeilingStraight_C = {}
 
 

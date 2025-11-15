@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceFishR3_C : UItemTemplate
-UResourceFishR3_C = {}
+local UResourceFishR3_C = {}
 
 

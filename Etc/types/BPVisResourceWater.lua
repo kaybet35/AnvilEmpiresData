@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisResourceWater_C : UVisItem
-UBPVisResourceWater_C = {}
+local UBPVisResourceWater_C = {}
 
 

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UGooglePADFunctionLibrary : UBlueprintFunctionLibrary
-UGooglePADFunctionLibrary = {}
+local UGooglePADFunctionLibrary = {}
 
 ---@return EGooglePADErrorCode
 function UGooglePADFunctionLibrary:ShowCellularDataConfirmation() end

@@ -18,13 +18,13 @@
 ---@field __ArrayProperty_38 TArray<float>
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __BoolProperty boolean
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -37,7 +37,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer_1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool FAnimNode_BlendListByBool
-UABP_FortBanner_C = {}
+local UABP_FortBanner_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FortBanner_C:AnimGraph(AnimGraph) end

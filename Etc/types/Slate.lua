@@ -3,7 +3,7 @@
 ---@class FAnchors
 ---@field Minimum FVector2D
 ---@field Maximum FVector2D
-FAnchors = {}
+local FAnchors = {}
 
 
 
@@ -13,25 +13,25 @@ FAnchors = {}
 ---@field Sections TMap<FName, FCustomizedToolMenuSection>
 ---@field EntryOrder TMap<FName, FCustomizedToolMenuNameArray>
 ---@field SectionOrder TArray<FName>
-FCustomizedToolMenu = {}
+local FCustomizedToolMenu = {}
 
 
 
 ---@class FCustomizedToolMenuEntry
 ---@field Visibility ECustomizedToolMenuVisibility
-FCustomizedToolMenuEntry = {}
+local FCustomizedToolMenuEntry = {}
 
 
 
 ---@class FCustomizedToolMenuNameArray
 ---@field Names TArray<FName>
-FCustomizedToolMenuNameArray = {}
+local FCustomizedToolMenuNameArray = {}
 
 
 
 ---@class FCustomizedToolMenuSection
 ---@field Visibility ECustomizedToolMenuVisibility
-FCustomizedToolMenuSection = {}
+local FCustomizedToolMenuSection = {}
 
 
 
@@ -41,89 +41,89 @@ FCustomizedToolMenuSection = {}
 ---@field bCtrl boolean
 ---@field bAlt boolean
 ---@field bCmd boolean
-FInputChord = {}
+local FInputChord = {}
 
 
 
 ---@class FVirtualKeyboardOptions
 ---@field bEnableAutocorrect boolean
-FVirtualKeyboardOptions = {}
+local FVirtualKeyboardOptions = {}
 
 
 
 ---@class UButtonWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ButtonStyle FButtonStyle
-UButtonWidgetStyle = {}
+local UButtonWidgetStyle = {}
 
 
 
 ---@class UCheckBoxWidgetStyle : USlateWidgetStyleContainerBase
 ---@field CheckBoxStyle FCheckBoxStyle
-UCheckBoxWidgetStyle = {}
+local UCheckBoxWidgetStyle = {}
 
 
 
 ---@class UComboBoxWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ComboBoxStyle FComboBoxStyle
-UComboBoxWidgetStyle = {}
+local UComboBoxWidgetStyle = {}
 
 
 
 ---@class UComboButtonWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ComboButtonStyle FComboButtonStyle
-UComboButtonWidgetStyle = {}
+local UComboButtonWidgetStyle = {}
 
 
 
 ---@class UEditableTextBoxWidgetStyle : USlateWidgetStyleContainerBase
 ---@field EditableTextBoxStyle FEditableTextBoxStyle
-UEditableTextBoxWidgetStyle = {}
+local UEditableTextBoxWidgetStyle = {}
 
 
 
 ---@class UEditableTextWidgetStyle : USlateWidgetStyleContainerBase
 ---@field EditableTextStyle FEditableTextStyle
-UEditableTextWidgetStyle = {}
+local UEditableTextWidgetStyle = {}
 
 
 
 ---@class UProgressWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ProgressBarStyle FProgressBarStyle
-UProgressWidgetStyle = {}
+local UProgressWidgetStyle = {}
 
 
 
 ---@class UScrollBarWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ScrollBarStyle FScrollBarStyle
-UScrollBarWidgetStyle = {}
+local UScrollBarWidgetStyle = {}
 
 
 
 ---@class UScrollBoxWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ScrollBoxStyle FScrollBoxStyle
-UScrollBoxWidgetStyle = {}
+local UScrollBoxWidgetStyle = {}
 
 
 
 ---@class USlateSettings : UObject
 ---@field bExplicitCanvasChildZOrder boolean
-USlateSettings = {}
+local USlateSettings = {}
 
 
 
 ---@class USpinBoxWidgetStyle : USlateWidgetStyleContainerBase
 ---@field SpinBoxStyle FSpinBoxStyle
-USpinBoxWidgetStyle = {}
+local USpinBoxWidgetStyle = {}
 
 
 
 ---@class UTextBlockWidgetStyle : USlateWidgetStyleContainerBase
 ---@field TextBlockStyle FTextBlockStyle
-UTextBlockWidgetStyle = {}
+local UTextBlockWidgetStyle = {}
 
 
 
 ---@class UToolMenuBase : UObject
-UToolMenuBase = {}
+local UToolMenuBase = {}
 
 

@@ -1,5 +1,5 @@
 ---@enum EFloatToIntFunctionEnum
-EFloatToIntFunctionEnum = {
+local EFloatToIntFunctionEnum = {
     Dataflow_FloatToInt_Function_Floor = 0,
     Dataflow_FloatToInt_Function_Ceil = 1,
     Dataflow_FloatToInt_Function_Round = 2,
@@ -8,14 +8,14 @@ EFloatToIntFunctionEnum = {
 }
 
 ---@enum EMakeBoxDataTypeEnum
-EMakeBoxDataTypeEnum = {
+local EMakeBoxDataTypeEnum = {
     Dataflow_MakeBox_DataType_MinMax = 0,
     Dataflow_MakeBox_DataType_CenterSize = 1,
     Dataflow_Max = 2,
 }
 
 ---@enum EMathConstantsEnum
-EMathConstantsEnum = {
+local EMathConstantsEnum = {
     Dataflow_MathConstants_Pi = 0,
     Dataflow_MathConstants_HalfPi = 1,
     Dataflow_MathConstants_TwoPi = 2,

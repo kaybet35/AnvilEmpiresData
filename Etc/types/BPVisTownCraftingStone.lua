@@ -12,7 +12,7 @@
 ---@field Props UVisStaticMeshComponent
 ---@field MainStructureCollapsedMesh UVisStaticMeshComponent
 ---@field MainStructureMesh UVisStaticMeshComponent
-ABPVisTownCraftingStone_C = {}
+local ABPVisTownCraftingStone_C = {}
 
 
 

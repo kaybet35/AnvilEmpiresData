@@ -123,7 +123,7 @@
 ---@field __StructProperty_3785 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -216,7 +216,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_84 float
 ---@field __FloatProperty_85 float
 ---@field __BoolProperty_86 boolean
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -789,7 +789,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field shouldTurnRight boolean
 ---@field staticYaw_Rotator FRotator
 ---@field HelmsmanInput double
-UABP_PrototypeChar_C = {}
+local UABP_PrototypeChar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_PrototypeChar_C:AnimGraph(AnimGraph) end

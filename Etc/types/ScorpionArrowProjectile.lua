@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UScorpionArrowProjectile_C : UEntityTemplate
-UScorpionArrowProjectile_C = {}
+local UScorpionArrowProjectile_C = {}
 
 

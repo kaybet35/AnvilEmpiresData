@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWorldEntranceCave_C : UEntityTemplate
-UWorldEntranceCave_C = {}
+local UWorldEntranceCave_C = {}
 
 

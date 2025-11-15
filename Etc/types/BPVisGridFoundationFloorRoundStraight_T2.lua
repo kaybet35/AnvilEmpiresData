@@ -10,7 +10,7 @@
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisGridFoundationFloorRoundStraight_T2_C = {}
+local ABPVisGridFoundationFloorRoundStraight_T2_C = {}
 
 
 

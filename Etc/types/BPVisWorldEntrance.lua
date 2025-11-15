@@ -5,7 +5,7 @@
 ---@field Arrow UArrowComponent
 ---@field EntranceVisualizer UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisWorldEntrance_C = {}
+local ABPVisWorldEntrance_C = {}
 
 
 

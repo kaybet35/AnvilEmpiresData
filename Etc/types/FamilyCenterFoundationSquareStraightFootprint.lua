@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterFoundationSquareStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterFoundationSquareStraightFootprint_C = {}
+local AFamilyCenterFoundationSquareStraightFootprint_C = {}
 
 
 

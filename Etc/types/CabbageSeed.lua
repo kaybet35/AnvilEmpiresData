@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCabbageSeed_C : UItemTemplate
-UCabbageSeed_C = {}
+local UCabbageSeed_C = {}
 
 

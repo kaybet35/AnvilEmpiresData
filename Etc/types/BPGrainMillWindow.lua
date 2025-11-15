@@ -8,7 +8,7 @@
 ---@field BPFooterContainer UBPFooterContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field CookingPanel UBPMainAreaContainer_C
-UBPGrainMillWindow_C = {}
+local UBPGrainMillWindow_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisJavelinImpactIron_C : AVisEffect
-AVisJavelinImpactIron_C = {}
+local AVisJavelinImpactIron_C = {}
 
 

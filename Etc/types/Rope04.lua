@@ -4,7 +4,7 @@
 ---@field SharedRoot USceneComponent
 ---@field Scene USceneComponent
 ---@field Mesh UStaticMeshComponent
-ARope04_C = {}
+local ARope04_C = {}
 
 
 

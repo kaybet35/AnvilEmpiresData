@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBladeSword_C : UItemTemplate
-UBladeSword_C = {}
+local UBladeSword_C = {}
 
 

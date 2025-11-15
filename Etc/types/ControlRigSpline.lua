@@ -1,23 +1,23 @@
 ---@meta
 
 ---@class FControlRigSpline
-FControlRigSpline = {}
+local FControlRigSpline = {}
 
 
 ---@class FControlRigSplineImpl
-FControlRigSplineImpl = {}
+local FControlRigSplineImpl = {}
 
 
 ---@class FRigUnit_ClosestParameterFromControlRigSpline : FRigUnit_ControlRigSplineBase
 ---@field Spline FControlRigSpline
 ---@field Position FVector
 ---@field U float
-FRigUnit_ClosestParameterFromControlRigSpline = {}
+local FRigUnit_ClosestParameterFromControlRigSpline = {}
 
 
 
 ---@class FRigUnit_ControlRigSplineBase : FRigUnit
-FRigUnit_ControlRigSplineBase = {}
+local FRigUnit_ControlRigSplineBase = {}
 
 
 ---@class FRigUnit_ControlRigSplineFromPoints : FRigUnit_ControlRigSplineBase
@@ -27,7 +27,7 @@ FRigUnit_ControlRigSplineBase = {}
 ---@field Compression float
 ---@field Stretch float
 ---@field Spline FControlRigSpline
-FRigUnit_ControlRigSplineFromPoints = {}
+local FRigUnit_ControlRigSplineFromPoints = {}
 
 
 
@@ -36,7 +36,7 @@ FRigUnit_ControlRigSplineFromPoints = {}
 ---@field Color FLinearColor
 ---@field Thickness float
 ---@field Detail int32
-FRigUnit_DrawControlRigSpline = {}
+local FRigUnit_DrawControlRigSpline = {}
 
 
 
@@ -56,7 +56,7 @@ FRigUnit_DrawControlRigSpline = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugSettings FRigUnit_FitChainToCurve_DebugSettings
 ---@field WorkData FRigUnit_FitChainToCurve_WorkData
-FRigUnit_FitChainToSplineCurve = {}
+local FRigUnit_FitChainToSplineCurve = {}
 
 
 
@@ -76,28 +76,28 @@ FRigUnit_FitChainToSplineCurve = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugSettings FRigUnit_FitChainToCurve_DebugSettings
 ---@field WorkData FRigUnit_FitChainToCurve_WorkData
-FRigUnit_FitChainToSplineCurveItemArray = {}
+local FRigUnit_FitChainToSplineCurveItemArray = {}
 
 
 
 ---@class FRigUnit_FitSplineCurveToChain : FRigUnit_HighlevelBaseMutable
 ---@field Items FRigElementKeyCollection
 ---@field Spline FControlRigSpline
-FRigUnit_FitSplineCurveToChain = {}
+local FRigUnit_FitSplineCurveToChain = {}
 
 
 
 ---@class FRigUnit_FitSplineCurveToChainItemArray : FRigUnit_HighlevelBaseMutable
 ---@field Items TArray<FRigElementKey>
 ---@field Spline FControlRigSpline
-FRigUnit_FitSplineCurveToChainItemArray = {}
+local FRigUnit_FitSplineCurveToChainItemArray = {}
 
 
 
 ---@class FRigUnit_GetLengthControlRigSpline : FRigUnit
 ---@field Spline FControlRigSpline
 ---@field Length float
-FRigUnit_GetLengthControlRigSpline = {}
+local FRigUnit_GetLengthControlRigSpline = {}
 
 
 
@@ -105,7 +105,7 @@ FRigUnit_GetLengthControlRigSpline = {}
 ---@field Spline FControlRigSpline
 ---@field Percentage float
 ---@field U float
-FRigUnit_ParameterAtPercentage = {}
+local FRigUnit_ParameterAtPercentage = {}
 
 
 
@@ -113,14 +113,14 @@ FRigUnit_ParameterAtPercentage = {}
 ---@field Spline FControlRigSpline
 ---@field U float
 ---@field Position FVector
-FRigUnit_PositionFromControlRigSpline = {}
+local FRigUnit_PositionFromControlRigSpline = {}
 
 
 
 ---@class FRigUnit_SetSplinePoints : FRigUnitMutable
 ---@field Points TArray<FVector>
 ---@field Spline FControlRigSpline
-FRigUnit_SetSplinePoints = {}
+local FRigUnit_SetSplinePoints = {}
 
 
 
@@ -128,7 +128,7 @@ FRigUnit_SetSplinePoints = {}
 ---@field Spline FControlRigSpline
 ---@field U float
 ---@field Tangent FVector
-FRigUnit_TangentFromControlRigSpline = {}
+local FRigUnit_TangentFromControlRigSpline = {}
 
 
 
@@ -138,7 +138,7 @@ FRigUnit_TangentFromControlRigSpline = {}
 ---@field Roll float
 ---@field U float
 ---@field Transform FTransform
-FRigUnit_TransformFromControlRigSpline = {}
+local FRigUnit_TransformFromControlRigSpline = {}
 
 
 

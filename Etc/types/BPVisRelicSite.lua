@@ -27,7 +27,7 @@
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field Meshes USceneComponent
-ABPVisRelicSite_C = {}
+local ABPVisRelicSite_C = {}
 
 
 

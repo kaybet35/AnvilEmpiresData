@@ -2,7 +2,7 @@
 
 ---@class ABPVisTinFragments_C : AVisPickupItem
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
-ABPVisTinFragments_C = {}
+local ABPVisTinFragments_C = {}
 
 
 

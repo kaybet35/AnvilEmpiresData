@@ -1,5 +1,5 @@
 ---@enum EMetasoundFrontendClassType
-EMetasoundFrontendClassType = {
+local EMetasoundFrontendClassType = {
     External = 0,
     Graph = 1,
     Input = 2,
@@ -15,7 +15,7 @@ EMetasoundFrontendClassType = {
 }
 
 ---@enum EMetasoundFrontendLiteralType
-EMetasoundFrontendLiteralType = {
+local EMetasoundFrontendLiteralType = {
     None = 0,
     Boolean = 1,
     Integer = 2,
@@ -33,14 +33,14 @@ EMetasoundFrontendLiteralType = {
 }
 
 ---@enum EMetasoundFrontendNodeStyleDisplayVisibility
-EMetasoundFrontendNodeStyleDisplayVisibility = {
+local EMetasoundFrontendNodeStyleDisplayVisibility = {
     Visible = 0,
     Hidden = 1,
     EMetasoundFrontendNodeStyleDisplayVisibility_MAX = 2,
 }
 
 ---@enum EMetasoundFrontendVertexAccessType
-EMetasoundFrontendVertexAccessType = {
+local EMetasoundFrontendVertexAccessType = {
     Reference = 0,
     Value = 1,
     Unset = 2,

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisAxeFlint_C : UVisItem
-UBPVisAxeFlint_C = {}
+local UBPVisAxeFlint_C = {}
 
 

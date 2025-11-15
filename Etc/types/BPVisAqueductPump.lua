@@ -15,7 +15,7 @@
 ---@field MidMesh UStaticMeshComponent
 ---@field VisCanalWaterController UVisCanalWaterControllerComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisAqueductPump_C = {}
+local ABPVisAqueductPump_C = {}
 
 
 

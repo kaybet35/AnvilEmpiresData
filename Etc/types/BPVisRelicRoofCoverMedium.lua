@@ -11,7 +11,7 @@
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field Pivot USceneComponent
 ---@field Root USceneComponent
-ABPVisRelicRoofCoverMedium_C = {}
+local ABPVisRelicRoofCoverMedium_C = {}
 
 
 

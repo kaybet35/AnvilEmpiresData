@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPGameInstance_C : UAnvilGameInstance
-UBPGameInstance_C = {}
+local UBPGameInstance_C = {}
 
 

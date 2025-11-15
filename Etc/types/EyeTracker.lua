@@ -9,7 +9,7 @@
 ---@field bIsRightEyeBlink boolean
 ---@field LeftPupilDiameter float
 ---@field RightPupilDiameter float
-FEyeTrackerGazeData = {}
+local FEyeTrackerGazeData = {}
 
 
 
@@ -20,12 +20,12 @@ FEyeTrackerGazeData = {}
 ---@field RightEyeDirection FVector
 ---@field FixationPoint FVector
 ---@field ConfidenceValue float
-FEyeTrackerStereoGazeData = {}
+local FEyeTrackerStereoGazeData = {}
 
 
 
 ---@class UEyeTrackerFunctionLibrary : UBlueprintFunctionLibrary
-UEyeTrackerFunctionLibrary = {}
+local UEyeTrackerFunctionLibrary = {}
 
 ---@param PlayerController APlayerController
 function UEyeTrackerFunctionLibrary:SetEyeTrackedPlayer(PlayerController) end

@@ -11,7 +11,7 @@
 ---@field BPAvatarProfileWidget_7 UBPAvatarProfileWidget_C
 ---@field BPAvatarProfileWidget_8 UBPAvatarProfileWidget_C
 ---@field BPAvatarProfileWidget_9 UBPAvatarProfileWidget_C
-UBPAvatarGroupWidget_C = {}
+local UBPAvatarGroupWidget_C = {}
 
 
 

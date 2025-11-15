@@ -2,7 +2,7 @@
 
 ---@class ABPVisDeployedLadder_C : AvisLadder
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisDeployedLadder_C = {}
+local ABPVisDeployedLadder_C = {}
 
 
 

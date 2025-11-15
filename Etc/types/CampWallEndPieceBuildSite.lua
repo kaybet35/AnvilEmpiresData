@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCampWallEndPieceBuildSite_C : UEntityTemplate
-UCampWallEndPieceBuildSite_C = {}
+local UCampWallEndPieceBuildSite_C = {}
 
 

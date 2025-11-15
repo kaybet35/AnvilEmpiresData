@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTripHammer_C : UBPBaseStructureEntity_C
-UTripHammer_C = {}
+local UTripHammer_C = {}
 
 

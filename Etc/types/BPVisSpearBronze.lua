@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisSpearBronze_C : UVisItem
-UBPVisSpearBronze_C = {}
+local UBPVisSpearBronze_C = {}
 
 

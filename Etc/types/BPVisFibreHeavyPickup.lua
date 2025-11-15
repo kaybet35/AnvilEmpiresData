@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFibreHeavyPickup_C : AVisPickupItem
-ABPVisFibreHeavyPickup_C = {}
+local ABPVisFibreHeavyPickup_C = {}
 
 

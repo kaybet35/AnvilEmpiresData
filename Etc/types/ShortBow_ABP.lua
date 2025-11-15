@@ -21,7 +21,7 @@
 ---@field __NameProperty_58 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -31,7 +31,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_1 float
 ---@field __IntProperty_2 int32
 ---@field __FloatProperty_3 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -49,7 +49,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field Temp_montageFrameSync float
 ---@field TempCharcaterActivityState uint8
 ---@field TempAttackNumber uint8
-UShortBow_ABP_C = {}
+local UShortBow_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UShortBow_ABP_C:AnimGraph(AnimGraph) end

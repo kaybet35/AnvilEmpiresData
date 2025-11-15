@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceEggChicken_C : UItemTemplate
-UResourceEggChicken_C = {}
+local UResourceEggChicken_C = {}
 
 

@@ -11,7 +11,7 @@
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field CookingPanel UBPMainAreaContainer_C
 ---@field FuelPanel UBPMainAreaContainer_C
-UBPCookingWindow_C = {}
+local UBPCookingWindow_C = {}
 
 
 

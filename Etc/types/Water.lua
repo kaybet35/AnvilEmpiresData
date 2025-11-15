@@ -2,7 +2,7 @@
 
 ---@class ABuoyancyManager : AActor
 ---@field BuoyancyComponents TArray<UBuoyancyComponent>
-ABuoyancyManager = {}
+local ABuoyancyManager = {}
 
 ---@param WorldContextObject UObject
 ---@param Manager ABuoyancyManager
@@ -17,7 +17,7 @@ function ABuoyancyManager:GetBuoyancyComponentManager(WorldContextObject, Manage
 ---@field WaterBodyIndex int32
 ---@field WaterBodyType EWaterBodyType
 ---@field WaterWaves UWaterWavesBase
-AWaterBody = {}
+local AWaterBody = {}
 
 ---@param InWaterWaves UWaterWavesBase
 function AWaterBody:SetWaterWaves(InWaterWaves) end
@@ -54,34 +54,34 @@ function AWaterBody:GetAudioIntensityAtSplineInputKey(InKey) end
 
 
 ---@class AWaterBodyCustom : AWaterBody
-AWaterBodyCustom = {}
+local AWaterBodyCustom = {}
 
 
 ---@class AWaterBodyExclusionVolume : APhysicsVolume
 ---@field bExcludeAllOverlappingWaterBodies boolean
 ---@field WaterBodiesToExclude TArray<AWaterBody>
-AWaterBodyExclusionVolume = {}
+local AWaterBodyExclusionVolume = {}
 
 
 
 ---@class AWaterBodyIsland : AActor
 ---@field SplineComp UWaterSplineComponent
-AWaterBodyIsland = {}
+local AWaterBodyIsland = {}
 
 ---@return UWaterSplineComponent
 function AWaterBodyIsland:GetWaterSpline() end
 
 
 ---@class AWaterBodyLake : AWaterBody
-AWaterBodyLake = {}
+local AWaterBodyLake = {}
 
 
 ---@class AWaterBodyOcean : AWaterBody
-AWaterBodyOcean = {}
+local AWaterBodyOcean = {}
 
 
 ---@class AWaterBodyRiver : AWaterBody
-AWaterBodyRiver = {}
+local AWaterBodyRiver = {}
 
 
 ---@class AWaterZone : AActor
@@ -97,7 +97,7 @@ AWaterBodyRiver = {}
 ---@field NonTessellatedLODSectionScale uint32
 ---@field OverlapPriority int32
 ---@field bEnableNonTessellatedLODMesh boolean
-AWaterZone = {}
+local AWaterZone = {}
 
 
 
@@ -131,7 +131,7 @@ AWaterZone = {}
 ---@field DownstreamRotationStiffness float
 ---@field DownstreamRotationAngularDamping float
 ---@field DownstreamMaxAcceleration float
-FBuoyancyData = {}
+local FBuoyancyData = {}
 
 
 
@@ -145,7 +145,7 @@ FBuoyancyData = {}
 ---@field WKA float
 ---@field Q float
 ---@field PhaseOffset float
-FGerstnerWave = {}
+local FGerstnerWave = {}
 
 
 
@@ -155,7 +155,7 @@ FGerstnerWave = {}
 ---@field MainDirection float
 ---@field SpreadAngle float
 ---@field bUniformSpread boolean
-FGerstnerWaveOctave = {}
+local FGerstnerWaveOctave = {}
 
 
 
@@ -178,7 +178,7 @@ FGerstnerWaveOctave = {}
 ---@field WaterBodyIndex int32
 ---@field bIsInWater boolean
 ---@field CurrentWaterBodyComponent UWaterBodyComponent
-FSphericalPontoon = {}
+local FSphericalPontoon = {}
 
 
 
@@ -189,7 +189,7 @@ FSphericalPontoon = {}
 ---@field BlendWeight float
 ---@field PostProcessSettings FPostProcessSettings
 ---@field UnderwaterPostProcessMaterial UMaterialInterface
-FUnderwaterPostProcessSettings = {}
+local FUnderwaterPostProcessSettings = {}
 
 
 
@@ -199,7 +199,7 @@ FUnderwaterPostProcessSettings = {}
 ---@field FalloffSettings FWaterFalloffSettings
 ---@field Effects FWaterBrushEffects
 ---@field Priority int32
-FWaterBodyHeightmapSettings = {}
+local FWaterBodyHeightmapSettings = {}
 
 
 
@@ -211,14 +211,14 @@ FWaterBodyHeightmapSettings = {}
 ---@field TextureInfluence float
 ---@field Midpoint float
 ---@field FinalOpacity float
-FWaterBodyWeightmapSettings = {}
+local FWaterBodyWeightmapSettings = {}
 
 
 
 ---@class FWaterBrushEffectBlurring
 ---@field bBlurShape boolean
 ---@field Radius int32
-FWaterBrushEffectBlurring = {}
+local FWaterBrushEffectBlurring = {}
 
 
 
@@ -227,7 +227,7 @@ FWaterBrushEffectBlurring = {}
 ---@field Curl2Amount float
 ---@field Curl1Tiling float
 ---@field Curl2Tiling float
-FWaterBrushEffectCurlNoise = {}
+local FWaterBrushEffectCurlNoise = {}
 
 
 
@@ -237,7 +237,7 @@ FWaterBrushEffectCurlNoise = {}
 ---@field ChannelEdgeOffset float
 ---@field ChannelDepth float
 ---@field CurveRampWidth float
-FWaterBrushEffectCurves = {}
+local FWaterBrushEffectCurves = {}
 
 
 
@@ -248,14 +248,14 @@ FWaterBrushEffectCurves = {}
 ---@field Midpoint float
 ---@field Channel FLinearColor
 ---@field WeightmapInfluence float
-FWaterBrushEffectDisplacement = {}
+local FWaterBrushEffectDisplacement = {}
 
 
 
 ---@class FWaterBrushEffectSmoothBlending
 ---@field InnerSmoothDistance float
 ---@field OuterSmoothDistance float
-FWaterBrushEffectSmoothBlending = {}
+local FWaterBrushEffectSmoothBlending = {}
 
 
 
@@ -265,7 +265,7 @@ FWaterBrushEffectSmoothBlending = {}
 ---@field TerraceSmoothness float
 ---@field MaskLength float
 ---@field MaskStartOffset float
-FWaterBrushEffectTerracing = {}
+local FWaterBrushEffectTerracing = {}
 
 
 
@@ -275,7 +275,7 @@ FWaterBrushEffectTerracing = {}
 ---@field Displacement FWaterBrushEffectDisplacement
 ---@field SmoothBlending FWaterBrushEffectSmoothBlending
 ---@field Terracing FWaterBrushEffectTerracing
-FWaterBrushEffects = {}
+local FWaterBrushEffects = {}
 
 
 
@@ -285,7 +285,7 @@ FWaterBrushEffects = {}
 ---@field ChannelEdgeOffset float
 ---@field ChannelDepth float
 ---@field CurveRampWidth float
-FWaterCurveSettings = {}
+local FWaterCurveSettings = {}
 
 
 
@@ -295,7 +295,7 @@ FWaterCurveSettings = {}
 ---@field FalloffWidth float
 ---@field EdgeOffset float
 ---@field ZOffset float
-FWaterFalloffSettings = {}
+local FWaterFalloffSettings = {}
 
 
 
@@ -304,12 +304,12 @@ FWaterFalloffSettings = {}
 ---@field DefaultWidth float
 ---@field DefaultVelocity float
 ---@field DefaultAudioIntensity float
-FWaterSplineCurveDefaults = {}
+local FWaterSplineCurveDefaults = {}
 
 
 
 ---@class IWaterBrushActorInterface : IInterface
-IWaterBrushActorInterface = {}
+local IWaterBrushActorInterface = {}
 
 
 ---@class UBuoyancyComponent : UActorComponent
@@ -319,7 +319,7 @@ IWaterBrushActorInterface = {}
 ---@field BuoyancyData FBuoyancyData
 ---@field CurrentWaterBodyComponents TArray<UWaterBodyComponent>
 ---@field SimulatingComponent UPrimitiveComponent
-UBuoyancyComponent = {}
+local UBuoyancyComponent = {}
 
 ---@param Pontoon FSphericalPontoon
 function UBuoyancyComponent:OnPontoonExitedWater(Pontoon) end
@@ -342,7 +342,7 @@ function UBuoyancyComponent:GetCurrentWaterBodyComponents() end
 
 ---@class UDEPRECATED_CustomMeshGenerator : UDEPRECATED_WaterBodyGenerator
 ---@field MeshComp UStaticMeshComponent
-UDEPRECATED_CustomMeshGenerator = {}
+local UDEPRECATED_CustomMeshGenerator = {}
 
 
 
@@ -350,37 +350,37 @@ UDEPRECATED_CustomMeshGenerator = {}
 ---@field LakeMeshComp UStaticMeshComponent
 ---@field LakeCollisionComp UBoxComponent
 ---@field LakeCollision ULakeCollisionComponent
-UDEPRECATED_LakeGenerator = {}
+local UDEPRECATED_LakeGenerator = {}
 
 
 
 ---@class UDEPRECATED_OceanGenerator : UDEPRECATED_WaterBodyGenerator
 ---@field CollisionBoxes TArray<UOceanBoxCollisionComponent>
 ---@field CollisionHullSets TArray<UOceanCollisionComponent>
-UDEPRECATED_OceanGenerator = {}
+local UDEPRECATED_OceanGenerator = {}
 
 
 
 ---@class UDEPRECATED_RiverGenerator : UDEPRECATED_WaterBodyGenerator
 ---@field SplineMeshComponents TArray<USplineMeshComponent>
-UDEPRECATED_RiverGenerator = {}
+local UDEPRECATED_RiverGenerator = {}
 
 
 
 ---@class UDEPRECATED_WaterBodyGenerator : UObject
-UDEPRECATED_WaterBodyGenerator = {}
+local UDEPRECATED_WaterBodyGenerator = {}
 
 
 ---@class UEnvQueryTest_InsideWaterBody : UEnvQueryTest
 ---@field bIncludeWaves boolean
 ---@field bSimpleWaves boolean
 ---@field bIgnoreExclusionVolumes boolean
-UEnvQueryTest_InsideWaterBody = {}
+local UEnvQueryTest_InsideWaterBody = {}
 
 
 
 ---@class UGerstnerWaterWaveGeneratorBase : UObject
-UGerstnerWaterWaveGeneratorBase = {}
+local UGerstnerWaterWaveGeneratorBase = {}
 
 ---@param OutWaves TArray<FGerstnerWave>
 function UGerstnerWaterWaveGeneratorBase:GenerateGerstnerWaves(OutWaves) end
@@ -401,44 +401,44 @@ function UGerstnerWaterWaveGeneratorBase:GenerateGerstnerWaves(OutWaves) end
 ---@field SmallWaveSteepness float
 ---@field LargeWaveSteepness float
 ---@field SteepnessFalloff float
-UGerstnerWaterWaveGeneratorSimple = {}
+local UGerstnerWaterWaveGeneratorSimple = {}
 
 
 
 ---@class UGerstnerWaterWaveGeneratorSpectrum : UGerstnerWaterWaveGeneratorBase
 ---@field SpectrumType EWaveSpectrumType
 ---@field Octaves TArray<FGerstnerWaveOctave>
-UGerstnerWaterWaveGeneratorSpectrum = {}
+local UGerstnerWaterWaveGeneratorSpectrum = {}
 
 
 
 ---@class UGerstnerWaterWaveSubsystem : UEngineSubsystem
-UGerstnerWaterWaveSubsystem = {}
+local UGerstnerWaterWaveSubsystem = {}
 
 
 ---@class UGerstnerWaterWaves : UWaterWaves
 ---@field GerstnerWaveGenerator UGerstnerWaterWaveGeneratorBase
 ---@field GerstnerWaves TArray<FGerstnerWave>
 ---@field MaxWaveHeight float
-UGerstnerWaterWaves = {}
+local UGerstnerWaterWaves = {}
 
 
 
 ---@class ULakeCollisionComponent : UPrimitiveComponent
 ---@field CachedBodySetup UBodySetup
 ---@field BoxExtent FVector
-ULakeCollisionComponent = {}
+local ULakeCollisionComponent = {}
 
 
 
 ---@class UNiagaraDataInterfaceWater : UNiagaraDataInterface
 ---@field SourceBodyComponent UWaterBodyComponent
-UNiagaraDataInterfaceWater = {}
+local UNiagaraDataInterfaceWater = {}
 
 
 
 ---@class UNiagaraWaterFunctionLibrary : UBlueprintFunctionLibrary
-UNiagaraWaterFunctionLibrary = {}
+local UNiagaraWaterFunctionLibrary = {}
 
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
@@ -451,12 +451,12 @@ function UNiagaraWaterFunctionLibrary:SetWaterBody(NiagaraSystem, OverrideName, 
 
 
 ---@class UOceanBoxCollisionComponent : UBoxComponent
-UOceanBoxCollisionComponent = {}
+local UOceanBoxCollisionComponent = {}
 
 
 ---@class UOceanCollisionComponent : UPrimitiveComponent
 ---@field CachedBodySetup UBodySetup
-UOceanCollisionComponent = {}
+local UOceanCollisionComponent = {}
 
 
 
@@ -492,7 +492,7 @@ UOceanCollisionComponent = {}
 ---@field CurrentPostProcessSettings FPostProcessSettings
 ---@field WaterNavAreaClass TSubclassOf<UNavAreaBase>
 ---@field FixedWaterDepth double
-UWaterBodyComponent = {}
+local UWaterBodyComponent = {}
 
 ---@param InWaterMaterial UMaterialInterface
 ---@param InUnderWaterPostProcessMaterial UMaterialInterface
@@ -545,18 +545,18 @@ function UWaterBodyComponent:GetCollisionComponents(bInOnlyEnabledComponents) en
 
 ---@class UWaterBodyCustomComponent : UWaterBodyComponent
 ---@field MeshComp UStaticMeshComponent
-UWaterBodyCustomComponent = {}
+local UWaterBodyCustomComponent = {}
 
 
 
 ---@class UWaterBodyHLODBuilder : UHLODBuilder
-UWaterBodyHLODBuilder = {}
+local UWaterBodyHLODBuilder = {}
 
 
 ---@class UWaterBodyLakeComponent : UWaterBodyComponent
 ---@field LakeMeshComp UStaticMeshComponent
 ---@field LakeCollision ULakeCollisionComponent
-UWaterBodyLakeComponent = {}
+local UWaterBodyLakeComponent = {}
 
 
 
@@ -566,7 +566,7 @@ UWaterBodyLakeComponent = {}
 ---@field VisualExtents FVector2D
 ---@field CollisionExtents FVector
 ---@field HeightOffset float
-UWaterBodyOceanComponent = {}
+local UWaterBodyOceanComponent = {}
 
 
 
@@ -576,7 +576,7 @@ UWaterBodyOceanComponent = {}
 ---@field LakeTransitionMID UMaterialInstanceDynamic
 ---@field OceanTransitionMaterial UMaterialInterface
 ---@field OceanTransitionMID UMaterialInstanceDynamic
-UWaterBodyRiverComponent = {}
+local UWaterBodyRiverComponent = {}
 
 
 
@@ -589,7 +589,7 @@ UWaterBodyRiverComponent = {}
 ---@field UsedMaterials TSet<UMaterialInterface>
 ---@field TessellationFactor int32
 ---@field LODScale float
-UWaterMeshComponent = {}
+local UWaterMeshComponent = {}
 
 ---@return boolean
 function UWaterMeshComponent:IsEnabled() end
@@ -605,14 +605,14 @@ function UWaterMeshComponent:IsEnabled() end
 ---@field WaterBodyLakeComponentClass TSubclassOf<UWaterBodyLakeComponent>
 ---@field WaterBodyOceanComponentClass TSubclassOf<UWaterBodyOceanComponent>
 ---@field WaterBodyCustomComponentClass TSubclassOf<UWaterBodyCustomComponent>
-UWaterRuntimeSettings = {}
+local UWaterRuntimeSettings = {}
 
 
 
 ---@class UWaterSplineComponent : USplineComponent
 ---@field WaterSplineDefaults FWaterSplineCurveDefaults
 ---@field PreviousWaterSplineDefaults FWaterSplineCurveDefaults
-UWaterSplineComponent = {}
+local UWaterSplineComponent = {}
 
 
 
@@ -622,7 +622,7 @@ UWaterSplineComponent = {}
 ---@field RiverWidth FInterpCurveFloat
 ---@field AudioIntensity FInterpCurveFloat
 ---@field WaterVelocity FInterpCurveVector
-UWaterSplineMetadata = {}
+local UWaterSplineMetadata = {}
 
 
 
@@ -633,7 +633,7 @@ UWaterSplineMetadata = {}
 ---@field DefaultRiverMesh UStaticMesh
 ---@field DefaultLakeMesh UStaticMesh
 ---@field MaterialParameterCollection UMaterialParameterCollection
-UWaterSubsystem = {}
+local UWaterSubsystem = {}
 
 ---@param InFloodHeight float
 function UWaterSubsystem:SetOceanFloodHeight(InFloodHeight) end
@@ -667,22 +667,22 @@ function UWaterSubsystem:GetCameraUnderwaterDepth() end
 
 
 ---@class UWaterWaves : UWaterWavesBase
-UWaterWaves = {}
+local UWaterWaves = {}
 
 
 ---@class UWaterWavesAsset : UObject
 ---@field WaterWaves UWaterWaves
-UWaterWavesAsset = {}
+local UWaterWavesAsset = {}
 
 
 
 ---@class UWaterWavesAssetReference : UWaterWavesBase
 ---@field WaterWavesAsset UWaterWavesAsset
-UWaterWavesAssetReference = {}
+local UWaterWavesAssetReference = {}
 
 
 
 ---@class UWaterWavesBase : UObject
-UWaterWavesBase = {}
+local UWaterWavesBase = {}
 
 

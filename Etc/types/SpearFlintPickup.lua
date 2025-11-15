@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpearFlintPickup_C : UEntityTemplate
-USpearFlintPickup_C = {}
+local USpearFlintPickup_C = {}
 
 

@@ -3,23 +3,23 @@
 ---@class FCaptureResolution
 ---@field ResX int32
 ---@field ResY int32
-FCaptureResolution = {}
+local FCaptureResolution = {}
 
 
 
 ---@class FCapturedPixels
-FCapturedPixels = {}
+local FCapturedPixels = {}
 
 
 ---@class FCapturedPixelsID
 ---@field Identifiers TMap<FName, FName>
-FCapturedPixelsID = {}
+local FCapturedPixelsID = {}
 
 
 
 ---@class FCompositionGraphCapturePasses
 ---@field Value TArray<FString>
-FCompositionGraphCapturePasses = {}
+local FCompositionGraphCapturePasses = {}
 
 
 
@@ -28,7 +28,7 @@ FCompositionGraphCapturePasses = {}
 ---@field FrameDelta float
 ---@field FrameNumber int32
 ---@field NumDroppedFrames int32
-FFrameMetrics = {}
+local FFrameMetrics = {}
 
 
 
@@ -54,12 +54,12 @@ FFrameMetrics = {}
 ---@field bShowHUD boolean
 ---@field bUsePathTracer boolean
 ---@field PathTracerSamplePerPixel int32
-FMovieSceneCaptureSettings = {}
+local FMovieSceneCaptureSettings = {}
 
 
 
 ---@class IMovieSceneCaptureInterface : IInterface
-IMovieSceneCaptureInterface = {}
+local IMovieSceneCaptureInterface = {}
 
 
 ---@class UCompositionGraphCaptureProtocol : UMovieSceneImageCaptureProtocolBase
@@ -70,58 +70,58 @@ IMovieSceneCaptureInterface = {}
 ---@field PostProcessingMaterial FSoftObjectPath
 ---@field bDisableScreenPercentage boolean
 ---@field PostProcessingMaterialPtr UMaterialInterface
-UCompositionGraphCaptureProtocol = {}
+local UCompositionGraphCaptureProtocol = {}
 
 
 
 ---@class UCompressedImageSequenceProtocol : UImageSequenceProtocol
 ---@field CompressionQuality int32
-UCompressedImageSequenceProtocol = {}
+local UCompressedImageSequenceProtocol = {}
 
 
 
 ---@class UFrameGrabberProtocol : UMovieSceneImageCaptureProtocolBase
-UFrameGrabberProtocol = {}
+local UFrameGrabberProtocol = {}
 
 
 ---@class UImageSequenceProtocol : UFrameGrabberProtocol
-UImageSequenceProtocol = {}
+local UImageSequenceProtocol = {}
 
 
 ---@class UImageSequenceProtocol_BMP : UImageSequenceProtocol
-UImageSequenceProtocol_BMP = {}
+local UImageSequenceProtocol_BMP = {}
 
 
 ---@class UImageSequenceProtocol_EXR : UImageSequenceProtocol
 ---@field bCompressed boolean
 ---@field CaptureGamut EHDRCaptureGamut
-UImageSequenceProtocol_EXR = {}
+local UImageSequenceProtocol_EXR = {}
 
 
 
 ---@class UImageSequenceProtocol_JPG : UCompressedImageSequenceProtocol
-UImageSequenceProtocol_JPG = {}
+local UImageSequenceProtocol_JPG = {}
 
 
 ---@class UImageSequenceProtocol_PNG : UCompressedImageSequenceProtocol
-UImageSequenceProtocol_PNG = {}
+local UImageSequenceProtocol_PNG = {}
 
 
 ---@class ULevelCapture : UMovieSceneCapture
 ---@field bAutoStartCapture boolean
 ---@field PrerequisiteActorId FGuid
-ULevelCapture = {}
+local ULevelCapture = {}
 
 
 
 ---@class UMasterAudioSubmixCaptureProtocol : UMovieSceneAudioCaptureProtocolBase
 ---@field Filename FString
-UMasterAudioSubmixCaptureProtocol = {}
+local UMasterAudioSubmixCaptureProtocol = {}
 
 
 
 ---@class UMovieSceneAudioCaptureProtocolBase : UMovieSceneCaptureProtocolBase
-UMovieSceneAudioCaptureProtocolBase = {}
+local UMovieSceneAudioCaptureProtocolBase = {}
 
 
 ---@class UMovieSceneCapture : UObject
@@ -134,7 +134,7 @@ UMovieSceneAudioCaptureProtocolBase = {}
 ---@field bCloseEditorWhenCaptureStarts boolean
 ---@field AdditionalCommandLineArguments FString
 ---@field InheritedCommandLineArguments FString
-UMovieSceneCapture = {}
+local UMovieSceneCapture = {}
 
 ---@param ProtocolType TSubclassOf<UMovieSceneCaptureProtocolBase>
 function UMovieSceneCapture:SetImageCaptureProtocolType(ProtocolType) end
@@ -147,7 +147,7 @@ function UMovieSceneCapture:GetAudioCaptureProtocol() end
 
 
 ---@class UMovieSceneCaptureEnvironment : UObject
-UMovieSceneCaptureEnvironment = {}
+local UMovieSceneCaptureEnvironment = {}
 
 ---@return boolean
 function UMovieSceneCaptureEnvironment:IsCaptureInProgress() end
@@ -163,7 +163,7 @@ function UMovieSceneCaptureEnvironment:FindAudioCaptureProtocol() end
 
 ---@class UMovieSceneCaptureProtocolBase : UObject
 ---@field State EMovieSceneCaptureProtocolState
-UMovieSceneCaptureProtocolBase = {}
+local UMovieSceneCaptureProtocolBase = {}
 
 ---@return boolean
 function UMovieSceneCaptureProtocolBase:IsCapturing() end
@@ -172,16 +172,16 @@ function UMovieSceneCaptureProtocolBase:GetState() end
 
 
 ---@class UMovieSceneImageCaptureProtocolBase : UMovieSceneCaptureProtocolBase
-UMovieSceneImageCaptureProtocolBase = {}
+local UMovieSceneImageCaptureProtocolBase = {}
 
 
 ---@class UNullAudioCaptureProtocol : UMovieSceneAudioCaptureProtocolBase
-UNullAudioCaptureProtocol = {}
+local UNullAudioCaptureProtocol = {}
 
 
 ---@class UUserDefinedCaptureProtocol : UMovieSceneImageCaptureProtocolBase
 ---@field World UWorld
-UUserDefinedCaptureProtocol = {}
+local UUserDefinedCaptureProtocol = {}
 
 function UUserDefinedCaptureProtocol:StopCapturingFinalPixels() end
 ---@param StreamID FCapturedPixelsID
@@ -216,7 +216,7 @@ function UUserDefinedCaptureProtocol:GenerateFilename(InFrameMetrics) end
 ---@field Format EDesiredImageFormat
 ---@field bEnableCompression boolean
 ---@field CompressionQuality int32
-UUserDefinedImageCaptureProtocol = {}
+local UUserDefinedImageCaptureProtocol = {}
 
 ---@param PixelData FCapturedPixels
 ---@param StreamID FCapturedPixelsID
@@ -234,7 +234,7 @@ function UUserDefinedImageCaptureProtocol:GenerateFilenameForBuffer(Buffer, Stre
 ---@class UVideoCaptureProtocol : UFrameGrabberProtocol
 ---@field bUseCompression boolean
 ---@field CompressionQuality float
-UVideoCaptureProtocol = {}
+local UVideoCaptureProtocol = {}
 
 
 

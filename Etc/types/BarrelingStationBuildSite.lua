@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBarrelingStationBuildSite_C : UBPBaseBuildSiteEntity_C
-UBarrelingStationBuildSite_C = {}
+local UBarrelingStationBuildSite_C = {}
 
 

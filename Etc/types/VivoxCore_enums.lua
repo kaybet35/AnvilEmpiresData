@@ -1,5 +1,5 @@
 ---@enum ChannelType
-ChannelType = {
+local ChannelType = {
     NonPositional = 0,
     Positional = 1,
     Echo = 2,
@@ -7,7 +7,7 @@ ChannelType = {
 }
 
 ---@enum ConnectionState
-ConnectionState = {
+local ConnectionState = {
     Disconnected = 0,
     Connecting = 1,
     Connected = 2,
@@ -16,7 +16,7 @@ ConnectionState = {
 }
 
 ---@enum DeviceType
-DeviceType = {
+local DeviceType = {
     NullDevice = 0,
     SpecificDevice = 1,
     DefaultSystemDevice = 2,
@@ -25,7 +25,7 @@ DeviceType = {
 }
 
 ---@enum EAudioFadeModel
-EAudioFadeModel = {
+local EAudioFadeModel = {
     InverseByDistance = 0,
     LinearByDistance = 1,
     ExponentialByDistance = 2,
@@ -33,7 +33,7 @@ EAudioFadeModel = {
 }
 
 ---@enum LoginState
-LoginState = {
+local LoginState = {
     LoggedOut = 0,
     LoggingIn = 1,
     LoggedIn = 2,
@@ -42,7 +42,7 @@ LoginState = {
 }
 
 ---@enum ParticipantSpeakingUpdateRate
-ParticipantSpeakingUpdateRate = {
+local ParticipantSpeakingUpdateRate = {
     StateChange = 0,
     Never = 1,
     Update1Hz = 2,
@@ -52,7 +52,7 @@ ParticipantSpeakingUpdateRate = {
 }
 
 ---@enum PresenceStatus
-PresenceStatus = {
+local PresenceStatus = {
     Unavailable = 0,
     Available = 1,
     Chat = 2,
@@ -63,7 +63,7 @@ PresenceStatus = {
 }
 
 ---@enum SubscriptionMode
-SubscriptionMode = {
+local SubscriptionMode = {
     Accept = 0,
     Block = 1,
     Defer = 2,
@@ -71,14 +71,14 @@ SubscriptionMode = {
 }
 
 ---@enum SubscriptionReply
-SubscriptionReply = {
+local SubscriptionReply = {
     Allow = 0,
     Block = 1,
     SubscriptionReply_MAX = 2,
 }
 
 ---@enum TTSDestination
-TTSDestination = {
+local TTSDestination = {
     Default = 0,
     RemoteTransmission = 0,
     LocalPlayback = 1,
@@ -91,14 +91,14 @@ TTSDestination = {
 }
 
 ---@enum TTSMessageState
-TTSMessageState = {
+local TTSMessageState = {
     Playing = 0,
     Enqueued = 1,
     TTSMessageState_MAX = 2,
 }
 
 ---@enum TransmissionMode
-TransmissionMode = {
+local TransmissionMode = {
     None = 0,
     Single = 1,
     All = 2,

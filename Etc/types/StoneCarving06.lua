@@ -6,7 +6,7 @@
 ---@field SharedRoot USceneComponent
 ---@field Scene USceneComponent
 ---@field Carving UStaticMeshComponent
-AStoneCarving06_C = {}
+local AStoneCarving06_C = {}
 
 
 

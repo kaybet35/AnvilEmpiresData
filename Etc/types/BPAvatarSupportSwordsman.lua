@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPAvatarSupportSwordsman_C : UItemTemplate
-UBPAvatarSupportSwordsman_C = {}
+local UBPAvatarSupportSwordsman_C = {}
 
 

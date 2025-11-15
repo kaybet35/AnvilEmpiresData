@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterWallInclineStraightBuildSite_C : UBPBaseFoundationModularBuildSiteEntity_C
-UFamilyCenterWallInclineStraightBuildSite_C = {}
+local UFamilyCenterWallInclineStraightBuildSite_C = {}
 
 

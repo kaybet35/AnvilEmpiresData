@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTree01_C : UEntityTemplate
-UTree01_C = {}
+local UTree01_C = {}
 
 

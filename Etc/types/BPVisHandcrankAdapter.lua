@@ -4,7 +4,7 @@
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field PowerUnitData UPowerUnitDataComponent
-ABPVisHandcrankAdapter_C = {}
+local ABPVisHandcrankAdapter_C = {}
 
 
 

@@ -8,7 +8,7 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field HeaderContainer UBPHeaderContainer_C
-UBPCentralMarketplaceWindow_C = {}
+local UBPCentralMarketplaceWindow_C = {}
 
 
 

@@ -1,5 +1,5 @@
 ---@enum EFrameNumberDisplayFormats
-EFrameNumberDisplayFormats = {
+local EFrameNumberDisplayFormats = {
     NonDropFrameTimecode = 0,
     DropFrameTimecode = 1,
     Seconds = 2,
@@ -9,7 +9,7 @@ EFrameNumberDisplayFormats = {
 }
 
 ---@enum ETimedDataInputEvaluationType
-ETimedDataInputEvaluationType = {
+local ETimedDataInputEvaluationType = {
     None = 0,
     Timecode = 1,
     PlatformTime = 2,
@@ -17,7 +17,7 @@ ETimedDataInputEvaluationType = {
 }
 
 ---@enum ETimedDataInputState
-ETimedDataInputState = {
+local ETimedDataInputState = {
     Connected = 0,
     Unresponsive = 1,
     Disconnected = 2,

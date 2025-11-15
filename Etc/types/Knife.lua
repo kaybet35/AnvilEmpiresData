@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UKnife_C : UItemTemplate
-UKnife_C = {}
+local UKnife_C = {}
 
 

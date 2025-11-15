@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UIronFragmentsPile_C : UEntityTemplate
-UIronFragmentsPile_C = {}
+local UIronFragmentsPile_C = {}
 
 

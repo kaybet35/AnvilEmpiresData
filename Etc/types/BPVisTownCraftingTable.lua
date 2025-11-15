@@ -22,7 +22,7 @@
 ---@field VisStaticMesh9 UVisStaticMeshComponent
 ---@field VisStaticMesh8 UVisStaticMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
-ABPVisTownCraftingTable_C = {}
+local ABPVisTownCraftingTable_C = {}
 
 
 

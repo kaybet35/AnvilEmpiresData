@@ -179,7 +179,7 @@
 ---@field VisRandomMeshDecor108 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor95 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationSideRampDiagonal_C = {}
+local ABPVisGridFoundationSideRampDiagonal_C = {}
 
 
 

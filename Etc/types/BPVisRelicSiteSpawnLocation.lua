@@ -26,7 +26,7 @@
 ---@field Decal UDecalComponent
 ---@field RuinsPlatform015 UStaticMeshComponent
 ---@field RuinsPlatform014 UStaticMeshComponent
-ABPVisRelicSiteSpawnLocation_C = {}
+local ABPVisRelicSiteSpawnLocation_C = {}
 
 
 

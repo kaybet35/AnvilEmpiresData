@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterWallFlatQuarterSizeStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterWallFlatQuarterSizeStraightFootprint_C = {}
+local AFamilyCenterWallFlatQuarterSizeStraightFootprint_C = {}
 
 
 

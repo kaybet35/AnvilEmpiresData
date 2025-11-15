@@ -4,7 +4,7 @@
 ---@field Audio UAudioComponent
 ---@field TorchFire2 UNiagaraComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisTorchProjectile_C = {}
+local ABPVisTorchProjectile_C = {}
 
 
 

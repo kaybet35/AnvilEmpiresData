@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URepairMaterial_C : UItemTemplate
-URepairMaterial_C = {}
+local URepairMaterial_C = {}
 
 

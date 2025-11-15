@@ -5,7 +5,7 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisGridFoundationCeilingEdgeAStraight_C = {}
+local ABPVisGridFoundationCeilingEdgeAStraight_C = {}
 
 
 

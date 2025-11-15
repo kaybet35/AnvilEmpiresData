@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisBat_C : AVisAnimal
-ABPVisBat_C = {}
+local ABPVisBat_C = {}
 
 

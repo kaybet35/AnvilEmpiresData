@@ -7,7 +7,7 @@
 ---@field Fire USceneComponent
 ---@field PopulatedAssets UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisHeatingVat_C = {}
+local ABPVisHeatingVat_C = {}
 
 
 

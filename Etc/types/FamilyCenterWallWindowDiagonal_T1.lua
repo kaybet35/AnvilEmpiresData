@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterWallWindowDiagonal_T1_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterWallWindowDiagonal_T1_C = {}
+local UFamilyCenterWallWindowDiagonal_T1_C = {}
 
 

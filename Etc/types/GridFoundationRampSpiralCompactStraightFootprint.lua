@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationRampSpiralCompactStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationRampSpiralCompactStraightFootprint_C = {}
+local AGridFoundationRampSpiralCompactStraightFootprint_C = {}
 
 
 

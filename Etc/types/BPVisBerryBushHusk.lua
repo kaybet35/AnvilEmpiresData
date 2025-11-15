@@ -2,7 +2,7 @@
 
 ---@class ABPVisBerryBushHusk_C : AVisEffect
 ---@field StaticMesh UStaticMeshComponent
-ABPVisBerryBushHusk_C = {}
+local ABPVisBerryBushHusk_C = {}
 
 
 

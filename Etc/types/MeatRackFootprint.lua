@@ -2,7 +2,7 @@
 
 ---@class AMeatRackFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AMeatRackFootprint_C = {}
+local AMeatRackFootprint_C = {}
 
 
 

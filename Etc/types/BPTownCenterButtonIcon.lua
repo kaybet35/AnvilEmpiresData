@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTownCenterButtonIcon_C : UTownCenterMapIcon
-UBPTownCenterButtonIcon_C = {}
+local UBPTownCenterButtonIcon_C = {}
 
 

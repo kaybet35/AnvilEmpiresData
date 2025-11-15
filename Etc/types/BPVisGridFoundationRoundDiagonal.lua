@@ -80,7 +80,7 @@
 ---@field VisRandomMeshDecor17 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor6 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor45 UVisRandomMeshDecorComponent
-ABPVisGridFoundationRoundDiagonal_C = {}
+local ABPVisGridFoundationRoundDiagonal_C = {}
 
 
 

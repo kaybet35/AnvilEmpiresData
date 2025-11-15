@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHitEffectBurningOilProjectile_C : UEntityTemplate
-UHitEffectBurningOilProjectile_C = {}
+local UHitEffectBurningOilProjectile_C = {}
 
 

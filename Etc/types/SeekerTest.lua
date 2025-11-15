@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USeekerTest_C : UEntityTemplate
-USeekerTest_C = {}
+local USeekerTest_C = {}
 
 

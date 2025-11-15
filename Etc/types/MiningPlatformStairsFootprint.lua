@@ -2,7 +2,7 @@
 
 ---@class AMiningPlatformStairsFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AMiningPlatformStairsFootprint_C = {}
+local AMiningPlatformStairsFootprint_C = {}
 
 
 

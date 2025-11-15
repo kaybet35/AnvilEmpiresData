@@ -4,7 +4,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterWallDeclineDiagonal_T1_C = {}
+local ABPVisFamilyCenterWallDeclineDiagonal_T1_C = {}
 
 function ABPVisFamilyCenterWallDeclineDiagonal_T1_C:UserConstructionScript() end
 

@@ -37,7 +37,7 @@
 ---@field __StructProperty_271 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -46,7 +46,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
 ---@field __FloatProperty_2 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -100,7 +100,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field AnimGraphNode_ApplyAdditive_1 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_ApplyAdditive FAnimNode_ApplyAdditive
-UStoneTripHammer_ABP_C = {}
+local UStoneTripHammer_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UStoneTripHammer_ABP_C:AnimGraph(AnimGraph) end

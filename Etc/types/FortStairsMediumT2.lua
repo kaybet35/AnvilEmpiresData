@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFortStairsMediumT2_C : UBPBaseStructureEntity_C
-UFortStairsMediumT2_C = {}
+local UFortStairsMediumT2_C = {}
 
 

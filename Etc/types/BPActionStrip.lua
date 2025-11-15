@@ -43,7 +43,7 @@
 ---@field Upvote UBPBaseActionButton_C
 ---@field Upvoted UBPBaseActionButton_C
 ---@field WithdrawSilver UBPBaseActionButton_C
-UBPActionStrip_C = {}
+local UBPActionStrip_C = {}
 
 
 

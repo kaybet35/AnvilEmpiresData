@@ -2,7 +2,7 @@
 
 ---@class ABPVisFamilyCenterFoundationWaterConnectorStraightBuildsite_C : AVisBuildSite
 ---@field StaticMesh UStaticMeshComponent
-ABPVisFamilyCenterFoundationWaterConnectorStraightBuildsite_C = {}
+local ABPVisFamilyCenterFoundationWaterConnectorStraightBuildsite_C = {}
 
 
 

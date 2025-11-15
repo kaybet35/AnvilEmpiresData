@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field bg_border UBorder
 ---@field Image_65 UImage
-UBPAdminPlayerListItem_C = {}
+local UBPAdminPlayerListItem_C = {}
 
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float

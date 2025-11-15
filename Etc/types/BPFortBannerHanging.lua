@@ -4,7 +4,7 @@
 ---@field VisTeamSkeletalMesh UVisTeamSkeletalMeshComponent
 ---@field WallRef UStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPFortBannerHanging_C = {}
+local ABPFortBannerHanging_C = {}
 
 
 

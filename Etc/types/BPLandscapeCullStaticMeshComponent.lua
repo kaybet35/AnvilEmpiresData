@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLandscapeCullStaticMeshComponent_C : UStaticMeshComponent
-UBPLandscapeCullStaticMeshComponent_C = {}
+local UBPLandscapeCullStaticMeshComponent_C = {}
 
 

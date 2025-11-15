@@ -3,7 +3,7 @@
 ---@class ABPVisController_C : AVisController
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field DefaultSceneRoot USceneComponent
-ABPVisController_C = {}
+local ABPVisController_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisController_C:ReceiveTick(DeltaSeconds) end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USaddlePack_C : UItemTemplate
-USaddlePack_C = {}
+local USaddlePack_C = {}
 
 

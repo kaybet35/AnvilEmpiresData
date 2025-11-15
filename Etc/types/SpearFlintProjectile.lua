@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpearFlintProjectile_C : UEntityTemplate
-USpearFlintProjectile_C = {}
+local USpearFlintProjectile_C = {}
 
 

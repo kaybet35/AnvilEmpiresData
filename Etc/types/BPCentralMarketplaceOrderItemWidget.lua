@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPCentralMarketplaceOrderItemWidget_C : UCentralMarketplaceOrderItemWidget
-UBPCentralMarketplaceOrderItemWidget_C = {}
+local UBPCentralMarketplaceOrderItemWidget_C = {}
 
 

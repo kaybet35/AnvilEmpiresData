@@ -10,7 +10,7 @@
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field Idle UAudioComponent
 ---@field Arrow UArrowComponent
-ABPVisMediumBoat_C = {}
+local ABPVisMediumBoat_C = {}
 
 
 

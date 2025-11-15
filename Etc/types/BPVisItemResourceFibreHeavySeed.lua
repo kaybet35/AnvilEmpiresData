@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemResourceFibreHeavySeed_C : UVisItem
-UBPVisItemResourceFibreHeavySeed_C = {}
+local UBPVisItemResourceFibreHeavySeed_C = {}
 
 

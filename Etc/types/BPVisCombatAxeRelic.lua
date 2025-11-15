@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisCombatAxeRelic_C : UVisItem
-UBPVisCombatAxeRelic_C = {}
+local UBPVisCombatAxeRelic_C = {}
 
 

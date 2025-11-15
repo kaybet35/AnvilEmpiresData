@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisPickaxeFlint_C : UVisItem
-UBPVisPickaxeFlint_C = {}
+local UBPVisPickaxeFlint_C = {}
 
 

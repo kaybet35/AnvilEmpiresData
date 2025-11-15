@@ -2,7 +2,7 @@
 
 ---@class ABPVisMagicBox_C : AVisStructure
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisMagicBox_C = {}
+local ABPVisMagicBox_C = {}
 
 
 

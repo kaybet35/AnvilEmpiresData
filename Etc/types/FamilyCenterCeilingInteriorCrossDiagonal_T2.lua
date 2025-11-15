@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterCeilingInteriorCrossDiagonal_T2_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterCeilingInteriorCrossDiagonal_T2_C = {}
+local UFamilyCenterCeilingInteriorCrossDiagonal_T2_C = {}
 
 

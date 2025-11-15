@@ -7,7 +7,7 @@
 ---@field ScorchEffect2 UScorchEffectComponent
 ---@field ScorchEffect1 UScorchEffectComponent
 ---@field Fire USceneComponent
-ABPVisCampGateT1_C = {}
+local ABPVisCampGateT1_C = {}
 
 
 

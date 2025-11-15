@@ -21,7 +21,7 @@
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field SmokeStack UNiagaraComponent
 ---@field Populated USceneComponent
-ABPVisGroupHouseT1_C = {}
+local ABPVisGroupHouseT1_C = {}
 
 
 

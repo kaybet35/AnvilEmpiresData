@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Impact UParticleSystemComponent
 ---@field Decal UDecalComponent
-AVisHitEffectWaterProjectile_C = {}
+local AVisHitEffectWaterProjectile_C = {}
 
 function AVisHitEffectWaterProjectile_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

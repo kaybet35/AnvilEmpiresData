@@ -1,66 +1,66 @@
 ---@meta
 
 ---@class FNetSerializerConfig
-FNetSerializerConfig = {}
+local FNetSerializerConfig = {}
 
 
 ---@class FPolymorphicArrayStructNetSerializerConfig : FNetSerializerConfig
-FPolymorphicArrayStructNetSerializerConfig = {}
+local FPolymorphicArrayStructNetSerializerConfig = {}
 
 
 ---@class FPolymorphicStructNetSerializerConfig : FNetSerializerConfig
-FPolymorphicStructNetSerializerConfig = {}
+local FPolymorphicStructNetSerializerConfig = {}
 
 
 ---@class UDataStream : UObject
-UDataStream = {}
+local UDataStream = {}
 
 
 ---@class UIrisObjectReferencePackageMap : UObject
-UIrisObjectReferencePackageMap = {}
+local UIrisObjectReferencePackageMap = {}
 
 
 ---@class UNetBlobHandler : UObject
-UNetBlobHandler = {}
+local UNetBlobHandler = {}
 
 
 ---@class UNetObjectCountLimiterConfig : UNetObjectPrioritizerConfig
-UNetObjectCountLimiterConfig = {}
+local UNetObjectCountLimiterConfig = {}
 
 
 ---@class UNetObjectFilter : UObject
-UNetObjectFilter = {}
+local UNetObjectFilter = {}
 
 
 ---@class UNetObjectFilterConfig : UObject
-UNetObjectFilterConfig = {}
+local UNetObjectFilterConfig = {}
 
 
 ---@class UNetObjectPrioritizer : UObject
-UNetObjectPrioritizer = {}
+local UNetObjectPrioritizer = {}
 
 
 ---@class UNetObjectPrioritizerConfig : UObject
-UNetObjectPrioritizerConfig = {}
+local UNetObjectPrioritizerConfig = {}
 
 
 ---@class UObjectReplicationBridge : UReplicationBridge
-UObjectReplicationBridge = {}
+local UObjectReplicationBridge = {}
 
 
 ---@class UReplicationBridge : UObject
-UReplicationBridge = {}
+local UReplicationBridge = {}
 
 
 ---@class USequentialPartialNetBlobHandler : UNetBlobHandler
-USequentialPartialNetBlobHandler = {}
+local USequentialPartialNetBlobHandler = {}
 
 
 ---@class USequentialPartialNetBlobHandlerConfig : UObject
-USequentialPartialNetBlobHandlerConfig = {}
+local USequentialPartialNetBlobHandlerConfig = {}
 
 
 ---@class USphereWithOwnerBoostNetObjectPrioritizerConfig : UNetObjectPrioritizerConfig
-USphereWithOwnerBoostNetObjectPrioritizerConfig = {}
+local USphereWithOwnerBoostNetObjectPrioritizerConfig = {}
 
 

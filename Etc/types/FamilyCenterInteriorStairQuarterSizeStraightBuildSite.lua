@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterInteriorStairQuarterSizeStraightBuildSite_C : UBPBaseModularBuildSiteEntity_C
-UFamilyCenterInteriorStairQuarterSizeStraightBuildSite_C = {}
+local UFamilyCenterInteriorStairQuarterSizeStraightBuildSite_C = {}
 
 

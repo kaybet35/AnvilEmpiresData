@@ -9,7 +9,7 @@
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationWallFlatStraight_T2_C = {}
+local ABPVisGridFoundationWallFlatStraight_T2_C = {}
 
 
 

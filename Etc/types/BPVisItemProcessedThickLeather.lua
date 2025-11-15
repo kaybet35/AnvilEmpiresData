@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemProcessedThickLeather_C : UVisItem
-UBPVisItemProcessedThickLeather_C = {}
+local UBPVisItemProcessedThickLeather_C = {}
 
 

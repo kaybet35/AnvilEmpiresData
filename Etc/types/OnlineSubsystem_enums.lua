@@ -1,5 +1,5 @@
 ---@enum EInAppPurchaseState
-EInAppPurchaseState = {
+local EInAppPurchaseState = {
     Unknown = 0,
     Success = 1,
     Failed = 2,
@@ -12,7 +12,7 @@ EInAppPurchaseState = {
 }
 
 ---@enum EMPMatchOutcome
-EMPMatchOutcome = {
+local EMPMatchOutcome = {
     None = 0,
     Quit = 1,
     Won = 2,

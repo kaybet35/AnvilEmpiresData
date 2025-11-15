@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemResourceCoal_C : UVisItem
-UBPVisItemResourceCoal_C = {}
+local UBPVisItemResourceCoal_C = {}
 
 

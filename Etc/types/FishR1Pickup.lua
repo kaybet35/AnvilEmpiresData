@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFishR1Pickup_C : UEntityTemplate
-UFishR1Pickup_C = {}
+local UFishR1Pickup_C = {}
 
 

@@ -37,7 +37,7 @@
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationWallRoundDiagonal_C = {}
+local ABPVisGridFoundationWallRoundDiagonal_C = {}
 
 
 

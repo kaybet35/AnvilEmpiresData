@@ -1,5 +1,5 @@
 ---@enum EFastArraySerializerDeltaFlags
-EFastArraySerializerDeltaFlags = {
+local EFastArraySerializerDeltaFlags = {
     None = 0,
     HasBeenSerialized = 1,
     HasDeltaBeenRequested = 2,
@@ -8,7 +8,7 @@ EFastArraySerializerDeltaFlags = {
 }
 
 ---@enum ENetCloseResult
-ENetCloseResult = {
+local ENetCloseResult = {
     NetDriverAlreadyExists = 0,
     NetDriverCreateFailure = 1,
     NetDriverListenFailure = 2,
@@ -122,7 +122,7 @@ ENetCloseResult = {
 }
 
 ---@enum ENetworkFailure
-ENetworkFailure = {
+local ENetworkFailure = {
     NetDriverAlreadyExists = 0,
     NetDriverCreateFailure = 1,
     NetDriverListenFailure = 2,

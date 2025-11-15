@@ -11,7 +11,7 @@
 ---@field ['Block-in_Square19_StaticMeshComponent0'] UStaticMeshComponent
 ---@field ['Block-in_Square18_StaticMeshComponent2'] UStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisRoofOverhead_C = {}
+local ABPVisRoofOverhead_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UStorageChestResources_C : UBPBaseStructureEntity_C
-UStorageChestResources_C = {}
+local UStorageChestResources_C = {}
 
 

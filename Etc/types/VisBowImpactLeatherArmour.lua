@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisBowImpactLeatherArmour_C : AVisEffect
-AVisBowImpactLeatherArmour_C = {}
+local AVisBowImpactLeatherArmour_C = {}
 
 

@@ -7,7 +7,7 @@
 ---@field EntityAttachableData UEntityAttachableDataComponent
 ---@field VisMultiItemStockpile UVisMultiItemStockpileComponent
 ---@field CartMesh USkeletalMeshComponent
-ABPVisCart_C = {}
+local ABPVisCart_C = {}
 
 
 

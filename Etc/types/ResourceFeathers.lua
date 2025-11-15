@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceFeathers_C : UItemTemplate
-UResourceFeathers_C = {}
+local UResourceFeathers_C = {}
 
 

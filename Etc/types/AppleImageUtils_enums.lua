@@ -1,5 +1,5 @@
 ---@enum EAppleTextureType
-EAppleTextureType = {
+local EAppleTextureType = {
     Unknown = 0,
     Image = 1,
     PixelBuffer = 2,
@@ -9,7 +9,7 @@ EAppleTextureType = {
 }
 
 ---@enum ETextureRotationDirection
-ETextureRotationDirection = {
+local ETextureRotationDirection = {
     None = 0,
     Left = 1,
     Right = 2,

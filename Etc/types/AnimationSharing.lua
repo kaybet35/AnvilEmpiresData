@@ -5,7 +5,7 @@
 ---@field AnimBlueprint TSubclassOf<UAnimSharingStateInstance>
 ---@field NumRandomizedInstances FPerPlatformInt
 ---@field Enabled FPerPlatformBool
-FAnimationSetup = {}
+local FAnimationSetup = {}
 
 
 
@@ -14,7 +14,7 @@ FAnimationSetup = {}
 ---@field BlendSignificanceValue FPerPlatformFloat
 ---@field MaximumNumberConcurrentBlends FPerPlatformInt
 ---@field TickSignificanceValue FPerPlatformFloat
-FAnimationSharingScalability = {}
+local FAnimationSharingScalability = {}
 
 
 
@@ -30,7 +30,7 @@ FAnimationSharingScalability = {}
 ---@field MaximumNumberOfConcurrentInstances FPerPlatformInt
 ---@field WiggleTimePercentage float
 ---@field bRequiresCurves boolean
-FAnimationStateEntry = {}
+local FAnimationStateEntry = {}
 
 
 
@@ -41,12 +41,12 @@ FAnimationStateEntry = {}
 ---@field AdditiveAnimBlueprint TSubclassOf<UAnimSharingAdditiveInstance>
 ---@field StateProcessorClass TSubclassOf<UAnimationSharingStateProcessor>
 ---@field AnimationStates TArray<FAnimationStateEntry>
-FPerSkeletonAnimationSharingSetup = {}
+local FPerSkeletonAnimationSharingSetup = {}
 
 
 
 ---@class FTickAnimationSharingFunction : FTickFunction
-FTickAnimationSharingFunction = {}
+local FTickAnimationSharingFunction = {}
 
 
 ---@class UAnimSharingAdditiveInstance : UAnimInstance
@@ -54,7 +54,7 @@ FTickAnimationSharingFunction = {}
 ---@field AdditiveAnimation TWeakObjectPtr<UAnimSequence>
 ---@field Alpha float
 ---@field bStateBool boolean
-UAnimSharingAdditiveInstance = {}
+local UAnimSharingAdditiveInstance = {}
 
 
 
@@ -64,7 +64,7 @@ UAnimSharingAdditiveInstance = {}
 ---@field UsedAnimationSequences TArray<UAnimSequence>
 ---@field StateEnum UEnum
 ---@field SharingActor AActor
-UAnimSharingInstance = {}
+local UAnimSharingInstance = {}
 
 
 
@@ -74,7 +74,7 @@ UAnimSharingInstance = {}
 ---@field PlayRate float
 ---@field bStateBool boolean
 ---@field Instance UAnimSharingInstance
-UAnimSharingStateInstance = {}
+local UAnimSharingStateInstance = {}
 
 ---@param Actors TArray<AActor>
 function UAnimSharingStateInstance:GetInstancedActors(Actors) end
@@ -85,14 +85,14 @@ function UAnimSharingStateInstance:GetInstancedActors(Actors) end
 ---@field ToComponent TWeakObjectPtr<USkeletalMeshComponent>
 ---@field BlendTime float
 ---@field bBlendBool boolean
-UAnimSharingTransitionInstance = {}
+local UAnimSharingTransitionInstance = {}
 
 
 
 ---@class UAnimationSharingManager : UObject
 ---@field Skeletons TArray<USkeleton>
 ---@field PerSkeletonData TArray<UAnimSharingInstance>
-UAnimationSharingManager = {}
+local UAnimationSharingManager = {}
 
 ---@param InActor AActor
 ---@param SharingSkeleton USkeleton
@@ -111,13 +111,13 @@ function UAnimationSharingManager:AnimationSharingEnabled() end
 ---@class UAnimationSharingSetup : UObject
 ---@field SkeletonSetups TArray<FPerSkeletonAnimationSharingSetup>
 ---@field ScalabilitySettings FAnimationSharingScalability
-UAnimationSharingSetup = {}
+local UAnimationSharingSetup = {}
 
 
 
 ---@class UAnimationSharingStateProcessor : UObject
 ---@field AnimationStateEnum TSoftObjectPtr<UEnum>
-UAnimationSharingStateProcessor = {}
+local UAnimationSharingStateProcessor = {}
 
 ---@param OutState int32
 ---@param InActor AActor

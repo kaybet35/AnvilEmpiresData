@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCarvingStation_C : UBPBaseStructureEntity_C
-UCarvingStation_C = {}
+local UCarvingStation_C = {}
 
 

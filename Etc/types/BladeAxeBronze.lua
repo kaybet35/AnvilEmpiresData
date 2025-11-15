@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBladeAxeBronze_C : UItemTemplate
-UBladeAxeBronze_C = {}
+local UBladeAxeBronze_C = {}
 
 

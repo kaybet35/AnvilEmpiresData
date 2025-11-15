@@ -18,7 +18,7 @@
 ---@field __StructProperty_76 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -26,7 +26,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -49,7 +49,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field tiltAngle_Pitch double
 ---@field RamIsInUse boolean
 ---@field ['Wheel Axle Radius'] double
-UBatteringRam_ABP_C = {}
+local UBatteringRam_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UBatteringRam_ABP_C:AnimGraph(AnimGraph) end

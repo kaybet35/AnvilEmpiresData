@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHUDHintWidget_C : UHUDHintWidget
-UBPHUDHintWidget_C = {}
+local UBPHUDHintWidget_C = {}
 
 

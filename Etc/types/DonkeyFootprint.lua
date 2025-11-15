@@ -2,7 +2,7 @@
 
 ---@class ADonkeyFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ADonkeyFootprint_C = {}
+local ADonkeyFootprint_C = {}
 
 
 

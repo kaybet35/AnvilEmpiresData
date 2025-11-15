@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHenhouseT2_C : UBPBaseStructureEntity_C
-UHenhouseT2_C = {}
+local UHenhouseT2_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceStone_C : UItemTemplate
-UResourceStone_C = {}
+local UResourceStone_C = {}
 
 

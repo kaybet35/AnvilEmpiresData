@@ -22,7 +22,7 @@
 ---@field VisRandomMeshDecor26 UVisRandomMeshDecorComponent
 ---@field Stairs UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABpVisTownCenterTownT3_C = {}
+local ABpVisTownCenterTownT3_C = {}
 
 ---@param DeltaSeconds float
 function ABpVisTownCenterTownT3_C:ReceiveTick(DeltaSeconds) end

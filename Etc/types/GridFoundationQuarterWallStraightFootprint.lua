@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationQuarterWallStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationQuarterWallStraightFootprint_C = {}
+local AGridFoundationQuarterWallStraightFootprint_C = {}
 
 
 

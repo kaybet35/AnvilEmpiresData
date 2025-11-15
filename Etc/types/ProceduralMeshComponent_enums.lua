@@ -1,5 +1,5 @@
 ---@enum EProcMeshSliceCapOption
-EProcMeshSliceCapOption = {
+local EProcMeshSliceCapOption = {
     NoCap = 0,
     CreateNewSectionForCap = 1,
     UseLastSectionForCap = 2,

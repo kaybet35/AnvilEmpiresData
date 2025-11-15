@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectHandSwing_C : AVisEffect
-AVisEffectHandSwing_C = {}
+local AVisEffectHandSwing_C = {}
 
 

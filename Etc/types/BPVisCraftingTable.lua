@@ -6,7 +6,7 @@
 ---@field RefineSound UAudioComponent
 ---@field VisStaticMesh9 UVisStaticMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
-ABPVisCraftingTable_C = {}
+local ABPVisCraftingTable_C = {}
 
 
 

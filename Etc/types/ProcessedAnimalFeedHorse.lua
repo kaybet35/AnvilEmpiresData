@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UProcessedAnimalFeedHorse_C : UItemTemplate
-UProcessedAnimalFeedHorse_C = {}
+local UProcessedAnimalFeedHorse_C = {}
 
 

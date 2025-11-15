@@ -9,7 +9,7 @@
 ---@field VisSingleItemStockpile UVisSingleItemStockpileComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisWeaponStockpileT1_C = {}
+local ABPVisWeaponStockpileT1_C = {}
 
 
 

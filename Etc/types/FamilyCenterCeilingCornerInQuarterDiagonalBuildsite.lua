@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterCeilingCornerInQuarterDiagonalBuildsite_C : UBPBaseFoundationModularBuildSiteEntity_C
-UFamilyCenterCeilingCornerInQuarterDiagonalBuildsite_C = {}
+local UFamilyCenterCeilingCornerInQuarterDiagonalBuildsite_C = {}
 
 

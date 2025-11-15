@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceStockpileT2_C : UBPBaseStructureEntity_C
-UResourceStockpileT2_C = {}
+local UResourceStockpileT2_C = {}
 
 

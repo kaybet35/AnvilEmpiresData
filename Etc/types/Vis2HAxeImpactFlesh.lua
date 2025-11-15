@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVis2HAxeImpactFlesh_C : AVisEffect
-AVis2HAxeImpactFlesh_C = {}
+local AVis2HAxeImpactFlesh_C = {}
 
 

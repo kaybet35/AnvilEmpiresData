@@ -1,5 +1,5 @@
 ---@enum ERaDistanceRolloffModel
-ERaDistanceRolloffModel = {
+local ERaDistanceRolloffModel = {
     LOGARITHMIC = 0,
     LINEAR = 1,
     NONE = 2,
@@ -7,7 +7,7 @@ ERaDistanceRolloffModel = {
 }
 
 ---@enum ERaMaterialName
-ERaMaterialName = {
+local ERaMaterialName = {
     TRANSPARENT = 0,
     ACOUSTIC_CEILING_TILES = 1,
     BRICK_BARE = 2,
@@ -36,7 +36,7 @@ ERaMaterialName = {
 }
 
 ---@enum ERaQualityMode
-ERaQualityMode = {
+local ERaQualityMode = {
     STEREO_PANNING = 0,
     BINAURAL_LOW = 1,
     BINAURAL_MEDIUM = 2,
@@ -45,14 +45,14 @@ ERaQualityMode = {
 }
 
 ---@enum ERaSpatializationMethod
-ERaSpatializationMethod = {
+local ERaSpatializationMethod = {
     STEREO_PANNING = 0,
     HRTF = 1,
     ERaSpatializationMethod_MAX = 2,
 }
 
 ---@enum EResonanceRenderMode
-EResonanceRenderMode = {
+local EResonanceRenderMode = {
     StereoPanning = 0,
     BinauralLowQuality = 1,
     BinauralMediumQuality = 2,

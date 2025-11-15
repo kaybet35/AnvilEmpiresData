@@ -7,7 +7,7 @@
 ---@field referenceMesh1 UStaticMeshComponent
 ---@field referenceMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisSpawnerWildWheat_C = {}
+local ABPVisSpawnerWildWheat_C = {}
 
 
 

@@ -2,7 +2,7 @@
 
 ---@class ABPVisShipyard_C : AVisStructure
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisShipyard_C = {}
+local ABPVisShipyard_C = {}
 
 
 

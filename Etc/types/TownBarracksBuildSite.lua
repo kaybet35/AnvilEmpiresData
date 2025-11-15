@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTownBarracksBuildSite_C : UBPBaseBuildSiteEntity_C
-UTownBarracksBuildSite_C = {}
+local UTownBarracksBuildSite_C = {}
 
 

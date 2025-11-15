@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisSaddlePack_C : UVisItem
-UBPVisSaddlePack_C = {}
+local UBPVisSaddlePack_C = {}
 
 

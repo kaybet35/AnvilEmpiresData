@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationWallRoundStraightBuildSite_C : UBPBaseFoundationModularBuildSiteEntity_C
-UGridFoundationWallRoundStraightBuildSite_C = {}
+local UGridFoundationWallRoundStraightBuildSite_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UThickLeatherTannedPickup_C : UEntityTemplate
-UThickLeatherTannedPickup_C = {}
+local UThickLeatherTannedPickup_C = {}
 
 

@@ -5,24 +5,24 @@
 ---@field EndTime FTimespan
 ---@field Text FString
 ---@field Position FVector2D
-FOverlayItem = {}
+local FOverlayItem = {}
 
 
 
 ---@class UBasicOverlays : UOverlays
 ---@field Overlays TArray<FOverlayItem>
-UBasicOverlays = {}
+local UBasicOverlays = {}
 
 
 
 ---@class ULocalizedOverlays : UOverlays
 ---@field DefaultOverlays UBasicOverlays
 ---@field LocaleToOverlaysMap TMap<FString, UBasicOverlays>
-ULocalizedOverlays = {}
+local ULocalizedOverlays = {}
 
 
 
 ---@class UOverlays : UObject
-UOverlays = {}
+local UOverlays = {}
 
 

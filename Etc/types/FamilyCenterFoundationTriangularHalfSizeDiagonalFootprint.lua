@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterFoundationTriangularHalfSizeDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterFoundationTriangularHalfSizeDiagonalFootprint_C = {}
+local AFamilyCenterFoundationTriangularHalfSizeDiagonalFootprint_C = {}
 
 
 

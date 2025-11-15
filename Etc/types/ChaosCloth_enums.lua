@@ -1,5 +1,5 @@
 ---@enum EChaosClothTetherMode
-EChaosClothTetherMode = {
+local EChaosClothTetherMode = {
     FastTetherFastLength = 0,
     AccurateTetherFastLength = 1,
     AccurateTetherAccurateLength = 2,
@@ -8,7 +8,7 @@ EChaosClothTetherMode = {
 }
 
 ---@enum EChaosWeightMapTarget
-EChaosWeightMapTarget = {
+local EChaosWeightMapTarget = {
     None = 0,
     MaxDistance = 1,
     BackstopDistance = 2,

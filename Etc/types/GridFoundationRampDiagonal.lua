@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationRampDiagonal_C : UBPBaseModularEntity_C
-UGridFoundationRampDiagonal_C = {}
+local UGridFoundationRampDiagonal_C = {}
 
 

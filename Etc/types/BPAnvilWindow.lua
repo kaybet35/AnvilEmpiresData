@@ -7,7 +7,7 @@
 ---@field BPFooterContainer UBPFooterContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field InventoryContainer UBPMainAreaContainer_C
-UBPAnvilWindow_C = {}
+local UBPAnvilWindow_C = {}
 
 
 

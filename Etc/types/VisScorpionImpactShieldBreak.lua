@@ -2,7 +2,7 @@
 
 ---@class AVisScorpionImpactShieldBreak_C : AVisEffect
 ---@field Audio UAudioComponent
-AVisScorpionImpactShieldBreak_C = {}
+local AVisScorpionImpactShieldBreak_C = {}
 
 
 

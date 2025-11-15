@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationHalfHeightStraightBuildSite_C : UBPBaseFoundationModularBuildSiteEntity_C
-UGridFoundationHalfHeightStraightBuildSite_C = {}
+local UGridFoundationHalfHeightStraightBuildSite_C = {}
 
 

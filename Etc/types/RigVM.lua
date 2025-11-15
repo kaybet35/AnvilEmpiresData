@@ -1,95 +1,95 @@
 ---@meta
 
 ---@class FRigVMBaseOp
-FRigVMBaseOp = {}
+local FRigVMBaseOp = {}
 
 
 ---@class FRigVMBinaryOp : FRigVMBaseOp
-FRigVMBinaryOp = {}
+local FRigVMBinaryOp = {}
 
 
 ---@class FRigVMBreakpoint
-FRigVMBreakpoint = {}
+local FRigVMBreakpoint = {}
 
 
 ---@class FRigVMByteCode
 ---@field ByteCode TArray<uint8>
 ---@field NumInstructions int32
 ---@field Entries TArray<FRigVMByteCodeEntry>
-FRigVMByteCode = {}
+local FRigVMByteCode = {}
 
 
 
 ---@class FRigVMByteCodeEntry
 ---@field Name FName
 ---@field InstructionIndex int32
-FRigVMByteCodeEntry = {}
+local FRigVMByteCodeEntry = {}
 
 
 
 ---@class FRigVMByteCodeStatistics
 ---@field InstructionCount int32
 ---@field DataBytes int32
-FRigVMByteCodeStatistics = {}
+local FRigVMByteCodeStatistics = {}
 
 
 
 ---@class FRigVMChangeTypeOp : FRigVMUnaryOp
-FRigVMChangeTypeOp = {}
+local FRigVMChangeTypeOp = {}
 
 
 ---@class FRigVMComparisonOp : FRigVMBaseOp
-FRigVMComparisonOp = {}
+local FRigVMComparisonOp = {}
 
 
 ---@class FRigVMCopyOp : FRigVMBaseOp
-FRigVMCopyOp = {}
+local FRigVMCopyOp = {}
 
 
 ---@class FRigVMDebugInfo
-FRigVMDebugInfo = {}
+local FRigVMDebugInfo = {}
 
 
 ---@class FRigVMDispatchFactory
-FRigVMDispatchFactory = {}
+local FRigVMDispatchFactory = {}
 
 
 ---@class FRigVMExecuteContext
-FRigVMExecuteContext = {}
+local FRigVMExecuteContext = {}
 
 
 ---@class FRigVMExecuteOp : FRigVMBaseOp
-FRigVMExecuteOp = {}
+local FRigVMExecuteOp = {}
 
 
 ---@class FRigVMExtendedExecuteContext
-FRigVMExtendedExecuteContext = {}
+local FRigVMExtendedExecuteContext = {}
 
 
 ---@class FRigVMInstruction
 ---@field ByteCodeIndex uint64
 ---@field OpCode ERigVMOpCode
 ---@field OperandAlignment uint8
-FRigVMInstruction = {}
+local FRigVMInstruction = {}
 
 
 
 ---@class FRigVMInstructionArray
 ---@field Instructions TArray<FRigVMInstruction>
-FRigVMInstructionArray = {}
+local FRigVMInstructionArray = {}
 
 
 
 ---@class FRigVMInvokeEntryOp : FRigVMBaseOp
-FRigVMInvokeEntryOp = {}
+local FRigVMInvokeEntryOp = {}
 
 
 ---@class FRigVMJumpIfOp : FRigVMUnaryOp
-FRigVMJumpIfOp = {}
+local FRigVMJumpIfOp = {}
 
 
 ---@class FRigVMJumpOp : FRigVMBaseOp
-FRigVMJumpOp = {}
+local FRigVMJumpOp = {}
 
 
 ---@class FRigVMMemoryContainer
@@ -101,7 +101,7 @@ FRigVMJumpOp = {}
 ---@field ScriptStructs TArray<UScriptStruct>
 ---@field NameMap TMap<FName, int32>
 ---@field bEncounteredErrorDuringLoad boolean
-FRigVMMemoryContainer = {}
+local FRigVMMemoryContainer = {}
 
 
 
@@ -109,7 +109,7 @@ FRigVMMemoryContainer = {}
 ---@field RegisterCount int32
 ---@field DataBytes int32
 ---@field TotalBytes int32
-FRigVMMemoryStatistics = {}
+local FRigVMMemoryStatistics = {}
 
 
 
@@ -117,7 +117,7 @@ FRigVMMemoryStatistics = {}
 ---@field MemoryType ERigVMMemoryType
 ---@field RegisterIndex uint16
 ---@field RegisterOffset uint16
-FRigVMOperand = {}
+local FRigVMOperand = {}
 
 
 
@@ -128,16 +128,16 @@ FRigVMOperand = {}
 ---@field CPPType FString
 ---@field ScriptStruct UScriptStruct
 ---@field ScriptStructPath FName
-FRigVMParameter = {}
+local FRigVMParameter = {}
 
 
 
 ---@class FRigVMQuaternaryOp : FRigVMBaseOp
-FRigVMQuaternaryOp = {}
+local FRigVMQuaternaryOp = {}
 
 
 ---@class FRigVMQuinaryOp : FRigVMBaseOp
-FRigVMQuinaryOp = {}
+local FRigVMQuinaryOp = {}
 
 
 ---@class FRigVMRegister
@@ -152,7 +152,7 @@ FRigVMQuinaryOp = {}
 ---@field ScriptStructIndex int32
 ---@field bIsArray boolean
 ---@field bIsDynamic boolean
-FRigVMRegister = {}
+local FRigVMRegister = {}
 
 
 
@@ -165,22 +165,22 @@ FRigVMRegister = {}
 ---@field ArrayIndex int32
 ---@field ElementSize uint16
 ---@field CachedSegmentPath FString
-FRigVMRegisterOffset = {}
+local FRigVMRegisterOffset = {}
 
 
 
 ---@class FRigVMRuntimeSettings
 ---@field MaximumArraySize int32
-FRigVMRuntimeSettings = {}
+local FRigVMRuntimeSettings = {}
 
 
 
 ---@class FRigVMSenaryOp : FRigVMBaseOp
-FRigVMSenaryOp = {}
+local FRigVMSenaryOp = {}
 
 
 ---@class FRigVMSlice
-FRigVMSlice = {}
+local FRigVMSlice = {}
 
 
 ---@class FRigVMStatistics
@@ -191,32 +191,32 @@ FRigVMSlice = {}
 ---@field DebugMemory FRigVMMemoryStatistics
 ---@field BytesForCaching int32
 ---@field ByteCode FRigVMByteCodeStatistics
-FRigVMStatistics = {}
+local FRigVMStatistics = {}
 
 
 
 ---@class FRigVMStruct
-FRigVMStruct = {}
+local FRigVMStruct = {}
 
 
 ---@class FRigVMTemplateArgumentType
 ---@field CPPType FName
 ---@field CPPTypeObject UObject
-FRigVMTemplateArgumentType = {}
+local FRigVMTemplateArgumentType = {}
 
 
 
 ---@class FRigVMTernaryOp : FRigVMBaseOp
-FRigVMTernaryOp = {}
+local FRigVMTernaryOp = {}
 
 
 ---@class FRigVMUnaryOp : FRigVMBaseOp
-FRigVMUnaryOp = {}
+local FRigVMUnaryOp = {}
 
 
 ---@class FRigVMUnknownType
 ---@field Hash uint32
-FRigVMUnknownType = {}
+local FRigVMUnknownType = {}
 
 
 
@@ -226,12 +226,12 @@ FRigVMUnknownType = {}
 ---@field Type ERigVMUserWorkflowType
 ---@field PerformDynamicDelegate FRigVMUserWorkflowPerformDynamicDelegate
 ---@field OptionsClass TObjectPtr<UClass>
-FRigVMUserWorkflow = {}
+local FRigVMUserWorkflow = {}
 
 
 
 ---@class UDefault__RigVMMemoryStorageGeneratorClass
-UDefault__RigVMMemoryStorageGeneratorClass = {}
+local UDefault__RigVMMemoryStorageGeneratorClass = {}
 
 
 ---@class URigVM : UObject
@@ -246,7 +246,7 @@ UDefault__RigVMMemoryStorageGeneratorClass = {}
 ---@field Parameters TArray<FRigVMParameter>
 ---@field ParametersNameMap TMap<FName, int32>
 ---@field DeferredVMToCopy URigVM
-URigVM = {}
+local URigVM = {}
 
 ---@param InParameterName FName
 ---@param InValue FVector2D
@@ -343,21 +343,21 @@ function URigVM:AddRigVMFunction(InRigVMStruct, InMethodName) end
 
 
 ---@class URigVMMemoryStorage : UObject
-URigVMMemoryStorage = {}
+local URigVMMemoryStorage = {}
 
 
 ---@class URigVMMemoryStorageGeneratorClass : UClass
-URigVMMemoryStorageGeneratorClass = {}
+local URigVMMemoryStorageGeneratorClass = {}
 
 
 ---@class URigVMNativized : URigVM
-URigVMNativized = {}
+local URigVMNativized = {}
 
 
 ---@class URigVMUserWorkflowOptions : UObject
 ---@field Subject UObject
 ---@field Workflow FRigVMUserWorkflow
-URigVMUserWorkflowOptions = {}
+local URigVMUserWorkflowOptions = {}
 
 ---@return boolean
 function URigVMUserWorkflowOptions:RequiresDialog() end

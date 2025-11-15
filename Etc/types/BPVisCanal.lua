@@ -30,7 +30,7 @@
 ---@field StartMesh UStaticMeshComponent
 ---@field VisCanalWaterController UVisCanalWaterControllerComponent
 ---@field EndMesh UStaticMeshComponent
-ABPVisCanal_C = {}
+local ABPVisCanal_C = {}
 
 function ABPVisCanal_C:ReceiveBeginPlay() end
 ---@param SplineDataComponent USplineDataComponent

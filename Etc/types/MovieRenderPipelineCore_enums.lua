@@ -1,5 +1,5 @@
 ---@enum EMoviePipelineEncodeQuality
-EMoviePipelineEncodeQuality = {
+local EMoviePipelineEncodeQuality = {
     Low = 0,
     Medium = 1,
     High = 2,
@@ -8,7 +8,7 @@ EMoviePipelineEncodeQuality = {
 }
 
 ---@enum EMoviePipelineShutterTiming
-EMoviePipelineShutterTiming = {
+local EMoviePipelineShutterTiming = {
     FrameOpen = 0,
     FrameCenter = 1,
     FrameClose = 2,
@@ -16,7 +16,7 @@ EMoviePipelineShutterTiming = {
 }
 
 ---@enum EMoviePipelineTextureStreamingMethod
-EMoviePipelineTextureStreamingMethod = {
+local EMoviePipelineTextureStreamingMethod = {
     None = 0,
     Disabled = 1,
     FullyLoad = 2,
@@ -24,7 +24,7 @@ EMoviePipelineTextureStreamingMethod = {
 }
 
 ---@enum EMovieRenderPipelineState
-EMovieRenderPipelineState = {
+local EMovieRenderPipelineState = {
     Uninitialized = 0,
     ProducingFrames = 1,
     Finalize = 2,
@@ -34,7 +34,7 @@ EMovieRenderPipelineState = {
 }
 
 ---@enum EMovieRenderShotState
-EMovieRenderShotState = {
+local EMovieRenderShotState = {
     Uninitialized = 0,
     WarmingUp = 1,
     MotionBlur = 2,
@@ -44,7 +44,7 @@ EMovieRenderShotState = {
 }
 
 ---@enum FCPXMLExportDataSource
-FCPXMLExportDataSource = {
+local FCPXMLExportDataSource = {
     OutputMetadata = 0,
     SequenceData = 1,
     FCPXMLExportDataSource_MAX = 2,

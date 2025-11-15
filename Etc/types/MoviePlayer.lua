@@ -4,7 +4,7 @@
 ---@field bWaitForMoviesToComplete boolean
 ---@field bMoviesAreSkippable boolean
 ---@field StartupMovies TArray<FString>
-UMoviePlayerSettings = {}
+local UMoviePlayerSettings = {}
 
 
 

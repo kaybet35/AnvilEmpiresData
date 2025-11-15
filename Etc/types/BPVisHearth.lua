@@ -12,7 +12,7 @@
 ---@field RefiningAssets UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisHearth_C = {}
+local ABPVisHearth_C = {}
 
 function ABPVisHearth_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

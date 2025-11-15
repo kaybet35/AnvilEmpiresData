@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationHalfSquareStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationHalfSquareStraightFootprint_C = {}
+local AGridFoundationHalfSquareStraightFootprint_C = {}
 
 
 

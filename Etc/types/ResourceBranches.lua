@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceBranches_C : UItemTemplate
-UResourceBranches_C = {}
+local UResourceBranches_C = {}
 
 

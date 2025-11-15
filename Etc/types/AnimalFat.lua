@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAnimalFat_C : UItemTemplate
-UAnimalFat_C = {}
+local UAnimalFat_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWorldMarketShopMapIcon_C : UWorldMarketShopMapIcon
-UBPWorldMarketShopMapIcon_C = {}
+local UBPWorldMarketShopMapIcon_C = {}
 
 

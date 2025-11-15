@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWellT2_C : UBPBaseStructureEntity_C
-UWellT2_C = {}
+local UWellT2_C = {}
 
 

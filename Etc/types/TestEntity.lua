@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTestEntity_C : UEntityTemplate
-UTestEntity_C = {}
+local UTestEntity_C = {}
 
 

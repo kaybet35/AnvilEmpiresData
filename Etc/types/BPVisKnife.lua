@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisKnife_C : UVisItem
-UBPVisKnife_C = {}
+local UBPVisKnife_C = {}
 
 

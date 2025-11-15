@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URelicSiteSpawnLocation_C : UEntityTemplate
-URelicSiteSpawnLocation_C = {}
+local URelicSiteSpawnLocation_C = {}
 
 

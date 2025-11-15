@@ -1,5 +1,5 @@
 ---@enum EFourPlayerSplitScreenType
-EFourPlayerSplitScreenType = {
+local EFourPlayerSplitScreenType = {
     Grid = 0,
     Vertical = 1,
     Horizontal = 2,
@@ -7,14 +7,14 @@ EFourPlayerSplitScreenType = {
 }
 
 ---@enum ESubLevelStripMode
-ESubLevelStripMode = {
+local ESubLevelStripMode = {
     ExactClass = 0,
     IsChildOf = 1,
     ESubLevelStripMode_MAX = 2,
 }
 
 ---@enum EThreePlayerSplitScreenType
-EThreePlayerSplitScreenType = {
+local EThreePlayerSplitScreenType = {
     FavorTop = 0,
     FavorBottom = 1,
     Vertical = 2,
@@ -23,7 +23,7 @@ EThreePlayerSplitScreenType = {
 }
 
 ---@enum ETwoPlayerSplitScreenType
-ETwoPlayerSplitScreenType = {
+local ETwoPlayerSplitScreenType = {
     Horizontal = 0,
     Vertical = 1,
     ETwoPlayerSplitScreenType_MAX = 2,

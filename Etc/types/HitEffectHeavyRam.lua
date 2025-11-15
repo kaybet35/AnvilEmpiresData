@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHitEffectHeavyRam_C : UEntityTemplate
-UHitEffectHeavyRam_C = {}
+local UHitEffectHeavyRam_C = {}
 
 

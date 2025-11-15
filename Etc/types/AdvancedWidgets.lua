@@ -29,7 +29,7 @@
 ---@field OnControllerCaptureBegin FRadialSliderOnControllerCaptureBegin
 ---@field OnControllerCaptureEnd FRadialSliderOnControllerCaptureEnd
 ---@field OnValueChanged FRadialSliderOnValueChanged
-URadialSlider = {}
+local URadialSlider = {}
 
 ---@param InValueTags TArray<float>
 function URadialSlider:SetValueTags(InValueTags) end

@@ -3,12 +3,12 @@
 ---@class AMediaPlate : AActor
 ---@field MediaPlateComponent UMediaPlateComponent
 ---@field StaticMeshComponent UStaticMeshComponent
-AMediaPlate = {}
+local AMediaPlate = {}
 
 
 
 ---@class UMediaPlateAssetUserData : UAssetUserData
-UMediaPlateAssetUserData = {}
+local UMediaPlateAssetUserData = {}
 
 
 ---@class UMediaPlateComponent : UActorComponent
@@ -32,7 +32,7 @@ UMediaPlateAssetUserData = {}
 ---@field MeshRange FVector2D
 ---@field MediaTexture UMediaTexture
 ---@field MediaPlayer UMediaPlayer
-UMediaPlateComponent = {}
+local UMediaPlateComponent = {}
 
 ---@param bInPlayOnlyWhenVisible boolean
 function UMediaPlateComponent:SetPlayOnlyWhenVisible(bInPlayOnlyWhenVisible) end

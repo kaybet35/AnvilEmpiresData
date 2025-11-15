@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterWallDeclineDiagonal_T1_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterWallDeclineDiagonal_T1_C = {}
+local UFamilyCenterWallDeclineDiagonal_T1_C = {}
 
 

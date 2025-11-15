@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UDonkeyFoalHusk_C : UEntityTemplate
-UDonkeyFoalHusk_C = {}
+local UDonkeyFoalHusk_C = {}
 
 

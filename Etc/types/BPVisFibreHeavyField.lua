@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFibreHeavyField_C : AVisResource
-ABPVisFibreHeavyField_C = {}
+local ABPVisFibreHeavyField_C = {}
 
 

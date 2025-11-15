@@ -17,14 +17,14 @@
 ---@field __NameProperty_31 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __BoolProperty boolean
 ---@field __FloatProperty_0 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -38,7 +38,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_RandomPlayer FAnimNode_RandomPlayer
 ---@field AnimGraphNode_Slot FAnimNode_Slot
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
-UCrab_ABP_C = {}
+local UCrab_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UCrab_ABP_C:AnimGraph(AnimGraph) end

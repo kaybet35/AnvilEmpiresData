@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterCeilingWedgeBDiagonal_T1_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterCeilingWedgeBDiagonal_T1_C = {}
+local UFamilyCenterCeilingWedgeBDiagonal_T1_C = {}
 
 

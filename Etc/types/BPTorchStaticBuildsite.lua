@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPTorchStaticBuildsite_C : AVisBuildSite
-ABPTorchStaticBuildsite_C = {}
+local ABPTorchStaticBuildsite_C = {}
 
 

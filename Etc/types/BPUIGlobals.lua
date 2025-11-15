@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPUIGlobals_C : AUIGlobals
-ABPUIGlobals_C = {}
+local ABPUIGlobals_C = {}
 
 

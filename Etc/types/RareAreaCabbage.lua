@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URareAreaCabbage_C : UEntityTemplate
-URareAreaCabbage_C = {}
+local URareAreaCabbage_C = {}
 
 

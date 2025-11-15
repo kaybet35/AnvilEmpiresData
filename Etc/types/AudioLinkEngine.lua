@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class IAudioLinkBlueprintInterface : IInterface
-IAudioLinkBlueprintInterface = {}
+local IAudioLinkBlueprintInterface = {}
 
 function IAudioLinkBlueprintInterface:StopLink() end
 ---@param NewSound USoundBase

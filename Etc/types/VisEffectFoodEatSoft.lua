@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectFoodEatSoft_C : AVisEffect
-AVisEffectFoodEatSoft_C = {}
+local AVisEffectFoodEatSoft_C = {}
 
 

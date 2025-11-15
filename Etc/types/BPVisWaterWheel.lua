@@ -5,7 +5,7 @@
 ---@field PowerUnitData UPowerUnitDataComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisWaterWheel_C = {}
+local ABPVisWaterWheel_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisWaterWheel_C:ReceiveTick(DeltaSeconds) end

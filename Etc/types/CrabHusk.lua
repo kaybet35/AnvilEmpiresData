@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCrabHusk_C : UEntityTemplate
-UCrabHusk_C = {}
+local UCrabHusk_C = {}
 
 

@@ -4,7 +4,7 @@
 ---@field Billboard UBillboardComponent
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisSpawnPointBot_C = {}
+local ABPVisSpawnPointBot_C = {}
 
 
 

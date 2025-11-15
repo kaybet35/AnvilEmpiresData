@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UProcessedClay_C : UItemTemplate
-UProcessedClay_C = {}
+local UProcessedClay_C = {}
 
 

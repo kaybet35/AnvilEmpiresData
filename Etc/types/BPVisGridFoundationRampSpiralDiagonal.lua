@@ -2,7 +2,7 @@
 
 ---@class ABPVisGridFoundationRampSpiralDiagonal_C : AVisStructure
 ---@field StaticMesh UStaticMeshComponent
-ABPVisGridFoundationRampSpiralDiagonal_C = {}
+local ABPVisGridFoundationRampSpiralDiagonal_C = {}
 
 
 

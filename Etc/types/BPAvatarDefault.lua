@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPAvatarDefault_C : UItemTemplate
-UBPAvatarDefault_C = {}
+local UBPAvatarDefault_C = {}
 
 

@@ -12,10 +12,10 @@ AVisAnimalVehicle::AVisAnimalVehicle(const FObjectInitializer& ObjectInitializer
     this->SaddleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SaddleMesh"));
     this->HalterHeadMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HalterHeadMesh"));
     this->HalterBodyMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HalterBodyMesh"));
+    this->HalterBodyMesh->SetupAttachment(RootComponent);
+    this->HalterHeadMesh->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
     this->SaddleMesh->SetupAttachment(RootComponent);
-    this->HalterHeadMesh->SetupAttachment(RootComponent);
-    this->HalterBodyMesh->SetupAttachment(RootComponent);
 }
 
 

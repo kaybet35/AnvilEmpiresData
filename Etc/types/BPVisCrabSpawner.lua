@@ -7,7 +7,7 @@
 ---@field referenceMesh3 UStaticMeshComponent
 ---@field referenceMesh2 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisCrabSpawner_C = {}
+local ABPVisCrabSpawner_C = {}
 
 
 

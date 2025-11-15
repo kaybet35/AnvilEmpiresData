@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCabbagePickup_C : UEntityTemplate
-UCabbagePickup_C = {}
+local UCabbagePickup_C = {}
 
 

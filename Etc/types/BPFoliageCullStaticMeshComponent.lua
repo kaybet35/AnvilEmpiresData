@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFoliageCullStaticMeshComponent_C : UStaticMeshComponent
-UBPFoliageCullStaticMeshComponent_C = {}
+local UBPFoliageCullStaticMeshComponent_C = {}
 
 

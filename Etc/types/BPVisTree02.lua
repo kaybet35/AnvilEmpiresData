@@ -2,7 +2,7 @@
 
 ---@class ABPVisTree02_C : AVisResource
 ---@field ShadowProxyMesh UStaticMeshComponent
-ABPVisTree02_C = {}
+local ABPVisTree02_C = {}
 
 
 

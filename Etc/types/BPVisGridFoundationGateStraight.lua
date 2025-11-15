@@ -130,7 +130,7 @@
 ---@field VisRandomMeshDecor62 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor45 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationGateStraight_C = {}
+local ABPVisGridFoundationGateStraight_C = {}
 
 
 

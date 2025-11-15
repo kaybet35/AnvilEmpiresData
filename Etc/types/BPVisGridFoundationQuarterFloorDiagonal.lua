@@ -8,7 +8,7 @@
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisGridFoundationQuarterFloorDiagonal_C = {}
+local ABPVisGridFoundationQuarterFloorDiagonal_C = {}
 
 
 

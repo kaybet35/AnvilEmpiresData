@@ -4,7 +4,7 @@
 ---@field BPAnvilPanel UBPAnvilPanel_C
 ---@field BPBuildMenuTabButton UBPBuildMenuTabButton_C
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
-UBPBuildMenuWindow_C = {}
+local UBPBuildMenuWindow_C = {}
 
 
 

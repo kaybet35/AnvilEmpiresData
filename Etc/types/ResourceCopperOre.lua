@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceCopperOre_C : UItemTemplate
-UResourceCopperOre_C = {}
+local UResourceCopperOre_C = {}
 
 

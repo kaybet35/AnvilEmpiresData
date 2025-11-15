@@ -2,7 +2,7 @@
 
 ---@class AHearthFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AHearthFootprint_C = {}
+local AHearthFootprint_C = {}
 
 
 

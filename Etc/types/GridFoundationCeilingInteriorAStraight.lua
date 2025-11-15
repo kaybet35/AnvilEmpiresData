@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationCeilingInteriorAStraight_C : UBPBaseFoundationModularEntity_C
-UGridFoundationCeilingInteriorAStraight_C = {}
+local UGridFoundationCeilingInteriorAStraight_C = {}
 
 

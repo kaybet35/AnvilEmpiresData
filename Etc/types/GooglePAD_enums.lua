@@ -1,5 +1,5 @@
 ---@enum EGooglePADCellularDataConfirmStatus
-EGooglePADCellularDataConfirmStatus = {
+local EGooglePADCellularDataConfirmStatus = {
     AssetPack_CONFIRM_UNKNOWN = 0,
     AssetPack_CONFIRM_PENDING = 1,
     AssetPack_CONFIRM_USER_APPROVED = 2,
@@ -8,7 +8,7 @@ EGooglePADCellularDataConfirmStatus = {
 }
 
 ---@enum EGooglePADDownloadStatus
-EGooglePADDownloadStatus = {
+local EGooglePADDownloadStatus = {
     AssetPack_UNKNOWN = 0,
     AssetPack_DOWNLOAD_PENDING = 1,
     AssetPack_DOWNLOADING = 2,
@@ -26,7 +26,7 @@ EGooglePADDownloadStatus = {
 }
 
 ---@enum EGooglePADErrorCode
-EGooglePADErrorCode = {
+local EGooglePADErrorCode = {
     AssetPack_NO_ERROR = 0,
     AssetPack_APP_UNAVAILABLE = 1,
     AssetPack_UNAVAILABLE = 2,
@@ -45,7 +45,7 @@ EGooglePADErrorCode = {
 }
 
 ---@enum EGooglePADStorageMethod
-EGooglePADStorageMethod = {
+local EGooglePADStorageMethod = {
     AssetPack_STORAGE_FILES = 0,
     AssetPack_STORAGE_APK = 1,
     AssetPack_STORAGE_UNKNOWN = 2,

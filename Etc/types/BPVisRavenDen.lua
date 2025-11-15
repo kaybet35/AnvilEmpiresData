@@ -18,7 +18,7 @@
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
 ---@field Decors USceneComponent
 ---@field Decal UDecalComponent
-ABPVisRavenDen_C = {}
+local ABPVisRavenDen_C = {}
 
 
 

@@ -1,0 +1,6 @@
+#include "MaterialExpressionVolumetricCloudEmptySpaceSkippingOutput.h"
+
+UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput::UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput() {
+}
+
+

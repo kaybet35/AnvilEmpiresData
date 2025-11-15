@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemResourceMeat_C : UVisItem
-UBPVisItemResourceMeat_C = {}
+local UBPVisItemResourceMeat_C = {}
 
 

@@ -5,7 +5,7 @@
 ---@field VisFoundationFillerMeshDecor UVisFoundationFillerMeshDecorComponent
 ---@field VisFoundationFillerMeshDecor1 UVisFoundationFillerMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationCrenellationRampStraight_C = {}
+local ABPVisGridFoundationCrenellationRampStraight_C = {}
 
 
 

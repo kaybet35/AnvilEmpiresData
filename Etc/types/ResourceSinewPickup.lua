@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceSinewPickup_C : UEntityTemplate
-UResourceSinewPickup_C = {}
+local UResourceSinewPickup_C = {}
 
 

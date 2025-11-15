@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterCeilingEdgeToEdge_A_fullHeight_StraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterCeilingEdgeToEdge_A_fullHeight_StraightFootprint_C = {}
+local AFamilyCenterCeilingEdgeToEdge_A_fullHeight_StraightFootprint_C = {}
 
 
 

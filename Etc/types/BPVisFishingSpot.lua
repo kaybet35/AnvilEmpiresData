@@ -5,7 +5,7 @@
 ---@field Fish UParticleSystemComponent
 ---@field FishRing UNiagaraComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisFishingSpot_C = {}
+local ABPVisFishingSpot_C = {}
 
 function ABPVisFishingSpot_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

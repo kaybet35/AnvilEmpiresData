@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisHands_C : UVisItem
-UBPVisHands_C = {}
+local UBPVisHands_C = {}
 
 

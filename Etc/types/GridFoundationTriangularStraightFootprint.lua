@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationTriangularStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationTriangularStraightFootprint_C = {}
+local AGridFoundationTriangularStraightFootprint_C = {}
 
 
 

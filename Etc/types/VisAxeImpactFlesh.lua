@@ -2,7 +2,7 @@
 
 ---@class AVisAxeImpactFlesh_C : AVisEffect
 ---@field Vocals UAudioComponent
-AVisAxeImpactFlesh_C = {}
+local AVisAxeImpactFlesh_C = {}
 
 
 

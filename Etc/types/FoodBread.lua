@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFoodBread_C : UItemTemplate
-UFoodBread_C = {}
+local UFoodBread_C = {}
 
 

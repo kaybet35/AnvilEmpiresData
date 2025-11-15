@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAxe_C : UItemTemplate
-UAxe_C = {}
+local UAxe_C = {}
 
 

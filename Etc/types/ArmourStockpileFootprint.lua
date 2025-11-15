@@ -2,7 +2,7 @@
 
 ---@class AArmourStockpileFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AArmourStockpileFootprint_C = {}
+local AArmourStockpileFootprint_C = {}
 
 
 

@@ -5,7 +5,7 @@
 ---@field Image UImage
 ---@field Image_1 UImage
 ---@field Image_79 UImage
-UBPServerSelectScreen_C = {}
+local UBPServerSelectScreen_C = {}
 
 
 

@@ -5,7 +5,7 @@
 ---@field StiffnessMultiplier float
 ---@field StretchLimit float
 ---@field CompressionLimit float
-FClothConstraintSetupNv = {}
+local FClothConstraintSetupNv = {}
 
 
 
@@ -42,7 +42,7 @@ FClothConstraintSetupNv = {}
 ---@field HorizontalConstraintConfig FClothConstraintSetup_Legacy
 ---@field BendConstraintConfig FClothConstraintSetup_Legacy
 ---@field ShearConstraintConfig FClothConstraintSetup_Legacy
-UClothConfigNv = {}
+local UClothConfigNv = {}
 
 
 
@@ -51,16 +51,16 @@ UClothConfigNv = {}
 ---@field BackstopDistances TArray<float>
 ---@field BackstopRadiuses TArray<float>
 ---@field AnimDriveMultipliers TArray<float>
-UClothPhysicalMeshDataNv_Legacy = {}
+local UClothPhysicalMeshDataNv_Legacy = {}
 
 
 
 ---@class UClothingSimulationFactoryNv : UClothingSimulationFactory
-UClothingSimulationFactoryNv = {}
+local UClothingSimulationFactoryNv = {}
 
 
 ---@class UClothingSimulationInteractorNv : UClothingSimulationInteractor
-UClothingSimulationInteractorNv = {}
+local UClothingSimulationInteractorNv = {}
 
 ---@param InStiffness float
 function UClothingSimulationInteractorNv:SetAnimDriveDamperStiffness(InStiffness) end

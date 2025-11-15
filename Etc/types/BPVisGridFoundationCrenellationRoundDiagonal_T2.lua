@@ -17,7 +17,7 @@
 ---@field VisRandomMeshDecor27 UVisRandomMeshDecorComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationCrenellationRoundDiagonal_T2_C = {}
+local ABPVisGridFoundationCrenellationRoundDiagonal_T2_C = {}
 
 
 

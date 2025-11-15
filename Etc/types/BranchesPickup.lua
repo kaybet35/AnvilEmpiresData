@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBranchesPickup_C : UEntityTemplate
-UBranchesPickup_C = {}
+local UBranchesPickup_C = {}
 
 

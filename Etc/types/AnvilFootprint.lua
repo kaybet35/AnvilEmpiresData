@@ -2,7 +2,7 @@
 
 ---@class AAnvilFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AAnvilFootprint_C = {}
+local AAnvilFootprint_C = {}
 
 
 

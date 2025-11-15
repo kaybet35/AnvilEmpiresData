@@ -17,7 +17,7 @@
 ---@field VisBalljointStart UVisBalljointComponent
 ---@field Pool UVisStaticMeshComponent
 ---@field Base USceneComponent
-ABPVisWaterStorage_C = {}
+local ABPVisWaterStorage_C = {}
 
 
 

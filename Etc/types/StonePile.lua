@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UStonePile_C : UEntityTemplate
-UStonePile_C = {}
+local UStonePile_C = {}
 
 

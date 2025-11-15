@@ -1,19 +1,19 @@
 ---@meta
 
 ---@class AAbstractNavData : ANavigationData
-AAbstractNavData = {}
+local AAbstractNavData = {}
 
 
 ---@class ANavMeshBoundsVolume : AVolume
 ---@field SupportedAgents FNavAgentSelector
-ANavMeshBoundsVolume = {}
+local ANavMeshBoundsVolume = {}
 
 
 
 ---@class ANavModifierVolume : AVolume
 ---@field AreaClass TSubclassOf<UNavArea>
 ---@field bMaskFillCollisionUnderneathForNavmesh boolean
-ANavModifierVolume = {}
+local ANavModifierVolume = {}
 
 ---@param NewAreaClass TSubclassOf<UNavArea>
 function ANavModifierVolume:SetAreaClass(NewAreaClass) end
@@ -23,7 +23,7 @@ function ANavModifierVolume:SetAreaClass(NewAreaClass) end
 ---@field NavigationSystemConfig UNavigationSystemConfig
 ---@field OverridePolicy ENavSystemOverridePolicy
 ---@field bLoadOnClient boolean
-ANavSystemConfigOverride = {}
+local ANavSystemConfigOverride = {}
 
 
 
@@ -40,16 +40,16 @@ ANavSystemConfigOverride = {}
 ---@field ObservedPathsTickInterval float
 ---@field DataVersion uint32
 ---@field SupportedAreas TArray<FSupportedAreaData>
-ANavigationData = {}
+local ANavigationData = {}
 
 
 
 ---@class ANavigationGraph : ANavigationData
-ANavigationGraph = {}
+local ANavigationGraph = {}
 
 
 ---@class ANavigationGraphNode : AActor
-ANavigationGraphNode = {}
+local ANavigationGraphNode = {}
 
 
 ---@class ANavigationTestingActor : AActor
@@ -84,7 +84,7 @@ ANavigationGraphNode = {}
 ---@field FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@field ShowStepIndex int32
 ---@field OffsetFromCornersDistance float
-ANavigationTestingActor = {}
+local ANavigationTestingActor = {}
 
 
 
@@ -153,7 +153,7 @@ ANavigationTestingActor = {}
 ---@field TileSetUpdateInterval float
 ---@field HeuristicScale float
 ---@field VerticalDeviationFromGroundCompensation float
-ARecastNavMesh = {}
+local ARecastNavMesh = {}
 
 ---@param Bounds FBox
 ---@param OldArea TSubclassOf<UNavArea>
@@ -166,7 +166,7 @@ function ARecastNavMesh:K2_ReplaceAreaInTileBounds(Bounds, OldArea, NewArea, Rep
 ---@class FNavCollisionBox
 ---@field Offset FVector
 ---@field Extent FVector
-FNavCollisionBox = {}
+local FNavCollisionBox = {}
 
 
 
@@ -174,23 +174,23 @@ FNavCollisionBox = {}
 ---@field Offset FVector
 ---@field Radius float
 ---@field Height float
-FNavCollisionCylinder = {}
+local FNavCollisionCylinder = {}
 
 
 
 ---@class FNavGraphEdge
-FNavGraphEdge = {}
+local FNavGraphEdge = {}
 
 
 ---@class FNavGraphNode
 ---@field Owner UObject
-FNavGraphNode = {}
+local FNavGraphNode = {}
 
 
 
 ---@class FNavLinkCustomInstanceData : FActorComponentInstanceData
 ---@field NavLinkUserId uint32
-FNavLinkCustomInstanceData = {}
+local FNavLinkCustomInstanceData = {}
 
 
 
@@ -201,7 +201,7 @@ FNavLinkCustomInstanceData = {}
 ---@field bIsExcluded boolean
 ---@field bOverrideTravelCost boolean
 ---@field bOverrideEnteringCost boolean
-FNavigationFilterArea = {}
+local FNavigationFilterArea = {}
 
 
 
@@ -222,7 +222,7 @@ FNavigationFilterArea = {}
 ---@field bNavFlag13 boolean
 ---@field bNavFlag14 boolean
 ---@field bNavFlag15 boolean
-FNavigationFilterFlags = {}
+local FNavigationFilterFlags = {}
 
 
 
@@ -251,7 +251,7 @@ FNavigationFilterFlags = {}
 ---@field bFilterLowSpanFromTileCache boolean
 ---@field bFixedTilePoolSize boolean
 ---@field bIsWorldPartitioned boolean
-FRecastNavMeshGenerationProperties = {}
+local FRecastNavMeshGenerationProperties = {}
 
 
 
@@ -270,7 +270,7 @@ FRecastNavMeshGenerationProperties = {}
 ---@field bTileCacheContours boolean
 ---@field bTileCachePolyMesh boolean
 ---@field bTileCacheDetailMesh boolean
-FRecastNavMeshTileGenerationDebug = {}
+local FRecastNavMeshTileGenerationDebug = {}
 
 
 
@@ -278,28 +278,28 @@ FRecastNavMeshTileGenerationDebug = {}
 ---@field AreaClassName FString
 ---@field AreaID int32
 ---@field AreaClass TObjectPtr<UClass>
-FSupportedAreaData = {}
+local FSupportedAreaData = {}
 
 
 
 ---@class INavLinkCustomInterface : IInterface
-INavLinkCustomInterface = {}
+local INavLinkCustomInterface = {}
 
 
 ---@class INavLinkHostInterface : IInterface
-INavLinkHostInterface = {}
+local INavLinkHostInterface = {}
 
 
 ---@class INavNodeInterface : IInterface
-INavNodeInterface = {}
+local INavNodeInterface = {}
 
 
 ---@class INavigationPathGenerator : IInterface
-INavigationPathGenerator = {}
+local INavigationPathGenerator = {}
 
 
 ---@class UCrowdManagerBase : UObject
-UCrowdManagerBase = {}
+local UCrowdManagerBase = {}
 
 
 ---@class UNavArea : UNavAreaBase
@@ -323,12 +323,12 @@ UCrowdManagerBase = {}
 ---@field bSupportsAgent13 boolean
 ---@field bSupportsAgent14 boolean
 ---@field bSupportsAgent15 boolean
-UNavArea = {}
+local UNavArea = {}
 
 
 
 ---@class UNavAreaMeta : UNavArea
-UNavAreaMeta = {}
+local UNavAreaMeta = {}
 
 
 ---@class UNavAreaMeta_SwitchByAgent : UNavAreaMeta
@@ -348,24 +348,24 @@ UNavAreaMeta = {}
 ---@field Agent13Area TSubclassOf<UNavArea>
 ---@field Agent14Area TSubclassOf<UNavArea>
 ---@field Agent15Area TSubclassOf<UNavArea>
-UNavAreaMeta_SwitchByAgent = {}
+local UNavAreaMeta_SwitchByAgent = {}
 
 
 
 ---@class UNavArea_Default : UNavArea
-UNavArea_Default = {}
+local UNavArea_Default = {}
 
 
 ---@class UNavArea_LowHeight : UNavArea
-UNavArea_LowHeight = {}
+local UNavArea_LowHeight = {}
 
 
 ---@class UNavArea_Null : UNavArea
-UNavArea_Null = {}
+local UNavArea_Null = {}
 
 
 ---@class UNavArea_Obstacle : UNavArea
-UNavArea_Obstacle = {}
+local UNavArea_Obstacle = {}
 
 
 ---@class UNavCollision : UNavCollisionBase
@@ -374,13 +374,13 @@ UNavArea_Obstacle = {}
 ---@field AreaClass TSubclassOf<UNavArea>
 ---@field bGatherConvexGeometry boolean
 ---@field bCreateOnClient boolean
-UNavCollision = {}
+local UNavCollision = {}
 
 
 
 ---@class UNavLinkComponent : UPrimitiveComponent
 ---@field Links TArray<FNavigationLink>
-UNavLinkComponent = {}
+local UNavLinkComponent = {}
 
 
 
@@ -402,27 +402,27 @@ UNavLinkComponent = {}
 ---@field BroadcastRadius float
 ---@field BroadcastInterval float
 ---@field BroadcastChannel ECollisionChannel
-UNavLinkCustomComponent = {}
+local UNavLinkCustomComponent = {}
 
 
 
 ---@class UNavLinkRenderingComponent : UPrimitiveComponent
-UNavLinkRenderingComponent = {}
+local UNavLinkRenderingComponent = {}
 
 
 ---@class UNavLinkTrivial : UNavLinkDefinition
-UNavLinkTrivial = {}
+local UNavLinkTrivial = {}
 
 
 ---@class UNavMeshRenderingComponent : UDebugDrawComponent
-UNavMeshRenderingComponent = {}
+local UNavMeshRenderingComponent = {}
 
 
 ---@class UNavModifierComponent : UNavRelevantComponent
 ---@field AreaClass TSubclassOf<UNavArea>
 ---@field FailsafeExtent FVector
 ---@field bIncludeAgentHeight boolean
-UNavModifierComponent = {}
+local UNavModifierComponent = {}
 
 ---@param NewAreaClass TSubclassOf<UNavArea>
 function UNavModifierComponent:SetAreaClass(NewAreaClass) end
@@ -431,28 +431,28 @@ function UNavModifierComponent:SetAreaClass(NewAreaClass) end
 ---@class UNavRelevantComponent : UActorComponent
 ---@field bAttachToOwnersRoot boolean
 ---@field CachedNavParent UObject
-UNavRelevantComponent = {}
+local UNavRelevantComponent = {}
 
 ---@param bRelevant boolean
 function UNavRelevantComponent:SetNavigationRelevancy(bRelevant) end
 
 
 ---@class UNavTestRenderingComponent : UDebugDrawComponent
-UNavTestRenderingComponent = {}
+local UNavTestRenderingComponent = {}
 
 
 ---@class UNavigationGraphNodeComponent : USceneComponent
 ---@field Node FNavGraphNode
 ---@field NextNodeComponent UNavigationGraphNodeComponent
 ---@field PrevNodeComponent UNavigationGraphNodeComponent
-UNavigationGraphNodeComponent = {}
+local UNavigationGraphNodeComponent = {}
 
 
 
 ---@class UNavigationInvokerComponent : UActorComponent
 ---@field TileGenerationRadius float
 ---@field TileRemovalRadius float
-UNavigationInvokerComponent = {}
+local UNavigationInvokerComponent = {}
 
 
 
@@ -460,7 +460,7 @@ UNavigationInvokerComponent = {}
 ---@field PathUpdatedNotifier FNavigationPathPathUpdatedNotifier
 ---@field PathPoints TArray<FVector>
 ---@field RecalculateOnInvalidation ENavigationOptionFlag::Type
-UNavigationPath = {}
+local UNavigationPath = {}
 
 ---@return boolean
 function UNavigationPath:IsValid() end
@@ -485,7 +485,7 @@ function UNavigationPath:EnableDebugDrawing(bShouldDrawDebugData, PathColor) end
 ---@field Areas TArray<FNavigationFilterArea>
 ---@field IncludeFlags FNavigationFilterFlags
 ---@field ExcludeFlags FNavigationFilterFlags
-UNavigationQueryFilter = {}
+local UNavigationQueryFilter = {}
 
 
 
@@ -494,7 +494,7 @@ UNavigationQueryFilter = {}
 ---@field bCreateOnClient boolean
 ---@field bAutoSpawnMissingNavData boolean
 ---@field bSpawnNavDataInNavBoundsLevel boolean
-UNavigationSystemModuleConfig = {}
+local UNavigationSystemModuleConfig = {}
 
 
 
@@ -525,7 +525,7 @@ UNavigationSystemModuleConfig = {}
 ---@field OnNavDataRegisteredEvent FNavigationSystemV1OnNavDataRegisteredEvent
 ---@field OnNavigationGenerationFinishedDelegate FNavigationSystemV1OnNavigationGenerationFinishedDelegate
 ---@field OperationMode FNavigationSystemRunMode
-UNavigationSystemV1 = {}
+local UNavigationSystemV1 = {}
 
 ---@param Invoker AActor
 function UNavigationSystemV1:UnregisterNavigationInvoker(Invoker) end
@@ -628,10 +628,10 @@ function UNavigationSystemV1:FindPathToActorSynchronously(WorldContextObject, Pa
 
 
 ---@class URecastFilter_UseDefaultArea : UNavigationQueryFilter
-URecastFilter_UseDefaultArea = {}
+local URecastFilter_UseDefaultArea = {}
 
 
 ---@class URecastNavMeshDataChunk : UNavigationDataChunk
-URecastNavMeshDataChunk = {}
+local URecastNavMeshDataChunk = {}
 
 

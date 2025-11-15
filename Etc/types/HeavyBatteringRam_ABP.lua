@@ -25,13 +25,13 @@
 ---@field __NameProperty_112 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __FloatProperty float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -57,7 +57,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
-UHeavyBatteringRam_ABP_C = {}
+local UHeavyBatteringRam_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UHeavyBatteringRam_ABP_C:AnimGraph(AnimGraph) end

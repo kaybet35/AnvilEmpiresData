@@ -15,7 +15,7 @@
 ---@field Components TArray<UStaticMeshComponent>
 ---@field Materials TArray<UMaterialInstanceDynamic>
 ---@field ColorParameterName FName
-AControlRigControlActor = {}
+local AControlRigControlActor = {}
 
 function AControlRigControlActor:ResetControlActor() end
 function AControlRigControlActor:Refresh() end
@@ -32,7 +32,7 @@ function AControlRigControlActor:Clear() end
 ---@field ColorParameterName FName
 ---@field bSelected boolean
 ---@field bHovered boolean
-AControlRigShapeActor = {}
+local AControlRigShapeActor = {}
 
 ---@param bInSelected boolean
 function AControlRigShapeActor:SetSelected(bInSelected) end
@@ -68,7 +68,7 @@ function AControlRigShapeActor:GetGlobalTransform() end
 ---@field Weight float
 ---@field Transform FTransform
 ---@field AlignVector FVector
-FAimTarget = {}
+local FAimTarget = {}
 
 
 
@@ -86,7 +86,7 @@ FAimTarget = {}
 ---@field InputMapping TMap<FName, FName>
 ---@field OutputMapping TMap<FName, FName>
 ---@field LODThreshold int32
-FAnimNode_ControlRig = {}
+local FAnimNode_ControlRig = {}
 
 
 
@@ -102,32 +102,32 @@ FAnimNode_ControlRig = {}
 ---@field OutputSettings FControlRigIOSettings
 ---@field bExecute boolean
 ---@field EventQueue TArray<FControlRigAnimNodeEventName>
-FAnimNode_ControlRigBase = {}
+local FAnimNode_ControlRigBase = {}
 
 
 
 ---@class FAnimNode_ControlRigInputPose : FAnimNode_Base
 ---@field InputPose FPoseLink
-FAnimNode_ControlRigInputPose = {}
+local FAnimNode_ControlRigInputPose = {}
 
 
 
 ---@class FAnimNode_ControlRig_ExternalSource : FAnimNode_ControlRigBase
 ---@field ControlRig TWeakObjectPtr<UControlRig>
-FAnimNode_ControlRig_ExternalSource = {}
+local FAnimNode_ControlRig_ExternalSource = {}
 
 
 
 ---@class FAnimationHierarchy : FNodeHierarchyWithUserData
 ---@field UserData TArray<FConstraintNodeData>
-FAnimationHierarchy = {}
+local FAnimationHierarchy = {}
 
 
 
 ---@class FBlendTarget
 ---@field Transform FTransform
 ---@field Weight float
-FBlendTarget = {}
+local FBlendTarget = {}
 
 
 
@@ -136,7 +136,7 @@ FBlendTarget = {}
 ---@field B FVector
 ---@field C FVector
 ---@field D FVector
-FCRFourPointBezier = {}
+local FCRFourPointBezier = {}
 
 
 
@@ -144,7 +144,7 @@ FCRFourPointBezier = {}
 ---@field TimeStep float
 ---@field AccumulatedTime float
 ---@field TimeLeftForStep float
-FCRSimContainer = {}
+local FCRSimContainer = {}
 
 
 
@@ -153,7 +153,7 @@ FCRSimContainer = {}
 ---@field SubjectB int32
 ---@field Coefficient float
 ---@field Equilibrium float
-FCRSimLinearSpring = {}
+local FCRSimLinearSpring = {}
 
 
 
@@ -164,7 +164,7 @@ FCRSimLinearSpring = {}
 ---@field InheritMotion float
 ---@field Position FVector
 ---@field LinearVelocity FVector
-FCRSimPoint = {}
+local FCRSimPoint = {}
 
 
 
@@ -174,7 +174,7 @@ FCRSimPoint = {}
 ---@field SubjectB int32
 ---@field DataA FVector
 ---@field DataB FVector
-FCRSimPointConstraint = {}
+local FCRSimPointConstraint = {}
 
 
 
@@ -185,7 +185,7 @@ FCRSimPointConstraint = {}
 ---@field CollisionVolumes TArray<FCRSimSoftCollision>
 ---@field Constraints TArray<FCRSimPointConstraint>
 ---@field PreviousStep TArray<FCRSimPoint>
-FCRSimPointContainer = {}
+local FCRSimPointContainer = {}
 
 
 
@@ -194,7 +194,7 @@ FCRSimPointContainer = {}
 ---@field Vector FVector
 ---@field Coefficient float
 ---@field bNormalize boolean
-FCRSimPointForce = {}
+local FCRSimPointForce = {}
 
 
 
@@ -206,7 +206,7 @@ FCRSimPointForce = {}
 ---@field FalloffType EControlRigAnimEasingType
 ---@field Coefficient float
 ---@field bInverted boolean
-FCRSimSoftCollision = {}
+local FCRSimSoftCollision = {}
 
 
 
@@ -214,7 +214,7 @@ FCRSimSoftCollision = {}
 ---@field Key FRigElementKey
 ---@field Index uint16
 ---@field ContainerVersion int32
-FCachedRigElement = {}
+local FCachedRigElement = {}
 
 
 
@@ -229,7 +229,7 @@ FCachedRigElement = {}
 ---@field MaskIndex int32
 ---@field CategoryIndex int32
 ---@field ConstraintsIndex TArray<uint32>
-FChannelMapInfo = {}
+local FChannelMapInfo = {}
 
 
 
@@ -238,14 +238,14 @@ FChannelMapInfo = {}
 ---@field ConstraintOffset FConstraintOffset
 ---@field LinkedNode FName
 ---@field Constraints TArray<FTransformConstraint>
-FConstraintNodeData = {}
+local FConstraintNodeData = {}
 
 
 
 ---@class FConstraintParent
 ---@field Item FRigElementKey
 ---@field Weight float
-FConstraintParent = {}
+local FConstraintParent = {}
 
 
 
@@ -254,24 +254,24 @@ FConstraintParent = {}
 ---@field Weight float
 ---@field bMaintainOffset boolean
 ---@field Filter FTransformFilter
-FConstraintTarget = {}
+local FConstraintTarget = {}
 
 
 
 ---@class FControlRigAnimInstanceProxy : FAnimInstanceProxy
-FControlRigAnimInstanceProxy = {}
+local FControlRigAnimInstanceProxy = {}
 
 
 ---@class FControlRigAnimNodeEventName
 ---@field EventName FName
-FControlRigAnimNodeEventName = {}
+local FControlRigAnimNodeEventName = {}
 
 
 
 ---@class FControlRigComponentMappedBone
 ---@field Source FName
 ---@field Target FName
-FControlRigComponentMappedBone = {}
+local FControlRigComponentMappedBone = {}
 
 
 
@@ -280,14 +280,14 @@ FControlRigComponentMappedBone = {}
 ---@field ElementName FName
 ---@field ElementType ERigElementType
 ---@field Direction EControlRigComponentMapDirection
-FControlRigComponentMappedComponent = {}
+local FControlRigComponentMappedComponent = {}
 
 
 
 ---@class FControlRigComponentMappedCurve
 ---@field Source FName
 ---@field Target FName
-FControlRigComponentMappedCurve = {}
+local FControlRigComponentMappedCurve = {}
 
 
 
@@ -304,19 +304,19 @@ FControlRigComponentMappedCurve = {}
 ---@field SceneComponent USceneComponent
 ---@field ElementIndex int32
 ---@field SubIndex int32
-FControlRigComponentMappedElement = {}
+local FControlRigComponentMappedElement = {}
 
 
 
 ---@class FControlRigControlPose
 ---@field CopyOfControls TArray<FRigControlCopy>
-FControlRigControlPose = {}
+local FControlRigControlPose = {}
 
 
 
 ---@class FControlRigDrawContainer
 ---@field Instructions TArray<FControlRigDrawInstruction>
-FControlRigDrawContainer = {}
+local FControlRigDrawContainer = {}
 
 
 
@@ -327,51 +327,51 @@ FControlRigDrawContainer = {}
 ---@field Color FLinearColor
 ---@field Thickness float
 ---@field Transform FTransform
-FControlRigDrawInstruction = {}
+local FControlRigDrawInstruction = {}
 
 
 
 ---@class FControlRigDrawInterface : FControlRigDrawContainer
-FControlRigDrawInterface = {}
+local FControlRigDrawInterface = {}
 
 
 ---@class FControlRigExecuteContext : FRigVMExecuteContext
-FControlRigExecuteContext = {}
+local FControlRigExecuteContext = {}
 
 
 ---@class FControlRigIOSettings
 ---@field bUpdatePose boolean
 ---@field bUpdateCurves boolean
-FControlRigIOSettings = {}
+local FControlRigIOSettings = {}
 
 
 
 ---@class FControlRigLayerInstanceProxy : FAnimInstanceProxy
-FControlRigLayerInstanceProxy = {}
+local FControlRigLayerInstanceProxy = {}
 
 
 ---@class FControlRigSequenceObjectReference
 ---@field ControlRigClass TSubclassOf<UControlRig>
-FControlRigSequenceObjectReference = {}
+local FControlRigSequenceObjectReference = {}
 
 
 
 ---@class FControlRigSequenceObjectReferenceMap
 ---@field BindingIds TArray<FGuid>
 ---@field References TArray<FControlRigSequenceObjectReferences>
-FControlRigSequenceObjectReferenceMap = {}
+local FControlRigSequenceObjectReferenceMap = {}
 
 
 
 ---@class FControlRigSequenceObjectReferences
 ---@field Array TArray<FControlRigSequenceObjectReference>
-FControlRigSequenceObjectReferences = {}
+local FControlRigSequenceObjectReferences = {}
 
 
 
 ---@class FControlRigSettingsPerPinBool
 ---@field Values TMap<FString, boolean>
-FControlRigSettingsPerPinBool = {}
+local FControlRigSettingsPerPinBool = {}
 
 
 
@@ -379,99 +379,99 @@ FControlRigSettingsPerPinBool = {}
 ---@field ShapeName FName
 ---@field StaticMesh TSoftObjectPtr<UStaticMesh>
 ---@field Transform FTransform
-FControlRigShapeDefinition = {}
+local FControlRigShapeDefinition = {}
 
 
 
 ---@class FControlRigValidationContext
-FControlRigValidationContext = {}
+local FControlRigValidationContext = {}
 
 
 ---@class FControlShapeActorCreationParam
-FControlShapeActorCreationParam = {}
+local FControlShapeActorCreationParam = {}
 
 
 ---@class FEnumParameterNameAndCurve
 ---@field ParameterName FName
 ---@field ParameterCurve FMovieSceneByteChannel
-FEnumParameterNameAndCurve = {}
+local FEnumParameterNameAndCurve = {}
 
 
 
 ---@class FIntegerParameterNameAndCurve
 ---@field ParameterName FName
 ---@field ParameterCurve FMovieSceneIntegerChannel
-FIntegerParameterNameAndCurve = {}
+local FIntegerParameterNameAndCurve = {}
 
 
 
 ---@class FMathRBFInterpolateQuatColor_Target
 ---@field Target FQuat
 ---@field Value FLinearColor
-FMathRBFInterpolateQuatColor_Target = {}
+local FMathRBFInterpolateQuatColor_Target = {}
 
 
 
 ---@class FMathRBFInterpolateQuatFloat_Target
 ---@field Target FQuat
 ---@field Value float
-FMathRBFInterpolateQuatFloat_Target = {}
+local FMathRBFInterpolateQuatFloat_Target = {}
 
 
 
 ---@class FMathRBFInterpolateQuatQuat_Target
 ---@field Target FQuat
 ---@field Value FQuat
-FMathRBFInterpolateQuatQuat_Target = {}
+local FMathRBFInterpolateQuatQuat_Target = {}
 
 
 
 ---@class FMathRBFInterpolateQuatVector_Target
 ---@field Target FQuat
 ---@field Value FVector
-FMathRBFInterpolateQuatVector_Target = {}
+local FMathRBFInterpolateQuatVector_Target = {}
 
 
 
 ---@class FMathRBFInterpolateQuatXform_Target
 ---@field Target FQuat
 ---@field Value FTransform
-FMathRBFInterpolateQuatXform_Target = {}
+local FMathRBFInterpolateQuatXform_Target = {}
 
 
 
 ---@class FMathRBFInterpolateVectorColor_Target
 ---@field Target FVector
 ---@field Value FLinearColor
-FMathRBFInterpolateVectorColor_Target = {}
+local FMathRBFInterpolateVectorColor_Target = {}
 
 
 
 ---@class FMathRBFInterpolateVectorFloat_Target
 ---@field Target FVector
 ---@field Value float
-FMathRBFInterpolateVectorFloat_Target = {}
+local FMathRBFInterpolateVectorFloat_Target = {}
 
 
 
 ---@class FMathRBFInterpolateVectorQuat_Target
 ---@field Target FVector
 ---@field Value FQuat
-FMathRBFInterpolateVectorQuat_Target = {}
+local FMathRBFInterpolateVectorQuat_Target = {}
 
 
 
 ---@class FMathRBFInterpolateVectorVector_Target
 ---@field Target FVector
 ---@field Value FVector
-FMathRBFInterpolateVectorVector_Target = {}
+local FMathRBFInterpolateVectorVector_Target = {}
 
 
 
 ---@class FMathRBFInterpolateVectorXform_Target
 ---@field Target FVector
 ---@field Value FTransform
-FMathRBFInterpolateVectorXform_Target = {}
+local FMathRBFInterpolateVectorXform_Target = {}
 
 
 
@@ -481,7 +481,7 @@ FMathRBFInterpolateVectorXform_Target = {}
 ---@field BoneFilter FInputBlendPose
 ---@field Weight FMovieSceneFloatChannel
 ---@field Operand FMovieSceneEvaluationOperand
-FMovieSceneControlRigInstanceData = {}
+local FMovieSceneControlRigInstanceData = {}
 
 
 
@@ -490,21 +490,21 @@ FMovieSceneControlRigInstanceData = {}
 ---@field Integers TArray<FIntegerParameterNameAndCurve>
 ---@field Spaces TArray<FSpaceControlNameAndChannel>
 ---@field Constraints TArray<FConstraintAndActiveChannel>
-FMovieSceneControlRigParameterTemplate = {}
+local FMovieSceneControlRigParameterTemplate = {}
 
 
 
 ---@class FMovieSceneControlRigSpaceBaseKey
 ---@field SpaceType EMovieSceneControlRigSpaceType
 ---@field ControlRigElement FRigElementKey
-FMovieSceneControlRigSpaceBaseKey = {}
+local FMovieSceneControlRigSpaceBaseKey = {}
 
 
 
 ---@class FMovieSceneControlRigSpaceChannel : FMovieSceneChannel
 ---@field KeyTimes TArray<FFrameNumber>
 ---@field KeyValues TArray<FMovieSceneControlRigSpaceBaseKey>
-FMovieSceneControlRigSpaceChannel = {}
+local FMovieSceneControlRigSpaceChannel = {}
 
 
 
@@ -513,7 +513,7 @@ FMovieSceneControlRigSpaceChannel = {}
 ---@field NegativeWidth float
 ---@field PositiveHeight float
 ---@field NegativeHeight float
-FRegionScaleFactors = {}
+local FRegionScaleFactors = {}
 
 
 
@@ -524,14 +524,14 @@ FRegionScaleFactors = {}
 ---@field SubIndex int32
 ---@field bSelected boolean
 ---@field CreatedAtInstructionIndex int32
-FRigBaseElement = {}
+local FRigBaseElement = {}
 
 
 
 ---@class FRigBaseMetadata
 ---@field Name FName
 ---@field Type ERigMetadataType
-FRigBaseMetadata = {}
+local FRigBaseMetadata = {}
 
 
 
@@ -543,37 +543,37 @@ FRigBaseMetadata = {}
 ---@field LocalTransform FTransform
 ---@field Dependents TArray<int32>
 ---@field Type ERigBoneType
-FRigBone = {}
+local FRigBone = {}
 
 
 
 ---@class FRigBoneElement : FRigSingleParentElement
 ---@field BoneType ERigBoneType
-FRigBoneElement = {}
+local FRigBoneElement = {}
 
 
 
 ---@class FRigBoneHierarchy
 ---@field Bones TArray<FRigBone>
-FRigBoneHierarchy = {}
+local FRigBoneHierarchy = {}
 
 
 
 ---@class FRigBoolArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<boolean>
-FRigBoolArrayMetadata = {}
+local FRigBoolArrayMetadata = {}
 
 
 
 ---@class FRigBoolMetadata : FRigBaseMetadata
 ---@field Value boolean
-FRigBoolMetadata = {}
+local FRigBoolMetadata = {}
 
 
 
 ---@class FRigComputedTransform
 ---@field Transform FTransform
-FRigComputedTransform = {}
+local FRigComputedTransform = {}
 
 
 
@@ -604,7 +604,7 @@ FRigComputedTransform = {}
 ---@field Dependents TArray<int32>
 ---@field bIsTransientControl boolean
 ---@field ControlEnum UEnum
-FRigControl = {}
+local FRigControl = {}
 
 
 
@@ -617,7 +617,7 @@ FRigControl = {}
 ---@field ParentTransform FTransform
 ---@field LocalTransform FTransform
 ---@field GlobalTransform FTransform
-FRigControlCopy = {}
+local FRigControlCopy = {}
 
 
 
@@ -626,32 +626,32 @@ FRigControlCopy = {}
 ---@field Offset FRigCurrentAndInitialTransform
 ---@field Shape FRigCurrentAndInitialTransform
 ---@field PreferredEulerAngles FRigPreferredEulerAngles
-FRigControlElement = {}
+local FRigControlElement = {}
 
 
 
 ---@class FRigControlElementCustomization
 ---@field AvailableSpaces TArray<FRigElementKey>
 ---@field RemovedSpaces TArray<FRigElementKey>
-FRigControlElementCustomization = {}
+local FRigControlElementCustomization = {}
 
 
 
 ---@class FRigControlHierarchy
 ---@field Controls TArray<FRigControl>
-FRigControlHierarchy = {}
+local FRigControlHierarchy = {}
 
 
 
 ---@class FRigControlLimitEnabled
 ---@field bMinimum boolean
 ---@field bMaximum boolean
-FRigControlLimitEnabled = {}
+local FRigControlLimitEnabled = {}
 
 
 
 ---@class FRigControlModifiedContext
-FRigControlModifiedContext = {}
+local FRigControlModifiedContext = {}
 
 
 ---@class FRigControlSettings
@@ -675,14 +675,14 @@ FRigControlModifiedContext = {}
 ---@field bGroupWithParentControl boolean
 ---@field bAnimatable boolean
 ---@field bShapeEnabled boolean
-FRigControlSettings = {}
+local FRigControlSettings = {}
 
 
 
 ---@class FRigControlValue
 ---@field FloatStorage FRigControlValueStorage
 ---@field Storage FTransform
-FRigControlValue = {}
+local FRigControlValue = {}
 
 
 
@@ -720,142 +720,142 @@ FRigControlValue = {}
 ---@field Float32_2 float
 ---@field Float33_2 float
 ---@field bValid boolean
-FRigControlValueStorage = {}
+local FRigControlValueStorage = {}
 
 
 
 ---@class FRigCurrentAndInitialTransform
 ---@field Current FRigLocalAndGlobalTransform
 ---@field Initial FRigLocalAndGlobalTransform
-FRigCurrentAndInitialTransform = {}
+local FRigCurrentAndInitialTransform = {}
 
 
 
 ---@class FRigCurve : FRigElement
 ---@field Value float
-FRigCurve = {}
+local FRigCurve = {}
 
 
 
 ---@class FRigCurveContainer
 ---@field Curves TArray<FRigCurve>
-FRigCurveContainer = {}
+local FRigCurveContainer = {}
 
 
 
 ---@class FRigCurveElement : FRigBaseElement
-FRigCurveElement = {}
+local FRigCurveElement = {}
 
 
 ---@class FRigDispatchFactory : FRigVMDispatchFactory
-FRigDispatchFactory = {}
+local FRigDispatchFactory = {}
 
 
 ---@class FRigDispatch_AnimAttributeBase : FRigDispatchFactory
-FRigDispatch_AnimAttributeBase = {}
+local FRigDispatch_AnimAttributeBase = {}
 
 
 ---@class FRigDispatch_CoreBase : FRigDispatchFactory
-FRigDispatch_CoreBase = {}
+local FRigDispatch_CoreBase = {}
 
 
 ---@class FRigDispatch_CoreEquals : FRigDispatch_CoreBase
-FRigDispatch_CoreEquals = {}
+local FRigDispatch_CoreEquals = {}
 
 
 ---@class FRigDispatch_CoreNotEquals : FRigDispatch_CoreEquals
-FRigDispatch_CoreNotEquals = {}
+local FRigDispatch_CoreNotEquals = {}
 
 
 ---@class FRigDispatch_FromString : FRigDispatchFactory
-FRigDispatch_FromString = {}
+local FRigDispatch_FromString = {}
 
 
 ---@class FRigDispatch_GetAnimAttribute : FRigDispatch_AnimAttributeBase
-FRigDispatch_GetAnimAttribute = {}
+local FRigDispatch_GetAnimAttribute = {}
 
 
 ---@class FRigDispatch_GetMetadata : FRigDispatch_MetadataBase
-FRigDispatch_GetMetadata = {}
+local FRigDispatch_GetMetadata = {}
 
 
 ---@class FRigDispatch_MetadataBase : FRigDispatchFactory
-FRigDispatch_MetadataBase = {}
+local FRigDispatch_MetadataBase = {}
 
 
 ---@class FRigDispatch_Print : FRigDispatchFactory
-FRigDispatch_Print = {}
+local FRigDispatch_Print = {}
 
 
 ---@class FRigDispatch_SetAnimAttribute : FRigDispatch_AnimAttributeBase
-FRigDispatch_SetAnimAttribute = {}
+local FRigDispatch_SetAnimAttribute = {}
 
 
 ---@class FRigDispatch_SetMetadata : FRigDispatch_MetadataBase
-FRigDispatch_SetMetadata = {}
+local FRigDispatch_SetMetadata = {}
 
 
 ---@class FRigDispatch_ToString : FRigDispatchFactory
-FRigDispatch_ToString = {}
+local FRigDispatch_ToString = {}
 
 
 ---@class FRigElement
 ---@field Name FName
 ---@field Index int32
-FRigElement = {}
+local FRigElement = {}
 
 
 
 ---@class FRigElementKey
 ---@field Type ERigElementType
 ---@field Name FName
-FRigElementKey = {}
+local FRigElementKey = {}
 
 
 
 ---@class FRigElementKeyArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FRigElementKey>
-FRigElementKeyArrayMetadata = {}
+local FRigElementKeyArrayMetadata = {}
 
 
 
 ---@class FRigElementKeyCollection
 ---@field Keys TArray<FRigElementKey>
-FRigElementKeyCollection = {}
+local FRigElementKeyCollection = {}
 
 
 
 ---@class FRigElementKeyMetadata : FRigBaseMetadata
 ---@field Value FRigElementKey
-FRigElementKeyMetadata = {}
+local FRigElementKeyMetadata = {}
 
 
 
 ---@class FRigElementParentConstraint
-FRigElementParentConstraint = {}
+local FRigElementParentConstraint = {}
 
 
 ---@class FRigElementWeight
 ---@field Location float
 ---@field Rotation float
 ---@field Scale float
-FRigElementWeight = {}
+local FRigElementWeight = {}
 
 
 
 ---@class FRigEventContext
-FRigEventContext = {}
+local FRigEventContext = {}
 
 
 ---@class FRigFloatArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<float>
-FRigFloatArrayMetadata = {}
+local FRigFloatArrayMetadata = {}
 
 
 
 ---@class FRigFloatMetadata : FRigBaseMetadata
 ---@field Value float
-FRigFloatMetadata = {}
+local FRigFloatMetadata = {}
 
 
 
@@ -864,7 +864,7 @@ FRigFloatMetadata = {}
 ---@field SpaceHierarchy FRigSpaceHierarchy
 ---@field ControlHierarchy FRigControlHierarchy
 ---@field CurveContainer FRigCurveContainer
-FRigHierarchyContainer = {}
+local FRigHierarchyContainer = {}
 
 
 
@@ -874,7 +874,7 @@ FRigHierarchyContainer = {}
 ---@field Contents TArray<FString>
 ---@field LocalTransforms TArray<FTransform>
 ---@field GlobalTransforms TArray<FTransform>
-FRigHierarchyCopyPasteContent = {}
+local FRigHierarchyCopyPasteContent = {}
 
 
 
@@ -884,30 +884,30 @@ FRigHierarchyCopyPasteContent = {}
 ---@field Parents TArray<FRigElementKey>
 ---@field ParentWeights TArray<FRigElementWeight>
 ---@field Pose FRigCurrentAndInitialTransform
-FRigHierarchyCopyPasteContentPerElement = {}
+local FRigHierarchyCopyPasteContentPerElement = {}
 
 
 
 ---@class FRigHierarchyRef
-FRigHierarchyRef = {}
+local FRigHierarchyRef = {}
 
 
 ---@class FRigHierarchySettings
 ---@field ProceduralElementLimit int32
-FRigHierarchySettings = {}
+local FRigHierarchySettings = {}
 
 
 
 ---@class FRigInfluenceEntry
 ---@field Source FRigElementKey
 ---@field AffectedList TArray<FRigElementKey>
-FRigInfluenceEntry = {}
+local FRigInfluenceEntry = {}
 
 
 
 ---@class FRigInfluenceEntryModifier
 ---@field AffectedList TArray<FRigElementKey>
-FRigInfluenceEntryModifier = {}
+local FRigInfluenceEntryModifier = {}
 
 
 
@@ -915,45 +915,45 @@ FRigInfluenceEntryModifier = {}
 ---@field EventName FName
 ---@field Entries TArray<FRigInfluenceEntry>
 ---@field KeyToIndex TMap<FRigElementKey, int32>
-FRigInfluenceMap = {}
+local FRigInfluenceMap = {}
 
 
 
 ---@class FRigInfluenceMapPerEvent
 ---@field Maps TArray<FRigInfluenceMap>
 ---@field EventToIndex TMap<FName, int32>
-FRigInfluenceMapPerEvent = {}
+local FRigInfluenceMapPerEvent = {}
 
 
 
 ---@class FRigInt32ArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<int32>
-FRigInt32ArrayMetadata = {}
+local FRigInt32ArrayMetadata = {}
 
 
 
 ---@class FRigInt32Metadata : FRigBaseMetadata
 ---@field Value int32
-FRigInt32Metadata = {}
+local FRigInt32Metadata = {}
 
 
 
 ---@class FRigLinearColorArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FLinearColor>
-FRigLinearColorArrayMetadata = {}
+local FRigLinearColorArrayMetadata = {}
 
 
 
 ---@class FRigLinearColorMetadata : FRigBaseMetadata
 ---@field Value FLinearColor
-FRigLinearColorMetadata = {}
+local FRigLinearColorMetadata = {}
 
 
 
 ---@class FRigLocalAndGlobalTransform
 ---@field Local FRigComputedTransform
 ---@field Global FRigComputedTransform
-FRigLocalAndGlobalTransform = {}
+local FRigLocalAndGlobalTransform = {}
 
 
 
@@ -962,35 +962,35 @@ FRigLocalAndGlobalTransform = {}
 ---@field AxisToFlip EAxis::Type
 ---@field SearchString FString
 ---@field ReplaceString FString
-FRigMirrorSettings = {}
+local FRigMirrorSettings = {}
 
 
 
 ---@class FRigMultiParentElement : FRigTransformElement
-FRigMultiParentElement = {}
+local FRigMultiParentElement = {}
 
 
 ---@class FRigNameArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FName>
-FRigNameArrayMetadata = {}
+local FRigNameArrayMetadata = {}
 
 
 
 ---@class FRigNameMetadata : FRigBaseMetadata
 ---@field Value FName
-FRigNameMetadata = {}
+local FRigNameMetadata = {}
 
 
 
 ---@class FRigNullElement : FRigMultiParentElement
-FRigNullElement = {}
+local FRigNullElement = {}
 
 
 ---@class FRigPose
 ---@field Elements TArray<FRigPoseElement>
 ---@field HierarchyTopologyVersion int32
 ---@field PoseHash int32
-FRigPose = {}
+local FRigPose = {}
 
 
 
@@ -999,7 +999,7 @@ FRigPose = {}
 ---@field GlobalTransform FTransform
 ---@field LocalTransform FTransform
 ---@field CurveValue float
-FRigPoseElement = {}
+local FRigPoseElement = {}
 
 
 
@@ -1007,52 +1007,52 @@ FRigPoseElement = {}
 ---@field RotationOrder EEulerRotationOrder
 ---@field Current FVector
 ---@field Initial FVector
-FRigPreferredEulerAngles = {}
+local FRigPreferredEulerAngles = {}
 
 
 
 ---@class FRigQuatArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FQuat>
-FRigQuatArrayMetadata = {}
+local FRigQuatArrayMetadata = {}
 
 
 
 ---@class FRigQuatMetadata : FRigBaseMetadata
 ---@field Value FQuat
-FRigQuatMetadata = {}
+local FRigQuatMetadata = {}
 
 
 
 ---@class FRigReferenceElement : FRigSingleParentElement
-FRigReferenceElement = {}
+local FRigReferenceElement = {}
 
 
 ---@class FRigRigidBodyElement : FRigSingleParentElement
 ---@field Settings FRigRigidBodySettings
-FRigRigidBodyElement = {}
+local FRigRigidBodyElement = {}
 
 
 
 ---@class FRigRigidBodySettings
 ---@field Mass float
-FRigRigidBodySettings = {}
+local FRigRigidBodySettings = {}
 
 
 
 ---@class FRigRotatorArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FRotator>
-FRigRotatorArrayMetadata = {}
+local FRigRotatorArrayMetadata = {}
 
 
 
 ---@class FRigRotatorMetadata : FRigBaseMetadata
 ---@field Value FRotator
-FRigRotatorMetadata = {}
+local FRigRotatorMetadata = {}
 
 
 
 ---@class FRigSingleParentElement : FRigTransformElement
-FRigSingleParentElement = {}
+local FRigSingleParentElement = {}
 
 
 ---@class FRigSpace : FRigElement
@@ -1061,31 +1061,31 @@ FRigSingleParentElement = {}
 ---@field ParentIndex int32
 ---@field InitialTransform FTransform
 ---@field LocalTransform FTransform
-FRigSpace = {}
+local FRigSpace = {}
 
 
 
 ---@class FRigSpaceHierarchy
 ---@field Spaces TArray<FRigSpace>
-FRigSpaceHierarchy = {}
+local FRigSpaceHierarchy = {}
 
 
 
 ---@class FRigTransformArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FTransform>
-FRigTransformArrayMetadata = {}
+local FRigTransformArrayMetadata = {}
 
 
 
 ---@class FRigTransformElement : FRigBaseElement
 ---@field Pose FRigCurrentAndInitialTransform
-FRigTransformElement = {}
+local FRigTransformElement = {}
 
 
 
 ---@class FRigTransformMetadata : FRigBaseMetadata
 ---@field Value FTransform
-FRigTransformMetadata = {}
+local FRigTransformMetadata = {}
 
 
 
@@ -1097,22 +1097,22 @@ FRigTransformMetadata = {}
 ---@field NewTransform FTransform
 ---@field bAffectChildren boolean
 ---@field Callstack TArray<FString>
-FRigTransformStackEntry = {}
+local FRigTransformStackEntry = {}
 
 
 
 ---@class FRigUnit : FRigVMStruct
-FRigUnit = {}
+local FRigUnit = {}
 
 
 ---@class FRigUnitMutable : FRigUnit
 ---@field ExecuteContext FControlRigExecuteContext
-FRigUnitMutable = {}
+local FRigUnitMutable = {}
 
 
 
 ---@class FRigUnit_AccumulateBase : FRigUnit_SimBase
-FRigUnit_AccumulateBase = {}
+local FRigUnit_AccumulateBase = {}
 
 
 ---@class FRigUnit_AccumulateFloatAdd : FRigUnit_AccumulateBase
@@ -1121,7 +1121,7 @@ FRigUnit_AccumulateBase = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result float
 ---@field AccumulatedValue float
-FRigUnit_AccumulateFloatAdd = {}
+local FRigUnit_AccumulateFloatAdd = {}
 
 
 
@@ -1132,7 +1132,7 @@ FRigUnit_AccumulateFloatAdd = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result float
 ---@field AccumulatedValue float
-FRigUnit_AccumulateFloatLerp = {}
+local FRigUnit_AccumulateFloatLerp = {}
 
 
 
@@ -1142,7 +1142,7 @@ FRigUnit_AccumulateFloatLerp = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result float
 ---@field AccumulatedValue float
-FRigUnit_AccumulateFloatMul = {}
+local FRigUnit_AccumulateFloatMul = {}
 
 
 
@@ -1152,7 +1152,7 @@ FRigUnit_AccumulateFloatMul = {}
 ---@field Maximum float
 ---@field AccumulatedMinimum float
 ---@field AccumulatedMaximum float
-FRigUnit_AccumulateFloatRange = {}
+local FRigUnit_AccumulateFloatRange = {}
 
 
 
@@ -1163,7 +1163,7 @@ FRigUnit_AccumulateFloatRange = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FQuat
 ---@field AccumulatedValue FQuat
-FRigUnit_AccumulateQuatLerp = {}
+local FRigUnit_AccumulateQuatLerp = {}
 
 
 
@@ -1174,7 +1174,7 @@ FRigUnit_AccumulateQuatLerp = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FQuat
 ---@field AccumulatedValue FQuat
-FRigUnit_AccumulateQuatMul = {}
+local FRigUnit_AccumulateQuatMul = {}
 
 
 
@@ -1185,7 +1185,7 @@ FRigUnit_AccumulateQuatMul = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FTransform
 ---@field AccumulatedValue FTransform
-FRigUnit_AccumulateTransformLerp = {}
+local FRigUnit_AccumulateTransformLerp = {}
 
 
 
@@ -1196,7 +1196,7 @@ FRigUnit_AccumulateTransformLerp = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FTransform
 ---@field AccumulatedValue FTransform
-FRigUnit_AccumulateTransformMul = {}
+local FRigUnit_AccumulateTransformMul = {}
 
 
 
@@ -1206,7 +1206,7 @@ FRigUnit_AccumulateTransformMul = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FVector
 ---@field AccumulatedValue FVector
-FRigUnit_AccumulateVectorAdd = {}
+local FRigUnit_AccumulateVectorAdd = {}
 
 
 
@@ -1217,7 +1217,7 @@ FRigUnit_AccumulateVectorAdd = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FVector
 ---@field AccumulatedValue FVector
-FRigUnit_AccumulateVectorLerp = {}
+local FRigUnit_AccumulateVectorLerp = {}
 
 
 
@@ -1227,7 +1227,7 @@ FRigUnit_AccumulateVectorLerp = {}
 ---@field bIntegrateDeltaTime boolean
 ---@field Result FVector
 ---@field AccumulatedValue FVector
-FRigUnit_AccumulateVectorMul = {}
+local FRigUnit_AccumulateVectorMul = {}
 
 
 
@@ -1237,7 +1237,7 @@ FRigUnit_AccumulateVectorMul = {}
 ---@field Maximum FVector
 ---@field AccumulatedMinimum FVector
 ---@field AccumulatedMaximum FVector
-FRigUnit_AccumulateVectorRange = {}
+local FRigUnit_AccumulateVectorRange = {}
 
 
 
@@ -1248,23 +1248,23 @@ FRigUnit_AccumulateVectorRange = {}
 ---@field bPostMultiply boolean
 ---@field bPropagateToChildren boolean
 ---@field CachedBone FCachedRigElement
-FRigUnit_AddBoneTransform = {}
+local FRigUnit_AddBoneTransform = {}
 
 
 
 ---@class FRigUnit_AddParent : FRigUnit_DynamicHierarchyBaseMutable
 ---@field Child FRigElementKey
 ---@field Parent FRigElementKey
-FRigUnit_AddParent = {}
+local FRigUnit_AddParent = {}
 
 
 
 ---@class FRigUnit_Add_FloatFloat : FRigUnit_BinaryFloatOp
-FRigUnit_Add_FloatFloat = {}
+local FRigUnit_Add_FloatFloat = {}
 
 
 ---@class FRigUnit_Add_VectorVector : FRigUnit_BinaryVectorOp
-FRigUnit_Add_VectorVector = {}
+local FRigUnit_Add_VectorVector = {}
 
 
 ---@class FRigUnit_AimBone : FRigUnit_HighlevelBaseMutable
@@ -1277,7 +1277,7 @@ FRigUnit_Add_VectorVector = {}
 ---@field CachedBoneIndex FCachedRigElement
 ---@field PrimaryCachedSpace FCachedRigElement
 ---@field SecondaryCachedSpace FCachedRigElement
-FRigUnit_AimBone = {}
+local FRigUnit_AimBone = {}
 
 
 
@@ -1290,7 +1290,7 @@ FRigUnit_AimBone = {}
 ---@field DebugSettings FRigUnit_AimBone_DebugSettings
 ---@field PrimaryCachedSpace FCachedRigElement
 ---@field SecondaryCachedSpace FCachedRigElement
-FRigUnit_AimBoneMath = {}
+local FRigUnit_AimBoneMath = {}
 
 
 
@@ -1298,7 +1298,7 @@ FRigUnit_AimBoneMath = {}
 ---@field bEnabled boolean
 ---@field Scale float
 ---@field WorldOffset FTransform
-FRigUnit_AimBone_DebugSettings = {}
+local FRigUnit_AimBone_DebugSettings = {}
 
 
 
@@ -1308,7 +1308,7 @@ FRigUnit_AimBone_DebugSettings = {}
 ---@field Target FVector
 ---@field Kind EControlRigVectorKind
 ---@field Space FName
-FRigUnit_AimBone_Target = {}
+local FRigUnit_AimBone_Target = {}
 
 
 
@@ -1321,7 +1321,7 @@ FRigUnit_AimBone_Target = {}
 ---@field AimTargets TArray<FAimTarget>
 ---@field UpTargets TArray<FAimTarget>
 ---@field WorkData FRigUnit_AimConstraint_WorkData
-FRigUnit_AimConstraint = {}
+local FRigUnit_AimConstraint = {}
 
 
 
@@ -1338,20 +1338,20 @@ FRigUnit_AimConstraint = {}
 ---@field WorldUpSpaceCache FCachedRigElement
 ---@field ChildCache FCachedRigElement
 ---@field ParentCaches TArray<FCachedRigElement>
-FRigUnit_AimConstraintLocalSpaceOffset = {}
+local FRigUnit_AimConstraintLocalSpaceOffset = {}
 
 
 
 ---@class FRigUnit_AimConstraint_AdvancedSettings
 ---@field DebugSettings FRigUnit_AimBone_DebugSettings
 ---@field RotationOrderForFilter EEulerRotationOrder
-FRigUnit_AimConstraint_AdvancedSettings = {}
+local FRigUnit_AimConstraint_AdvancedSettings = {}
 
 
 
 ---@class FRigUnit_AimConstraint_WorkData
 ---@field ConstraintData TArray<FConstraintData>
-FRigUnit_AimConstraint_WorkData = {}
+local FRigUnit_AimConstraint_WorkData = {}
 
 
 
@@ -1359,7 +1359,7 @@ FRigUnit_AimConstraint_WorkData = {}
 ---@field Target FVector
 ---@field Kind EControlRigVectorKind
 ---@field Space FRigElementKey
-FRigUnit_AimConstraint_WorldUp = {}
+local FRigUnit_AimConstraint_WorldUp = {}
 
 
 
@@ -1372,7 +1372,7 @@ FRigUnit_AimConstraint_WorldUp = {}
 ---@field CachedItem FCachedRigElement
 ---@field PrimaryCachedSpace FCachedRigElement
 ---@field SecondaryCachedSpace FCachedRigElement
-FRigUnit_AimItem = {}
+local FRigUnit_AimItem = {}
 
 
 
@@ -1382,7 +1382,7 @@ FRigUnit_AimItem = {}
 ---@field Target FVector
 ---@field Kind EControlRigVectorKind
 ---@field Space FRigElementKey
-FRigUnit_AimItem_Target = {}
+local FRigUnit_AimItem_Target = {}
 
 
 
@@ -1401,7 +1401,7 @@ FRigUnit_AimItem_Target = {}
 ---@field InterpSpeedDecreasing float
 ---@field Result float
 ---@field ScaleBiasClamp FInputScaleBiasClamp
-FRigUnit_AlphaInterp = {}
+local FRigUnit_AlphaInterp = {}
 
 
 
@@ -1420,7 +1420,7 @@ FRigUnit_AlphaInterp = {}
 ---@field InterpSpeedDecreasing float
 ---@field Result FQuat
 ---@field ScaleBiasClamp FInputScaleBiasClamp
-FRigUnit_AlphaInterpQuat = {}
+local FRigUnit_AlphaInterpQuat = {}
 
 
 
@@ -1439,12 +1439,12 @@ FRigUnit_AlphaInterpQuat = {}
 ---@field InterpSpeedDecreasing float
 ---@field Result FVector
 ---@field ScaleBiasClamp FInputScaleBiasClamp
-FRigUnit_AlphaInterpVector = {}
+local FRigUnit_AlphaInterpVector = {}
 
 
 
 ---@class FRigUnit_AnimBase : FRigUnit
-FRigUnit_AnimBase = {}
+local FRigUnit_AnimBase = {}
 
 
 ---@class FRigUnit_AnimEasing : FRigUnit_AnimBase
@@ -1455,13 +1455,13 @@ FRigUnit_AnimBase = {}
 ---@field TargetMinimum float
 ---@field TargetMaximum float
 ---@field Result float
-FRigUnit_AnimEasing = {}
+local FRigUnit_AnimEasing = {}
 
 
 
 ---@class FRigUnit_AnimEasingType : FRigUnit_AnimBase
 ---@field Type EControlRigAnimEasingType
-FRigUnit_AnimEasingType = {}
+local FRigUnit_AnimEasingType = {}
 
 
 
@@ -1473,13 +1473,13 @@ FRigUnit_AnimEasingType = {}
 ---@field TargetMinimum float
 ---@field TargetMaximum float
 ---@field Result float
-FRigUnit_AnimEvalRichCurve = {}
+local FRigUnit_AnimEvalRichCurve = {}
 
 
 
 ---@class FRigUnit_AnimRichCurve : FRigUnit_AnimBase
 ---@field Curve FRuntimeFloatCurve
-FRigUnit_AnimRichCurve = {}
+local FRigUnit_AnimRichCurve = {}
 
 
 
@@ -1491,13 +1491,13 @@ FRigUnit_AnimRichCurve = {}
 ---@field ApplyTransformSpace ETransformSpaceMode
 ---@field BaseTransform FTransform
 ---@field BaseJoint FName
-FRigUnit_ApplyFK = {}
+local FRigUnit_ApplyFK = {}
 
 
 
 ---@class FRigUnit_BeginExecution : FRigUnit
 ---@field ExecuteContext FControlRigExecuteContext
-FRigUnit_BeginExecution = {}
+local FRigUnit_BeginExecution = {}
 
 
 
@@ -1505,7 +1505,7 @@ FRigUnit_BeginExecution = {}
 ---@field Argument0 float
 ---@field Argument1 float
 ---@field Result float
-FRigUnit_BinaryFloatOp = {}
+local FRigUnit_BinaryFloatOp = {}
 
 
 
@@ -1513,7 +1513,7 @@ FRigUnit_BinaryFloatOp = {}
 ---@field Argument0 FQuat
 ---@field Argument1 FQuat
 ---@field Result FQuat
-FRigUnit_BinaryQuaternionOp = {}
+local FRigUnit_BinaryQuaternionOp = {}
 
 
 
@@ -1521,7 +1521,7 @@ FRigUnit_BinaryQuaternionOp = {}
 ---@field Argument0 FTransform
 ---@field Argument1 FTransform
 ---@field Result FTransform
-FRigUnit_BinaryTransformOp = {}
+local FRigUnit_BinaryTransformOp = {}
 
 
 
@@ -1529,7 +1529,7 @@ FRigUnit_BinaryTransformOp = {}
 ---@field Argument0 FVector
 ---@field Argument1 FVector
 ---@field Result FVector
-FRigUnit_BinaryVectorOp = {}
+local FRigUnit_BinaryVectorOp = {}
 
 
 
@@ -1537,7 +1537,7 @@ FRigUnit_BinaryVectorOp = {}
 ---@field Source FTransform
 ---@field Targets TArray<FBlendTarget>
 ---@field Result FTransform
-FRigUnit_BlendTransform = {}
+local FRigUnit_BlendTransform = {}
 
 
 
@@ -1554,27 +1554,27 @@ FRigUnit_BlendTransform = {}
 ---@field RotationOrder EEulerRotationOrder
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_BoneHarmonics_WorkData
-FRigUnit_BoneHarmonics = {}
+local FRigUnit_BoneHarmonics = {}
 
 
 
 ---@class FRigUnit_BoneHarmonics_BoneTarget
 ---@field bone FName
 ---@field Ratio float
-FRigUnit_BoneHarmonics_BoneTarget = {}
+local FRigUnit_BoneHarmonics_BoneTarget = {}
 
 
 
 ---@class FRigUnit_BoneHarmonics_WorkData
 ---@field CachedItems TArray<FCachedRigElement>
 ---@field WaveTime FVector
-FRigUnit_BoneHarmonics_WorkData = {}
+local FRigUnit_BoneHarmonics_WorkData = {}
 
 
 
 ---@class FRigUnit_BoneName : FRigUnit
 ---@field bone FName
-FRigUnit_BoneName = {}
+local FRigUnit_BoneName = {}
 
 
 
@@ -1590,7 +1590,7 @@ FRigUnit_BoneName = {}
 ---@field RotationLimits TArray<FRigUnit_CCDIK_RotationLimit>
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_CCDIK_WorkData
-FRigUnit_CCDIK = {}
+local FRigUnit_CCDIK = {}
 
 
 
@@ -1605,7 +1605,7 @@ FRigUnit_CCDIK = {}
 ---@field RotationLimits TArray<FRigUnit_CCDIK_RotationLimitPerItem>
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_CCDIK_WorkData
-FRigUnit_CCDIKItemArray = {}
+local FRigUnit_CCDIKItemArray = {}
 
 
 
@@ -1620,21 +1620,21 @@ FRigUnit_CCDIKItemArray = {}
 ---@field RotationLimits TArray<FRigUnit_CCDIK_RotationLimitPerItem>
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_CCDIK_WorkData
-FRigUnit_CCDIKPerItem = {}
+local FRigUnit_CCDIKPerItem = {}
 
 
 
 ---@class FRigUnit_CCDIK_RotationLimit
 ---@field bone FName
 ---@field Limit float
-FRigUnit_CCDIK_RotationLimit = {}
+local FRigUnit_CCDIK_RotationLimit = {}
 
 
 
 ---@class FRigUnit_CCDIK_RotationLimitPerItem
 ---@field Item FRigElementKey
 ---@field Limit float
-FRigUnit_CCDIK_RotationLimitPerItem = {}
+local FRigUnit_CCDIK_RotationLimitPerItem = {}
 
 
 
@@ -1644,7 +1644,7 @@ FRigUnit_CCDIK_RotationLimitPerItem = {}
 ---@field RotationLimitIndex TArray<int32>
 ---@field RotationLimitsPerItem TArray<float>
 ---@field CachedEffector FCachedRigElement
-FRigUnit_CCDIK_WorkData = {}
+local FRigUnit_CCDIK_WorkData = {}
 
 
 
@@ -1658,7 +1658,7 @@ FRigUnit_CCDIK_WorkData = {}
 ---@field bDrawDebug boolean
 ---@field DrawWorldOffset FTransform
 ---@field WorkData FRigUnit_ChainHarmonics_WorkData
-FRigUnit_ChainHarmonics = {}
+local FRigUnit_ChainHarmonics = {}
 
 
 
@@ -1672,7 +1672,7 @@ FRigUnit_ChainHarmonics = {}
 ---@field bDrawDebug boolean
 ---@field DrawWorldOffset FTransform
 ---@field WorkData FRigUnit_ChainHarmonics_WorkData
-FRigUnit_ChainHarmonicsPerItem = {}
+local FRigUnit_ChainHarmonicsPerItem = {}
 
 
 
@@ -1688,7 +1688,7 @@ FRigUnit_ChainHarmonicsPerItem = {}
 ---@field UnwindAxis FVector
 ---@field UnwindMinimum float
 ---@field UnwindMaximum float
-FRigUnit_ChainHarmonics_Pendulum = {}
+local FRigUnit_ChainHarmonics_Pendulum = {}
 
 
 
@@ -1699,7 +1699,7 @@ FRigUnit_ChainHarmonics_Pendulum = {}
 ---@field ReachMinimum float
 ---@field ReachMaximum float
 ---@field ReachEase EControlRigAnimEasingType
-FRigUnit_ChainHarmonics_Reach = {}
+local FRigUnit_ChainHarmonics_Reach = {}
 
 
 
@@ -1712,7 +1712,7 @@ FRigUnit_ChainHarmonics_Reach = {}
 ---@field WaveMinimum float
 ---@field WaveMaximum float
 ---@field WaveEase EControlRigAnimEasingType
-FRigUnit_ChainHarmonics_Wave = {}
+local FRigUnit_ChainHarmonics_Wave = {}
 
 
 
@@ -1726,7 +1726,7 @@ FRigUnit_ChainHarmonics_Wave = {}
 ---@field PendulumVelocity TArray<FVector>
 ---@field HierarchyLine TArray<FVector>
 ---@field VelocityLines TArray<FVector>
-FRigUnit_ChainHarmonics_WorkData = {}
+local FRigUnit_ChainHarmonics_WorkData = {}
 
 
 
@@ -1735,7 +1735,7 @@ FRigUnit_ChainHarmonics_WorkData = {}
 ---@field Min float
 ---@field Max float
 ---@field Result float
-FRigUnit_Clamp_Float = {}
+local FRigUnit_Clamp_Float = {}
 
 
 
@@ -1743,16 +1743,16 @@ FRigUnit_Clamp_Float = {}
 ---@field Collection FRigElementKeyCollection
 ---@field Item FRigElementKey
 ---@field Result FRigElementKeyCollection
-FRigUnit_CollectionAddItem = {}
+local FRigUnit_CollectionAddItem = {}
 
 
 
 ---@class FRigUnit_CollectionBase : FRigUnit
-FRigUnit_CollectionBase = {}
+local FRigUnit_CollectionBase = {}
 
 
 ---@class FRigUnit_CollectionBaseMutable : FRigUnitMutable
-FRigUnit_CollectionBaseMutable = {}
+local FRigUnit_CollectionBaseMutable = {}
 
 
 ---@class FRigUnit_CollectionChain : FRigUnit_CollectionBase
@@ -1760,7 +1760,7 @@ FRigUnit_CollectionBaseMutable = {}
 ---@field LastItem FRigElementKey
 ---@field Reverse boolean
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionChain = {}
+local FRigUnit_CollectionChain = {}
 
 
 
@@ -1769,7 +1769,7 @@ FRigUnit_CollectionChain = {}
 ---@field LastItem FRigElementKey
 ---@field Reverse boolean
 ---@field Items TArray<FRigElementKey>
-FRigUnit_CollectionChainArray = {}
+local FRigUnit_CollectionChainArray = {}
 
 
 
@@ -1779,7 +1779,7 @@ FRigUnit_CollectionChainArray = {}
 ---@field bRecursive boolean
 ---@field TypeToSearch ERigElementType
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionChildren = {}
+local FRigUnit_CollectionChildren = {}
 
 
 
@@ -1789,14 +1789,14 @@ FRigUnit_CollectionChildren = {}
 ---@field bRecursive boolean
 ---@field TypeToSearch ERigElementType
 ---@field Items TArray<FRigElementKey>
-FRigUnit_CollectionChildrenArray = {}
+local FRigUnit_CollectionChildrenArray = {}
 
 
 
 ---@class FRigUnit_CollectionCount : FRigUnit_CollectionBase
 ---@field Collection FRigElementKeyCollection
 ---@field Count int32
-FRigUnit_CollectionCount = {}
+local FRigUnit_CollectionCount = {}
 
 
 
@@ -1804,35 +1804,35 @@ FRigUnit_CollectionCount = {}
 ---@field A FRigElementKeyCollection
 ---@field B FRigElementKeyCollection
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionDifference = {}
+local FRigUnit_CollectionDifference = {}
 
 
 
 ---@class FRigUnit_CollectionGetAll : FRigUnit_CollectionBase
 ---@field TypeToSearch ERigElementType
 ---@field Items TArray<FRigElementKey>
-FRigUnit_CollectionGetAll = {}
+local FRigUnit_CollectionGetAll = {}
 
 
 
 ---@class FRigUnit_CollectionGetItems : FRigUnit_CollectionBase
 ---@field Collection FRigElementKeyCollection
 ---@field Items TArray<FRigElementKey>
-FRigUnit_CollectionGetItems = {}
+local FRigUnit_CollectionGetItems = {}
 
 
 
 ---@class FRigUnit_CollectionGetParentIndices : FRigUnit_CollectionBase
 ---@field Collection FRigElementKeyCollection
 ---@field ParentIndices TArray<int32>
-FRigUnit_CollectionGetParentIndices = {}
+local FRigUnit_CollectionGetParentIndices = {}
 
 
 
 ---@class FRigUnit_CollectionGetParentIndicesItemArray : FRigUnit_CollectionBase
 ---@field Items TArray<FRigElementKey>
 ---@field ParentIndices TArray<int32>
-FRigUnit_CollectionGetParentIndicesItemArray = {}
+local FRigUnit_CollectionGetParentIndicesItemArray = {}
 
 
 
@@ -1840,7 +1840,7 @@ FRigUnit_CollectionGetParentIndicesItemArray = {}
 ---@field A FRigElementKeyCollection
 ---@field B FRigElementKeyCollection
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionIntersection = {}
+local FRigUnit_CollectionIntersection = {}
 
 
 
@@ -1848,7 +1848,7 @@ FRigUnit_CollectionIntersection = {}
 ---@field Collection FRigElementKeyCollection
 ---@field Index int32
 ---@field Item FRigElementKey
-FRigUnit_CollectionItemAtIndex = {}
+local FRigUnit_CollectionItemAtIndex = {}
 
 
 
@@ -1856,7 +1856,7 @@ FRigUnit_CollectionItemAtIndex = {}
 ---@field Items TArray<FRigElementKey>
 ---@field bAllowDuplicates boolean
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionItems = {}
+local FRigUnit_CollectionItems = {}
 
 
 
@@ -1868,7 +1868,7 @@ FRigUnit_CollectionItems = {}
 ---@field Ratio float
 ---@field Continue boolean
 ---@field Completed FControlRigExecuteContext
-FRigUnit_CollectionLoop = {}
+local FRigUnit_CollectionLoop = {}
 
 
 
@@ -1876,7 +1876,7 @@ FRigUnit_CollectionLoop = {}
 ---@field PartialName FName
 ---@field TypeToSearch ERigElementType
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionNameSearch = {}
+local FRigUnit_CollectionNameSearch = {}
 
 
 
@@ -1884,7 +1884,7 @@ FRigUnit_CollectionNameSearch = {}
 ---@field PartialName FName
 ---@field TypeToSearch ERigElementType
 ---@field Items TArray<FRigElementKey>
-FRigUnit_CollectionNameSearchArray = {}
+local FRigUnit_CollectionNameSearchArray = {}
 
 
 
@@ -1895,7 +1895,7 @@ FRigUnit_CollectionNameSearchArray = {}
 ---@field RemoveInvalidItems boolean
 ---@field bAllowDuplicates boolean
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionReplaceItems = {}
+local FRigUnit_CollectionReplaceItems = {}
 
 
 
@@ -1906,14 +1906,14 @@ FRigUnit_CollectionReplaceItems = {}
 ---@field RemoveInvalidItems boolean
 ---@field bAllowDuplicates boolean
 ---@field Result TArray<FRigElementKey>
-FRigUnit_CollectionReplaceItemsArray = {}
+local FRigUnit_CollectionReplaceItemsArray = {}
 
 
 
 ---@class FRigUnit_CollectionReverse : FRigUnit_CollectionBase
 ---@field Collection FRigElementKeyCollection
 ---@field Reversed FRigElementKeyCollection
-FRigUnit_CollectionReverse = {}
+local FRigUnit_CollectionReverse = {}
 
 
 
@@ -1922,7 +1922,7 @@ FRigUnit_CollectionReverse = {}
 ---@field B FRigElementKeyCollection
 ---@field bAllowDuplicates boolean
 ---@field Collection FRigElementKeyCollection
-FRigUnit_CollectionUnion = {}
+local FRigUnit_CollectionUnion = {}
 
 
 
@@ -1930,7 +1930,7 @@ FRigUnit_CollectionUnion = {}
 ---@field Name FName
 ---@field Search FName
 ---@field Result boolean
-FRigUnit_Contains = {}
+local FRigUnit_Contains = {}
 
 
 
@@ -1940,79 +1940,79 @@ FRigUnit_Contains = {}
 ---@field InitTransform FTransform
 ---@field Result FTransform
 ---@field Filter FTransformFilter
-FRigUnit_Control = {}
+local FRigUnit_Control = {}
 
 
 
 ---@class FRigUnit_ControlName : FRigUnit
 ---@field Control FName
-FRigUnit_ControlName = {}
+local FRigUnit_ControlName = {}
 
 
 
 ---@class FRigUnit_Control_StaticMesh : FRigUnit_Control
 ---@field MeshTransform FTransform
-FRigUnit_Control_StaticMesh = {}
+local FRigUnit_Control_StaticMesh = {}
 
 
 
 ---@class FRigUnit_ConvertEulerTransform : FRigUnit
 ---@field Input FEulerTransform
 ---@field Result FTransform
-FRigUnit_ConvertEulerTransform = {}
+local FRigUnit_ConvertEulerTransform = {}
 
 
 
 ---@class FRigUnit_ConvertQuaternion : FRigUnit
 ---@field Input FQuat
 ---@field Result FRotator
-FRigUnit_ConvertQuaternion = {}
+local FRigUnit_ConvertQuaternion = {}
 
 
 
 ---@class FRigUnit_ConvertQuaternionToVector : FRigUnit
 ---@field Input FQuat
 ---@field Result FVector
-FRigUnit_ConvertQuaternionToVector = {}
+local FRigUnit_ConvertQuaternionToVector = {}
 
 
 
 ---@class FRigUnit_ConvertRotation : FRigUnit
 ---@field Input FRotator
 ---@field Result FQuat
-FRigUnit_ConvertRotation = {}
+local FRigUnit_ConvertRotation = {}
 
 
 
 ---@class FRigUnit_ConvertRotationToVector : FRigUnit
 ---@field Input FRotator
 ---@field Result FVector
-FRigUnit_ConvertRotationToVector = {}
+local FRigUnit_ConvertRotationToVector = {}
 
 
 
 ---@class FRigUnit_ConvertTransform : FRigUnit
 ---@field Input FTransform
 ---@field Result FEulerTransform
-FRigUnit_ConvertTransform = {}
+local FRigUnit_ConvertTransform = {}
 
 
 
 ---@class FRigUnit_ConvertVectorRotation : FRigUnit_ConvertRotation
-FRigUnit_ConvertVectorRotation = {}
+local FRigUnit_ConvertVectorRotation = {}
 
 
 ---@class FRigUnit_ConvertVectorToQuaternion : FRigUnit
 ---@field Input FVector
 ---@field Result FQuat
-FRigUnit_ConvertVectorToQuaternion = {}
+local FRigUnit_ConvertVectorToQuaternion = {}
 
 
 
 ---@class FRigUnit_ConvertVectorToRotation : FRigUnit
 ---@field Input FVector
 ---@field Result FRotator
-FRigUnit_ConvertVectorToRotation = {}
+local FRigUnit_ConvertVectorToRotation = {}
 
 
 
@@ -2027,7 +2027,7 @@ FRigUnit_ConvertVectorToRotation = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugArc = {}
+local FRigUnit_DebugArc = {}
 
 
 
@@ -2042,16 +2042,16 @@ FRigUnit_DebugArc = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugArcItemSpace = {}
+local FRigUnit_DebugArcItemSpace = {}
 
 
 
 ---@class FRigUnit_DebugBase : FRigUnit
-FRigUnit_DebugBase = {}
+local FRigUnit_DebugBase = {}
 
 
 ---@class FRigUnit_DebugBaseMutable : FRigUnitMutable
-FRigUnit_DebugBaseMutable = {}
+local FRigUnit_DebugBaseMutable = {}
 
 
 ---@class FRigUnit_DebugBezier : FRigUnit_DebugBaseMutable
@@ -2064,7 +2064,7 @@ FRigUnit_DebugBaseMutable = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugBezier = {}
+local FRigUnit_DebugBezier = {}
 
 
 
@@ -2078,7 +2078,7 @@ FRigUnit_DebugBezier = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugBezierItemSpace = {}
+local FRigUnit_DebugBezierItemSpace = {}
 
 
 
@@ -2088,7 +2088,7 @@ FRigUnit_DebugBezierItemSpace = {}
 ---@field Thickness float
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugHierarchy = {}
+local FRigUnit_DebugHierarchy = {}
 
 
 
@@ -2100,7 +2100,7 @@ FRigUnit_DebugHierarchy = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugLine = {}
+local FRigUnit_DebugLine = {}
 
 
 
@@ -2112,7 +2112,7 @@ FRigUnit_DebugLine = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugLineItemSpace = {}
+local FRigUnit_DebugLineItemSpace = {}
 
 
 
@@ -2123,7 +2123,7 @@ FRigUnit_DebugLineItemSpace = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugLineStrip = {}
+local FRigUnit_DebugLineStrip = {}
 
 
 
@@ -2134,7 +2134,7 @@ FRigUnit_DebugLineStrip = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugLineStripItemSpace = {}
+local FRigUnit_DebugLineStripItemSpace = {}
 
 
 
@@ -2147,7 +2147,7 @@ FRigUnit_DebugLineStripItemSpace = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugPoint = {}
+local FRigUnit_DebugPoint = {}
 
 
 
@@ -2160,7 +2160,7 @@ FRigUnit_DebugPoint = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugPointMutable = {}
+local FRigUnit_DebugPointMutable = {}
 
 
 
@@ -2171,7 +2171,7 @@ FRigUnit_DebugPointMutable = {}
 ---@field Thickness float
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugPose = {}
+local FRigUnit_DebugPose = {}
 
 
 
@@ -2183,7 +2183,7 @@ FRigUnit_DebugPose = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugRectangle = {}
+local FRigUnit_DebugRectangle = {}
 
 
 
@@ -2195,7 +2195,7 @@ FRigUnit_DebugRectangle = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugRectangleItemSpace = {}
+local FRigUnit_DebugRectangleItemSpace = {}
 
 
 
@@ -2208,7 +2208,7 @@ FRigUnit_DebugRectangleItemSpace = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugTransform = {}
+local FRigUnit_DebugTransform = {}
 
 
 
@@ -2222,7 +2222,7 @@ FRigUnit_DebugTransform = {}
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
 ---@field WorkData FRigUnit_DebugTransformArrayMutable_WorkData
-FRigUnit_DebugTransformArrayMutable = {}
+local FRigUnit_DebugTransformArrayMutable = {}
 
 
 
@@ -2236,13 +2236,13 @@ FRigUnit_DebugTransformArrayMutable = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugTransformArrayMutableItemSpace = {}
+local FRigUnit_DebugTransformArrayMutableItemSpace = {}
 
 
 
 ---@class FRigUnit_DebugTransformArrayMutable_WorkData
 ---@field DrawTransforms TArray<FTransform>
-FRigUnit_DebugTransformArrayMutable_WorkData = {}
+local FRigUnit_DebugTransformArrayMutable_WorkData = {}
 
 
 
@@ -2255,7 +2255,7 @@ FRigUnit_DebugTransformArrayMutable_WorkData = {}
 ---@field Space FName
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugTransformMutable = {}
+local FRigUnit_DebugTransformMutable = {}
 
 
 
@@ -2268,7 +2268,7 @@ FRigUnit_DebugTransformMutable = {}
 ---@field Space FRigElementKey
 ---@field WorldOffset FTransform
 ---@field bEnabled boolean
-FRigUnit_DebugTransformMutableItemSpace = {}
+local FRigUnit_DebugTransformMutableItemSpace = {}
 
 
 
@@ -2277,7 +2277,7 @@ FRigUnit_DebugTransformMutableItemSpace = {}
 ---@field Delta float
 ---@field PreviousValue float
 ---@field Cache float
-FRigUnit_DeltaFromPreviousFloat = {}
+local FRigUnit_DeltaFromPreviousFloat = {}
 
 
 
@@ -2286,7 +2286,7 @@ FRigUnit_DeltaFromPreviousFloat = {}
 ---@field Delta FQuat
 ---@field PreviousValue FQuat
 ---@field Cache FQuat
-FRigUnit_DeltaFromPreviousQuat = {}
+local FRigUnit_DeltaFromPreviousQuat = {}
 
 
 
@@ -2295,7 +2295,7 @@ FRigUnit_DeltaFromPreviousQuat = {}
 ---@field Delta FTransform
 ---@field PreviousValue FTransform
 ---@field Cache FTransform
-FRigUnit_DeltaFromPreviousTransform = {}
+local FRigUnit_DeltaFromPreviousTransform = {}
 
 
 
@@ -2304,7 +2304,7 @@ FRigUnit_DeltaFromPreviousTransform = {}
 ---@field Delta FVector
 ---@field PreviousValue FVector
 ---@field Cache FVector
-FRigUnit_DeltaFromPreviousVector = {}
+local FRigUnit_DeltaFromPreviousVector = {}
 
 
 
@@ -2312,7 +2312,7 @@ FRigUnit_DeltaFromPreviousVector = {}
 ---@field Argument0 FVector
 ---@field Argument1 FVector
 ---@field Result float
-FRigUnit_Distance_VectorVector = {}
+local FRigUnit_Distance_VectorVector = {}
 
 
 
@@ -2324,7 +2324,7 @@ FRigUnit_Distance_VectorVector = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_DistributeRotation_WorkData
-FRigUnit_DistributeRotation = {}
+local FRigUnit_DistributeRotation = {}
 
 
 
@@ -2334,7 +2334,7 @@ FRigUnit_DistributeRotation = {}
 ---@field RotationEaseType EControlRigAnimEasingType
 ---@field Weight float
 ---@field WorkData FRigUnit_DistributeRotation_WorkData
-FRigUnit_DistributeRotationForCollection = {}
+local FRigUnit_DistributeRotationForCollection = {}
 
 
 
@@ -2344,14 +2344,14 @@ FRigUnit_DistributeRotationForCollection = {}
 ---@field RotationEaseType EControlRigAnimEasingType
 ---@field Weight float
 ---@field WorkData FRigUnit_DistributeRotation_WorkData
-FRigUnit_DistributeRotationForItemArray = {}
+local FRigUnit_DistributeRotationForItemArray = {}
 
 
 
 ---@class FRigUnit_DistributeRotation_Rotation
 ---@field Rotation FQuat
 ---@field Ratio float
-FRigUnit_DistributeRotation_Rotation = {}
+local FRigUnit_DistributeRotation_Rotation = {}
 
 
 
@@ -2361,53 +2361,53 @@ FRigUnit_DistributeRotation_Rotation = {}
 ---@field ItemRotationB TArray<int32>
 ---@field ItemRotationT TArray<float>
 ---@field ItemLocalTransforms TArray<FTransform>
-FRigUnit_DistributeRotation_WorkData = {}
+local FRigUnit_DistributeRotation_WorkData = {}
 
 
 
 ---@class FRigUnit_Divide_FloatFloat : FRigUnit_BinaryFloatOp
-FRigUnit_Divide_FloatFloat = {}
+local FRigUnit_Divide_FloatFloat = {}
 
 
 ---@class FRigUnit_Divide_VectorVector : FRigUnit_BinaryVectorOp
-FRigUnit_Divide_VectorVector = {}
+local FRigUnit_Divide_VectorVector = {}
 
 
 ---@class FRigUnit_DrawContainerGetInstruction : FRigUnit
 ---@field InstructionName FName
 ---@field Color FLinearColor
 ---@field Transform FTransform
-FRigUnit_DrawContainerGetInstruction = {}
+local FRigUnit_DrawContainerGetInstruction = {}
 
 
 
 ---@class FRigUnit_DrawContainerSetColor : FRigUnitMutable
 ---@field InstructionName FName
 ---@field Color FLinearColor
-FRigUnit_DrawContainerSetColor = {}
+local FRigUnit_DrawContainerSetColor = {}
 
 
 
 ---@class FRigUnit_DrawContainerSetThickness : FRigUnitMutable
 ---@field InstructionName FName
 ---@field Thickness float
-FRigUnit_DrawContainerSetThickness = {}
+local FRigUnit_DrawContainerSetThickness = {}
 
 
 
 ---@class FRigUnit_DrawContainerSetTransform : FRigUnitMutable
 ---@field InstructionName FName
 ---@field Transform FTransform
-FRigUnit_DrawContainerSetTransform = {}
+local FRigUnit_DrawContainerSetTransform = {}
 
 
 
 ---@class FRigUnit_DynamicHierarchyBase : FRigUnit
-FRigUnit_DynamicHierarchyBase = {}
+local FRigUnit_DynamicHierarchyBase = {}
 
 
 ---@class FRigUnit_DynamicHierarchyBaseMutable : FRigUnitMutable
-FRigUnit_DynamicHierarchyBaseMutable = {}
+local FRigUnit_DynamicHierarchyBaseMutable = {}
 
 
 ---@class FRigUnit_EndProfilingTimer : FRigUnit_DebugBaseMutable
@@ -2415,7 +2415,7 @@ FRigUnit_DynamicHierarchyBaseMutable = {}
 ---@field Prefix FString
 ---@field AccumulatedTime float
 ---@field MeasurementsLeft int32
-FRigUnit_EndProfilingTimer = {}
+local FRigUnit_EndProfilingTimer = {}
 
 
 
@@ -2423,7 +2423,7 @@ FRigUnit_EndProfilingTimer = {}
 ---@field Name FName
 ---@field Ending FName
 ---@field Result boolean
-FRigUnit_EndsWith = {}
+local FRigUnit_EndsWith = {}
 
 
 
@@ -2437,7 +2437,7 @@ FRigUnit_EndsWith = {}
 ---@field MaxIterations int32
 ---@field WorkData FRigUnit_FABRIK_WorkData
 ---@field bSetEffectorTransform boolean
-FRigUnit_FABRIK = {}
+local FRigUnit_FABRIK = {}
 
 
 
@@ -2450,7 +2450,7 @@ FRigUnit_FABRIK = {}
 ---@field MaxIterations int32
 ---@field WorkData FRigUnit_FABRIK_WorkData
 ---@field bSetEffectorTransform boolean
-FRigUnit_FABRIKItemArray = {}
+local FRigUnit_FABRIKItemArray = {}
 
 
 
@@ -2463,7 +2463,7 @@ FRigUnit_FABRIKItemArray = {}
 ---@field MaxIterations int32
 ---@field WorkData FRigUnit_FABRIK_WorkData
 ---@field bSetEffectorTransform boolean
-FRigUnit_FABRIKPerItem = {}
+local FRigUnit_FABRIKPerItem = {}
 
 
 
@@ -2471,7 +2471,7 @@ FRigUnit_FABRIKPerItem = {}
 ---@field Chain TArray<FFABRIKChainLink>
 ---@field CachedItems TArray<FCachedRigElement>
 ---@field CachedEffector FCachedRigElement
-FRigUnit_FABRIK_WorkData = {}
+local FRigUnit_FABRIK_WorkData = {}
 
 
 
@@ -2481,7 +2481,7 @@ FRigUnit_FABRIK_WorkData = {}
 ---@field Inclusive boolean
 ---@field Result TArray<FRigElementKey>
 ---@field CachedIndices TArray<FCachedRigElement>
-FRigUnit_FilterItemsByMetadataTags = {}
+local FRigUnit_FilterItemsByMetadataTags = {}
 
 
 
@@ -2489,21 +2489,21 @@ FRigUnit_FilterItemsByMetadataTags = {}
 ---@field Name FName
 ---@field Type ERigMetadataType
 ---@field Items TArray<FRigElementKey>
-FRigUnit_FindItemsWithMetadata = {}
+local FRigUnit_FindItemsWithMetadata = {}
 
 
 
 ---@class FRigUnit_FindItemsWithMetadataTag : FRigUnit
 ---@field Tag FName
 ---@field Items TArray<FRigElementKey>
-FRigUnit_FindItemsWithMetadataTag = {}
+local FRigUnit_FindItemsWithMetadataTag = {}
 
 
 
 ---@class FRigUnit_FindItemsWithMetadataTagArray : FRigUnit
 ---@field Tags TArray<FName>
 ---@field Items TArray<FRigElementKey>
-FRigUnit_FindItemsWithMetadataTagArray = {}
+local FRigUnit_FindItemsWithMetadataTagArray = {}
 
 
 
@@ -2524,7 +2524,7 @@ FRigUnit_FindItemsWithMetadataTagArray = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugSettings FRigUnit_FitChainToCurve_DebugSettings
 ---@field WorkData FRigUnit_FitChainToCurve_WorkData
-FRigUnit_FitChainToCurve = {}
+local FRigUnit_FitChainToCurve = {}
 
 
 
@@ -2544,7 +2544,7 @@ FRigUnit_FitChainToCurve = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugSettings FRigUnit_FitChainToCurve_DebugSettings
 ---@field WorkData FRigUnit_FitChainToCurve_WorkData
-FRigUnit_FitChainToCurveItemArray = {}
+local FRigUnit_FitChainToCurveItemArray = {}
 
 
 
@@ -2564,7 +2564,7 @@ FRigUnit_FitChainToCurveItemArray = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugSettings FRigUnit_FitChainToCurve_DebugSettings
 ---@field WorkData FRigUnit_FitChainToCurve_WorkData
-FRigUnit_FitChainToCurvePerItem = {}
+local FRigUnit_FitChainToCurvePerItem = {}
 
 
 
@@ -2574,14 +2574,14 @@ FRigUnit_FitChainToCurvePerItem = {}
 ---@field CurveColor FLinearColor
 ---@field SegmentsColor FLinearColor
 ---@field WorldOffset FTransform
-FRigUnit_FitChainToCurve_DebugSettings = {}
+local FRigUnit_FitChainToCurve_DebugSettings = {}
 
 
 
 ---@class FRigUnit_FitChainToCurve_Rotation
 ---@field Rotation FQuat
 ---@field Ratio float
-FRigUnit_FitChainToCurve_Rotation = {}
+local FRigUnit_FitChainToCurve_Rotation = {}
 
 
 
@@ -2596,7 +2596,7 @@ FRigUnit_FitChainToCurve_Rotation = {}
 ---@field ItemRotationB TArray<int32>
 ---@field ItemRotationT TArray<float>
 ---@field ItemLocalTransforms TArray<FTransform>
-FRigUnit_FitChainToCurve_WorkData = {}
+local FRigUnit_FitChainToCurve_WorkData = {}
 
 
 
@@ -2606,14 +2606,14 @@ FRigUnit_FitChainToCurve_WorkData = {}
 ---@field Ratio float
 ---@field Continue boolean
 ---@field Completed FControlRigExecuteContext
-FRigUnit_ForLoopCount = {}
+local FRigUnit_ForLoopCount = {}
 
 
 
 ---@class FRigUnit_FramesToSeconds : FRigUnit_AnimBase
 ---@field Frames float
 ---@field Seconds float
-FRigUnit_FramesToSeconds = {}
+local FRigUnit_FramesToSeconds = {}
 
 
 
@@ -2623,7 +2623,7 @@ FRigUnit_FramesToSeconds = {}
 ---@field bInitial boolean
 ---@field CachedChannelKey FRigElementKey
 ---@field CachedChannelHash int32
-FRigUnit_GetAnimationChannelBase = {}
+local FRigUnit_GetAnimationChannelBase = {}
 
 
 
@@ -2632,13 +2632,13 @@ FRigUnit_GetAnimationChannelBase = {}
 ---@field Space EBoneGetterSetterMode
 ---@field Transform FTransform
 ---@field CachedBone FCachedRigElement
-FRigUnit_GetBoneTransform = {}
+local FRigUnit_GetBoneTransform = {}
 
 
 
 ---@class FRigUnit_GetBoolAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value boolean
-FRigUnit_GetBoolAnimationChannel = {}
+local FRigUnit_GetBoolAnimationChannel = {}
 
 
 
@@ -2646,7 +2646,7 @@ FRigUnit_GetBoolAnimationChannel = {}
 ---@field Control FName
 ---@field BoolValue boolean
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlBool = {}
+local FRigUnit_GetControlBool = {}
 
 
 
@@ -2654,7 +2654,7 @@ FRigUnit_GetControlBool = {}
 ---@field Control FName
 ---@field Color FLinearColor
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlColor = {}
+local FRigUnit_GetControlColor = {}
 
 
 
@@ -2662,7 +2662,7 @@ FRigUnit_GetControlColor = {}
 ---@field Control FName
 ---@field Driven TArray<FRigElementKey>
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlDrivenList = {}
+local FRigUnit_GetControlDrivenList = {}
 
 
 
@@ -2672,7 +2672,7 @@ FRigUnit_GetControlDrivenList = {}
 ---@field Minimum float
 ---@field Maximum float
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlFloat = {}
+local FRigUnit_GetControlFloat = {}
 
 
 
@@ -2681,7 +2681,7 @@ FRigUnit_GetControlFloat = {}
 ---@field Space EBoneGetterSetterMode
 ---@field Transform FTransform
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlInitialTransform = {}
+local FRigUnit_GetControlInitialTransform = {}
 
 
 
@@ -2691,7 +2691,7 @@ FRigUnit_GetControlInitialTransform = {}
 ---@field Minimum int32
 ---@field Maximum int32
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlInteger = {}
+local FRigUnit_GetControlInteger = {}
 
 
 
@@ -2702,7 +2702,7 @@ FRigUnit_GetControlInteger = {}
 ---@field Minimum FRotator
 ---@field Maximum FRotator
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlRotator = {}
+local FRigUnit_GetControlRotator = {}
 
 
 
@@ -2713,7 +2713,7 @@ FRigUnit_GetControlRotator = {}
 ---@field Minimum FTransform
 ---@field Maximum FTransform
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlTransform = {}
+local FRigUnit_GetControlTransform = {}
 
 
 
@@ -2724,7 +2724,7 @@ FRigUnit_GetControlTransform = {}
 ---@field Minimum FVector
 ---@field Maximum FVector
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlVector = {}
+local FRigUnit_GetControlVector = {}
 
 
 
@@ -2734,7 +2734,7 @@ FRigUnit_GetControlVector = {}
 ---@field Minimum FVector2D
 ---@field Maximum FVector2D
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlVector2D = {}
+local FRigUnit_GetControlVector2D = {}
 
 
 
@@ -2742,7 +2742,7 @@ FRigUnit_GetControlVector2D = {}
 ---@field Item FRigElementKey
 ---@field bVisible boolean
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetControlVisibility = {}
+local FRigUnit_GetControlVisibility = {}
 
 
 
@@ -2751,19 +2751,19 @@ FRigUnit_GetControlVisibility = {}
 ---@field Valid boolean
 ---@field Value float
 ---@field CachedCurveIndex FCachedRigElement
-FRigUnit_GetCurveValue = {}
+local FRigUnit_GetCurveValue = {}
 
 
 
 ---@class FRigUnit_GetDeltaTime : FRigUnit_AnimBase
 ---@field Result float
-FRigUnit_GetDeltaTime = {}
+local FRigUnit_GetDeltaTime = {}
 
 
 
 ---@class FRigUnit_GetFloatAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value float
-FRigUnit_GetFloatAnimationChannel = {}
+local FRigUnit_GetFloatAnimationChannel = {}
 
 
 
@@ -2772,13 +2772,13 @@ FRigUnit_GetFloatAnimationChannel = {}
 ---@field Space EBoneGetterSetterMode
 ---@field Transform FTransform
 ---@field CachedBone FCachedRigElement
-FRigUnit_GetInitialBoneTransform = {}
+local FRigUnit_GetInitialBoneTransform = {}
 
 
 
 ---@class FRigUnit_GetIntAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value int32
-FRigUnit_GetIntAnimationChannel = {}
+local FRigUnit_GetIntAnimationChannel = {}
 
 
 
@@ -2789,7 +2789,7 @@ FRigUnit_GetIntAnimationChannel = {}
 ---@field BaseTransform FTransform
 ---@field BaseJoint FName
 ---@field Output FTransform
-FRigUnit_GetJointTransform = {}
+local FRigUnit_GetJointTransform = {}
 
 
 
@@ -2797,7 +2797,7 @@ FRigUnit_GetJointTransform = {}
 ---@field Item FRigElementKey
 ---@field Tags TArray<FName>
 ---@field CachedIndex FCachedRigElement
-FRigUnit_GetMetadataTags = {}
+local FRigUnit_GetMetadataTags = {}
 
 
 
@@ -2807,12 +2807,12 @@ FRigUnit_GetMetadataTags = {}
 ---@field Transform FTransform
 ---@field CachedBone FCachedRigElement
 ---@field CachedSpace FCachedRigElement
-FRigUnit_GetRelativeBoneTransform = {}
+local FRigUnit_GetRelativeBoneTransform = {}
 
 
 
 ---@class FRigUnit_GetRelativeTransform : FRigUnit_BinaryTransformOp
-FRigUnit_GetRelativeTransform = {}
+local FRigUnit_GetRelativeTransform = {}
 
 
 ---@class FRigUnit_GetRelativeTransformForItem : FRigUnit
@@ -2823,13 +2823,13 @@ FRigUnit_GetRelativeTransform = {}
 ---@field RelativeTransform FTransform
 ---@field CachedChild FCachedRigElement
 ---@field CachedParent FCachedRigElement
-FRigUnit_GetRelativeTransformForItem = {}
+local FRigUnit_GetRelativeTransformForItem = {}
 
 
 
 ---@class FRigUnit_GetRotatorAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value FRotator
-FRigUnit_GetRotatorAnimationChannel = {}
+local FRigUnit_GetRotatorAnimationChannel = {}
 
 
 
@@ -2837,7 +2837,7 @@ FRigUnit_GetRotatorAnimationChannel = {}
 ---@field Control FName
 ---@field Transform FTransform
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_GetShapeTransform = {}
+local FRigUnit_GetShapeTransform = {}
 
 
 
@@ -2846,7 +2846,7 @@ FRigUnit_GetShapeTransform = {}
 ---@field SpaceType EBoneGetterSetterMode
 ---@field Transform FTransform
 ---@field CachedSpaceIndex FCachedRigElement
-FRigUnit_GetSpaceTransform = {}
+local FRigUnit_GetSpaceTransform = {}
 
 
 
@@ -2856,13 +2856,13 @@ FRigUnit_GetSpaceTransform = {}
 ---@field bInitial boolean
 ---@field Transform FTransform
 ---@field CachedIndex FCachedRigElement
-FRigUnit_GetTransform = {}
+local FRigUnit_GetTransform = {}
 
 
 
 ---@class FRigUnit_GetTransformAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value FTransform
-FRigUnit_GetTransformAnimationChannel = {}
+local FRigUnit_GetTransformAnimationChannel = {}
 
 
 
@@ -2872,7 +2872,7 @@ FRigUnit_GetTransformAnimationChannel = {}
 ---@field bInitial boolean
 ---@field Transforms TArray<FTransform>
 ---@field CachedIndex TArray<FCachedRigElement>
-FRigUnit_GetTransformArray = {}
+local FRigUnit_GetTransformArray = {}
 
 
 
@@ -2882,19 +2882,19 @@ FRigUnit_GetTransformArray = {}
 ---@field bInitial boolean
 ---@field Transforms TArray<FTransform>
 ---@field CachedIndex TArray<FCachedRigElement>
-FRigUnit_GetTransformItemArray = {}
+local FRigUnit_GetTransformItemArray = {}
 
 
 
 ---@class FRigUnit_GetVector2DAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value FVector2D
-FRigUnit_GetVector2DAnimationChannel = {}
+local FRigUnit_GetVector2DAnimationChannel = {}
 
 
 
 ---@class FRigUnit_GetVectorAnimationChannel : FRigUnit_GetAnimationChannelBase
 ---@field Value FVector
-FRigUnit_GetVectorAnimationChannel = {}
+local FRigUnit_GetVectorAnimationChannel = {}
 
 
 
@@ -2907,14 +2907,14 @@ FRigUnit_GetVectorAnimationChannel = {}
 ---@field Minutes float
 ---@field Seconds float
 ---@field OverallSeconds float
-FRigUnit_GetWorldTime = {}
+local FRigUnit_GetWorldTime = {}
 
 
 
 ---@class FRigUnit_Harmonics_TargetItem
 ---@field Item FRigElementKey
 ---@field Ratio float
-FRigUnit_Harmonics_TargetItem = {}
+local FRigUnit_Harmonics_TargetItem = {}
 
 
 
@@ -2924,7 +2924,7 @@ FRigUnit_Harmonics_TargetItem = {}
 ---@field Type ERigMetadataType
 ---@field Found boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_HasMetadata = {}
+local FRigUnit_HasMetadata = {}
 
 
 
@@ -2933,7 +2933,7 @@ FRigUnit_HasMetadata = {}
 ---@field Tag FName
 ---@field Found boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_HasMetadataTag = {}
+local FRigUnit_HasMetadataTag = {}
 
 
 
@@ -2942,7 +2942,7 @@ FRigUnit_HasMetadataTag = {}
 ---@field Tags TArray<FName>
 ---@field Found boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_HasMetadataTagArray = {}
+local FRigUnit_HasMetadataTagArray = {}
 
 
 
@@ -2950,7 +2950,7 @@ FRigUnit_HasMetadataTagArray = {}
 ---@field InitialValue boolean
 ---@field MinimumValue boolean
 ---@field MaximumValue boolean
-FRigUnit_HierarchyAddAnimationChannelBool = {}
+local FRigUnit_HierarchyAddAnimationChannelBool = {}
 
 
 
@@ -2958,7 +2958,7 @@ FRigUnit_HierarchyAddAnimationChannelBool = {}
 ---@field InitialValue float
 ---@field MinimumValue float
 ---@field MaximumValue float
-FRigUnit_HierarchyAddAnimationChannelFloat = {}
+local FRigUnit_HierarchyAddAnimationChannelFloat = {}
 
 
 
@@ -2966,7 +2966,7 @@ FRigUnit_HierarchyAddAnimationChannelFloat = {}
 ---@field InitialValue int32
 ---@field MinimumValue int32
 ---@field MaximumValue int32
-FRigUnit_HierarchyAddAnimationChannelInteger = {}
+local FRigUnit_HierarchyAddAnimationChannelInteger = {}
 
 
 
@@ -2974,7 +2974,7 @@ FRigUnit_HierarchyAddAnimationChannelInteger = {}
 ---@field InitialValue FRotator
 ---@field MinimumValue FRotator
 ---@field MaximumValue FRotator
-FRigUnit_HierarchyAddAnimationChannelRotator = {}
+local FRigUnit_HierarchyAddAnimationChannelRotator = {}
 
 
 
@@ -2982,7 +2982,7 @@ FRigUnit_HierarchyAddAnimationChannelRotator = {}
 ---@field InitialValue FVector
 ---@field MinimumValue FVector
 ---@field MaximumValue FVector
-FRigUnit_HierarchyAddAnimationChannelVector = {}
+local FRigUnit_HierarchyAddAnimationChannelVector = {}
 
 
 
@@ -2990,14 +2990,14 @@ FRigUnit_HierarchyAddAnimationChannelVector = {}
 ---@field InitialValue FVector2D
 ---@field MinimumValue FVector2D
 ---@field MaximumValue FVector2D
-FRigUnit_HierarchyAddAnimationChannelVector2D = {}
+local FRigUnit_HierarchyAddAnimationChannelVector2D = {}
 
 
 
 ---@class FRigUnit_HierarchyAddBone : FRigUnit_HierarchyAddElement
 ---@field Transform FTransform
 ---@field Space EBoneGetterSetterMode
-FRigUnit_HierarchyAddBone = {}
+local FRigUnit_HierarchyAddBone = {}
 
 
 
@@ -3005,7 +3005,7 @@ FRigUnit_HierarchyAddBone = {}
 ---@field OffsetTransform FTransform
 ---@field InitialValue float
 ---@field Settings FRigUnit_HierarchyAddControlFloat_Settings
-FRigUnit_HierarchyAddControlFloat = {}
+local FRigUnit_HierarchyAddControlFloat = {}
 
 
 
@@ -3014,7 +3014,7 @@ FRigUnit_HierarchyAddControlFloat = {}
 ---@field MinValue float
 ---@field MaxValue float
 ---@field bDrawLimits boolean
-FRigUnit_HierarchyAddControlFloat_LimitSettings = {}
+local FRigUnit_HierarchyAddControlFloat_LimitSettings = {}
 
 
 
@@ -3023,7 +3023,7 @@ FRigUnit_HierarchyAddControlFloat_LimitSettings = {}
 ---@field Limits FRigUnit_HierarchyAddControlFloat_LimitSettings
 ---@field Shape FRigUnit_HierarchyAddControl_ShapeSettings
 ---@field Proxy FRigUnit_HierarchyAddControl_ProxySettings
-FRigUnit_HierarchyAddControlFloat_Settings = {}
+local FRigUnit_HierarchyAddControlFloat_Settings = {}
 
 
 
@@ -3031,7 +3031,7 @@ FRigUnit_HierarchyAddControlFloat_Settings = {}
 ---@field OffsetTransform FTransform
 ---@field InitialValue int32
 ---@field Settings FRigUnit_HierarchyAddControlInteger_Settings
-FRigUnit_HierarchyAddControlInteger = {}
+local FRigUnit_HierarchyAddControlInteger = {}
 
 
 
@@ -3040,7 +3040,7 @@ FRigUnit_HierarchyAddControlInteger = {}
 ---@field MinValue int32
 ---@field MaxValue int32
 ---@field bDrawLimits boolean
-FRigUnit_HierarchyAddControlInteger_LimitSettings = {}
+local FRigUnit_HierarchyAddControlInteger_LimitSettings = {}
 
 
 
@@ -3049,7 +3049,7 @@ FRigUnit_HierarchyAddControlInteger_LimitSettings = {}
 ---@field Limits FRigUnit_HierarchyAddControlInteger_LimitSettings
 ---@field Shape FRigUnit_HierarchyAddControl_ShapeSettings
 ---@field Proxy FRigUnit_HierarchyAddControl_ProxySettings
-FRigUnit_HierarchyAddControlInteger_Settings = {}
+local FRigUnit_HierarchyAddControlInteger_Settings = {}
 
 
 
@@ -3057,7 +3057,7 @@ FRigUnit_HierarchyAddControlInteger_Settings = {}
 ---@field OffsetTransform FTransform
 ---@field InitialValue FRotator
 ---@field Settings FRigUnit_HierarchyAddControlRotator_Settings
-FRigUnit_HierarchyAddControlRotator = {}
+local FRigUnit_HierarchyAddControlRotator = {}
 
 
 
@@ -3068,7 +3068,7 @@ FRigUnit_HierarchyAddControlRotator = {}
 ---@field MinValue FRotator
 ---@field MaxValue FRotator
 ---@field bDrawLimits boolean
-FRigUnit_HierarchyAddControlRotator_LimitSettings = {}
+local FRigUnit_HierarchyAddControlRotator_LimitSettings = {}
 
 
 
@@ -3076,7 +3076,7 @@ FRigUnit_HierarchyAddControlRotator_LimitSettings = {}
 ---@field Limits FRigUnit_HierarchyAddControlRotator_LimitSettings
 ---@field Shape FRigUnit_HierarchyAddControl_ShapeSettings
 ---@field Proxy FRigUnit_HierarchyAddControl_ProxySettings
-FRigUnit_HierarchyAddControlRotator_Settings = {}
+local FRigUnit_HierarchyAddControlRotator_Settings = {}
 
 
 
@@ -3084,14 +3084,14 @@ FRigUnit_HierarchyAddControlRotator_Settings = {}
 ---@field OffsetTransform FTransform
 ---@field InitialValue FTransform
 ---@field Settings FRigUnit_HierarchyAddControlTransform_Settings
-FRigUnit_HierarchyAddControlTransform = {}
+local FRigUnit_HierarchyAddControlTransform = {}
 
 
 
 ---@class FRigUnit_HierarchyAddControlTransform_Settings : FRigUnit_HierarchyAddControl_Settings
 ---@field Shape FRigUnit_HierarchyAddControl_ShapeSettings
 ---@field Proxy FRigUnit_HierarchyAddControl_ProxySettings
-FRigUnit_HierarchyAddControlTransform_Settings = {}
+local FRigUnit_HierarchyAddControlTransform_Settings = {}
 
 
 
@@ -3099,7 +3099,7 @@ FRigUnit_HierarchyAddControlTransform_Settings = {}
 ---@field OffsetTransform FTransform
 ---@field InitialValue FVector
 ---@field Settings FRigUnit_HierarchyAddControlVector_Settings
-FRigUnit_HierarchyAddControlVector = {}
+local FRigUnit_HierarchyAddControlVector = {}
 
 
 
@@ -3107,7 +3107,7 @@ FRigUnit_HierarchyAddControlVector = {}
 ---@field OffsetTransform FTransform
 ---@field InitialValue FVector2D
 ---@field Settings FRigUnit_HierarchyAddControlVector2D_Settings
-FRigUnit_HierarchyAddControlVector2D = {}
+local FRigUnit_HierarchyAddControlVector2D = {}
 
 
 
@@ -3117,7 +3117,7 @@ FRigUnit_HierarchyAddControlVector2D = {}
 ---@field MinValue FVector2D
 ---@field MaxValue FVector2D
 ---@field bDrawLimits boolean
-FRigUnit_HierarchyAddControlVector2D_LimitSettings = {}
+local FRigUnit_HierarchyAddControlVector2D_LimitSettings = {}
 
 
 
@@ -3126,7 +3126,7 @@ FRigUnit_HierarchyAddControlVector2D_LimitSettings = {}
 ---@field Limits FRigUnit_HierarchyAddControlVector2D_LimitSettings
 ---@field Shape FRigUnit_HierarchyAddControl_ShapeSettings
 ---@field Proxy FRigUnit_HierarchyAddControl_ProxySettings
-FRigUnit_HierarchyAddControlVector2D_Settings = {}
+local FRigUnit_HierarchyAddControlVector2D_Settings = {}
 
 
 
@@ -3137,7 +3137,7 @@ FRigUnit_HierarchyAddControlVector2D_Settings = {}
 ---@field MinValue FVector
 ---@field MaxValue FVector
 ---@field bDrawLimits boolean
-FRigUnit_HierarchyAddControlVector_LimitSettings = {}
+local FRigUnit_HierarchyAddControlVector_LimitSettings = {}
 
 
 
@@ -3146,7 +3146,7 @@ FRigUnit_HierarchyAddControlVector_LimitSettings = {}
 ---@field Limits FRigUnit_HierarchyAddControlVector_LimitSettings
 ---@field Shape FRigUnit_HierarchyAddControl_ShapeSettings
 ---@field Proxy FRigUnit_HierarchyAddControl_ProxySettings
-FRigUnit_HierarchyAddControlVector_Settings = {}
+local FRigUnit_HierarchyAddControlVector_Settings = {}
 
 
 
@@ -3154,13 +3154,13 @@ FRigUnit_HierarchyAddControlVector_Settings = {}
 ---@field bIsProxy boolean
 ---@field DrivenControls TArray<FRigElementKey>
 ---@field ShapeVisibility ERigControlVisibility
-FRigUnit_HierarchyAddControl_ProxySettings = {}
+local FRigUnit_HierarchyAddControl_ProxySettings = {}
 
 
 
 ---@class FRigUnit_HierarchyAddControl_Settings
 ---@field DisplayName FName
-FRigUnit_HierarchyAddControl_Settings = {}
+local FRigUnit_HierarchyAddControl_Settings = {}
 
 
 
@@ -3169,7 +3169,7 @@ FRigUnit_HierarchyAddControl_Settings = {}
 ---@field Name FName
 ---@field Color FLinearColor
 ---@field Transform FTransform
-FRigUnit_HierarchyAddControl_ShapeSettings = {}
+local FRigUnit_HierarchyAddControl_ShapeSettings = {}
 
 
 
@@ -3177,23 +3177,23 @@ FRigUnit_HierarchyAddControl_ShapeSettings = {}
 ---@field Parent FRigElementKey
 ---@field Name FName
 ---@field Item FRigElementKey
-FRigUnit_HierarchyAddElement = {}
+local FRigUnit_HierarchyAddElement = {}
 
 
 
 ---@class FRigUnit_HierarchyAddNull : FRigUnit_HierarchyAddElement
 ---@field Transform FTransform
 ---@field Space EBoneGetterSetterMode
-FRigUnit_HierarchyAddNull = {}
+local FRigUnit_HierarchyAddNull = {}
 
 
 
 ---@class FRigUnit_HierarchyBase : FRigUnit
-FRigUnit_HierarchyBase = {}
+local FRigUnit_HierarchyBase = {}
 
 
 ---@class FRigUnit_HierarchyBaseMutable : FRigUnitMutable
-FRigUnit_HierarchyBaseMutable = {}
+local FRigUnit_HierarchyBaseMutable = {}
 
 
 ---@class FRigUnit_HierarchyGetChildren : FRigUnit_HierarchyBase
@@ -3203,7 +3203,7 @@ FRigUnit_HierarchyBaseMutable = {}
 ---@field Children FRigElementKeyCollection
 ---@field CachedParent FCachedRigElement
 ---@field CachedChildren FRigElementKeyCollection
-FRigUnit_HierarchyGetChildren = {}
+local FRigUnit_HierarchyGetChildren = {}
 
 
 
@@ -3212,7 +3212,7 @@ FRigUnit_HierarchyGetChildren = {}
 ---@field Parent FRigElementKey
 ---@field CachedChild FCachedRigElement
 ---@field CachedParent FCachedRigElement
-FRigUnit_HierarchyGetParent = {}
+local FRigUnit_HierarchyGetParent = {}
 
 
 
@@ -3220,7 +3220,7 @@ FRigUnit_HierarchyGetParent = {}
 ---@field Child FRigElementKey
 ---@field Weights TArray<FRigElementWeight>
 ---@field Parents FRigElementKeyCollection
-FRigUnit_HierarchyGetParentWeights = {}
+local FRigUnit_HierarchyGetParentWeights = {}
 
 
 
@@ -3228,7 +3228,7 @@ FRigUnit_HierarchyGetParentWeights = {}
 ---@field Child FRigElementKey
 ---@field Weights TArray<FRigElementWeight>
 ---@field Parents TArray<FRigElementKey>
-FRigUnit_HierarchyGetParentWeightsArray = {}
+local FRigUnit_HierarchyGetParentWeightsArray = {}
 
 
 
@@ -3239,7 +3239,7 @@ FRigUnit_HierarchyGetParentWeightsArray = {}
 ---@field Parents FRigElementKeyCollection
 ---@field CachedChild FCachedRigElement
 ---@field CachedParents FRigElementKeyCollection
-FRigUnit_HierarchyGetParents = {}
+local FRigUnit_HierarchyGetParents = {}
 
 
 
@@ -3250,7 +3250,7 @@ FRigUnit_HierarchyGetParents = {}
 ---@field Parents TArray<FRigElementKey>
 ---@field CachedChild FCachedRigElement
 ---@field CachedParents FRigElementKeyCollection
-FRigUnit_HierarchyGetParentsItemArray = {}
+local FRigUnit_HierarchyGetParentsItemArray = {}
 
 
 
@@ -3259,7 +3259,7 @@ FRigUnit_HierarchyGetParentsItemArray = {}
 ---@field ElementType ERigElementType
 ---@field ItemsToGet FRigElementKeyCollection
 ---@field Pose FRigPose
-FRigUnit_HierarchyGetPose = {}
+local FRigUnit_HierarchyGetPose = {}
 
 
 
@@ -3268,7 +3268,7 @@ FRigUnit_HierarchyGetPose = {}
 ---@field ElementType ERigElementType
 ---@field ItemsToGet TArray<FRigElementKey>
 ---@field Pose FRigPose
-FRigUnit_HierarchyGetPoseItemArray = {}
+local FRigUnit_HierarchyGetPoseItemArray = {}
 
 
 
@@ -3278,7 +3278,7 @@ FRigUnit_HierarchyGetPoseItemArray = {}
 ---@field Siblings FRigElementKeyCollection
 ---@field CachedItem FCachedRigElement
 ---@field CachedSiblings FRigElementKeyCollection
-FRigUnit_HierarchyGetSiblings = {}
+local FRigUnit_HierarchyGetSiblings = {}
 
 
 
@@ -3288,7 +3288,7 @@ FRigUnit_HierarchyGetSiblings = {}
 ---@field Siblings TArray<FRigElementKey>
 ---@field CachedItem FCachedRigElement
 ---@field CachedSiblings FRigElementKeyCollection
-FRigUnit_HierarchyGetSiblingsItemArray = {}
+local FRigUnit_HierarchyGetSiblingsItemArray = {}
 
 
 
@@ -3296,25 +3296,25 @@ FRigUnit_HierarchyGetSiblingsItemArray = {}
 ---@field Namespace FName
 ---@field bIncludeCurves boolean
 ---@field Items TArray<FRigElementKey>
-FRigUnit_HierarchyImportFromSkeleton = {}
+local FRigUnit_HierarchyImportFromSkeleton = {}
 
 
 
 ---@class FRigUnit_HierarchyRemoveElement : FRigUnit_DynamicHierarchyBaseMutable
 ---@field Item FRigElementKey
 ---@field bSuccess boolean
-FRigUnit_HierarchyRemoveElement = {}
+local FRigUnit_HierarchyRemoveElement = {}
 
 
 
 ---@class FRigUnit_HierarchyReset : FRigUnit_DynamicHierarchyBaseMutable
-FRigUnit_HierarchyReset = {}
+local FRigUnit_HierarchyReset = {}
 
 
 ---@class FRigUnit_HierarchySetParentWeights : FRigUnit_DynamicHierarchyBaseMutable
 ---@field Child FRigElementKey
 ---@field Weights TArray<FRigElementWeight>
-FRigUnit_HierarchySetParentWeights = {}
+local FRigUnit_HierarchySetParentWeights = {}
 
 
 
@@ -3324,7 +3324,7 @@ FRigUnit_HierarchySetParentWeights = {}
 ---@field Space EBoneGetterSetterMode
 ---@field ItemsToSet FRigElementKeyCollection
 ---@field Weight float
-FRigUnit_HierarchySetPose = {}
+local FRigUnit_HierarchySetPose = {}
 
 
 
@@ -3334,32 +3334,32 @@ FRigUnit_HierarchySetPose = {}
 ---@field Space EBoneGetterSetterMode
 ---@field ItemsToSet TArray<FRigElementKey>
 ---@field Weight float
-FRigUnit_HierarchySetPoseItemArray = {}
+local FRigUnit_HierarchySetPoseItemArray = {}
 
 
 
 ---@class FRigUnit_HighlevelBase : FRigUnit
-FRigUnit_HighlevelBase = {}
+local FRigUnit_HighlevelBase = {}
 
 
 ---@class FRigUnit_HighlevelBaseMutable : FRigUnitMutable
-FRigUnit_HighlevelBaseMutable = {}
+local FRigUnit_HighlevelBaseMutable = {}
 
 
 ---@class FRigUnit_InteractionExecution : FRigUnit
 ---@field ExecuteContext FControlRigExecuteContext
-FRigUnit_InteractionExecution = {}
+local FRigUnit_InteractionExecution = {}
 
 
 
 ---@class FRigUnit_InverseExecution : FRigUnit
 ---@field ExecuteContext FControlRigExecuteContext
-FRigUnit_InverseExecution = {}
+local FRigUnit_InverseExecution = {}
 
 
 
 ---@class FRigUnit_InverseQuaterion : FRigUnit_UnaryQuaternionOp
-FRigUnit_InverseQuaterion = {}
+local FRigUnit_InverseQuaterion = {}
 
 
 ---@class FRigUnit_IsInteracting : FRigUnit
@@ -3368,29 +3368,29 @@ FRigUnit_InverseQuaterion = {}
 ---@field bIsRotating boolean
 ---@field bIsScaling boolean
 ---@field Items TArray<FRigElementKey>
-FRigUnit_IsInteracting = {}
+local FRigUnit_IsInteracting = {}
 
 
 
 ---@class FRigUnit_Item : FRigUnit
 ---@field Item FRigElementKey
-FRigUnit_Item = {}
+local FRigUnit_Item = {}
 
 
 
 ---@class FRigUnit_ItemBase : FRigUnit
-FRigUnit_ItemBase = {}
+local FRigUnit_ItemBase = {}
 
 
 ---@class FRigUnit_ItemBaseMutable : FRigUnitMutable
-FRigUnit_ItemBaseMutable = {}
+local FRigUnit_ItemBaseMutable = {}
 
 
 ---@class FRigUnit_ItemEquals : FRigUnit_ItemBase
 ---@field A FRigElementKey
 ---@field B FRigElementKey
 ---@field Result boolean
-FRigUnit_ItemEquals = {}
+local FRigUnit_ItemEquals = {}
 
 
 
@@ -3398,7 +3398,7 @@ FRigUnit_ItemEquals = {}
 ---@field Item FRigElementKey
 ---@field Exists boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_ItemExists = {}
+local FRigUnit_ItemExists = {}
 
 
 
@@ -3414,7 +3414,7 @@ FRigUnit_ItemExists = {}
 ---@field WaveMaximum float
 ---@field RotationOrder EEulerRotationOrder
 ---@field WorkData FRigUnit_BoneHarmonics_WorkData
-FRigUnit_ItemHarmonics = {}
+local FRigUnit_ItemHarmonics = {}
 
 
 
@@ -3422,7 +3422,7 @@ FRigUnit_ItemHarmonics = {}
 ---@field A FRigElementKey
 ---@field B FRigElementKey
 ---@field Result boolean
-FRigUnit_ItemNotEquals = {}
+local FRigUnit_ItemNotEquals = {}
 
 
 
@@ -3431,7 +3431,7 @@ FRigUnit_ItemNotEquals = {}
 ---@field Old FName
 ---@field New FName
 ---@field Result FRigElementKey
-FRigUnit_ItemReplace = {}
+local FRigUnit_ItemReplace = {}
 
 
 
@@ -3439,7 +3439,7 @@ FRigUnit_ItemReplace = {}
 ---@field A FRigElementKey
 ---@field B FRigElementKey
 ---@field Result boolean
-FRigUnit_ItemTypeEquals = {}
+local FRigUnit_ItemTypeEquals = {}
 
 
 
@@ -3447,7 +3447,7 @@ FRigUnit_ItemTypeEquals = {}
 ---@field A FRigElementKey
 ---@field B FRigElementKey
 ---@field Result boolean
-FRigUnit_ItemTypeNotEquals = {}
+local FRigUnit_ItemTypeNotEquals = {}
 
 
 
@@ -3457,7 +3457,7 @@ FRigUnit_ItemTypeNotEquals = {}
 ---@field Result float
 ---@field Buffer TArray<float>
 ---@field LastInsertIndex int32
-FRigUnit_KalmanFloat = {}
+local FRigUnit_KalmanFloat = {}
 
 
 
@@ -3467,7 +3467,7 @@ FRigUnit_KalmanFloat = {}
 ---@field Result FTransform
 ---@field Buffer TArray<FTransform>
 ---@field LastInsertIndex int32
-FRigUnit_KalmanTransform = {}
+local FRigUnit_KalmanTransform = {}
 
 
 
@@ -3477,7 +3477,7 @@ FRigUnit_KalmanTransform = {}
 ---@field Result FVector
 ---@field Buffer TArray<FVector>
 ---@field LastInsertIndex int32
-FRigUnit_KalmanVector = {}
+local FRigUnit_KalmanVector = {}
 
 
 
@@ -3488,27 +3488,27 @@ FRigUnit_KalmanVector = {}
 ---@field MinOut float
 ---@field MaxOut float
 ---@field Result float
-FRigUnit_MapRange_Float = {}
+local FRigUnit_MapRange_Float = {}
 
 
 
 ---@class FRigUnit_MathBase : FRigUnit
-FRigUnit_MathBase = {}
+local FRigUnit_MathBase = {}
 
 
 ---@class FRigUnit_MathBoolAnd : FRigUnit_MathBoolBinaryAggregateOp
-FRigUnit_MathBoolAnd = {}
+local FRigUnit_MathBoolAnd = {}
 
 
 ---@class FRigUnit_MathBoolBase : FRigUnit_MathBase
-FRigUnit_MathBoolBase = {}
+local FRigUnit_MathBoolBase = {}
 
 
 ---@class FRigUnit_MathBoolBinaryAggregateOp : FRigUnit_MathBoolBase
 ---@field A boolean
 ---@field B boolean
 ---@field Result boolean
-FRigUnit_MathBoolBinaryAggregateOp = {}
+local FRigUnit_MathBoolBinaryAggregateOp = {}
 
 
 
@@ -3516,21 +3516,21 @@ FRigUnit_MathBoolBinaryAggregateOp = {}
 ---@field A boolean
 ---@field B boolean
 ---@field Result boolean
-FRigUnit_MathBoolBinaryOp = {}
+local FRigUnit_MathBoolBinaryOp = {}
 
 
 
 ---@class FRigUnit_MathBoolConstFalse : FRigUnit_MathBoolConstant
-FRigUnit_MathBoolConstFalse = {}
+local FRigUnit_MathBoolConstFalse = {}
 
 
 ---@class FRigUnit_MathBoolConstTrue : FRigUnit_MathBoolConstant
-FRigUnit_MathBoolConstTrue = {}
+local FRigUnit_MathBoolConstTrue = {}
 
 
 ---@class FRigUnit_MathBoolConstant : FRigUnit_MathBoolBase
 ---@field Value boolean
-FRigUnit_MathBoolConstant = {}
+local FRigUnit_MathBoolConstant = {}
 
 
 
@@ -3538,7 +3538,7 @@ FRigUnit_MathBoolConstant = {}
 ---@field A boolean
 ---@field B boolean
 ---@field Result boolean
-FRigUnit_MathBoolEquals = {}
+local FRigUnit_MathBoolEquals = {}
 
 
 
@@ -3548,27 +3548,27 @@ FRigUnit_MathBoolEquals = {}
 ---@field Result boolean
 ---@field LastValue boolean
 ---@field TimeLeft float
-FRigUnit_MathBoolFlipFlop = {}
+local FRigUnit_MathBoolFlipFlop = {}
 
 
 
 ---@class FRigUnit_MathBoolNand : FRigUnit_MathBoolBinaryOp
-FRigUnit_MathBoolNand = {}
+local FRigUnit_MathBoolNand = {}
 
 
 ---@class FRigUnit_MathBoolNand2 : FRigUnit_MathBoolBinaryOp
-FRigUnit_MathBoolNand2 = {}
+local FRigUnit_MathBoolNand2 = {}
 
 
 ---@class FRigUnit_MathBoolNot : FRigUnit_MathBoolUnaryOp
-FRigUnit_MathBoolNot = {}
+local FRigUnit_MathBoolNot = {}
 
 
 ---@class FRigUnit_MathBoolNotEquals : FRigUnit_MathBoolBase
 ---@field A boolean
 ---@field B boolean
 ---@field Result boolean
-FRigUnit_MathBoolNotEquals = {}
+local FRigUnit_MathBoolNotEquals = {}
 
 
 
@@ -3577,25 +3577,25 @@ FRigUnit_MathBoolNotEquals = {}
 ---@field Result boolean
 ---@field LastValue boolean
 ---@field TimeLeft float
-FRigUnit_MathBoolOnce = {}
+local FRigUnit_MathBoolOnce = {}
 
 
 
 ---@class FRigUnit_MathBoolOr : FRigUnit_MathBoolBinaryAggregateOp
-FRigUnit_MathBoolOr = {}
+local FRigUnit_MathBoolOr = {}
 
 
 ---@class FRigUnit_MathBoolToFloat : FRigUnit_MathBoolBase
 ---@field Value boolean
 ---@field Result float
-FRigUnit_MathBoolToFloat = {}
+local FRigUnit_MathBoolToFloat = {}
 
 
 
 ---@class FRigUnit_MathBoolToInteger : FRigUnit_MathBoolBase
 ---@field Value boolean
 ---@field Result int32
-FRigUnit_MathBoolToInteger = {}
+local FRigUnit_MathBoolToInteger = {}
 
 
 
@@ -3604,30 +3604,30 @@ FRigUnit_MathBoolToInteger = {}
 ---@field Toggled boolean
 ---@field Initialized boolean
 ---@field LastValue boolean
-FRigUnit_MathBoolToggled = {}
+local FRigUnit_MathBoolToggled = {}
 
 
 
 ---@class FRigUnit_MathBoolUnaryOp : FRigUnit_MathBoolBase
 ---@field Value boolean
 ---@field Result boolean
-FRigUnit_MathBoolUnaryOp = {}
+local FRigUnit_MathBoolUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathColorAdd : FRigUnit_MathColorBinaryAggregateOp
-FRigUnit_MathColorAdd = {}
+local FRigUnit_MathColorAdd = {}
 
 
 ---@class FRigUnit_MathColorBase : FRigUnit_MathBase
-FRigUnit_MathColorBase = {}
+local FRigUnit_MathColorBase = {}
 
 
 ---@class FRigUnit_MathColorBinaryAggregateOp : FRigUnit_MathColorBase
 ---@field A FLinearColor
 ---@field B FLinearColor
 ---@field Result FLinearColor
-FRigUnit_MathColorBinaryAggregateOp = {}
+local FRigUnit_MathColorBinaryAggregateOp = {}
 
 
 
@@ -3635,14 +3635,14 @@ FRigUnit_MathColorBinaryAggregateOp = {}
 ---@field A FLinearColor
 ---@field B FLinearColor
 ---@field Result FLinearColor
-FRigUnit_MathColorBinaryOp = {}
+local FRigUnit_MathColorBinaryOp = {}
 
 
 
 ---@class FRigUnit_MathColorFromFloat : FRigUnit_MathColorBase
 ---@field Value float
 ---@field Result FLinearColor
-FRigUnit_MathColorFromFloat = {}
+local FRigUnit_MathColorFromFloat = {}
 
 
 
@@ -3651,16 +3651,16 @@ FRigUnit_MathColorFromFloat = {}
 ---@field B FLinearColor
 ---@field T float
 ---@field Result FLinearColor
-FRigUnit_MathColorLerp = {}
+local FRigUnit_MathColorLerp = {}
 
 
 
 ---@class FRigUnit_MathColorMul : FRigUnit_MathColorBinaryAggregateOp
-FRigUnit_MathColorMul = {}
+local FRigUnit_MathColorMul = {}
 
 
 ---@class FRigUnit_MathColorSub : FRigUnit_MathColorBinaryOp
-FRigUnit_MathColorSub = {}
+local FRigUnit_MathColorSub = {}
 
 
 ---@class FRigUnit_MathDistanceToPlane : FRigUnit_MathVectorBase
@@ -3669,39 +3669,39 @@ FRigUnit_MathColorSub = {}
 ---@field PlaneNormal FVector
 ---@field ClosestPointOnPlane FVector
 ---@field SignedDistance float
-FRigUnit_MathDistanceToPlane = {}
+local FRigUnit_MathDistanceToPlane = {}
 
 
 
 ---@class FRigUnit_MathDoubleAbs : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleAbs = {}
+local FRigUnit_MathDoubleAbs = {}
 
 
 ---@class FRigUnit_MathDoubleAcos : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleAcos = {}
+local FRigUnit_MathDoubleAcos = {}
 
 
 ---@class FRigUnit_MathDoubleAdd : FRigUnit_MathDoubleBinaryAggregateOp
-FRigUnit_MathDoubleAdd = {}
+local FRigUnit_MathDoubleAdd = {}
 
 
 ---@class FRigUnit_MathDoubleAsin : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleAsin = {}
+local FRigUnit_MathDoubleAsin = {}
 
 
 ---@class FRigUnit_MathDoubleAtan : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleAtan = {}
+local FRigUnit_MathDoubleAtan = {}
 
 
 ---@class FRigUnit_MathDoubleBase : FRigUnit_MathBase
-FRigUnit_MathDoubleBase = {}
+local FRigUnit_MathDoubleBase = {}
 
 
 ---@class FRigUnit_MathDoubleBinaryAggregateOp : FRigUnit_MathDoubleBase
 ---@field A double
 ---@field B double
 ---@field Result double
-FRigUnit_MathDoubleBinaryAggregateOp = {}
+local FRigUnit_MathDoubleBinaryAggregateOp = {}
 
 
 
@@ -3709,7 +3709,7 @@ FRigUnit_MathDoubleBinaryAggregateOp = {}
 ---@field A double
 ---@field B double
 ---@field Result double
-FRigUnit_MathDoubleBinaryOp = {}
+local FRigUnit_MathDoubleBinaryOp = {}
 
 
 
@@ -3717,7 +3717,7 @@ FRigUnit_MathDoubleBinaryOp = {}
 ---@field Value double
 ---@field Result double
 ---@field Int int32
-FRigUnit_MathDoubleCeil = {}
+local FRigUnit_MathDoubleCeil = {}
 
 
 
@@ -3726,61 +3726,61 @@ FRigUnit_MathDoubleCeil = {}
 ---@field Minimum double
 ---@field Maximum double
 ---@field Result double
-FRigUnit_MathDoubleClamp = {}
+local FRigUnit_MathDoubleClamp = {}
 
 
 
 ---@class FRigUnit_MathDoubleConstE : FRigUnit_MathDoubleConstant
-FRigUnit_MathDoubleConstE = {}
+local FRigUnit_MathDoubleConstE = {}
 
 
 ---@class FRigUnit_MathDoubleConstHalfPi : FRigUnit_MathDoubleConstant
-FRigUnit_MathDoubleConstHalfPi = {}
+local FRigUnit_MathDoubleConstHalfPi = {}
 
 
 ---@class FRigUnit_MathDoubleConstPi : FRigUnit_MathDoubleConstant
-FRigUnit_MathDoubleConstPi = {}
+local FRigUnit_MathDoubleConstPi = {}
 
 
 ---@class FRigUnit_MathDoubleConstTwoPi : FRigUnit_MathDoubleConstant
-FRigUnit_MathDoubleConstTwoPi = {}
+local FRigUnit_MathDoubleConstTwoPi = {}
 
 
 ---@class FRigUnit_MathDoubleConstant : FRigUnit_MathDoubleBase
 ---@field Value double
-FRigUnit_MathDoubleConstant = {}
+local FRigUnit_MathDoubleConstant = {}
 
 
 
 ---@class FRigUnit_MathDoubleCos : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleCos = {}
+local FRigUnit_MathDoubleCos = {}
 
 
 ---@class FRigUnit_MathDoubleDeg : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleDeg = {}
+local FRigUnit_MathDoubleDeg = {}
 
 
 ---@class FRigUnit_MathDoubleDiv : FRigUnit_MathDoubleBinaryOp
-FRigUnit_MathDoubleDiv = {}
+local FRigUnit_MathDoubleDiv = {}
 
 
 ---@class FRigUnit_MathDoubleEquals : FRigUnit_MathDoubleBase
 ---@field A double
 ---@field B double
 ---@field Result boolean
-FRigUnit_MathDoubleEquals = {}
+local FRigUnit_MathDoubleEquals = {}
 
 
 
 ---@class FRigUnit_MathDoubleExponential : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleExponential = {}
+local FRigUnit_MathDoubleExponential = {}
 
 
 ---@class FRigUnit_MathDoubleFloor : FRigUnit_MathDoubleBase
 ---@field Value double
 ---@field Result double
 ---@field Int int32
-FRigUnit_MathDoubleFloor = {}
+local FRigUnit_MathDoubleFloor = {}
 
 
 
@@ -3788,7 +3788,7 @@ FRigUnit_MathDoubleFloor = {}
 ---@field A double
 ---@field B double
 ---@field Result boolean
-FRigUnit_MathDoubleGreater = {}
+local FRigUnit_MathDoubleGreater = {}
 
 
 
@@ -3796,7 +3796,7 @@ FRigUnit_MathDoubleGreater = {}
 ---@field A double
 ---@field B double
 ---@field Result boolean
-FRigUnit_MathDoubleGreaterEqual = {}
+local FRigUnit_MathDoubleGreaterEqual = {}
 
 
 
@@ -3805,7 +3805,7 @@ FRigUnit_MathDoubleGreaterEqual = {}
 ---@field B double
 ---@field Tolerance double
 ---@field Result boolean
-FRigUnit_MathDoubleIsNearlyEqual = {}
+local FRigUnit_MathDoubleIsNearlyEqual = {}
 
 
 
@@ -3813,7 +3813,7 @@ FRigUnit_MathDoubleIsNearlyEqual = {}
 ---@field Value double
 ---@field Tolerance double
 ---@field Result boolean
-FRigUnit_MathDoubleIsNearlyZero = {}
+local FRigUnit_MathDoubleIsNearlyZero = {}
 
 
 
@@ -3825,7 +3825,7 @@ FRigUnit_MathDoubleIsNearlyZero = {}
 ---@field BetaAngle double
 ---@field GammaAngle double
 ---@field bValid boolean
-FRigUnit_MathDoubleLawOfCosine = {}
+local FRigUnit_MathDoubleLawOfCosine = {}
 
 
 
@@ -3834,7 +3834,7 @@ FRigUnit_MathDoubleLawOfCosine = {}
 ---@field B double
 ---@field T double
 ---@field Result double
-FRigUnit_MathDoubleLerp = {}
+local FRigUnit_MathDoubleLerp = {}
 
 
 
@@ -3842,7 +3842,7 @@ FRigUnit_MathDoubleLerp = {}
 ---@field A double
 ---@field B double
 ---@field Result boolean
-FRigUnit_MathDoubleLess = {}
+local FRigUnit_MathDoubleLess = {}
 
 
 
@@ -3850,44 +3850,44 @@ FRigUnit_MathDoubleLess = {}
 ---@field A double
 ---@field B double
 ---@field Result boolean
-FRigUnit_MathDoubleLessEqual = {}
+local FRigUnit_MathDoubleLessEqual = {}
 
 
 
 ---@class FRigUnit_MathDoubleMax : FRigUnit_MathDoubleBinaryAggregateOp
-FRigUnit_MathDoubleMax = {}
+local FRigUnit_MathDoubleMax = {}
 
 
 ---@class FRigUnit_MathDoubleMin : FRigUnit_MathDoubleBinaryAggregateOp
-FRigUnit_MathDoubleMin = {}
+local FRigUnit_MathDoubleMin = {}
 
 
 ---@class FRigUnit_MathDoubleMod : FRigUnit_MathDoubleBinaryOp
-FRigUnit_MathDoubleMod = {}
+local FRigUnit_MathDoubleMod = {}
 
 
 ---@class FRigUnit_MathDoubleMul : FRigUnit_MathDoubleBinaryAggregateOp
-FRigUnit_MathDoubleMul = {}
+local FRigUnit_MathDoubleMul = {}
 
 
 ---@class FRigUnit_MathDoubleNegate : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleNegate = {}
+local FRigUnit_MathDoubleNegate = {}
 
 
 ---@class FRigUnit_MathDoubleNotEquals : FRigUnit_MathDoubleBase
 ---@field A double
 ---@field B double
 ---@field Result boolean
-FRigUnit_MathDoubleNotEquals = {}
+local FRigUnit_MathDoubleNotEquals = {}
 
 
 
 ---@class FRigUnit_MathDoublePow : FRigUnit_MathDoubleBinaryOp
-FRigUnit_MathDoublePow = {}
+local FRigUnit_MathDoublePow = {}
 
 
 ---@class FRigUnit_MathDoubleRad : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleRad = {}
+local FRigUnit_MathDoubleRad = {}
 
 
 ---@class FRigUnit_MathDoubleRemap : FRigUnit_MathDoubleBase
@@ -3898,7 +3898,7 @@ FRigUnit_MathDoubleRad = {}
 ---@field TargetMaximum double
 ---@field bClamp boolean
 ---@field Result double
-FRigUnit_MathDoubleRemap = {}
+local FRigUnit_MathDoubleRemap = {}
 
 
 
@@ -3906,73 +3906,73 @@ FRigUnit_MathDoubleRemap = {}
 ---@field Value double
 ---@field Result double
 ---@field Int int32
-FRigUnit_MathDoubleRound = {}
+local FRigUnit_MathDoubleRound = {}
 
 
 
 ---@class FRigUnit_MathDoubleSign : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleSign = {}
+local FRigUnit_MathDoubleSign = {}
 
 
 ---@class FRigUnit_MathDoubleSin : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleSin = {}
+local FRigUnit_MathDoubleSin = {}
 
 
 ---@class FRigUnit_MathDoubleSqrt : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleSqrt = {}
+local FRigUnit_MathDoubleSqrt = {}
 
 
 ---@class FRigUnit_MathDoubleSub : FRigUnit_MathDoubleBinaryOp
-FRigUnit_MathDoubleSub = {}
+local FRigUnit_MathDoubleSub = {}
 
 
 ---@class FRigUnit_MathDoubleTan : FRigUnit_MathDoubleUnaryOp
-FRigUnit_MathDoubleTan = {}
+local FRigUnit_MathDoubleTan = {}
 
 
 ---@class FRigUnit_MathDoubleToInt : FRigUnit_MathDoubleBase
 ---@field Value double
 ---@field Result int32
-FRigUnit_MathDoubleToInt = {}
+local FRigUnit_MathDoubleToInt = {}
 
 
 
 ---@class FRigUnit_MathDoubleUnaryOp : FRigUnit_MathDoubleBase
 ---@field Value double
 ---@field Result double
-FRigUnit_MathDoubleUnaryOp = {}
+local FRigUnit_MathDoubleUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathFloatAbs : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatAbs = {}
+local FRigUnit_MathFloatAbs = {}
 
 
 ---@class FRigUnit_MathFloatAcos : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatAcos = {}
+local FRigUnit_MathFloatAcos = {}
 
 
 ---@class FRigUnit_MathFloatAdd : FRigUnit_MathFloatBinaryAggregateOp
-FRigUnit_MathFloatAdd = {}
+local FRigUnit_MathFloatAdd = {}
 
 
 ---@class FRigUnit_MathFloatAsin : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatAsin = {}
+local FRigUnit_MathFloatAsin = {}
 
 
 ---@class FRigUnit_MathFloatAtan : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatAtan = {}
+local FRigUnit_MathFloatAtan = {}
 
 
 ---@class FRigUnit_MathFloatBase : FRigUnit_MathBase
-FRigUnit_MathFloatBase = {}
+local FRigUnit_MathFloatBase = {}
 
 
 ---@class FRigUnit_MathFloatBinaryAggregateOp : FRigUnit_MathFloatBase
 ---@field A float
 ---@field B float
 ---@field Result float
-FRigUnit_MathFloatBinaryAggregateOp = {}
+local FRigUnit_MathFloatBinaryAggregateOp = {}
 
 
 
@@ -3980,7 +3980,7 @@ FRigUnit_MathFloatBinaryAggregateOp = {}
 ---@field A float
 ---@field B float
 ---@field Result float
-FRigUnit_MathFloatBinaryOp = {}
+local FRigUnit_MathFloatBinaryOp = {}
 
 
 
@@ -3988,7 +3988,7 @@ FRigUnit_MathFloatBinaryOp = {}
 ---@field Value float
 ---@field Result float
 ---@field Int int32
-FRigUnit_MathFloatCeil = {}
+local FRigUnit_MathFloatCeil = {}
 
 
 
@@ -3997,61 +3997,61 @@ FRigUnit_MathFloatCeil = {}
 ---@field Minimum float
 ---@field Maximum float
 ---@field Result float
-FRigUnit_MathFloatClamp = {}
+local FRigUnit_MathFloatClamp = {}
 
 
 
 ---@class FRigUnit_MathFloatConstE : FRigUnit_MathFloatConstant
-FRigUnit_MathFloatConstE = {}
+local FRigUnit_MathFloatConstE = {}
 
 
 ---@class FRigUnit_MathFloatConstHalfPi : FRigUnit_MathFloatConstant
-FRigUnit_MathFloatConstHalfPi = {}
+local FRigUnit_MathFloatConstHalfPi = {}
 
 
 ---@class FRigUnit_MathFloatConstPi : FRigUnit_MathFloatConstant
-FRigUnit_MathFloatConstPi = {}
+local FRigUnit_MathFloatConstPi = {}
 
 
 ---@class FRigUnit_MathFloatConstTwoPi : FRigUnit_MathFloatConstant
-FRigUnit_MathFloatConstTwoPi = {}
+local FRigUnit_MathFloatConstTwoPi = {}
 
 
 ---@class FRigUnit_MathFloatConstant : FRigUnit_MathFloatBase
 ---@field Value float
-FRigUnit_MathFloatConstant = {}
+local FRigUnit_MathFloatConstant = {}
 
 
 
 ---@class FRigUnit_MathFloatCos : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatCos = {}
+local FRigUnit_MathFloatCos = {}
 
 
 ---@class FRigUnit_MathFloatDeg : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatDeg = {}
+local FRigUnit_MathFloatDeg = {}
 
 
 ---@class FRigUnit_MathFloatDiv : FRigUnit_MathFloatBinaryOp
-FRigUnit_MathFloatDiv = {}
+local FRigUnit_MathFloatDiv = {}
 
 
 ---@class FRigUnit_MathFloatEquals : FRigUnit_MathFloatBase
 ---@field A float
 ---@field B float
 ---@field Result boolean
-FRigUnit_MathFloatEquals = {}
+local FRigUnit_MathFloatEquals = {}
 
 
 
 ---@class FRigUnit_MathFloatExponential : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatExponential = {}
+local FRigUnit_MathFloatExponential = {}
 
 
 ---@class FRigUnit_MathFloatFloor : FRigUnit_MathFloatBase
 ---@field Value float
 ---@field Result float
 ---@field Int int32
-FRigUnit_MathFloatFloor = {}
+local FRigUnit_MathFloatFloor = {}
 
 
 
@@ -4059,7 +4059,7 @@ FRigUnit_MathFloatFloor = {}
 ---@field A float
 ---@field B float
 ---@field Result boolean
-FRigUnit_MathFloatGreater = {}
+local FRigUnit_MathFloatGreater = {}
 
 
 
@@ -4067,7 +4067,7 @@ FRigUnit_MathFloatGreater = {}
 ---@field A float
 ---@field B float
 ---@field Result boolean
-FRigUnit_MathFloatGreaterEqual = {}
+local FRigUnit_MathFloatGreaterEqual = {}
 
 
 
@@ -4076,7 +4076,7 @@ FRigUnit_MathFloatGreaterEqual = {}
 ---@field B float
 ---@field Tolerance float
 ---@field Result boolean
-FRigUnit_MathFloatIsNearlyEqual = {}
+local FRigUnit_MathFloatIsNearlyEqual = {}
 
 
 
@@ -4084,7 +4084,7 @@ FRigUnit_MathFloatIsNearlyEqual = {}
 ---@field Value float
 ---@field Tolerance float
 ---@field Result boolean
-FRigUnit_MathFloatIsNearlyZero = {}
+local FRigUnit_MathFloatIsNearlyZero = {}
 
 
 
@@ -4096,7 +4096,7 @@ FRigUnit_MathFloatIsNearlyZero = {}
 ---@field BetaAngle float
 ---@field GammaAngle float
 ---@field bValid boolean
-FRigUnit_MathFloatLawOfCosine = {}
+local FRigUnit_MathFloatLawOfCosine = {}
 
 
 
@@ -4105,7 +4105,7 @@ FRigUnit_MathFloatLawOfCosine = {}
 ---@field B float
 ---@field T float
 ---@field Result float
-FRigUnit_MathFloatLerp = {}
+local FRigUnit_MathFloatLerp = {}
 
 
 
@@ -4113,7 +4113,7 @@ FRigUnit_MathFloatLerp = {}
 ---@field A float
 ---@field B float
 ---@field Result boolean
-FRigUnit_MathFloatLess = {}
+local FRigUnit_MathFloatLess = {}
 
 
 
@@ -4121,44 +4121,44 @@ FRigUnit_MathFloatLess = {}
 ---@field A float
 ---@field B float
 ---@field Result boolean
-FRigUnit_MathFloatLessEqual = {}
+local FRigUnit_MathFloatLessEqual = {}
 
 
 
 ---@class FRigUnit_MathFloatMax : FRigUnit_MathFloatBinaryAggregateOp
-FRigUnit_MathFloatMax = {}
+local FRigUnit_MathFloatMax = {}
 
 
 ---@class FRigUnit_MathFloatMin : FRigUnit_MathFloatBinaryAggregateOp
-FRigUnit_MathFloatMin = {}
+local FRigUnit_MathFloatMin = {}
 
 
 ---@class FRigUnit_MathFloatMod : FRigUnit_MathFloatBinaryOp
-FRigUnit_MathFloatMod = {}
+local FRigUnit_MathFloatMod = {}
 
 
 ---@class FRigUnit_MathFloatMul : FRigUnit_MathFloatBinaryAggregateOp
-FRigUnit_MathFloatMul = {}
+local FRigUnit_MathFloatMul = {}
 
 
 ---@class FRigUnit_MathFloatNegate : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatNegate = {}
+local FRigUnit_MathFloatNegate = {}
 
 
 ---@class FRigUnit_MathFloatNotEquals : FRigUnit_MathFloatBase
 ---@field A float
 ---@field B float
 ---@field Result boolean
-FRigUnit_MathFloatNotEquals = {}
+local FRigUnit_MathFloatNotEquals = {}
 
 
 
 ---@class FRigUnit_MathFloatPow : FRigUnit_MathFloatBinaryOp
-FRigUnit_MathFloatPow = {}
+local FRigUnit_MathFloatPow = {}
 
 
 ---@class FRigUnit_MathFloatRad : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatRad = {}
+local FRigUnit_MathFloatRad = {}
 
 
 ---@class FRigUnit_MathFloatRemap : FRigUnit_MathFloatBase
@@ -4169,7 +4169,7 @@ FRigUnit_MathFloatRad = {}
 ---@field TargetMaximum float
 ---@field bClamp boolean
 ---@field Result float
-FRigUnit_MathFloatRemap = {}
+local FRigUnit_MathFloatRemap = {}
 
 
 
@@ -4177,7 +4177,7 @@ FRigUnit_MathFloatRemap = {}
 ---@field Value float
 ---@field Result float
 ---@field Int int32
-FRigUnit_MathFloatRound = {}
+local FRigUnit_MathFloatRound = {}
 
 
 
@@ -4186,61 +4186,61 @@ FRigUnit_MathFloatRound = {}
 ---@field IfTrue float
 ---@field IfFalse float
 ---@field Result float
-FRigUnit_MathFloatSelectBool = {}
+local FRigUnit_MathFloatSelectBool = {}
 
 
 
 ---@class FRigUnit_MathFloatSign : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatSign = {}
+local FRigUnit_MathFloatSign = {}
 
 
 ---@class FRigUnit_MathFloatSin : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatSin = {}
+local FRigUnit_MathFloatSin = {}
 
 
 ---@class FRigUnit_MathFloatSqrt : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatSqrt = {}
+local FRigUnit_MathFloatSqrt = {}
 
 
 ---@class FRigUnit_MathFloatSub : FRigUnit_MathFloatBinaryOp
-FRigUnit_MathFloatSub = {}
+local FRigUnit_MathFloatSub = {}
 
 
 ---@class FRigUnit_MathFloatTan : FRigUnit_MathFloatUnaryOp
-FRigUnit_MathFloatTan = {}
+local FRigUnit_MathFloatTan = {}
 
 
 ---@class FRigUnit_MathFloatToInt : FRigUnit_MathFloatBase
 ---@field Value float
 ---@field Result int32
-FRigUnit_MathFloatToInt = {}
+local FRigUnit_MathFloatToInt = {}
 
 
 
 ---@class FRigUnit_MathFloatUnaryOp : FRigUnit_MathFloatBase
 ---@field Value float
 ---@field Result float
-FRigUnit_MathFloatUnaryOp = {}
+local FRigUnit_MathFloatUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathIntAbs : FRigUnit_MathIntUnaryOp
-FRigUnit_MathIntAbs = {}
+local FRigUnit_MathIntAbs = {}
 
 
 ---@class FRigUnit_MathIntAdd : FRigUnit_MathIntBinaryAggregateOp
-FRigUnit_MathIntAdd = {}
+local FRigUnit_MathIntAdd = {}
 
 
 ---@class FRigUnit_MathIntBase : FRigUnit_MathBase
-FRigUnit_MathIntBase = {}
+local FRigUnit_MathIntBase = {}
 
 
 ---@class FRigUnit_MathIntBinaryAggregateOp : FRigUnit_MathIntBase
 ---@field A int32
 ---@field B int32
 ---@field Result int32
-FRigUnit_MathIntBinaryAggregateOp = {}
+local FRigUnit_MathIntBinaryAggregateOp = {}
 
 
 
@@ -4248,7 +4248,7 @@ FRigUnit_MathIntBinaryAggregateOp = {}
 ---@field A int32
 ---@field B int32
 ---@field Result int32
-FRigUnit_MathIntBinaryOp = {}
+local FRigUnit_MathIntBinaryOp = {}
 
 
 
@@ -4257,19 +4257,19 @@ FRigUnit_MathIntBinaryOp = {}
 ---@field Minimum int32
 ---@field Maximum int32
 ---@field Result int32
-FRigUnit_MathIntClamp = {}
+local FRigUnit_MathIntClamp = {}
 
 
 
 ---@class FRigUnit_MathIntDiv : FRigUnit_MathIntBinaryOp
-FRigUnit_MathIntDiv = {}
+local FRigUnit_MathIntDiv = {}
 
 
 ---@class FRigUnit_MathIntEquals : FRigUnit_MathIntBase
 ---@field A int32
 ---@field B int32
 ---@field Result boolean
-FRigUnit_MathIntEquals = {}
+local FRigUnit_MathIntEquals = {}
 
 
 
@@ -4277,7 +4277,7 @@ FRigUnit_MathIntEquals = {}
 ---@field A int32
 ---@field B int32
 ---@field Result boolean
-FRigUnit_MathIntGreater = {}
+local FRigUnit_MathIntGreater = {}
 
 
 
@@ -4285,7 +4285,7 @@ FRigUnit_MathIntGreater = {}
 ---@field A int32
 ---@field B int32
 ---@field Result boolean
-FRigUnit_MathIntGreaterEqual = {}
+local FRigUnit_MathIntGreaterEqual = {}
 
 
 
@@ -4293,7 +4293,7 @@ FRigUnit_MathIntGreaterEqual = {}
 ---@field A int32
 ---@field B int32
 ---@field Result boolean
-FRigUnit_MathIntLess = {}
+local FRigUnit_MathIntLess = {}
 
 
 
@@ -4301,61 +4301,61 @@ FRigUnit_MathIntLess = {}
 ---@field A int32
 ---@field B int32
 ---@field Result boolean
-FRigUnit_MathIntLessEqual = {}
+local FRigUnit_MathIntLessEqual = {}
 
 
 
 ---@class FRigUnit_MathIntMax : FRigUnit_MathIntBinaryAggregateOp
-FRigUnit_MathIntMax = {}
+local FRigUnit_MathIntMax = {}
 
 
 ---@class FRigUnit_MathIntMin : FRigUnit_MathIntBinaryAggregateOp
-FRigUnit_MathIntMin = {}
+local FRigUnit_MathIntMin = {}
 
 
 ---@class FRigUnit_MathIntMod : FRigUnit_MathIntBinaryOp
-FRigUnit_MathIntMod = {}
+local FRigUnit_MathIntMod = {}
 
 
 ---@class FRigUnit_MathIntMul : FRigUnit_MathIntBinaryAggregateOp
-FRigUnit_MathIntMul = {}
+local FRigUnit_MathIntMul = {}
 
 
 ---@class FRigUnit_MathIntNegate : FRigUnit_MathIntUnaryOp
-FRigUnit_MathIntNegate = {}
+local FRigUnit_MathIntNegate = {}
 
 
 ---@class FRigUnit_MathIntNotEquals : FRigUnit_MathIntBase
 ---@field A int32
 ---@field B int32
 ---@field Result boolean
-FRigUnit_MathIntNotEquals = {}
+local FRigUnit_MathIntNotEquals = {}
 
 
 
 ---@class FRigUnit_MathIntPow : FRigUnit_MathIntBinaryOp
-FRigUnit_MathIntPow = {}
+local FRigUnit_MathIntPow = {}
 
 
 ---@class FRigUnit_MathIntSign : FRigUnit_MathIntUnaryOp
-FRigUnit_MathIntSign = {}
+local FRigUnit_MathIntSign = {}
 
 
 ---@class FRigUnit_MathIntSub : FRigUnit_MathIntBinaryOp
-FRigUnit_MathIntSub = {}
+local FRigUnit_MathIntSub = {}
 
 
 ---@class FRigUnit_MathIntToFloat : FRigUnit_MathIntBase
 ---@field Value int32
 ---@field Result float
-FRigUnit_MathIntToFloat = {}
+local FRigUnit_MathIntToFloat = {}
 
 
 
 ---@class FRigUnit_MathIntUnaryOp : FRigUnit_MathIntBase
 ---@field Value int32
 ---@field Result int32
-FRigUnit_MathIntUnaryOp = {}
+local FRigUnit_MathIntUnaryOp = {}
 
 
 
@@ -4366,19 +4366,19 @@ FRigUnit_MathIntUnaryOp = {}
 ---@field PlaneNormal FVector
 ---@field Result FVector
 ---@field Distance float
-FRigUnit_MathIntersectPlane = {}
+local FRigUnit_MathIntersectPlane = {}
 
 
 
 ---@class FRigUnit_MathMatrixBase : FRigUnit_MathBase
-FRigUnit_MathMatrixBase = {}
+local FRigUnit_MathMatrixBase = {}
 
 
 ---@class FRigUnit_MathMatrixBinaryAggregateOp : FRigUnit_MathMatrixBase
 ---@field A FMatrix
 ---@field B FMatrix
 ---@field Result FMatrix
-FRigUnit_MathMatrixBinaryAggregateOp = {}
+local FRigUnit_MathMatrixBinaryAggregateOp = {}
 
 
 
@@ -4386,21 +4386,21 @@ FRigUnit_MathMatrixBinaryAggregateOp = {}
 ---@field A FMatrix
 ---@field B FMatrix
 ---@field Result FMatrix
-FRigUnit_MathMatrixBinaryOp = {}
+local FRigUnit_MathMatrixBinaryOp = {}
 
 
 
 ---@class FRigUnit_MathMatrixFromTransform : FRigUnit_MathMatrixBase
 ---@field Transform FTransform
 ---@field Result FMatrix
-FRigUnit_MathMatrixFromTransform = {}
+local FRigUnit_MathMatrixFromTransform = {}
 
 
 
 ---@class FRigUnit_MathMatrixFromTransformV2 : FRigUnit_MathMatrixBase
 ---@field Value FTransform
 ---@field Result FMatrix
-FRigUnit_MathMatrixFromTransformV2 = {}
+local FRigUnit_MathMatrixFromTransformV2 = {}
 
 
 
@@ -4410,22 +4410,22 @@ FRigUnit_MathMatrixFromTransformV2 = {}
 ---@field Y FVector
 ---@field Z FVector
 ---@field Result FMatrix
-FRigUnit_MathMatrixFromVectors = {}
+local FRigUnit_MathMatrixFromVectors = {}
 
 
 
 ---@class FRigUnit_MathMatrixInverse : FRigUnit_MathMatrixUnaryOp
-FRigUnit_MathMatrixInverse = {}
+local FRigUnit_MathMatrixInverse = {}
 
 
 ---@class FRigUnit_MathMatrixMul : FRigUnit_MathMatrixBinaryAggregateOp
-FRigUnit_MathMatrixMul = {}
+local FRigUnit_MathMatrixMul = {}
 
 
 ---@class FRigUnit_MathMatrixToTransform : FRigUnit_MathMatrixBase
 ---@field Value FMatrix
 ---@field Result FTransform
-FRigUnit_MathMatrixToTransform = {}
+local FRigUnit_MathMatrixToTransform = {}
 
 
 
@@ -4435,30 +4435,30 @@ FRigUnit_MathMatrixToTransform = {}
 ---@field X FVector
 ---@field Y FVector
 ---@field Z FVector
-FRigUnit_MathMatrixToVectors = {}
+local FRigUnit_MathMatrixToVectors = {}
 
 
 
 ---@class FRigUnit_MathMatrixUnaryOp : FRigUnit_MathMatrixBase
 ---@field Value FMatrix
 ---@field Result FMatrix
-FRigUnit_MathMatrixUnaryOp = {}
+local FRigUnit_MathMatrixUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathMutableBase : FRigUnitMutable
-FRigUnit_MathMutableBase = {}
+local FRigUnit_MathMutableBase = {}
 
 
 ---@class FRigUnit_MathQuaternionBase : FRigUnit_MathBase
-FRigUnit_MathQuaternionBase = {}
+local FRigUnit_MathQuaternionBase = {}
 
 
 ---@class FRigUnit_MathQuaternionBinaryAggregateOp : FRigUnit_MathQuaternionBase
 ---@field A FQuat
 ---@field B FQuat
 ---@field Result FQuat
-FRigUnit_MathQuaternionBinaryAggregateOp = {}
+local FRigUnit_MathQuaternionBinaryAggregateOp = {}
 
 
 
@@ -4466,7 +4466,7 @@ FRigUnit_MathQuaternionBinaryAggregateOp = {}
 ---@field A FQuat
 ---@field B FQuat
 ---@field Result FQuat
-FRigUnit_MathQuaternionBinaryOp = {}
+local FRigUnit_MathQuaternionBinaryOp = {}
 
 
 
@@ -4474,7 +4474,7 @@ FRigUnit_MathQuaternionBinaryOp = {}
 ---@field A FQuat
 ---@field B FQuat
 ---@field Result float
-FRigUnit_MathQuaternionDot = {}
+local FRigUnit_MathQuaternionDot = {}
 
 
 
@@ -4482,7 +4482,7 @@ FRigUnit_MathQuaternionDot = {}
 ---@field A FQuat
 ---@field B FQuat
 ---@field Result boolean
-FRigUnit_MathQuaternionEquals = {}
+local FRigUnit_MathQuaternionEquals = {}
 
 
 
@@ -4490,7 +4490,7 @@ FRigUnit_MathQuaternionEquals = {}
 ---@field Axis FVector
 ---@field Angle float
 ---@field Result FQuat
-FRigUnit_MathQuaternionFromAxisAndAngle = {}
+local FRigUnit_MathQuaternionFromAxisAndAngle = {}
 
 
 
@@ -4498,21 +4498,21 @@ FRigUnit_MathQuaternionFromAxisAndAngle = {}
 ---@field Euler FVector
 ---@field RotationOrder EEulerRotationOrder
 ---@field Result FQuat
-FRigUnit_MathQuaternionFromEuler = {}
+local FRigUnit_MathQuaternionFromEuler = {}
 
 
 
 ---@class FRigUnit_MathQuaternionFromRotator : FRigUnit_MathQuaternionBase
 ---@field Rotator FRotator
 ---@field Result FQuat
-FRigUnit_MathQuaternionFromRotator = {}
+local FRigUnit_MathQuaternionFromRotator = {}
 
 
 
 ---@class FRigUnit_MathQuaternionFromRotatorV2 : FRigUnit_MathQuaternionBase
 ---@field Value FRotator
 ---@field Result FQuat
-FRigUnit_MathQuaternionFromRotatorV2 = {}
+local FRigUnit_MathQuaternionFromRotatorV2 = {}
 
 
 
@@ -4520,7 +4520,7 @@ FRigUnit_MathQuaternionFromRotatorV2 = {}
 ---@field A FVector
 ---@field B FVector
 ---@field Result FQuat
-FRigUnit_MathQuaternionFromTwoVectors = {}
+local FRigUnit_MathQuaternionFromTwoVectors = {}
 
 
 
@@ -4528,19 +4528,19 @@ FRigUnit_MathQuaternionFromTwoVectors = {}
 ---@field Quaternion FQuat
 ---@field Axis EAxis::Type
 ---@field Result FVector
-FRigUnit_MathQuaternionGetAxis = {}
+local FRigUnit_MathQuaternionGetAxis = {}
 
 
 
 ---@class FRigUnit_MathQuaternionInverse : FRigUnit_MathQuaternionUnaryOp
-FRigUnit_MathQuaternionInverse = {}
+local FRigUnit_MathQuaternionInverse = {}
 
 
 ---@class FRigUnit_MathQuaternionMakeAbsolute : FRigUnit_MathQuaternionBase
 ---@field Local FQuat
 ---@field Parent FQuat
 ---@field Global FQuat
-FRigUnit_MathQuaternionMakeAbsolute = {}
+local FRigUnit_MathQuaternionMakeAbsolute = {}
 
 
 
@@ -4548,7 +4548,7 @@ FRigUnit_MathQuaternionMakeAbsolute = {}
 ---@field Global FQuat
 ---@field Parent FQuat
 ---@field Local FQuat
-FRigUnit_MathQuaternionMakeRelative = {}
+local FRigUnit_MathQuaternionMakeRelative = {}
 
 
 
@@ -4558,19 +4558,19 @@ FRigUnit_MathQuaternionMakeRelative = {}
 ---@field AxisToFlip EAxis::Type
 ---@field CentralTransform FTransform
 ---@field Result FQuat
-FRigUnit_MathQuaternionMirrorTransform = {}
+local FRigUnit_MathQuaternionMirrorTransform = {}
 
 
 
 ---@class FRigUnit_MathQuaternionMul : FRigUnit_MathQuaternionBinaryAggregateOp
-FRigUnit_MathQuaternionMul = {}
+local FRigUnit_MathQuaternionMul = {}
 
 
 ---@class FRigUnit_MathQuaternionNotEquals : FRigUnit_MathQuaternionBase
 ---@field A FQuat
 ---@field B FQuat
 ---@field Result boolean
-FRigUnit_MathQuaternionNotEquals = {}
+local FRigUnit_MathQuaternionNotEquals = {}
 
 
 
@@ -4578,20 +4578,20 @@ FRigUnit_MathQuaternionNotEquals = {}
 ---@field Transform FQuat
 ---@field Vector FVector
 ---@field Result FVector
-FRigUnit_MathQuaternionRotateVector = {}
+local FRigUnit_MathQuaternionRotateVector = {}
 
 
 
 ---@class FRigUnit_MathQuaternionRotationOrder : FRigUnit_MathBase
 ---@field RotationOrder EEulerRotationOrder
-FRigUnit_MathQuaternionRotationOrder = {}
+local FRigUnit_MathQuaternionRotationOrder = {}
 
 
 
 ---@class FRigUnit_MathQuaternionScale : FRigUnit_MathQuaternionBase
 ---@field Value FQuat
 ---@field Scale float
-FRigUnit_MathQuaternionScale = {}
+local FRigUnit_MathQuaternionScale = {}
 
 
 
@@ -4599,7 +4599,7 @@ FRigUnit_MathQuaternionScale = {}
 ---@field Value FQuat
 ---@field Factor float
 ---@field Result FQuat
-FRigUnit_MathQuaternionScaleV2 = {}
+local FRigUnit_MathQuaternionScaleV2 = {}
 
 
 
@@ -4608,7 +4608,7 @@ FRigUnit_MathQuaternionScaleV2 = {}
 ---@field IfTrue FQuat
 ---@field IfFalse FQuat
 ---@field Result FQuat
-FRigUnit_MathQuaternionSelectBool = {}
+local FRigUnit_MathQuaternionSelectBool = {}
 
 
 
@@ -4617,7 +4617,7 @@ FRigUnit_MathQuaternionSelectBool = {}
 ---@field B FQuat
 ---@field T float
 ---@field Result FQuat
-FRigUnit_MathQuaternionSlerp = {}
+local FRigUnit_MathQuaternionSlerp = {}
 
 
 
@@ -4626,7 +4626,7 @@ FRigUnit_MathQuaternionSlerp = {}
 ---@field TwistAxis FVector
 ---@field Swing FQuat
 ---@field Twist FQuat
-FRigUnit_MathQuaternionSwingTwist = {}
+local FRigUnit_MathQuaternionSwingTwist = {}
 
 
 
@@ -4634,7 +4634,7 @@ FRigUnit_MathQuaternionSwingTwist = {}
 ---@field Value FQuat
 ---@field Axis FVector
 ---@field Angle float
-FRigUnit_MathQuaternionToAxisAndAngle = {}
+local FRigUnit_MathQuaternionToAxisAndAngle = {}
 
 
 
@@ -4642,30 +4642,30 @@ FRigUnit_MathQuaternionToAxisAndAngle = {}
 ---@field Value FQuat
 ---@field RotationOrder EEulerRotationOrder
 ---@field Result FVector
-FRigUnit_MathQuaternionToEuler = {}
+local FRigUnit_MathQuaternionToEuler = {}
 
 
 
 ---@class FRigUnit_MathQuaternionToRotator : FRigUnit_MathQuaternionBase
 ---@field Value FQuat
 ---@field Result FRotator
-FRigUnit_MathQuaternionToRotator = {}
+local FRigUnit_MathQuaternionToRotator = {}
 
 
 
 ---@class FRigUnit_MathQuaternionUnaryOp : FRigUnit_MathQuaternionBase
 ---@field Value FQuat
 ---@field Result FQuat
-FRigUnit_MathQuaternionUnaryOp = {}
+local FRigUnit_MathQuaternionUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathQuaternionUnit : FRigUnit_MathQuaternionUnaryOp
-FRigUnit_MathQuaternionUnit = {}
+local FRigUnit_MathQuaternionUnit = {}
 
 
 ---@class FRigUnit_MathRBFInterpolateBase : FRigUnit_MathBase
-FRigUnit_MathRBFInterpolateBase = {}
+local FRigUnit_MathRBFInterpolateBase = {}
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatBase : FRigUnit_MathRBFInterpolateBase
@@ -4676,46 +4676,46 @@ FRigUnit_MathRBFInterpolateBase = {}
 ---@field bNormalizeOutput boolean
 ---@field TwistAxis FVector
 ---@field WorkData FRigUnit_MathRBFInterpolateQuatWorkData
-FRigUnit_MathRBFInterpolateQuatBase = {}
+local FRigUnit_MathRBFInterpolateQuatBase = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatColor : FRigUnit_MathRBFInterpolateQuatBase
 ---@field Targets TArray<FMathRBFInterpolateQuatColor_Target>
 ---@field Output FLinearColor
-FRigUnit_MathRBFInterpolateQuatColor = {}
+local FRigUnit_MathRBFInterpolateQuatColor = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatFloat : FRigUnit_MathRBFInterpolateQuatBase
 ---@field Targets TArray<FMathRBFInterpolateQuatFloat_Target>
 ---@field Output float
-FRigUnit_MathRBFInterpolateQuatFloat = {}
+local FRigUnit_MathRBFInterpolateQuatFloat = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatQuat : FRigUnit_MathRBFInterpolateQuatBase
 ---@field Targets TArray<FMathRBFInterpolateQuatQuat_Target>
 ---@field Output FQuat
-FRigUnit_MathRBFInterpolateQuatQuat = {}
+local FRigUnit_MathRBFInterpolateQuatQuat = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatVector : FRigUnit_MathRBFInterpolateQuatBase
 ---@field Targets TArray<FMathRBFInterpolateQuatVector_Target>
 ---@field Output FVector
-FRigUnit_MathRBFInterpolateQuatVector = {}
+local FRigUnit_MathRBFInterpolateQuatVector = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatWorkData
-FRigUnit_MathRBFInterpolateQuatWorkData = {}
+local FRigUnit_MathRBFInterpolateQuatWorkData = {}
 
 
 ---@class FRigUnit_MathRBFInterpolateQuatXform : FRigUnit_MathRBFInterpolateQuatBase
 ---@field Targets TArray<FMathRBFInterpolateQuatXform_Target>
 ---@field Output FTransform
-FRigUnit_MathRBFInterpolateQuatXform = {}
+local FRigUnit_MathRBFInterpolateQuatXform = {}
 
 
 
@@ -4726,46 +4726,46 @@ FRigUnit_MathRBFInterpolateQuatXform = {}
 ---@field SmoothingRadius float
 ---@field bNormalizeOutput boolean
 ---@field WorkData FRigUnit_MathRBFInterpolateVectorWorkData
-FRigUnit_MathRBFInterpolateVectorBase = {}
+local FRigUnit_MathRBFInterpolateVectorBase = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateVectorColor : FRigUnit_MathRBFInterpolateVectorBase
 ---@field Targets TArray<FMathRBFInterpolateVectorColor_Target>
 ---@field Output FLinearColor
-FRigUnit_MathRBFInterpolateVectorColor = {}
+local FRigUnit_MathRBFInterpolateVectorColor = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateVectorFloat : FRigUnit_MathRBFInterpolateVectorBase
 ---@field Targets TArray<FMathRBFInterpolateVectorFloat_Target>
 ---@field Output float
-FRigUnit_MathRBFInterpolateVectorFloat = {}
+local FRigUnit_MathRBFInterpolateVectorFloat = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateVectorQuat : FRigUnit_MathRBFInterpolateVectorBase
 ---@field Targets TArray<FMathRBFInterpolateVectorQuat_Target>
 ---@field Output FQuat
-FRigUnit_MathRBFInterpolateVectorQuat = {}
+local FRigUnit_MathRBFInterpolateVectorQuat = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateVectorVector : FRigUnit_MathRBFInterpolateVectorBase
 ---@field Targets TArray<FMathRBFInterpolateVectorVector_Target>
 ---@field Output FVector
-FRigUnit_MathRBFInterpolateVectorVector = {}
+local FRigUnit_MathRBFInterpolateVectorVector = {}
 
 
 
 ---@class FRigUnit_MathRBFInterpolateVectorWorkData
-FRigUnit_MathRBFInterpolateVectorWorkData = {}
+local FRigUnit_MathRBFInterpolateVectorWorkData = {}
 
 
 ---@class FRigUnit_MathRBFInterpolateVectorXform : FRigUnit_MathRBFInterpolateVectorBase
 ---@field Targets TArray<FMathRBFInterpolateVectorXform_Target>
 ---@field Output FTransform
-FRigUnit_MathRBFInterpolateVectorXform = {}
+local FRigUnit_MathRBFInterpolateVectorXform = {}
 
 
 
@@ -4774,7 +4774,7 @@ FRigUnit_MathRBFInterpolateVectorXform = {}
 ---@field TargetSpace EBoneGetterSetterMode
 ---@field Root FTransform
 ---@field ParentIndices TArray<int32>
-FRigUnit_MathTransformAccumulateArray = {}
+local FRigUnit_MathTransformAccumulateArray = {}
 
 
 
@@ -4783,19 +4783,19 @@ FRigUnit_MathTransformAccumulateArray = {}
 ---@field Translations TArray<FVector>
 ---@field Rotations TArray<FQuat>
 ---@field Scales TArray<FVector>
-FRigUnit_MathTransformArrayToSRT = {}
+local FRigUnit_MathTransformArrayToSRT = {}
 
 
 
 ---@class FRigUnit_MathTransformBase : FRigUnit_MathBase
-FRigUnit_MathTransformBase = {}
+local FRigUnit_MathTransformBase = {}
 
 
 ---@class FRigUnit_MathTransformBinaryAggregateOp : FRigUnit_MathTransformBase
 ---@field A FTransform
 ---@field B FTransform
 ---@field Result FTransform
-FRigUnit_MathTransformBinaryAggregateOp = {}
+local FRigUnit_MathTransformBinaryAggregateOp = {}
 
 
 
@@ -4803,7 +4803,7 @@ FRigUnit_MathTransformBinaryAggregateOp = {}
 ---@field A FTransform
 ---@field B FTransform
 ---@field Result FTransform
-FRigUnit_MathTransformBinaryOp = {}
+local FRigUnit_MathTransformBinaryOp = {}
 
 
 
@@ -4818,21 +4818,21 @@ FRigUnit_MathTransformBinaryOp = {}
 ---@field DebugColor FLinearColor
 ---@field DebugThickness float
 ---@field Result FTransform
-FRigUnit_MathTransformClampSpatially = {}
+local FRigUnit_MathTransformClampSpatially = {}
 
 
 
 ---@class FRigUnit_MathTransformFromEulerTransform : FRigUnit_MathTransformBase
 ---@field EulerTransform FEulerTransform
 ---@field Result FTransform
-FRigUnit_MathTransformFromEulerTransform = {}
+local FRigUnit_MathTransformFromEulerTransform = {}
 
 
 
 ---@class FRigUnit_MathTransformFromEulerTransformV2 : FRigUnit_MathTransformBase
 ---@field Value FEulerTransform
 ---@field Result FTransform
-FRigUnit_MathTransformFromEulerTransformV2 = {}
+local FRigUnit_MathTransformFromEulerTransformV2 = {}
 
 
 
@@ -4843,12 +4843,12 @@ FRigUnit_MathTransformFromEulerTransformV2 = {}
 ---@field Scale FVector
 ---@field Transform FTransform
 ---@field EulerTransform FEulerTransform
-FRigUnit_MathTransformFromSRT = {}
+local FRigUnit_MathTransformFromSRT = {}
 
 
 
 ---@class FRigUnit_MathTransformInverse : FRigUnit_MathTransformUnaryOp
-FRigUnit_MathTransformInverse = {}
+local FRigUnit_MathTransformInverse = {}
 
 
 ---@class FRigUnit_MathTransformLerp : FRigUnit_MathTransformBase
@@ -4856,7 +4856,7 @@ FRigUnit_MathTransformInverse = {}
 ---@field B FTransform
 ---@field T float
 ---@field Result FTransform
-FRigUnit_MathTransformLerp = {}
+local FRigUnit_MathTransformLerp = {}
 
 
 
@@ -4864,7 +4864,7 @@ FRigUnit_MathTransformLerp = {}
 ---@field Local FTransform
 ---@field Parent FTransform
 ---@field Global FTransform
-FRigUnit_MathTransformMakeAbsolute = {}
+local FRigUnit_MathTransformMakeAbsolute = {}
 
 
 
@@ -4872,7 +4872,7 @@ FRigUnit_MathTransformMakeAbsolute = {}
 ---@field Global FTransform
 ---@field Parent FTransform
 ---@field Local FTransform
-FRigUnit_MathTransformMakeRelative = {}
+local FRigUnit_MathTransformMakeRelative = {}
 
 
 
@@ -4882,23 +4882,23 @@ FRigUnit_MathTransformMakeRelative = {}
 ---@field AxisToFlip EAxis::Type
 ---@field CentralTransform FTransform
 ---@field Result FTransform
-FRigUnit_MathTransformMirrorTransform = {}
+local FRigUnit_MathTransformMirrorTransform = {}
 
 
 
 ---@class FRigUnit_MathTransformMul : FRigUnit_MathTransformBinaryAggregateOp
-FRigUnit_MathTransformMul = {}
+local FRigUnit_MathTransformMul = {}
 
 
 ---@class FRigUnit_MathTransformMutableBase : FRigUnit_MathMutableBase
-FRigUnit_MathTransformMutableBase = {}
+local FRigUnit_MathTransformMutableBase = {}
 
 
 ---@class FRigUnit_MathTransformRotateVector : FRigUnit_MathTransformBase
 ---@field Transform FTransform
 ---@field Vector FVector
 ---@field Result FVector
-FRigUnit_MathTransformRotateVector = {}
+local FRigUnit_MathTransformRotateVector = {}
 
 
 
@@ -4907,14 +4907,14 @@ FRigUnit_MathTransformRotateVector = {}
 ---@field IfTrue FTransform
 ---@field IfFalse FTransform
 ---@field Result FTransform
-FRigUnit_MathTransformSelectBool = {}
+local FRigUnit_MathTransformSelectBool = {}
 
 
 
 ---@class FRigUnit_MathTransformToEulerTransform : FRigUnit_MathTransformBase
 ---@field Value FTransform
 ---@field Result FEulerTransform
-FRigUnit_MathTransformToEulerTransform = {}
+local FRigUnit_MathTransformToEulerTransform = {}
 
 
 
@@ -4922,35 +4922,35 @@ FRigUnit_MathTransformToEulerTransform = {}
 ---@field Transform FTransform
 ---@field Location FVector
 ---@field Result FVector
-FRigUnit_MathTransformTransformVector = {}
+local FRigUnit_MathTransformTransformVector = {}
 
 
 
 ---@class FRigUnit_MathTransformUnaryOp : FRigUnit_MathTransformBase
 ---@field Value FTransform
 ---@field Result FTransform
-FRigUnit_MathTransformUnaryOp = {}
+local FRigUnit_MathTransformUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathVectorAbs : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorAbs = {}
+local FRigUnit_MathVectorAbs = {}
 
 
 ---@class FRigUnit_MathVectorAdd : FRigUnit_MathVectorBinaryAggregateOp
-FRigUnit_MathVectorAdd = {}
+local FRigUnit_MathVectorAdd = {}
 
 
 ---@class FRigUnit_MathVectorAngle : FRigUnit_MathVectorBase
 ---@field A FVector
 ---@field B FVector
 ---@field Result float
-FRigUnit_MathVectorAngle = {}
+local FRigUnit_MathVectorAngle = {}
 
 
 
 ---@class FRigUnit_MathVectorBase : FRigUnit_MathBase
-FRigUnit_MathVectorBase = {}
+local FRigUnit_MathVectorBase = {}
 
 
 ---@class FRigUnit_MathVectorBezierFourPoint : FRigUnit_MathVectorBase
@@ -4958,7 +4958,7 @@ FRigUnit_MathVectorBase = {}
 ---@field T float
 ---@field Result FVector
 ---@field Tangent FVector
-FRigUnit_MathVectorBezierFourPoint = {}
+local FRigUnit_MathVectorBezierFourPoint = {}
 
 
 
@@ -4966,7 +4966,7 @@ FRigUnit_MathVectorBezierFourPoint = {}
 ---@field A FVector
 ---@field B FVector
 ---@field Result FVector
-FRigUnit_MathVectorBinaryAggregateOp = {}
+local FRigUnit_MathVectorBinaryAggregateOp = {}
 
 
 
@@ -4974,12 +4974,12 @@ FRigUnit_MathVectorBinaryAggregateOp = {}
 ---@field A FVector
 ---@field B FVector
 ---@field Result FVector
-FRigUnit_MathVectorBinaryOp = {}
+local FRigUnit_MathVectorBinaryOp = {}
 
 
 
 ---@class FRigUnit_MathVectorCeil : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorCeil = {}
+local FRigUnit_MathVectorCeil = {}
 
 
 ---@class FRigUnit_MathVectorClamp : FRigUnit_MathVectorBase
@@ -4987,7 +4987,7 @@ FRigUnit_MathVectorCeil = {}
 ---@field Minimum FVector
 ---@field Maximum FVector
 ---@field Result FVector
-FRigUnit_MathVectorClamp = {}
+local FRigUnit_MathVectorClamp = {}
 
 
 
@@ -4996,7 +4996,7 @@ FRigUnit_MathVectorClamp = {}
 ---@field MinimumLength float
 ---@field MaximumLength float
 ---@field Result FVector
-FRigUnit_MathVectorClampLength = {}
+local FRigUnit_MathVectorClampLength = {}
 
 
 
@@ -5011,35 +5011,35 @@ FRigUnit_MathVectorClampLength = {}
 ---@field DebugColor FLinearColor
 ---@field DebugThickness float
 ---@field Result FVector
-FRigUnit_MathVectorClampSpatially = {}
+local FRigUnit_MathVectorClampSpatially = {}
 
 
 
 ---@class FRigUnit_MathVectorCross : FRigUnit_MathVectorBinaryOp
-FRigUnit_MathVectorCross = {}
+local FRigUnit_MathVectorCross = {}
 
 
 ---@class FRigUnit_MathVectorDeg : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorDeg = {}
+local FRigUnit_MathVectorDeg = {}
 
 
 ---@class FRigUnit_MathVectorDistance : FRigUnit_MathVectorBase
 ---@field A FVector
 ---@field B FVector
 ---@field Result float
-FRigUnit_MathVectorDistance = {}
+local FRigUnit_MathVectorDistance = {}
 
 
 
 ---@class FRigUnit_MathVectorDiv : FRigUnit_MathVectorBinaryOp
-FRigUnit_MathVectorDiv = {}
+local FRigUnit_MathVectorDiv = {}
 
 
 ---@class FRigUnit_MathVectorDot : FRigUnit_MathVectorBase
 ---@field A FVector
 ---@field B FVector
 ---@field Result float
-FRigUnit_MathVectorDot = {}
+local FRigUnit_MathVectorDot = {}
 
 
 
@@ -5047,18 +5047,18 @@ FRigUnit_MathVectorDot = {}
 ---@field A FVector
 ---@field B FVector
 ---@field Result boolean
-FRigUnit_MathVectorEquals = {}
+local FRigUnit_MathVectorEquals = {}
 
 
 
 ---@class FRigUnit_MathVectorFloor : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorFloor = {}
+local FRigUnit_MathVectorFloor = {}
 
 
 ---@class FRigUnit_MathVectorFromFloat : FRigUnit_MathVectorBase
 ---@field Value float
 ---@field Result FVector
-FRigUnit_MathVectorFromFloat = {}
+local FRigUnit_MathVectorFromFloat = {}
 
 
 
@@ -5067,7 +5067,7 @@ FRigUnit_MathVectorFromFloat = {}
 ---@field B FVector
 ---@field Tolerance float
 ---@field Result boolean
-FRigUnit_MathVectorIsNearlyEqual = {}
+local FRigUnit_MathVectorIsNearlyEqual = {}
 
 
 
@@ -5075,21 +5075,21 @@ FRigUnit_MathVectorIsNearlyEqual = {}
 ---@field Value FVector
 ---@field Tolerance float
 ---@field Result boolean
-FRigUnit_MathVectorIsNearlyZero = {}
+local FRigUnit_MathVectorIsNearlyZero = {}
 
 
 
 ---@class FRigUnit_MathVectorLength : FRigUnit_MathVectorBase
 ---@field Value FVector
 ---@field Result float
-FRigUnit_MathVectorLength = {}
+local FRigUnit_MathVectorLength = {}
 
 
 
 ---@class FRigUnit_MathVectorLengthSquared : FRigUnit_MathVectorBase
 ---@field Value FVector
 ---@field Result float
-FRigUnit_MathVectorLengthSquared = {}
+local FRigUnit_MathVectorLengthSquared = {}
 
 
 
@@ -5098,7 +5098,7 @@ FRigUnit_MathVectorLengthSquared = {}
 ---@field B FVector
 ---@field T float
 ---@field Result FVector
-FRigUnit_MathVectorLerp = {}
+local FRigUnit_MathVectorLerp = {}
 
 
 
@@ -5106,13 +5106,13 @@ FRigUnit_MathVectorLerp = {}
 ---@field Local FVector
 ---@field Parent FVector
 ---@field Global FVector
-FRigUnit_MathVectorMakeAbsolute = {}
+local FRigUnit_MathVectorMakeAbsolute = {}
 
 
 
 ---@class FRigUnit_MathVectorMakeBezierFourPoint : FRigUnit_MathVectorBase
 ---@field Bezier FCRFourPointBezier
-FRigUnit_MathVectorMakeBezierFourPoint = {}
+local FRigUnit_MathVectorMakeBezierFourPoint = {}
 
 
 
@@ -5120,23 +5120,23 @@ FRigUnit_MathVectorMakeBezierFourPoint = {}
 ---@field Global FVector
 ---@field Parent FVector
 ---@field Local FVector
-FRigUnit_MathVectorMakeRelative = {}
+local FRigUnit_MathVectorMakeRelative = {}
 
 
 
 ---@class FRigUnit_MathVectorMax : FRigUnit_MathVectorBinaryAggregateOp
-FRigUnit_MathVectorMax = {}
+local FRigUnit_MathVectorMax = {}
 
 
 ---@class FRigUnit_MathVectorMin : FRigUnit_MathVectorBinaryAggregateOp
-FRigUnit_MathVectorMin = {}
+local FRigUnit_MathVectorMin = {}
 
 
 ---@class FRigUnit_MathVectorMirror : FRigUnit_MathVectorBase
 ---@field Value FVector
 ---@field Normal FVector
 ---@field Result FVector
-FRigUnit_MathVectorMirror = {}
+local FRigUnit_MathVectorMirror = {}
 
 
 
@@ -5146,27 +5146,27 @@ FRigUnit_MathVectorMirror = {}
 ---@field AxisToFlip EAxis::Type
 ---@field CentralTransform FTransform
 ---@field Result FVector
-FRigUnit_MathVectorMirrorTransform = {}
+local FRigUnit_MathVectorMirrorTransform = {}
 
 
 
 ---@class FRigUnit_MathVectorMod : FRigUnit_MathVectorBinaryOp
-FRigUnit_MathVectorMod = {}
+local FRigUnit_MathVectorMod = {}
 
 
 ---@class FRigUnit_MathVectorMul : FRigUnit_MathVectorBinaryAggregateOp
-FRigUnit_MathVectorMul = {}
+local FRigUnit_MathVectorMul = {}
 
 
 ---@class FRigUnit_MathVectorNegate : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorNegate = {}
+local FRigUnit_MathVectorNegate = {}
 
 
 ---@class FRigUnit_MathVectorNotEquals : FRigUnit_MathVectorBase
 ---@field A FVector
 ---@field B FVector
 ---@field Result boolean
-FRigUnit_MathVectorNotEquals = {}
+local FRigUnit_MathVectorNotEquals = {}
 
 
 
@@ -5174,7 +5174,7 @@ FRigUnit_MathVectorNotEquals = {}
 ---@field A FVector
 ---@field B FVector
 ---@field Result boolean
-FRigUnit_MathVectorOrthogonal = {}
+local FRigUnit_MathVectorOrthogonal = {}
 
 
 
@@ -5182,12 +5182,12 @@ FRigUnit_MathVectorOrthogonal = {}
 ---@field A FVector
 ---@field B FVector
 ---@field Result boolean
-FRigUnit_MathVectorParallel = {}
+local FRigUnit_MathVectorParallel = {}
 
 
 
 ---@class FRigUnit_MathVectorRad : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorRad = {}
+local FRigUnit_MathVectorRad = {}
 
 
 ---@class FRigUnit_MathVectorRemap : FRigUnit_MathVectorBase
@@ -5198,19 +5198,19 @@ FRigUnit_MathVectorRad = {}
 ---@field TargetMaximum FVector
 ---@field bClamp boolean
 ---@field Result FVector
-FRigUnit_MathVectorRemap = {}
+local FRigUnit_MathVectorRemap = {}
 
 
 
 ---@class FRigUnit_MathVectorRound : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorRound = {}
+local FRigUnit_MathVectorRound = {}
 
 
 ---@class FRigUnit_MathVectorScale : FRigUnit_MathVectorBase
 ---@field Value FVector
 ---@field Factor float
 ---@field Result FVector
-FRigUnit_MathVectorScale = {}
+local FRigUnit_MathVectorScale = {}
 
 
 
@@ -5219,7 +5219,7 @@ FRigUnit_MathVectorScale = {}
 ---@field IfTrue FVector
 ---@field IfFalse FVector
 ---@field Result FVector
-FRigUnit_MathVectorSelectBool = {}
+local FRigUnit_MathVectorSelectBool = {}
 
 
 
@@ -5227,27 +5227,27 @@ FRigUnit_MathVectorSelectBool = {}
 ---@field Value FVector
 ---@field Length float
 ---@field Result FVector
-FRigUnit_MathVectorSetLength = {}
+local FRigUnit_MathVectorSetLength = {}
 
 
 
 ---@class FRigUnit_MathVectorSign : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorSign = {}
+local FRigUnit_MathVectorSign = {}
 
 
 ---@class FRigUnit_MathVectorSub : FRigUnit_MathVectorBinaryOp
-FRigUnit_MathVectorSub = {}
+local FRigUnit_MathVectorSub = {}
 
 
 ---@class FRigUnit_MathVectorUnaryOp : FRigUnit_MathVectorBase
 ---@field Value FVector
 ---@field Result FVector
-FRigUnit_MathVectorUnaryOp = {}
+local FRigUnit_MathVectorUnaryOp = {}
 
 
 
 ---@class FRigUnit_MathVectorUnit : FRigUnit_MathVectorUnaryOp
-FRigUnit_MathVectorUnit = {}
+local FRigUnit_MathVectorUnit = {}
 
 
 ---@class FRigUnit_ModifyBoneTransforms : FRigUnit_HighlevelBaseMutable
@@ -5257,19 +5257,19 @@ FRigUnit_MathVectorUnit = {}
 ---@field WeightMaximum float
 ---@field Mode EControlRigModifyBoneMode
 ---@field WorkData FRigUnit_ModifyBoneTransforms_WorkData
-FRigUnit_ModifyBoneTransforms = {}
+local FRigUnit_ModifyBoneTransforms = {}
 
 
 
 ---@class FRigUnit_ModifyBoneTransforms_PerBone
 ---@field bone FName
 ---@field Transform FTransform
-FRigUnit_ModifyBoneTransforms_PerBone = {}
+local FRigUnit_ModifyBoneTransforms_PerBone = {}
 
 
 
 ---@class FRigUnit_ModifyBoneTransforms_WorkData : FRigUnit_ModifyTransforms_WorkData
-FRigUnit_ModifyBoneTransforms_WorkData = {}
+local FRigUnit_ModifyBoneTransforms_WorkData = {}
 
 
 ---@class FRigUnit_ModifyTransforms : FRigUnit_HighlevelBaseMutable
@@ -5279,20 +5279,20 @@ FRigUnit_ModifyBoneTransforms_WorkData = {}
 ---@field WeightMaximum float
 ---@field Mode EControlRigModifyBoneMode
 ---@field WorkData FRigUnit_ModifyTransforms_WorkData
-FRigUnit_ModifyTransforms = {}
+local FRigUnit_ModifyTransforms = {}
 
 
 
 ---@class FRigUnit_ModifyTransforms_PerItem
 ---@field Item FRigElementKey
 ---@field Transform FTransform
-FRigUnit_ModifyTransforms_PerItem = {}
+local FRigUnit_ModifyTransforms_PerItem = {}
 
 
 
 ---@class FRigUnit_ModifyTransforms_WorkData
 ---@field CachedItems TArray<FCachedRigElement>
-FRigUnit_ModifyTransforms_WorkData = {}
+local FRigUnit_ModifyTransforms_WorkData = {}
 
 
 
@@ -5303,46 +5303,46 @@ FRigUnit_ModifyTransforms_WorkData = {}
 ---@field bPropagateToChildren boolean
 ---@field MaxIterations int32
 ---@field WorkData FRigUnit_MultiFABRIK_WorkData
-FRigUnit_MultiFABRIK = {}
+local FRigUnit_MultiFABRIK = {}
 
 
 
 ---@class FRigUnit_MultiFABRIK_EndEffector
 ---@field bone FName
 ---@field Location FVector
-FRigUnit_MultiFABRIK_EndEffector = {}
+local FRigUnit_MultiFABRIK_EndEffector = {}
 
 
 
 ---@class FRigUnit_MultiFABRIK_WorkData
-FRigUnit_MultiFABRIK_WorkData = {}
+local FRigUnit_MultiFABRIK_WorkData = {}
 
 
 ---@class FRigUnit_MultiplyQuaternion : FRigUnit_BinaryQuaternionOp
-FRigUnit_MultiplyQuaternion = {}
+local FRigUnit_MultiplyQuaternion = {}
 
 
 ---@class FRigUnit_MultiplyTransform : FRigUnit_BinaryTransformOp
-FRigUnit_MultiplyTransform = {}
+local FRigUnit_MultiplyTransform = {}
 
 
 ---@class FRigUnit_Multiply_FloatFloat : FRigUnit_BinaryFloatOp
-FRigUnit_Multiply_FloatFloat = {}
+local FRigUnit_Multiply_FloatFloat = {}
 
 
 ---@class FRigUnit_Multiply_VectorVector : FRigUnit_BinaryVectorOp
-FRigUnit_Multiply_VectorVector = {}
+local FRigUnit_Multiply_VectorVector = {}
 
 
 ---@class FRigUnit_NameBase : FRigUnit
-FRigUnit_NameBase = {}
+local FRigUnit_NameBase = {}
 
 
 ---@class FRigUnit_NameConcat : FRigUnit_NameBase
 ---@field A FName
 ---@field B FName
 ---@field Result FName
-FRigUnit_NameConcat = {}
+local FRigUnit_NameConcat = {}
 
 
 
@@ -5351,7 +5351,7 @@ FRigUnit_NameConcat = {}
 ---@field Old FName
 ---@field New FName
 ---@field Result FName
-FRigUnit_NameReplace = {}
+local FRigUnit_NameReplace = {}
 
 
 
@@ -5361,7 +5361,7 @@ FRigUnit_NameReplace = {}
 ---@field FromEnd boolean
 ---@field Remainder FName
 ---@field Chopped FName
-FRigUnit_NameTruncate = {}
+local FRigUnit_NameTruncate = {}
 
 
 
@@ -5373,7 +5373,7 @@ FRigUnit_NameTruncate = {}
 ---@field Maximum double
 ---@field Result double
 ---@field Time double
-FRigUnit_NoiseDouble = {}
+local FRigUnit_NoiseDouble = {}
 
 
 
@@ -5385,7 +5385,7 @@ FRigUnit_NoiseDouble = {}
 ---@field Maximum float
 ---@field Result float
 ---@field Time float
-FRigUnit_NoiseFloat = {}
+local FRigUnit_NoiseFloat = {}
 
 
 
@@ -5397,7 +5397,7 @@ FRigUnit_NoiseFloat = {}
 ---@field Maximum float
 ---@field Result FVector
 ---@field Time FVector
-FRigUnit_NoiseVector = {}
+local FRigUnit_NoiseVector = {}
 
 
 
@@ -5409,7 +5409,7 @@ FRigUnit_NoiseVector = {}
 ---@field Maximum double
 ---@field Result FVector
 ---@field Time FVector
-FRigUnit_NoiseVector2 = {}
+local FRigUnit_NoiseVector2 = {}
 
 
 
@@ -5419,7 +5419,7 @@ FRigUnit_NoiseVector2 = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_OffsetTransformForItem = {}
+local FRigUnit_OffsetTransformForItem = {}
 
 
 
@@ -5432,14 +5432,14 @@ FRigUnit_OffsetTransformForItem = {}
 ---@field Weight float
 ---@field ChildCache FCachedRigElement
 ---@field ParentCaches TArray<FCachedRigElement>
-FRigUnit_ParentConstraint = {}
+local FRigUnit_ParentConstraint = {}
 
 
 
 ---@class FRigUnit_ParentConstraint_AdvancedSettings
 ---@field InterpolationType EConstraintInterpType
 ---@field RotationOrderForFilter EEulerRotationOrder
-FRigUnit_ParentConstraint_AdvancedSettings = {}
+local FRigUnit_ParentConstraint_AdvancedSettings = {}
 
 
 
@@ -5454,7 +5454,7 @@ FRigUnit_ParentConstraint_AdvancedSettings = {}
 ---@field CachedSubject FCachedRigElement
 ---@field CachedParent FCachedRigElement
 ---@field RelativeOffset FTransform
-FRigUnit_ParentSwitchConstraint = {}
+local FRigUnit_ParentSwitchConstraint = {}
 
 
 
@@ -5469,7 +5469,7 @@ FRigUnit_ParentSwitchConstraint = {}
 ---@field CachedSubject FCachedRigElement
 ---@field CachedParent FCachedRigElement
 ---@field RelativeOffset FTransform
-FRigUnit_ParentSwitchConstraintArray = {}
+local FRigUnit_ParentSwitchConstraintArray = {}
 
 
 
@@ -5489,7 +5489,7 @@ FRigUnit_ParentSwitchConstraintArray = {}
 ---@field DebugSettings FRigUnit_PointSimulation_DebugSettings
 ---@field Bezier FCRFourPointBezier
 ---@field WorkData FRigUnit_PointSimulation_WorkData
-FRigUnit_PointSimulation = {}
+local FRigUnit_PointSimulation = {}
 
 
 
@@ -5498,7 +5498,7 @@ FRigUnit_PointSimulation = {}
 ---@field TranslationPoint int32
 ---@field PrimaryAimPoint int32
 ---@field SecondaryAimPoint int32
-FRigUnit_PointSimulation_BoneTarget = {}
+local FRigUnit_PointSimulation_BoneTarget = {}
 
 
 
@@ -5509,14 +5509,14 @@ FRigUnit_PointSimulation_BoneTarget = {}
 ---@field bDrawPointsAsSpheres boolean
 ---@field Color FLinearColor
 ---@field WorldOffset FTransform
-FRigUnit_PointSimulation_DebugSettings = {}
+local FRigUnit_PointSimulation_DebugSettings = {}
 
 
 
 ---@class FRigUnit_PointSimulation_WorkData
 ---@field Simulation FCRSimPointContainer
 ---@field BoneIndices TArray<FCachedRigElement>
-FRigUnit_PointSimulation_WorkData = {}
+local FRigUnit_PointSimulation_WorkData = {}
 
 
 
@@ -5527,7 +5527,7 @@ FRigUnit_PointSimulation_WorkData = {}
 ---@field CurveValue float
 ---@field CachedPoseElementIndex int32
 ---@field CachedPoseHash int32
-FRigUnit_PoseGetCurve = {}
+local FRigUnit_PoseGetCurve = {}
 
 
 
@@ -5543,7 +5543,7 @@ FRigUnit_PoseGetCurve = {}
 ---@field ItemsToCompare FRigElementKeyCollection
 ---@field PosesAreEqual boolean
 ---@field ItemsWithDelta FRigElementKeyCollection
-FRigUnit_PoseGetDelta = {}
+local FRigUnit_PoseGetDelta = {}
 
 
 
@@ -5551,7 +5551,7 @@ FRigUnit_PoseGetDelta = {}
 ---@field Pose FRigPose
 ---@field ElementType ERigElementType
 ---@field Items FRigElementKeyCollection
-FRigUnit_PoseGetItems = {}
+local FRigUnit_PoseGetItems = {}
 
 
 
@@ -5559,7 +5559,7 @@ FRigUnit_PoseGetItems = {}
 ---@field Pose FRigPose
 ---@field ElementType ERigElementType
 ---@field Items TArray<FRigElementKey>
-FRigUnit_PoseGetItemsItemArray = {}
+local FRigUnit_PoseGetItemsItemArray = {}
 
 
 
@@ -5572,7 +5572,7 @@ FRigUnit_PoseGetItemsItemArray = {}
 ---@field CurveValue float
 ---@field CachedPoseElementIndex int32
 ---@field CachedPoseHash int32
-FRigUnit_PoseGetTransform = {}
+local FRigUnit_PoseGetTransform = {}
 
 
 
@@ -5581,14 +5581,14 @@ FRigUnit_PoseGetTransform = {}
 ---@field Space EBoneGetterSetterMode
 ---@field Valid boolean
 ---@field Transforms TArray<FTransform>
-FRigUnit_PoseGetTransformArray = {}
+local FRigUnit_PoseGetTransformArray = {}
 
 
 
 ---@class FRigUnit_PoseIsEmpty : FRigUnit_HierarchyBase
 ---@field Pose FRigPose
 ---@field IsEmpty boolean
-FRigUnit_PoseIsEmpty = {}
+local FRigUnit_PoseIsEmpty = {}
 
 
 
@@ -5603,7 +5603,7 @@ FRigUnit_PoseIsEmpty = {}
 ---@field Ratio float
 ---@field Continue boolean
 ---@field Completed FControlRigExecuteContext
-FRigUnit_PoseLoop = {}
+local FRigUnit_PoseLoop = {}
 
 
 
@@ -5613,7 +5613,7 @@ FRigUnit_PoseLoop = {}
 ---@field Filter FFilterOptionPerAxis
 ---@field Parents TArray<FConstraintParent>
 ---@field Weight float
-FRigUnit_PositionConstraint = {}
+local FRigUnit_PositionConstraint = {}
 
 
 
@@ -5625,13 +5625,13 @@ FRigUnit_PositionConstraint = {}
 ---@field Weight float
 ---@field ChildCache FCachedRigElement
 ---@field ParentCaches TArray<FCachedRigElement>
-FRigUnit_PositionConstraintLocalSpaceOffset = {}
+local FRigUnit_PositionConstraintLocalSpaceOffset = {}
 
 
 
 ---@class FRigUnit_PrepareForExecution : FRigUnit
 ---@field ExecuteContext FControlRigExecuteContext
-FRigUnit_PrepareForExecution = {}
+local FRigUnit_PrepareForExecution = {}
 
 
 
@@ -5646,7 +5646,7 @@ FRigUnit_PrepareForExecution = {}
 ---@field CachedChild FCachedRigElement
 ---@field CachedOldParent FCachedRigElement
 ---@field CachedNewParent FCachedRigElement
-FRigUnit_ProjectTransformToNewParent = {}
+local FRigUnit_ProjectTransformToNewParent = {}
 
 
 
@@ -5656,7 +5656,7 @@ FRigUnit_ProjectTransformToNewParent = {}
 ---@field bApplyToChildren boolean
 ---@field bRecursive boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_PropagateTransform = {}
+local FRigUnit_PropagateTransform = {}
 
 
 
@@ -5664,7 +5664,7 @@ FRigUnit_PropagateTransform = {}
 ---@field Axis FVector
 ---@field Angle float
 ---@field Result FQuat
-FRigUnit_QuaternionFromAxisAndAngle = {}
+local FRigUnit_QuaternionFromAxisAndAngle = {}
 
 
 
@@ -5672,7 +5672,7 @@ FRigUnit_QuaternionFromAxisAndAngle = {}
 ---@field Axis FVector
 ---@field Argument FQuat
 ---@field Angle float
-FRigUnit_QuaternionToAngle = {}
+local FRigUnit_QuaternionToAngle = {}
 
 
 
@@ -5680,7 +5680,7 @@ FRigUnit_QuaternionToAngle = {}
 ---@field Argument FQuat
 ---@field Axis FVector
 ---@field Angle float
-FRigUnit_QuaternionToAxisAndAngle = {}
+local FRigUnit_QuaternionToAxisAndAngle = {}
 
 
 
@@ -5694,7 +5694,7 @@ FRigUnit_QuaternionToAxisAndAngle = {}
 ---@field LastSeed int32
 ---@field BaseSeed int32
 ---@field TimeLeft float
-FRigUnit_RandomFloat = {}
+local FRigUnit_RandomFloat = {}
 
 
 
@@ -5708,7 +5708,7 @@ FRigUnit_RandomFloat = {}
 ---@field LastSeed int32
 ---@field BaseSeed int32
 ---@field TimeLeft float
-FRigUnit_RandomVector = {}
+local FRigUnit_RandomVector = {}
 
 
 
@@ -5716,7 +5716,7 @@ FRigUnit_RandomVector = {}
 ---@field Item FRigElementKey
 ---@field Removed boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_RemoveAllMetadata = {}
+local FRigUnit_RemoveAllMetadata = {}
 
 
 
@@ -5725,7 +5725,7 @@ FRigUnit_RemoveAllMetadata = {}
 ---@field Name FName
 ---@field Removed boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_RemoveMetadata = {}
+local FRigUnit_RemoveMetadata = {}
 
 
 
@@ -5734,7 +5734,7 @@ FRigUnit_RemoveMetadata = {}
 ---@field Tag FName
 ---@field Removed boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_RemoveMetadataTag = {}
+local FRigUnit_RemoveMetadataTag = {}
 
 
 
@@ -5745,7 +5745,7 @@ FRigUnit_RemoveMetadataTag = {}
 ---@field Parents TArray<FConstraintParent>
 ---@field AdvancedSettings FRigUnit_RotationConstraint_AdvancedSettings
 ---@field Weight float
-FRigUnit_RotationConstraint = {}
+local FRigUnit_RotationConstraint = {}
 
 
 
@@ -5758,14 +5758,14 @@ FRigUnit_RotationConstraint = {}
 ---@field Weight float
 ---@field ChildCache FCachedRigElement
 ---@field ParentCaches TArray<FCachedRigElement>
-FRigUnit_RotationConstraintLocalSpaceOffset = {}
+local FRigUnit_RotationConstraintLocalSpaceOffset = {}
 
 
 
 ---@class FRigUnit_RotationConstraint_AdvancedSettings
 ---@field InterpolationType EConstraintInterpType
 ---@field RotationOrderForFilter EEulerRotationOrder
-FRigUnit_RotationConstraint_AdvancedSettings = {}
+local FRigUnit_RotationConstraint_AdvancedSettings = {}
 
 
 
@@ -5775,7 +5775,7 @@ FRigUnit_RotationConstraint_AdvancedSettings = {}
 ---@field Filter FFilterOptionPerAxis
 ---@field Parents TArray<FConstraintParent>
 ---@field Weight float
-FRigUnit_ScaleConstraint = {}
+local FRigUnit_ScaleConstraint = {}
 
 
 
@@ -5787,14 +5787,14 @@ FRigUnit_ScaleConstraint = {}
 ---@field Weight float
 ---@field ChildCache FCachedRigElement
 ---@field ParentCaches TArray<FCachedRigElement>
-FRigUnit_ScaleConstraintLocalSpaceOffset = {}
+local FRigUnit_ScaleConstraintLocalSpaceOffset = {}
 
 
 
 ---@class FRigUnit_SecondsToFrames : FRigUnit_AnimBase
 ---@field Seconds float
 ---@field Frames float
-FRigUnit_SecondsToFrames = {}
+local FRigUnit_SecondsToFrames = {}
 
 
 
@@ -5804,7 +5804,7 @@ FRigUnit_SecondsToFrames = {}
 ---@field OffsetInSeconds float
 ---@field bEnable boolean
 ---@field bOnlyDuringInteraction boolean
-FRigUnit_SendEvent = {}
+local FRigUnit_SendEvent = {}
 
 
 
@@ -5812,7 +5812,7 @@ FRigUnit_SendEvent = {}
 ---@field ExecuteContext FControlRigExecuteContext
 ---@field A FControlRigExecuteContext
 ---@field B FControlRigExecuteContext
-FRigUnit_SequenceAggregate = {}
+local FRigUnit_SequenceAggregate = {}
 
 
 
@@ -5822,13 +5822,13 @@ FRigUnit_SequenceAggregate = {}
 ---@field B FControlRigExecuteContext
 ---@field C FControlRigExecuteContext
 ---@field D FControlRigExecuteContext
-FRigUnit_SequenceExecution = {}
+local FRigUnit_SequenceExecution = {}
 
 
 
 ---@class FRigUnit_SetAnimationChannelBase : FRigUnit_GetAnimationChannelBase
 ---@field ExecuteContext FControlRigExecuteContext
-FRigUnit_SetAnimationChannelBase = {}
+local FRigUnit_SetAnimationChannelBase = {}
 
 
 
@@ -5839,7 +5839,7 @@ FRigUnit_SetAnimationChannelBase = {}
 ---@field Space EBoneGetterSetterMode
 ---@field bPropagateToChildren boolean
 ---@field CachedBone FCachedRigElement
-FRigUnit_SetBoneInitialTransform = {}
+local FRigUnit_SetBoneInitialTransform = {}
 
 
 
@@ -5850,7 +5850,7 @@ FRigUnit_SetBoneInitialTransform = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedBone FCachedRigElement
-FRigUnit_SetBoneRotation = {}
+local FRigUnit_SetBoneRotation = {}
 
 
 
@@ -5862,7 +5862,7 @@ FRigUnit_SetBoneRotation = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedBone FCachedRigElement
-FRigUnit_SetBoneTransform = {}
+local FRigUnit_SetBoneTransform = {}
 
 
 
@@ -5873,13 +5873,13 @@ FRigUnit_SetBoneTransform = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedBone FCachedRigElement
-FRigUnit_SetBoneTranslation = {}
+local FRigUnit_SetBoneTranslation = {}
 
 
 
 ---@class FRigUnit_SetBoolAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value boolean
-FRigUnit_SetBoolAnimationChannel = {}
+local FRigUnit_SetBoolAnimationChannel = {}
 
 
 
@@ -5887,7 +5887,7 @@ FRigUnit_SetBoolAnimationChannel = {}
 ---@field Control FName
 ---@field BoolValue boolean
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlBool = {}
+local FRigUnit_SetControlBool = {}
 
 
 
@@ -5895,7 +5895,7 @@ FRigUnit_SetControlBool = {}
 ---@field Control FName
 ---@field Color FLinearColor
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlColor = {}
+local FRigUnit_SetControlColor = {}
 
 
 
@@ -5903,7 +5903,7 @@ FRigUnit_SetControlColor = {}
 ---@field Control FName
 ---@field Driven TArray<FRigElementKey>
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlDrivenList = {}
+local FRigUnit_SetControlDrivenList = {}
 
 
 
@@ -5912,7 +5912,7 @@ FRigUnit_SetControlDrivenList = {}
 ---@field Weight float
 ---@field FloatValue float
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlFloat = {}
+local FRigUnit_SetControlFloat = {}
 
 
 
@@ -5921,7 +5921,7 @@ FRigUnit_SetControlFloat = {}
 ---@field Weight int32
 ---@field IntegerValue int32
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlInteger = {}
+local FRigUnit_SetControlInteger = {}
 
 
 
@@ -5930,7 +5930,7 @@ FRigUnit_SetControlInteger = {}
 ---@field Offset FTransform
 ---@field Space EBoneGetterSetterMode
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlOffset = {}
+local FRigUnit_SetControlOffset = {}
 
 
 
@@ -5940,7 +5940,7 @@ FRigUnit_SetControlOffset = {}
 ---@field Rotator FRotator
 ---@field Space EBoneGetterSetterMode
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlRotator = {}
+local FRigUnit_SetControlRotator = {}
 
 
 
@@ -5950,7 +5950,7 @@ FRigUnit_SetControlRotator = {}
 ---@field Transform FTransform
 ---@field Space EBoneGetterSetterMode
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlTransform = {}
+local FRigUnit_SetControlTransform = {}
 
 
 
@@ -5960,7 +5960,7 @@ FRigUnit_SetControlTransform = {}
 ---@field Vector FVector
 ---@field Space EBoneGetterSetterMode
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlVector = {}
+local FRigUnit_SetControlVector = {}
 
 
 
@@ -5969,7 +5969,7 @@ FRigUnit_SetControlVector = {}
 ---@field Weight float
 ---@field Vector FVector2D
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetControlVector2D = {}
+local FRigUnit_SetControlVector2D = {}
 
 
 
@@ -5978,7 +5978,7 @@ FRigUnit_SetControlVector2D = {}
 ---@field Pattern FString
 ---@field bVisible boolean
 ---@field CachedControlIndices TArray<FCachedRigElement>
-FRigUnit_SetControlVisibility = {}
+local FRigUnit_SetControlVisibility = {}
 
 
 
@@ -5986,26 +5986,26 @@ FRigUnit_SetControlVisibility = {}
 ---@field Curve FName
 ---@field Value float
 ---@field CachedCurveIndex FCachedRigElement
-FRigUnit_SetCurveValue = {}
+local FRigUnit_SetCurveValue = {}
 
 
 
 ---@class FRigUnit_SetDefaultParent : FRigUnit_DynamicHierarchyBaseMutable
 ---@field Child FRigElementKey
 ---@field Parent FRigElementKey
-FRigUnit_SetDefaultParent = {}
+local FRigUnit_SetDefaultParent = {}
 
 
 
 ---@class FRigUnit_SetFloatAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value float
-FRigUnit_SetFloatAnimationChannel = {}
+local FRigUnit_SetFloatAnimationChannel = {}
 
 
 
 ---@class FRigUnit_SetIntAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value int32
-FRigUnit_SetIntAnimationChannel = {}
+local FRigUnit_SetIntAnimationChannel = {}
 
 
 
@@ -6013,7 +6013,7 @@ FRigUnit_SetIntAnimationChannel = {}
 ---@field Item FRigElementKey
 ---@field Tag FName
 ---@field CachedIndex FCachedRigElement
-FRigUnit_SetMetadataTag = {}
+local FRigUnit_SetMetadataTag = {}
 
 
 
@@ -6021,21 +6021,21 @@ FRigUnit_SetMetadataTag = {}
 ---@field Item FRigElementKey
 ---@field Tags TArray<FName>
 ---@field CachedIndex FCachedRigElement
-FRigUnit_SetMetadataTagArray = {}
+local FRigUnit_SetMetadataTagArray = {}
 
 
 
 ---@class FRigUnit_SetMultiControlBool : FRigUnitMutable
 ---@field Entries TArray<FRigUnit_SetMultiControlBool_Entry>
 ---@field CachedControlIndices TArray<FCachedRigElement>
-FRigUnit_SetMultiControlBool = {}
+local FRigUnit_SetMultiControlBool = {}
 
 
 
 ---@class FRigUnit_SetMultiControlBool_Entry
 ---@field Control FName
 ---@field BoolValue boolean
-FRigUnit_SetMultiControlBool_Entry = {}
+local FRigUnit_SetMultiControlBool_Entry = {}
 
 
 
@@ -6043,14 +6043,14 @@ FRigUnit_SetMultiControlBool_Entry = {}
 ---@field Entries TArray<FRigUnit_SetMultiControlFloat_Entry>
 ---@field Weight float
 ---@field CachedControlIndices TArray<FCachedRigElement>
-FRigUnit_SetMultiControlFloat = {}
+local FRigUnit_SetMultiControlFloat = {}
 
 
 
 ---@class FRigUnit_SetMultiControlFloat_Entry
 ---@field Control FName
 ---@field FloatValue float
-FRigUnit_SetMultiControlFloat_Entry = {}
+local FRigUnit_SetMultiControlFloat_Entry = {}
 
 
 
@@ -6058,14 +6058,14 @@ FRigUnit_SetMultiControlFloat_Entry = {}
 ---@field Entries TArray<FRigUnit_SetMultiControlInteger_Entry>
 ---@field Weight float
 ---@field CachedControlIndices TArray<FCachedRigElement>
-FRigUnit_SetMultiControlInteger = {}
+local FRigUnit_SetMultiControlInteger = {}
 
 
 
 ---@class FRigUnit_SetMultiControlInteger_Entry
 ---@field Control FName
 ---@field IntegerValue int32
-FRigUnit_SetMultiControlInteger_Entry = {}
+local FRigUnit_SetMultiControlInteger_Entry = {}
 
 
 
@@ -6073,7 +6073,7 @@ FRigUnit_SetMultiControlInteger_Entry = {}
 ---@field Entries TArray<FRigUnit_SetMultiControlRotator_Entry>
 ---@field Weight float
 ---@field CachedControlIndices TArray<FCachedRigElement>
-FRigUnit_SetMultiControlRotator = {}
+local FRigUnit_SetMultiControlRotator = {}
 
 
 
@@ -6081,7 +6081,7 @@ FRigUnit_SetMultiControlRotator = {}
 ---@field Control FName
 ---@field Rotator FRotator
 ---@field Space EBoneGetterSetterMode
-FRigUnit_SetMultiControlRotator_Entry = {}
+local FRigUnit_SetMultiControlRotator_Entry = {}
 
 
 
@@ -6089,14 +6089,14 @@ FRigUnit_SetMultiControlRotator_Entry = {}
 ---@field Entries TArray<FRigUnit_SetMultiControlVector2D_Entry>
 ---@field Weight float
 ---@field CachedControlIndices TArray<FCachedRigElement>
-FRigUnit_SetMultiControlVector2D = {}
+local FRigUnit_SetMultiControlVector2D = {}
 
 
 
 ---@class FRigUnit_SetMultiControlVector2D_Entry
 ---@field Control FName
 ---@field Vector FVector2D
-FRigUnit_SetMultiControlVector2D_Entry = {}
+local FRigUnit_SetMultiControlVector2D_Entry = {}
 
 
 
@@ -6108,7 +6108,7 @@ FRigUnit_SetMultiControlVector2D_Entry = {}
 ---@field bPropagateToChildren boolean
 ---@field CachedBone FCachedRigElement
 ---@field CachedSpaceIndex FCachedRigElement
-FRigUnit_SetRelativeBoneTransform = {}
+local FRigUnit_SetRelativeBoneTransform = {}
 
 
 
@@ -6121,7 +6121,7 @@ FRigUnit_SetRelativeBoneTransform = {}
 ---@field bPropagateToChildren boolean
 ---@field CachedChild FCachedRigElement
 ---@field CachedParent FCachedRigElement
-FRigUnit_SetRelativeRotationForItem = {}
+local FRigUnit_SetRelativeRotationForItem = {}
 
 
 
@@ -6134,7 +6134,7 @@ FRigUnit_SetRelativeRotationForItem = {}
 ---@field bPropagateToChildren boolean
 ---@field CachedChild FCachedRigElement
 ---@field CachedParent FCachedRigElement
-FRigUnit_SetRelativeTransformForItem = {}
+local FRigUnit_SetRelativeTransformForItem = {}
 
 
 
@@ -6147,7 +6147,7 @@ FRigUnit_SetRelativeTransformForItem = {}
 ---@field bPropagateToChildren boolean
 ---@field CachedChild FCachedRigElement
 ---@field CachedParent FCachedRigElement
-FRigUnit_SetRelativeTranslationForItem = {}
+local FRigUnit_SetRelativeTranslationForItem = {}
 
 
 
@@ -6159,13 +6159,13 @@ FRigUnit_SetRelativeTranslationForItem = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_SetRotation = {}
+local FRigUnit_SetRotation = {}
 
 
 
 ---@class FRigUnit_SetRotatorAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value FRotator
-FRigUnit_SetRotatorAnimationChannel = {}
+local FRigUnit_SetRotatorAnimationChannel = {}
 
 
 
@@ -6177,7 +6177,7 @@ FRigUnit_SetRotatorAnimationChannel = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_SetScale = {}
+local FRigUnit_SetScale = {}
 
 
 
@@ -6185,7 +6185,7 @@ FRigUnit_SetScale = {}
 ---@field Control FName
 ---@field Transform FTransform
 ---@field CachedControlIndex FCachedRigElement
-FRigUnit_SetShapeTransform = {}
+local FRigUnit_SetShapeTransform = {}
 
 
 
@@ -6195,7 +6195,7 @@ FRigUnit_SetShapeTransform = {}
 ---@field Result FTransform
 ---@field Space EBoneGetterSetterMode
 ---@field CachedSpaceIndex FCachedRigElement
-FRigUnit_SetSpaceInitialTransform = {}
+local FRigUnit_SetSpaceInitialTransform = {}
 
 
 
@@ -6205,7 +6205,7 @@ FRigUnit_SetSpaceInitialTransform = {}
 ---@field Transform FTransform
 ---@field SpaceType EBoneGetterSetterMode
 ---@field CachedSpaceIndex FCachedRigElement
-FRigUnit_SetSpaceTransform = {}
+local FRigUnit_SetSpaceTransform = {}
 
 
 
@@ -6217,13 +6217,13 @@ FRigUnit_SetSpaceTransform = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_SetTransform = {}
+local FRigUnit_SetTransform = {}
 
 
 
 ---@class FRigUnit_SetTransformAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value FTransform
-FRigUnit_SetTransformAnimationChannel = {}
+local FRigUnit_SetTransformAnimationChannel = {}
 
 
 
@@ -6235,7 +6235,7 @@ FRigUnit_SetTransformAnimationChannel = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex TArray<FCachedRigElement>
-FRigUnit_SetTransformArray = {}
+local FRigUnit_SetTransformArray = {}
 
 
 
@@ -6247,7 +6247,7 @@ FRigUnit_SetTransformArray = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex TArray<FCachedRigElement>
-FRigUnit_SetTransformItemArray = {}
+local FRigUnit_SetTransformItemArray = {}
 
 
 
@@ -6259,28 +6259,28 @@ FRigUnit_SetTransformItemArray = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field CachedIndex FCachedRigElement
-FRigUnit_SetTranslation = {}
+local FRigUnit_SetTranslation = {}
 
 
 
 ---@class FRigUnit_SetVector2DAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value FVector2D
-FRigUnit_SetVector2DAnimationChannel = {}
+local FRigUnit_SetVector2DAnimationChannel = {}
 
 
 
 ---@class FRigUnit_SetVectorAnimationChannel : FRigUnit_SetAnimationChannelBase
 ---@field Value FVector
-FRigUnit_SetVectorAnimationChannel = {}
+local FRigUnit_SetVectorAnimationChannel = {}
 
 
 
 ---@class FRigUnit_SimBase : FRigUnit
-FRigUnit_SimBase = {}
+local FRigUnit_SimBase = {}
 
 
 ---@class FRigUnit_SimBaseMutable : FRigUnitMutable
-FRigUnit_SimBaseMutable = {}
+local FRigUnit_SimBaseMutable = {}
 
 
 ---@class FRigUnit_SlideChain : FRigUnit_HighlevelBaseMutable
@@ -6289,7 +6289,7 @@ FRigUnit_SimBaseMutable = {}
 ---@field SlideAmount float
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_SlideChain_WorkData
-FRigUnit_SlideChain = {}
+local FRigUnit_SlideChain = {}
 
 
 
@@ -6298,7 +6298,7 @@ FRigUnit_SlideChain = {}
 ---@field SlideAmount float
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_SlideChain_WorkData
-FRigUnit_SlideChainItemArray = {}
+local FRigUnit_SlideChainItemArray = {}
 
 
 
@@ -6307,7 +6307,7 @@ FRigUnit_SlideChainItemArray = {}
 ---@field SlideAmount float
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_SlideChain_WorkData
-FRigUnit_SlideChainPerItem = {}
+local FRigUnit_SlideChainPerItem = {}
 
 
 
@@ -6317,13 +6317,13 @@ FRigUnit_SlideChainPerItem = {}
 ---@field CachedItems TArray<FCachedRigElement>
 ---@field Transforms TArray<FTransform>
 ---@field BlendedTransforms TArray<FTransform>
-FRigUnit_SlideChain_WorkData = {}
+local FRigUnit_SlideChain_WorkData = {}
 
 
 
 ---@class FRigUnit_SpaceName : FRigUnit
 ---@field Space FName
-FRigUnit_SpaceName = {}
+local FRigUnit_SpaceName = {}
 
 
 
@@ -6335,7 +6335,7 @@ FRigUnit_SpaceName = {}
 ---@field bHit boolean
 ---@field HitLocation FVector
 ---@field HitNormal FVector
-FRigUnit_SphereTraceByObjectTypes = {}
+local FRigUnit_SphereTraceByObjectTypes = {}
 
 
 
@@ -6347,7 +6347,7 @@ FRigUnit_SphereTraceByObjectTypes = {}
 ---@field bHit boolean
 ---@field HitLocation FVector
 ---@field HitNormal FVector
-FRigUnit_SphereTraceByTraceChannel = {}
+local FRigUnit_SphereTraceByTraceChannel = {}
 
 
 
@@ -6359,7 +6359,7 @@ FRigUnit_SphereTraceByTraceChannel = {}
 ---@field bHit boolean
 ---@field HitLocation FVector
 ---@field HitNormal FVector
-FRigUnit_SphereTraceWorld = {}
+local FRigUnit_SphereTraceWorld = {}
 
 
 
@@ -6385,7 +6385,7 @@ FRigUnit_SphereTraceWorld = {}
 ---@field LocalDriverTransformInit FTransform
 ---@field CachedRotationOffset FVector
 ---@field bCachedInitTransforms boolean
-FRigUnit_SphericalPoseReader = {}
+local FRigUnit_SphericalPoseReader = {}
 
 
 
@@ -6410,7 +6410,7 @@ FRigUnit_SphericalPoseReader = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugSettings FRigUnit_SpringIK_DebugSettings
 ---@field WorkData FRigUnit_SpringIK_WorkData
-FRigUnit_SpringIK = {}
+local FRigUnit_SpringIK = {}
 
 
 
@@ -6419,7 +6419,7 @@ FRigUnit_SpringIK = {}
 ---@field Scale float
 ---@field Color FLinearColor
 ---@field WorldOffset FTransform
-FRigUnit_SpringIK_DebugSettings = {}
+local FRigUnit_SpringIK_DebugSettings = {}
 
 
 
@@ -6428,7 +6428,7 @@ FRigUnit_SpringIK_DebugSettings = {}
 ---@field CachedPoleVector FCachedRigElement
 ---@field Transforms TArray<FTransform>
 ---@field Simulation FCRSimPointContainer
-FRigUnit_SpringIK_WorkData = {}
+local FRigUnit_SpringIK_WorkData = {}
 
 
 
@@ -6440,7 +6440,7 @@ FRigUnit_SpringIK_WorkData = {}
 ---@field Mass float
 ---@field Result float
 ---@field SpringState FFloatSpringState
-FRigUnit_SpringInterp = {}
+local FRigUnit_SpringInterp = {}
 
 
 
@@ -6457,7 +6457,7 @@ FRigUnit_SpringInterp = {}
 ---@field AngularVelocity FVector
 ---@field SimulatedResult FQuat
 ---@field SpringState FQuaternionSpringState
-FRigUnit_SpringInterpQuaternionV2 = {}
+local FRigUnit_SpringInterpQuaternionV2 = {}
 
 
 
@@ -6474,7 +6474,7 @@ FRigUnit_SpringInterpQuaternionV2 = {}
 ---@field Velocity float
 ---@field SimulatedResult float
 ---@field SpringState FFloatSpringState
-FRigUnit_SpringInterpV2 = {}
+local FRigUnit_SpringInterpV2 = {}
 
 
 
@@ -6486,7 +6486,7 @@ FRigUnit_SpringInterpV2 = {}
 ---@field Mass float
 ---@field Result FVector
 ---@field SpringState FVectorSpringState
-FRigUnit_SpringInterpVector = {}
+local FRigUnit_SpringInterpVector = {}
 
 
 
@@ -6503,31 +6503,31 @@ FRigUnit_SpringInterpVector = {}
 ---@field Velocity FVector
 ---@field SimulatedResult FVector
 ---@field SpringState FVectorSpringState
-FRigUnit_SpringInterpVectorV2 = {}
+local FRigUnit_SpringInterpVectorV2 = {}
 
 
 
 ---@class FRigUnit_StartProfilingTimer : FRigUnit_DebugBaseMutable
-FRigUnit_StartProfilingTimer = {}
+local FRigUnit_StartProfilingTimer = {}
 
 
 ---@class FRigUnit_StartsWith : FRigUnit_NameBase
 ---@field Name FName
 ---@field Start FName
 ---@field Result boolean
-FRigUnit_StartsWith = {}
+local FRigUnit_StartsWith = {}
 
 
 
 ---@class FRigUnit_StringBase : FRigUnit
-FRigUnit_StringBase = {}
+local FRigUnit_StringBase = {}
 
 
 ---@class FRigUnit_StringConcat : FRigUnit_StringBase
 ---@field A FString
 ---@field B FString
 ---@field Result FString
-FRigUnit_StringConcat = {}
+local FRigUnit_StringConcat = {}
 
 
 
@@ -6535,7 +6535,7 @@ FRigUnit_StringConcat = {}
 ---@field Name FString
 ---@field Search FString
 ---@field Result boolean
-FRigUnit_StringContains = {}
+local FRigUnit_StringContains = {}
 
 
 
@@ -6543,7 +6543,7 @@ FRigUnit_StringContains = {}
 ---@field Name FString
 ---@field Ending FString
 ---@field Result boolean
-FRigUnit_StringEndsWith = {}
+local FRigUnit_StringEndsWith = {}
 
 
 
@@ -6552,7 +6552,7 @@ FRigUnit_StringEndsWith = {}
 ---@field Search FString
 ---@field Found boolean
 ---@field Index int32
-FRigUnit_StringFind = {}
+local FRigUnit_StringFind = {}
 
 
 
@@ -6560,7 +6560,7 @@ FRigUnit_StringFind = {}
 ---@field Values TArray<FString>
 ---@field Separator FString
 ---@field Result FString
-FRigUnit_StringJoin = {}
+local FRigUnit_StringJoin = {}
 
 
 
@@ -6568,14 +6568,14 @@ FRigUnit_StringJoin = {}
 ---@field Value FString
 ---@field Count int32
 ---@field Result FString
-FRigUnit_StringLeft = {}
+local FRigUnit_StringLeft = {}
 
 
 
 ---@class FRigUnit_StringLength : FRigUnit_StringBase
 ---@field Value FString
 ---@field Length int32
-FRigUnit_StringLength = {}
+local FRigUnit_StringLength = {}
 
 
 
@@ -6584,7 +6584,7 @@ FRigUnit_StringLength = {}
 ---@field Start int32
 ---@field Count int32
 ---@field Result FString
-FRigUnit_StringMiddle = {}
+local FRigUnit_StringMiddle = {}
 
 
 
@@ -6592,7 +6592,7 @@ FRigUnit_StringMiddle = {}
 ---@field Value int32
 ---@field Digits int32
 ---@field Result FString
-FRigUnit_StringPadInteger = {}
+local FRigUnit_StringPadInteger = {}
 
 
 
@@ -6601,14 +6601,14 @@ FRigUnit_StringPadInteger = {}
 ---@field Old FString
 ---@field New FString
 ---@field Result FString
-FRigUnit_StringReplace = {}
+local FRigUnit_StringReplace = {}
 
 
 
 ---@class FRigUnit_StringReverse : FRigUnit_StringBase
 ---@field Value FString
 ---@field Reverse FString
-FRigUnit_StringReverse = {}
+local FRigUnit_StringReverse = {}
 
 
 
@@ -6616,7 +6616,7 @@ FRigUnit_StringReverse = {}
 ---@field Value FString
 ---@field Count int32
 ---@field Result FString
-FRigUnit_StringRight = {}
+local FRigUnit_StringRight = {}
 
 
 
@@ -6624,7 +6624,7 @@ FRigUnit_StringRight = {}
 ---@field Value FString
 ---@field Separator FString
 ---@field Result TArray<FString>
-FRigUnit_StringSplit = {}
+local FRigUnit_StringSplit = {}
 
 
 
@@ -6632,28 +6632,28 @@ FRigUnit_StringSplit = {}
 ---@field Name FString
 ---@field Start FString
 ---@field Result boolean
-FRigUnit_StringStartsWith = {}
+local FRigUnit_StringStartsWith = {}
 
 
 
 ---@class FRigUnit_StringToLowercase : FRigUnit_StringBase
 ---@field Value FString
 ---@field Result FString
-FRigUnit_StringToLowercase = {}
+local FRigUnit_StringToLowercase = {}
 
 
 
 ---@class FRigUnit_StringToUppercase : FRigUnit_StringBase
 ---@field Value FString
 ---@field Result FString
-FRigUnit_StringToUppercase = {}
+local FRigUnit_StringToUppercase = {}
 
 
 
 ---@class FRigUnit_StringTrimWhitespace : FRigUnit_StringBase
 ---@field Value FString
 ---@field Result FString
-FRigUnit_StringTrimWhitespace = {}
+local FRigUnit_StringTrimWhitespace = {}
 
 
 
@@ -6663,16 +6663,16 @@ FRigUnit_StringTrimWhitespace = {}
 ---@field FromEnd boolean
 ---@field Remainder FString
 ---@field Chopped FString
-FRigUnit_StringTruncate = {}
+local FRigUnit_StringTruncate = {}
 
 
 
 ---@class FRigUnit_Subtract_FloatFloat : FRigUnit_BinaryFloatOp
-FRigUnit_Subtract_FloatFloat = {}
+local FRigUnit_Subtract_FloatFloat = {}
 
 
 ---@class FRigUnit_Subtract_VectorVector : FRigUnit_BinaryVectorOp
-FRigUnit_Subtract_VectorVector = {}
+local FRigUnit_Subtract_VectorVector = {}
 
 
 ---@class FRigUnit_SwitchParent : FRigUnit_DynamicHierarchyBaseMutable
@@ -6680,7 +6680,7 @@ FRigUnit_Subtract_VectorVector = {}
 ---@field Child FRigElementKey
 ---@field Parent FRigElementKey
 ---@field bMaintainGlobal boolean
-FRigUnit_SwitchParent = {}
+local FRigUnit_SwitchParent = {}
 
 
 
@@ -6695,7 +6695,7 @@ FRigUnit_SwitchParent = {}
 ---@field AccumulatedAbsolute float
 ---@field AccumulatedRelative float
 ---@field NumIterations int32
-FRigUnit_TimeLoop = {}
+local FRigUnit_TimeLoop = {}
 
 
 
@@ -6709,7 +6709,7 @@ FRigUnit_TimeLoop = {}
 ---@field DeltaTimes TArray<float>
 ---@field LastInsertIndex int32
 ---@field UpperBound int32
-FRigUnit_TimeOffsetFloat = {}
+local FRigUnit_TimeOffsetFloat = {}
 
 
 
@@ -6723,7 +6723,7 @@ FRigUnit_TimeOffsetFloat = {}
 ---@field DeltaTimes TArray<float>
 ---@field LastInsertIndex int32
 ---@field UpperBound int32
-FRigUnit_TimeOffsetTransform = {}
+local FRigUnit_TimeOffsetTransform = {}
 
 
 
@@ -6737,7 +6737,7 @@ FRigUnit_TimeOffsetTransform = {}
 ---@field DeltaTimes TArray<float>
 ---@field LastInsertIndex int32
 ---@field UpperBound int32
-FRigUnit_TimeOffsetVector = {}
+local FRigUnit_TimeOffsetVector = {}
 
 
 
@@ -6745,28 +6745,28 @@ FRigUnit_TimeOffsetVector = {}
 ---@field Speed float
 ---@field Time float
 ---@field AccumulatedValue float
-FRigUnit_Timeline = {}
+local FRigUnit_Timeline = {}
 
 
 
 ---@class FRigUnit_ToRigSpace_Location : FRigUnit
 ---@field Value FVector
 ---@field Global FVector
-FRigUnit_ToRigSpace_Location = {}
+local FRigUnit_ToRigSpace_Location = {}
 
 
 
 ---@class FRigUnit_ToRigSpace_Rotation : FRigUnit
 ---@field Value FQuat
 ---@field Global FQuat
-FRigUnit_ToRigSpace_Rotation = {}
+local FRigUnit_ToRigSpace_Rotation = {}
 
 
 
 ---@class FRigUnit_ToRigSpace_Transform : FRigUnit
 ---@field Value FTransform
 ---@field Global FTransform
-FRigUnit_ToRigSpace_Transform = {}
+local FRigUnit_ToRigSpace_Transform = {}
 
 
 
@@ -6775,28 +6775,28 @@ FRigUnit_ToRigSpace_Transform = {}
 ---@field TwistAxis FVector
 ---@field Swing FQuat
 ---@field Twist FQuat
-FRigUnit_ToSwingAndTwist = {}
+local FRigUnit_ToSwingAndTwist = {}
 
 
 
 ---@class FRigUnit_ToWorldSpace_Location : FRigUnit
 ---@field Value FVector
 ---@field World FVector
-FRigUnit_ToWorldSpace_Location = {}
+local FRigUnit_ToWorldSpace_Location = {}
 
 
 
 ---@class FRigUnit_ToWorldSpace_Rotation : FRigUnit
 ---@field Value FQuat
 ---@field World FQuat
-FRigUnit_ToWorldSpace_Rotation = {}
+local FRigUnit_ToWorldSpace_Rotation = {}
 
 
 
 ---@class FRigUnit_ToWorldSpace_Transform : FRigUnit
 ---@field Value FTransform
 ---@field World FTransform
-FRigUnit_ToWorldSpace_Transform = {}
+local FRigUnit_ToWorldSpace_Transform = {}
 
 
 
@@ -6808,7 +6808,7 @@ FRigUnit_ToWorldSpace_Transform = {}
 ---@field Targets TArray<FConstraintTarget>
 ---@field bUseInitialTransforms boolean
 ---@field WorkData FRigUnit_TransformConstraint_WorkData
-FRigUnit_TransformConstraint = {}
+local FRigUnit_TransformConstraint = {}
 
 
 
@@ -6820,14 +6820,14 @@ FRigUnit_TransformConstraint = {}
 ---@field Targets TArray<FConstraintTarget>
 ---@field bUseInitialTransforms boolean
 ---@field WorkData FRigUnit_TransformConstraint_WorkData
-FRigUnit_TransformConstraintPerItem = {}
+local FRigUnit_TransformConstraintPerItem = {}
 
 
 
 ---@class FRigUnit_TransformConstraint_WorkData
 ---@field ConstraintData TArray<FConstraintData>
 ---@field ConstraintDataToTargets TMap<int32, int32>
-FRigUnit_TransformConstraint_WorkData = {}
+local FRigUnit_TransformConstraint_WorkData = {}
 
 
 
@@ -6840,7 +6840,7 @@ FRigUnit_TransformConstraint_WorkData = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_TwistBones_WorkData
-FRigUnit_TwistBones = {}
+local FRigUnit_TwistBones = {}
 
 
 
@@ -6852,7 +6852,7 @@ FRigUnit_TwistBones = {}
 ---@field Weight float
 ---@field bPropagateToChildren boolean
 ---@field WorkData FRigUnit_TwistBones_WorkData
-FRigUnit_TwistBonesPerItem = {}
+local FRigUnit_TwistBonesPerItem = {}
 
 
 
@@ -6860,7 +6860,7 @@ FRigUnit_TwistBonesPerItem = {}
 ---@field CachedItems TArray<FCachedRigElement>
 ---@field ItemRatios TArray<float>
 ---@field ItemTransforms TArray<FTransform>
-FRigUnit_TwistBones_WorkData = {}
+local FRigUnit_TwistBones_WorkData = {}
 
 
 
@@ -6883,7 +6883,7 @@ FRigUnit_TwistBones_WorkData = {}
 ---@field EndJointIndex int32
 ---@field UpperLimbLength float
 ---@field LowerLimbLength float
-FRigUnit_TwoBoneIKFK = {}
+local FRigUnit_TwoBoneIKFK = {}
 
 
 
@@ -6910,7 +6910,7 @@ FRigUnit_TwoBoneIKFK = {}
 ---@field CachedBoneBIndex FCachedRigElement
 ---@field CachedEffectorBoneIndex FCachedRigElement
 ---@field CachedPoleVectorSpaceIndex FCachedRigElement
-FRigUnit_TwoBoneIKSimple = {}
+local FRigUnit_TwoBoneIKSimple = {}
 
 
 
@@ -6937,7 +6937,7 @@ FRigUnit_TwoBoneIKSimple = {}
 ---@field CachedItemBIndex FCachedRigElement
 ---@field CachedEffectorItemIndex FCachedRigElement
 ---@field CachedPoleVectorSpaceIndex FCachedRigElement
-FRigUnit_TwoBoneIKSimplePerItem = {}
+local FRigUnit_TwoBoneIKSimplePerItem = {}
 
 
 
@@ -6954,7 +6954,7 @@ FRigUnit_TwoBoneIKSimplePerItem = {}
 ---@field BoneALength float
 ---@field BoneBLength float
 ---@field Elbow FTransform
-FRigUnit_TwoBoneIKSimpleTransforms = {}
+local FRigUnit_TwoBoneIKSimpleTransforms = {}
 
 
 
@@ -6968,7 +6968,7 @@ FRigUnit_TwoBoneIKSimpleTransforms = {}
 ---@field BoneALength float
 ---@field BoneBLength float
 ---@field Elbow FVector
-FRigUnit_TwoBoneIKSimpleVectors = {}
+local FRigUnit_TwoBoneIKSimpleVectors = {}
 
 
 
@@ -6976,28 +6976,28 @@ FRigUnit_TwoBoneIKSimpleVectors = {}
 ---@field bEnabled boolean
 ---@field Scale float
 ---@field WorldOffset FTransform
-FRigUnit_TwoBoneIKSimple_DebugSettings = {}
+local FRigUnit_TwoBoneIKSimple_DebugSettings = {}
 
 
 
 ---@class FRigUnit_UnaryQuaternionOp : FRigUnit
 ---@field Argument FQuat
 ---@field Result FQuat
-FRigUnit_UnaryQuaternionOp = {}
+local FRigUnit_UnaryQuaternionOp = {}
 
 
 
 ---@class FRigUnit_UnsetCurveValue : FRigUnitMutable
 ---@field Curve FName
 ---@field CachedCurveIndex FCachedRigElement
-FRigUnit_UnsetCurveValue = {}
+local FRigUnit_UnsetCurveValue = {}
 
 
 
 ---@class FRigUnit_UserDefinedEvent : FRigUnit
 ---@field ExecuteContext FControlRigExecuteContext
 ---@field EventName FName
-FRigUnit_UserDefinedEvent = {}
+local FRigUnit_UserDefinedEvent = {}
 
 
 
@@ -7012,7 +7012,7 @@ FRigUnit_UserDefinedEvent = {}
 ---@field Acceleration FVector
 ---@field Point FCRSimPoint
 ---@field bInitialized boolean
-FRigUnit_VerletIntegrateVector = {}
+local FRigUnit_VerletIntegrateVector = {}
 
 
 
@@ -7022,7 +7022,7 @@ FRigUnit_VerletIntegrateVector = {}
 ---@field Thickness float
 ---@field Scale float
 ---@field BoneSpace FName
-FRigUnit_VisualDebugQuat = {}
+local FRigUnit_VisualDebugQuat = {}
 
 
 
@@ -7032,7 +7032,7 @@ FRigUnit_VisualDebugQuat = {}
 ---@field Thickness float
 ---@field Scale float
 ---@field Space FRigElementKey
-FRigUnit_VisualDebugQuatItemSpace = {}
+local FRigUnit_VisualDebugQuatItemSpace = {}
 
 
 
@@ -7042,7 +7042,7 @@ FRigUnit_VisualDebugQuatItemSpace = {}
 ---@field Thickness float
 ---@field Scale float
 ---@field BoneSpace FName
-FRigUnit_VisualDebugTransform = {}
+local FRigUnit_VisualDebugTransform = {}
 
 
 
@@ -7052,7 +7052,7 @@ FRigUnit_VisualDebugTransform = {}
 ---@field Thickness float
 ---@field Scale float
 ---@field Space FRigElementKey
-FRigUnit_VisualDebugTransformItemSpace = {}
+local FRigUnit_VisualDebugTransformItemSpace = {}
 
 
 
@@ -7064,7 +7064,7 @@ FRigUnit_VisualDebugTransformItemSpace = {}
 ---@field Thickness float
 ---@field Scale float
 ---@field BoneSpace FName
-FRigUnit_VisualDebugVector = {}
+local FRigUnit_VisualDebugVector = {}
 
 
 
@@ -7076,26 +7076,26 @@ FRigUnit_VisualDebugVector = {}
 ---@field Thickness float
 ---@field Scale float
 ---@field Space FRigElementKey
-FRigUnit_VisualDebugVectorItemSpace = {}
+local FRigUnit_VisualDebugVectorItemSpace = {}
 
 
 
 ---@class FRigVectorArrayMetadata : FRigBaseMetadata
 ---@field Value TArray<FVector>
-FRigVectorArrayMetadata = {}
+local FRigVectorArrayMetadata = {}
 
 
 
 ---@class FRigVectorMetadata : FRigBaseMetadata
 ---@field Value FVector
-FRigVectorMetadata = {}
+local FRigVectorMetadata = {}
 
 
 
 ---@class FSpaceControlNameAndChannel
 ---@field ControlName FName
 ---@field SpaceCurve FMovieSceneControlRigSpaceChannel
-FSpaceControlNameAndChannel = {}
+local FSpaceControlNameAndChannel = {}
 
 
 
@@ -7106,20 +7106,20 @@ FSpaceControlNameAndChannel = {}
 ---@field DebugScale float
 ---@field DebugSegments int32
 ---@field DebugThickness float
-FSphericalPoseReaderDebugSettings = {}
+local FSphericalPoseReaderDebugSettings = {}
 
 
 
 ---@class FSphericalRegion
-FSphericalRegion = {}
+local FSphericalRegion = {}
 
 
 ---@class FStructReference
-FStructReference = {}
+local FStructReference = {}
 
 
 ---@class UAdditiveControlRig : UControlRig
-UAdditiveControlRig = {}
+local UAdditiveControlRig = {}
 
 
 ---@class UControlRig : UObject
@@ -7142,7 +7142,7 @@ UAdditiveControlRig = {}
 ---@field InteractionRigClass TSubclassOf<UControlRig>
 ---@field AssetUserData TArray<UAssetUserData>
 ---@field OnControlSelected_BP FControlRigOnControlSelected_BP
-UControlRig = {}
+local UControlRig = {}
 
 ---@param InEventName FName
 ---@return boolean
@@ -7230,11 +7230,11 @@ function UControlRig:CanExecute() end
 
 
 ---@class UControlRigAnimInstance : UAnimInstance
-UControlRigAnimInstance = {}
+local UControlRigAnimInstance = {}
 
 
 ---@class UControlRigBlueprintGeneratedClass : UBlueprintGeneratedClass
-UControlRigBlueprintGeneratedClass = {}
+local UControlRigBlueprintGeneratedClass = {}
 
 
 ---@class UControlRigComponent : UPrimitiveComponent
@@ -7258,7 +7258,7 @@ UControlRigBlueprintGeneratedClass = {}
 ---@field bDrawBones boolean
 ---@field bShowDebugDrawing boolean
 ---@field ControlRig UControlRig
-UControlRigComponent = {}
+local UControlRigComponent = {}
 
 ---@param DeltaTime float
 function UControlRigComponent:Update(DeltaTime) end
@@ -7405,11 +7405,11 @@ function UControlRigComponent:AddMappedCompleteSkeletalMesh(SkeletalMeshComponen
 
 
 ---@class UControlRigEditorSettings : UDeveloperSettings
-UControlRigEditorSettings = {}
+local UControlRigEditorSettings = {}
 
 
 ---@class UControlRigLayerInstance : UAnimInstance
-UControlRigLayerInstance = {}
+local UControlRigLayerInstance = {}
 
 
 ---@class UControlRigNumericalValidationPass : UControlRigValidationPass
@@ -7423,19 +7423,19 @@ UControlRigLayerInstance = {}
 ---@field EventNameA FName
 ---@field EventNameB FName
 ---@field Pose FRigPose
-UControlRigNumericalValidationPass = {}
+local UControlRigNumericalValidationPass = {}
 
 
 
 ---@class UControlRigObjectHolder : UObject
 ---@field Objects TArray<UObject>
-UControlRigObjectHolder = {}
+local UControlRigObjectHolder = {}
 
 
 
 ---@class UControlRigPoseAsset : UObject
 ---@field Pose FControlRigControlPose
-UControlRigPoseAsset = {}
+local UControlRigPoseAsset = {}
 
 ---@param InControlRig UControlRig
 ---@param bDoMirror boolean
@@ -7466,13 +7466,13 @@ function UControlRigPoseAsset:DoesMirrorMatch(ControlRig, ControlName) end
 ---@field LeftSide FString
 ---@field MirrorAxis EAxis::Type
 ---@field AxisToFlip EAxis::Type
-UControlRigPoseMirrorSettings = {}
+local UControlRigPoseMirrorSettings = {}
 
 
 
 ---@class UControlRigPoseProjectSettings : UObject
 ---@field RootSaveDirs TArray<FDirectoryPath>
-UControlRigPoseProjectSettings = {}
+local UControlRigPoseProjectSettings = {}
 
 
 
@@ -7480,12 +7480,12 @@ UControlRigPoseProjectSettings = {}
 ---@field LastExportedToAnimationSequence TSoftObjectPtr<UAnimSequence>
 ---@field LastExportedUsingSkeletalMesh TSoftObjectPtr<USkeletalMesh>
 ---@field LastExportedFrameRate float
-UControlRigSequence = {}
+local UControlRigSequence = {}
 
 
 
 ---@class UControlRigSettings : UDeveloperSettings
-UControlRigSettings = {}
+local UControlRigSettings = {}
 
 
 ---@class UControlRigShapeLibrary : UObject
@@ -7494,7 +7494,7 @@ UControlRigSettings = {}
 ---@field XRayMaterial TSoftObjectPtr<UMaterial>
 ---@field MaterialColorParameter FName
 ---@field Shapes TArray<FControlRigShapeDefinition>
-UControlRigShapeLibrary = {}
+local UControlRigShapeLibrary = {}
 
 
 
@@ -7503,13 +7503,13 @@ UControlRigShapeLibrary = {}
 ---@field bSnapPosition boolean
 ---@field bSnapRotation boolean
 ---@field bSnapScale boolean
-UControlRigSnapSettings = {}
+local UControlRigSnapSettings = {}
 
 
 
 ---@class UControlRigTransformWorkflowOptions : UControlRigWorkflowOptions
 ---@field TransformType ERigTransformType::Type
-UControlRigTransformWorkflowOptions = {}
+local UControlRigTransformWorkflowOptions = {}
 
 ---@param InSubject UObject
 ---@return TArray<FRigVMUserWorkflow>
@@ -7517,32 +7517,32 @@ function UControlRigTransformWorkflowOptions:ProvideWorkflows(InSubject) end
 
 
 ---@class UControlRigValidationPass : UObject
-UControlRigValidationPass = {}
+local UControlRigValidationPass = {}
 
 
 ---@class UControlRigValidator : UObject
 ---@field Passes TArray<UControlRigValidationPass>
-UControlRigValidator = {}
+local UControlRigValidator = {}
 
 
 
 ---@class UControlRigWorkflowOptions : URigVMUserWorkflowOptions
 ---@field Hierarchy URigHierarchy
 ---@field Selection TArray<FRigElementKey>
-UControlRigWorkflowOptions = {}
+local UControlRigWorkflowOptions = {}
 
 ---@return boolean
 function UControlRigWorkflowOptions:EnsureAtLeastOneRigElementSelected() end
 
 
 ---@class UDefault__ControlRigBlueprintGeneratedClass
-UDefault__ControlRigBlueprintGeneratedClass = {}
+local UDefault__ControlRigBlueprintGeneratedClass = {}
 
 
 ---@class UFKControlRig : UControlRig
 ---@field IsControlActive TArray<boolean>
 ---@field ApplyMode EControlRigFKRigExecuteMode
-UFKControlRig = {}
+local UFKControlRig = {}
 
 
 
@@ -7557,7 +7557,7 @@ UFKControlRig = {}
 ---@field IntegerParameterNamesAndCurves TArray<FIntegerParameterNameAndCurve>
 ---@field SpaceChannels TArray<FSpaceControlNameAndChannel>
 ---@field ConstraintsChannels TArray<FConstraintAndActiveChannel>
-UMovieSceneControlRigParameterSection = {}
+local UMovieSceneControlRigParameterSection = {}
 
 
 
@@ -7566,7 +7566,7 @@ UMovieSceneControlRigParameterSection = {}
 ---@field SectionToKey UMovieSceneSection
 ---@field Sections TArray<UMovieSceneSection>
 ---@field TrackName FName
-UMovieSceneControlRigParameterTrack = {}
+local UMovieSceneControlRigParameterTrack = {}
 
 
 
@@ -7579,7 +7579,7 @@ UMovieSceneControlRigParameterTrack = {}
 ---@field HierarchyController URigHierarchyController
 ---@field PreviousNameMap TMap<FRigElementKey, FRigElementKey>
 ---@field HierarchyForCacheValidation URigHierarchy
-URigHierarchy = {}
+local URigHierarchy = {}
 
 ---@param InElementIndex int32
 ---@param bSetupUndo boolean
@@ -8187,7 +8187,7 @@ function URigHierarchy:Contains_ForBlueprint(InKey) end
 ---@class URigHierarchyController : UObject
 ---@field bReportWarningsAndErrors boolean
 ---@field Hierarchy TWeakObjectPtr<URigHierarchy>
-URigHierarchyController = {}
+local URigHierarchyController = {}
 
 ---@param InKeys TArray<FRigElementKey>
 ---@param bPrintPythonCommand boolean
@@ -8353,7 +8353,7 @@ function URigHierarchyController:AddAnimationChannel_ForBlueprint(InName, InPare
 ---@class UTransformableControlHandle : UTransformableHandle
 ---@field ControlRig TSoftObjectPtr<UControlRig>
 ---@field ControlName FName
-UTransformableControlHandle = {}
+local UTransformableControlHandle = {}
 
 
 

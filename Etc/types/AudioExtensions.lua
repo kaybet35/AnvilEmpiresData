@@ -14,12 +14,12 @@
 ---@field ArrayStringParam TArray<FString>
 ---@field ParamType EAudioParameterType
 ---@field TypeName FName
-FAudioParameter = {}
+local FAudioParameter = {}
 
 
 
 ---@class IAudioParameterControllerInterface : IInterface
-IAudioParameterControllerInterface = {}
+local IAudioParameterControllerInterface = {}
 
 ---@param InName FName
 function IAudioParameterControllerInterface:SetTriggerParameter(InName) end
@@ -60,69 +60,69 @@ function IAudioParameterControllerInterface:ResetParameters() end
 
 ---@class UAudioCodecEncoderSettings : UObject
 ---@field Version int32
-UAudioCodecEncoderSettings = {}
+local UAudioCodecEncoderSettings = {}
 
 
 
 ---@class UAudioEndpointSettingsBase : UObject
-UAudioEndpointSettingsBase = {}
+local UAudioEndpointSettingsBase = {}
 
 
 ---@class UAudioPcmEncoderSettings : UAudioCodecEncoderSettings
 ---@field BitDepthConversion EPcmBitDepthConversion
-UAudioPcmEncoderSettings = {}
+local UAudioPcmEncoderSettings = {}
 
 
 
 ---@class UDummyEndpointSettings : UAudioEndpointSettingsBase
-UDummyEndpointSettings = {}
+local UDummyEndpointSettings = {}
 
 
 ---@class UOcclusionPluginSourceSettingsBase : UObject
-UOcclusionPluginSourceSettingsBase = {}
+local UOcclusionPluginSourceSettingsBase = {}
 
 
 ---@class UReverbPluginSourceSettingsBase : UObject
-UReverbPluginSourceSettingsBase = {}
+local UReverbPluginSourceSettingsBase = {}
 
 
 ---@class USoundModulatorBase : UObject
-USoundModulatorBase = {}
+local USoundModulatorBase = {}
 
 
 ---@class USoundfieldEffectBase : UObject
 ---@field Settings USoundfieldEffectSettingsBase
-USoundfieldEffectBase = {}
+local USoundfieldEffectBase = {}
 
 
 
 ---@class USoundfieldEffectSettingsBase : UObject
-USoundfieldEffectSettingsBase = {}
+local USoundfieldEffectSettingsBase = {}
 
 
 ---@class USoundfieldEncodingSettingsBase : UObject
-USoundfieldEncodingSettingsBase = {}
+local USoundfieldEncodingSettingsBase = {}
 
 
 ---@class USoundfieldEndpointSettingsBase : UObject
-USoundfieldEndpointSettingsBase = {}
+local USoundfieldEndpointSettingsBase = {}
 
 
 ---@class USourceDataOverridePluginSourceSettingsBase : UObject
-USourceDataOverridePluginSourceSettingsBase = {}
+local USourceDataOverridePluginSourceSettingsBase = {}
 
 
 ---@class USpatializationPluginSourceSettingsBase : UObject
-USpatializationPluginSourceSettingsBase = {}
+local USpatializationPluginSourceSettingsBase = {}
 
 
 ---@class UWaveformTransformationBase : UObject
-UWaveformTransformationBase = {}
+local UWaveformTransformationBase = {}
 
 
 ---@class UWaveformTransformationChain : UObject
 ---@field Transformations TArray<UWaveformTransformationBase>
-UWaveformTransformationChain = {}
+local UWaveformTransformationChain = {}
 
 
 

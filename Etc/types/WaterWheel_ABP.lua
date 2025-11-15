@@ -16,7 +16,7 @@
 ---@field __NameProperty_58 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -24,7 +24,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -40,7 +40,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer_1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_TwoWayBlend FAnimNode_TwoWayBlend
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
-UWaterWheel_ABP_C = {}
+local UWaterWheel_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UWaterWheel_ABP_C:AnimGraph(AnimGraph) end

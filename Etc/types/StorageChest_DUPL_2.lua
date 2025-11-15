@@ -2,7 +2,7 @@
 
 ---@class AStorageChest_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AStorageChest_C = {}
+local AStorageChest_C = {}
 
 
 

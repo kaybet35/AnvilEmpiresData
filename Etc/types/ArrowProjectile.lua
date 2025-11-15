@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UArrowProjectile_C : UEntityTemplate
-UArrowProjectile_C = {}
+local UArrowProjectile_C = {}
 
 

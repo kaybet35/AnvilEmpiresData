@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFishingSpot_C : UEntityTemplate
-UFishingSpot_C = {}
+local UFishingSpot_C = {}
 
 

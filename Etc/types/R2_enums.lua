@@ -1,5 +1,5 @@
 ---@enum EAnvilAccessibilityType
-EAnvilAccessibilityType = {
+local EAnvilAccessibilityType = {
     FriendlyOnly = 0,
     ResidentsOnly = 1,
     EnemyCanPlunder = 2,
@@ -9,7 +9,7 @@ EAnvilAccessibilityType = {
 }
 
 ---@enum EAnvilAgePhase
-EAnvilAgePhase = {
+local EAnvilAgePhase = {
     Init = 0,
     PrimaryGame = 1,
     PrimaryGameEnd = 2,
@@ -21,7 +21,7 @@ EAnvilAgePhase = {
 }
 
 ---@enum EAnvilAnimalState
-EAnvilAnimalState = {
+local EAnvilAnimalState = {
     Idle = 0,
     Walking = 1,
     Running = 2,
@@ -35,7 +35,7 @@ EAnvilAnimalState = {
 }
 
 ---@enum EAnvilAnvilGameplayType
-EAnvilAnvilGameplayType = {
+local EAnvilAnvilGameplayType = {
     Normal = 0,
     HeatBased = 1,
     NumTypes = 2,
@@ -43,7 +43,7 @@ EAnvilAnvilGameplayType = {
 }
 
 ---@enum EAnvilArmourType
-EAnvilArmourType = {
+local EAnvilArmourType = {
     None = 0,
     Leather = 1,
     Iron = 2,
@@ -52,7 +52,7 @@ EAnvilArmourType = {
 }
 
 ---@enum EAnvilAvatarAttributeType
-EAnvilAvatarAttributeType = {
+local EAnvilAvatarAttributeType = {
     Fitness = 0,
     Combat = 1,
     Smithing = 2,
@@ -66,7 +66,7 @@ EAnvilAvatarAttributeType = {
 }
 
 ---@enum EAnvilAvatarOwnerType
-EAnvilAvatarOwnerType = {
+local EAnvilAvatarOwnerType = {
     Personal = 0,
     Family = 1,
     Public = 2,
@@ -75,7 +75,7 @@ EAnvilAvatarOwnerType = {
 }
 
 ---@enum EAnvilAvatarType
-EAnvilAvatarType = {
+local EAnvilAvatarType = {
     Default = 0,
     Soldier = 1,
     SupportSwordsman = 2,
@@ -87,7 +87,7 @@ EAnvilAvatarType = {
 }
 
 ---@enum EAnvilAvatarXPType
-EAnvilAvatarXPType = {
+local EAnvilAvatarXPType = {
     Attack = 0,
     Gather = 1,
     GatherFish = 2,
@@ -99,7 +99,7 @@ EAnvilAvatarXPType = {
 }
 
 ---@enum EAnvilBeaconInfoType
-EAnvilBeaconInfoType = {
+local EAnvilBeaconInfoType = {
     None = 0,
     Player = 1,
     FamilyCenter = 2,
@@ -109,7 +109,7 @@ EAnvilBeaconInfoType = {
 }
 
 ---@enum EAnvilBuildAreaType
-EAnvilBuildAreaType = {
+local EAnvilBuildAreaType = {
     TownArea = 0,
     FortressArea = 1,
     SmallCampArea = 2,
@@ -122,7 +122,7 @@ EAnvilBuildAreaType = {
 }
 
 ---@enum EAnvilBuildLocationType
-EAnvilBuildLocationType = {
+local EAnvilBuildLocationType = {
     Foundation = 0,
     Landscape = 1,
     LargeRock = 2,
@@ -139,7 +139,7 @@ EAnvilBuildLocationType = {
 }
 
 ---@enum EAnvilBuildStructureType
-EAnvilBuildStructureType = {
+local EAnvilBuildStructureType = {
     Monolithic = 0,
     Foundations = 1,
     Modular = 2,
@@ -151,7 +151,7 @@ EAnvilBuildStructureType = {
 }
 
 ---@enum EAnvilCharacterStance
-EAnvilCharacterStance = {
+local EAnvilCharacterStance = {
     Standing = 0,
     Sitting = 1,
     OnBatteringRam = 2,
@@ -176,7 +176,7 @@ EAnvilCharacterStance = {
 }
 
 ---@enum EAnvilChatType
-EAnvilChatType = {
+local EAnvilChatType = {
     DataCommandList = 0,
     DataPlayerList = 1,
     Admin = 2,
@@ -190,7 +190,7 @@ EAnvilChatType = {
 }
 
 ---@enum EAnvilColliderTags
-EAnvilColliderTags = {
+local EAnvilColliderTags = {
     MeshVisibilityGroup2 = 0,
     Tree = 1,
     SiegeTowerRamp = 2,
@@ -208,7 +208,7 @@ EAnvilColliderTags = {
 }
 
 ---@enum EAnvilCollisionChannel
-EAnvilCollisionChannel = {
+local EAnvilCollisionChannel = {
     Static = 0,
     Dynamic = 1,
     Player = 2,
@@ -244,7 +244,7 @@ EAnvilCollisionChannel = {
 }
 
 ---@enum EAnvilConvertedActionType
-EAnvilConvertedActionType = {
+local EAnvilConvertedActionType = {
     HitAction = 0,
     AnvilAction = 1,
     HeatBoost = 2,
@@ -253,14 +253,14 @@ EAnvilConvertedActionType = {
 }
 
 ---@enum EAnvilCookingType
-EAnvilCookingType = {
+local EAnvilCookingType = {
     DirectHeat = 0,
     Boiled = 1,
     EAnvilCookingType_MAX = 2,
 }
 
 ---@enum EAnvilDamageTargetType
-EAnvilDamageTargetType = {
+local EAnvilDamageTargetType = {
     Default = 0,
     Infantry = 1,
     Horse = 2,
@@ -274,7 +274,7 @@ EAnvilDamageTargetType = {
 }
 
 ---@enum EAnvilDamageType
-EAnvilDamageType = {
+local EAnvilDamageType = {
     Default = 0,
     Slashing = 1,
     Piercing = 2,
@@ -296,7 +296,7 @@ EAnvilDamageType = {
 }
 
 ---@enum EAnvilDismantleStatus
-EAnvilDismantleStatus = {
+local EAnvilDismantleStatus = {
     Success = 0,
     CannotBeDismantled = 1,
     NoPermission = 2,
@@ -309,7 +309,7 @@ EAnvilDismantleStatus = {
 }
 
 ---@enum EAnvilEntityActionType
-EAnvilEntityActionType = {
+local EAnvilEntityActionType = {
     None = 0,
     Upvote = 1,
     Upvoted = 2,
@@ -359,7 +359,7 @@ EAnvilEntityActionType = {
 }
 
 ---@enum EAnvilFactionId
-EAnvilFactionId = {
+local EAnvilFactionId = {
     None = 0,
     Aranic = 1,
     Mirrish = 2,
@@ -369,7 +369,7 @@ EAnvilFactionId = {
 }
 
 ---@enum EAnvilFoodType
-EAnvilFoodType = {
+local EAnvilFoodType = {
     None = 0,
     Berries = 1,
     Fish = 2,
@@ -383,7 +383,7 @@ EAnvilFoodType = {
 }
 
 ---@enum EAnvilGateState
-EAnvilGateState = {
+local EAnvilGateState = {
     Closed = 0,
     Opening = 1,
     Open = 2,
@@ -393,7 +393,7 @@ EAnvilGateState = {
 }
 
 ---@enum EAnvilInputEventType
-EAnvilInputEventType = {
+local EAnvilInputEventType = {
     None = 0,
     PawnInteract = 1,
     PawnInventory = 2,
@@ -442,7 +442,7 @@ EAnvilInputEventType = {
 }
 
 ---@enum EAnvilInputResponseType
-EAnvilInputResponseType = {
+local EAnvilInputResponseType = {
     None = 0,
     ToggleStructureUI = 1,
     TogglePlayerInventory = 2,
@@ -454,7 +454,7 @@ EAnvilInputResponseType = {
 }
 
 ---@enum EAnvilInventoryStackRule
-EAnvilInventoryStackRule = {
+local EAnvilInventoryStackRule = {
     Default = 0,
     ForceStackNonLargeItems = 1,
     ForceStackAllItems = 2,
@@ -462,7 +462,7 @@ EAnvilInventoryStackRule = {
 }
 
 ---@enum EAnvilItemDurabilityType
-EAnvilItemDurabilityType = {
+local EAnvilItemDurabilityType = {
     Default = 0,
     Heat = 1,
     Avatar = 2,
@@ -470,7 +470,7 @@ EAnvilItemDurabilityType = {
 }
 
 ---@enum EAnvilItemFlag
-EAnvilItemFlag = {
+local EAnvilItemFlag = {
     Relic = 0,
     Public = 1,
     NumTypes = 2,
@@ -478,7 +478,7 @@ EAnvilItemFlag = {
 }
 
 ---@enum EAnvilItemPayloadType
-EAnvilItemPayloadType = {
+local EAnvilItemPayloadType = {
     None = 0,
     Quality = 1,
     ConversionProgress = 2,
@@ -487,7 +487,7 @@ EAnvilItemPayloadType = {
 }
 
 ---@enum EAnvilItemQualityType
-EAnvilItemQualityType = {
+local EAnvilItemQualityType = {
     None = 0,
     Low = 1,
     Medium = 2,
@@ -497,7 +497,7 @@ EAnvilItemQualityType = {
 }
 
 ---@enum EAnvilItemSlotBackgroundType
-EAnvilItemSlotBackgroundType = {
+local EAnvilItemSlotBackgroundType = {
     None = 0,
     LeftHand = 1,
     RightHand = 2,
@@ -515,7 +515,7 @@ EAnvilItemSlotBackgroundType = {
 }
 
 ---@enum EAnvilItemTag
-EAnvilItemTag = {
+local EAnvilItemTag = {
     None = 0,
     Crate = 1,
     Stackable = 2,
@@ -552,7 +552,7 @@ EAnvilItemTag = {
 }
 
 ---@enum EAnvilMapId
-EAnvilMapId = {
+local EAnvilMapId = {
     Invalid = 0,
     Sandbox = 1,
     Calligo01 = 2,
@@ -569,7 +569,7 @@ EAnvilMapId = {
 }
 
 ---@enum EAnvilMapPostType
-EAnvilMapPostType = {
+local EAnvilMapPostType = {
     DefendLocation = 0,
     AttackLocation = 1,
     EnemiesLocation = 2,
@@ -582,7 +582,7 @@ EAnvilMapPostType = {
 }
 
 ---@enum EAnvilMovementMode
-EAnvilMovementMode = {
+local EAnvilMovementMode = {
     Walking = 0,
     Flying = 1,
     Swimming = 2,
@@ -591,7 +591,7 @@ EAnvilMovementMode = {
 }
 
 ---@enum EAnvilPhysicalSurfaceType
-EAnvilPhysicalSurfaceType = {
+local EAnvilPhysicalSurfaceType = {
     Default = 0,
     Flesh = 1,
     Grass = 2,
@@ -615,7 +615,7 @@ EAnvilPhysicalSurfaceType = {
 }
 
 ---@enum EAnvilPlacementStatus
-EAnvilPlacementStatus = {
+local EAnvilPlacementStatus = {
     Valid = 0,
     UnknownError = 1,
     Obstructed = 2,
@@ -672,7 +672,7 @@ EAnvilPlacementStatus = {
 }
 
 ---@enum EAnvilPlayerAimMeshType
-EAnvilPlayerAimMeshType = {
+local EAnvilPlayerAimMeshType = {
     None = 0,
     Ranged = 1,
     Melee = 2,
@@ -684,7 +684,7 @@ EAnvilPlayerAimMeshType = {
 }
 
 ---@enum EAnvilPlayerInputMode
-EAnvilPlayerInputMode = {
+local EAnvilPlayerInputMode = {
     Default = 0,
     Building = 1,
     RotatingStructure = 2,
@@ -695,7 +695,7 @@ EAnvilPlayerInputMode = {
 }
 
 ---@enum EAnvilPlayerOnlineStatus
-EAnvilPlayerOnlineStatus = {
+local EAnvilPlayerOnlineStatus = {
     Online = 0,
     Offline = 1,
     Deployed = 2,
@@ -704,7 +704,7 @@ EAnvilPlayerOnlineStatus = {
 }
 
 ---@enum EAnvilPlayerVisEventType
-EAnvilPlayerVisEventType = {
+local EAnvilPlayerVisEventType = {
     OnDeath = 0,
     StatusMessage = 1,
     PlacementStatus = 2,
@@ -721,7 +721,7 @@ EAnvilPlayerVisEventType = {
 }
 
 ---@enum EAnvilPledgedPlayerStatus
-EAnvilPledgedPlayerStatus = {
+local EAnvilPledgedPlayerStatus = {
     None = 0,
     Commoner = 1,
     Citizen = 2,
@@ -734,7 +734,7 @@ EAnvilPledgedPlayerStatus = {
 }
 
 ---@enum EAnvilPowerUnitType
-EAnvilPowerUnitType = {
+local EAnvilPowerUnitType = {
     Pipe = 0,
     Source = 1,
     Sink = 2,
@@ -742,7 +742,7 @@ EAnvilPowerUnitType = {
 }
 
 ---@enum EAnvilProfileNameCheckType
-EAnvilProfileNameCheckType = {
+local EAnvilProfileNameCheckType = {
     Valid = 0,
     TooShort = 1,
     TooLong = 2,
@@ -752,7 +752,7 @@ EAnvilProfileNameCheckType = {
 }
 
 ---@enum EAnvilR2FamilyRoleType
-EAnvilR2FamilyRoleType = {
+local EAnvilR2FamilyRoleType = {
     Guest = 0,
     Member = 1,
     Manager = 2,
@@ -762,7 +762,7 @@ EAnvilR2FamilyRoleType = {
 }
 
 ---@enum EAnvilR2WeatherEventType
-EAnvilR2WeatherEventType = {
+local EAnvilR2WeatherEventType = {
     Rain = 0,
     Snow = 1,
     NumTypes = 2,
@@ -770,7 +770,7 @@ EAnvilR2WeatherEventType = {
 }
 
 ---@enum EAnvilRareResourceAreaType
-EAnvilRareResourceAreaType = {
+local EAnvilRareResourceAreaType = {
     None = 0,
     FoodArea_Deer = 1,
     FoodArea_Boar = 2,
@@ -783,7 +783,7 @@ EAnvilRareResourceAreaType = {
 }
 
 ---@enum EAnvilReservationTimeoutType
-EAnvilReservationTimeoutType = {
+local EAnvilReservationTimeoutType = {
     Login = 0,
     BorderTravelReturn = 1,
     UnderworldTravelReturn = 2,
@@ -791,7 +791,7 @@ EAnvilReservationTimeoutType = {
 }
 
 ---@enum EAnvilResourceType
-EAnvilResourceType = {
+local EAnvilResourceType = {
     Default = 0,
     ChoppedTree = 1,
     LatticeChunk = 2,
@@ -799,7 +799,7 @@ EAnvilResourceType = {
 }
 
 ---@enum EAnvilScorchState
-EAnvilScorchState = {
+local EAnvilScorchState = {
     None = 0,
     OnFire = 1,
     OnFireGrowing = 2,
@@ -809,7 +809,7 @@ EAnvilScorchState = {
 }
 
 ---@enum EAnvilSiegeTowerState
-EAnvilSiegeTowerState = {
+local EAnvilSiegeTowerState = {
     Close = 0,
     Opening = 1,
     Open = 2,
@@ -819,7 +819,7 @@ EAnvilSiegeTowerState = {
 }
 
 ---@enum EAnvilSignPostVisualType
-EAnvilSignPostVisualType = {
+local EAnvilSignPostVisualType = {
     Directional = 0,
     Board = 1,
     Post = 2,
@@ -828,7 +828,7 @@ EAnvilSignPostVisualType = {
 }
 
 ---@enum EAnvilSimActivityState
-EAnvilSimActivityState = {
+local EAnvilSimActivityState = {
     None = 0,
     Idle = 1,
     Attacking = 2,
@@ -869,7 +869,7 @@ EAnvilSimActivityState = {
 }
 
 ---@enum EAnvilSnappingChannelType
-EAnvilSnappingChannelType = {
+local EAnvilSnappingChannelType = {
     General = 0,
     Wall = 1,
     Road = 2,
@@ -907,7 +907,7 @@ EAnvilSnappingChannelType = {
 }
 
 ---@enum EAnvilSpawnType
-EAnvilSpawnType = {
+local EAnvilSpawnType = {
     Starter = 0,
     FamilyArea = 1,
     House = 2,
@@ -921,7 +921,7 @@ EAnvilSpawnType = {
 }
 
 ---@enum EAnvilStatusMessageType
-EAnvilStatusMessageType = {
+local EAnvilStatusMessageType = {
     None = 0,
     Success = 1,
     RequiresTool = 2,
@@ -1075,7 +1075,7 @@ EAnvilStatusMessageType = {
 }
 
 ---@enum EAnvilStimulusType
-EAnvilStimulusType = {
+local EAnvilStimulusType = {
     None = 0,
     VisualThreat = 1,
     AuditoryThreat = 2,
@@ -1087,7 +1087,7 @@ EAnvilStimulusType = {
 }
 
 ---@enum EAnvilTargetAreaType
-EAnvilTargetAreaType = {
+local EAnvilTargetAreaType = {
     None = 0,
     Main = 1,
     Sail = 2,
@@ -1100,7 +1100,7 @@ EAnvilTargetAreaType = {
 }
 
 ---@enum EAnvilToolType
-EAnvilToolType = {
+local EAnvilToolType = {
     None = 0,
     Hands = 1,
     Hammer = 2,
@@ -1122,7 +1122,7 @@ EAnvilToolType = {
 }
 
 ---@enum EAnvilTownSubType
-EAnvilTownSubType = {
+local EAnvilTownSubType = {
     None = 0,
     Town = 1,
     Fortress = 2,
@@ -1130,7 +1130,7 @@ EAnvilTownSubType = {
 }
 
 ---@enum EAnvilTravelType
-EAnvilTravelType = {
+local EAnvilTravelType = {
     None = 0,
     BorderTravel = 1,
     Reinforce = 2,
@@ -1143,7 +1143,7 @@ EAnvilTravelType = {
 }
 
 ---@enum EAnvilTrinaryRequirement
-EAnvilTrinaryRequirement = {
+local EAnvilTrinaryRequirement = {
     Allowed = 0,
     Disallowed = 1,
     Required = 2,
@@ -1152,7 +1152,7 @@ EAnvilTrinaryRequirement = {
 }
 
 ---@enum EAnvilUnderworldModuleEdgeType
-EAnvilUnderworldModuleEdgeType = {
+local EAnvilUnderworldModuleEdgeType = {
     NegativeY = 0,
     PositiveX = 1,
     PositiveY = 2,
@@ -1162,7 +1162,7 @@ EAnvilUnderworldModuleEdgeType = {
 }
 
 ---@enum EAnvilUsePromptType
-EAnvilUsePromptType = {
+local EAnvilUsePromptType = {
     PickupItem = 0,
     Plunder = 1,
     UseEntity = 2,
@@ -1178,7 +1178,7 @@ EAnvilUsePromptType = {
 }
 
 ---@enum EAnvilVehicleMovementPlayerInteractionType
-EAnvilVehicleMovementPlayerInteractionType = {
+local EAnvilVehicleMovementPlayerInteractionType = {
     Ignore = 0,
     Block = 1,
     BlockIfMaxGuard = 2,
@@ -1187,7 +1187,7 @@ EAnvilVehicleMovementPlayerInteractionType = {
 }
 
 ---@enum EAnvilVictoryType
-EAnvilVictoryType = {
+local EAnvilVictoryType = {
     Military = 0,
     Culture = 1,
     Religious = 2,
@@ -1196,7 +1196,7 @@ EAnvilVictoryType = {
 }
 
 ---@enum EAnvilVoteType
-EAnvilVoteType = {
+local EAnvilVoteType = {
     None = 0,
     Up = 1,
     Down = 2,
@@ -1205,7 +1205,7 @@ EAnvilVoteType = {
 }
 
 ---@enum EAnvilWorldEntityType
-EAnvilWorldEntityType = {
+local EAnvilWorldEntityType = {
     None = 0,
     WildSpawn = 1,
     TownHall = 2,
@@ -1222,7 +1222,7 @@ EAnvilWorldEntityType = {
 }
 
 ---@enum EEntityRelevancyPolicy
-EEntityRelevancyPolicy = {
+local EEntityRelevancyPolicy = {
     DistanceBased = 0,
     AlwaysRelevant = 1,
     AlwaysRelevantToFriendlyOnly = 2,
@@ -1232,7 +1232,7 @@ EEntityRelevancyPolicy = {
 }
 
 ---@enum EEntitySerializationType
-EEntitySerializationType = {
+local EEntitySerializationType = {
     SerializationTypeDefault = 0,
     SerializationTypePlayer = 1,
     SerializationTypeController = 2,
@@ -1240,7 +1240,7 @@ EEntitySerializationType = {
 }
 
 ---@enum EVisMeshProfile
-EVisMeshProfile = {
+local EVisMeshProfile = {
     Undefined = 0,
     Structure = 1,
     StructureLandscape = 2,

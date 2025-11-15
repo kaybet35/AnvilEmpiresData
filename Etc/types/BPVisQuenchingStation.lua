@@ -4,7 +4,7 @@
 ---@field ResourceWater UInstancedStaticMeshComponent
 ---@field VisInstancedStockpile UVisInstancedStockpileComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisQuenchingStation_C = {}
+local ABPVisQuenchingStation_C = {}
 
 
 

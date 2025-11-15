@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UProcessedBronze_C : UItemTemplate
-UProcessedBronze_C = {}
+local UProcessedBronze_C = {}
 
 

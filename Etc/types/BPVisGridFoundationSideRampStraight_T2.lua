@@ -133,7 +133,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationSideRampStraight_T2_C = {}
+local ABPVisGridFoundationSideRampStraight_T2_C = {}
 
 
 

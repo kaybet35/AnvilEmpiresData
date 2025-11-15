@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPlayer_C : UEntityTemplate
-UPlayer_C = {}
+local UPlayer_C = {}
 
 

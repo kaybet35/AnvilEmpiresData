@@ -2,7 +2,7 @@
 
 ---@class AFoundationBedFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFoundationBedFootprint_C = {}
+local AFoundationBedFootprint_C = {}
 
 
 

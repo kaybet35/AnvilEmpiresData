@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectRavenDenFall01_C : UEntityTemplate
-UEffectRavenDenFall01_C = {}
+local UEffectRavenDenFall01_C = {}
 
 

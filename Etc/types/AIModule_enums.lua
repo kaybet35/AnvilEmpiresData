@@ -1,5 +1,5 @@
 ---@enum EAILockSource
-EAILockSource = {
+local EAILockSource = {
     Animation = 0,
     Logic = 1,
     Script = 2,
@@ -8,7 +8,7 @@ EAILockSource = {
 }
 
 ---@enum EAIOptionFlag
-EAIOptionFlag = {
+local EAIOptionFlag = {
     Default = 0,
     Enable = 1,
     Disable = 2,
@@ -16,7 +16,7 @@ EAIOptionFlag = {
 }
 
 ---@enum EAIParamType
-EAIParamType = {
+local EAIParamType = {
     Float = 0,
     Int = 1,
     Bool = 2,
@@ -24,7 +24,7 @@ EAIParamType = {
 }
 
 ---@enum EAIRequestPriority
-EAIRequestPriority = {
+local EAIRequestPriority = {
     SoftScript = 0,
     Logic = 1,
     HardScript = 2,
@@ -34,14 +34,14 @@ EAIRequestPriority = {
 }
 
 ---@enum EAISenseNotifyType
-EAISenseNotifyType = {
+local EAISenseNotifyType = {
     OnEveryPerception = 0,
     OnPerceptionChange = 1,
     EAISenseNotifyType_MAX = 2,
 }
 
 ---@enum EAITaskPriority
-EAITaskPriority = {
+local EAITaskPriority = {
     Lowest = 0,
     Low = 64,
     AutonomousAI = 127,
@@ -51,7 +51,7 @@ EAITaskPriority = {
 }
 
 ---@enum EArithmeticKeyOperation
-EArithmeticKeyOperation = {
+local EArithmeticKeyOperation = {
     Equal = 0,
     NotEqual = 1,
     Less = 2,
@@ -62,21 +62,21 @@ EArithmeticKeyOperation = {
 }
 
 ---@enum EBTBlackboardRestart
-EBTBlackboardRestart = {
+local EBTBlackboardRestart = {
     ValueChange = 0,
     ResultChange = 1,
     EBTBlackboardRestart_MAX = 2,
 }
 
 ---@enum EBTChildIndex
-EBTChildIndex = {
+local EBTChildIndex = {
     FirstNode = 0,
     TaskNode = 1,
     EBTChildIndex_MAX = 2,
 }
 
 ---@enum EBTDecoratorLogic
-EBTDecoratorLogic = {
+local EBTDecoratorLogic = {
     Invalid = 0,
     Test = 1,
     And = 2,
@@ -86,7 +86,7 @@ EBTDecoratorLogic = {
 }
 
 ---@enum EBTFlowAbortMode
-EBTFlowAbortMode = {
+local EBTFlowAbortMode = {
     None = 0,
     LowerPriority = 1,
     Self = 2,
@@ -95,7 +95,7 @@ EBTFlowAbortMode = {
 }
 
 ---@enum EBTNodeResult
-EBTNodeResult = {
+local EBTNodeResult = {
     Succeeded = 0,
     Failed = 1,
     Aborted = 2,
@@ -104,42 +104,42 @@ EBTNodeResult = {
 }
 
 ---@enum EBTParallelMode
-EBTParallelMode = {
+local EBTParallelMode = {
     AbortBackground = 0,
     WaitForBackground = 1,
     EBTParallelMode_MAX = 2,
 }
 
 ---@enum EBasicKeyOperation
-EBasicKeyOperation = {
+local EBasicKeyOperation = {
     Set = 0,
     NotSet = 1,
     EBasicKeyOperation_MAX = 2,
 }
 
 ---@enum EBlackBoardEntryComparison
-EBlackBoardEntryComparison = {
+local EBlackBoardEntryComparison = {
     Equal = 0,
     NotEqual = 1,
     EBlackBoardEntryComparison_MAX = 2,
 }
 
 ---@enum EEQSNormalizationType
-EEQSNormalizationType = {
+local EEQSNormalizationType = {
     Absolute = 0,
     RelativeToScores = 1,
     EEQSNormalizationType_MAX = 2,
 }
 
 ---@enum EEnvDirection
-EEnvDirection = {
+local EEnvDirection = {
     TwoPoints = 0,
     Rotation = 1,
     EEnvDirection_MAX = 2,
 }
 
 ---@enum EEnvOverlapShape
-EEnvOverlapShape = {
+local EEnvOverlapShape = {
     Box = 0,
     Sphere = 1,
     Capsule = 2,
@@ -147,7 +147,7 @@ EEnvOverlapShape = {
 }
 
 ---@enum EEnvQueryHightlightMode
-EEnvQueryHightlightMode = {
+local EEnvQueryHightlightMode = {
     All = 0,
     Best5Pct = 1,
     Best25Pct = 2,
@@ -155,7 +155,7 @@ EEnvQueryHightlightMode = {
 }
 
 ---@enum EEnvQueryParam
-EEnvQueryParam = {
+local EEnvQueryParam = {
     Float = 0,
     Int = 1,
     Bool = 2,
@@ -163,7 +163,7 @@ EEnvQueryParam = {
 }
 
 ---@enum EEnvQueryRunMode
-EEnvQueryRunMode = {
+local EEnvQueryRunMode = {
     SingleResult = 0,
     RandomBest5Pct = 1,
     RandomBest25Pct = 2,
@@ -172,7 +172,7 @@ EEnvQueryRunMode = {
 }
 
 ---@enum EEnvQueryStatus
-EEnvQueryStatus = {
+local EEnvQueryStatus = {
     Processing = 0,
     Success = 1,
     Failed = 2,
@@ -183,7 +183,7 @@ EEnvQueryStatus = {
 }
 
 ---@enum EEnvQueryTestClamping
-EEnvQueryTestClamping = {
+local EEnvQueryTestClamping = {
     None = 0,
     SpecifiedValue = 1,
     FilterThreshold = 2,
@@ -191,7 +191,7 @@ EEnvQueryTestClamping = {
 }
 
 ---@enum EEnvQueryTrace
-EEnvQueryTrace = {
+local EEnvQueryTrace = {
     None = 0,
     Navigation = 1,
     GeometryByChannel = 2,
@@ -201,7 +201,7 @@ EEnvQueryTrace = {
 }
 
 ---@enum EEnvTestCost
-EEnvTestCost = {
+local EEnvTestCost = {
     Low = 0,
     Medium = 1,
     High = 2,
@@ -209,7 +209,7 @@ EEnvTestCost = {
 }
 
 ---@enum EEnvTestDistance
-EEnvTestDistance = {
+local EEnvTestDistance = {
     Distance3D = 0,
     Distance2D = 1,
     DistanceZ = 2,
@@ -218,21 +218,21 @@ EEnvTestDistance = {
 }
 
 ---@enum EEnvTestDot
-EEnvTestDot = {
+local EEnvTestDot = {
     Dot3D = 0,
     Dot2D = 1,
     EEnvTestDot_MAX = 2,
 }
 
 ---@enum EEnvTestFilterOperator
-EEnvTestFilterOperator = {
+local EEnvTestFilterOperator = {
     AllPass = 0,
     AnyPass = 1,
     EEnvTestFilterOperator_MAX = 2,
 }
 
 ---@enum EEnvTestFilterType
-EEnvTestFilterType = {
+local EEnvTestFilterType = {
     Minimum = 0,
     Maximum = 1,
     Range = 2,
@@ -241,7 +241,7 @@ EEnvTestFilterType = {
 }
 
 ---@enum EEnvTestPathfinding
-EEnvTestPathfinding = {
+local EEnvTestPathfinding = {
     PathExist = 0,
     PathCost = 1,
     PathLength = 2,
@@ -249,7 +249,7 @@ EEnvTestPathfinding = {
 }
 
 ---@enum EEnvTestPurpose
-EEnvTestPurpose = {
+local EEnvTestPurpose = {
     Filter = 0,
     Score = 1,
     FilterAndScore = 2,
@@ -257,7 +257,7 @@ EEnvTestPurpose = {
 }
 
 ---@enum EEnvTestScoreEquation
-EEnvTestScoreEquation = {
+local EEnvTestScoreEquation = {
     Linear = 0,
     Square = 1,
     InverseLinear = 2,
@@ -267,7 +267,7 @@ EEnvTestScoreEquation = {
 }
 
 ---@enum EEnvTestScoreOperator
-EEnvTestScoreOperator = {
+local EEnvTestScoreOperator = {
     AverageScore = 0,
     MinScore = 1,
     MaxScore = 2,
@@ -276,7 +276,7 @@ EEnvTestScoreOperator = {
 }
 
 ---@enum EEnvTestWeight
-EEnvTestWeight = {
+local EEnvTestWeight = {
     None = 0,
     Square = 1,
     Inverse = 2,
@@ -287,7 +287,7 @@ EEnvTestWeight = {
 }
 
 ---@enum EEnvTraceShape
-EEnvTraceShape = {
+local EEnvTraceShape = {
     Line = 0,
     Box = 1,
     Sphere = 2,
@@ -296,7 +296,7 @@ EEnvTraceShape = {
 }
 
 ---@enum EGenericAICheck
-EGenericAICheck = {
+local EGenericAICheck = {
     Less = 0,
     LessOrEqual = 1,
     Equal = 2,
@@ -308,7 +308,7 @@ EGenericAICheck = {
 }
 
 ---@enum EPathExistanceQueryType
-EPathExistanceQueryType = {
+local EPathExistanceQueryType = {
     NavmeshRaycast2D = 0,
     HierarchicalQuery = 1,
     RegularPathFinding = 2,
@@ -316,7 +316,7 @@ EPathExistanceQueryType = {
 }
 
 ---@enum EPathFollowingAction
-EPathFollowingAction = {
+local EPathFollowingAction = {
     Error = 0,
     NoMove = 1,
     DirectMove = 2,
@@ -326,7 +326,7 @@ EPathFollowingAction = {
 }
 
 ---@enum EPathFollowingRequestResult
-EPathFollowingRequestResult = {
+local EPathFollowingRequestResult = {
     Failed = 0,
     AlreadyAtGoal = 1,
     RequestSuccessful = 2,
@@ -334,7 +334,7 @@ EPathFollowingRequestResult = {
 }
 
 ---@enum EPathFollowingResult
-EPathFollowingResult = {
+local EPathFollowingResult = {
     Success = 0,
     Blocked = 1,
     OffPath = 2,
@@ -345,7 +345,7 @@ EPathFollowingResult = {
 }
 
 ---@enum EPathFollowingStatus
-EPathFollowingStatus = {
+local EPathFollowingStatus = {
     Idle = 0,
     Waiting = 1,
     Paused = 2,
@@ -354,7 +354,7 @@ EPathFollowingStatus = {
 }
 
 ---@enum EPawnActionAbortState
-EPawnActionAbortState = {
+local EPawnActionAbortState = {
     NeverStarted = 0,
     NotBeingAborted = 1,
     MarkPendingAbort = 2,
@@ -364,7 +364,7 @@ EPawnActionAbortState = {
 }
 
 ---@enum EPawnActionEventType
-EPawnActionEventType = {
+local EPawnActionEventType = {
     Invalid = 0,
     FailedToStart = 1,
     InstantAbort = 2,
@@ -375,21 +375,21 @@ EPawnActionEventType = {
 }
 
 ---@enum EPawnActionFailHandling
-EPawnActionFailHandling = {
+local EPawnActionFailHandling = {
     RequireSuccess = 0,
     IgnoreFailure = 1,
     EPawnActionFailHandling_MAX = 2,
 }
 
 ---@enum EPawnActionMoveMode
-EPawnActionMoveMode = {
+local EPawnActionMoveMode = {
     UsePathfinding = 0,
     StraightLine = 1,
     EPawnActionMoveMode_MAX = 2,
 }
 
 ---@enum EPawnActionResult
-EPawnActionResult = {
+local EPawnActionResult = {
     NotStarted = 0,
     InProgress = 1,
     Success = 2,
@@ -399,21 +399,21 @@ EPawnActionResult = {
 }
 
 ---@enum EPawnSubActionTriggeringPolicy
-EPawnSubActionTriggeringPolicy = {
+local EPawnSubActionTriggeringPolicy = {
     CopyBeforeTriggering = 0,
     ReuseInstances = 1,
     EPawnSubActionTriggeringPolicy_MAX = 2,
 }
 
 ---@enum EPointOnCircleSpacingMethod
-EPointOnCircleSpacingMethod = {
+local EPointOnCircleSpacingMethod = {
     BySpaceBetween = 0,
     ByNumberOfPoints = 1,
     EPointOnCircleSpacingMethod_MAX = 2,
 }
 
 ---@enum ETeamAttitude
-ETeamAttitude = {
+local ETeamAttitude = {
     Friendly = 0,
     Neutral = 1,
     Hostile = 2,
@@ -421,7 +421,7 @@ ETeamAttitude = {
 }
 
 ---@enum ETextKeyOperation
-ETextKeyOperation = {
+local ETextKeyOperation = {
     Equal = 0,
     NotEqual = 1,
     Contain = 2,
@@ -430,7 +430,7 @@ ETextKeyOperation = {
 }
 
 ---@enum FAIDistanceType
-FAIDistanceType = {
+local FAIDistanceType = {
     Distance3D = 0,
     Distance2D = 1,
     DistanceZ = 2,

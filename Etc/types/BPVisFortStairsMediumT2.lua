@@ -2,7 +2,7 @@
 
 ---@class ABPVisFortStairsMediumT2_C : AVisStructure
 ---@field Mesh UStaticMeshComponent
-ABPVisFortStairsMediumT2_C = {}
+local ABPVisFortStairsMediumT2_C = {}
 
 
 

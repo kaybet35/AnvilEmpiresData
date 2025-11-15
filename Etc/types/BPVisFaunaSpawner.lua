@@ -8,7 +8,7 @@
 ---@field referenceMesh1 UStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisFaunaSpawner_C = {}
+local ABPVisFaunaSpawner_C = {}
 
 
 

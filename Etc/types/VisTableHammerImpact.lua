@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisTableHammerImpact_C : AVisImpactEffect
-AVisTableHammerImpact_C = {}
+local AVisTableHammerImpact_C = {}
 
 

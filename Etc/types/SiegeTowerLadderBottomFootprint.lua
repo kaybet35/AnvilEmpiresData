@@ -2,7 +2,7 @@
 
 ---@class ASiegeTowerLadderBottomFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ASiegeTowerLadderBottomFootprint_C = {}
+local ASiegeTowerLadderBottomFootprint_C = {}
 
 
 

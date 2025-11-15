@@ -4,7 +4,7 @@
 ---@field Decal UDecalComponent
 ---@field Effect UNiagaraComponent
 ---@field DefaultSceneRoot USceneComponent
-AVisEffectBurningArea_C = {}
+local AVisEffectBurningArea_C = {}
 
 
 

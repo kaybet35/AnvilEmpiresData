@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFlintPile_C : UEntityTemplate
-UFlintPile_C = {}
+local UFlintPile_C = {}
 
 

@@ -10,7 +10,7 @@
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh3 UVisStaticMeshComponent
 ---@field MainStructure UVisStaticMeshComponent
-ABPVisTownPlayerStorage_C = {}
+local ABPVisTownPlayerStorage_C = {}
 
 
 

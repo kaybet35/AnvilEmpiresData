@@ -2,7 +2,7 @@
 
 ---@class AFoodTableFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFoodTableFootprint_C = {}
+local AFoodTableFootprint_C = {}
 
 
 

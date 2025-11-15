@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterFoundationSquareHalfSizeDiagonalBuildSite_C : UBPBaseFoundationBuildSiteEntity_C
-UFamilyCenterFoundationSquareHalfSizeDiagonalBuildSite_C = {}
+local UFamilyCenterFoundationSquareHalfSizeDiagonalBuildSite_C = {}
 
 

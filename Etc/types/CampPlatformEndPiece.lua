@@ -2,7 +2,7 @@
 
 ---@class ACampPlatformEndPiece_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ACampPlatformEndPiece_C = {}
+local ACampPlatformEndPiece_C = {}
 
 
 

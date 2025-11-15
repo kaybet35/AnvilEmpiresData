@@ -1,12 +1,12 @@
 ---@enum EBuoyancyEvent
-EBuoyancyEvent = {
+local EBuoyancyEvent = {
     EnteredWaterBody = 0,
     ExitedWaterBody = 1,
     EBuoyancyEvent_MAX = 2,
 }
 
 ---@enum EWaterBodyType
-EWaterBodyType = {
+local EWaterBodyType = {
     River = 0,
     Lake = 1,
     Ocean = 2,
@@ -16,7 +16,7 @@ EWaterBodyType = {
 }
 
 ---@enum EWaterBrushBlendType
-EWaterBrushBlendType = {
+local EWaterBrushBlendType = {
     AlphaBlend = 0,
     Min = 1,
     Max = 2,
@@ -24,14 +24,14 @@ EWaterBrushBlendType = {
 }
 
 ---@enum EWaterBrushFalloffMode
-EWaterBrushFalloffMode = {
+local EWaterBrushFalloffMode = {
     Angle = 0,
     Width = 1,
     EWaterBrushFalloffMode_MAX = 2,
 }
 
 ---@enum EWaveSpectrumType
-EWaveSpectrumType = {
+local EWaveSpectrumType = {
     Phillips = 0,
     PiersonMoskowitz = 1,
     JONSWAP = 2,

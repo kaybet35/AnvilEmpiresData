@@ -7,7 +7,7 @@
 ---@field FramesCurve FMovieSceneIntegerChannel
 ---@field SubFramesCurve FMovieSceneFloatChannel
 ---@field Slate FMovieSceneStringChannel
-UMovieSceneTakeSection = {}
+local UMovieSceneTakeSection = {}
 
 
 
@@ -18,13 +18,13 @@ UMovieSceneTakeSection = {}
 ---@field FramesName FString
 ---@field SubFramesName FString
 ---@field SlateName FString
-UMovieSceneTakeSettings = {}
+local UMovieSceneTakeSettings = {}
 
 
 
 ---@class UMovieSceneTakeTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneTakeTrack = {}
+local UMovieSceneTakeTrack = {}
 
 
 

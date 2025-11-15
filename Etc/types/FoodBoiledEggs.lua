@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFoodBoiledEggs_C : UItemTemplate
-UFoodBoiledEggs_C = {}
+local UFoodBoiledEggs_C = {}
 
 

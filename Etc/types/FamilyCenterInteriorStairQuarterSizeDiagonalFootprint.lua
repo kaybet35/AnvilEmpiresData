@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterInteriorStairQuarterSizeDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterInteriorStairQuarterSizeDiagonalFootprint_C = {}
+local AFamilyCenterInteriorStairQuarterSizeDiagonalFootprint_C = {}
 
 
 

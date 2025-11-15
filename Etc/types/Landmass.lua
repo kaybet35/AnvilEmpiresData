@@ -3,7 +3,7 @@
 ---@class FBrushEffectBlurring
 ---@field bBlurShape boolean
 ---@field Radius int32
-FBrushEffectBlurring = {}
+local FBrushEffectBlurring = {}
 
 
 
@@ -12,7 +12,7 @@ FBrushEffectBlurring = {}
 ---@field Curl2Amount float
 ---@field Curl1Tiling float
 ---@field Curl2Tiling float
-FBrushEffectCurlNoise = {}
+local FBrushEffectCurlNoise = {}
 
 
 
@@ -22,7 +22,7 @@ FBrushEffectCurlNoise = {}
 ---@field ChannelEdgeOffset float
 ---@field ChannelDepth float
 ---@field CurveRampWidth float
-FBrushEffectCurves = {}
+local FBrushEffectCurves = {}
 
 
 
@@ -33,14 +33,14 @@ FBrushEffectCurves = {}
 ---@field Midpoint float
 ---@field Channel FLinearColor
 ---@field WeightmapInfluence float
-FBrushEffectDisplacement = {}
+local FBrushEffectDisplacement = {}
 
 
 
 ---@class FBrushEffectSmoothBlending
 ---@field InnerSmoothDistance float
 ---@field OuterSmoothDistance float
-FBrushEffectSmoothBlending = {}
+local FBrushEffectSmoothBlending = {}
 
 
 
@@ -50,7 +50,7 @@ FBrushEffectSmoothBlending = {}
 ---@field TerraceSmoothness float
 ---@field MaskLength float
 ---@field MaskStartOffset float
-FBrushEffectTerracing = {}
+local FBrushEffectTerracing = {}
 
 
 
@@ -60,7 +60,7 @@ FBrushEffectTerracing = {}
 ---@field Displacement FBrushEffectDisplacement
 ---@field SmoothBlending FBrushEffectSmoothBlending
 ---@field Terracing FBrushEffectTerracing
-FLandmassBrushEffectsList = {}
+local FLandmassBrushEffectsList = {}
 
 
 
@@ -70,7 +70,7 @@ FLandmassBrushEffectsList = {}
 ---@field FalloffWidth float
 ---@field EdgeOffset float
 ---@field ZOffset float
-FLandmassFalloffSettings = {}
+local FLandmassFalloffSettings = {}
 
 
 
@@ -80,7 +80,7 @@ FLandmassFalloffSettings = {}
 ---@field FalloffSettings FLandmassFalloffSettings
 ---@field Effects FLandmassBrushEffectsList
 ---@field Priority int32
-FLandmassTerrainCarvingSettings = {}
+local FLandmassTerrainCarvingSettings = {}
 
 
 

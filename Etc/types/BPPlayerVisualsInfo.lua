@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPPlayerVisualsInfo_C : APlayerVisualsInfo
-ABPPlayerVisualsInfo_C = {}
+local ABPPlayerVisualsInfo_C = {}
 
 

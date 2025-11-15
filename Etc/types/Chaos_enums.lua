@@ -1,5 +1,5 @@
 ---@enum EChaosBufferMode
-EChaosBufferMode = {
+local EChaosBufferMode = {
     Double = 0,
     Triple = 1,
     Num = 2,
@@ -8,7 +8,7 @@ EChaosBufferMode = {
 }
 
 ---@enum EChaosSolverTickMode
-EChaosSolverTickMode = {
+local EChaosSolverTickMode = {
     Fixed = 0,
     Variable = 1,
     VariableCapped = 2,
@@ -17,7 +17,7 @@ EChaosSolverTickMode = {
 }
 
 ---@enum EChaosThreadingMode
-EChaosThreadingMode = {
+local EChaosThreadingMode = {
     DedicatedThread = 0,
     TaskGraph = 1,
     SingleThread = 2,
@@ -27,7 +27,7 @@ EChaosThreadingMode = {
 }
 
 ---@enum EClusterUnionMethod
-EClusterUnionMethod = {
+local EClusterUnionMethod = {
     PointImplicit = 0,
     DelaunayTriangulation = 1,
     MinimalSpanningSubsetDelaunayTriangulation = 2,
@@ -38,14 +38,14 @@ EClusterUnionMethod = {
 }
 
 ---@enum ECollisionTypeEnum
-ECollisionTypeEnum = {
+local ECollisionTypeEnum = {
     Chaos_Volumetric = 0,
     Chaos_Surface_Volumetric = 1,
     Chaos_Max = 2,
 }
 
 ---@enum EConvexOverlapRemoval
-EConvexOverlapRemoval = {
+local EConvexOverlapRemoval = {
     None = 0,
     All = 1,
     OnlyClusters = 2,
@@ -54,14 +54,14 @@ EConvexOverlapRemoval = {
 }
 
 ---@enum EEmissionPatternTypeEnum
-EEmissionPatternTypeEnum = {
+local EEmissionPatternTypeEnum = {
     Chaos_Emission_Pattern_First_Frame = 0,
     Chaos_Emission_Pattern_On_Demand = 1,
     Chaos_Max = 2,
 }
 
 ---@enum EFieldCullingOperationType
-EFieldCullingOperationType = {
+local EFieldCullingOperationType = {
     Field_Culling_Inside = 0,
     Field_Culling_Outside = 1,
     Field_Culling_Operation_Max = 2,
@@ -69,7 +69,7 @@ EFieldCullingOperationType = {
 }
 
 ---@enum EFieldFalloffType
-EFieldFalloffType = {
+local EFieldFalloffType = {
     Field_FallOff_None = 0,
     Field_Falloff_Linear = 1,
     Field_Falloff_Inverse = 2,
@@ -79,7 +79,7 @@ EFieldFalloffType = {
 }
 
 ---@enum EFieldFilterType
-EFieldFilterType = {
+local EFieldFilterType = {
     Field_Filter_Dynamic = 0,
     Field_Filter_Kinematic = 1,
     Field_Filter_Static = 2,
@@ -90,7 +90,7 @@ EFieldFilterType = {
 }
 
 ---@enum EFieldIntegerType
-EFieldIntegerType = {
+local EFieldIntegerType = {
     Integer_DynamicState = 0,
     Integer_ActivateDisabled = 1,
     Integer_CollisionGroup = 2,
@@ -101,7 +101,7 @@ EFieldIntegerType = {
 }
 
 ---@enum EFieldObjectType
-EFieldObjectType = {
+local EFieldObjectType = {
     Field_Object_Rigid = 0,
     Field_Object_Cloth = 1,
     Field_Object_Destruction = 2,
@@ -111,7 +111,7 @@ EFieldObjectType = {
 }
 
 ---@enum EFieldOperationType
-EFieldOperationType = {
+local EFieldOperationType = {
     Field_Multiply = 0,
     Field_Divide = 1,
     Field_Add = 2,
@@ -120,7 +120,7 @@ EFieldOperationType = {
 }
 
 ---@enum EFieldOutputType
-EFieldOutputType = {
+local EFieldOutputType = {
     Field_Output_Vector = 0,
     Field_Output_Scalar = 1,
     Field_Output_Integer = 2,
@@ -128,7 +128,7 @@ EFieldOutputType = {
 }
 
 ---@enum EFieldPhysicsDefaultFields
-EFieldPhysicsDefaultFields = {
+local EFieldPhysicsDefaultFields = {
     Field_RadialIntMask = 0,
     Field_RadialFalloff = 1,
     Field_UniformVector = 2,
@@ -138,7 +138,7 @@ EFieldPhysicsDefaultFields = {
 }
 
 ---@enum EFieldPhysicsType
-EFieldPhysicsType = {
+local EFieldPhysicsType = {
     Field_None = 0,
     Field_DynamicState = 1,
     Field_LinearForce = 2,
@@ -163,14 +163,14 @@ EFieldPhysicsType = {
 }
 
 ---@enum EFieldPositionType
-EFieldPositionType = {
+local EFieldPositionType = {
     Field_Position_CenterOfMass = 0,
     Field_Position_PivotPoint = 1,
     Field_Position_Max = 2,
 }
 
 ---@enum EFieldResolutionType
-EFieldResolutionType = {
+local EFieldResolutionType = {
     Field_Resolution_Minimal = 0,
     Field_Resolution_DisabledParents = 1,
     Field_Resolution_Maximum = 2,
@@ -178,7 +178,7 @@ EFieldResolutionType = {
 }
 
 ---@enum EFieldScalarType
-EFieldScalarType = {
+local EFieldScalarType = {
     Scalar_ExternalClusterStrain = 0,
     Scalar_Kill = 1,
     Scalar_DisableThreshold = 2,
@@ -190,7 +190,7 @@ EFieldScalarType = {
 }
 
 ---@enum EFieldVectorType
-EFieldVectorType = {
+local EFieldVectorType = {
     Vector_LinearForce = 0,
     Vector_LinearVelocity = 1,
     Vector_AngularVelocity = 2,
@@ -204,7 +204,7 @@ EFieldVectorType = {
 }
 
 ---@enum EGeometryCollectionCacheType
-EGeometryCollectionCacheType = {
+local EGeometryCollectionCacheType = {
     None = 0,
     Record = 1,
     Play = 2,
@@ -213,7 +213,7 @@ EGeometryCollectionCacheType = {
 }
 
 ---@enum EGeometryCollectionPhysicsTypeEnum
-EGeometryCollectionPhysicsTypeEnum = {
+local EGeometryCollectionPhysicsTypeEnum = {
     Chaos_AngularVelocity = 0,
     Chaos_DynamicState = 1,
     Chaos_LinearVelocity = 2,
@@ -231,7 +231,7 @@ EGeometryCollectionPhysicsTypeEnum = {
 }
 
 ---@enum EImplicitTypeEnum
-EImplicitTypeEnum = {
+local EImplicitTypeEnum = {
     Chaos_Implicit_Box = 0,
     Chaos_Implicit_Sphere = 1,
     Chaos_Implicit_Capsule = 2,
@@ -242,14 +242,14 @@ EImplicitTypeEnum = {
 }
 
 ---@enum EInitialVelocityTypeEnum
-EInitialVelocityTypeEnum = {
+local EInitialVelocityTypeEnum = {
     Chaos_Initial_Velocity_User_Defined = 0,
     Chaos_Initial_Velocity_None = 1,
     Chaos_Max = 2,
 }
 
 ---@enum EObjectStateTypeEnum
-EObjectStateTypeEnum = {
+local EObjectStateTypeEnum = {
     Chaos_NONE = 0,
     Chaos_Object_Sleeping = 1,
     Chaos_Object_Kinematic = 2,
@@ -260,7 +260,7 @@ EObjectStateTypeEnum = {
 }
 
 ---@enum ESetMaskConditionType
-ESetMaskConditionType = {
+local ESetMaskConditionType = {
     Field_Set_Always = 0,
     Field_Set_IFF_NOT_Interior = 1,
     Field_Set_IFF_NOT_Exterior = 2,
@@ -269,7 +269,7 @@ ESetMaskConditionType = {
 }
 
 ---@enum EWaveFunctionType
-EWaveFunctionType = {
+local EWaveFunctionType = {
     Field_Wave_Cosine = 0,
     Field_Wave_Gaussian = 1,
     Field_Wave_Falloff = 2,

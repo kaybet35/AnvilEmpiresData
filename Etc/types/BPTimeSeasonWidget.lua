@@ -12,7 +12,7 @@
 ---@field triangleScaling double
 ---@field imageList_DayNight TArray<FSlateBrush>
 ---@field imageList_Weather TArray<FSlateBrush>
-UBPTimeSeasonWidget_C = {}
+local UBPTimeSeasonWidget_C = {}
 
 ---@param X_inputValue double
 ---@param XPeriod__how_many_X_units_it_talkes_to_cycle_ double

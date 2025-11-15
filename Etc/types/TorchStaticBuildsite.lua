@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTorchStaticBuildsite_C : UBPBaseBuildSiteEntity_C
-UTorchStaticBuildsite_C = {}
+local UTorchStaticBuildsite_C = {}
 
 

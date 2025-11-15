@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRestedStatusWidget_C : URestedStatusWidget
-UBPRestedStatusWidget_C = {}
+local UBPRestedStatusWidget_C = {}
 
 

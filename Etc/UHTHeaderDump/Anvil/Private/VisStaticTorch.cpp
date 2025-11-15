@@ -12,8 +12,8 @@ AVisStaticTorch::AVisStaticTorch(const FObjectInitializer& ObjectInitializer) : 
     this->bOnFoundationUseInverseSquaredFalloff = false;
     this->OnFoundationLightFalloffExponent = 4.00f;
     this->OnFoundationShadowMeshVerticalScale = 0.50f;
-    this->VisibleMesh->SetupAttachment(RootComponent);
     this->ShadowMesh->SetupAttachment(RootComponent);
+    this->VisibleMesh->SetupAttachment(RootComponent);
 }
 
 

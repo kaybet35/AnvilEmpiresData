@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisMountedJavelin_C : UVisItem
-UBPVisMountedJavelin_C = {}
+local UBPVisMountedJavelin_C = {}
 
 

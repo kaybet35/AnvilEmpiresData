@@ -1,5 +1,5 @@
 ---@enum EMediaAudioCaptureDeviceFilter
-EMediaAudioCaptureDeviceFilter = {
+local EMediaAudioCaptureDeviceFilter = {
     None = 0,
     Card = 1,
     Microphone = 2,
@@ -9,7 +9,7 @@ EMediaAudioCaptureDeviceFilter = {
 }
 
 ---@enum EMediaPlayerTrack
-EMediaPlayerTrack = {
+local EMediaPlayerTrack = {
     Audio = 0,
     Caption = 1,
     Metadata = 2,
@@ -21,7 +21,7 @@ EMediaPlayerTrack = {
 }
 
 ---@enum EMediaSoundChannels
-EMediaSoundChannels = {
+local EMediaSoundChannels = {
     Mono = 0,
     Stereo = 1,
     Surround = 2,
@@ -29,7 +29,7 @@ EMediaSoundChannels = {
 }
 
 ---@enum EMediaSoundComponentFFTSize
-EMediaSoundComponentFFTSize = {
+local EMediaSoundComponentFFTSize = {
     Min_64 = 0,
     Small_256 = 1,
     Medium_512 = 2,
@@ -38,7 +38,7 @@ EMediaSoundComponentFFTSize = {
 }
 
 ---@enum EMediaTextureVisibleMipsTiles
-EMediaTextureVisibleMipsTiles = {
+local EMediaTextureVisibleMipsTiles = {
     None = 0,
     Plane = 1,
     Sphere = 2,
@@ -46,7 +46,7 @@ EMediaTextureVisibleMipsTiles = {
 }
 
 ---@enum EMediaVideoCaptureDeviceFilter
-EMediaVideoCaptureDeviceFilter = {
+local EMediaVideoCaptureDeviceFilter = {
     None = 0,
     Card = 1,
     Software = 2,
@@ -56,7 +56,7 @@ EMediaVideoCaptureDeviceFilter = {
 }
 
 ---@enum EMediaWebcamCaptureDeviceFilter
-EMediaWebcamCaptureDeviceFilter = {
+local EMediaWebcamCaptureDeviceFilter = {
     None = 0,
     DepthSensor = 1,
     Front = 2,
@@ -66,7 +66,7 @@ EMediaWebcamCaptureDeviceFilter = {
 }
 
 ---@enum MediaTextureOrientation
-MediaTextureOrientation = {
+local MediaTextureOrientation = {
     MTORI_Original = 0,
     MTORI_CW90 = 1,
     MTORI_CW180 = 2,
@@ -75,7 +75,7 @@ MediaTextureOrientation = {
 }
 
 ---@enum MediaTextureOutputFormat
-MediaTextureOutputFormat = {
+local MediaTextureOutputFormat = {
     MTOF_Default = 0,
     MTOF_SRGB_LINOUT = 1,
     MTOF_MAX = 2,

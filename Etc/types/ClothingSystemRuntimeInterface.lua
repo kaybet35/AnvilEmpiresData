@@ -5,7 +5,7 @@
 ---@field SphereConnections TArray<FClothCollisionPrim_SphereConnection>
 ---@field Convexes TArray<FClothCollisionPrim_Convex>
 ---@field Boxes TArray<FClothCollisionPrim_Box>
-FClothCollisionData = {}
+local FClothCollisionData = {}
 
 
 
@@ -14,7 +14,7 @@ FClothCollisionData = {}
 ---@field LocalRotation FQuat
 ---@field HalfExtents FVector
 ---@field BoneIndex int32
-FClothCollisionPrim_Box = {}
+local FClothCollisionPrim_Box = {}
 
 
 
@@ -22,14 +22,14 @@ FClothCollisionPrim_Box = {}
 ---@field Faces TArray<FClothCollisionPrim_ConvexFace>
 ---@field SurfacePoints TArray<FVector>
 ---@field BoneIndex int32
-FClothCollisionPrim_Convex = {}
+local FClothCollisionPrim_Convex = {}
 
 
 
 ---@class FClothCollisionPrim_ConvexFace
 ---@field Plane FPlane
 ---@field Indices TArray<int32>
-FClothCollisionPrim_ConvexFace = {}
+local FClothCollisionPrim_ConvexFace = {}
 
 
 
@@ -37,13 +37,13 @@ FClothCollisionPrim_ConvexFace = {}
 ---@field BoneIndex int32
 ---@field Radius float
 ---@field LocalPosition FVector
-FClothCollisionPrim_Sphere = {}
+local FClothCollisionPrim_Sphere = {}
 
 
 
 ---@class FClothCollisionPrim_SphereConnection
 ---@field SphereIndices int32
-FClothCollisionPrim_SphereConnection = {}
+local FClothCollisionPrim_SphereConnection = {}
 
 
 
@@ -51,12 +51,12 @@ FClothCollisionPrim_SphereConnection = {}
 ---@field NumInfluences int32
 ---@field BoneIndices uint16
 ---@field BoneWeights float
-FClothVertBoneData = {}
+local FClothVertBoneData = {}
 
 
 
 ---@class UClothConfigBase : UObject
-UClothConfigBase = {}
+local UClothConfigBase = {}
 
 
 ---@class UClothPhysicalMeshDataBase_Legacy : UObject
@@ -68,28 +68,28 @@ UClothConfigBase = {}
 ---@field NumFixedVerts int32
 ---@field MaxBoneWeights int32
 ---@field SelfCollisionIndices TArray<uint32>
-UClothPhysicalMeshDataBase_Legacy = {}
+local UClothPhysicalMeshDataBase_Legacy = {}
 
 
 
 ---@class UClothingAssetBase : UObject
 ---@field ImportedFilePath FString
 ---@field AssetGuid FGuid
-UClothingAssetBase = {}
+local UClothingAssetBase = {}
 
 
 
 ---@class UClothingInteractor : UObject
-UClothingInteractor = {}
+local UClothingInteractor = {}
 
 
 ---@class UClothingSimulationFactory : UObject
-UClothingSimulationFactory = {}
+local UClothingSimulationFactory = {}
 
 
 ---@class UClothingSimulationInteractor : UObject
 ---@field ClothingInteractors TMap<FName, UClothingInteractor>
-UClothingSimulationInteractor = {}
+local UClothingSimulationInteractor = {}
 
 ---@param NumSubsteps int32
 function UClothingSimulationInteractor:SetNumSubsteps(NumSubsteps) end
@@ -122,6 +122,6 @@ function UClothingSimulationInteractor:ClothConfigUpdated() end
 
 
 ---@class UDEPRECATED_ClothSharedSimConfigBase : UObject
-UDEPRECATED_ClothSharedSimConfigBase = {}
+local UDEPRECATED_ClothSharedSimConfigBase = {}
 
 

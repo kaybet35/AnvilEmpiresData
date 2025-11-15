@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisWheatField_C : AVisResource
-ABPVisWheatField_C = {}
+local ABPVisWheatField_C = {}
 
 

@@ -2,11 +2,11 @@
 
 ---@class FJsonObjectWrapper
 ---@field JsonString FString
-FJsonObjectWrapper = {}
+local FJsonObjectWrapper = {}
 
 
 
 ---@class UJsonUtilitiesDummyObject : UObject
-UJsonUtilitiesDummyObject = {}
+local UJsonUtilitiesDummyObject = {}
 
 

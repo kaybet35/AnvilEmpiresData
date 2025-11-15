@@ -1,5 +1,5 @@
 ---@enum ETemplateSectionPropertyScaleType
-ETemplateSectionPropertyScaleType = {
+local ETemplateSectionPropertyScaleType = {
     FloatProperty = 0,
     TransformPropertyLocationOnly = 1,
     TransformPropertyRotationOnly = 2,

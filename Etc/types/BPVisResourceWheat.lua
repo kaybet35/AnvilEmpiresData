@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisResourceWheat_C : UVisItem
-UBPVisResourceWheat_C = {}
+local UBPVisResourceWheat_C = {}
 
 

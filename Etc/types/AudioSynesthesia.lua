@@ -5,7 +5,7 @@
 ---@field NormalizedLoudness float
 ---@field PerceptualEnergy float
 ---@field TimeSeconds float
-FLoudnessResults = {}
+local FLoudnessResults = {}
 
 
 
@@ -15,32 +15,32 @@ FLoudnessResults = {}
 ---@field PeakValue float
 ---@field NumSamplesClipping int32
 ---@field ClippingValue float
-FMeterResults = {}
+local FMeterResults = {}
 
 
 
 ---@class FSynesthesiaSpectrumResults
 ---@field TimeSeconds float
 ---@field SpectrumValues TArray<float>
-FSynesthesiaSpectrumResults = {}
+local FSynesthesiaSpectrumResults = {}
 
 
 
 ---@class UAudioSynesthesiaNRT : UAudioAnalyzerNRT
-UAudioSynesthesiaNRT = {}
+local UAudioSynesthesiaNRT = {}
 
 
 ---@class UAudioSynesthesiaNRTSettings : UAudioAnalyzerNRTSettings
-UAudioSynesthesiaNRTSettings = {}
+local UAudioSynesthesiaNRTSettings = {}
 
 
 ---@class UAudioSynesthesiaSettings : UAudioAnalyzerSettings
-UAudioSynesthesiaSettings = {}
+local UAudioSynesthesiaSettings = {}
 
 
 ---@class UConstantQNRT : UAudioSynesthesiaNRT
 ---@field Settings UConstantQNRTSettings
-UConstantQNRT = {}
+local UConstantQNRT = {}
 
 ---@param InSeconds float
 ---@param InChannel int32
@@ -64,7 +64,7 @@ function UConstantQNRT:GetChannelConstantQAtTime(InSeconds, InChannel, OutConsta
 ---@field BandWidthStretch float
 ---@field CQTNormalization EConstantQNormalizationEnum
 ---@field NoiseFloorDb float
-UConstantQNRTSettings = {}
+local UConstantQNRTSettings = {}
 
 
 
@@ -74,13 +74,13 @@ UConstantQNRTSettings = {}
 ---@field OnPerChannelLoudnessResults FLoudnessAnalyzerOnPerChannelLoudnessResults
 ---@field OnLatestOverallLoudnessResults FLoudnessAnalyzerOnLatestOverallLoudnessResults
 ---@field OnLatestPerChannelLoudnessResults FLoudnessAnalyzerOnLatestPerChannelLoudnessResults
-ULoudnessAnalyzer = {}
+local ULoudnessAnalyzer = {}
 
 
 
 ---@class ULoudnessNRT : UAudioSynesthesiaNRT
 ---@field Settings ULoudnessNRTSettings
-ULoudnessNRT = {}
+local ULoudnessNRT = {}
 
 ---@param InSeconds float
 ---@param OutLoudness float
@@ -104,7 +104,7 @@ function ULoudnessNRT:GetChannelLoudnessAtTime(InSeconds, InChannel, OutLoudness
 ---@field MaximumFrequency float
 ---@field CurveType ELoudnessNRTCurveTypeEnum
 ---@field NoiseFloorDb float
-ULoudnessNRTSettings = {}
+local ULoudnessNRTSettings = {}
 
 
 
@@ -115,7 +115,7 @@ ULoudnessNRTSettings = {}
 ---@field CurveType ELoudnessCurveTypeEnum
 ---@field NoiseFloorDb float
 ---@field ExpectedMaxLoudness float
-ULoudnessSettings = {}
+local ULoudnessSettings = {}
 
 
 
@@ -125,7 +125,7 @@ ULoudnessSettings = {}
 ---@field OnPerChannelMeterResults FMeterAnalyzerOnPerChannelMeterResults
 ---@field OnLatestOverallMeterResults FMeterAnalyzerOnLatestOverallMeterResults
 ---@field OnLatestPerChannelMeterResults FMeterAnalyzerOnLatestPerChannelMeterResults
-UMeterAnalyzer = {}
+local UMeterAnalyzer = {}
 
 
 
@@ -136,13 +136,13 @@ UMeterAnalyzer = {}
 ---@field MeterReleaseTime int32
 ---@field PeakHoldTime int32
 ---@field ClippingThreshold float
-UMeterSettings = {}
+local UMeterSettings = {}
 
 
 
 ---@class UOnsetNRT : UAudioSynesthesiaNRT
 ---@field Settings UOnsetNRTSettings
-UOnsetNRT = {}
+local UOnsetNRT = {}
 
 ---@param InStartSeconds float
 ---@param InEndSeconds float
@@ -164,7 +164,7 @@ function UOnsetNRT:GetChannelOnsetsBetweenTimes(InStartSeconds, InEndSeconds, In
 ---@field Sensitivity float
 ---@field MinimumFrequency float
 ---@field MaximumFrequency float
-UOnsetNRTSettings = {}
+local UOnsetNRTSettings = {}
 
 
 
@@ -174,7 +174,7 @@ UOnsetNRTSettings = {}
 ---@field SpectrumType EAudioSpectrumType
 ---@field WindowType EFFTWindowType
 ---@field bDownmixToMono boolean
-USynesthesiaSpectrumAnalysisSettings = {}
+local USynesthesiaSpectrumAnalysisSettings = {}
 
 
 
@@ -182,7 +182,7 @@ USynesthesiaSpectrumAnalysisSettings = {}
 ---@field Settings USynesthesiaSpectrumAnalysisSettings
 ---@field OnSpectrumResults FSynesthesiaSpectrumAnalyzerOnSpectrumResults
 ---@field OnLatestSpectrumResults FSynesthesiaSpectrumAnalyzerOnLatestSpectrumResults
-USynesthesiaSpectrumAnalyzer = {}
+local USynesthesiaSpectrumAnalyzer = {}
 
 ---@return int32
 function USynesthesiaSpectrumAnalyzer:GetNumCenterFrequencies() end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBaseActionButton_C : UActionButtonWidget
-UBPBaseActionButton_C = {}
+local UBPBaseActionButton_C = {}
 
 

@@ -5,7 +5,7 @@
 ---@field SequencePlayer UTemplateSequencePlayer
 ---@field TemplateSequence FSoftObjectPath
 ---@field BindingOverride FTemplateSequenceBindingOverrideData
-ATemplateSequenceActor = {}
+local ATemplateSequenceActor = {}
 
 ---@param InSequence UTemplateSequence
 function ATemplateSequenceActor:SetSequence(InSequence) end
@@ -25,27 +25,27 @@ function ATemplateSequenceActor:GetSequence() end
 ---@field PropertyBinding FMovieScenePropertyBinding
 ---@field PropertyScaleType ETemplateSectionPropertyScaleType
 ---@field FloatChannel FMovieSceneFloatChannel
-FTemplateSectionPropertyScale = {}
+local FTemplateSectionPropertyScale = {}
 
 
 
 ---@class FTemplateSequenceBindingOverrideData
 ---@field Object TWeakObjectPtr<UObject>
 ---@field bOverridesDefault boolean
-FTemplateSequenceBindingOverrideData = {}
+local FTemplateSequenceBindingOverrideData = {}
 
 
 
 ---@class UCameraAnimationBoundObjectInstantiator : UMovieSceneEntityInstantiatorSystem
-UCameraAnimationBoundObjectInstantiator = {}
+local UCameraAnimationBoundObjectInstantiator = {}
 
 
 ---@class UCameraAnimationEntitySystemLinker : UMovieSceneEntitySystemLinker
-UCameraAnimationEntitySystemLinker = {}
+local UCameraAnimationEntitySystemLinker = {}
 
 
 ---@class UCameraAnimationSequence : UTemplateSequence
-UCameraAnimationSequence = {}
+local UCameraAnimationSequence = {}
 
 
 ---@class UCameraAnimationSequenceCameraStandIn : UObject
@@ -60,7 +60,7 @@ UCameraAnimationSequence = {}
 ---@field CurrentFocalLength float
 ---@field CurrentAperture float
 ---@field CurrentFocusDistance float
-UCameraAnimationSequenceCameraStandIn = {}
+local UCameraAnimationSequenceCameraStandIn = {}
 
 
 
@@ -68,18 +68,18 @@ UCameraAnimationSequenceCameraStandIn = {}
 ---@field BoundObjectOverride UObject
 ---@field Sequence UMovieSceneSequence
 ---@field RootTemplateInstance FMovieSceneRootEvaluationTemplateInstance
-UCameraAnimationSequencePlayer = {}
+local UCameraAnimationSequencePlayer = {}
 
 
 
 ---@class UCameraAnimationSequenceSubsystem : UWorldSubsystem
 ---@field Linker UMovieSceneEntitySystemLinker
-UCameraAnimationSequenceSubsystem = {}
+local UCameraAnimationSequenceSubsystem = {}
 
 
 
 ---@class UCameraAnimationSpawnableSystem : UMovieSceneEntitySystem
-UCameraAnimationSpawnableSystem = {}
+local UCameraAnimationSpawnableSystem = {}
 
 
 ---@class USequenceCameraShakePattern : UCameraShakePattern
@@ -92,12 +92,12 @@ UCameraAnimationSpawnableSystem = {}
 ---@field bRandomSegment boolean
 ---@field Player UCameraAnimationSequencePlayer
 ---@field CameraStandIn UCameraAnimationSequenceCameraStandIn
-USequenceCameraShakePattern = {}
+local USequenceCameraShakePattern = {}
 
 
 
 ---@class USequenceCameraShakeTestUtil : UBlueprintFunctionLibrary
-USequenceCameraShakeTestUtil = {}
+local USequenceCameraShakeTestUtil = {}
 
 ---@param PlayerController APlayerController
 ---@param PPIndex int32
@@ -118,12 +118,12 @@ function USequenceCameraShakeTestUtil:GetCameraCachePOV(PlayerController) end
 ---@field BoundActorClass TSoftClassPtr<AActor>
 ---@field BoundPreviewActor TSoftObjectPtr<AActor>
 ---@field BoundActorComponents TMap<FGuid, FName>
-UTemplateSequence = {}
+local UTemplateSequence = {}
 
 
 
 ---@class UTemplateSequencePlayer : UMovieSceneSequencePlayer
-UTemplateSequencePlayer = {}
+local UTemplateSequencePlayer = {}
 
 ---@param WorldContextObject UObject
 ---@param TemplateSequence UTemplateSequence
@@ -134,24 +134,24 @@ function UTemplateSequencePlayer:CreateTemplateSequencePlayer(WorldContextObject
 
 
 ---@class UTemplateSequencePropertyScalingEvaluatorSystem : UMovieSceneEntitySystem
-UTemplateSequencePropertyScalingEvaluatorSystem = {}
+local UTemplateSequencePropertyScalingEvaluatorSystem = {}
 
 
 ---@class UTemplateSequencePropertyScalingInstantiatorSystem : UMovieSceneEntitySystem
-UTemplateSequencePropertyScalingInstantiatorSystem = {}
+local UTemplateSequencePropertyScalingInstantiatorSystem = {}
 
 
 ---@class UTemplateSequenceSection : UMovieSceneSubSection
 ---@field PropertyScales TArray<FTemplateSectionPropertyScale>
-UTemplateSequenceSection = {}
+local UTemplateSequenceSection = {}
 
 
 
 ---@class UTemplateSequenceSystem : UMovieSceneEntitySystem
-UTemplateSequenceSystem = {}
+local UTemplateSequenceSystem = {}
 
 
 ---@class UTemplateSequenceTrack : UMovieSceneSubTrack
-UTemplateSequenceTrack = {}
+local UTemplateSequenceTrack = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceWater_C : UItemTemplate
-UResourceWater_C = {}
+local UResourceWater_C = {}
 
 

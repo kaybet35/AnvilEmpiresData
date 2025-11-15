@@ -1,5 +1,5 @@
 ---@enum ECustomizedToolMenuVisibility
-ECustomizedToolMenuVisibility = {
+local ECustomizedToolMenuVisibility = {
     None = 0,
     Visible = 1,
     Hidden = 2,
@@ -7,7 +7,7 @@ ECustomizedToolMenuVisibility = {
 }
 
 ---@enum EDescendantScrollDestination
-EDescendantScrollDestination = {
+local EDescendantScrollDestination = {
     IntoView = 0,
     TopOrLeft = 1,
     Center = 2,
@@ -16,7 +16,7 @@ EDescendantScrollDestination = {
 }
 
 ---@enum EListItemAlignment
-EListItemAlignment = {
+local EListItemAlignment = {
     EvenlyDistributed = 0,
     EvenlySize = 1,
     EvenlyWide = 2,
@@ -28,7 +28,7 @@ EListItemAlignment = {
 }
 
 ---@enum EMultiBlockType
-EMultiBlockType = {
+local EMultiBlockType = {
     None = 0,
     ButtonRow = 1,
     EditableText = 2,
@@ -42,7 +42,7 @@ EMultiBlockType = {
 }
 
 ---@enum EMultiBoxType
-EMultiBoxType = {
+local EMultiBoxType = {
     MenuBar = 0,
     ToolBar = 1,
     VerticalToolBar = 2,
@@ -54,7 +54,7 @@ EMultiBoxType = {
 }
 
 ---@enum EMultipleKeyBindingIndex
-EMultipleKeyBindingIndex = {
+local EMultipleKeyBindingIndex = {
     Primary = 0,
     Secondary = 1,
     NumChords = 2,
@@ -62,14 +62,14 @@ EMultipleKeyBindingIndex = {
 }
 
 ---@enum EProgressBarFillStyle
-EProgressBarFillStyle = {
+local EProgressBarFillStyle = {
     Mask = 0,
     Scale = 1,
     EProgressBarFillStyle_MAX = 2,
 }
 
 ---@enum EProgressBarFillType
-EProgressBarFillType = {
+local EProgressBarFillType = {
     LeftToRight = 0,
     RightToLeft = 1,
     FillFromCenter = 2,
@@ -81,7 +81,7 @@ EProgressBarFillType = {
 }
 
 ---@enum EScrollWhenFocusChanges
-EScrollWhenFocusChanges = {
+local EScrollWhenFocusChanges = {
     NoScroll = 0,
     InstantScroll = 1,
     AnimatedScroll = 2,
@@ -89,7 +89,7 @@ EScrollWhenFocusChanges = {
 }
 
 ---@enum ESelectionMode
-ESelectionMode = {
+local ESelectionMode = {
     None = 0,
     Single = 1,
     SingleToggle = 2,
@@ -98,7 +98,7 @@ ESelectionMode = {
 }
 
 ---@enum EStretch
-EStretch = {
+local EStretch = {
     None = 0,
     Fill = 1,
     ScaleToFit = 2,
@@ -112,7 +112,7 @@ EStretch = {
 }
 
 ---@enum EStretchDirection
-EStretchDirection = {
+local EStretchDirection = {
     Both = 0,
     DownOnly = 1,
     UpOnly = 2,
@@ -120,7 +120,7 @@ EStretchDirection = {
 }
 
 ---@enum ETableViewMode
-ETableViewMode = {
+local ETableViewMode = {
     List = 0,
     Tile = 1,
     Tree = 2,
@@ -128,7 +128,7 @@ ETableViewMode = {
 }
 
 ---@enum ETextFlowDirection
-ETextFlowDirection = {
+local ETextFlowDirection = {
     Auto = 0,
     LeftToRight = 1,
     RightToLeft = 2,
@@ -136,7 +136,7 @@ ETextFlowDirection = {
 }
 
 ---@enum ETextJustify
-ETextJustify = {
+local ETextJustify = {
     Left = 0,
     Center = 1,
     Right = 2,
@@ -144,14 +144,14 @@ ETextJustify = {
 }
 
 ---@enum ETextWrappingPolicy
-ETextWrappingPolicy = {
+local ETextWrappingPolicy = {
     DefaultWrapping = 0,
     AllowPerCharacterWrapping = 1,
     ETextWrappingPolicy_MAX = 2,
 }
 
 ---@enum EUserInterfaceActionType
-EUserInterfaceActionType = {
+local EUserInterfaceActionType = {
     None = 0,
     Button = 1,
     ToggleButton = 2,
@@ -162,7 +162,7 @@ EUserInterfaceActionType = {
 }
 
 ---@enum EVirtualKeyboardDismissAction
-EVirtualKeyboardDismissAction = {
+local EVirtualKeyboardDismissAction = {
     TextChangeOnDismiss = 0,
     TextCommitOnAccept = 1,
     TextCommitOnDismiss = 2,
@@ -170,7 +170,7 @@ EVirtualKeyboardDismissAction = {
 }
 
 ---@enum EVirtualKeyboardTrigger
-EVirtualKeyboardTrigger = {
+local EVirtualKeyboardTrigger = {
     OnFocusByPointer = 0,
     OnAllFocusEvents = 1,
     EVirtualKeyboardTrigger_MAX = 2,

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULongBow_C : UItemTemplate
-ULongBow_C = {}
+local ULongBow_C = {}
 
 

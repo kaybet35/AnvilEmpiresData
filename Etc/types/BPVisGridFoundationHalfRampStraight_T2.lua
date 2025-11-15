@@ -9,7 +9,7 @@
 ---@field Scene USceneComponent
 ---@field VisRandomMeshDecor20 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor17 UVisRandomMeshDecorComponent
-ABPVisGridFoundationHalfRampStraight_T2_C = {}
+local ABPVisGridFoundationHalfRampStraight_T2_C = {}
 
 
 

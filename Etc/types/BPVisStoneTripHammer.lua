@@ -5,7 +5,7 @@
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field PowerUnitData UPowerUnitDataComponent
-ABPVisStoneTripHammer_C = {}
+local ABPVisStoneTripHammer_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisStoneTripHammer_C:ReceiveTick(DeltaSeconds) end

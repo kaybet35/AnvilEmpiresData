@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPInventoryItemHUDWidget_C : UInventoryItemHUDWidget
-UBPInventoryItemHUDWidget_C = {}
+local UBPInventoryItemHUDWidget_C = {}
 
 

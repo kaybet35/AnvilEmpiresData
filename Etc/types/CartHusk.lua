@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCartHusk_C : UEntityTemplate
-UCartHusk_C = {}
+local UCartHusk_C = {}
 
 

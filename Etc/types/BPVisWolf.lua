@@ -2,7 +2,7 @@
 
 ---@class ABPVisWolf_C : AVisAnimal
 ---@field Fur USkeletalMeshComponent
-ABPVisWolf_C = {}
+local ABPVisWolf_C = {}
 
 function ABPVisWolf_C:UserConstructionScript() end
 

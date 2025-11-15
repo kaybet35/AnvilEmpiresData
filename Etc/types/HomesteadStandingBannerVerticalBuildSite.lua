@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHomesteadStandingBannerVerticalBuildSite_C : UBPBaseBuildSiteEntity_C
-UHomesteadStandingBannerVerticalBuildSite_C = {}
+local UHomesteadStandingBannerVerticalBuildSite_C = {}
 
 

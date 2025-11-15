@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URoadBody_C : UEntityTemplate
-URoadBody_C = {}
+local URoadBody_C = {}
 
 

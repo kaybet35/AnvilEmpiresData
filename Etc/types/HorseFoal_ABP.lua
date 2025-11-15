@@ -25,7 +25,7 @@
 ---@field __StructProperty_137 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -34,7 +34,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
 ---@field __FloatProperty_2 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -69,7 +69,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field Yaw double
 ---@field Speed double
-UHorseFoal_ABP_C = {}
+local UHorseFoal_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UHorseFoal_ABP_C:AnimGraph(AnimGraph) end

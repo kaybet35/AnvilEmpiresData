@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USilverOrePickup_C : UEntityTemplate
-USilverOrePickup_C = {}
+local USilverOrePickup_C = {}
 
 

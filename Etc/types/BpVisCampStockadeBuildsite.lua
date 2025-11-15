@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABpVisCampStockadeBuildSite_C : AVisBuildSite
-ABpVisCampStockadeBuildSite_C = {}
+local ABpVisCampStockadeBuildSite_C = {}
 
 

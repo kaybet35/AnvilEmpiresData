@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMediumHarvestedAnimalHuskEmpty_C : UEntityTemplate
-UMediumHarvestedAnimalHuskEmpty_C = {}
+local UMediumHarvestedAnimalHuskEmpty_C = {}
 
 

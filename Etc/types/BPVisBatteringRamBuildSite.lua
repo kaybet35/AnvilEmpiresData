@@ -2,7 +2,7 @@
 
 ---@class ABPVisBatteringRamBuildSite_C : AVisBuildSite
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisBatteringRamBuildSite_C = {}
+local ABPVisBatteringRamBuildSite_C = {}
 
 
 

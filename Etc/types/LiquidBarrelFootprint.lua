@@ -2,7 +2,7 @@
 
 ---@class ALiquidBarrelFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ALiquidBarrelFootprint_C = {}
+local ALiquidBarrelFootprint_C = {}
 
 
 

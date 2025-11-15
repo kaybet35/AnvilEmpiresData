@@ -4,7 +4,7 @@
 ---@field LatticeChunkCoal UInstancedStaticMeshComponent
 ---@field LatticeChunkStone UInstancedStaticMeshComponent
 ---@field LatticeChunkIron UInstancedStaticMeshComponent
-ABPVisLatticeMine_C = {}
+local ABPVisLatticeMine_C = {}
 
 
 

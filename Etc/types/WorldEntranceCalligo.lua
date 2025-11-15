@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWorldEntranceCalligo_C : UEntityTemplate
-UWorldEntranceCalligo_C = {}
+local UWorldEntranceCalligo_C = {}
 
 

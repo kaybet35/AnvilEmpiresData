@@ -10,7 +10,7 @@
 ---@field RelicColumn02c19_StaticMeshComponent0 UStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field Root USceneComponent
-ABPVisColumnsWithRoofCover_C = {}
+local ABPVisColumnsWithRoofCover_C = {}
 
 
 

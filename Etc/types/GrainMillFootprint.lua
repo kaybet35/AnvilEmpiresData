@@ -2,7 +2,7 @@
 
 ---@class AGrainMillFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGrainMillFootprint_C = {}
+local AGrainMillFootprint_C = {}
 
 
 

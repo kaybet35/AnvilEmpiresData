@@ -2,7 +2,7 @@
 
 ---@class ABPVisSmallHarvestedAnimalHuskEmpty_C : AVisEffect
 ---@field Decal UDecalComponent
-ABPVisSmallHarvestedAnimalHuskEmpty_C = {}
+local ABPVisSmallHarvestedAnimalHuskEmpty_C = {}
 
 
 

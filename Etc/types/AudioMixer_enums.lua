@@ -1,5 +1,5 @@
 ---@enum EAudioDeviceChangedRole
-EAudioDeviceChangedRole = {
+local EAudioDeviceChangedRole = {
     Invalid = 0,
     Console = 1,
     Multimedia = 2,
@@ -9,7 +9,7 @@ EAudioDeviceChangedRole = {
 }
 
 ---@enum EAudioDeviceChangedState
-EAudioDeviceChangedState = {
+local EAudioDeviceChangedState = {
     Invalid = 0,
     Active = 1,
     Disabled = 2,
@@ -20,7 +20,7 @@ EAudioDeviceChangedState = {
 }
 
 ---@enum EAudioMixerChannelType
-EAudioMixerChannelType = {
+local EAudioMixerChannelType = {
     FrontLeft = 0,
     FrontRight = 1,
     FrontCenter = 2,
@@ -46,7 +46,7 @@ EAudioMixerChannelType = {
 }
 
 ---@enum EAudioMixerStreamDataFormatType
-EAudioMixerStreamDataFormatType = {
+local EAudioMixerStreamDataFormatType = {
     Unknown = 0,
     Float = 1,
     Int16 = 2,
@@ -55,7 +55,7 @@ EAudioMixerStreamDataFormatType = {
 }
 
 ---@enum EMusicalNoteName
-EMusicalNoteName = {
+local EMusicalNoteName = {
     C = 0,
     Db = 1,
     D = 2,
@@ -72,7 +72,7 @@ EMusicalNoteName = {
 }
 
 ---@enum ESubmixEffectDynamicsChannelLinkMode
-ESubmixEffectDynamicsChannelLinkMode = {
+local ESubmixEffectDynamicsChannelLinkMode = {
     Disabled = 0,
     Average = 1,
     Peak = 2,
@@ -81,7 +81,7 @@ ESubmixEffectDynamicsChannelLinkMode = {
 }
 
 ---@enum ESubmixEffectDynamicsKeySource
-ESubmixEffectDynamicsKeySource = {
+local ESubmixEffectDynamicsKeySource = {
     Default = 0,
     AudioBus = 1,
     Submix = 2,
@@ -90,7 +90,7 @@ ESubmixEffectDynamicsKeySource = {
 }
 
 ---@enum ESubmixEffectDynamicsPeakMode
-ESubmixEffectDynamicsPeakMode = {
+local ESubmixEffectDynamicsPeakMode = {
     MeanSquared = 0,
     RootMeanSquared = 1,
     Peak = 2,
@@ -99,7 +99,7 @@ ESubmixEffectDynamicsPeakMode = {
 }
 
 ---@enum ESubmixEffectDynamicsProcessorType
-ESubmixEffectDynamicsProcessorType = {
+local ESubmixEffectDynamicsProcessorType = {
     Compressor = 0,
     Limiter = 1,
     Expander = 2,
@@ -110,7 +110,7 @@ ESubmixEffectDynamicsProcessorType = {
 }
 
 ---@enum ESwapAudioOutputDeviceResultState
-ESwapAudioOutputDeviceResultState = {
+local ESwapAudioOutputDeviceResultState = {
     Failure = 0,
     Success = 1,
     None = 2,

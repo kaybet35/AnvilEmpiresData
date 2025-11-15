@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UUnderworldModuleDynamicCross_C : UEntityTemplate
-UUnderworldModuleDynamicCross_C = {}
+local UUnderworldModuleDynamicCross_C = {}
 
 

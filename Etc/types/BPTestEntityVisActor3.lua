@@ -4,7 +4,7 @@
 ---@field Cube1 UStaticMeshComponent
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTestEntityVisActor3_C = {}
+local ABPTestEntityVisActor3_C = {}
 
 
 

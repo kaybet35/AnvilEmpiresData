@@ -10,7 +10,7 @@
 ---@field ParticleID int32
 ---@field Time float
 ---@field Type int32
-FChaosDestructionEvent = {}
+local FChaosDestructionEvent = {}
 
 
 
@@ -63,17 +63,17 @@ FChaosDestructionEvent = {}
 ---@field LastSpawnTime float
 ---@field SolverTime float
 ---@field TimeStampOfLastProcessedData float
-UNiagaraDataInterfaceChaosDestruction = {}
+local UNiagaraDataInterfaceChaosDestruction = {}
 
 
 
 ---@class UNiagaraDataInterfaceGeometryCollection : UNiagaraDataInterface
 ---@field GeometryCollectionActor AGeometryCollectionActor
-UNiagaraDataInterfaceGeometryCollection = {}
+local UNiagaraDataInterfaceGeometryCollection = {}
 
 
 
 ---@class UNiagaraDataInterfacePhysicsField : UNiagaraDataInterface
-UNiagaraDataInterfacePhysicsField = {}
+local UNiagaraDataInterfacePhysicsField = {}
 
 

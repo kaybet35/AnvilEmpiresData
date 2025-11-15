@@ -4,7 +4,7 @@
 ---@field BPAnvilPanel UBPAnvilPanel_C
 ---@field BPHeaderContainer UBPHeaderContainer_C
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
-UBPDeploymentAvatarWidget_C = {}
+local UBPDeploymentAvatarWidget_C = {}
 
 
 

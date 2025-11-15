@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UReinforcedWood_C : UItemTemplate
-UReinforcedWood_C = {}
+local UReinforcedWood_C = {}
 
 

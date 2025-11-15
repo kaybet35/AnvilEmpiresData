@@ -4,7 +4,7 @@
 ---@field InputAction UInputAction
 ---@field TriggerEvent ETriggerEvent
 ---@field FunctionNameToBind FName
-FBlueprintEnhancedInputActionBinding = {}
+local FBlueprintEnhancedInputActionBinding = {}
 
 
 
@@ -13,7 +13,7 @@ FBlueprintEnhancedInputActionBinding = {}
 ---@field InputKeyEvent EInputEvent
 ---@field FunctionNameToBind FName
 ---@field bExecuteWhenPaused boolean
-FBlueprintInputDebugKeyDelegateBinding = {}
+local FBlueprintInputDebugKeyDelegateBinding = {}
 
 
 
@@ -25,12 +25,12 @@ FBlueprintInputDebugKeyDelegateBinding = {}
 ---@field Key FKey
 ---@field bIsPlayerMappable boolean
 ---@field bShouldBeIgnored boolean
-FEnhancedActionKeyMapping = {}
+local FEnhancedActionKeyMapping = {}
 
 
 
 ---@class FInjectedInputArray
-FInjectedInputArray = {}
+local FInjectedInputArray = {}
 
 
 ---@class FInputActionInstance
@@ -41,18 +41,18 @@ FInjectedInputArray = {}
 ---@field Modifiers TArray<UInputModifier>
 ---@field ElapsedProcessedTime float
 ---@field ElapsedTriggeredTime float
-FInputActionInstance = {}
+local FInputActionInstance = {}
 
 
 
 ---@class FInputActionValue
-FInputActionValue = {}
+local FInputActionValue = {}
 
 
 ---@class FInputComboStepData
 ---@field ComboStepAction UInputAction
 ---@field TimeToPressKey float
-FInputComboStepData = {}
+local FInputComboStepData = {}
 
 
 
@@ -60,14 +60,14 @@ FInputComboStepData = {}
 ---@field Issue EMappingQueryIssue
 ---@field BlockingContext UInputMappingContext
 ---@field BlockingAction UInputAction
-FMappingQueryIssue = {}
+local FMappingQueryIssue = {}
 
 
 
 ---@class FModifyContextOptions
 ---@field bIgnoreAllPressedKeysUntilRelease boolean
 ---@field bForceImmediately boolean
-FModifyContextOptions = {}
+local FModifyContextOptions = {}
 
 
 
@@ -76,12 +76,12 @@ FModifyContextOptions = {}
 ---@field Name FName
 ---@field DisplayName FText
 ---@field DisplayCategory FText
-FPlayerMappableKeyOptions = {}
+local FPlayerMappableKeyOptions = {}
 
 
 
 ---@class IEnhancedInputSubsystemInterface : IInterface
-IEnhancedInputSubsystemInterface = {}
+local IEnhancedInputSubsystemInterface = {}
 
 ---@param Options FModifyContextOptions
 ---@param RebuildType EInputMappingRebuildType
@@ -152,18 +152,18 @@ function IEnhancedInputSubsystemInterface:AddMappingContext(MappingContext, Prio
 
 ---@class UEnhancedInputActionDelegateBinding : UInputDelegateBinding
 ---@field InputActionDelegateBindings TArray<FBlueprintEnhancedInputActionBinding>
-UEnhancedInputActionDelegateBinding = {}
+local UEnhancedInputActionDelegateBinding = {}
 
 
 
 ---@class UEnhancedInputActionValueBinding : UInputDelegateBinding
 ---@field InputActionValueBindings TArray<FBlueprintEnhancedInputActionBinding>
-UEnhancedInputActionValueBinding = {}
+local UEnhancedInputActionValueBinding = {}
 
 
 
 ---@class UEnhancedInputComponent : UInputComponent
-UEnhancedInputComponent = {}
+local UEnhancedInputComponent = {}
 
 ---@param Action UInputAction
 ---@return FInputActionValue
@@ -173,12 +173,12 @@ function UEnhancedInputComponent:GetBoundActionValue(Action) end
 ---@class UEnhancedInputDeveloperSettings : UDeveloperSettingsBackedByCVars
 ---@field PlatformSettings FPerPlatformSettings
 ---@field bShouldOnlyTriggerLastActionInChord boolean
-UEnhancedInputDeveloperSettings = {}
+local UEnhancedInputDeveloperSettings = {}
 
 
 
 ---@class UEnhancedInputLibrary : UBlueprintFunctionLibrary
-UEnhancedInputLibrary = {}
+local UEnhancedInputLibrary = {}
 
 ---@param Context UInputMappingContext
 ---@param bForceImmediately boolean
@@ -224,13 +224,13 @@ function UEnhancedInputLibrary:BreakInputActionValue(InActionValue, X, Y, Z, Typ
 
 ---@class UEnhancedInputLocalPlayerSubsystem : ULocalPlayerSubsystem
 ---@field ControlMappingsRebuiltDelegate FEnhancedInputLocalPlayerSubsystemControlMappingsRebuiltDelegate
-UEnhancedInputLocalPlayerSubsystem = {}
+local UEnhancedInputLocalPlayerSubsystem = {}
 
 
 
 ---@class UEnhancedInputPlatformData : UObject
 ---@field MappingContextRedirects TMap<UInputMappingContext, UInputMappingContext>
-UEnhancedInputPlatformData = {}
+local UEnhancedInputPlatformData = {}
 
 ---@param InContext UInputMappingContext
 ---@return UInputMappingContext
@@ -241,7 +241,7 @@ function UEnhancedInputPlatformData:GetContextRedirect(InContext) end
 ---@field InputData TArray<TSoftClassPtr<UEnhancedInputPlatformData>>
 ---@field InputDataClasses TArray<TSubclassOf<UEnhancedInputPlatformData>>
 ---@field bShouldLogMappingContextRedirects boolean
-UEnhancedInputPlatformSettings = {}
+local UEnhancedInputPlatformSettings = {}
 
 
 
@@ -252,7 +252,7 @@ UEnhancedInputPlatformSettings = {}
 ---@field KeysPressedThisTick TMap<FKey, FVector>
 ---@field InputsInjectedThisTick TMap<UInputAction, FInjectedInputArray>
 ---@field LastInjectedActions TSet<UInputAction>
-UEnhancedPlayerInput = {}
+local UEnhancedPlayerInput = {}
 
 
 
@@ -264,20 +264,20 @@ UEnhancedPlayerInput = {}
 ---@field ValueType EInputActionValueType
 ---@field Triggers TArray<UInputTrigger>
 ---@field Modifiers TArray<UInputModifier>
-UInputAction = {}
+local UInputAction = {}
 
 
 
 ---@class UInputDebugKeyDelegateBinding : UInputDelegateBinding
 ---@field InputDebugKeyDelegateBindings TArray<FBlueprintInputDebugKeyDelegateBinding>
-UInputDebugKeyDelegateBinding = {}
+local UInputDebugKeyDelegateBinding = {}
 
 
 
 ---@class UInputMappingContext : UDataAsset
 ---@field Mappings TArray<FEnhancedActionKeyMapping>
 ---@field ContextDescription FText
-UInputMappingContext = {}
+local UInputMappingContext = {}
 
 ---@param Action UInputAction
 ---@param Key FKey
@@ -294,7 +294,7 @@ function UInputMappingContext:MapKey(Action, ToKey) end
 
 
 ---@class UInputModifier : UObject
-UInputModifier = {}
+local UInputModifier = {}
 
 ---@param PlayerInput UEnhancedPlayerInput
 ---@param CurrentValue FInputActionValue
@@ -311,14 +311,14 @@ function UInputModifier:GetVisualizationColor(SampleValue, FinalValue) end
 ---@field LowerThreshold float
 ---@field UpperThreshold float
 ---@field Type EDeadZoneType
-UInputModifierDeadZone = {}
+local UInputModifierDeadZone = {}
 
 
 
 ---@class UInputModifierFOVScaling : UInputModifier
 ---@field FOVScale float
 ---@field FOVScalingType EFOVScalingType
-UInputModifierFOVScaling = {}
+local UInputModifierFOVScaling = {}
 
 
 
@@ -326,13 +326,13 @@ UInputModifierFOVScaling = {}
 ---@field bX boolean
 ---@field bY boolean
 ---@field bZ boolean
-UInputModifierNegate = {}
+local UInputModifierNegate = {}
 
 
 
 ---@class UInputModifierResponseCurveExponential : UInputModifier
 ---@field CurveExponent FVector
-UInputModifierResponseCurveExponential = {}
+local UInputModifierResponseCurveExponential = {}
 
 
 
@@ -340,39 +340,39 @@ UInputModifierResponseCurveExponential = {}
 ---@field ResponseX UCurveFloat
 ---@field ResponseY UCurveFloat
 ---@field ResponseZ UCurveFloat
-UInputModifierResponseCurveUser = {}
+local UInputModifierResponseCurveUser = {}
 
 
 
 ---@class UInputModifierScalar : UInputModifier
 ---@field Scalar FVector
-UInputModifierScalar = {}
+local UInputModifierScalar = {}
 
 
 
 ---@class UInputModifierScaleByDeltaTime : UInputModifier
-UInputModifierScaleByDeltaTime = {}
+local UInputModifierScaleByDeltaTime = {}
 
 
 ---@class UInputModifierSmooth : UInputModifier
-UInputModifierSmooth = {}
+local UInputModifierSmooth = {}
 
 
 ---@class UInputModifierSwizzleAxis : UInputModifier
 ---@field Order EInputAxisSwizzle
-UInputModifierSwizzleAxis = {}
+local UInputModifierSwizzleAxis = {}
 
 
 
 ---@class UInputModifierToWorldSpace : UInputModifier
-UInputModifierToWorldSpace = {}
+local UInputModifierToWorldSpace = {}
 
 
 ---@class UInputTrigger : UObject
 ---@field ActuationThreshold float
 ---@field bShouldAlwaysTick boolean
 ---@field LastValue FInputActionValue
-UInputTrigger = {}
+local UInputTrigger = {}
 
 ---@param PlayerInput UEnhancedPlayerInput
 ---@param ModifiedValue FInputActionValue
@@ -388,12 +388,12 @@ function UInputTrigger:GetTriggerType() end
 
 ---@class UInputTriggerChordAction : UInputTrigger
 ---@field ChordAction UInputAction
-UInputTriggerChordAction = {}
+local UInputTriggerChordAction = {}
 
 
 
 ---@class UInputTriggerChordBlocker : UInputTriggerChordAction
-UInputTriggerChordBlocker = {}
+local UInputTriggerChordBlocker = {}
 
 
 ---@class UInputTriggerCombo : UInputTrigger
@@ -401,53 +401,53 @@ UInputTriggerChordBlocker = {}
 ---@field CurrentTimeBetweenComboSteps float
 ---@field ComboActions TArray<FInputComboStepData>
 ---@field CancelActions TArray<UInputAction>
-UInputTriggerCombo = {}
+local UInputTriggerCombo = {}
 
 
 
 ---@class UInputTriggerDown : UInputTrigger
-UInputTriggerDown = {}
+local UInputTriggerDown = {}
 
 
 ---@class UInputTriggerHold : UInputTriggerTimedBase
 ---@field HoldTimeThreshold float
 ---@field bIsOneShot boolean
-UInputTriggerHold = {}
+local UInputTriggerHold = {}
 
 
 
 ---@class UInputTriggerHoldAndRelease : UInputTriggerTimedBase
 ---@field HoldTimeThreshold float
-UInputTriggerHoldAndRelease = {}
+local UInputTriggerHoldAndRelease = {}
 
 
 
 ---@class UInputTriggerPressed : UInputTrigger
-UInputTriggerPressed = {}
+local UInputTriggerPressed = {}
 
 
 ---@class UInputTriggerPulse : UInputTriggerTimedBase
 ---@field bTriggerOnStart boolean
 ---@field Interval float
 ---@field TriggerLimit int32
-UInputTriggerPulse = {}
+local UInputTriggerPulse = {}
 
 
 
 ---@class UInputTriggerReleased : UInputTrigger
-UInputTriggerReleased = {}
+local UInputTriggerReleased = {}
 
 
 ---@class UInputTriggerTap : UInputTriggerTimedBase
 ---@field TapReleaseTimeThreshold float
-UInputTriggerTap = {}
+local UInputTriggerTap = {}
 
 
 
 ---@class UInputTriggerTimedBase : UInputTrigger
 ---@field HeldDuration float
 ---@field bAffectedByTimeDilation boolean
-UInputTriggerTimedBase = {}
+local UInputTriggerTimedBase = {}
 
 
 
@@ -457,7 +457,7 @@ UInputTriggerTimedBase = {}
 ---@field bIsDeprecated boolean
 ---@field MetaData UObject
 ---@field Contexts TMap<UInputMappingContext, int32>
-UPlayerMappableInputConfig = {}
+local UPlayerMappableInputConfig = {}
 
 function UPlayerMappableInputConfig:ResetToDefault() end
 ---@return boolean

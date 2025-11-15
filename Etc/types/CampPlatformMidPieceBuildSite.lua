@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCampPlatformMidPieceBuildSite_C : UEntityTemplate
-UCampPlatformMidPieceBuildSite_C = {}
+local UCampPlatformMidPieceBuildSite_C = {}
 
 

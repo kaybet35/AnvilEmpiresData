@@ -4,7 +4,7 @@
 ---@field Audio UAudioComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field Trail UParticleSystemComponent
-ABPVisWaterProjectile_C = {}
+local ABPVisWaterProjectile_C = {}
 
 
 

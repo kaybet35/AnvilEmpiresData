@@ -31,13 +31,13 @@
 ---@field __StructProperty_206 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __BoolProperty boolean
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -79,7 +79,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field boatInputDirection float
-UBoatHelm_ABP_C = {}
+local UBoatHelm_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UBoatHelm_ABP_C:AnimGraph(AnimGraph) end

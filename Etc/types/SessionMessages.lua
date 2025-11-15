@@ -6,21 +6,21 @@
 ---@field InstanceId FGuid
 ---@field TimeSeconds double
 ---@field Verbosity uint8
-FSessionServiceLog = {}
+local FSessionServiceLog = {}
 
 
 
 ---@class FSessionServiceLogSubscribe
-FSessionServiceLogSubscribe = {}
+local FSessionServiceLogSubscribe = {}
 
 
 ---@class FSessionServiceLogUnsubscribe
-FSessionServiceLogUnsubscribe = {}
+local FSessionServiceLogUnsubscribe = {}
 
 
 ---@class FSessionServicePing
 ---@field UserName FString
-FSessionServicePing = {}
+local FSessionServicePing = {}
 
 
 
@@ -35,7 +35,7 @@ FSessionServicePing = {}
 ---@field SessionName FString
 ---@field SessionOwner FString
 ---@field Standalone boolean
-FSessionServicePong = {}
+local FSessionServicePong = {}
 
 
 

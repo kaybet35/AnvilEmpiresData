@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMediumBoatBuildSite_C : UBPBaseBuildSiteEntity_C
-UMediumBoatBuildSite_C = {}
+local UMediumBoatBuildSite_C = {}
 
 

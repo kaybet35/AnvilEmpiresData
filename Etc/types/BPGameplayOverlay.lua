@@ -3,7 +3,7 @@
 ---@class UBPGameplayOverlay_C : UGameplayOverlay
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field WinConditionAnimation UWidgetAnimation
-UBPGameplayOverlay_C = {}
+local UBPGameplayOverlay_C = {}
 
 function UBPGameplayOverlay_C:PlayWinConditionAnimation() end
 ---@param EntryPoint int32

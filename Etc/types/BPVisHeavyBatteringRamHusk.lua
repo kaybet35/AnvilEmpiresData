@@ -2,7 +2,7 @@
 
 ---@class ABPVisHeavyBatteringRamHusk_C : AVisEffect
 ---@field StaticMesh UStaticMeshComponent
-ABPVisHeavyBatteringRamHusk_C = {}
+local ABPVisHeavyBatteringRamHusk_C = {}
 
 
 

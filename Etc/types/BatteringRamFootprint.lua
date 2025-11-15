@@ -2,7 +2,7 @@
 
 ---@class ABatteringRamFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ABatteringRamFootprint_C = {}
+local ABatteringRamFootprint_C = {}
 
 
 

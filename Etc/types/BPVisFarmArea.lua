@@ -3,7 +3,7 @@
 ---@class ABPVisFarmArea_C : AVisFarm
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field FertilizerDecal02 UDecalComponent
-ABPVisFarmArea_C = {}
+local ABPVisFarmArea_C = {}
 
 function ABPVisFarmArea_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

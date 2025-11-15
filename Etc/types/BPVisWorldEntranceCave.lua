@@ -24,7 +24,7 @@
 ---@field shrub1 UVisStaticMeshComponent
 ---@field CaveEntrance UDecalComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisWorldEntranceCave_C = {}
+local ABPVisWorldEntranceCave_C = {}
 
 
 

@@ -1,5 +1,5 @@
 ---@enum EEXRCompressionFormat
-EEXRCompressionFormat = {
+local EEXRCompressionFormat = {
     None = 0,
     PIZ = 1,
     ZIP = 2,

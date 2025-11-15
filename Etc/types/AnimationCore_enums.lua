@@ -1,12 +1,12 @@
 ---@enum EConstraintType
-EConstraintType = {
+local EConstraintType = {
     Transform = 0,
     Aim = 1,
     MAX = 2,
 }
 
 ---@enum EEulerRotationOrder
-EEulerRotationOrder = {
+local EEulerRotationOrder = {
     XYZ = 0,
     XZY = 1,
     YXZ = 2,
@@ -17,7 +17,7 @@ EEulerRotationOrder = {
 }
 
 ---@enum ETransformConstraintType
-ETransformConstraintType = {
+local ETransformConstraintType = {
     Translation = 0,
     Rotation = 1,
     Scale = 2,

@@ -2,7 +2,7 @@
 
 ---@class AWallEndPiece_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AWallEndPiece_C = {}
+local AWallEndPiece_C = {}
 
 
 

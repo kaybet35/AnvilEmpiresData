@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFlaxField_C : AVisResource
-ABPVisFlaxField_C = {}
+local ABPVisFlaxField_C = {}
 
 

@@ -1,5 +1,5 @@
 ---@enum ELocationAccuracy
-ELocationAccuracy = {
+local ELocationAccuracy = {
     LA_ThreeKilometers = 0,
     LA_OneKilometer = 1,
     LA_HundredMeters = 2,

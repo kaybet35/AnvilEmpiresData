@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWeaponStockpileBuildSite_C : UBPBaseBuildSiteEntity_C
-UWeaponStockpileBuildSite_C = {}
+local UWeaponStockpileBuildSite_C = {}
 
 

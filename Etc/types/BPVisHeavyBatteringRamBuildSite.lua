@@ -2,7 +2,7 @@
 
 ---@class ABPVisHeavyBatteringRamBuildSite_C : AVisBuildSite
 ---@field StaticMesh UStaticMeshComponent
-ABPVisHeavyBatteringRamBuildSite_C = {}
+local ABPVisHeavyBatteringRamBuildSite_C = {}
 
 
 

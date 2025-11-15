@@ -93,7 +93,7 @@
 ---@field VisRandomMeshDecor47 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor40 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationArchStraight_T2_C = {}
+local ABPVisGridFoundationArchStraight_T2_C = {}
 
 
 

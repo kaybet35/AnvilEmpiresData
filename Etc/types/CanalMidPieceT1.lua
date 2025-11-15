@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCanalMidPieceT1_C : UEntityTemplate
-UCanalMidPieceT1_C = {}
+local UCanalMidPieceT1_C = {}
 
 

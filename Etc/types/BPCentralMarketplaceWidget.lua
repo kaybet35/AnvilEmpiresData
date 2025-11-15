@@ -12,7 +12,7 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field PlaceOrderHeader UTextBlock
 ---@field SilverIcon UImage
-UBPCentralMarketplaceWidget_C = {}
+local UBPCentralMarketplaceWidget_C = {}
 
 
 

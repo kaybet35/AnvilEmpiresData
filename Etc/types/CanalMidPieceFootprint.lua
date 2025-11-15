@@ -2,7 +2,7 @@
 
 ---@class ACanalMidPieceFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ACanalMidPieceFootprint_C = {}
+local ACanalMidPieceFootprint_C = {}
 
 
 

@@ -2,7 +2,7 @@
 
 ---@class ACampGate_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ACampGate_C = {}
+local ACampGate_C = {}
 
 
 

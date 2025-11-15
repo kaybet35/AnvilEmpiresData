@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UClayPile_C : UEntityTemplate
-UClayPile_C = {}
+local UClayPile_C = {}
 
 

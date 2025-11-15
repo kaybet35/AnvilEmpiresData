@@ -2,7 +2,7 @@
 
 ---@class ATrapFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ATrapFootprint_C = {}
+local ATrapFootprint_C = {}
 
 
 

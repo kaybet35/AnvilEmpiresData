@@ -1,5 +1,5 @@
 ---@enum EConsoleForGamepadLabels
-EConsoleForGamepadLabels = {
+local EConsoleForGamepadLabels = {
     None = 0,
     XBoxOne = 1,
     PS4 = 2,
@@ -7,7 +7,7 @@ EConsoleForGamepadLabels = {
 }
 
 ---@enum EControllerHand
-EControllerHand = {
+local EControllerHand = {
     Left = 0,
     Right = 1,
     AnyHand = 2,
@@ -31,7 +31,7 @@ EControllerHand = {
 }
 
 ---@enum ETouchIndex
-ETouchIndex = {
+local ETouchIndex = {
     Touch1 = 0,
     Touch2 = 1,
     Touch3 = 2,
@@ -48,7 +48,7 @@ ETouchIndex = {
 }
 
 ---@enum ETouchType
-ETouchType = {
+local ETouchType = {
     Began = 0,
     Moved = 1,
     Stationary = 2,

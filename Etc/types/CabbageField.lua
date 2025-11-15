@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCabbageField_C : UEntityTemplate
-UCabbageField_C = {}
+local UCabbageField_C = {}
 
 

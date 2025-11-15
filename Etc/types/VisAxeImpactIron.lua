@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisAxeImpactIron_C : AVisEffect
-AVisAxeImpactIron_C = {}
+local AVisAxeImpactIron_C = {}
 
 

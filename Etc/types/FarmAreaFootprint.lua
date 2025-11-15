@@ -2,7 +2,7 @@
 
 ---@class AFarmAreaFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFarmAreaFootprint_C = {}
+local AFarmAreaFootprint_C = {}
 
 
 

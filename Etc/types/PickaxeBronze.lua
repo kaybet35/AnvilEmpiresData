@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPickaxeBronze_C : UItemTemplate
-UPickaxeBronze_C = {}
+local UPickaxeBronze_C = {}
 
 

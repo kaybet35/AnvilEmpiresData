@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisMaceImpactDefault_C : AVisEffect
-AVisMaceImpactDefault_C = {}
+local AVisMaceImpactDefault_C = {}
 
 

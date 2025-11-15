@@ -2,7 +2,7 @@
 
 ---@class ABPVisMediumBoatHusk_C : AVisEffect
 ---@field StaticMesh UStaticMeshComponent
-ABPVisMediumBoatHusk_C = {}
+local ABPVisMediumBoatHusk_C = {}
 
 
 

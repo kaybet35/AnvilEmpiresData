@@ -4,7 +4,7 @@
 ---@field PoseableMesh UPoseableMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
-ABPVisFamilyCenterCeilingCornerOutQuarterStraight_T1_C = {}
+local ABPVisFamilyCenterCeilingCornerOutQuarterStraight_T1_C = {}
 
 
 

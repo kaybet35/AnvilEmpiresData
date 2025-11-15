@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPCallForReinforcementsActionButton_C : UActionButtonWidget
-UBPCallForReinforcementsActionButton_C = {}
+local UBPCallForReinforcementsActionButton_C = {}
 
 

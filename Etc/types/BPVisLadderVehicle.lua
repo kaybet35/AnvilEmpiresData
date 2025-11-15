@@ -4,7 +4,7 @@
 ---@field SecondVehicleSeatData UVehicleSeatDataComponent
 ---@field VisSkeletalMesh USkeletalMeshComponent
 ---@field Arrow UArrowComponent
-ABPVisLadderVehicle_C = {}
+local ABPVisLadderVehicle_C = {}
 
 
 

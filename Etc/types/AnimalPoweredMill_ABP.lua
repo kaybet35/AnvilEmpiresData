@@ -13,7 +13,7 @@
 ---@field __NameProperty_29 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -21,7 +21,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -35,7 +35,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
 ---@field ['Anim Slow Amount'] double
-UAnimalPoweredMill_ABP_C = {}
+local UAnimalPoweredMill_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UAnimalPoweredMill_ABP_C:AnimGraph(AnimGraph) end

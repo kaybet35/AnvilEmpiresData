@@ -1,20 +1,20 @@
 ---@meta
 
 ---@class FDataflowConnection
-FDataflowConnection = {}
+local FDataflowConnection = {}
 
 
 ---@class FDataflowInput : FDataflowConnection
-FDataflowInput = {}
+local FDataflowInput = {}
 
 
 ---@class FDataflowNode
 ---@field bActive boolean
-FDataflowNode = {}
+local FDataflowNode = {}
 
 
 
 ---@class FDataflowOutput : FDataflowConnection
-FDataflowOutput = {}
+local FDataflowOutput = {}
 
 

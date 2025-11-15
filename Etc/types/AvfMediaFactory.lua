@@ -2,7 +2,7 @@
 
 ---@class UAvfMediaSettings : UObject
 ---@field NativeAudioOut boolean
-UAvfMediaSettings = {}
+local UAvfMediaSettings = {}
 
 
 

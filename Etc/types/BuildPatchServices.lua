@@ -6,7 +6,7 @@
 ---@field ShaHash FSHAHashData
 ---@field FileSize int64
 ---@field GroupNumber uint8
-FChunkInfoData = {}
+local FChunkInfoData = {}
 
 
 
@@ -14,14 +14,14 @@ FChunkInfoData = {}
 ---@field Guid FGuid
 ---@field Offset uint32
 ---@field Size uint32
-FChunkPartData = {}
+local FChunkPartData = {}
 
 
 
 ---@class FCustomFieldData
 ---@field Key FString
 ---@field Value FString
-FCustomFieldData = {}
+local FCustomFieldData = {}
 
 
 
@@ -34,13 +34,13 @@ FCustomFieldData = {}
 ---@field SymlinkTarget FString
 ---@field bIsReadOnly boolean
 ---@field bIsCompressed boolean
-FFileManifestData = {}
+local FFileManifestData = {}
 
 
 
 ---@class FSHAHashData
 ---@field Hash uint8
-FSHAHashData = {}
+local FSHAHashData = {}
 
 
 
@@ -59,7 +59,7 @@ FSHAHashData = {}
 ---@field FileManifestList TArray<FFileManifestData>
 ---@field ChunkList TArray<FChunkInfoData>
 ---@field CustomFields TArray<FCustomFieldData>
-UBuildPatchManifest = {}
+local UBuildPatchManifest = {}
 
 
 

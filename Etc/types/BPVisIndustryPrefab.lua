@@ -6,7 +6,7 @@
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field VisStaticMesh_Roof UVisStaticMeshComponent
-ABPVisIndustryPrefab_C = {}
+local ABPVisIndustryPrefab_C = {}
 
 
 

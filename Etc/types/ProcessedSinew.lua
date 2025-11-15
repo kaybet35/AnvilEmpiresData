@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UProcessedSinew_C : UItemTemplate
-UProcessedSinew_C = {}
+local UProcessedSinew_C = {}
 
 

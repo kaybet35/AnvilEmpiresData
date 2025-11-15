@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UArrows_C : UItemTemplate
-UArrows_C = {}
+local UArrows_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisScythe_C : UVisItem
-UBPVisScythe_C = {}
+local UBPVisScythe_C = {}
 
 

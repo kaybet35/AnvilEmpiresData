@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectTorchSwing_C : UEntityTemplate
-UEffectTorchSwing_C = {}
+local UEffectTorchSwing_C = {}
 
 

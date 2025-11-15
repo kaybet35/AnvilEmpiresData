@@ -2,7 +2,7 @@
 
 ---@class ACableActor : AActor
 ---@field CableComponent UCableComponent
-ACableActor = {}
+local ACableActor = {}
 
 
 
@@ -27,7 +27,7 @@ ACableActor = {}
 ---@field CableWidth float
 ---@field NumSides int32
 ---@field TileMaterial float
-UCableComponent = {}
+local UCableComponent = {}
 
 ---@param Component USceneComponent
 ---@param SocketName FName

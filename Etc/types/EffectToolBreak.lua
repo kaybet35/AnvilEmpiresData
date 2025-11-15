@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectToolBreak_C : UEntityTemplate
-UEffectToolBreak_C = {}
+local UEffectToolBreak_C = {}
 
 

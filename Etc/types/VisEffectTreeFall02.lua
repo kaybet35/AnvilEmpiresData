@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectTreeFall02_C : AVisEffect
-AVisEffectTreeFall02_C = {}
+local AVisEffectTreeFall02_C = {}
 
 

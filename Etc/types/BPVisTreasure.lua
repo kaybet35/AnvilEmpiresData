@@ -4,7 +4,7 @@
 ---@field TreasureMesh3 UStaticMeshComponent
 ---@field TreasureMesh2 UStaticMeshComponent
 ---@field TreasureMesh1 UStaticMeshComponent
-ABPVisTreasure_C = {}
+local ABPVisTreasure_C = {}
 
 
 

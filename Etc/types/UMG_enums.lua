@@ -1,12 +1,12 @@
 ---@enum EBindingKind
-EBindingKind = {
+local EBindingKind = {
     Function = 0,
     Property = 1,
     EBindingKind_MAX = 2,
 }
 
 ---@enum EDragPivot
-EDragPivot = {
+local EDragPivot = {
     MouseDown = 0,
     TopLeft = 1,
     TopCenter = 2,
@@ -21,7 +21,7 @@ EDragPivot = {
 }
 
 ---@enum EDynamicBoxType
-EDynamicBoxType = {
+local EDynamicBoxType = {
     Horizontal = 0,
     Vertical = 1,
     Wrap = 2,
@@ -32,7 +32,7 @@ EDynamicBoxType = {
 }
 
 ---@enum ESlateAccessibleBehavior
-ESlateAccessibleBehavior = {
+local ESlateAccessibleBehavior = {
     NotAccessible = 0,
     Auto = 1,
     Summary = 2,
@@ -42,14 +42,14 @@ ESlateAccessibleBehavior = {
 }
 
 ---@enum ESlateSizeRule
-ESlateSizeRule = {
+local ESlateSizeRule = {
     Automatic = 0,
     Fill = 1,
     ESlateSizeRule_MAX = 2,
 }
 
 ---@enum ESlateVisibility
-ESlateVisibility = {
+local ESlateVisibility = {
     Visible = 0,
     Collapsed = 1,
     Hidden = 2,
@@ -59,7 +59,7 @@ ESlateVisibility = {
 }
 
 ---@enum ETickMode
-ETickMode = {
+local ETickMode = {
     Disabled = 0,
     Enabled = 1,
     Automatic = 2,
@@ -67,7 +67,7 @@ ETickMode = {
 }
 
 ---@enum EUMGSequencePlayMode
-EUMGSequencePlayMode = {
+local EUMGSequencePlayMode = {
     Forward = 0,
     Reverse = 1,
     PingPong = 2,
@@ -75,7 +75,7 @@ EUMGSequencePlayMode = {
 }
 
 ---@enum EVirtualKeyboardType
-EVirtualKeyboardType = {
+local EVirtualKeyboardType = {
     Default = 0,
     Number = 1,
     Web = 2,
@@ -86,14 +86,14 @@ EVirtualKeyboardType = {
 }
 
 ---@enum EWidgetAnimationEvent
-EWidgetAnimationEvent = {
+local EWidgetAnimationEvent = {
     Started = 0,
     Finished = 1,
     EWidgetAnimationEvent_MAX = 2,
 }
 
 ---@enum EWidgetBlendMode
-EWidgetBlendMode = {
+local EWidgetBlendMode = {
     Opaque = 0,
     Masked = 1,
     Transparent = 2,
@@ -101,7 +101,7 @@ EWidgetBlendMode = {
 }
 
 ---@enum EWidgetDesignFlags
-EWidgetDesignFlags = {
+local EWidgetDesignFlags = {
     None = 0,
     Designing = 1,
     ShowOutline = 2,
@@ -110,14 +110,14 @@ EWidgetDesignFlags = {
 }
 
 ---@enum EWidgetGeometryMode
-EWidgetGeometryMode = {
+local EWidgetGeometryMode = {
     Plane = 0,
     Cylinder = 1,
     EWidgetGeometryMode_MAX = 2,
 }
 
 ---@enum EWidgetInteractionSource
-EWidgetInteractionSource = {
+local EWidgetInteractionSource = {
     World = 0,
     Mouse = 1,
     CenterScreen = 2,
@@ -126,28 +126,28 @@ EWidgetInteractionSource = {
 }
 
 ---@enum EWidgetSpace
-EWidgetSpace = {
+local EWidgetSpace = {
     World = 0,
     Screen = 1,
     EWidgetSpace_MAX = 2,
 }
 
 ---@enum EWidgetTickFrequency
-EWidgetTickFrequency = {
+local EWidgetTickFrequency = {
     Never = 0,
     Auto = 1,
     EWidgetTickFrequency_MAX = 2,
 }
 
 ---@enum EWidgetTimingPolicy
-EWidgetTimingPolicy = {
+local EWidgetTimingPolicy = {
     RealTime = 0,
     GameTime = 1,
     EWidgetTimingPolicy_MAX = 2,
 }
 
 ---@enum EWindowVisibility
-EWindowVisibility = {
+local EWindowVisibility = {
     Visible = 0,
     SelfHitTestInvisible = 1,
     EWindowVisibility_MAX = 2,

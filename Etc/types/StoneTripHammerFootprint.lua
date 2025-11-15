@@ -2,7 +2,7 @@
 
 ---@class AStoneTripHammerFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AStoneTripHammerFootprint_C = {}
+local AStoneTripHammerFootprint_C = {}
 
 
 

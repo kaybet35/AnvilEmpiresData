@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHalberd_C : UItemTemplate
-UHalberd_C = {}
+local UHalberd_C = {}
 
 

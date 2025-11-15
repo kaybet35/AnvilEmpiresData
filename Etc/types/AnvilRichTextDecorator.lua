@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAnvilRichTextDecorator_C : URichTextBlockImageDecorator
-UAnvilRichTextDecorator_C = {}
+local UAnvilRichTextDecorator_C = {}
 
 

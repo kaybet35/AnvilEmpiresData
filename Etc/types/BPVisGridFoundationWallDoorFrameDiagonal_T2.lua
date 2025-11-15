@@ -21,7 +21,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field VisRandomMeshDecor11 UVisRandomMeshDecorComponent
-ABPVisGridFoundationWallDoorFrameDiagonal_T2_C = {}
+local ABPVisGridFoundationWallDoorFrameDiagonal_T2_C = {}
 
 
 

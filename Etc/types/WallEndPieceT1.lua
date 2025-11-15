@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWallEndPieceT1_C : UEntityTemplate
-UWallEndPieceT1_C = {}
+local UWallEndPieceT1_C = {}
 
 

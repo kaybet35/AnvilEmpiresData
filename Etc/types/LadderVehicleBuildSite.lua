@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULadderVehicleBuildSite_C : UBPBaseBuildSiteEntity_C
-ULadderVehicleBuildSite_C = {}
+local ULadderVehicleBuildSite_C = {}
 
 

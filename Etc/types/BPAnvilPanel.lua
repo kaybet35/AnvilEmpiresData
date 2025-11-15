@@ -3,7 +3,7 @@
 ---@class UBPAnvilPanel_C : UAnvilPanel
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnvilPanelVerticalBox UVerticalBox
-UBPAnvilPanel_C = {}
+local UBPAnvilPanel_C = {}
 
 ---@param IsDesignTime boolean
 function UBPAnvilPanel_C:PreConstruct(IsDesignTime) end

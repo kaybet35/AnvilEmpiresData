@@ -1,5 +1,5 @@
 ---@enum EMobileShadowQuality
-EMobileShadowQuality = {
+local EMobileShadowQuality = {
     NoFiltering = 0,
     PCF_1x1 = 1,
     PCF_3x3 = 2,

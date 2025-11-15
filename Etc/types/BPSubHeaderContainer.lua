@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSubHeaderContainer_C : USubHeaderContainer
-UBPSubHeaderContainer_C = {}
+local UBPSubHeaderContainer_C = {}
 
 

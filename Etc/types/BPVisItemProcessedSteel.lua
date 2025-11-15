@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemProcessedSteel_C : UVisItem
-UBPVisItemProcessedSteel_C = {}
+local UBPVisItemProcessedSteel_C = {}
 
 

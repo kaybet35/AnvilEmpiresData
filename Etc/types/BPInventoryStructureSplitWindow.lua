@@ -7,7 +7,7 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field StructurePanel UBPAnvilPanel_C
-UBPInventoryStructureSplitWindow_C = {}
+local UBPInventoryStructureSplitWindow_C = {}
 
 
 

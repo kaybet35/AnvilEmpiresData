@@ -2,39 +2,39 @@
 
 ---@class AGeometryCacheActor : AActor
 ---@field GeometryCacheComponent UGeometryCacheComponent
-AGeometryCacheActor = {}
+local AGeometryCacheActor = {}
 
 ---@return UGeometryCacheComponent
 function AGeometryCacheActor:GetGeometryCacheComponent() end
 
 
 ---@class FGeometryCacheMeshBatchInfo
-FGeometryCacheMeshBatchInfo = {}
+local FGeometryCacheMeshBatchInfo = {}
 
 
 ---@class FGeometryCacheMeshData
-FGeometryCacheMeshData = {}
+local FGeometryCacheMeshData = {}
 
 
 ---@class FGeometryCacheVertexInfo
-FGeometryCacheVertexInfo = {}
+local FGeometryCacheVertexInfo = {}
 
 
 ---@class FNiagaraGeometryCacheReference
 ---@field GeometryCache UGeometryCache
 ---@field GeometryCacheUserParamBinding FNiagaraUserParameterBinding
 ---@field OverrideMaterials TArray<UMaterialInterface>
-FNiagaraGeometryCacheReference = {}
+local FNiagaraGeometryCacheReference = {}
 
 
 
 ---@class FTrackRenderData
-FTrackRenderData = {}
+local FTrackRenderData = {}
 
 
 ---@class UDEPRECATED_GeometryCacheTrack_FlipbookAnimation : UGeometryCacheTrack
 ---@field NumMeshSamples uint32
-UDEPRECATED_GeometryCacheTrack_FlipbookAnimation = {}
+local UDEPRECATED_GeometryCacheTrack_FlipbookAnimation = {}
 
 ---@param MeshData FGeometryCacheMeshData
 ---@param SampleTime float
@@ -42,14 +42,14 @@ function UDEPRECATED_GeometryCacheTrack_FlipbookAnimation:AddMeshSample(MeshData
 
 
 ---@class UDEPRECATED_GeometryCacheTrack_TransformAnimation : UGeometryCacheTrack
-UDEPRECATED_GeometryCacheTrack_TransformAnimation = {}
+local UDEPRECATED_GeometryCacheTrack_TransformAnimation = {}
 
 ---@param NewMeshData FGeometryCacheMeshData
 function UDEPRECATED_GeometryCacheTrack_TransformAnimation:SetMesh(NewMeshData) end
 
 
 ---@class UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation : UGeometryCacheTrack
-UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation = {}
+local UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation = {}
 
 ---@param NewMeshData FGeometryCacheMeshData
 function UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation:SetMesh(NewMeshData) end
@@ -61,24 +61,24 @@ function UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation:SetMesh(NewMeshD
 ---@field StartFrame int32
 ---@field EndFrame int32
 ---@field Hash uint64
-UGeometryCache = {}
+local UGeometryCache = {}
 
 
 
 ---@class UGeometryCacheCodecBase : UObject
 ---@field TopologyRanges TArray<int32>
-UGeometryCacheCodecBase = {}
+local UGeometryCacheCodecBase = {}
 
 
 
 ---@class UGeometryCacheCodecRaw : UGeometryCacheCodecBase
 ---@field DummyProperty int32
-UGeometryCacheCodecRaw = {}
+local UGeometryCacheCodecRaw = {}
 
 
 
 ---@class UGeometryCacheCodecV1 : UGeometryCacheCodecBase
-UGeometryCacheCodecV1 = {}
+local UGeometryCacheCodecV1 = {}
 
 
 ---@class UGeometryCacheComponent : UMeshComponent
@@ -95,7 +95,7 @@ UGeometryCacheCodecV1 = {}
 ---@field bManualTick boolean
 ---@field bOverrideWireframeColor boolean
 ---@field WireframeOverrideColor FLinearColor
-UGeometryCacheComponent = {}
+local UGeometryCacheComponent = {}
 
 ---@param Time float
 ---@param bInIsRunning boolean
@@ -155,14 +155,14 @@ function UGeometryCacheComponent:GetAnimationTime() end
 
 ---@class UGeometryCacheTrack : UObject
 ---@field Duration float
-UGeometryCacheTrack = {}
+local UGeometryCacheTrack = {}
 
 
 
 ---@class UGeometryCacheTrackStreamable : UGeometryCacheTrack
 ---@field Codec UGeometryCacheCodecBase
 ---@field StartSampleTime float
-UGeometryCacheTrackStreamable = {}
+local UGeometryCacheTrackStreamable = {}
 
 
 
@@ -179,7 +179,7 @@ UGeometryCacheTrackStreamable = {}
 ---@field RendererVisibilityTagBinding FNiagaraVariableAttributeBinding
 ---@field RendererVisibility int32
 ---@field bAssignComponentsOnParticleID boolean
-UNiagaraGeometryCacheRendererProperties = {}
+local UNiagaraGeometryCacheRendererProperties = {}
 
 
 

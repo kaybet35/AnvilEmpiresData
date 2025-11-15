@@ -3,7 +3,7 @@
 ---@class ABPFortBannerStanding_C : AVisStructure
 ---@field VisTeamSkeletalMesh UVisTeamSkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPFortBannerStanding_C = {}
+local ABPFortBannerStanding_C = {}
 
 
 

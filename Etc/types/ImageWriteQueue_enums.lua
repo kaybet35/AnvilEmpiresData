@@ -1,5 +1,5 @@
 ---@enum EDesiredImageFormat
-EDesiredImageFormat = {
+local EDesiredImageFormat = {
     PNG = 0,
     JPG = 1,
     BMP = 2,

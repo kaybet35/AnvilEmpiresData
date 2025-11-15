@@ -1,5 +1,5 @@
 ---@enum ENCPoolMethod
-ENCPoolMethod = {
+local ENCPoolMethod = {
     None = 0,
     AutoRelease = 1,
     ManualRelease = 2,
@@ -9,7 +9,7 @@ ENCPoolMethod = {
 }
 
 ---@enum ENDIActorComponentSourceMode
-ENDIActorComponentSourceMode = {
+local ENDIActorComponentSourceMode = {
     Default = 0,
     AttachParent = 1,
     LocalPlayer = 2,
@@ -17,7 +17,7 @@ ENDIActorComponentSourceMode = {
 }
 
 ---@enum ENDICollisionQuery_AsyncGpuTraceProvider
-ENDICollisionQuery_AsyncGpuTraceProvider = {
+local ENDICollisionQuery_AsyncGpuTraceProvider = {
     Default = 0,
     HWRT = 1,
     GSDF = 2,
@@ -26,14 +26,14 @@ ENDICollisionQuery_AsyncGpuTraceProvider = {
 }
 
 ---@enum ENDIExport_GPUAllocationMode
-ENDIExport_GPUAllocationMode = {
+local ENDIExport_GPUAllocationMode = {
     FixedSize = 0,
     PerParticle = 1,
     ENDIExport_MAX = 2,
 }
 
 ---@enum ENDILandscape_SourceMode
-ENDILandscape_SourceMode = {
+local ENDILandscape_SourceMode = {
     Default = 0,
     Source = 1,
     AttachParent = 2,
@@ -41,14 +41,14 @@ ENDILandscape_SourceMode = {
 }
 
 ---@enum ENDISkelMesh_AdjacencyTriangleIndexFormat
-ENDISkelMesh_AdjacencyTriangleIndexFormat = {
+local ENDISkelMesh_AdjacencyTriangleIndexFormat = {
     Full = 0,
     Half = 1,
     ENDISkelMesh_MAX = 2,
 }
 
 ---@enum ENDISkelMesh_GpuMaxInfluences
-ENDISkelMesh_GpuMaxInfluences = {
+local ENDISkelMesh_GpuMaxInfluences = {
     AllowMax4 = 0,
     AllowMax8 = 1,
     Unlimited = 2,
@@ -56,7 +56,7 @@ ENDISkelMesh_GpuMaxInfluences = {
 }
 
 ---@enum ENDISkelMesh_GpuUniformSamplingFormat
-ENDISkelMesh_GpuUniformSamplingFormat = {
+local ENDISkelMesh_GpuUniformSamplingFormat = {
     Full = 0,
     Limited_24_8 = 1,
     Limited_23_9 = 2,
@@ -64,7 +64,7 @@ ENDISkelMesh_GpuUniformSamplingFormat = {
 }
 
 ---@enum ENDISkeletalMesh_SkinningMode
-ENDISkeletalMesh_SkinningMode = {
+local ENDISkeletalMesh_SkinningMode = {
     Invalid = 255,
     None = 0,
     SkinOnTheFly = 1,
@@ -73,7 +73,7 @@ ENDISkeletalMesh_SkinningMode = {
 }
 
 ---@enum ENDISkeletalMesh_SourceMode
-ENDISkeletalMesh_SourceMode = {
+local ENDISkeletalMesh_SourceMode = {
     Default = 0,
     Source = 1,
     AttachParent = 2,
@@ -81,7 +81,7 @@ ENDISkeletalMesh_SourceMode = {
 }
 
 ---@enum ENDIStaticMesh_SourceMode
-ENDIStaticMesh_SourceMode = {
+local ENDIStaticMesh_SourceMode = {
     Default = 0,
     Source = 1,
     AttachParent = 2,
@@ -90,7 +90,7 @@ ENDIStaticMesh_SourceMode = {
 }
 
 ---@enum ENiagaraAgeUpdateMode
-ENiagaraAgeUpdateMode = {
+local ENiagaraAgeUpdateMode = {
     TickDeltaTime = 0,
     DesiredAge = 1,
     DesiredAgeNoSeek = 2,
@@ -98,7 +98,7 @@ ENiagaraAgeUpdateMode = {
 }
 
 ---@enum ENiagaraBakerViewMode
-ENiagaraBakerViewMode = {
+local ENiagaraBakerViewMode = {
     Perspective = 0,
     OrthoFront = 1,
     OrthoBack = 2,
@@ -111,7 +111,7 @@ ENiagaraBakerViewMode = {
 }
 
 ---@enum ENiagaraBindingSource
-ENiagaraBindingSource = {
+local ENiagaraBindingSource = {
     ImplicitFromSource = 0,
     ExplicitParticles = 1,
     ExplicitEmitter = 2,
@@ -122,7 +122,7 @@ ENiagaraBindingSource = {
 }
 
 ---@enum ENiagaraBoolDisplayMode
-ENiagaraBoolDisplayMode = {
+local ENiagaraBoolDisplayMode = {
     DisplayAlways = 0,
     DisplayIfTrue = 1,
     DisplayIfFalse = 2,
@@ -130,7 +130,7 @@ ENiagaraBoolDisplayMode = {
 }
 
 ---@enum ENiagaraCVarConditionResponse
-ENiagaraCVarConditionResponse = {
+local ENiagaraCVarConditionResponse = {
     None = 0,
     Enable = 1,
     Disable = 2,
@@ -138,7 +138,7 @@ ENiagaraCVarConditionResponse = {
 }
 
 ---@enum ENiagaraCollisionMode
-ENiagaraCollisionMode = {
+local ENiagaraCollisionMode = {
     None = 0,
     SceneGeometry = 1,
     DepthBuffer = 2,
@@ -147,7 +147,7 @@ ENiagaraCollisionMode = {
 }
 
 ---@enum ENiagaraCompilationState
-ENiagaraCompilationState = {
+local ENiagaraCompilationState = {
     CheckDDC = 0,
     Precompile = 1,
     StartCompileJob = 2,
@@ -161,7 +161,7 @@ ENiagaraCompilationState = {
 }
 
 ---@enum ENiagaraCompileUsageStaticSwitch
-ENiagaraCompileUsageStaticSwitch = {
+local ENiagaraCompileUsageStaticSwitch = {
     Spawn = 0,
     Update = 1,
     Event = 2,
@@ -171,7 +171,7 @@ ENiagaraCompileUsageStaticSwitch = {
 }
 
 ---@enum ENiagaraCoordinateSpace
-ENiagaraCoordinateSpace = {
+local ENiagaraCoordinateSpace = {
     Simulation = 0,
     World = 1,
     Local = 2,
@@ -179,14 +179,14 @@ ENiagaraCoordinateSpace = {
 }
 
 ---@enum ENiagaraCullProxyMode
-ENiagaraCullProxyMode = {
+local ENiagaraCullProxyMode = {
     None = 0,
     Instanced_Rendered = 1,
     ENiagaraCullProxyMode_MAX = 2,
 }
 
 ---@enum ENiagaraCullReaction
-ENiagaraCullReaction = {
+local ENiagaraCullReaction = {
     Deactivate = 0,
     DeactivateImmediate = 1,
     DeactivateResume = 2,
@@ -195,14 +195,14 @@ ENiagaraCullReaction = {
 }
 
 ---@enum ENiagaraDataInterfaceEmitterBindingMode
-ENiagaraDataInterfaceEmitterBindingMode = {
+local ENiagaraDataInterfaceEmitterBindingMode = {
     Self = 0,
     Other = 1,
     ENiagaraDataInterfaceEmitterBindingMode_MAX = 2,
 }
 
 ---@enum ENiagaraDataSetType
-ENiagaraDataSetType = {
+local ENiagaraDataSetType = {
     ParticleData = 0,
     Shared = 1,
     Event = 2,
@@ -210,7 +210,7 @@ ENiagaraDataSetType = {
 }
 
 ---@enum ENiagaraDebugHUDOverviewMode
-ENiagaraDebugHUDOverviewMode = {
+local ENiagaraDebugHUDOverviewMode = {
     Overview = 0,
     Scalability = 1,
     Performance = 2,
@@ -219,7 +219,7 @@ ENiagaraDebugHUDOverviewMode = {
 }
 
 ---@enum ENiagaraDebugHUDPerfGraphMode
-ENiagaraDebugHUDPerfGraphMode = {
+local ENiagaraDebugHUDPerfGraphMode = {
     None = 0,
     GameThread = 1,
     RenderThread = 2,
@@ -228,21 +228,21 @@ ENiagaraDebugHUDPerfGraphMode = {
 }
 
 ---@enum ENiagaraDebugHUDPerfSampleMode
-ENiagaraDebugHUDPerfSampleMode = {
+local ENiagaraDebugHUDPerfSampleMode = {
     FrameTotal = 0,
     PerInstanceAverage = 1,
     ENiagaraDebugHUDPerfSampleMode_MAX = 2,
 }
 
 ---@enum ENiagaraDebugHudFont
-ENiagaraDebugHudFont = {
+local ENiagaraDebugHudFont = {
     Small = 0,
     Normal = 1,
     ENiagaraDebugHudFont_MAX = 2,
 }
 
 ---@enum ENiagaraDebugHudHAlign
-ENiagaraDebugHudHAlign = {
+local ENiagaraDebugHudHAlign = {
     Left = 0,
     Center = 1,
     Right = 2,
@@ -250,7 +250,7 @@ ENiagaraDebugHudHAlign = {
 }
 
 ---@enum ENiagaraDebugHudVAlign
-ENiagaraDebugHudVAlign = {
+local ENiagaraDebugHudVAlign = {
     Top = 0,
     Center = 1,
     Bottom = 2,
@@ -258,7 +258,7 @@ ENiagaraDebugHudVAlign = {
 }
 
 ---@enum ENiagaraDebugHudVerbosity
-ENiagaraDebugHudVerbosity = {
+local ENiagaraDebugHudVerbosity = {
     None = 0,
     Basic = 1,
     Verbose = 2,
@@ -266,7 +266,7 @@ ENiagaraDebugHudVerbosity = {
 }
 
 ---@enum ENiagaraDebugPlaybackMode
-ENiagaraDebugPlaybackMode = {
+local ENiagaraDebugPlaybackMode = {
     Play = 0,
     Loop = 1,
     Paused = 2,
@@ -275,14 +275,14 @@ ENiagaraDebugPlaybackMode = {
 }
 
 ---@enum ENiagaraDefaultGpuTranslucentLatency
-ENiagaraDefaultGpuTranslucentLatency = {
+local ENiagaraDefaultGpuTranslucentLatency = {
     Immediate = 0,
     Latent = 1,
     ENiagaraDefaultGpuTranslucentLatency_MAX = 2,
 }
 
 ---@enum ENiagaraDefaultMode
-ENiagaraDefaultMode = {
+local ENiagaraDefaultMode = {
     Value = 0,
     Binding = 1,
     Custom = 2,
@@ -291,35 +291,35 @@ ENiagaraDefaultMode = {
 }
 
 ---@enum ENiagaraDefaultRendererMotionVectorSetting
-ENiagaraDefaultRendererMotionVectorSetting = {
+local ENiagaraDefaultRendererMotionVectorSetting = {
     Precise = 0,
     Approximate = 1,
     ENiagaraDefaultRendererMotionVectorSetting_MAX = 2,
 }
 
 ---@enum ENiagaraDefaultRendererPixelCoverageMode
-ENiagaraDefaultRendererPixelCoverageMode = {
+local ENiagaraDefaultRendererPixelCoverageMode = {
     Enabled = 0,
     Disabled = 1,
     ENiagaraDefaultRendererPixelCoverageMode_MAX = 2,
 }
 
 ---@enum ENiagaraDefaultSortPrecision
-ENiagaraDefaultSortPrecision = {
+local ENiagaraDefaultSortPrecision = {
     Low = 0,
     High = 1,
     ENiagaraDefaultSortPrecision_MAX = 2,
 }
 
 ---@enum ENiagaraDeviceProfileRedirectMode
-ENiagaraDeviceProfileRedirectMode = {
+local ENiagaraDeviceProfileRedirectMode = {
     CVar = 0,
     DeviceProfile = 1,
     ENiagaraDeviceProfileRedirectMode_MAX = 2,
 }
 
 ---@enum ENiagaraEmitterCalculateBoundMode
-ENiagaraEmitterCalculateBoundMode = {
+local ENiagaraEmitterCalculateBoundMode = {
     Dynamic = 0,
     Fixed = 1,
     Programmable = 2,
@@ -327,7 +327,7 @@ ENiagaraEmitterCalculateBoundMode = {
 }
 
 ---@enum ENiagaraExecutionState
-ENiagaraExecutionState = {
+local ENiagaraExecutionState = {
     Active = 0,
     Inactive = 1,
     InactiveClear = 2,
@@ -338,7 +338,7 @@ ENiagaraExecutionState = {
 }
 
 ---@enum ENiagaraExecutionStateSource
-ENiagaraExecutionStateSource = {
+local ENiagaraExecutionStateSource = {
     Scalability = 0,
     Internal = 1,
     Owner = 2,
@@ -347,14 +347,14 @@ ENiagaraExecutionStateSource = {
 }
 
 ---@enum ENiagaraFunctionDebugState
-ENiagaraFunctionDebugState = {
+local ENiagaraFunctionDebugState = {
     NoDebug = 0,
     Basic = 1,
     ENiagaraFunctionDebugState_MAX = 2,
 }
 
 ---@enum ENiagaraGpuBufferFormat
-ENiagaraGpuBufferFormat = {
+local ENiagaraGpuBufferFormat = {
     Float = 0,
     HalfFloat = 1,
     UnsignedNormalizedByte = 2,
@@ -362,7 +362,7 @@ ENiagaraGpuBufferFormat = {
 }
 
 ---@enum ENiagaraGpuComputeTickStage
-ENiagaraGpuComputeTickStage = {
+local ENiagaraGpuComputeTickStage = {
     PreInitViews = 0,
     PostInitViews = 1,
     PostOpaqueRender = 2,
@@ -372,7 +372,7 @@ ENiagaraGpuComputeTickStage = {
 }
 
 ---@enum ENiagaraGpuSyncMode
-ENiagaraGpuSyncMode = {
+local ENiagaraGpuSyncMode = {
     None = 0,
     SyncCpuToGpu = 1,
     SyncGpuToCpu = 2,
@@ -381,7 +381,7 @@ ENiagaraGpuSyncMode = {
 }
 
 ---@enum ENiagaraInputNodeUsage
-ENiagaraInputNodeUsage = {
+local ENiagaraInputNodeUsage = {
     Undefined = 0,
     Parameter = 1,
     Attribute = 2,
@@ -392,14 +392,14 @@ ENiagaraInputNodeUsage = {
 }
 
 ---@enum ENiagaraIterationSource
-ENiagaraIterationSource = {
+local ENiagaraIterationSource = {
     Particles = 0,
     DataInterface = 1,
     ENiagaraIterationSource_MAX = 2,
 }
 
 ---@enum ENiagaraLegacyTrailWidthMode
-ENiagaraLegacyTrailWidthMode = {
+local ENiagaraLegacyTrailWidthMode = {
     FromCentre = 0,
     FromFirst = 1,
     FromSecond = 2,
@@ -407,7 +407,7 @@ ENiagaraLegacyTrailWidthMode = {
 }
 
 ---@enum ENiagaraMeshFacingMode
-ENiagaraMeshFacingMode = {
+local ENiagaraMeshFacingMode = {
     Default = 0,
     Velocity = 1,
     CameraPosition = 2,
@@ -416,7 +416,7 @@ ENiagaraMeshFacingMode = {
 }
 
 ---@enum ENiagaraMeshLockedAxisSpace
-ENiagaraMeshLockedAxisSpace = {
+local ENiagaraMeshLockedAxisSpace = {
     Simulation = 0,
     World = 1,
     Local = 2,
@@ -424,7 +424,7 @@ ENiagaraMeshLockedAxisSpace = {
 }
 
 ---@enum ENiagaraMeshPivotOffsetSpace
-ENiagaraMeshPivotOffsetSpace = {
+local ENiagaraMeshPivotOffsetSpace = {
     Mesh = 0,
     Simulation = 1,
     World = 2,
@@ -433,7 +433,7 @@ ENiagaraMeshPivotOffsetSpace = {
 }
 
 ---@enum ENiagaraMipMapGeneration
-ENiagaraMipMapGeneration = {
+local ENiagaraMipMapGeneration = {
     Disabled = 0,
     PostStage = 1,
     PostSimulate = 2,
@@ -441,21 +441,21 @@ ENiagaraMipMapGeneration = {
 }
 
 ---@enum ENiagaraModuleDependencyScriptConstraint
-ENiagaraModuleDependencyScriptConstraint = {
+local ENiagaraModuleDependencyScriptConstraint = {
     SameScript = 0,
     AllScripts = 1,
     ENiagaraModuleDependencyScriptConstraint_MAX = 2,
 }
 
 ---@enum ENiagaraModuleDependencyType
-ENiagaraModuleDependencyType = {
+local ENiagaraModuleDependencyType = {
     PreDependency = 0,
     PostDependency = 1,
     ENiagaraModuleDependencyType_MAX = 2,
 }
 
 ---@enum ENiagaraModuleDependencyUsage
-ENiagaraModuleDependencyUsage = {
+local ENiagaraModuleDependencyUsage = {
     None = 0,
     Spawn = 1,
     Update = 2,
@@ -465,7 +465,7 @@ ENiagaraModuleDependencyUsage = {
 }
 
 ---@enum ENiagaraNumericOutputTypeSelectionMode
-ENiagaraNumericOutputTypeSelectionMode = {
+local ENiagaraNumericOutputTypeSelectionMode = {
     None = 0,
     Largest = 1,
     Smallest = 2,
@@ -475,7 +475,7 @@ ENiagaraNumericOutputTypeSelectionMode = {
 }
 
 ---@enum ENiagaraOrientationAxis
-ENiagaraOrientationAxis = {
+local ENiagaraOrientationAxis = {
     XAxis = 0,
     YAxis = 1,
     ZAxis = 2,
@@ -483,7 +483,7 @@ ENiagaraOrientationAxis = {
 }
 
 ---@enum ENiagaraPlatformSelectionState
-ENiagaraPlatformSelectionState = {
+local ENiagaraPlatformSelectionState = {
     Default = 0,
     Enabled = 1,
     Disabled = 2,
@@ -491,7 +491,7 @@ ENiagaraPlatformSelectionState = {
 }
 
 ---@enum ENiagaraPlatformSetState
-ENiagaraPlatformSetState = {
+local ENiagaraPlatformSetState = {
     Disabled = 0,
     Enabled = 1,
     Active = 2,
@@ -500,7 +500,7 @@ ENiagaraPlatformSetState = {
 }
 
 ---@enum ENiagaraPreviewGridResetMode
-ENiagaraPreviewGridResetMode = {
+local ENiagaraPreviewGridResetMode = {
     Never = 0,
     Individual = 1,
     All = 2,
@@ -508,7 +508,7 @@ ENiagaraPreviewGridResetMode = {
 }
 
 ---@enum ENiagaraPythonUpdateScriptReference
-ENiagaraPythonUpdateScriptReference = {
+local ENiagaraPythonUpdateScriptReference = {
     None = 0,
     ScriptAsset = 1,
     DirectTextEntry = 2,
@@ -516,7 +516,7 @@ ENiagaraPythonUpdateScriptReference = {
 }
 
 ---@enum ENiagaraRendererGpuTranslucentLatency
-ENiagaraRendererGpuTranslucentLatency = {
+local ENiagaraRendererGpuTranslucentLatency = {
     ProjectDefault = 0,
     Immediate = 1,
     Latent = 2,
@@ -524,7 +524,7 @@ ENiagaraRendererGpuTranslucentLatency = {
 }
 
 ---@enum ENiagaraRendererMotionVectorSetting
-ENiagaraRendererMotionVectorSetting = {
+local ENiagaraRendererMotionVectorSetting = {
     AutoDetect = 0,
     Precise = 1,
     Approximate = 2,
@@ -533,7 +533,7 @@ ENiagaraRendererMotionVectorSetting = {
 }
 
 ---@enum ENiagaraRendererPixelCoverageMode
-ENiagaraRendererPixelCoverageMode = {
+local ENiagaraRendererPixelCoverageMode = {
     Automatic = 0,
     Disabled = 1,
     Enabled = 2,
@@ -544,7 +544,7 @@ ENiagaraRendererPixelCoverageMode = {
 }
 
 ---@enum ENiagaraRendererSortPrecision
-ENiagaraRendererSortPrecision = {
+local ENiagaraRendererSortPrecision = {
     Default = 0,
     Low = 1,
     High = 2,
@@ -552,28 +552,28 @@ ENiagaraRendererSortPrecision = {
 }
 
 ---@enum ENiagaraRendererSourceDataMode
-ENiagaraRendererSourceDataMode = {
+local ENiagaraRendererSourceDataMode = {
     Particles = 0,
     Emitter = 1,
     ENiagaraRendererSourceDataMode_MAX = 2,
 }
 
 ---@enum ENiagaraRibbonAgeOffsetMode
-ENiagaraRibbonAgeOffsetMode = {
+local ENiagaraRibbonAgeOffsetMode = {
     Scale = 0,
     Clip = 1,
     ENiagaraRibbonAgeOffsetMode_MAX = 2,
 }
 
 ---@enum ENiagaraRibbonDrawDirection
-ENiagaraRibbonDrawDirection = {
+local ENiagaraRibbonDrawDirection = {
     FrontToBack = 0,
     BackToFront = 1,
     ENiagaraRibbonDrawDirection_MAX = 2,
 }
 
 ---@enum ENiagaraRibbonFacingMode
-ENiagaraRibbonFacingMode = {
+local ENiagaraRibbonFacingMode = {
     Screen = 0,
     Custom = 1,
     CustomSideVector = 2,
@@ -581,7 +581,7 @@ ENiagaraRibbonFacingMode = {
 }
 
 ---@enum ENiagaraRibbonShapeMode
-ENiagaraRibbonShapeMode = {
+local ENiagaraRibbonShapeMode = {
     Plane = 0,
     MultiPlane = 1,
     Tube = 2,
@@ -590,7 +590,7 @@ ENiagaraRibbonShapeMode = {
 }
 
 ---@enum ENiagaraRibbonTessellationMode
-ENiagaraRibbonTessellationMode = {
+local ENiagaraRibbonTessellationMode = {
     Automatic = 0,
     Custom = 1,
     Disabled = 2,
@@ -598,7 +598,7 @@ ENiagaraRibbonTessellationMode = {
 }
 
 ---@enum ENiagaraRibbonUVDistributionMode
-ENiagaraRibbonUVDistributionMode = {
+local ENiagaraRibbonUVDistributionMode = {
     ScaledUniformly = 0,
     ScaledUsingRibbonSegmentLength = 1,
     TiledOverRibbonLength = 2,
@@ -607,14 +607,14 @@ ENiagaraRibbonUVDistributionMode = {
 }
 
 ---@enum ENiagaraRibbonUVEdgeMode
-ENiagaraRibbonUVEdgeMode = {
+local ENiagaraRibbonUVEdgeMode = {
     SmoothTransition = 0,
     Locked = 1,
     ENiagaraRibbonUVEdgeMode_MAX = 2,
 }
 
 ---@enum ENiagaraScalabilityUpdateFrequency
-ENiagaraScalabilityUpdateFrequency = {
+local ENiagaraScalabilityUpdateFrequency = {
     SpawnOnly = 0,
     Low = 1,
     Medium = 2,
@@ -624,7 +624,7 @@ ENiagaraScalabilityUpdateFrequency = {
 }
 
 ---@enum ENiagaraScriptCompileStatus
-ENiagaraScriptCompileStatus = {
+local ENiagaraScriptCompileStatus = {
     NCS_Unknown = 0,
     NCS_Dirty = 1,
     NCS_Error = 2,
@@ -636,7 +636,7 @@ ENiagaraScriptCompileStatus = {
 }
 
 ---@enum ENiagaraScriptContextStaticSwitch
-ENiagaraScriptContextStaticSwitch = {
+local ENiagaraScriptContextStaticSwitch = {
     System = 0,
     Emitter = 1,
     Particle = 2,
@@ -644,7 +644,7 @@ ENiagaraScriptContextStaticSwitch = {
 }
 
 ---@enum ENiagaraScriptGroup
-ENiagaraScriptGroup = {
+local ENiagaraScriptGroup = {
     Particle = 0,
     Emitter = 1,
     System = 2,
@@ -652,7 +652,7 @@ ENiagaraScriptGroup = {
 }
 
 ---@enum ENiagaraScriptLibraryVisibility
-ENiagaraScriptLibraryVisibility = {
+local ENiagaraScriptLibraryVisibility = {
     Invalid = 0,
     Unexposed = 1,
     Library = 2,
@@ -661,7 +661,7 @@ ENiagaraScriptLibraryVisibility = {
 }
 
 ---@enum ENiagaraScriptTemplateSpecification
-ENiagaraScriptTemplateSpecification = {
+local ENiagaraScriptTemplateSpecification = {
     None = 0,
     Template = 1,
     Behavior = 2,
@@ -669,7 +669,7 @@ ENiagaraScriptTemplateSpecification = {
 }
 
 ---@enum ENiagaraScriptUsage
-ENiagaraScriptUsage = {
+local ENiagaraScriptUsage = {
     Function = 0,
     Module = 1,
     DynamicInput = 2,
@@ -687,7 +687,7 @@ ENiagaraScriptUsage = {
 }
 
 ---@enum ENiagaraSimCacheAttributeCaptureMode
-ENiagaraSimCacheAttributeCaptureMode = {
+local ENiagaraSimCacheAttributeCaptureMode = {
     All = 0,
     RenderingOnly = 1,
     ExplicitAttributes = 2,
@@ -695,14 +695,14 @@ ENiagaraSimCacheAttributeCaptureMode = {
 }
 
 ---@enum ENiagaraSimTarget
-ENiagaraSimTarget = {
+local ENiagaraSimTarget = {
     CPUSim = 0,
     GPUComputeSim = 1,
     ENiagaraSimTarget_MAX = 2,
 }
 
 ---@enum ENiagaraSortMode
-ENiagaraSortMode = {
+local ENiagaraSortMode = {
     None = 0,
     ViewDepth = 1,
     ViewDistance = 2,
@@ -712,7 +712,7 @@ ENiagaraSortMode = {
 }
 
 ---@enum ENiagaraSpriteAlignment
-ENiagaraSpriteAlignment = {
+local ENiagaraSpriteAlignment = {
     Unaligned = 0,
     VelocityAligned = 1,
     CustomAlignment = 2,
@@ -720,7 +720,7 @@ ENiagaraSpriteAlignment = {
 }
 
 ---@enum ENiagaraSpriteFacingMode
-ENiagaraSpriteFacingMode = {
+local ENiagaraSpriteFacingMode = {
     FaceCamera = 0,
     FaceCameraPlane = 1,
     CustomFacingVector = 2,
@@ -730,21 +730,21 @@ ENiagaraSpriteFacingMode = {
 }
 
 ---@enum ENiagaraStatDisplayMode
-ENiagaraStatDisplayMode = {
+local ENiagaraStatDisplayMode = {
     Percent = 0,
     Absolute = 1,
     ENiagaraStatDisplayMode_MAX = 2,
 }
 
 ---@enum ENiagaraStatEvaluationType
-ENiagaraStatEvaluationType = {
+local ENiagaraStatEvaluationType = {
     Average = 0,
     Maximum = 1,
     ENiagaraStatEvaluationType_MAX = 2,
 }
 
 ---@enum ENiagaraStructConversionType
-ENiagaraStructConversionType = {
+local ENiagaraStructConversionType = {
     CopyOnly = 0,
     DoubleToFloat = 1,
     Vector2 = 2,
@@ -755,7 +755,7 @@ ENiagaraStructConversionType = {
 }
 
 ---@enum ENiagaraSystemInstanceState
-ENiagaraSystemInstanceState = {
+local ENiagaraSystemInstanceState = {
     None = 0,
     PendingSpawn = 1,
     PendingSpawnPaused = 2,
@@ -767,7 +767,7 @@ ENiagaraSystemInstanceState = {
 }
 
 ---@enum ENiagaraSystemSpawnSectionEndBehavior
-ENiagaraSystemSpawnSectionEndBehavior = {
+local ENiagaraSystemSpawnSectionEndBehavior = {
     SetSystemInactive = 0,
     Deactivate = 1,
     None = 2,
@@ -775,20 +775,20 @@ ENiagaraSystemSpawnSectionEndBehavior = {
 }
 
 ---@enum ENiagaraSystemSpawnSectionEvaluateBehavior
-ENiagaraSystemSpawnSectionEvaluateBehavior = {
+local ENiagaraSystemSpawnSectionEvaluateBehavior = {
     ActivateIfInactive = 0,
     None = 1,
     ENiagaraSystemSpawnSectionEvaluateBehavior_MAX = 2,
 }
 
 ---@enum ENiagaraSystemSpawnSectionStartBehavior
-ENiagaraSystemSpawnSectionStartBehavior = {
+local ENiagaraSystemSpawnSectionStartBehavior = {
     Activate = 0,
     ENiagaraSystemSpawnSectionStartBehavior_MAX = 1,
 }
 
 ---@enum ENiagaraTickBehavior
-ENiagaraTickBehavior = {
+local ENiagaraTickBehavior = {
     UsePrereqs = 0,
     UseComponentTickGroup = 1,
     ForceTickFirst = 2,
@@ -797,7 +797,7 @@ ENiagaraTickBehavior = {
 }
 
 ---@enum ENiagaraValidationSeverity
-ENiagaraValidationSeverity = {
+local ENiagaraValidationSeverity = {
     Info = 0,
     Warning = 1,
     Error = 2,
@@ -805,7 +805,7 @@ ENiagaraValidationSeverity = {
 }
 
 ---@enum ENiagaraVariantMode
-ENiagaraVariantMode = {
+local ENiagaraVariantMode = {
     None = 0,
     Object = 1,
     DataInterface = 2,
@@ -814,7 +814,7 @@ ENiagaraVariantMode = {
 }
 
 ---@enum EParticleAllocationMode
-EParticleAllocationMode = {
+local EParticleAllocationMode = {
     AutomaticEstimate = 0,
     ManualEstimate = 1,
     FixedCount = 2,
@@ -822,7 +822,7 @@ EParticleAllocationMode = {
 }
 
 ---@enum EScriptExecutionMode
-EScriptExecutionMode = {
+local EScriptExecutionMode = {
     EveryParticle = 0,
     SpawnedParticles = 1,
     SingleParticle = 2,
@@ -830,7 +830,7 @@ EScriptExecutionMode = {
 }
 
 ---@enum ESetResolutionMethod
-ESetResolutionMethod = {
+local ESetResolutionMethod = {
     Independent = 0,
     MaxAxis = 1,
     CellSize = 2,
@@ -838,7 +838,7 @@ ESetResolutionMethod = {
 }
 
 ---@enum EUnusedAttributeBehaviour
-EUnusedAttributeBehaviour = {
+local EUnusedAttributeBehaviour = {
     Copy = 0,
     Zero = 1,
     None = 2,
@@ -848,7 +848,7 @@ EUnusedAttributeBehaviour = {
 }
 
 ---@enum EVolumeCacheType
-EVolumeCacheType = {
+local EVolumeCacheType = {
     OpenVDB = 0,
     EVolumeCacheType_MAX = 1,
 }

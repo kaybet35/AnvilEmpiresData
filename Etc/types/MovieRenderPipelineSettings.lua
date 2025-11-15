@@ -5,12 +5,12 @@
 ---@field bCompositeOntoFinalImage boolean
 ---@field RenderTarget UTextureRenderTarget2D
 ---@field BurnInWidgetInstances TArray<UMoviePipelineBurnInWidget>
-UMoviePipelineBurnInSetting = {}
+local UMoviePipelineBurnInSetting = {}
 
 
 
 ---@class UMoviePipelineBurnInWidget : UUserWidget
-UMoviePipelineBurnInWidget = {}
+local UMoviePipelineBurnInWidget = {}
 
 ---@param ForPipeline UMoviePipeline
 function UMoviePipelineBurnInWidget:OnOutputFrameStarted(ForPipeline) end
@@ -20,14 +20,14 @@ function UMoviePipelineBurnInWidget:OnOutputFrameStarted(ForPipeline) end
 ---@field ConsoleVariables TMap<FString, float>
 ---@field StartConsoleCommands TArray<FString>
 ---@field EndConsoleCommands TArray<FString>
-UMoviePipelineConsoleVariableSetting = {}
+local UMoviePipelineConsoleVariableSetting = {}
 
 
 
 ---@class UMoviePipelineWidgetRenderer : UMoviePipelineRenderPass
 ---@field bCompositeOntoFinalImage boolean
 ---@field RenderTarget UTextureRenderTarget2D
-UMoviePipelineWidgetRenderer = {}
+local UMoviePipelineWidgetRenderer = {}
 
 
 

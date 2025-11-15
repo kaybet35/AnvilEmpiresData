@@ -2,14 +2,14 @@
 
 ---@class FTypedElementIsSelectedOptions
 ---@field bAllowIndirect boolean
-FTypedElementIsSelectedOptions = {}
+local FTypedElementIsSelectedOptions = {}
 
 
 
 ---@class FTypedElementSelectionNormalizationOptions
 ---@field bExpandGroups boolean
 ---@field bFollowAttachment boolean
-FTypedElementSelectionNormalizationOptions = {}
+local FTypedElementSelectionNormalizationOptions = {}
 
 
 
@@ -19,18 +19,18 @@ FTypedElementSelectionNormalizationOptions = {}
 ---@field bAllowLegacyNotifications boolean
 ---@field bWarnIfLocked boolean
 ---@field ChildElementInclusionMethod ETypedElementChildInclusionMethod
-FTypedElementSelectionOptions = {}
+local FTypedElementSelectionOptions = {}
 
 
 
 ---@class FTypedElementSelectionSetState
 ---@field CreatedFromSelectionSet TWeakObjectPtr<UTypedElementSelectionSet>
-FTypedElementSelectionSetState = {}
+local FTypedElementSelectionSetState = {}
 
 
 
 ---@class ITypedElementAssetDataInterface : IInterface
-ITypedElementAssetDataInterface = {}
+local ITypedElementAssetDataInterface = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return FAssetData
@@ -41,7 +41,7 @@ function ITypedElementAssetDataInterface:GetAllReferencedAssetDatas(InElementHan
 
 
 ---@class ITypedElementHierarchyInterface : IInterface
-ITypedElementHierarchyInterface = {}
+local ITypedElementHierarchyInterface = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param bAllowCreate boolean
@@ -54,7 +54,7 @@ function ITypedElementHierarchyInterface:GetChildElements(InElementHandle, OutEl
 
 
 ---@class ITypedElementObjectInterface : IInterface
-ITypedElementObjectInterface = {}
+local ITypedElementObjectInterface = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return UClass
@@ -65,7 +65,7 @@ function ITypedElementObjectInterface:GetObject(InElementHandle) end
 
 
 ---@class ITypedElementSelectionInterface : IInterface
-ITypedElementSelectionInterface = {}
+local ITypedElementSelectionInterface = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InSelectionSet FScriptTypedElementListProxy
@@ -104,7 +104,7 @@ function ITypedElementSelectionInterface:AllowSelectionModifiers(InElementHandle
 ---@class UTypedElementSelectionSet : UObject
 ---@field OnPreSelectionChange FTypedElementSelectionSetOnPreSelectionChange
 ---@field OnSelectionChange FTypedElementSelectionSetOnSelectionChange
-UTypedElementSelectionSet = {}
+local UTypedElementSelectionSet = {}
 
 ---@param InElementHandles TArray<FScriptTypedElementHandle>
 ---@param InSelectionOptions FTypedElementSelectionOptions
@@ -185,7 +185,7 @@ function UTypedElementSelectionSet:AllowSelectionModifiers(InElementHandle) end
 
 
 ---@class UTypedElementSelectionSetLibrary : UObject
-UTypedElementSelectionSetLibrary = {}
+local UTypedElementSelectionSetLibrary = {}
 
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param ElementList FScriptTypedElementListProxy

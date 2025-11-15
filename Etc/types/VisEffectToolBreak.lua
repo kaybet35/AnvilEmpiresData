@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectToolBreak_C : AVisEffect
-AVisEffectToolBreak_C = {}
+local AVisEffectToolBreak_C = {}
 
 

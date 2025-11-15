@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectHammerImpact_C : UEntityTemplate
-UEffectHammerImpact_C = {}
+local UEffectHammerImpact_C = {}
 
 

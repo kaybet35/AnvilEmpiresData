@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBranchSpawner_C : UEntityTemplate
-UBranchSpawner_C = {}
+local UBranchSpawner_C = {}
 
 

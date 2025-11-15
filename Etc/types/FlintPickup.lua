@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFlintPickup_C : UEntityTemplate
-UFlintPickup_C = {}
+local UFlintPickup_C = {}
 
 

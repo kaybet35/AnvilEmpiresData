@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class AInstancedFoliageActor : AISMPartitionActor
-AInstancedFoliageActor = {}
+local AInstancedFoliageActor = {}
 
 
 ---@class AInteractiveFoliageActor : AStaticMeshActor
@@ -19,7 +19,7 @@ AInstancedFoliageActor = {}
 ---@field MaxTouchImpulse float
 ---@field MaxForce float
 ---@field Mass float
-AInteractiveFoliageActor = {}
+local AInteractiveFoliageActor = {}
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
@@ -33,20 +33,20 @@ function AInteractiveFoliageActor:CapsuleTouched(OverlappedComp, Other, OtherCom
 ---@class AProceduralFoliageBlockingVolume : AVolume
 ---@field ProceduralFoliageVolume AProceduralFoliageVolume
 ---@field DensityFalloff FFoliageDensityFalloff
-AProceduralFoliageBlockingVolume = {}
+local AProceduralFoliageBlockingVolume = {}
 
 
 
 ---@class AProceduralFoliageVolume : AVolume
 ---@field ProceduralComponent UProceduralFoliageComponent
-AProceduralFoliageVolume = {}
+local AProceduralFoliageVolume = {}
 
 
 
 ---@class FFoliageDensityFalloff
 ---@field bUseFalloffCurve boolean
 ---@field FalloffCurve FRuntimeFloatCurve
-FFoliageDensityFalloff = {}
+local FFoliageDensityFalloff = {}
 
 
 
@@ -55,7 +55,7 @@ FFoliageDensityFalloff = {}
 ---@field TypeInstance UFoliageType
 ---@field bIsAsset boolean
 ---@field Type TSubclassOf<UFoliageType_InstancedStaticMesh>
-FFoliageTypeObject = {}
+local FFoliageTypeObject = {}
 
 
 
@@ -63,7 +63,7 @@ FFoliageTypeObject = {}
 ---@field UseMask boolean
 ---@field MaskThreshold float
 ---@field InvertMask boolean
-FFoliageVertexColorChannelMask = {}
+local FFoliageVertexColorChannelMask = {}
 
 
 
@@ -74,7 +74,7 @@ FFoliageVertexColorChannelMask = {}
 ---@field Normal FVector
 ---@field Scale float
 ---@field Type UFoliageType
-FProceduralFoliageInstance = {}
+local FProceduralFoliageInstance = {}
 
 
 
@@ -83,12 +83,12 @@ FProceduralFoliageInstance = {}
 ---@field OnInstanceTakeRadialDamage FFoliageInstancedStaticMeshComponentOnInstanceTakeRadialDamage
 ---@field bEnableDiscardOnLoad boolean
 ---@field GenerationGuid FGuid
-UFoliageInstancedStaticMeshComponent = {}
+local UFoliageInstancedStaticMeshComponent = {}
 
 
 
 ---@class UFoliageStatistics : UBlueprintFunctionLibrary
-UFoliageStatistics = {}
+local UFoliageStatistics = {}
 
 ---@param WorldContextObject UObject
 ---@param StaticMesh UStaticMesh
@@ -205,7 +205,7 @@ function UFoliageStatistics:FoliageOverlappingBoxCount(WorldContextObject, Stati
 ---@field RuntimeVirtualTextures TArray<URuntimeVirtualTexture>
 ---@field VirtualTextureCullMips int32
 ---@field VirtualTextureRenderPassType ERuntimeVirtualTextureMainPassType
-UFoliageType = {}
+local UFoliageType = {}
 
 
 
@@ -214,7 +214,7 @@ UFoliageType = {}
 ---@field bShouldAttachToBaseComponent boolean
 ---@field bStaticMeshOnly boolean
 ---@field StaticMeshOnlyComponentClass TSubclassOf<UFoliageInstancedStaticMeshComponent>
-UFoliageType_Actor = {}
+local UFoliageType_Actor = {}
 
 
 
@@ -223,16 +223,16 @@ UFoliageType_Actor = {}
 ---@field OverrideMaterials TArray<UMaterialInterface>
 ---@field NaniteOverrideMaterials TArray<UMaterialInterface>
 ---@field ComponentClass TSubclassOf<UFoliageInstancedStaticMeshComponent>
-UFoliageType_InstancedStaticMesh = {}
+local UFoliageType_InstancedStaticMesh = {}
 
 
 
 ---@class UGrassInstancedStaticMeshComponent : UHierarchicalInstancedStaticMeshComponent
-UGrassInstancedStaticMeshComponent = {}
+local UGrassInstancedStaticMeshComponent = {}
 
 
 ---@class UInteractiveFoliageComponent : UStaticMeshComponent
-UInteractiveFoliageComponent = {}
+local UInteractiveFoliageComponent = {}
 
 
 ---@class UProceduralFoliageComponent : UActorComponent
@@ -240,7 +240,7 @@ UInteractiveFoliageComponent = {}
 ---@field TileOverlap float
 ---@field SpawningVolume AVolume
 ---@field ProceduralGuid FGuid
-UProceduralFoliageComponent = {}
+local UProceduralFoliageComponent = {}
 
 
 
@@ -250,7 +250,7 @@ UProceduralFoliageComponent = {}
 ---@field NumUniqueTiles int32
 ---@field MinimumQuadTreeSize float
 ---@field FoliageTypes TArray<FFoliageTypeObject>
-UProceduralFoliageSpawner = {}
+local UProceduralFoliageSpawner = {}
 
 ---@param NumSteps int32
 function UProceduralFoliageSpawner:Simulate(NumSteps) end
@@ -259,7 +259,7 @@ function UProceduralFoliageSpawner:Simulate(NumSteps) end
 ---@class UProceduralFoliageTile : UObject
 ---@field FoliageSpawner UProceduralFoliageSpawner
 ---@field InstancesArray TArray<FProceduralFoliageInstance>
-UProceduralFoliageTile = {}
+local UProceduralFoliageTile = {}
 
 
 

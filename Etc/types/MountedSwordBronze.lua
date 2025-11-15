@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMountedSwordBronze_C : UItemTemplate
-UMountedSwordBronze_C = {}
+local UMountedSwordBronze_C = {}
 
 

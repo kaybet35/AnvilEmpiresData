@@ -5,7 +5,7 @@
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field PowerUnitData UPowerUnitDataComponent
-ABPVisRopeConnector_C = {}
+local ABPVisRopeConnector_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisRopeConnector_C:ReceiveTick(DeltaSeconds) end

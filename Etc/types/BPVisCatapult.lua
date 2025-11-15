@@ -5,7 +5,7 @@
 ---@field Projectile USkeletalMeshComponent
 ---@field MountedWeaponData UMountedWeaponDataComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisCatapult_C = {}
+local ABPVisCatapult_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisCatapult_C:ReceiveTick(DeltaSeconds) end

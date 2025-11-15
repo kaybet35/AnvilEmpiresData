@@ -13,7 +13,7 @@
 ---@field RoofMesh UVisStaticMeshComponent
 ---@field BlacksmithMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisTownBlacksmith_C = {}
+local ABPVisTownBlacksmith_C = {}
 
 
 

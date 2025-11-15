@@ -301,7 +301,7 @@
 ---@field CustomHeightmap UCustomHeightmapComponent
 ---@field Floor UStaticMeshComponent
 ---@field Pivot USceneComponent
-ABPUnderworldDynamicModuleCorner02_C = {}
+local ABPUnderworldDynamicModuleCorner02_C = {}
 
 
 

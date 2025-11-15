@@ -9,14 +9,14 @@
 ---@field KneeBandwidthDb float
 ---@field InputGainDb float
 ---@field OutputGainDb float
-FDynamicsBandSettings = {}
+local FDynamicsBandSettings = {}
 
 
 
 ---@class FEpicSynth1Patch
 ---@field PatchSource ESynth1PatchSource
 ---@field PatchCables TArray<FSynth1PatchCable>
-FEpicSynth1Patch = {}
+local FEpicSynth1Patch = {}
 
 
 
@@ -80,27 +80,27 @@ FEpicSynth1Patch = {}
 ---@field ChorusFeedback float
 ---@field ChorusFrequency float
 ---@field Patches TArray<FEpicSynth1Patch>
-FModularSynthPreset = {}
+local FModularSynthPreset = {}
 
 
 
 ---@class FModularSynthPresetBankEntry
 ---@field PresetName FString
 ---@field Preset FModularSynthPreset
-FModularSynthPresetBankEntry = {}
+local FModularSynthPresetBankEntry = {}
 
 
 
 ---@class FPatchId
 ---@field ID int32
-FPatchId = {}
+local FPatchId = {}
 
 
 
 ---@class FSourceEffectBitCrusherBaseSettings
 ---@field SampleRate float
 ---@field BitDepth float
-FSourceEffectBitCrusherBaseSettings = {}
+local FSourceEffectBitCrusherBaseSettings = {}
 
 
 
@@ -109,7 +109,7 @@ FSourceEffectBitCrusherBaseSettings = {}
 ---@field SampleRateModulation FSoundModulationDestinationSettings
 ---@field CrushedBits float
 ---@field BitModulation FSoundModulationDestinationSettings
-FSourceEffectBitCrusherSettings = {}
+local FSourceEffectBitCrusherSettings = {}
 
 
 
@@ -120,7 +120,7 @@ FSourceEffectBitCrusherSettings = {}
 ---@field WetLevel float
 ---@field DryLevel float
 ---@field Spread float
-FSourceEffectChorusBaseSettings = {}
+local FSourceEffectChorusBaseSettings = {}
 
 
 
@@ -137,7 +137,7 @@ FSourceEffectChorusBaseSettings = {}
 ---@field WetModulation FSoundModulationDestinationSettings
 ---@field DryModulation FSoundModulationDestinationSettings
 ---@field SpreadModulation FSoundModulationDestinationSettings
-FSourceEffectChorusSettings = {}
+local FSourceEffectChorusSettings = {}
 
 
 
@@ -146,7 +146,7 @@ FSourceEffectChorusSettings = {}
 ---@field WetVolumeDb float
 ---@field DryVolumeDb float
 ---@field bBypass boolean
-FSourceEffectConvolutionReverbSettings = {}
+local FSourceEffectConvolutionReverbSettings = {}
 
 
 
@@ -163,7 +163,7 @@ FSourceEffectConvolutionReverbSettings = {}
 ---@field OutputGainDb float
 ---@field bStereoLinked boolean
 ---@field bAnalogMode boolean
-FSourceEffectDynamicsProcessorSettings = {}
+local FSourceEffectDynamicsProcessorSettings = {}
 
 
 
@@ -172,13 +172,13 @@ FSourceEffectDynamicsProcessorSettings = {}
 ---@field Bandwidth float
 ---@field GainDb float
 ---@field bEnabled boolean
-FSourceEffectEQBand = {}
+local FSourceEffectEQBand = {}
 
 
 
 ---@class FSourceEffectEQSettings
 ---@field EQBands TArray<FSourceEffectEQBand>
-FSourceEffectEQSettings = {}
+local FSourceEffectEQSettings = {}
 
 
 
@@ -187,7 +187,7 @@ FSourceEffectEQSettings = {}
 ---@field ReleaseTime float
 ---@field PeakMode EEnvelopeFollowerPeakMode
 ---@field bIsAnalogMode boolean
-FSourceEffectEnvelopeFollowerSettings = {}
+local FSourceEffectEnvelopeFollowerSettings = {}
 
 
 
@@ -201,7 +201,7 @@ FSourceEffectEnvelopeFollowerSettings = {}
 ---@field MaxFrequencyModulation float
 ---@field MinResonanceModulation float
 ---@field MaxResonanceModulation float
-FSourceEffectFilterAudioBusModulationSettings = {}
+local FSourceEffectFilterAudioBusModulationSettings = {}
 
 
 
@@ -211,7 +211,7 @@ FSourceEffectFilterAudioBusModulationSettings = {}
 ---@field CutoffFrequency float
 ---@field FilterQ float
 ---@field AudioBusModulation TArray<FSourceEffectFilterAudioBusModulationSettings>
-FSourceEffectFilterSettings = {}
+local FSourceEffectFilterSettings = {}
 
 
 
@@ -219,7 +219,7 @@ FSourceEffectFilterSettings = {}
 ---@field InputGainDb float
 ---@field ThresholdDb float
 ---@field OutputGainDb float
-FSourceEffectFoldbackDistortionSettings = {}
+local FSourceEffectFoldbackDistortionSettings = {}
 
 
 
@@ -228,7 +228,7 @@ FSourceEffectFoldbackDistortionSettings = {}
 ---@field FilterType ESourceEffectMotionFilterType
 ---@field CutoffFrequency float
 ---@field FilterQ float
-FSourceEffectIndividualFilterSettings = {}
+local FSourceEffectIndividualFilterSettings = {}
 
 
 
@@ -237,7 +237,7 @@ FSourceEffectIndividualFilterSettings = {}
 ---@field InputMode EStereoChannelMode
 ---@field OutputMode EStereoChannelMode
 ---@field bEqualPower boolean
-FSourceEffectMidSideSpreaderSettings = {}
+local FSourceEffectMidSideSpreaderSettings = {}
 
 
 
@@ -247,7 +247,7 @@ FSourceEffectMidSideSpreaderSettings = {}
 ---@field ModulationOutputMinimumRange FVector2D
 ---@field ModulationOutputMaximumRange FVector2D
 ---@field UpdateEaseMS float
-FSourceEffectMotionFilterModulationSettings = {}
+local FSourceEffectMotionFilterModulationSettings = {}
 
 
 
@@ -258,14 +258,14 @@ FSourceEffectMotionFilterModulationSettings = {}
 ---@field FilterBSettings FSourceEffectIndividualFilterSettings
 ---@field ModulationMappings TMap<ESourceEffectMotionFilterModDestination, FSourceEffectMotionFilterModulationSettings>
 ---@field DryVolumeDb float
-FSourceEffectMotionFilterSettings = {}
+local FSourceEffectMotionFilterSettings = {}
 
 
 
 ---@class FSourceEffectPannerSettings
 ---@field Spread float
 ---@field Pan float
-FSourceEffectPannerSettings = {}
+local FSourceEffectPannerSettings = {}
 
 
 
@@ -275,7 +275,7 @@ FSourceEffectPannerSettings = {}
 ---@field Feedback float
 ---@field LFOType EPhaserLFOType
 ---@field UseQuadraturePhase boolean
-FSourceEffectPhaserSettings = {}
+local FSourceEffectPhaserSettings = {}
 
 
 
@@ -286,7 +286,7 @@ FSourceEffectPhaserSettings = {}
 ---@field DryLevel float
 ---@field WetLevel float
 ---@field AudioBusModulator UAudioBus
-FSourceEffectRingModulationSettings = {}
+local FSourceEffectRingModulationSettings = {}
 
 
 
@@ -298,7 +298,7 @@ FSourceEffectRingModulationSettings = {}
 ---@field Feedback float
 ---@field bDelayBasedOnDistance boolean
 ---@field bUseDistanceOverride boolean
-FSourceEffectSimpleDelaySettings = {}
+local FSourceEffectSimpleDelaySettings = {}
 
 
 
@@ -313,14 +313,14 @@ FSourceEffectSimpleDelaySettings = {}
 ---@field FilterType EStereoDelayFiltertype
 ---@field FilterFrequency float
 ---@field FilterQ float
-FSourceEffectStereoDelaySettings = {}
+local FSourceEffectStereoDelaySettings = {}
 
 
 
 ---@class FSourceEffectWaveShaperSettings
 ---@field Amount float
 ---@field OutputGainDb float
-FSourceEffectWaveShaperSettings = {}
+local FSourceEffectWaveShaperSettings = {}
 
 
 
@@ -337,7 +337,7 @@ FSourceEffectWaveShaperSettings = {}
 ---@field SurroundRearChannelBleedAmount float
 ---@field ImpulseResponse UAudioImpulseResponse
 ---@field AllowHardwareAcceleration boolean
-FSubmixEffectConvolutionReverbSettings = {}
+local FSubmixEffectConvolutionReverbSettings = {}
 
 
 
@@ -345,7 +345,7 @@ FSubmixEffectConvolutionReverbSettings = {}
 ---@field MaximumDelayLength float
 ---@field InterpolationTime float
 ---@field DelayLength float
-FSubmixEffectDelaySettings = {}
+local FSubmixEffectDelaySettings = {}
 
 
 
@@ -354,7 +354,7 @@ FSubmixEffectDelaySettings = {}
 ---@field FilterAlgorithm ESubmixFilterAlgorithm
 ---@field FilterFrequency float
 ---@field FilterQ float
-FSubmixEffectFilterSettings = {}
+local FSubmixEffectFilterSettings = {}
 
 
 
@@ -363,7 +363,7 @@ FSubmixEffectFilterSettings = {}
 ---@field DecayTime float
 ---@field RoomDampening float
 ---@field Complexity int32
-FSubmixEffectFlexiverbSettings = {}
+local FSubmixEffectFlexiverbSettings = {}
 
 
 
@@ -381,7 +381,7 @@ FSubmixEffectFlexiverbSettings = {}
 ---@field KeyGainDb float
 ---@field bKeyAudition boolean
 ---@field Bands TArray<FDynamicsBandSettings>
-FSubmixEffectMultibandCompressorSettings = {}
+local FSubmixEffectMultibandCompressorSettings = {}
 
 
 
@@ -396,7 +396,7 @@ FSubmixEffectMultibandCompressorSettings = {}
 ---@field FilterType EStereoDelayFiltertype
 ---@field FilterFrequency float
 ---@field FilterQ float
-FSubmixEffectStereoDelaySettings = {}
+local FSubmixEffectStereoDelaySettings = {}
 
 
 
@@ -404,14 +404,14 @@ FSubmixEffectStereoDelaySettings = {}
 ---@field MaximumDelayLength float
 ---@field InterpolationTime float
 ---@field Taps TArray<FTapDelayInfo>
-FSubmixEffectTapDelaySettings = {}
+local FSubmixEffectTapDelaySettings = {}
 
 
 
 ---@class FSynth1PatchCable
 ---@field Depth float
 ---@field Destination ESynth1PatchDestination
-FSynth1PatchCable = {}
+local FSynth1PatchCable = {}
 
 
 
@@ -422,7 +422,7 @@ FSynth1PatchCable = {}
 ---@field DisabledBarImage FSlateBrush
 ---@field BackgroundImage FSlateBrush
 ---@field BarThickness float
-FSynth2DSliderStyle = {}
+local FSynth2DSliderStyle = {}
 
 
 
@@ -434,14 +434,14 @@ FSynth2DSliderStyle = {}
 ---@field MinValueAngle float
 ---@field MaxValueAngle float
 ---@field KnobSize ESynthKnobSize
-FSynthKnobStyle = {}
+local FSynthKnobStyle = {}
 
 
 
 ---@class FSynthSlateStyle : FSlateWidgetStyle
 ---@field SizeType ESynthSlateSizeType
 ---@field ColorStyle ESynthSlateColorStyle
-FSynthSlateStyle = {}
+local FSynthSlateStyle = {}
 
 
 
@@ -452,7 +452,7 @@ FSynthSlateStyle = {}
 ---@field OutputChannel int32
 ---@field PanInDegrees float
 ---@field TapId int32
-FTapDelayInfo = {}
+local FTapDelayInfo = {}
 
 
 
@@ -463,19 +463,19 @@ FTapDelayInfo = {}
 ---@field NormalizationVolumeDb float
 ---@field bTrueStereo boolean
 ---@field IRData TArray<float>
-UAudioImpulseResponse = {}
+local UAudioImpulseResponse = {}
 
 
 
 ---@class UEnvelopeFollowerListener : UActorComponent
 ---@field OnEnvelopeFollowerUpdate FEnvelopeFollowerListenerOnEnvelopeFollowerUpdate
-UEnvelopeFollowerListener = {}
+local UEnvelopeFollowerListener = {}
 
 
 
 ---@class UGranularSynth : USynthComponent
 ---@field GranulatedSoundWave USoundWave
-UGranularSynth = {}
+local UGranularSynth = {}
 
 ---@param SustainGain float
 function UGranularSynth:SetSustainGain(SustainGain) end
@@ -530,7 +530,7 @@ function UGranularSynth:GetCurrentPlayheadTime() end
 
 ---@class UModularSynthComponent : USynthComponent
 ---@field VoiceCount int32
-UModularSynthComponent = {}
+local UModularSynthComponent = {}
 
 ---@param SynthPreset FModularSynthPreset
 function UModularSynthComponent:SetSynthPreset(SynthPreset) end
@@ -677,7 +677,7 @@ function UModularSynthComponent:CreatePatch(PatchSource, PatchCables, bEnableByD
 
 
 ---@class UModularSynthLibrary : UBlueprintFunctionLibrary
-UModularSynthLibrary = {}
+local UModularSynthLibrary = {}
 
 ---@param InBank UModularSynthPresetBank
 ---@param Preset FModularSynthPreset
@@ -687,7 +687,7 @@ function UModularSynthLibrary:AddModularSynthPresetToBankAsset(InBank, Preset, P
 
 ---@class UModularSynthPresetBank : UObject
 ---@field Presets TArray<FModularSynthPresetBankEntry>
-UModularSynthPresetBank = {}
+local UModularSynthPresetBank = {}
 
 
 
@@ -698,13 +698,13 @@ UModularSynthPresetBank = {}
 ---@field WaveTableResolution int32
 ---@field WaveTable TArray<FRuntimeFloatCurve>
 ---@field bNormalizeWaveTables boolean
-UMonoWaveTableSynthPreset = {}
+local UMonoWaveTableSynthPreset = {}
 
 
 
 ---@class USourceEffectBitCrusherPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectBitCrusherSettings
-USourceEffectBitCrusherPreset = {}
+local USourceEffectBitCrusherPreset = {}
 
 ---@param Settings FSourceEffectBitCrusherBaseSettings
 function USourceEffectBitCrusherPreset:SetSettings(Settings) end
@@ -726,7 +726,7 @@ function USourceEffectBitCrusherPreset:SetBitModulator(Modulator) end
 
 ---@class USourceEffectChorusPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectChorusSettings
-USourceEffectChorusPreset = {}
+local USourceEffectChorusPreset = {}
 
 ---@param Modulators TSet<USoundModulatorBase>
 function USourceEffectChorusPreset:SetWetModulators(Modulators) end
@@ -775,7 +775,7 @@ function USourceEffectChorusPreset:SetDepth(Depth) end
 ---@field Settings FSourceEffectConvolutionReverbSettings
 ---@field BlockSize ESubmixEffectConvolutionReverbBlockSize
 ---@field bEnableHardwareAcceleration boolean
-USourceEffectConvolutionReverbPreset = {}
+local USourceEffectConvolutionReverbPreset = {}
 
 ---@param InSettings FSourceEffectConvolutionReverbSettings
 function USourceEffectConvolutionReverbPreset:SetSettings(InSettings) end
@@ -785,7 +785,7 @@ function USourceEffectConvolutionReverbPreset:SetImpulseResponse(InImpulseRespon
 
 ---@class USourceEffectDynamicsProcessorPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectDynamicsProcessorSettings
-USourceEffectDynamicsProcessorPreset = {}
+local USourceEffectDynamicsProcessorPreset = {}
 
 ---@param InSettings FSourceEffectDynamicsProcessorSettings
 function USourceEffectDynamicsProcessorPreset:SetSettings(InSettings) end
@@ -793,7 +793,7 @@ function USourceEffectDynamicsProcessorPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectEQPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectEQSettings
-USourceEffectEQPreset = {}
+local USourceEffectEQPreset = {}
 
 ---@param InSettings FSourceEffectEQSettings
 function USourceEffectEQPreset:SetSettings(InSettings) end
@@ -801,7 +801,7 @@ function USourceEffectEQPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectEnvelopeFollowerPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectEnvelopeFollowerSettings
-USourceEffectEnvelopeFollowerPreset = {}
+local USourceEffectEnvelopeFollowerPreset = {}
 
 ---@param EnvelopeFollowerListener UEnvelopeFollowerListener
 function USourceEffectEnvelopeFollowerPreset:UnregisterEnvelopeFollowerListener(EnvelopeFollowerListener) end
@@ -813,7 +813,7 @@ function USourceEffectEnvelopeFollowerPreset:RegisterEnvelopeFollowerListener(En
 
 ---@class USourceEffectFilterPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectFilterSettings
-USourceEffectFilterPreset = {}
+local USourceEffectFilterPreset = {}
 
 ---@param InSettings FSourceEffectFilterSettings
 function USourceEffectFilterPreset:SetSettings(InSettings) end
@@ -821,7 +821,7 @@ function USourceEffectFilterPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectFoldbackDistortionPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectFoldbackDistortionSettings
-USourceEffectFoldbackDistortionPreset = {}
+local USourceEffectFoldbackDistortionPreset = {}
 
 ---@param InSettings FSourceEffectFoldbackDistortionSettings
 function USourceEffectFoldbackDistortionPreset:SetSettings(InSettings) end
@@ -829,7 +829,7 @@ function USourceEffectFoldbackDistortionPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectMidSideSpreaderPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectMidSideSpreaderSettings
-USourceEffectMidSideSpreaderPreset = {}
+local USourceEffectMidSideSpreaderPreset = {}
 
 ---@param InSettings FSourceEffectMidSideSpreaderSettings
 function USourceEffectMidSideSpreaderPreset:SetSettings(InSettings) end
@@ -837,7 +837,7 @@ function USourceEffectMidSideSpreaderPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectMotionFilterPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectMotionFilterSettings
-USourceEffectMotionFilterPreset = {}
+local USourceEffectMotionFilterPreset = {}
 
 ---@param InSettings FSourceEffectMotionFilterSettings
 function USourceEffectMotionFilterPreset:SetSettings(InSettings) end
@@ -845,7 +845,7 @@ function USourceEffectMotionFilterPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectPannerPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectPannerSettings
-USourceEffectPannerPreset = {}
+local USourceEffectPannerPreset = {}
 
 ---@param InSettings FSourceEffectPannerSettings
 function USourceEffectPannerPreset:SetSettings(InSettings) end
@@ -853,7 +853,7 @@ function USourceEffectPannerPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectPhaserPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectPhaserSettings
-USourceEffectPhaserPreset = {}
+local USourceEffectPhaserPreset = {}
 
 ---@param InSettings FSourceEffectPhaserSettings
 function USourceEffectPhaserPreset:SetSettings(InSettings) end
@@ -861,7 +861,7 @@ function USourceEffectPhaserPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectRingModulationPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectRingModulationSettings
-USourceEffectRingModulationPreset = {}
+local USourceEffectRingModulationPreset = {}
 
 ---@param InSettings FSourceEffectRingModulationSettings
 function USourceEffectRingModulationPreset:SetSettings(InSettings) end
@@ -869,7 +869,7 @@ function USourceEffectRingModulationPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectSimpleDelayPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectSimpleDelaySettings
-USourceEffectSimpleDelayPreset = {}
+local USourceEffectSimpleDelayPreset = {}
 
 ---@param InSettings FSourceEffectSimpleDelaySettings
 function USourceEffectSimpleDelayPreset:SetSettings(InSettings) end
@@ -877,7 +877,7 @@ function USourceEffectSimpleDelayPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectStereoDelayPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectStereoDelaySettings
-USourceEffectStereoDelayPreset = {}
+local USourceEffectStereoDelayPreset = {}
 
 ---@param InSettings FSourceEffectStereoDelaySettings
 function USourceEffectStereoDelayPreset:SetSettings(InSettings) end
@@ -885,7 +885,7 @@ function USourceEffectStereoDelayPreset:SetSettings(InSettings) end
 
 ---@class USourceEffectWaveShaperPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectWaveShaperSettings
-USourceEffectWaveShaperPreset = {}
+local USourceEffectWaveShaperPreset = {}
 
 ---@param InSettings FSourceEffectWaveShaperSettings
 function USourceEffectWaveShaperPreset:SetSettings(InSettings) end
@@ -896,7 +896,7 @@ function USourceEffectWaveShaperPreset:SetSettings(InSettings) end
 ---@field Settings FSubmixEffectConvolutionReverbSettings
 ---@field BlockSize ESubmixEffectConvolutionReverbBlockSize
 ---@field bEnableHardwareAcceleration boolean
-USubmixEffectConvolutionReverbPreset = {}
+local USubmixEffectConvolutionReverbPreset = {}
 
 ---@param InSettings FSubmixEffectConvolutionReverbSettings
 function USubmixEffectConvolutionReverbPreset:SetSettings(InSettings) end
@@ -907,7 +907,7 @@ function USubmixEffectConvolutionReverbPreset:SetImpulseResponse(InImpulseRespon
 ---@class USubmixEffectDelayPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectDelaySettings
 ---@field DynamicSettings FSubmixEffectDelaySettings
-USubmixEffectDelayPreset = {}
+local USubmixEffectDelayPreset = {}
 
 ---@param InSettings FSubmixEffectDelaySettings
 function USubmixEffectDelayPreset:SetSettings(InSettings) end
@@ -922,7 +922,7 @@ function USubmixEffectDelayPreset:GetMaxDelayInMilliseconds() end
 
 
 ---@class USubmixEffectDelayStatics : UBlueprintFunctionLibrary
-USubmixEffectDelayStatics = {}
+local USubmixEffectDelayStatics = {}
 
 ---@param DelaySettings FSubmixEffectDelaySettings
 ---@param MaximumDelayLength float
@@ -940,7 +940,7 @@ function USubmixEffectDelayStatics:SetDelayLength(DelaySettings, DelayLength) en
 
 ---@class USubmixEffectFilterPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectFilterSettings
-USubmixEffectFilterPreset = {}
+local USubmixEffectFilterPreset = {}
 
 ---@param InSettings FSubmixEffectFilterSettings
 function USubmixEffectFilterPreset:SetSettings(InSettings) end
@@ -960,7 +960,7 @@ function USubmixEffectFilterPreset:SetFilterAlgorithm(InAlgorithm) end
 
 ---@class USubmixEffectFlexiverbPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectFlexiverbSettings
-USubmixEffectFlexiverbPreset = {}
+local USubmixEffectFlexiverbPreset = {}
 
 ---@param InSettings FSubmixEffectFlexiverbSettings
 function USubmixEffectFlexiverbPreset:SetSettings(InSettings) end
@@ -968,7 +968,7 @@ function USubmixEffectFlexiverbPreset:SetSettings(InSettings) end
 
 ---@class USubmixEffectMultibandCompressorPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectMultibandCompressorSettings
-USubmixEffectMultibandCompressorPreset = {}
+local USubmixEffectMultibandCompressorPreset = {}
 
 ---@param InSettings FSubmixEffectMultibandCompressorSettings
 function USubmixEffectMultibandCompressorPreset:SetSettings(InSettings) end
@@ -981,7 +981,7 @@ function USubmixEffectMultibandCompressorPreset:ResetKey() end
 
 ---@class USubmixEffectStereoDelayPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectStereoDelaySettings
-USubmixEffectStereoDelayPreset = {}
+local USubmixEffectStereoDelayPreset = {}
 
 ---@param InSettings FSubmixEffectStereoDelaySettings
 function USubmixEffectStereoDelayPreset:SetSettings(InSettings) end
@@ -989,7 +989,7 @@ function USubmixEffectStereoDelayPreset:SetSettings(InSettings) end
 
 ---@class USubmixEffectTapDelayPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectTapDelaySettings
-USubmixEffectTapDelayPreset = {}
+local USubmixEffectTapDelayPreset = {}
 
 ---@param TapId int32
 ---@param TapInfo FTapDelayInfo
@@ -1028,7 +1028,7 @@ function USubmixEffectTapDelayPreset:AddTap(TapId) end
 ---@field OnControllerCaptureEnd FSynth2DSliderOnControllerCaptureEnd
 ---@field OnValueChangedX FSynth2DSliderOnValueChangedX
 ---@field OnValueChangedY FSynth2DSliderOnValueChangedY
-USynth2DSlider = {}
+local USynth2DSlider = {}
 
 ---@param InValue FVector2D
 function USynth2DSlider:SetValue(InValue) end
@@ -1048,7 +1048,7 @@ function USynth2DSlider:GetValue() end
 ---@field OnTableAltered FSynthComponentMonoWaveTableOnTableAltered
 ---@field OnNumTablesChanged FSynthComponentMonoWaveTableOnNumTablesChanged
 ---@field CurrentPreset UMonoWaveTableSynthPreset
-USynthComponentMonoWaveTable = {}
+local USynthComponentMonoWaveTable = {}
 
 ---@param InPosition float
 function USynthComponentMonoWaveTable:SetWaveTablePosition(InPosition) end
@@ -1155,7 +1155,7 @@ function USynthComponentMonoWaveTable:GetCurveTangent(TableIndex) end
 ---@field DistanceAttenuationCurve FRuntimeFloatCurve
 ---@field DistanceRange FVector2D
 ---@field AttenuationDbAtMaxRange float
-USynthComponentToneGenerator = {}
+local USynthComponentToneGenerator = {}
 
 ---@param InVolume float
 function USynthComponentToneGenerator:SetVolume(InVolume) end
@@ -1180,7 +1180,7 @@ function USynthComponentToneGenerator:SetFrequency(InFrequency) end
 ---@field OnControllerCaptureBegin FSynthKnobOnControllerCaptureBegin
 ---@field OnControllerCaptureEnd FSynthKnobOnControllerCaptureEnd
 ---@field OnValueChanged FSynthKnobOnValueChanged
-USynthKnob = {}
+local USynthKnob = {}
 
 ---@param InValue float
 function USynthKnob:SetValue(InValue) end
@@ -1196,7 +1196,7 @@ function USynthKnob:GetValue() end
 ---@field SoundWave USoundWave
 ---@field OnSampleLoaded FSynthSamplePlayerOnSampleLoaded
 ---@field OnSamplePlaybackProgress FSynthSamplePlayerOnSamplePlaybackProgress
-USynthSamplePlayer = {}
+local USynthSamplePlayer = {}
 
 ---@param InSoundWave USoundWave
 function USynthSamplePlayer:SetSoundWave(InSoundWave) end
@@ -1222,7 +1222,7 @@ function USynthSamplePlayer:GetCurrentPlaybackProgressPercent() end
 
 
 ---@class USynthesisUtilitiesBlueprintFunctionLibrary : UBlueprintFunctionLibrary
-USynthesisUtilitiesBlueprintFunctionLibrary = {}
+local USynthesisUtilitiesBlueprintFunctionLibrary = {}
 
 ---@param InLinearValue float
 ---@param InDomainMin float

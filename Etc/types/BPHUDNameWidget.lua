@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHUDNameWidget_C : UHUDNameWidget
-UBPHUDNameWidget_C = {}
+local UBPHUDNameWidget_C = {}
 
 

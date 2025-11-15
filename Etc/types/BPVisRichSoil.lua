@@ -2,7 +2,7 @@
 
 ---@class ABPVisRichSoil_C : AVisRichSoil
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
-ABPVisRichSoil_C = {}
+local ABPVisRichSoil_C = {}
 
 
 

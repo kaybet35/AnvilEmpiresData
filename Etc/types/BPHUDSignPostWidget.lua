@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHUDSignPostWidget_C : UHUDSignPostWidget
-UBPHUDSignPostWidget_C = {}
+local UBPHUDSignPostWidget_C = {}
 
 

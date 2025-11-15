@@ -15,14 +15,14 @@
 ---@field MaxZ float
 ---@field bUsePreferredAngles boolean
 ---@field PreferredAngles FVector
-FPBIKBoneSetting = {}
+local FPBIKBoneSetting = {}
 
 
 
 ---@class FPBIKDebug
 ---@field DrawScale float
 ---@field bDrawDebug boolean
-FPBIKDebug = {}
+local FPBIKDebug = {}
 
 
 
@@ -34,12 +34,12 @@ FPBIKDebug = {}
 ---@field StrengthAlpha float
 ---@field PullChainAlpha float
 ---@field PinRotation float
-FPBIKEffector = {}
+local FPBIKEffector = {}
 
 
 
 ---@class FPBIKSolver
-FPBIKSolver = {}
+local FPBIKSolver = {}
 
 
 ---@class FPBIKSolverSettings
@@ -49,7 +49,7 @@ FPBIKSolver = {}
 ---@field bAllowStretch boolean
 ---@field RootBehavior EPBIKRootBehavior
 ---@field bStartSolveFromInputPose boolean
-FPBIKSolverSettings = {}
+local FPBIKSolverSettings = {}
 
 
 
@@ -65,7 +65,7 @@ FPBIKSolverSettings = {}
 ---@field SolverBoneToElementIndex TArray<int32>
 ---@field Solver FPBIKSolver
 ---@field bNeedsInit boolean
-FRigUnit_PBIK = {}
+local FRigUnit_PBIK = {}
 
 
 

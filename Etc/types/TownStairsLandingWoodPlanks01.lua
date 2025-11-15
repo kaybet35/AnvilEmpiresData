@@ -5,7 +5,7 @@
 ---@field BarnSmall03 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ---@field Scene USceneComponent
-ATownStairsLandingWoodPlanks01_C = {}
+local ATownStairsLandingWoodPlanks01_C = {}
 
 
 

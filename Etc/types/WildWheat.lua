@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWildWheat_C : UEntityTemplate
-UWildWheat_C = {}
+local UWildWheat_C = {}
 
 

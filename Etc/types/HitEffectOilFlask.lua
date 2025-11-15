@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHitEffectOilFlask_C : UEntityTemplate
-UHitEffectOilFlask_C = {}
+local UHitEffectOilFlask_C = {}
 
 

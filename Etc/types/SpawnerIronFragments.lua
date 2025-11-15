@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnerIronFragments_C : UEntityTemplate
-USpawnerIronFragments_C = {}
+local USpawnerIronFragments_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisAxeImpactWood_C : AVisEffect
-AVisAxeImpactWood_C = {}
+local AVisAxeImpactWood_C = {}
 
 

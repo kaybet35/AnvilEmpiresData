@@ -2,12 +2,12 @@
 
 ---@class FActorLayer
 ---@field Name FName
-FActorLayer = {}
+local FActorLayer = {}
 
 
 
 ---@class ULayersBlueprintLibrary : UBlueprintFunctionLibrary
-ULayersBlueprintLibrary = {}
+local ULayersBlueprintLibrary = {}
 
 ---@param InActor AActor
 ---@param Layer FActorLayer

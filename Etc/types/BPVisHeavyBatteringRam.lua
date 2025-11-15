@@ -6,7 +6,7 @@
 ---@field HeavyBatteringRam_Top_SK USkeletalMeshComponent
 ---@field HeavyBatteringRam_SM UStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisHeavyBatteringRam_C = {}
+local ABPVisHeavyBatteringRam_C = {}
 
 
 

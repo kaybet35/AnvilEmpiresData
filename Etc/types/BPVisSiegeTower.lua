@@ -22,7 +22,7 @@
 ---@field DrawBridge USkeletalMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisSiegeTower_C = {}
+local ABPVisSiegeTower_C = {}
 
 
 

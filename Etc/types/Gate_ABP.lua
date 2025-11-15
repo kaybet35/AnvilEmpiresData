@@ -20,7 +20,7 @@
 ---@field __StructProperty_72 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -39,7 +39,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
-UGate_ABP_C = {}
+local UGate_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UGate_ABP_C:AnimGraph(AnimGraph) end

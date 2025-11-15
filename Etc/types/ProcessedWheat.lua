@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UProcessedWheat_C : UItemTemplate
-UProcessedWheat_C = {}
+local UProcessedWheat_C = {}
 
 

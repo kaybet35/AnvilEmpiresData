@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisSilver_C : UVisItem
-UBPVisSilver_C = {}
+local UBPVisSilver_C = {}
 
 

@@ -2,7 +2,7 @@
 
 ---@class FWaveTableBankEntry
 ---@field Transform FWaveTableTransform
-FWaveTableBankEntry = {}
+local FWaveTableBankEntry = {}
 
 
 
@@ -17,7 +17,7 @@ FWaveTableBankEntry = {}
 ---@field bNormalize boolean
 ---@field bRemoveOffset boolean
 ---@field SourcePCMData TArray<float>
-FWaveTableSettings = {}
+local FWaveTableSettings = {}
 
 
 
@@ -27,7 +27,7 @@ FWaveTableSettings = {}
 ---@field CurveCustom FRichCurve
 ---@field CurveShared UCurveFloat
 ---@field WaveTable TArray<float>
-FWaveTableTransform = {}
+local FWaveTableTransform = {}
 
 
 
@@ -35,7 +35,7 @@ FWaveTableTransform = {}
 ---@field Resolution EWaveTableResolution
 ---@field bBipolar boolean
 ---@field Entries TArray<FWaveTableBankEntry>
-UWaveTableBank = {}
+local UWaveTableBank = {}
 
 
 

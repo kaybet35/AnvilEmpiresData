@@ -1,5 +1,5 @@
 ---@enum EAlertType
-EAlertType = {
+local EAlertType = {
     General = 0,
     QueueStatus = 1,
     Reinforcement = 2,
@@ -10,7 +10,7 @@ EAlertType = {
 }
 
 ---@enum EAnvilScreenType
-EAnvilScreenType = {
+local EAnvilScreenType = {
     None = 0,
     Opening = 1,
     Connect = 2,
@@ -29,7 +29,7 @@ EAnvilScreenType = {
 }
 
 ---@enum EAnvilSpringArmMode
-EAnvilSpringArmMode = {
+local EAnvilSpringArmMode = {
     Normal = 0,
     ForceZoomingIn = 1,
     ForceZoomingOut = 2,
@@ -37,7 +37,7 @@ EAnvilSpringArmMode = {
 }
 
 ---@enum EBatchedDataRequestType
-EBatchedDataRequestType = {
+local EBatchedDataRequestType = {
     CanPlayerJoinShard = 0,
     GetProfileInfo = 1,
     GetServerList = 2,
@@ -48,7 +48,7 @@ EBatchedDataRequestType = {
 }
 
 ---@enum EBuildSiteCategory
-EBuildSiteCategory = {
+local EBuildSiteCategory = {
     General = 0,
     Family = 1,
     Cooking = 2,
@@ -63,7 +63,7 @@ EBuildSiteCategory = {
 }
 
 ---@enum EBuildSiteVisibility
-EBuildSiteVisibility = {
+local EBuildSiteVisibility = {
     AlwaysVisible = 0,
     AdminOnly = 1,
     PlayInEditorOnly = 2,
@@ -73,7 +73,7 @@ EBuildSiteVisibility = {
 }
 
 ---@enum EClientConfigDownloadTaskState
-EClientConfigDownloadTaskState = {
+local EClientConfigDownloadTaskState = {
     NotStarted = 0,
     Completed = 1,
     InProgress = 2,
@@ -81,7 +81,7 @@ EClientConfigDownloadTaskState = {
 }
 
 ---@enum EClientConfigURLType
-EClientConfigURLType = {
+local EClientConfigURLType = {
     Live = 0,
     Internal = 1,
     DevBranch = 2,
@@ -91,7 +91,7 @@ EClientConfigURLType = {
 }
 
 ---@enum EClientConnectToServerResponseType
-EClientConnectToServerResponseType = {
+local EClientConnectToServerResponseType = {
     Error = 0,
     ServerNotConnected = 1,
     Queued = 2,
@@ -105,7 +105,7 @@ EClientConnectToServerResponseType = {
 }
 
 ---@enum EConnectionFailedReason
-EConnectionFailedReason = {
+local EConnectionFailedReason = {
     AnvilServiceConnectionFailed = 0,
     AnvilServiceConnectTokenResponseError = 1,
     AnvilServiceNotQueued = 2,
@@ -119,7 +119,7 @@ EConnectionFailedReason = {
 }
 
 ---@enum EDeploymentPointTooltipType
-EDeploymentPointTooltipType = {
+local EDeploymentPointTooltipType = {
     None = 0,
     Wild = 1,
     TownCenterMilitia = 2,
@@ -135,7 +135,7 @@ EDeploymentPointTooltipType = {
 }
 
 ---@enum EEquippedItemGripType
-EEquippedItemGripType = {
+local EEquippedItemGripType = {
     NoWeapon = 0,
     LargeItem = 1,
     Basket = 2,
@@ -158,7 +158,7 @@ EEquippedItemGripType = {
 }
 
 ---@enum EFishingBobberState
-EFishingBobberState = {
+local EFishingBobberState = {
     None = 0,
     Casting = 1,
     Idling = 2,
@@ -168,7 +168,7 @@ EFishingBobberState = {
 }
 
 ---@enum EGameplayHint
-EGameplayHint = {
+local EGameplayHint = {
     Homestead1 = 0,
     Homestead2 = 1,
     Homestead3 = 2,
@@ -189,7 +189,7 @@ EGameplayHint = {
 }
 
 ---@enum EHUDPlayerNameColourType
-EHUDPlayerNameColourType = {
+local EHUDPlayerNameColourType = {
     None = 0,
     Aranic = 1,
     Mirrish = 2,
@@ -200,7 +200,7 @@ EHUDPlayerNameColourType = {
 }
 
 ---@enum EHUDWindowType
-EHUDWindowType = {
+local EHUDWindowType = {
     None = 0,
     BuildMenu = 1,
     PlayerInventory = 2,
@@ -235,7 +235,7 @@ EHUDWindowType = {
 }
 
 ---@enum EIncomingAttackDirection
-EIncomingAttackDirection = {
+local EIncomingAttackDirection = {
     None = 0,
     Front = 1,
     Back = 2,
@@ -245,7 +245,7 @@ EIncomingAttackDirection = {
 }
 
 ---@enum EInputType
-EInputType = {
+local EInputType = {
     Action = 0,
     AxisPositive = 1,
     AxisNegative = 2,
@@ -253,7 +253,7 @@ EInputType = {
 }
 
 ---@enum EMapIconType
-EMapIconType = {
+local EMapIconType = {
     None = 0,
     Player = 1,
     DeathMarker = 2,
@@ -280,7 +280,7 @@ EMapIconType = {
 }
 
 ---@enum EMapMode
-EMapMode = {
+local EMapMode = {
     InGame = 0,
     Spawn = 1,
     MilitiaDeployment = 2,
@@ -289,7 +289,7 @@ EMapMode = {
 }
 
 ---@enum EMapPostCreationResponse
-EMapPostCreationResponse = {
+local EMapPostCreationResponse = {
     Success = 0,
     AlreadyExists = 1,
     TooSoon = 2,
@@ -298,7 +298,7 @@ EMapPostCreationResponse = {
 }
 
 ---@enum EMapPostVoteType
-EMapPostVoteType = {
+local EMapPostVoteType = {
     None = 0,
     Up = 1,
     Down = 2,
@@ -306,7 +306,7 @@ EMapPostVoteType = {
 }
 
 ---@enum ENotificationDuration
-ENotificationDuration = {
+local ENotificationDuration = {
     OneTick = 0,
     Short = 1,
     Long = 2,
@@ -314,14 +314,14 @@ ENotificationDuration = {
 }
 
 ---@enum ENotificationSlot
-ENotificationSlot = {
+local ENotificationSlot = {
     Primary = 0,
     Secondary = 1,
     ENotificationSlot_MAX = 2,
 }
 
 ---@enum EQueueType
-EQueueType = {
+local EQueueType = {
     Unselected = 0,
     Regular = 1,
     Travel = 2,
@@ -331,7 +331,7 @@ EQueueType = {
 }
 
 ---@enum EShardPopulationType
-EShardPopulationType = {
+local EShardPopulationType = {
     Low = 0,
     Medium = 1,
     High = 2,
@@ -340,7 +340,7 @@ EShardPopulationType = {
 }
 
 ---@enum ESimpleTooltip
-ESimpleTooltip = {
+local ESimpleTooltip = {
     None = 0,
     Health = 1,
     Silver = 2,
@@ -365,7 +365,7 @@ ESimpleTooltip = {
 }
 
 ---@enum ETemperatureChangeType
-ETemperatureChangeType = {
+local ETemperatureChangeType = {
     NoChange = 0,
     Increasing = 1,
     Decreasing = 2,
@@ -373,7 +373,7 @@ ETemperatureChangeType = {
 }
 
 ---@enum EUnarmedItemMeshLocation
-EUnarmedItemMeshLocation = {
+local EUnarmedItemMeshLocation = {
     None = 0,
     MidLeft = 1,
     MidRight = 2,
@@ -383,7 +383,7 @@ EUnarmedItemMeshLocation = {
 }
 
 ---@enum EVisItemCategory
-EVisItemCategory = {
+local EVisItemCategory = {
     None = 0,
     WeaponShield = 1,
     Armour = 2,
@@ -396,7 +396,7 @@ EVisItemCategory = {
 }
 
 ---@enum EVisualComponentFlags
-EVisualComponentFlags = {
+local EVisualComponentFlags = {
     Populated = 0,
     Refining = 1,
     Active1 = 2,
@@ -406,7 +406,7 @@ EVisualComponentFlags = {
 }
 
 ---@enum EVoiceChannelType
-EVoiceChannelType = {
+local EVoiceChannelType = {
     Local = 0,
     Global = 1,
     GlobalText = 2,
@@ -415,7 +415,7 @@ EVoiceChannelType = {
 }
 
 ---@enum QueueStatusType
-QueueStatusType = {
+local QueueStatusType = {
     NotQueued = 0,
     Queued = 1,
     RequestServerConnection = 2,

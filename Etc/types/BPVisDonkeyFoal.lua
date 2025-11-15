@@ -2,7 +2,7 @@
 
 ---@class ABPVisDonkeyFoal_C : AVisAnimal
 ---@field Idle UAudioComponent
-ABPVisDonkeyFoal_C = {}
+local ABPVisDonkeyFoal_C = {}
 
 
 

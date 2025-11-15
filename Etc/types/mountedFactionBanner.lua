@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UmountedFactionBanner_C : UItemTemplate
-UmountedFactionBanner_C = {}
+local UmountedFactionBanner_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectWoodSplinter_C : AVisEffect
-AVisEffectWoodSplinter_C = {}
+local AVisEffectWoodSplinter_C = {}
 
 

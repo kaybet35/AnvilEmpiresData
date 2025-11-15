@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationCeilingCornerInStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationCeilingCornerInStraightFootprint_C = {}
+local AGridFoundationCeilingCornerInStraightFootprint_C = {}
 
 
 

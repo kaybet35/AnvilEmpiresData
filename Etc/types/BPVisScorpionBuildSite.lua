@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisScorpionBuildSite_C : AVisBuildSite
-ABPVisScorpionBuildSite_C = {}
+local ABPVisScorpionBuildSite_C = {}
 
 

@@ -3,7 +3,7 @@
 ---@class UAudioAnalyzer : UObject
 ---@field AudioBus UAudioBus
 ---@field AudioAnalyzerSubsystem UAudioAnalyzerSubsystem
-UAudioAnalyzer = {}
+local UAudioAnalyzer = {}
 
 ---@param WorldContextObject UObject
 function UAudioAnalyzer:StopAnalyzing(WorldContextObject) end
@@ -13,27 +13,27 @@ function UAudioAnalyzer:StartAnalyzing(WorldContextObject, AudioBusToAnalyze) en
 
 
 ---@class UAudioAnalyzerAssetBase : UObject
-UAudioAnalyzerAssetBase = {}
+local UAudioAnalyzerAssetBase = {}
 
 
 ---@class UAudioAnalyzerNRT : UAudioAnalyzerAssetBase
 ---@field Sound USoundWave
 ---@field DurationInSeconds float
-UAudioAnalyzerNRT = {}
+local UAudioAnalyzerNRT = {}
 
 
 
 ---@class UAudioAnalyzerNRTSettings : UAudioAnalyzerAssetBase
-UAudioAnalyzerNRTSettings = {}
+local UAudioAnalyzerNRTSettings = {}
 
 
 ---@class UAudioAnalyzerSettings : UAudioAnalyzerAssetBase
-UAudioAnalyzerSettings = {}
+local UAudioAnalyzerSettings = {}
 
 
 ---@class UAudioAnalyzerSubsystem : UEngineSubsystem
 ---@field AudioAnalyzers TArray<UAudioAnalyzer>
-UAudioAnalyzerSubsystem = {}
+local UAudioAnalyzerSubsystem = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemLeadFragments_C : UVisItem
-UBPVisItemLeadFragments_C = {}
+local UBPVisItemLeadFragments_C = {}
 
 

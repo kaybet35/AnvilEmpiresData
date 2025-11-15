@@ -8,8 +8,8 @@ AVisFamilyCenter::AVisFamilyCenter(const FObjectInitializer& ObjectInitializer) 
     this->FamilyCenterDataComponent = CreateDefaultSubobject<UFamilyCenterDataComponent>(TEXT("FamilyCenterDataComponent"));
     this->TownAreaMarkerDecal = CreateDefaultSubobject<UVisTownAreaMarkerDecalComponent>(TEXT("TownAreaMarkerDecal"));
     this->MyFamilyFlagMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MyFamilyFlagMesh"));
-    this->TownAreaMarkerDecal->SetupAttachment(RootComponent);
     this->MyFamilyFlagMesh->SetupAttachment(RootComponent);
+    this->TownAreaMarkerDecal->SetupAttachment(RootComponent);
 }
 
 

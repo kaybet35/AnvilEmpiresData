@@ -4,27 +4,27 @@
 ---@field Type EActorSequenceObjectReferenceType
 ---@field ActorId FGuid
 ---@field PathToComponent FString
-FActorSequenceObjectReference = {}
+local FActorSequenceObjectReference = {}
 
 
 
 ---@class FActorSequenceObjectReferenceMap
 ---@field BindingIds TArray<FGuid>
 ---@field References TArray<FActorSequenceObjectReferences>
-FActorSequenceObjectReferenceMap = {}
+local FActorSequenceObjectReferenceMap = {}
 
 
 
 ---@class FActorSequenceObjectReferences
 ---@field Array TArray<FActorSequenceObjectReference>
-FActorSequenceObjectReferences = {}
+local FActorSequenceObjectReferences = {}
 
 
 
 ---@class UActorSequence : UMovieSceneSequence
 ---@field MovieScene UMovieScene
 ---@field ObjectReferences FActorSequenceObjectReferenceMap
-UActorSequence = {}
+local UActorSequence = {}
 
 
 
@@ -32,7 +32,7 @@ UActorSequence = {}
 ---@field PlaybackSettings FMovieSceneSequencePlaybackSettings
 ---@field Sequence UActorSequence
 ---@field SequencePlayer UActorSequencePlayer
-UActorSequenceComponent = {}
+local UActorSequenceComponent = {}
 
 function UActorSequenceComponent:StopSequence() end
 function UActorSequenceComponent:PlaySequence() end
@@ -40,6 +40,6 @@ function UActorSequenceComponent:PauseSequence() end
 
 
 ---@class UActorSequencePlayer : UMovieSceneSequencePlayer
-UActorSequencePlayer = {}
+local UActorSequencePlayer = {}
 
 

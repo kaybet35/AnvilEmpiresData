@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisThickLeather_C : AVisPickupItem
-ABPVisThickLeather_C = {}
+local ABPVisThickLeather_C = {}
 
 

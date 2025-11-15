@@ -2,7 +2,7 @@
 
 ---@class AWaterWheelFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AWaterWheelFootprint_C = {}
+local AWaterWheelFootprint_C = {}
 
 
 

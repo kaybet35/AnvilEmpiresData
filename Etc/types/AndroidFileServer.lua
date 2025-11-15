@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UAndroidFileServerBPLibrary : UBlueprintFunctionLibrary
-UAndroidFileServerBPLibrary = {}
+local UAndroidFileServerBPLibrary = {}
 
 ---@param bUSB boolean
 ---@param bNetwork boolean

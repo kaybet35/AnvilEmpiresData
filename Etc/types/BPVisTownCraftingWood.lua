@@ -20,7 +20,7 @@
 ---@field ExtraProps USceneComponent
 ---@field MainStructureCollapsedMesh UVisStaticMeshComponent
 ---@field MainStructureMesh UVisStaticMeshComponent
-ABPVisTownCraftingWood_C = {}
+local ABPVisTownCraftingWood_C = {}
 
 
 

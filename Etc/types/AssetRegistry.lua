@@ -6,19 +6,19 @@
 ---@field bIncludeSearchableNames boolean
 ---@field bIncludeSoftManagementReferences boolean
 ---@field bIncludeHardManagementReferences boolean
-FAssetRegistryDependencyOptions = {}
+local FAssetRegistryDependencyOptions = {}
 
 
 
 ---@class FTagAndValue
 ---@field Tag FName
 ---@field Value FString
-FTagAndValue = {}
+local FTagAndValue = {}
 
 
 
 ---@class IAssetRegistry : IInterface
-IAssetRegistry = {}
+local IAssetRegistry = {}
 
 ---@param PackageName FString
 function IAssetRegistry:WaitForPackage(PackageName) end
@@ -119,7 +119,7 @@ function IAssetRegistry:GetAllAssets(OutAssetData, bIncludeOnlyOnDiskAssets) end
 
 
 ---@class UAssetRegistryHelpers : UObject
-UAssetRegistryHelpers = {}
+local UAssetRegistryHelpers = {}
 
 ---@param InAssetData FAssetData
 ---@return FSoftObjectPath
@@ -169,6 +169,6 @@ function UAssetRegistryHelpers:CreateAssetData(InAsset, bAllowBlueprintClass) en
 
 
 ---@class UAssetRegistryImpl : UObject
-UAssetRegistryImpl = {}
+local UAssetRegistryImpl = {}
 
 

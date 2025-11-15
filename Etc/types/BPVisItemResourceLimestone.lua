@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemResourceLimestone_C : UVisItem
-UBPVisItemResourceLimestone_C = {}
+local UBPVisItemResourceLimestone_C = {}
 
 

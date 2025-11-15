@@ -1,5 +1,5 @@
 ---@enum EClothMassMode
-EClothMassMode = {
+local EClothMassMode = {
     UniformMass = 0,
     TotalMass = 1,
     Density = 2,
@@ -8,14 +8,14 @@ EClothMassMode = {
 }
 
 ---@enum EClothingWindMethod_Legacy
-EClothingWindMethod_Legacy = {
+local EClothingWindMethod_Legacy = {
     Legacy = 0,
     Accurate = 1,
     EClothingWindMethod_MAX = 2,
 }
 
 ---@enum EWeightMapTargetCommon
-EWeightMapTargetCommon = {
+local EWeightMapTargetCommon = {
     None = 0,
     MaxDistance = 1,
     BackstopDistance = 2,

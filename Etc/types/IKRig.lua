@@ -14,7 +14,7 @@
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
 ---@field IKRigProcessor UIKRigProcessor
 ---@field ActualAlpha float
-FAnimNode_IKRig = {}
+local FAnimNode_IKRig = {}
 
 
 
@@ -26,7 +26,7 @@ FAnimNode_IKRig = {}
 ---@field bSuppressWarnings boolean
 ---@field bCopyCurves boolean
 ---@field Processor UIKRetargetProcessor
-FAnimNode_RetargetPoseFromMesh = {}
+local FAnimNode_RetargetPoseFromMesh = {}
 
 
 
@@ -35,18 +35,18 @@ FAnimNode_RetargetPoseFromMesh = {}
 ---@field StartBone FBoneReference
 ---@field EndBone FBoneReference
 ---@field IKGoalName FName
-FBoneChain = {}
+local FBoneChain = {}
 
 
 
 ---@class FGoalBone
-FGoalBone = {}
+local FGoalBone = {}
 
 
 ---@class FIKRetargetPose
 ---@field RootTranslationOffset FVector
 ---@field BoneRotationOffsets TMap<FName, FQuat>
-FIKRetargetPose = {}
+local FIKRetargetPose = {}
 
 
 
@@ -62,16 +62,16 @@ FIKRetargetPose = {}
 ---@field RotationSpace EIKRigGoalSpace
 ---@field FinalBlendedPosition FVector
 ---@field FinalBlendedRotation FQuat
-FIKRigGoal = {}
+local FIKRigGoal = {}
 
 
 
 ---@class FIKRigGoalContainer
-FIKRigGoalContainer = {}
+local FIKRigGoalContainer = {}
 
 
 ---@class FIKRigInputSkeleton
-FIKRigInputSkeleton = {}
+local FIKRigInputSkeleton = {}
 
 
 ---@class FIKRigSkeleton
@@ -81,16 +81,16 @@ FIKRigInputSkeleton = {}
 ---@field CurrentPoseGlobal TArray<FTransform>
 ---@field CurrentPoseLocal TArray<FTransform>
 ---@field RefPoseGlobal TArray<FTransform>
-FIKRigSkeleton = {}
+local FIKRigSkeleton = {}
 
 
 
 ---@class FLimbLink
-FLimbLink = {}
+local FLimbLink = {}
 
 
 ---@class FLimbSolver
-FLimbSolver = {}
+local FLimbSolver = {}
 
 
 ---@class FLimbSolverSettings
@@ -104,21 +104,21 @@ FLimbSolver = {}
 ---@field ReachStepAlpha float
 ---@field bEnableTwistCorrection boolean
 ---@field EndBoneForwardAxis EAxis::Type
-FLimbSolverSettings = {}
+local FLimbSolverSettings = {}
 
 
 
 ---@class FRetargetChainMap
 ---@field SourceChain FName
 ---@field TargetChain FName
-FRetargetChainMap = {}
+local FRetargetChainMap = {}
 
 
 
 ---@class FRetargetDefinition
 ---@field RootBone FName
 ---@field BoneChains TArray<FBoneChain>
-FRetargetDefinition = {}
+local FRetargetDefinition = {}
 
 
 
@@ -133,7 +133,7 @@ FRetargetDefinition = {}
 ---@field WarpForwards float
 ---@field SidewaysOffset float
 ---@field WarpSplay float
-FRetargetGlobalSettings = {}
+local FRetargetGlobalSettings = {}
 
 
 
@@ -148,7 +148,7 @@ FRetargetGlobalSettings = {}
 ---@field RootSettings FTargetRootSettings
 ---@field bApplyGlobalSettings boolean
 ---@field GlobalSettings FRetargetGlobalSettings
-FRetargetProfile = {}
+local FRetargetProfile = {}
 
 
 
@@ -160,7 +160,7 @@ FRetargetProfile = {}
 ---@field TranslationAlpha float
 ---@field PoleVectorMatching float
 ---@field PoleVectorOffset float
-FTargetChainFKSettings = {}
+local FTargetChainFKSettings = {}
 
 
 
@@ -173,7 +173,7 @@ FTargetChainFKSettings = {}
 ---@field StaticRotationOffset FRotator
 ---@field Extension float
 ---@field bAffectedByIKWarping boolean
-FTargetChainIKSettings = {}
+local FTargetChainIKSettings = {}
 
 
 
@@ -181,7 +181,7 @@ FTargetChainIKSettings = {}
 ---@field FK FTargetChainFKSettings
 ---@field IK FTargetChainIKSettings
 ---@field SpeedPlanting FTargetChainSpeedPlantSettings
-FTargetChainSettings = {}
+local FTargetChainSettings = {}
 
 
 
@@ -191,7 +191,7 @@ FTargetChainSettings = {}
 ---@field SpeedThreshold float
 ---@field UnplantStiffness float
 ---@field UnplantCriticalDamping float
-FTargetChainSpeedPlantSettings = {}
+local FTargetChainSpeedPlantSettings = {}
 
 
 
@@ -206,12 +206,12 @@ FTargetChainSpeedPlantSettings = {}
 ---@field RotationOffset FRotator
 ---@field AffectIKHorizontal float
 ---@field AffectIKVertical float
-FTargetRootSettings = {}
+local FTargetRootSettings = {}
 
 
 
 ---@class IIKGoalCreatorInterface : IInterface
-IIKGoalCreatorInterface = {}
+local IIKGoalCreatorInterface = {}
 
 ---@param OutGoals TMap<FName, FIKRigGoal>
 function IIKGoalCreatorInterface:AddIKGoals(OutGoals) end
@@ -219,13 +219,13 @@ function IIKGoalCreatorInterface:AddIKGoals(OutGoals) end
 
 ---@class UIKRetargetGlobalSettings : UObject
 ---@field Settings FRetargetGlobalSettings
-UIKRetargetGlobalSettings = {}
+local UIKRetargetGlobalSettings = {}
 
 
 
 ---@class UIKRetargetProcessor : UObject
 ---@field IKRigProcessor UIKRigProcessor
-UIKRetargetProcessor = {}
+local UIKRetargetProcessor = {}
 
 
 
@@ -244,7 +244,7 @@ UIKRetargetProcessor = {}
 ---@field CurrentTargetRetargetPose FName
 ---@field RetargetPoses TMap<FName, FIKRetargetPose>
 ---@field CurrentRetargetPose FName
-UIKRetargeter = {}
+local UIKRetargeter = {}
 
 ---@param RetargetProfile FRetargetProfile
 ---@param RootSettings FTargetRootSettings
@@ -298,7 +298,7 @@ function UIKRetargeter:GetChainSettingsFromRetargetAsset(RetargetAsset, TargetCh
 
 
 ---@class UIKRigComponent : UActorComponent
-UIKRigComponent = {}
+local UIKRigComponent = {}
 
 ---@param GoalName FName
 ---@param Transform FTransform
@@ -322,7 +322,7 @@ function UIKRigComponent:ClearAllGoals() end
 ---@field Goals TArray<UIKRigEffectorGoal>
 ---@field Solvers TArray<UIKRigSolver>
 ---@field RetargetDefinition FRetargetDefinition
-UIKRigDefinition = {}
+local UIKRigDefinition = {}
 
 
 
@@ -333,7 +333,7 @@ UIKRigDefinition = {}
 ---@field RotationAlpha float
 ---@field CurrentTransform FTransform
 ---@field InitialTransform FTransform
-UIKRigEffectorGoal = {}
+local UIKRigEffectorGoal = {}
 
 
 
@@ -347,19 +347,19 @@ UIKRigEffectorGoal = {}
 ---@field bStartSolveFromInputPose boolean
 ---@field Effectors TArray<UIKRig_FBIKEffector>
 ---@field BoneSettings TArray<UIKRig_PBIKBoneSettings>
-UIKRigPBIKSolver = {}
+local UIKRigPBIKSolver = {}
 
 
 
 ---@class UIKRigProcessor : UObject
 ---@field Solvers TArray<UIKRigSolver>
-UIKRigProcessor = {}
+local UIKRigProcessor = {}
 
 
 
 ---@class UIKRigSolver : UObject
 ---@field bIsEnabled boolean
-UIKRigSolver = {}
+local UIKRigSolver = {}
 
 
 
@@ -377,7 +377,7 @@ UIKRigSolver = {}
 ---@field RotateYAlpha float
 ---@field RotateZAlpha float
 ---@field Effectors TArray<UIKRig_BodyMoverEffector>
-UIKRig_BodyMover = {}
+local UIKRig_BodyMover = {}
 
 
 
@@ -385,7 +385,7 @@ UIKRig_BodyMover = {}
 ---@field GoalName FName
 ---@field BoneName FName
 ---@field InfluenceMultiplier float
-UIKRig_BodyMoverEffector = {}
+local UIKRig_BodyMoverEffector = {}
 
 
 
@@ -396,14 +396,14 @@ UIKRig_BodyMoverEffector = {}
 ---@field PullChainAlpha float
 ---@field PinRotation float
 ---@field IndexInSolver int32
-UIKRig_FBIKEffector = {}
+local UIKRig_FBIKEffector = {}
 
 
 
 ---@class UIKRig_LimbEffector : UObject
 ---@field GoalName FName
 ---@field BoneName FName
-UIKRig_LimbEffector = {}
+local UIKRig_LimbEffector = {}
 
 
 
@@ -420,7 +420,7 @@ UIKRig_LimbEffector = {}
 ---@field bEnableTwistCorrection boolean
 ---@field EndBoneForwardAxis EAxis::Type
 ---@field Effector UIKRig_LimbEffector
-UIKRig_LimbSolver = {}
+local UIKRig_LimbSolver = {}
 
 
 
@@ -439,7 +439,7 @@ UIKRig_LimbSolver = {}
 ---@field MaxZ float
 ---@field bUsePreferredAngles boolean
 ---@field PreferredAngles FVector
-UIKRig_PBIKBoneSettings = {}
+local UIKRig_PBIKBoneSettings = {}
 
 
 
@@ -447,7 +447,7 @@ UIKRig_PBIKBoneSettings = {}
 ---@field RootName FName
 ---@field EndName FName
 ---@field Effector UIKRig_PoleSolverEffector
-UIKRig_PoleSolver = {}
+local UIKRig_PoleSolver = {}
 
 
 
@@ -455,7 +455,7 @@ UIKRig_PoleSolver = {}
 ---@field GoalName FName
 ---@field BoneName FName
 ---@field Alpha float
-UIKRig_PoleSolverEffector = {}
+local UIKRig_PoleSolverEffector = {}
 
 
 
@@ -463,7 +463,7 @@ UIKRig_PoleSolverEffector = {}
 ---@field Goal FName
 ---@field RootBone FName
 ---@field Effector UIKRig_SetTransformEffector
-UIKRig_SetTransform = {}
+local UIKRig_SetTransform = {}
 
 
 
@@ -471,7 +471,7 @@ UIKRig_SetTransform = {}
 ---@field bEnablePosition boolean
 ---@field bEnableRotation boolean
 ---@field Alpha float
-UIKRig_SetTransformEffector = {}
+local UIKRig_SetTransformEffector = {}
 
 
 
@@ -496,7 +496,7 @@ UIKRig_SetTransformEffector = {}
 ---@field VelocityThreshold float
 ---@field UnplantStiffness float
 ---@field UnplantCriticalDamping float
-URetargetChainSettings = {}
+local URetargetChainSettings = {}
 
 
 
@@ -508,7 +508,7 @@ URetargetChainSettings = {}
 ---@field BlendToSource FVector
 ---@field StaticOffset FVector
 ---@field StaticRotationOffset FRotator
-URetargetRootSettings = {}
+local URetargetRootSettings = {}
 
 
 

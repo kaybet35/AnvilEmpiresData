@@ -13,7 +13,7 @@
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisGridFoundationFloorSquareDiagonal_T2_C = {}
+local ABPVisGridFoundationFloorSquareDiagonal_T2_C = {}
 
 
 

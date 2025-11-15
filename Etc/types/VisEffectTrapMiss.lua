@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectTrapMiss_C : AVisEffect
-AVisEffectTrapMiss_C = {}
+local AVisEffectTrapMiss_C = {}
 
 

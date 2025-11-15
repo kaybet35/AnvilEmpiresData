@@ -7,7 +7,7 @@
 ---@field Decal UDecalComponent
 ---@field OccupiedMesh1 UVisStaticMeshComponent
 ---@field HouseMesh1 UVisStaticMeshComponent
-ABPVisFoundationBedMulti_C = {}
+local ABPVisFoundationBedMulti_C = {}
 
 
 

@@ -2,12 +2,12 @@
 
 ---@class AControlPointMeshActor : AActor
 ---@field ControlPointMeshComponent UControlPointMeshComponent
-AControlPointMeshActor = {}
+local AControlPointMeshActor = {}
 
 
 
 ---@class ALandscape : ALandscapeProxy
-ALandscape = {}
+local ALandscape = {}
 
 ---@param InWorldTransform FTransform
 ---@param InExtents FBox2D
@@ -16,7 +16,7 @@ function ALandscape:RenderHeightmap(InWorldTransform, InExtents, OutRenderTarget
 
 
 ---@class ALandscapeBlueprintBrushBase : AActor
-ALandscapeBlueprintBrushBase = {}
+local ALandscapeBlueprintBrushBase = {}
 
 function ALandscapeBlueprintBrushBase:RequestLandscapeUpdate() end
 ---@param InIsHeightmap boolean
@@ -33,16 +33,16 @@ function ALandscapeBlueprintBrushBase:GetBlueprintRenderDependencies(OutStreamab
 
 
 ---@class ALandscapeGizmoActiveActor : ALandscapeGizmoActor
-ALandscapeGizmoActiveActor = {}
+local ALandscapeGizmoActiveActor = {}
 
 
 ---@class ALandscapeGizmoActor : AActor
-ALandscapeGizmoActor = {}
+local ALandscapeGizmoActor = {}
 
 
 ---@class ALandscapeMeshProxyActor : AActor
 ---@field LandscapeMeshProxyComponent ULandscapeMeshProxyComponent
-ALandscapeMeshProxyActor = {}
+local ALandscapeMeshProxyActor = {}
 
 
 
@@ -104,7 +104,7 @@ ALandscapeMeshProxyActor = {}
 ---@field NavigationGeometryGatheringMode ENavDataGatheringMode
 ---@field bUseLandscapeForCullingInvisibleHLODVertices boolean
 ---@field bHasLayersContent boolean
-ALandscapeProxy = {}
+local ALandscapeProxy = {}
 
 ---@param InType ERuntimeVirtualTextureMainPassType
 function ALandscapeProxy:SetVirtualTextureRenderPassType(InType) end
@@ -147,43 +147,43 @@ function ALandscapeProxy:ChangeComponentScreenSizeToUseSubSections(InComponentSc
 
 ---@class ALandscapeSplineActor : AActor
 ---@field LandscapeGuid FGuid
-ALandscapeSplineActor = {}
+local ALandscapeSplineActor = {}
 
 
 
 ---@class ALandscapeSplineMeshesActor : APartitionActor
 ---@field StaticMeshComponents TArray<UStaticMeshComponent>
-ALandscapeSplineMeshesActor = {}
+local ALandscapeSplineMeshesActor = {}
 
 
 
 ---@class ALandscapeStreamingProxy : ALandscapeProxy
 ---@field LandscapeActor TLazyObjectPtr<ALandscape>
-ALandscapeStreamingProxy = {}
+local ALandscapeStreamingProxy = {}
 
 
 
 ---@class FForeignControlPointData
-FForeignControlPointData = {}
+local FForeignControlPointData = {}
 
 
 ---@class FForeignSplineSegmentData
-FForeignSplineSegmentData = {}
+local FForeignSplineSegmentData = {}
 
 
 ---@class FForeignWorldSplineData
-FForeignWorldSplineData = {}
+local FForeignWorldSplineData = {}
 
 
 ---@class FGizmoSelectData
-FGizmoSelectData = {}
+local FGizmoSelectData = {}
 
 
 ---@class FGrassInput
 ---@field Name FName
 ---@field GrassType ULandscapeGrassType
 ---@field Input FExpressionInput
-FGrassInput = {}
+local FGrassInput = {}
 
 
 
@@ -209,20 +209,20 @@ FGrassInput = {}
 ---@field bCastContactShadow boolean
 ---@field bKeepInstanceBufferCPUCopy boolean
 ---@field InstanceWorldPositionOffsetDisableDistance uint32
-FGrassVariety = {}
+local FGrassVariety = {}
 
 
 
 ---@class FHeightmapData
 ---@field Texture UTexture2D
-FHeightmapData = {}
+local FHeightmapData = {}
 
 
 
 ---@class FLandscapeComponentMaterialOverride
 ---@field LODIndex FPerPlatformInt
 ---@field Material UMaterialInterface
-FLandscapeComponentMaterialOverride = {}
+local FLandscapeComponentMaterialOverride = {}
 
 
 
@@ -236,22 +236,22 @@ FLandscapeComponentMaterialOverride = {}
 ---@field DataTexture UTexture2D
 ---@field LayerContributionTexture UTexture2D
 ---@field DirtyTexture UTexture2D
-FLandscapeEditToolRenderData = {}
+local FLandscapeEditToolRenderData = {}
 
 
 
 ---@class FLandscapeEditorLayerSettings
-FLandscapeEditorLayerSettings = {}
+local FLandscapeEditorLayerSettings = {}
 
 
 ---@class FLandscapeImportLayerInfo
-FLandscapeImportLayerInfo = {}
+local FLandscapeImportLayerInfo = {}
 
 
 ---@class FLandscapeInfoLayerSettings
 ---@field LayerInfoObj ULandscapeLayerInfoObject
 ---@field LayerName FName
-FLandscapeInfoLayerSettings = {}
+local FLandscapeInfoLayerSettings = {}
 
 
 
@@ -265,52 +265,52 @@ FLandscapeInfoLayerSettings = {}
 ---@field BlendMode ELandscapeBlendMode
 ---@field Brushes TArray<FLandscapeLayerBrush>
 ---@field WeightmapLayerAllocationBlend TMap<ULandscapeLayerInfoObject, boolean>
-FLandscapeLayer = {}
+local FLandscapeLayer = {}
 
 
 
 ---@class FLandscapeLayerBrush
-FLandscapeLayerBrush = {}
+local FLandscapeLayerBrush = {}
 
 
 ---@class FLandscapeLayerComponentData
 ---@field HeightmapData FHeightmapData
 ---@field WeightmapData FWeightmapData
-FLandscapeLayerComponentData = {}
+local FLandscapeLayerComponentData = {}
 
 
 
 ---@class FLandscapeLayerStruct
 ---@field LayerInfoObj ULandscapeLayerInfoObject
-FLandscapeLayerStruct = {}
+local FLandscapeLayerStruct = {}
 
 
 
 ---@class FLandscapeMaterialTextureStreamingInfo
 ---@field TextureName FName
 ---@field TexelFactor float
-FLandscapeMaterialTextureStreamingInfo = {}
+local FLandscapeMaterialTextureStreamingInfo = {}
 
 
 
 ---@class FLandscapePerLODMaterialOverride
 ---@field LODIndex int32
 ---@field Material UMaterialInterface
-FLandscapePerLODMaterialOverride = {}
+local FLandscapePerLODMaterialOverride = {}
 
 
 
 ---@class FLandscapeProxyMaterialOverride
 ---@field LODIndex FPerPlatformInt
 ---@field Material UMaterialInterface
-FLandscapeProxyMaterialOverride = {}
+local FLandscapeProxyMaterialOverride = {}
 
 
 
 ---@class FLandscapeSplineConnection
 ---@field Segment ULandscapeSplineSegment
 ---@field End boolean
-FLandscapeSplineConnection = {}
+local FLandscapeSplineConnection = {}
 
 
 
@@ -325,7 +325,7 @@ FLandscapeSplineConnection = {}
 ---@field LayerFalloffLeft FVector
 ---@field LayerFalloffRight FVector
 ---@field StartEndFalloff float
-FLandscapeSplineInterpPoint = {}
+local FLandscapeSplineInterpPoint = {}
 
 
 
@@ -339,7 +339,7 @@ FLandscapeSplineInterpPoint = {}
 ---@field Orientation LandscapeSplineMeshOrientation
 ---@field ForwardAxis ESplineMeshAxis::Type
 ---@field UpAxis ESplineMeshAxis::Type
-FLandscapeSplineMeshEntry = {}
+local FLandscapeSplineMeshEntry = {}
 
 
 
@@ -347,7 +347,7 @@ FLandscapeSplineMeshEntry = {}
 ---@field ControlPoint ULandscapeSplineControlPoint
 ---@field TangentLen float
 ---@field SocketName FName
-FLandscapeSplineSegmentConnection = {}
+local FLandscapeSplineSegmentConnection = {}
 
 
 
@@ -359,14 +359,14 @@ FLandscapeSplineSegmentConnection = {}
 ---@field PreviewWeight float
 ---@field ConstLayerInput FVector
 ---@field ConstHeightInput float
-FLayerBlendInput = {}
+local FLayerBlendInput = {}
 
 
 
 ---@class FPhysicalMaterialInput
 ---@field PhysicalMaterial UPhysicalMaterial
 ---@field Input FExpressionInput
-FPhysicalMaterialInput = {}
+local FPhysicalMaterialInput = {}
 
 
 
@@ -374,7 +374,7 @@ FPhysicalMaterialInput = {}
 ---@field Textures TArray<UTexture2D>
 ---@field LayerAllocations TArray<FWeightmapLayerAllocationInfo>
 ---@field TextureUsages TArray<ULandscapeWeightmapUsage>
-FWeightmapData = {}
+local FWeightmapData = {}
 
 
 
@@ -382,17 +382,17 @@ FWeightmapData = {}
 ---@field LayerInfo ULandscapeLayerInfoObject
 ---@field WeightmapTextureIndex uint8
 ---@field WeightmapTextureChannel uint8
-FWeightmapLayerAllocationInfo = {}
+local FWeightmapLayerAllocationInfo = {}
 
 
 
 ---@class ILandscapeSplineInterface : IInterface
-ILandscapeSplineInterface = {}
+local ILandscapeSplineInterface = {}
 
 
 ---@class UControlPointMeshComponent : UStaticMeshComponent
 ---@field VirtualTextureMainPassMaxDrawDistance float
-UControlPointMeshComponent = {}
+local UControlPointMeshComponent = {}
 
 
 
@@ -434,7 +434,7 @@ UControlPointMeshComponent = {}
 ---@field MobileMaterialInterface UMaterialInterface
 ---@field MobileMaterialInterfaces TArray<UMaterialInterface>
 ---@field MobileWeightmapTextures TArray<UTexture2D>
-ULandscapeComponent = {}
+local ULandscapeComponent = {}
 
 ---@param InLODBias int32
 function ULandscapeComponent:SetLODBias(InLODBias) end
@@ -454,7 +454,7 @@ function ULandscapeComponent:EditorGetPaintLayerWeightAtLocation(InLocation, Pai
 
 
 ---@class ULandscapeGizmoRenderComponent : UPrimitiveComponent
-ULandscapeGizmoRenderComponent = {}
+local ULandscapeGizmoRenderComponent = {}
 
 
 ---@class ULandscapeGrassType : UObject
@@ -467,12 +467,12 @@ ULandscapeGizmoRenderComponent = {}
 ---@field EndCullDistance int32
 ---@field RandomRotation boolean
 ---@field AlignToSurface boolean
-ULandscapeGrassType = {}
+local ULandscapeGrassType = {}
 
 
 
 ---@class ULandscapeHLODBuilder : UHLODBuilder
-ULandscapeHLODBuilder = {}
+local ULandscapeHLODBuilder = {}
 
 
 ---@class ULandscapeHeightfieldCollisionComponent : UPrimitiveComponent
@@ -487,7 +487,7 @@ ULandscapeHLODBuilder = {}
 ---@field CachedLocalBox FBox
 ---@field RenderComponent TLazyObjectPtr<ULandscapeComponent>
 ---@field CookedPhysicalMaterials TArray<UPhysicalMaterial>
-ULandscapeHeightfieldCollisionComponent = {}
+local ULandscapeHeightfieldCollisionComponent = {}
 
 ---@return ULandscapeComponent
 function ULandscapeHeightfieldCollisionComponent:GetRenderComponent() end
@@ -501,16 +501,16 @@ function ULandscapeHeightfieldCollisionComponent:GetRenderComponent() end
 ---@field ComponentNumSubsections int32
 ---@field DrawScale FVector
 ---@field StreamingProxies TArray<TWeakObjectPtr<ALandscapeStreamingProxy>>
-ULandscapeInfo = {}
+local ULandscapeInfo = {}
 
 
 
 ---@class ULandscapeInfoMap : UObject
-ULandscapeInfoMap = {}
+local ULandscapeInfoMap = {}
 
 
 ---@class ULandscapeLODStreamingProxy_DEPRECATED : UStreamableRenderAsset
-ULandscapeLODStreamingProxy_DEPRECATED = {}
+local ULandscapeLODStreamingProxy_DEPRECATED = {}
 
 
 ---@class ULandscapeLayerInfoObject : UObject
@@ -518,7 +518,7 @@ ULandscapeLODStreamingProxy_DEPRECATED = {}
 ---@field PhysMaterial UPhysicalMaterial
 ---@field Hardness float
 ---@field LayerUsageDebugColor FLinearColor
-ULandscapeLayerInfoObject = {}
+local ULandscapeLayerInfoObject = {}
 
 
 
@@ -528,13 +528,13 @@ ULandscapeLayerInfoObject = {}
 ---@field bDisableTessellation boolean
 ---@field bMobile boolean
 ---@field bEditorToolUsage boolean
-ULandscapeMaterialInstanceConstant = {}
+local ULandscapeMaterialInstanceConstant = {}
 
 
 
 ---@class ULandscapeMeshCollisionComponent : ULandscapeHeightfieldCollisionComponent
 ---@field MeshGuid FGuid
-ULandscapeMeshCollisionComponent = {}
+local ULandscapeMeshCollisionComponent = {}
 
 
 
@@ -542,14 +542,14 @@ ULandscapeMeshCollisionComponent = {}
 ---@field LandscapeGuid FGuid
 ---@field ProxyComponentBases TArray<FIntPoint>
 ---@field ProxyLOD int8
-ULandscapeMeshProxyComponent = {}
+local ULandscapeMeshProxyComponent = {}
 
 
 
 ---@class ULandscapeNaniteComponent : UStaticMeshComponent
 ---@field ProxyContentId FGuid
 ---@field bEnabled boolean
-ULandscapeNaniteComponent = {}
+local ULandscapeNaniteComponent = {}
 
 
 
@@ -559,7 +559,7 @@ ULandscapeNaniteComponent = {}
 ---@field DefaultLandscapeMaterial TSoftObjectPtr<UMaterialInterface>
 ---@field DefaultLayerInfoObject TSoftObjectPtr<ULandscapeLayerInfoObject>
 ---@field bRestrictiveMode boolean
-ULandscapeSettings = {}
+local ULandscapeSettings = {}
 
 
 
@@ -578,7 +578,7 @@ ULandscapeSettings = {}
 ---@field Points TArray<FLandscapeSplineInterpPoint>
 ---@field Bounds FBox
 ---@field LocalMeshComponent UControlPointMeshComponent
-ULandscapeSplineControlPoint = {}
+local ULandscapeSplineControlPoint = {}
 
 
 
@@ -588,7 +588,7 @@ ULandscapeSplineControlPoint = {}
 ---@field Points TArray<FLandscapeSplineInterpPoint>
 ---@field Bounds FBox
 ---@field LocalMeshComponents TArray<USplineMeshComponent>
-ULandscapeSplineSegment = {}
+local ULandscapeSplineSegment = {}
 
 
 
@@ -596,32 +596,32 @@ ULandscapeSplineSegment = {}
 ---@field ControlPoints TArray<ULandscapeSplineControlPoint>
 ---@field Segments TArray<ULandscapeSplineSegment>
 ---@field CookedForeignMeshComponents TArray<UMeshComponent>
-ULandscapeSplinesComponent = {}
+local ULandscapeSplinesComponent = {}
 
 ---@return TArray<USplineMeshComponent>
 function ULandscapeSplinesComponent:GetSplineMeshComponents() end
 
 
 ---@class ULandscapeSubsystem : UTickableWorldSubsystem
-ULandscapeSubsystem = {}
+local ULandscapeSubsystem = {}
 
 
 ---@class ULandscapeWeightmapUsage : UObject
 ---@field ChannelUsage ULandscapeComponent
 ---@field LayerGuid FGuid
-ULandscapeWeightmapUsage = {}
+local ULandscapeWeightmapUsage = {}
 
 
 
 ---@class UMaterialExpressionLandscapeGrassOutput : UMaterialExpressionCustomOutput
 ---@field GrassTypes TArray<FGrassInput>
-UMaterialExpressionLandscapeGrassOutput = {}
+local UMaterialExpressionLandscapeGrassOutput = {}
 
 
 
 ---@class UMaterialExpressionLandscapeLayerBlend : UMaterialExpression
 ---@field LayerS TArray<FLayerBlendInput>
-UMaterialExpressionLandscapeLayerBlend = {}
+local UMaterialExpressionLandscapeLayerBlend = {}
 
 
 
@@ -632,14 +632,14 @@ UMaterialExpressionLandscapeLayerBlend = {}
 ---@field MappingRotation float
 ---@field MappingPanU float
 ---@field MappingPanV float
-UMaterialExpressionLandscapeLayerCoords = {}
+local UMaterialExpressionLandscapeLayerCoords = {}
 
 
 
 ---@class UMaterialExpressionLandscapeLayerSample : UMaterialExpression
 ---@field ParameterName FName
 ---@field PreviewWeight float
-UMaterialExpressionLandscapeLayerSample = {}
+local UMaterialExpressionLandscapeLayerSample = {}
 
 
 
@@ -648,7 +648,7 @@ UMaterialExpressionLandscapeLayerSample = {}
 ---@field LayerNotUsed FExpressionInput
 ---@field ParameterName FName
 ---@field PreviewUsed boolean
-UMaterialExpressionLandscapeLayerSwitch = {}
+local UMaterialExpressionLandscapeLayerSwitch = {}
 
 
 
@@ -658,17 +658,17 @@ UMaterialExpressionLandscapeLayerSwitch = {}
 ---@field ParameterName FName
 ---@field PreviewWeight float
 ---@field ConstBase FVector
-UMaterialExpressionLandscapeLayerWeight = {}
+local UMaterialExpressionLandscapeLayerWeight = {}
 
 
 
 ---@class UMaterialExpressionLandscapePhysicalMaterialOutput : UMaterialExpressionCustomOutput
 ---@field Inputs TArray<FPhysicalMaterialInput>
-UMaterialExpressionLandscapePhysicalMaterialOutput = {}
+local UMaterialExpressionLandscapePhysicalMaterialOutput = {}
 
 
 
 ---@class UMaterialExpressionLandscapeVisibilityMask : UMaterialExpression
-UMaterialExpressionLandscapeVisibilityMask = {}
+local UMaterialExpressionLandscapeVisibilityMask = {}
 
 

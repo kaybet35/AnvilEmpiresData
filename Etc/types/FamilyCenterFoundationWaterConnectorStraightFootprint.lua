@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterFoundationWaterConnectorStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterFoundationWaterConnectorStraightFootprint_C = {}
+local AFamilyCenterFoundationWaterConnectorStraightFootprint_C = {}
 
 
 

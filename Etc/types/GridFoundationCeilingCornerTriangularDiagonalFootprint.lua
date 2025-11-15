@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationCeilingCornerTriangularDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationCeilingCornerTriangularDiagonalFootprint_C = {}
+local AGridFoundationCeilingCornerTriangularDiagonalFootprint_C = {}
 
 
 

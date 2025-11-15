@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWildWheatHusk_C : UEntityTemplate
-UWildWheatHusk_C = {}
+local UWildWheatHusk_C = {}
 
 

@@ -2,7 +2,7 @@
 
 ---@class UBPBasicSS_C : USceneComponent
 ---@field UberGraphFrame FPointerToUberGraphFrame
-UBPBasicSS_C = {}
+local UBPBasicSS_C = {}
 
 function UBPBasicSS_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

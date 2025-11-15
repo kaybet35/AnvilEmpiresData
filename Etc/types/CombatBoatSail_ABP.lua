@@ -23,14 +23,14 @@
 ---@field __StructProperty_92 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -55,7 +55,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field ['Local Relative Angle'] double
 ---@field ['Local Wind Intensity'] double
-UCombatBoatSail_ABP_C = {}
+local UCombatBoatSail_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UCombatBoatSail_ABP_C:AnimGraph(AnimGraph) end

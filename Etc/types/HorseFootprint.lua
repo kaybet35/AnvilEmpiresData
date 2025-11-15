@@ -2,7 +2,7 @@
 
 ---@class AHorseFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AHorseFootprint_C = {}
+local AHorseFootprint_C = {}
 
 
 

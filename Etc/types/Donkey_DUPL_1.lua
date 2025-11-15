@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UDonkey_C : UEntityTemplate
-UDonkey_C = {}
+local UDonkey_C = {}
 
 

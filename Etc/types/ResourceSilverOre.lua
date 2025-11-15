@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceSilverOre_C : UItemTemplate
-UResourceSilverOre_C = {}
+local UResourceSilverOre_C = {}
 
 

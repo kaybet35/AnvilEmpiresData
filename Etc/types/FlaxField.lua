@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFlaxField_C : UEntityTemplate
-UFlaxField_C = {}
+local UFlaxField_C = {}
 
 

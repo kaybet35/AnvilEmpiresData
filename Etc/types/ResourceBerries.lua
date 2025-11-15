@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceBerries_C : UItemTemplate
-UResourceBerries_C = {}
+local UResourceBerries_C = {}
 
 

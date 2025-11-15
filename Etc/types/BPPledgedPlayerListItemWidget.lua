@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPPledgedPlayerListItemWidget_C : UPledgedPlayerListItem
-UBPPledgedPlayerListItemWidget_C = {}
+local UBPPledgedPlayerListItemWidget_C = {}
 
 

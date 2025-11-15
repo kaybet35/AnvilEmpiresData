@@ -6,7 +6,7 @@
 ---@field StartMode EStartMode
 ---@field StartTime float
 ---@field ObservedComponents TArray<FObservedComponent>
-AChaosCacheManager = {}
+local AChaosCacheManager = {}
 
 ---@param InCacheName FName
 function AChaosCacheManager:TriggerComponentByCache(InCacheName) end
@@ -21,7 +21,7 @@ function AChaosCacheManager:ResetAllComponentTransforms() end
 
 
 ---@class AChaosCachePlayer : AChaosCacheManager
-AChaosCachePlayer = {}
+local AChaosCachePlayer = {}
 
 
 ---@class FBreakingEvent : FCacheEventBase
@@ -32,19 +32,19 @@ AChaosCachePlayer = {}
 ---@field Mass float
 ---@field BoundingBoxMin FVector
 ---@field BoundingBoxMax FVector
-FBreakingEvent = {}
+local FBreakingEvent = {}
 
 
 
 ---@class FCacheEventBase
-FCacheEventBase = {}
+local FCacheEventBase = {}
 
 
 ---@class FCacheEventTrack
 ---@field Name FName
 ---@field Struct UScriptStruct
 ---@field TimeStamps TArray<float>
-FCacheEventTrack = {}
+local FCacheEventTrack = {}
 
 
 
@@ -52,7 +52,7 @@ FCacheEventTrack = {}
 ---@field DuplicatedTemplate UObject
 ---@field InitialTransform FTransform
 ---@field ComponentTransform FTransform
-FCacheSpawnableTemplate = {}
+local FCacheSpawnableTemplate = {}
 
 
 
@@ -69,32 +69,32 @@ FCacheSpawnableTemplate = {}
 ---@field Mass1 float
 ---@field Mass2 float
 ---@field PenetrationDepth float
-FCollisionEvent = {}
+local FCollisionEvent = {}
 
 
 
 ---@class FEnableStateEvent : FCacheEventBase
 ---@field Index int32
 ---@field bEnable boolean
-FEnableStateEvent = {}
+local FEnableStateEvent = {}
 
 
 
 ---@class FMovieSceneChaosCacheParams : FMovieSceneBaseCacheParams
 ---@field CacheCollection UChaosCacheCollection
-FMovieSceneChaosCacheParams = {}
+local FMovieSceneChaosCacheParams = {}
 
 
 
 ---@class FMovieSceneChaosCacheSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneChaosCacheSectionTemplateParameters
-FMovieSceneChaosCacheSectionTemplate = {}
+local FMovieSceneChaosCacheSectionTemplate = {}
 
 
 
 ---@class FMovieSceneChaosCacheSectionTemplateParameters : FMovieSceneBaseCacheSectionTemplateParameters
 ---@field ChaosCacheParams FMovieSceneChaosCacheParams
-FMovieSceneChaosCacheSectionTemplateParameters = {}
+local FMovieSceneChaosCacheSectionTemplateParameters = {}
 
 
 
@@ -103,7 +103,7 @@ FMovieSceneChaosCacheSectionTemplateParameters = {}
 ---@field ComponentRef FComponentReference
 ---@field SoftComponentRef FSoftComponentReference
 ---@field bIsSimulating boolean
-FObservedComponent = {}
+local FObservedComponent = {}
 
 
 
@@ -112,20 +112,20 @@ FObservedComponent = {}
 ---@field BeginOffset float
 ---@field bDeactivateOnEnd boolean
 ---@field KeyTimestamps TArray<float>
-FParticleTransformTrack = {}
+local FParticleTransformTrack = {}
 
 
 
 ---@class FPerParticleCacheData
 ---@field TransformData FParticleTransformTrack
 ---@field CurveData TMap<FName, FRichCurve>
-FPerParticleCacheData = {}
+local FPerParticleCacheData = {}
 
 
 
 ---@class FRichCurves
 ---@field RichCurves TArray<FRichCurve>
-FRichCurves = {}
+local FRichCurves = {}
 
 
 
@@ -136,7 +136,7 @@ FRichCurves = {}
 ---@field AngularVelocity FVector
 ---@field BoundingBoxMin FVector
 ---@field BoundingBoxMax FVector
-FTrailingEvent = {}
+local FTrailingEvent = {}
 
 
 
@@ -151,25 +151,25 @@ FTrailingEvent = {}
 ---@field Spawnable FCacheSpawnableTemplate
 ---@field AdapterGuid FGuid
 ---@field Version int32
-UChaosCache = {}
+local UChaosCache = {}
 
 
 
 ---@class UChaosCacheCollection : UObject
 ---@field Caches TArray<UChaosCache>
-UChaosCacheCollection = {}
+local UChaosCacheCollection = {}
 
 
 
 ---@class UMovieSceneChaosCacheSection : UMovieSceneBaseCacheSection
 ---@field Params FMovieSceneChaosCacheParams
-UMovieSceneChaosCacheSection = {}
+local UMovieSceneChaosCacheSection = {}
 
 
 
 ---@class UMovieSceneChaosCacheTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
-UMovieSceneChaosCacheTrack = {}
+local UMovieSceneChaosCacheTrack = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHousePlayerInventoryWidgetBox_C : UHousePlayerInventoryWidgetBox
-UBPHousePlayerInventoryWidgetBox_C = {}
+local UBPHousePlayerInventoryWidgetBox_C = {}
 
 

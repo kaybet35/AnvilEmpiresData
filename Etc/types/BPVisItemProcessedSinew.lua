@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemProcessedSinew_C : UVisItem
-UBPVisItemProcessedSinew_C = {}
+local UBPVisItemProcessedSinew_C = {}
 
 

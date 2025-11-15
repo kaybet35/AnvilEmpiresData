@@ -1,5 +1,5 @@
 ---@enum EFoliageScaling
-EFoliageScaling = {
+local EFoliageScaling = {
     Uniform = 0,
     Free = 1,
     LockXY = 2,
@@ -9,7 +9,7 @@ EFoliageScaling = {
 }
 
 ---@enum ESimulationOverlap
-ESimulationOverlap = {
+local ESimulationOverlap = {
     CollisionOverlap = 0,
     ShadeOverlap = 1,
     None = 2,
@@ -17,7 +17,7 @@ ESimulationOverlap = {
 }
 
 ---@enum ESimulationQuery
-ESimulationQuery = {
+local ESimulationQuery = {
     None = 0,
     CollisionOverlap = 1,
     ShadeOverlap = 2,
@@ -26,7 +26,7 @@ ESimulationQuery = {
 }
 
 ---@enum EVertexColorMaskChannel
-EVertexColorMaskChannel = {
+local EVertexColorMaskChannel = {
     Red = 0,
     Green = 1,
     Blue = 2,
@@ -36,7 +36,7 @@ EVertexColorMaskChannel = {
 }
 
 ---@enum FoliageVertexColorMask
-FoliageVertexColorMask = {
+local FoliageVertexColorMask = {
     FOLIAGEVERTEXCOLORMASK_Disabled = 0,
     FOLIAGEVERTEXCOLORMASK_Red = 1,
     FOLIAGEVERTEXCOLORMASK_Green = 2,

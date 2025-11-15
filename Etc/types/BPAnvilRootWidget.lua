@@ -2,7 +2,7 @@
 
 ---@class UBPAnvilRootWidget_C : UAnvilRootWidget
 ---@field WatermarkBackground UImage
-UBPAnvilRootWidget_C = {}
+local UBPAnvilRootWidget_C = {}
 
 
 

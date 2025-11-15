@@ -2,7 +2,7 @@
 
 ---@class ABPVisItemStash_C : AVisItemStash
 ---@field StorageChestT1 UStaticMeshComponent
-ABPVisItemStash_C = {}
+local ABPVisItemStash_C = {}
 
 
 

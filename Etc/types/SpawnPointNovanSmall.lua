@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnPointNovanSmall_C : UEntityTemplate
-USpawnPointNovanSmall_C = {}
+local USpawnPointNovanSmall_C = {}
 
 

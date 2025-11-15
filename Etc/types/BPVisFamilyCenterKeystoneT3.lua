@@ -13,7 +13,7 @@
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
 ---@field RangeMarkerVisibility boolean
-ABPVisFamilyCenterKeystoneT3_C = {}
+local ABPVisFamilyCenterKeystoneT3_C = {}
 
 function ABPVisFamilyCenterKeystoneT3_C:ReceiveBeginPlay() end
 ---@param DeltaSeconds float

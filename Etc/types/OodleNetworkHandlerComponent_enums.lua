@@ -1,5 +1,5 @@
 ---@enum EOodleNetResult
-EOodleNetResult = {
+local EOodleNetResult = {
     Unknown = 0,
     Success = 1,
     OodleDecodeFailed = 2,
@@ -10,7 +10,7 @@ EOodleNetResult = {
 }
 
 ---@enum EOodleNetworkEnableMode
-EOodleNetworkEnableMode = {
+local EOodleNetworkEnableMode = {
     AlwaysEnabled = 0,
     WhenCompressedPacketReceived = 1,
     EOodleNetworkEnableMode_MAX = 2,

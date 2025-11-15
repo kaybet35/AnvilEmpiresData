@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFoodTroughBuildSite_C : UBPBaseBuildSiteEntity_C
-UFoodTroughBuildSite_C = {}
+local UFoodTroughBuildSite_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPowerRopeEndPieceBuildsite_C : UEntityTemplate
-UPowerRopeEndPieceBuildsite_C = {}
+local UPowerRopeEndPieceBuildsite_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCentralMarketplaceBuildSite_C : UBPBaseBuildSiteEntity_C
-UCentralMarketplaceBuildSite_C = {}
+local UCentralMarketplaceBuildSite_C = {}
 
 

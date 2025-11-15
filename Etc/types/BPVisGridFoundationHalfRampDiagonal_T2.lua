@@ -10,7 +10,7 @@
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationHalfRampDiagonal_T2_C = {}
+local ABPVisGridFoundationHalfRampDiagonal_T2_C = {}
 
 
 

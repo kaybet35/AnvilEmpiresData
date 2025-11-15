@@ -6,12 +6,12 @@
 ---@field Position FVector
 ---@field Rotation FRotator
 ---@field Scale FVector
-FUVMapSettings = {}
+local FUVMapSettings = {}
 
 
 
 ---@class UStaticMeshDescription : UMeshDescriptionBase
-UStaticMeshDescription = {}
+local UStaticMeshDescription = {}
 
 ---@param VertexInstanceID FVertexInstanceID
 ---@param UV FVector2D

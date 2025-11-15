@@ -2,7 +2,7 @@
 
 ---@class AHeatingVatFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AHeatingVatFootprint_C = {}
+local AHeatingVatFootprint_C = {}
 
 
 

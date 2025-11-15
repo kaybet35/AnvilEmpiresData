@@ -2,7 +2,7 @@
 
 ---@class ABPVisResourceSinewPickup_C : AVisPickupItem
 ---@field Mesh1 UStaticMeshComponent
-ABPVisResourceSinewPickup_C = {}
+local ABPVisResourceSinewPickup_C = {}
 
 
 

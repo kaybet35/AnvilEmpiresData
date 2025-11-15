@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFibreHeavyField_C : UEntityTemplate
-UFibreHeavyField_C = {}
+local UFibreHeavyField_C = {}
 
 

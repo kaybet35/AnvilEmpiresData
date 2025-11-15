@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnPointAranic_C : UEntityTemplate
-USpawnPointAranic_C = {}
+local USpawnPointAranic_C = {}
 
 

@@ -4,7 +4,7 @@
 ---@field HealthIcon UImage
 ---@field HungerIcon UImage
 ---@field StaminaIcon UImage
-UBPPlayerVitalityWidget_C = {}
+local UBPPlayerVitalityWidget_C = {}
 
 
 

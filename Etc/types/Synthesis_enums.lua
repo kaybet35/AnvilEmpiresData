@@ -1,5 +1,5 @@
 ---@enum CurveInterpolationType
-CurveInterpolationType = {
+local CurveInterpolationType = {
     AUTOINTERP = 0,
     LINEAR = 1,
     CONSTANT = 2,
@@ -7,7 +7,7 @@ CurveInterpolationType = {
 }
 
 ---@enum EEnvelopeFollowerPeakMode
-EEnvelopeFollowerPeakMode = {
+local EEnvelopeFollowerPeakMode = {
     MeanSquared = 0,
     RootMeanSquared = 1,
     Peak = 2,
@@ -16,7 +16,7 @@ EEnvelopeFollowerPeakMode = {
 }
 
 ---@enum EGranularSynthEnvelopeType
-EGranularSynthEnvelopeType = {
+local EGranularSynthEnvelopeType = {
     Rectangular = 0,
     Triangle = 1,
     DownwardTriangle = 2,
@@ -36,7 +36,7 @@ EGranularSynthEnvelopeType = {
 }
 
 ---@enum EGranularSynthSeekType
-EGranularSynthSeekType = {
+local EGranularSynthSeekType = {
     FromBeginning = 0,
     FromCurrentPosition = 1,
     Count = 2,
@@ -44,7 +44,7 @@ EGranularSynthSeekType = {
 }
 
 ---@enum EPhaserLFOType
-EPhaserLFOType = {
+local EPhaserLFOType = {
     Sine = 0,
     UpSaw = 1,
     DownSaw = 2,
@@ -57,7 +57,7 @@ EPhaserLFOType = {
 }
 
 ---@enum ERingModulatorTypeSourceEffect
-ERingModulatorTypeSourceEffect = {
+local ERingModulatorTypeSourceEffect = {
     Sine = 0,
     Saw = 1,
     Triangle = 2,
@@ -67,7 +67,7 @@ ERingModulatorTypeSourceEffect = {
 }
 
 ---@enum ESamplePlayerSeekType
-ESamplePlayerSeekType = {
+local ESamplePlayerSeekType = {
     FromBeginning = 0,
     FromCurrentPosition = 1,
     FromEnd = 2,
@@ -76,7 +76,7 @@ ESamplePlayerSeekType = {
 }
 
 ---@enum ESourceEffectDynamicsPeakMode
-ESourceEffectDynamicsPeakMode = {
+local ESourceEffectDynamicsPeakMode = {
     MeanSquared = 0,
     RootMeanSquared = 1,
     Peak = 2,
@@ -85,7 +85,7 @@ ESourceEffectDynamicsPeakMode = {
 }
 
 ---@enum ESourceEffectDynamicsProcessorType
-ESourceEffectDynamicsProcessorType = {
+local ESourceEffectDynamicsProcessorType = {
     Compressor = 0,
     Limiter = 1,
     Expander = 2,
@@ -96,7 +96,7 @@ ESourceEffectDynamicsProcessorType = {
 }
 
 ---@enum ESourceEffectFilterCircuit
-ESourceEffectFilterCircuit = {
+local ESourceEffectFilterCircuit = {
     OnePole = 0,
     StateVariable = 1,
     Ladder = 2,
@@ -105,7 +105,7 @@ ESourceEffectFilterCircuit = {
 }
 
 ---@enum ESourceEffectFilterParam
-ESourceEffectFilterParam = {
+local ESourceEffectFilterParam = {
     FilterFrequency = 0,
     FilterResonance = 1,
     Count = 2,
@@ -113,7 +113,7 @@ ESourceEffectFilterParam = {
 }
 
 ---@enum ESourceEffectFilterType
-ESourceEffectFilterType = {
+local ESourceEffectFilterType = {
     LowPass = 0,
     HighPass = 1,
     BandPass = 2,
@@ -123,7 +123,7 @@ ESourceEffectFilterType = {
 }
 
 ---@enum ESourceEffectMotionFilterCircuit
-ESourceEffectMotionFilterCircuit = {
+local ESourceEffectMotionFilterCircuit = {
     OnePole = 0,
     StateVariable = 1,
     Ladder = 2,
@@ -132,7 +132,7 @@ ESourceEffectMotionFilterCircuit = {
 }
 
 ---@enum ESourceEffectMotionFilterModDestination
-ESourceEffectMotionFilterModDestination = {
+local ESourceEffectMotionFilterModDestination = {
     FilterACutoffFrequency = 0,
     FilterAResonance = 1,
     FilterAOutputVolumeDB = 2,
@@ -145,7 +145,7 @@ ESourceEffectMotionFilterModDestination = {
 }
 
 ---@enum ESourceEffectMotionFilterModSource
-ESourceEffectMotionFilterModSource = {
+local ESourceEffectMotionFilterModSource = {
     DistanceFromListener = 0,
     SpeedRelativeToListener = 1,
     SpeedOfSourceEmitter = 2,
@@ -156,7 +156,7 @@ ESourceEffectMotionFilterModSource = {
 }
 
 ---@enum ESourceEffectMotionFilterTopology
-ESourceEffectMotionFilterTopology = {
+local ESourceEffectMotionFilterTopology = {
     SerialMode = 0,
     ParallelMode = 1,
     Count = 2,
@@ -164,7 +164,7 @@ ESourceEffectMotionFilterTopology = {
 }
 
 ---@enum ESourceEffectMotionFilterType
-ESourceEffectMotionFilterType = {
+local ESourceEffectMotionFilterType = {
     LowPass = 0,
     HighPass = 1,
     BandPass = 2,
@@ -174,7 +174,7 @@ ESourceEffectMotionFilterType = {
 }
 
 ---@enum EStereoChannelMode
-EStereoChannelMode = {
+local EStereoChannelMode = {
     MidSide = 0,
     LeftRight = 1,
     count = 2,
@@ -182,7 +182,7 @@ EStereoChannelMode = {
 }
 
 ---@enum EStereoDelayFiltertype
-EStereoDelayFiltertype = {
+local EStereoDelayFiltertype = {
     Lowpass = 0,
     Highpass = 1,
     Bandpass = 2,
@@ -192,7 +192,7 @@ EStereoDelayFiltertype = {
 }
 
 ---@enum EStereoDelaySourceEffect
-EStereoDelaySourceEffect = {
+local EStereoDelaySourceEffect = {
     Normal = 0,
     Cross = 1,
     PingPong = 2,
@@ -201,7 +201,7 @@ EStereoDelaySourceEffect = {
 }
 
 ---@enum ESubmixEffectConvolutionReverbBlockSize
-ESubmixEffectConvolutionReverbBlockSize = {
+local ESubmixEffectConvolutionReverbBlockSize = {
     BlockSize256 = 0,
     BlockSize512 = 1,
     BlockSize1024 = 2,
@@ -209,7 +209,7 @@ ESubmixEffectConvolutionReverbBlockSize = {
 }
 
 ---@enum ESubmixFilterAlgorithm
-ESubmixFilterAlgorithm = {
+local ESubmixFilterAlgorithm = {
     OnePole = 0,
     StateVariable = 1,
     Ladder = 2,
@@ -218,7 +218,7 @@ ESubmixFilterAlgorithm = {
 }
 
 ---@enum ESubmixFilterType
-ESubmixFilterType = {
+local ESubmixFilterType = {
     LowPass = 0,
     HighPass = 1,
     BandPass = 2,
@@ -228,7 +228,7 @@ ESubmixFilterType = {
 }
 
 ---@enum ESynth1OscType
-ESynth1OscType = {
+local ESynth1OscType = {
     Sine = 0,
     Saw = 1,
     Triangle = 2,
@@ -239,7 +239,7 @@ ESynth1OscType = {
 }
 
 ---@enum ESynth1PatchDestination
-ESynth1PatchDestination = {
+local ESynth1PatchDestination = {
     Osc1Gain = 0,
     Osc1Frequency = 1,
     Osc1Pulsewidth = 2,
@@ -259,7 +259,7 @@ ESynth1PatchDestination = {
 }
 
 ---@enum ESynth1PatchSource
-ESynth1PatchSource = {
+local ESynth1PatchSource = {
     LFO1 = 0,
     LFO2 = 1,
     Envelope = 2,
@@ -269,7 +269,7 @@ ESynth1PatchSource = {
 }
 
 ---@enum ESynthFilterAlgorithm
-ESynthFilterAlgorithm = {
+local ESynthFilterAlgorithm = {
     OnePole = 0,
     StateVariable = 1,
     Ladder = 2,
@@ -278,7 +278,7 @@ ESynthFilterAlgorithm = {
 }
 
 ---@enum ESynthFilterType
-ESynthFilterType = {
+local ESynthFilterType = {
     LowPass = 0,
     HighPass = 1,
     BandPass = 2,
@@ -288,7 +288,7 @@ ESynthFilterType = {
 }
 
 ---@enum ESynthKnobSize
-ESynthKnobSize = {
+local ESynthKnobSize = {
     Medium = 0,
     Large = 1,
     Count = 2,
@@ -296,7 +296,7 @@ ESynthKnobSize = {
 }
 
 ---@enum ESynthLFOMode
-ESynthLFOMode = {
+local ESynthLFOMode = {
     Sync = 0,
     OneShot = 1,
     Free = 2,
@@ -305,7 +305,7 @@ ESynthLFOMode = {
 }
 
 ---@enum ESynthLFOPatchType
-ESynthLFOPatchType = {
+local ESynthLFOPatchType = {
     PatchToNone = 0,
     PatchToGain = 1,
     PatchToOscFreq = 2,
@@ -320,7 +320,7 @@ ESynthLFOPatchType = {
 }
 
 ---@enum ESynthLFOType
-ESynthLFOType = {
+local ESynthLFOType = {
     Sine = 0,
     UpSaw = 1,
     DownSaw = 2,
@@ -333,7 +333,7 @@ ESynthLFOType = {
 }
 
 ---@enum ESynthModEnvBiasPatch
-ESynthModEnvBiasPatch = {
+local ESynthModEnvBiasPatch = {
     PatchToNone = 0,
     PatchToOscFreq = 1,
     PatchToFilterFreq = 2,
@@ -347,7 +347,7 @@ ESynthModEnvBiasPatch = {
 }
 
 ---@enum ESynthModEnvPatch
-ESynthModEnvPatch = {
+local ESynthModEnvPatch = {
     PatchToNone = 0,
     PatchToOscFreq = 1,
     PatchToFilterFreq = 2,
@@ -361,7 +361,7 @@ ESynthModEnvPatch = {
 }
 
 ---@enum ESynthSlateColorStyle
-ESynthSlateColorStyle = {
+local ESynthSlateColorStyle = {
     Light = 0,
     Dark = 1,
     Count = 2,
@@ -369,7 +369,7 @@ ESynthSlateColorStyle = {
 }
 
 ---@enum ESynthSlateSizeType
-ESynthSlateSizeType = {
+local ESynthSlateSizeType = {
     Small = 0,
     Medium = 1,
     Large = 2,
@@ -378,7 +378,7 @@ ESynthSlateSizeType = {
 }
 
 ---@enum ESynthStereoDelayMode
-ESynthStereoDelayMode = {
+local ESynthStereoDelayMode = {
     Normal = 0,
     Cross = 1,
     PingPong = 2,
@@ -387,7 +387,7 @@ ESynthStereoDelayMode = {
 }
 
 ---@enum ETapLineMode
-ETapLineMode = {
+local ETapLineMode = {
     SendToChannel = 0,
     Panning = 1,
     Disabled = 2,

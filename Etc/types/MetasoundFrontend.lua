@@ -4,7 +4,7 @@
 ---@field ID FGuid
 ---@field MetaData FMetasoundFrontendClassMetadata
 ---@field Interface FMetasoundFrontendClassInterface
-FMetasoundFrontendClass = {}
+local FMetasoundFrontendClass = {}
 
 
 
@@ -12,13 +12,13 @@ FMetasoundFrontendClass = {}
 ---@field Name FName
 ---@field TypeName FName
 ---@field bIsRequired boolean
-FMetasoundFrontendClassEnvironmentVariable = {}
+local FMetasoundFrontendClassEnvironmentVariable = {}
 
 
 
 ---@class FMetasoundFrontendClassInput : FMetasoundFrontendClassVertex
 ---@field DefaultLiteral FMetasoundFrontendLiteral
-FMetasoundFrontendClassInput = {}
+local FMetasoundFrontendClassInput = {}
 
 
 
@@ -27,7 +27,7 @@ FMetasoundFrontendClassInput = {}
 ---@field Outputs TArray<FMetasoundFrontendClassOutput>
 ---@field Environment TArray<FMetasoundFrontendClassEnvironmentVariable>
 ---@field ChangeID FGuid
-FMetasoundFrontendClassInterface = {}
+local FMetasoundFrontendClassInterface = {}
 
 
 
@@ -38,7 +38,7 @@ FMetasoundFrontendClassInterface = {}
 ---@field bIsDeprecated boolean
 ---@field bAutoUpdateManagesInterface boolean
 ---@field ChangeID FGuid
-FMetasoundFrontendClassMetadata = {}
+local FMetasoundFrontendClassMetadata = {}
 
 
 
@@ -46,32 +46,32 @@ FMetasoundFrontendClassMetadata = {}
 ---@field Namespace FName
 ---@field Name FName
 ---@field Variant FName
-FMetasoundFrontendClassName = {}
+local FMetasoundFrontendClassName = {}
 
 
 
 ---@class FMetasoundFrontendClassOutput : FMetasoundFrontendClassVertex
-FMetasoundFrontendClassOutput = {}
+local FMetasoundFrontendClassOutput = {}
 
 
 ---@class FMetasoundFrontendClassStyle
-FMetasoundFrontendClassStyle = {}
+local FMetasoundFrontendClassStyle = {}
 
 
 ---@class FMetasoundFrontendClassStyleDisplay
-FMetasoundFrontendClassStyleDisplay = {}
+local FMetasoundFrontendClassStyleDisplay = {}
 
 
 ---@class FMetasoundFrontendClassVariable : FMetasoundFrontendClassVertex
 ---@field DefaultLiteral FMetasoundFrontendLiteral
-FMetasoundFrontendClassVariable = {}
+local FMetasoundFrontendClassVariable = {}
 
 
 
 ---@class FMetasoundFrontendClassVertex : FMetasoundFrontendVertex
 ---@field NodeID FGuid
 ---@field AccessType EMetasoundFrontendVertexAccessType
-FMetasoundFrontendClassVertex = {}
+local FMetasoundFrontendClassVertex = {}
 
 
 
@@ -83,13 +83,13 @@ FMetasoundFrontendClassVertex = {}
 ---@field Dependencies TArray<FMetasoundFrontendClass>
 ---@field ArchetypeVersion FMetasoundFrontendVersion
 ---@field InterfaceVersions TArray<FMetasoundFrontendVersion>
-FMetasoundFrontendDocument = {}
+local FMetasoundFrontendDocument = {}
 
 
 
 ---@class FMetasoundFrontendDocumentMetadata
 ---@field Version FMetasoundFrontendVersion
-FMetasoundFrontendDocumentMetadata = {}
+local FMetasoundFrontendDocumentMetadata = {}
 
 
 
@@ -98,7 +98,7 @@ FMetasoundFrontendDocumentMetadata = {}
 ---@field FromVertexID FGuid
 ---@field ToNodeID FGuid
 ---@field ToVertexID FGuid
-FMetasoundFrontendEdge = {}
+local FMetasoundFrontendEdge = {}
 
 
 
@@ -106,14 +106,14 @@ FMetasoundFrontendEdge = {}
 ---@field NodeID FGuid
 ---@field OutputName FName
 ---@field LiteralColorPairs TArray<FMetasoundFrontendEdgeStyleLiteralColorPair>
-FMetasoundFrontendEdgeStyle = {}
+local FMetasoundFrontendEdgeStyle = {}
 
 
 
 ---@class FMetasoundFrontendEdgeStyleLiteralColorPair
 ---@field Value FMetasoundFrontendLiteral
 ---@field Color FLinearColor
-FMetasoundFrontendEdgeStyleLiteralColorPair = {}
+local FMetasoundFrontendEdgeStyleLiteralColorPair = {}
 
 
 
@@ -121,39 +121,39 @@ FMetasoundFrontendEdgeStyleLiteralColorPair = {}
 ---@field Nodes TArray<FMetasoundFrontendNode>
 ---@field Edges TArray<FMetasoundFrontendEdge>
 ---@field Variables TArray<FMetasoundFrontendVariable>
-FMetasoundFrontendGraph = {}
+local FMetasoundFrontendGraph = {}
 
 
 
 ---@class FMetasoundFrontendGraphClass : FMetasoundFrontendClass
 ---@field Graph FMetasoundFrontendGraph
 ---@field PresetOptions FMetasoundFrontendGraphClassPresetOptions
-FMetasoundFrontendGraphClass = {}
+local FMetasoundFrontendGraphClass = {}
 
 
 
 ---@class FMetasoundFrontendGraphClassPresetOptions
 ---@field bIsPreset boolean
 ---@field InputsInheritingDefault TSet<FName>
-FMetasoundFrontendGraphClassPresetOptions = {}
+local FMetasoundFrontendGraphClassPresetOptions = {}
 
 
 
 ---@class FMetasoundFrontendGraphStyle
 ---@field bIsGraphEditable boolean
 ---@field EdgeStyles TArray<FMetasoundFrontendEdgeStyle>
-FMetasoundFrontendGraphStyle = {}
+local FMetasoundFrontendGraphStyle = {}
 
 
 
 ---@class FMetasoundFrontendInterface : FMetasoundFrontendClassInterface
 ---@field Version FMetasoundFrontendVersion
-FMetasoundFrontendInterface = {}
+local FMetasoundFrontendInterface = {}
 
 
 
 ---@class FMetasoundFrontendInterfaceStyle
-FMetasoundFrontendInterfaceStyle = {}
+local FMetasoundFrontendInterfaceStyle = {}
 
 
 ---@class FMetasoundFrontendLiteral
@@ -164,7 +164,7 @@ FMetasoundFrontendInterfaceStyle = {}
 ---@field AsFloat TArray<float>
 ---@field AsString TArray<FString>
 ---@field AsUObject TArray<UObject>
-FMetasoundFrontendLiteral = {}
+local FMetasoundFrontendLiteral = {}
 
 
 
@@ -174,7 +174,7 @@ FMetasoundFrontendLiteral = {}
 ---@field Name FName
 ---@field Interface FMetasoundFrontendNodeInterface
 ---@field InputLiterals TArray<FMetasoundFrontendVertexLiteral>
-FMetasoundFrontendNode = {}
+local FMetasoundFrontendNode = {}
 
 
 
@@ -182,16 +182,16 @@ FMetasoundFrontendNode = {}
 ---@field Inputs TArray<FMetasoundFrontendVertex>
 ---@field Outputs TArray<FMetasoundFrontendVertex>
 ---@field Environment TArray<FMetasoundFrontendVertex>
-FMetasoundFrontendNodeInterface = {}
+local FMetasoundFrontendNodeInterface = {}
 
 
 
 ---@class FMetasoundFrontendNodeStyle
-FMetasoundFrontendNodeStyle = {}
+local FMetasoundFrontendNodeStyle = {}
 
 
 ---@class FMetasoundFrontendNodeStyleDisplay
-FMetasoundFrontendNodeStyleDisplay = {}
+local FMetasoundFrontendNodeStyleDisplay = {}
 
 
 ---@class FMetasoundFrontendVariable
@@ -203,21 +203,21 @@ FMetasoundFrontendNodeStyleDisplay = {}
 ---@field MutatorNodeID FGuid
 ---@field AccessorNodeIDs TArray<FGuid>
 ---@field DeferredAccessorNodeIDs TArray<FGuid>
-FMetasoundFrontendVariable = {}
+local FMetasoundFrontendVariable = {}
 
 
 
 ---@class FMetasoundFrontendVersion
 ---@field Name FName
 ---@field Number FMetasoundFrontendVersionNumber
-FMetasoundFrontendVersion = {}
+local FMetasoundFrontendVersion = {}
 
 
 
 ---@class FMetasoundFrontendVersionNumber
 ---@field Major int32
 ---@field Minor int32
-FMetasoundFrontendVersionNumber = {}
+local FMetasoundFrontendVersionNumber = {}
 
 
 
@@ -225,18 +225,18 @@ FMetasoundFrontendVersionNumber = {}
 ---@field Name FName
 ---@field TypeName FName
 ---@field VertexID FGuid
-FMetasoundFrontendVertex = {}
+local FMetasoundFrontendVertex = {}
 
 
 
 ---@class FMetasoundFrontendVertexLiteral
 ---@field VertexID FGuid
 ---@field Value FMetasoundFrontendLiteral
-FMetasoundFrontendVertexLiteral = {}
+local FMetasoundFrontendVertexLiteral = {}
 
 
 
 ---@class FMetasoundFrontendVertexMetadata
-FMetasoundFrontendVertexMetadata = {}
+local FMetasoundFrontendVertexMetadata = {}
 
 

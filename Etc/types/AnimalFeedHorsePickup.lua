@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAnimalFeedHorsePickup_C : UEntityTemplate
-UAnimalFeedHorsePickup_C = {}
+local UAnimalFeedHorsePickup_C = {}
 
 

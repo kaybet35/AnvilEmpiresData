@@ -2,7 +2,7 @@
 
 ---@class ACentralMarketplaceFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ACentralMarketplaceFootprint_C = {}
+local ACentralMarketplaceFootprint_C = {}
 
 
 

@@ -14,7 +14,7 @@
 ---@field Populate UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisTempleT3_C = {}
+local ABPVisTempleT3_C = {}
 
 function ABPVisTempleT3_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

@@ -6,7 +6,7 @@
 ---@field SkeletalMesh2 USkeletalMeshComponent
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisSiegeTowerBuildSite_C = {}
+local ABPVisSiegeTowerBuildSite_C = {}
 
 
 

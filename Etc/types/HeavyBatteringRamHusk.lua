@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHeavyBatteringRamHusk_C : UEntityTemplate
-UHeavyBatteringRamHusk_C = {}
+local UHeavyBatteringRamHusk_C = {}
 
 

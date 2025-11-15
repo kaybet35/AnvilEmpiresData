@@ -9,7 +9,7 @@
 ---@field VisStaticMesh3 UVisStaticMeshComponent
 ---@field MainStructureCollapsedMesh UVisStaticMeshComponent
 ---@field MainStructureMesh UVisStaticMeshComponent
-ABPVisTownCraftingFood_C = {}
+local ABPVisTownCraftingFood_C = {}
 
 
 

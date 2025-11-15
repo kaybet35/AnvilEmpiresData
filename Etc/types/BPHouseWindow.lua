@@ -8,7 +8,7 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field StructurePanel UBPAnvilPanel_C
-UBPHouseWindow_C = {}
+local UBPHouseWindow_C = {}
 
 ---@param EntryPoint int32
 function UBPHouseWindow_C:ExecuteUbergraph_BPHouseWindow(EntryPoint) end

@@ -16,7 +16,7 @@
 ---@field BalljointTrimStart UStaticMeshComponent
 ---@field BalljointBaseStart UStaticMeshComponent
 ---@field BalljointStart USceneComponent
-ABPVisCanalBuildSite_C = {}
+local ABPVisCanalBuildSite_C = {}
 
 
 

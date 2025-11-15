@@ -2,7 +2,7 @@
 
 ---@class ABPVisSpearRelicPickup_C : AVisPickupItem
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisSpearRelicPickup_C = {}
+local ABPVisSpearRelicPickup_C = {}
 
 
 

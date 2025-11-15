@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPrefabExample_C : UEntityTemplate
-UPrefabExample_C = {}
+local UPrefabExample_C = {}
 
 

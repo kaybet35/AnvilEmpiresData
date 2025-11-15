@@ -1,5 +1,5 @@
 ---@enum EConstantQFFTSizeEnum
-EConstantQFFTSizeEnum = {
+local EConstantQFFTSizeEnum = {
     Min = 0,
     XXSmall = 1,
     XSmall = 2,
@@ -12,7 +12,7 @@ EConstantQFFTSizeEnum = {
 }
 
 ---@enum EConstantQNormalizationEnum
-EConstantQNormalizationEnum = {
+local EConstantQNormalizationEnum = {
     EqualEuclideanNorm = 0,
     EqualEnergy = 1,
     EqualAmplitude = 2,
@@ -20,7 +20,7 @@ EConstantQNormalizationEnum = {
 }
 
 ---@enum ELoudnessCurveTypeEnum
-ELoudnessCurveTypeEnum = {
+local ELoudnessCurveTypeEnum = {
     A = 0,
     B = 1,
     C = 2,
@@ -30,7 +30,7 @@ ELoudnessCurveTypeEnum = {
 }
 
 ---@enum ELoudnessNRTCurveTypeEnum
-ELoudnessNRTCurveTypeEnum = {
+local ELoudnessNRTCurveTypeEnum = {
     A = 0,
     B = 1,
     C = 2,
@@ -40,7 +40,7 @@ ELoudnessNRTCurveTypeEnum = {
 }
 
 ---@enum EMeterPeakType
-EMeterPeakType = {
+local EMeterPeakType = {
     MeanSquared = 0,
     RootMeanSquared = 1,
     Peak = 2,

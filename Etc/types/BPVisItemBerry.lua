@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemBerry_C : UVisItem
-UBPVisItemBerry_C = {}
+local UBPVisItemBerry_C = {}
 
 

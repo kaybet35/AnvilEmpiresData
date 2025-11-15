@@ -7,7 +7,7 @@
 ---@field EdgeDown UStaticMeshComponent
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisUnderworldModuleDynamicCrossPlaceholder_C = {}
+local ABPVisUnderworldModuleDynamicCrossPlaceholder_C = {}
 
 
 

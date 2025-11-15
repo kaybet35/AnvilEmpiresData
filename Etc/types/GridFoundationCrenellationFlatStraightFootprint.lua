@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationCrenellationFlatStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationCrenellationFlatStraightFootprint_C = {}
+local AGridFoundationCrenellationFlatStraightFootprint_C = {}
 
 
 

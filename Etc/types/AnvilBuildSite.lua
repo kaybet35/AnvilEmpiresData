@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAnvilBuildSite_C : UBPBaseBuildSiteEntity_C
-UAnvilBuildSite_C = {}
+local UAnvilBuildSite_C = {}
 
 

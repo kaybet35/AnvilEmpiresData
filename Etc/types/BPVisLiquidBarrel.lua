@@ -5,7 +5,7 @@
 ---@field VisInstancedStockpileWater UVisInstancedStockpileComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisLiquidBarrel_C = {}
+local ABPVisLiquidBarrel_C = {}
 
 
 

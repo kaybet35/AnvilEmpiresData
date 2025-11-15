@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGroupHouseT1_C : UBPBaseStructureEntity_C
-UGroupHouseT1_C = {}
+local UGroupHouseT1_C = {}
 
 

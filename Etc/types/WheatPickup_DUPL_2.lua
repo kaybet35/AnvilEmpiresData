@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWheatPickup_C : UEntityTemplate
-UWheatPickup_C = {}
+local UWheatPickup_C = {}
 
 

@@ -5,32 +5,32 @@
 ---@field StartFrameOffset FFrameNumber
 ---@field EndFrameOffset FFrameNumber
 ---@field PlayRate float
-FMovieSceneGeometryCollectionParams = {}
+local FMovieSceneGeometryCollectionParams = {}
 
 
 
 ---@class FMovieSceneGeometryCollectionSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneGeometryCollectionSectionTemplateParameters
-FMovieSceneGeometryCollectionSectionTemplate = {}
+local FMovieSceneGeometryCollectionSectionTemplate = {}
 
 
 
 ---@class FMovieSceneGeometryCollectionSectionTemplateParameters : FMovieSceneGeometryCollectionParams
 ---@field SectionStartTime FFrameNumber
 ---@field SectionEndTime FFrameNumber
-FMovieSceneGeometryCollectionSectionTemplateParameters = {}
+local FMovieSceneGeometryCollectionSectionTemplateParameters = {}
 
 
 
 ---@class UMovieSceneGeometryCollectionSection : UMovieSceneSection
 ---@field Params FMovieSceneGeometryCollectionParams
-UMovieSceneGeometryCollectionSection = {}
+local UMovieSceneGeometryCollectionSection = {}
 
 
 
 ---@class UMovieSceneGeometryCollectionTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
-UMovieSceneGeometryCollectionTrack = {}
+local UMovieSceneGeometryCollectionTrack = {}
 
 
 

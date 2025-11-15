@@ -12,13 +12,13 @@
 ---@field __NameProperty_15 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __FloatProperty float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -30,7 +30,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_Root FAnimNode_Root
 ---@field ['Anim Slow Amount'] double
-UIndustryHandCrank_ABP_C = {}
+local UIndustryHandCrank_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UIndustryHandCrank_ABP_C:AnimGraph(AnimGraph) end

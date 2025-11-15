@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTownCraftingStoneBuildSite_C : UBPBaseBuildSiteEntity_C
-UTownCraftingStoneBuildSite_C = {}
+local UTownCraftingStoneBuildSite_C = {}
 
 

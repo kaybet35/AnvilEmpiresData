@@ -1,5 +1,5 @@
 ---@enum ESoundwaveSampleRateSettings
-ESoundwaveSampleRateSettings = {
+local ESoundwaveSampleRateSettings = {
     Max = 0,
     High = 1,
     Medium = 2,

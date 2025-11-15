@@ -2,7 +2,7 @@
 
 ---@class AFarmGate_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFarmGate_C = {}
+local AFarmGate_C = {}
 
 
 

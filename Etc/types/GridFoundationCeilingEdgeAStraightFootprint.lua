@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationCeilingEdgeAStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationCeilingEdgeAStraightFootprint_C = {}
+local AGridFoundationCeilingEdgeAStraightFootprint_C = {}
 
 
 

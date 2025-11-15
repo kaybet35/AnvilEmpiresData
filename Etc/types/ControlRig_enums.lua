@@ -1,26 +1,26 @@
 ---@enum EAimMode
-EAimMode = {
+local EAimMode = {
     AimAtTarget = 0,
     OrientToTarget = 1,
     MAX = 2,
 }
 
 ---@enum EApplyTransformMode
-EApplyTransformMode = {
+local EApplyTransformMode = {
     Override = 0,
     Additive = 1,
     Max = 2,
 }
 
 ---@enum EBoneGetterSetterMode
-EBoneGetterSetterMode = {
+local EBoneGetterSetterMode = {
     LocalSpace = 0,
     GlobalSpace = 1,
     Max = 2,
 }
 
 ---@enum ECRSimConstraintType
-ECRSimConstraintType = {
+local ECRSimConstraintType = {
     Distance = 0,
     DistanceFromA = 1,
     DistanceFromB = 2,
@@ -29,20 +29,20 @@ ECRSimConstraintType = {
 }
 
 ---@enum ECRSimPointForceType
-ECRSimPointForceType = {
+local ECRSimPointForceType = {
     Direction = 0,
     ECRSimPointForceType_MAX = 1,
 }
 
 ---@enum ECRSimPointIntegrateType
-ECRSimPointIntegrateType = {
+local ECRSimPointIntegrateType = {
     Verlet = 0,
     SemiExplicitEuler = 1,
     ECRSimPointIntegrateType_MAX = 2,
 }
 
 ---@enum ECRSimSoftCollisionType
-ECRSimSoftCollisionType = {
+local ECRSimSoftCollisionType = {
     Plane = 0,
     Sphere = 1,
     Cone = 2,
@@ -50,14 +50,14 @@ ECRSimSoftCollisionType = {
 }
 
 ---@enum EConstraintInterpType
-EConstraintInterpType = {
+local EConstraintInterpType = {
     Average = 0,
     Shortest = 1,
     Max = 2,
 }
 
 ---@enum EControlRigAnimEasingType
-EControlRigAnimEasingType = {
+local EControlRigAnimEasingType = {
     Linear = 0,
     QuadraticEaseIn = 1,
     QuadraticEaseOut = 2,
@@ -93,7 +93,7 @@ EControlRigAnimEasingType = {
 }
 
 ---@enum EControlRigClampSpatialMode
-EControlRigClampSpatialMode = {
+local EControlRigClampSpatialMode = {
     Plane = 0,
     Cylinder = 1,
     Sphere = 2,
@@ -101,14 +101,14 @@ EControlRigClampSpatialMode = {
 }
 
 ---@enum EControlRigComponentMapDirection
-EControlRigComponentMapDirection = {
+local EControlRigComponentMapDirection = {
     Input = 0,
     Output = 1,
     EControlRigComponentMapDirection_MAX = 2,
 }
 
 ---@enum EControlRigComponentSpace
-EControlRigComponentSpace = {
+local EControlRigComponentSpace = {
     WorldSpace = 0,
     ActorSpace = 1,
     ComponentSpace = 2,
@@ -118,20 +118,20 @@ EControlRigComponentSpace = {
 }
 
 ---@enum EControlRigCurveAlignment
-EControlRigCurveAlignment = {
+local EControlRigCurveAlignment = {
     Front = 0,
     Stretched = 1,
     EControlRigCurveAlignment_MAX = 2,
 }
 
 ---@enum EControlRigDrawHierarchyMode
-EControlRigDrawHierarchyMode = {
+local EControlRigDrawHierarchyMode = {
     Axes = 0,
     Max = 1,
 }
 
 ---@enum EControlRigDrawSettings
-EControlRigDrawSettings = {
+local EControlRigDrawSettings = {
     Points = 0,
     Lines = 1,
     LineStrip = 2,
@@ -140,7 +140,7 @@ EControlRigDrawSettings = {
 }
 
 ---@enum EControlRigFKRigExecuteMode
-EControlRigFKRigExecuteMode = {
+local EControlRigFKRigExecuteMode = {
     Replace = 0,
     Additive = 1,
     Direct = 2,
@@ -148,7 +148,7 @@ EControlRigFKRigExecuteMode = {
 }
 
 ---@enum EControlRigInteractionType
-EControlRigInteractionType = {
+local EControlRigInteractionType = {
     None = 0,
     Translate = 1,
     Rotate = 2,
@@ -158,7 +158,7 @@ EControlRigInteractionType = {
 }
 
 ---@enum EControlRigModifyBoneMode
-EControlRigModifyBoneMode = {
+local EControlRigModifyBoneMode = {
     OverrideLocal = 0,
     OverrideGlobal = 1,
     AdditiveLocal = 2,
@@ -167,7 +167,7 @@ EControlRigModifyBoneMode = {
 }
 
 ---@enum EControlRigSetKey
-EControlRigSetKey = {
+local EControlRigSetKey = {
     DoNotCare = 0,
     Always = 1,
     Never = 2,
@@ -175,7 +175,7 @@ EControlRigSetKey = {
 }
 
 ---@enum EControlRigState
-EControlRigState = {
+local EControlRigState = {
     Init = 0,
     Update = 1,
     Invalid = 2,
@@ -183,14 +183,14 @@ EControlRigState = {
 }
 
 ---@enum EControlRigVectorKind
-EControlRigVectorKind = {
+local EControlRigVectorKind = {
     Direction = 0,
     Location = 1,
     EControlRigVectorKind_MAX = 2,
 }
 
 ---@enum EMovieSceneControlRigSpaceType
-EMovieSceneControlRigSpaceType = {
+local EMovieSceneControlRigSpaceType = {
     Parent = 0,
     World = 1,
     ControlRig = 2,
@@ -198,7 +198,7 @@ EMovieSceneControlRigSpaceType = {
 }
 
 ---@enum ERBFKernelType
-ERBFKernelType = {
+local ERBFKernelType = {
     Gaussian = 0,
     Exponential = 1,
     Linear = 2,
@@ -208,7 +208,7 @@ ERBFKernelType = {
 }
 
 ---@enum ERBFQuatDistanceType
-ERBFQuatDistanceType = {
+local ERBFQuatDistanceType = {
     Euclidean = 0,
     ArcLength = 1,
     SwingAngle = 2,
@@ -217,7 +217,7 @@ ERBFQuatDistanceType = {
 }
 
 ---@enum ERBFVectorDistanceType
-ERBFVectorDistanceType = {
+local ERBFVectorDistanceType = {
     Euclidean = 0,
     Manhattan = 1,
     ArcLength = 2,
@@ -225,14 +225,14 @@ ERBFVectorDistanceType = {
 }
 
 ---@enum ERigBoneType
-ERigBoneType = {
+local ERigBoneType = {
     Imported = 0,
     User = 1,
     ERigBoneType_MAX = 2,
 }
 
 ---@enum ERigControlAnimationType
-ERigControlAnimationType = {
+local ERigControlAnimationType = {
     AnimationControl = 0,
     AnimationChannel = 1,
     ProxyControl = 2,
@@ -241,7 +241,7 @@ ERigControlAnimationType = {
 }
 
 ---@enum ERigControlAxis
-ERigControlAxis = {
+local ERigControlAxis = {
     X = 0,
     Y = 1,
     Z = 2,
@@ -249,7 +249,7 @@ ERigControlAxis = {
 }
 
 ---@enum ERigControlType
-ERigControlType = {
+local ERigControlType = {
     Bool = 0,
     Float = 1,
     Integer = 2,
@@ -264,7 +264,7 @@ ERigControlType = {
 }
 
 ---@enum ERigControlValueType
-ERigControlValueType = {
+local ERigControlValueType = {
     Initial = 0,
     Current = 1,
     Minimum = 2,
@@ -273,14 +273,14 @@ ERigControlValueType = {
 }
 
 ---@enum ERigControlVisibility
-ERigControlVisibility = {
+local ERigControlVisibility = {
     UserDefined = 0,
     BasedOnSelection = 1,
     ERigControlVisibility_MAX = 2,
 }
 
 ---@enum ERigElementType
-ERigElementType = {
+local ERigElementType = {
     None = 0,
     Bone = 1,
     Null = 2,
@@ -296,7 +296,7 @@ ERigElementType = {
 }
 
 ---@enum ERigEvent
-ERigEvent = {
+local ERigEvent = {
     None = 0,
     RequestAutoKey = 1,
     OpenUndoBracket = 2,
@@ -305,14 +305,14 @@ ERigEvent = {
 }
 
 ---@enum ERigExecutionType
-ERigExecutionType = {
+local ERigExecutionType = {
     Runtime = 0,
     Editing = 1,
     Max = 2,
 }
 
 ---@enum ERigHierarchyNotification
-ERigHierarchyNotification = {
+local ERigHierarchyNotification = {
     ElementAdded = 0,
     ElementRemoved = 1,
     ElementRenamed = 2,
@@ -331,7 +331,7 @@ ERigHierarchyNotification = {
 }
 
 ---@enum ERigMetadataType
-ERigMetadataType = {
+local ERigMetadataType = {
     Bool = 0,
     BoolArray = 1,
     Float = 2,
@@ -357,7 +357,7 @@ ERigMetadataType = {
 }
 
 ---@enum ERigSpaceType
-ERigSpaceType = {
+local ERigSpaceType = {
     Global = 0,
     Bone = 1,
     Control = 2,
@@ -366,7 +366,7 @@ ERigSpaceType = {
 }
 
 ---@enum ERigSwitchParentMode
-ERigSwitchParentMode = {
+local ERigSwitchParentMode = {
     World = 0,
     DefaultParent = 1,
     ParentItem = 2,
@@ -374,7 +374,7 @@ ERigSwitchParentMode = {
 }
 
 ---@enum ERigTransformStackEntryType
-ERigTransformStackEntryType = {
+local ERigTransformStackEntryType = {
     TransformPose = 0,
     ControlOffset = 1,
     ControlShape = 2,
@@ -383,7 +383,7 @@ ERigTransformStackEntryType = {
 }
 
 ---@enum ERigTransformType
-ERigTransformType = {
+local ERigTransformType = {
     InitialLocal = 0,
     CurrentLocal = 1,
     InitialGlobal = 2,
@@ -393,14 +393,14 @@ ERigTransformType = {
 }
 
 ---@enum ERigUnitDebugPointMode
-ERigUnitDebugPointMode = {
+local ERigUnitDebugPointMode = {
     Point = 0,
     Vector = 1,
     Max = 2,
 }
 
 ---@enum ERigUnitDebugTransformMode
-ERigUnitDebugTransformMode = {
+local ERigUnitDebugTransformMode = {
     Point = 0,
     Axes = 1,
     Box = 2,
@@ -408,21 +408,21 @@ ERigUnitDebugTransformMode = {
 }
 
 ---@enum ERigUnitVisualDebugPointMode
-ERigUnitVisualDebugPointMode = {
+local ERigUnitVisualDebugPointMode = {
     Point = 0,
     Vector = 1,
     Max = 2,
 }
 
 ---@enum ETransformGetterType
-ETransformGetterType = {
+local ETransformGetterType = {
     Initial = 0,
     Current = 1,
     Max = 2,
 }
 
 ---@enum ETransformSpaceMode
-ETransformSpaceMode = {
+local ETransformSpaceMode = {
     LocalSpace = 0,
     GlobalSpace = 1,
     BaseSpace = 2,

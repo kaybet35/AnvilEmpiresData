@@ -7,7 +7,7 @@
 ---@field EdgeUp UStaticMeshComponent
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisUnderworldModuleDynamicBranchPlaceholder_C = {}
+local ABPVisUnderworldModuleDynamicBranchPlaceholder_C = {}
 
 
 

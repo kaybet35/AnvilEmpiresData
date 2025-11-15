@@ -10,7 +10,7 @@
 ---@field VisRandomMeshDecor22 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor23 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationQuarterWallInclineDiagonal_C = {}
+local ABPVisGridFoundationQuarterWallInclineDiagonal_C = {}
 
 
 

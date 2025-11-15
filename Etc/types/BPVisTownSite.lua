@@ -8,7 +8,7 @@
 ---@field VisStaticMesh_floor UVisStaticMeshComponent
 ---@field Billboard UBillboardComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisTownSite_C = {}
+local ABPVisTownSite_C = {}
 
 
 

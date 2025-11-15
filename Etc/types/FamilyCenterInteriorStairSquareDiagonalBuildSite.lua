@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterInteriorStairSquareDiagonalBuildSite_C : UBPBaseModularBuildSiteEntity_C
-UFamilyCenterInteriorStairSquareDiagonalBuildSite_C = {}
+local UFamilyCenterInteriorStairSquareDiagonalBuildSite_C = {}
 
 

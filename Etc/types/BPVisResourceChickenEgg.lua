@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisResourceChickenEgg_C : AVisPickupItem
-ABPVisResourceChickenEgg_C = {}
+local ABPVisResourceChickenEgg_C = {}
 
 

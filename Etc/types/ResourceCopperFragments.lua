@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceCopperFragments_C : UItemTemplate
-UResourceCopperFragments_C = {}
+local UResourceCopperFragments_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URavenDen_C : UEntityTemplate
-URavenDen_C = {}
+local URavenDen_C = {}
 
 

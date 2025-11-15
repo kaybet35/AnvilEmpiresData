@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnerWildCabbage_C : UEntityTemplate
-USpawnerWildCabbage_C = {}
+local USpawnerWildCabbage_C = {}
 
 

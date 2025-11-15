@@ -10,32 +10,32 @@
 ---@field StartOffset float
 ---@field EndOffset float
 ---@field GeometryCache FSoftObjectPath
-FMovieSceneGeometryCacheParams = {}
+local FMovieSceneGeometryCacheParams = {}
 
 
 
 ---@class FMovieSceneGeometryCacheSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneGeometryCacheSectionTemplateParameters
-FMovieSceneGeometryCacheSectionTemplate = {}
+local FMovieSceneGeometryCacheSectionTemplate = {}
 
 
 
 ---@class FMovieSceneGeometryCacheSectionTemplateParameters : FMovieSceneGeometryCacheParams
 ---@field SectionStartTime FFrameNumber
 ---@field SectionEndTime FFrameNumber
-FMovieSceneGeometryCacheSectionTemplateParameters = {}
+local FMovieSceneGeometryCacheSectionTemplateParameters = {}
 
 
 
 ---@class UMovieSceneGeometryCacheSection : UMovieSceneSection
 ---@field Params FMovieSceneGeometryCacheParams
-UMovieSceneGeometryCacheSection = {}
+local UMovieSceneGeometryCacheSection = {}
 
 
 
 ---@class UMovieSceneGeometryCacheTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
-UMovieSceneGeometryCacheTrack = {}
+local UMovieSceneGeometryCacheTrack = {}
 
 
 

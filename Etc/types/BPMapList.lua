@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPMapList_C : AMapList
-ABPMapList_C = {}
+local ABPMapList_C = {}
 
 

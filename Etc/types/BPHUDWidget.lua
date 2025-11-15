@@ -10,7 +10,7 @@
 ---@field GuardThresholdIndicator UImage
 ---@field Image UImage
 ---@field PreAlphaBadge UImage
-UBPHUDWidget_C = {}
+local UBPHUDWidget_C = {}
 
 function UBPHUDWidget_C:PlayBlackoutAnimation() end
 ---@param EntryPoint int32

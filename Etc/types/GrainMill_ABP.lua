@@ -14,14 +14,14 @@
 ---@field __NameProperty_30 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -34,7 +34,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
-UGrainMill_ABP_C = {}
+local UGrainMill_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UGrainMill_ABP_C:AnimGraph(AnimGraph) end

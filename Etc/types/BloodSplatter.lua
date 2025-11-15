@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBloodSplatter_C : UEntityTemplate
-UBloodSplatter_C = {}
+local UBloodSplatter_C = {}
 
 

@@ -5,7 +5,7 @@
 ---@field BPAnvilPanelHouse UBPAnvilPanel_C
 ---@field BPFooterContainer UBPFooterContainer_C
 ---@field BPHeaderContainer_168 UBPHeaderContainer_C
-UBPSignPostWindow_C = {}
+local UBPSignPostWindow_C = {}
 
 
 

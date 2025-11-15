@@ -7,7 +7,7 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisAdvancedCraftingTable_C = {}
+local ABPVisAdvancedCraftingTable_C = {}
 
 
 

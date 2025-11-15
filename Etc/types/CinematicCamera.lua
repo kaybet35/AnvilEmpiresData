@@ -10,7 +10,7 @@
 ---@field CraneYawControl USceneComponent
 ---@field CranePitchControl USceneComponent
 ---@field CraneCameraMount USceneComponent
-ACameraRig_Crane = {}
+local ACameraRig_Crane = {}
 
 
 
@@ -20,7 +20,7 @@ ACameraRig_Crane = {}
 ---@field TransformComponent USceneComponent
 ---@field RailSplineComponent USplineComponent
 ---@field RailCameraMount USceneComponent
-ACameraRig_Rail = {}
+local ACameraRig_Rail = {}
 
 ---@return USplineComponent
 function ACameraRig_Rail:GetRailSplineComponent() end
@@ -28,7 +28,7 @@ function ACameraRig_Rail:GetRailSplineComponent() end
 
 ---@class ACineCameraActor : ACameraActor
 ---@field LookatTrackingSettings FCameraLookatTrackingSettings
-ACineCameraActor = {}
+local ACineCameraActor = {}
 
 ---@return UCineCameraComponent
 function ACineCameraActor:GetCineCameraComponent() end
@@ -38,7 +38,7 @@ function ACineCameraActor:GetCineCameraComponent() end
 ---@field SensorWidth float
 ---@field SensorHeight float
 ---@field SensorAspectRatio float
-FCameraFilmbackSettings = {}
+local FCameraFilmbackSettings = {}
 
 
 
@@ -49,7 +49,7 @@ FCameraFilmbackSettings = {}
 ---@field bSmoothFocusChanges boolean
 ---@field FocusSmoothingInterpSpeed float
 ---@field FocusOffset float
-FCameraFocusSettings = {}
+local FCameraFocusSettings = {}
 
 
 
@@ -61,7 +61,7 @@ FCameraFocusSettings = {}
 ---@field MinimumFocusDistance float
 ---@field SqueezeFactor float
 ---@field DiaphragmBladeCount int32
-FCameraLensSettings = {}
+local FCameraLensSettings = {}
 
 
 
@@ -72,7 +72,7 @@ FCameraLensSettings = {}
 ---@field ActorToTrack TSoftObjectPtr<AActor>
 ---@field RelativeOffset FVector
 ---@field bAllowRoll boolean
-FCameraLookatTrackingSettings = {}
+local FCameraLookatTrackingSettings = {}
 
 
 
@@ -80,34 +80,34 @@ FCameraLookatTrackingSettings = {}
 ---@field ActorToTrack TSoftObjectPtr<AActor>
 ---@field RelativeOffset FVector
 ---@field bDrawDebugTrackingFocusPoint boolean
-FCameraTrackingFocusSettings = {}
+local FCameraTrackingFocusSettings = {}
 
 
 
 ---@class FNamedFilmbackPreset
 ---@field Name FString
 ---@field FilmbackSettings FCameraFilmbackSettings
-FNamedFilmbackPreset = {}
+local FNamedFilmbackPreset = {}
 
 
 
 ---@class FNamedLensPreset
 ---@field Name FString
 ---@field LensSettings FCameraLensSettings
-FNamedLensPreset = {}
+local FNamedLensPreset = {}
 
 
 
 ---@class FNamedPlateCropPreset
 ---@field Name FString
 ---@field CropSettings FPlateCropSettings
-FNamedPlateCropPreset = {}
+local FNamedPlateCropPreset = {}
 
 
 
 ---@class FPlateCropSettings
 ---@field AspectRatio float
-FPlateCropSettings = {}
+local FPlateCropSettings = {}
 
 
 
@@ -129,7 +129,7 @@ FPlateCropSettings = {}
 ---@field DefaultLensPresetName FString
 ---@field DefaultLensFocalLength float
 ---@field DefaultLensFStop float
-UCineCameraComponent = {}
+local UCineCameraComponent = {}
 
 ---@param NewLensSettings FCameraLensSettings
 function UCineCameraComponent:SetLensSettings(NewLensSettings) end
@@ -176,7 +176,7 @@ function UCineCameraComponent:GetCropPresetName() end
 ---@field FilmbackPresets TArray<FNamedFilmbackPreset>
 ---@field DefaultCropPresetName FString
 ---@field CropPresets TArray<FNamedPlateCropPreset>
-UCineCameraSettings = {}
+local UCineCameraSettings = {}
 
 ---@param InLensPresets TArray<FNamedLensPreset>
 function UCineCameraSettings:SetLensPresets(InLensPresets) end

@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterCeilingInteriorTriangularEnd_LowLowLow_StraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterCeilingInteriorTriangularEnd_LowLowLow_StraightFootprint_C = {}
+local AFamilyCenterCeilingInteriorTriangularEnd_LowLowLow_StraightFootprint_C = {}
 
 
 

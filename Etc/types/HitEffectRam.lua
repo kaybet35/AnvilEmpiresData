@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHitEffectRam_C : UEntityTemplate
-UHitEffectRam_C = {}
+local UHitEffectRam_C = {}
 
 

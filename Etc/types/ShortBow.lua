@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UShortBow_C : UItemTemplate
-UShortBow_C = {}
+local UShortBow_C = {}
 
 

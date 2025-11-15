@@ -8,7 +8,7 @@
 ---@field ExtentX float
 ---@field ExtentY float
 ---@field ExtentZ float
-FOrientedBoxFloat = {}
+local FOrientedBoxFloat = {}
 
 
 
@@ -20,7 +20,7 @@ FOrientedBoxFloat = {}
 ---@field StaticFloatArray float
 ---@field VectorArray TArray<FVector>
 ---@field StructArray TArray<FStructSerializerBuiltinTestStruct>
-FStructSerializerArrayTestStruct = {}
+local FStructSerializerArrayTestStruct = {}
 
 
 
@@ -35,7 +35,7 @@ FStructSerializerArrayTestStruct = {}
 ---@field Bitfield5Set boolean
 ---@field Bitfield6 boolean
 ---@field Bitfield7Set boolean
-FStructSerializerBooleanTestStruct = {}
+local FStructSerializerBooleanTestStruct = {}
 
 
 
@@ -49,7 +49,7 @@ FStructSerializerBooleanTestStruct = {}
 ---@field Rotator FRotator
 ---@field Quat FQuat
 ---@field Color FColor
-FStructSerializerBuiltinTestStruct = {}
+local FStructSerializerBuiltinTestStruct = {}
 
 
 
@@ -59,7 +59,7 @@ FStructSerializerBuiltinTestStruct = {}
 ---@field Dummy2 int32
 ---@field Int8Array TArray<int8>
 ---@field Dummy3 int32
-FStructSerializerByteArray = {}
+local FStructSerializerByteArray = {}
 
 
 
@@ -81,7 +81,7 @@ FStructSerializerByteArray = {}
 ---@field VectorArray TArray<FVector>
 ---@field StrToVec TMap<FString, FVector>
 ---@field VectorSet TSet<FVector>
-FStructSerializerLWCTypesTest = {}
+local FStructSerializerLWCTypesTest = {}
 
 
 
@@ -90,7 +90,7 @@ FStructSerializerLWCTypesTest = {}
 ---@field StrToStr TMap<FString, FString>
 ---@field StrToVec TMap<FString, FVector>
 ---@field StrToStruct TMap<FString, FStructSerializerBuiltinTestStruct>
-FStructSerializerMapTestStruct = {}
+local FStructSerializerMapTestStruct = {}
 
 
 
@@ -112,7 +112,7 @@ FStructSerializerMapTestStruct = {}
 ---@field VectorArray TArray<FVector3f>
 ---@field StrToVec TMap<FString, FVector3f>
 ---@field VectorSet TSet<FVector3f>
-FStructSerializerNonLWCTypesTest = {}
+local FStructSerializerNonLWCTypesTest = {}
 
 
 
@@ -127,7 +127,7 @@ FStructSerializerNonLWCTypesTest = {}
 ---@field UInt64 uint64
 ---@field float float
 ---@field Double double
-FStructSerializerNumericTestStruct = {}
+local FStructSerializerNumericTestStruct = {}
 
 
 
@@ -142,7 +142,7 @@ FStructSerializerNumericTestStruct = {}
 ---@field SoftObject TSoftObjectPtr<UMetaData>
 ---@field ClassPath FSoftClassPath
 ---@field ObjectPath FSoftObjectPath
-FStructSerializerObjectTestStruct = {}
+local FStructSerializerObjectTestStruct = {}
 
 
 
@@ -151,7 +151,7 @@ FStructSerializerObjectTestStruct = {}
 ---@field IntSet TSet<int32>
 ---@field NameSet TSet<FName>
 ---@field StructSet TSet<FStructSerializerBuiltinTestStruct>
-FStructSerializerSetTestStruct = {}
+local FStructSerializerSetTestStruct = {}
 
 
 
@@ -164,7 +164,7 @@ FStructSerializerSetTestStruct = {}
 ---@field Maps FStructSerializerMapTestStruct
 ---@field Sets FStructSerializerSetTestStruct
 ---@field LWCTypes FStructSerializerLWCTypesTest
-FStructSerializerTestStruct = {}
+local FStructSerializerTestStruct = {}
 
 
 

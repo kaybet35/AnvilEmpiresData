@@ -6,7 +6,7 @@
 ---@field VisStaticMesh4 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field VisTownAreaMarkerDecal UVisTownAreaMarkerDecalComponent
-ABPVisSmallCamp_C = {}
+local ABPVisSmallCamp_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisSmallCamp_C:ReceiveTick(DeltaSeconds) end

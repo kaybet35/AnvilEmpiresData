@@ -13,7 +13,7 @@
 ---@field VisRandomMeshDecor20 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor16 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationWallInclineDiagonal_C = {}
+local ABPVisGridFoundationWallInclineDiagonal_C = {}
 
 
 

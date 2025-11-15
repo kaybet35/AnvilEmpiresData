@@ -4,12 +4,12 @@
 ---@field Vertex0 FVector
 ---@field Vertex1 FVector
 ---@field Vertex2 FVector
-FCustomMeshTriangle = {}
+local FCustomMeshTriangle = {}
 
 
 
 ---@class UCustomMeshComponent : UMeshComponent
-UCustomMeshComponent = {}
+local UCustomMeshComponent = {}
 
 ---@param Triangles TArray<FCustomMeshTriangle>
 ---@return boolean

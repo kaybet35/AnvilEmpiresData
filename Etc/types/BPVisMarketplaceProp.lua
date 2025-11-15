@@ -7,7 +7,7 @@
 ---@field VisStaticMesh25 UVisStaticMeshComponent
 ---@field VisStaticMesh26 UVisStaticMeshComponent
 ---@field Structure UVisStaticMeshComponent
-ABPVisMarketplaceProp_C = {}
+local ABPVisMarketplaceProp_C = {}
 
 
 

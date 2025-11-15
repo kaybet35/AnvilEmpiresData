@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisMediumBoatBuildSite_C : AVisBuildSite
-ABPVisMediumBoatBuildSite_C = {}
+local ABPVisMediumBoatBuildSite_C = {}
 
 

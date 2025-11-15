@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBatteringRamHusk_C : UEntityTemplate
-UBatteringRamHusk_C = {}
+local UBatteringRamHusk_C = {}
 
 

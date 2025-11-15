@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceLeadFragments_C : UItemTemplate
-UResourceLeadFragments_C = {}
+local UResourceLeadFragments_C = {}
 
 

@@ -16,7 +16,7 @@
 ---@field VerticalEdge02 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge04 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationSquareStraight_T2_C = {}
+local ABPVisGridFoundationSquareStraight_T2_C = {}
 
 
 

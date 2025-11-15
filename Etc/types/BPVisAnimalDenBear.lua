@@ -9,7 +9,7 @@
 ---@field CaveEntrance UDecalComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field Decal UDecalComponent
-ABPVisAnimalDenBear_C = {}
+local ABPVisAnimalDenBear_C = {}
 
 
 

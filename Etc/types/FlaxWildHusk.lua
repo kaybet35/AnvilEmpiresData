@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFlaxWildHusk_C : UEntityTemplate
-UFlaxWildHusk_C = {}
+local UFlaxWildHusk_C = {}
 
 

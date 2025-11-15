@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UIndustryPrefab_C : UBPBaseStructureEntity_C
-UIndustryPrefab_C = {}
+local UIndustryPrefab_C = {}
 
 

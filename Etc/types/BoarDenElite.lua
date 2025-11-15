@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBoarDenElite_C : UBPBaseStructureEntity_C
-UBoarDenElite_C = {}
+local UBoarDenElite_C = {}
 
 

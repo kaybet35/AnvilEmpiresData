@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectScorpionShot_C : UEntityTemplate
-UEffectScorpionShot_C = {}
+local UEffectScorpionShot_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMapInfo_C : UEntityTemplate
-UMapInfo_C = {}
+local UMapInfo_C = {}
 
 

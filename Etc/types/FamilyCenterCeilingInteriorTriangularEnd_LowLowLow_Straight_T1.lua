@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterCeilingInteriorTriangularEnd_LowLowLow_Straight_T1_C : UBPBaseFoundationModularEntity_C
-UFamilyCenterCeilingInteriorTriangularEnd_LowLowLow_Straight_T1_C = {}
+local UFamilyCenterCeilingInteriorTriangularEnd_LowLowLow_Straight_T1_C = {}
 
 

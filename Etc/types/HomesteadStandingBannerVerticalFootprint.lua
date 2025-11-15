@@ -2,7 +2,7 @@
 
 ---@class AHomesteadStandingBannerVerticalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AHomesteadStandingBannerVerticalFootprint_C = {}
+local AHomesteadStandingBannerVerticalFootprint_C = {}
 
 
 

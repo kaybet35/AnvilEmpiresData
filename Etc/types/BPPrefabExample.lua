@@ -4,7 +4,7 @@
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field RoofMesh UVisStaticMeshComponent
 ---@field BaseMesh UVisStaticMeshComponent
-ABPPrefabExample_C = {}
+local ABPPrefabExample_C = {}
 
 
 

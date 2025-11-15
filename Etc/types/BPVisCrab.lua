@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisCrab_C : AVisAnimal
-ABPVisCrab_C = {}
+local ABPVisCrab_C = {}
 
 

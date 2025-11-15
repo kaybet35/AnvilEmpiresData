@@ -14,14 +14,14 @@
 ---@field __NameProperty_30 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -40,7 +40,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field tempPercentageCurrent double
 ---@field usedPercentageCurrent double
 ---@field ['As Power Unit Data Component'] UPowerUnitDataComponent
-UABP_Windmill_C = {}
+local UABP_Windmill_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Windmill_C:AnimGraph(AnimGraph) end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTinOrePickup_C : UEntityTemplate
-UTinOrePickup_C = {}
+local UTinOrePickup_C = {}
 
 

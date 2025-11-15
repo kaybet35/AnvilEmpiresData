@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWolfEliteHusk_C : UEntityTemplate
-UWolfEliteHusk_C = {}
+local UWolfEliteHusk_C = {}
 
 

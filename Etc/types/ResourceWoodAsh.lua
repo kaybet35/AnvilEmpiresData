@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceWoodAsh_C : UItemTemplate
-UResourceWoodAsh_C = {}
+local UResourceWoodAsh_C = {}
 
 

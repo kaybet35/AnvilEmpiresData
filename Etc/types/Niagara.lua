@@ -3,7 +3,7 @@
 ---@class ANiagaraActor : AActor
 ---@field NiagaraComponent UNiagaraComponent
 ---@field bDestroyOnSystemFinish boolean
-ANiagaraActor = {}
+local ANiagaraActor = {}
 
 ---@param bShouldDestroyOnSystemFinish boolean
 function ANiagaraActor:SetDestroyOnSystemFinish(bShouldDestroyOnSystemFinish) end
@@ -18,19 +18,19 @@ function ANiagaraActor:OnNiagaraSystemFinished(FinishedComponent) end
 ---@field bResetWhenRetriggered boolean
 ---@field EmittersToTreatAsSame TArray<TSubclassOf<AActor>>
 ---@field OwningCameraManager APlayerCameraManager
-ANiagaraLensEffectBase = {}
+local ANiagaraLensEffectBase = {}
 
 
 
 ---@class ANiagaraPerfBaselineActor : AActor
 ---@field Controller UNiagaraBaselineController
 ---@field Label UTextRenderComponent
-ANiagaraPerfBaselineActor = {}
+local ANiagaraPerfBaselineActor = {}
 
 
 
 ---@class ANiagaraPreviewBase : AActor
-ANiagaraPreviewBase = {}
+local ANiagaraPreviewBase = {}
 
 ---@param InSystem UNiagaraSystem
 function ANiagaraPreviewBase:SetSystem(InSystem) end
@@ -50,7 +50,7 @@ function ANiagaraPreviewBase:SetLabelText(InXAxisText, InYAxisText) end
 ---@field NumX int32
 ---@field NumY int32
 ---@field PreviewComponents TArray<UChildActorComponent>
-ANiagaraPreviewGrid = {}
+local ANiagaraPreviewGrid = {}
 
 ---@param bPaused boolean
 function ANiagaraPreviewGrid:SetPaused(bPaused) end
@@ -65,24 +65,24 @@ function ANiagaraPreviewGrid:ActivatePreviews(bReset) end
 ---@field Position FVector
 ---@field Size float
 ---@field Velocity FVector
-FBasicParticleData = {}
+local FBasicParticleData = {}
 
 
 
 ---@class FEmitterCompiledScriptPair
-FEmitterCompiledScriptPair = {}
+local FEmitterCompiledScriptPair = {}
 
 
 ---@class FMeshTriCoordinate
 ---@field Tri int32
 ---@field BaryCoord FVector3f
-FMeshTriCoordinate = {}
+local FMeshTriCoordinate = {}
 
 
 
 ---@class FMovieSceneNiagaraBoolParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 ---@field BoolChannel FMovieSceneBoolChannel
-FMovieSceneNiagaraBoolParameterSectionTemplate = {}
+local FMovieSceneNiagaraBoolParameterSectionTemplate = {}
 
 
 
@@ -91,25 +91,25 @@ FMovieSceneNiagaraBoolParameterSectionTemplate = {}
 ---@field GreenChannel FMovieSceneFloatChannel
 ---@field BlueChannel FMovieSceneFloatChannel
 ---@field AlphaChannel FMovieSceneFloatChannel
-FMovieSceneNiagaraColorParameterSectionTemplate = {}
+local FMovieSceneNiagaraColorParameterSectionTemplate = {}
 
 
 
 ---@class FMovieSceneNiagaraFloatParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 ---@field FloatChannel FMovieSceneFloatChannel
-FMovieSceneNiagaraFloatParameterSectionTemplate = {}
+local FMovieSceneNiagaraFloatParameterSectionTemplate = {}
 
 
 
 ---@class FMovieSceneNiagaraIntegerParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 ---@field IntegerChannel FMovieSceneIntegerChannel
-FMovieSceneNiagaraIntegerParameterSectionTemplate = {}
+local FMovieSceneNiagaraIntegerParameterSectionTemplate = {}
 
 
 
 ---@class FMovieSceneNiagaraParameterSectionTemplate : FMovieSceneEvalTemplate
 ---@field Parameter FNiagaraVariable
-FMovieSceneNiagaraParameterSectionTemplate = {}
+local FMovieSceneNiagaraParameterSectionTemplate = {}
 
 
 
@@ -121,36 +121,36 @@ FMovieSceneNiagaraParameterSectionTemplate = {}
 ---@field SpawnSectionEndBehavior ENiagaraSystemSpawnSectionEndBehavior
 ---@field AgeUpdateMode ENiagaraAgeUpdateMode
 ---@field bAllowScalability boolean
-FMovieSceneNiagaraSystemTrackImplementation = {}
+local FMovieSceneNiagaraSystemTrackImplementation = {}
 
 
 
 ---@class FMovieSceneNiagaraSystemTrackTemplate : FMovieSceneEvalTemplate
-FMovieSceneNiagaraSystemTrackTemplate = {}
+local FMovieSceneNiagaraSystemTrackTemplate = {}
 
 
 ---@class FMovieSceneNiagaraVectorParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 ---@field VectorChannels FMovieSceneFloatChannel
 ---@field ChannelsUsed int32
-FMovieSceneNiagaraVectorParameterSectionTemplate = {}
+local FMovieSceneNiagaraVectorParameterSectionTemplate = {}
 
 
 
 ---@class FNCPool
 ---@field FreeElements TArray<FNCPoolElement>
-FNCPool = {}
+local FNCPool = {}
 
 
 
 ---@class FNCPoolElement
 ---@field Component UNiagaraComponent
-FNCPoolElement = {}
+local FNCPoolElement = {}
 
 
 
 ---@class FNDIStaticMeshSectionFilter
 ---@field AllowedMaterialSlots TArray<int32>
-FNDIStaticMeshSectionFilter = {}
+local FNDIStaticMeshSectionFilter = {}
 
 
 
@@ -159,7 +159,7 @@ FNDIStaticMeshSectionFilter = {}
 ---@field MinorVersion int32
 ---@field VersionGuid FGuid
 ---@field bIsVisibleInVersionSelector boolean
-FNiagaraAssetVersion = {}
+local FNiagaraAssetVersion = {}
 
 
 
@@ -172,7 +172,7 @@ FNiagaraAssetVersion = {}
 ---@field OrthoWidth float
 ---@field bUseAspectRatio boolean
 ---@field AspectRatio float
-FNiagaraBakerCameraSettings = {}
+local FNiagaraBakerCameraSettings = {}
 
 
 
@@ -183,20 +183,20 @@ FNiagaraBakerCameraSettings = {}
 ---@field FrameSize FIntPoint
 ---@field TextureSize FIntPoint
 ---@field GeneratedTexture UTexture2D
-FNiagaraBakerTextureSettings = {}
+local FNiagaraBakerTextureSettings = {}
 
 
 
 ---@class FNiagaraBakerTextureSource
 ---@field DisplayString FString
 ---@field SourceName FName
-FNiagaraBakerTextureSource = {}
+local FNiagaraBakerTextureSource = {}
 
 
 
 ---@class FNiagaraBool
 ---@field Value int32
-FNiagaraBool = {}
+local FNiagaraBool = {}
 
 
 
@@ -206,7 +206,7 @@ FNiagaraBool = {}
 ---@field OverrideNameFalse FName
 ---@field IconOverrideTrue UTexture2D
 ---@field IconOverrideFalse UTexture2D
-FNiagaraBoolParameterMetaData = {}
+local FNiagaraBoolParameterMetaData = {}
 
 
 
@@ -214,7 +214,7 @@ FNiagaraBoolParameterMetaData = {}
 ---@field Parameter FNiagaraVariable
 ---@field SrcOffset int32
 ---@field DestOffset int32
-FNiagaraBoundParameter = {}
+local FNiagaraBoundParameter = {}
 
 
 
@@ -224,7 +224,7 @@ FNiagaraBoundParameter = {}
 ---@field CollisionVelocity FVector
 ---@field ParticleIndex int32
 ---@field PhysicalMaterialIndex int32
-FNiagaraCollisionEventPayload = {}
+local FNiagaraCollisionEventPayload = {}
 
 
 
@@ -235,7 +235,7 @@ FNiagaraCollisionEventPayload = {}
 ---@field StackGuids TArray<FGuid>
 ---@field DependentVariable FNiagaraVariableBase
 ---@field bDependentVariableFromCustomIterationNamespace boolean
-FNiagaraCompileDependency = {}
+local FNiagaraCompileDependency = {}
 
 
 
@@ -243,14 +243,14 @@ FNiagaraCompileDependency = {}
 ---@field Object FString
 ---@field PropertyKeys TArray<FString>
 ---@field PropertyValues TArray<FString>
-FNiagaraCompileHashVisitorDebugInfo = {}
+local FNiagaraCompileHashVisitorDebugInfo = {}
 
 
 
 ---@class FNiagaraCompilerTag
 ---@field Variable FNiagaraVariable
 ---@field StringValue FString
-FNiagaraCompilerTag = {}
+local FNiagaraCompilerTag = {}
 
 
 
@@ -260,18 +260,18 @@ FNiagaraCompilerTag = {}
 ---@field PropertyType FNiagaraTypeDefinition
 ---@field MetadataSetterName FName
 ---@field PropertySetterParameterDefaults TMap<FString, FString>
-FNiagaraComponentPropertyBinding = {}
+local FNiagaraComponentPropertyBinding = {}
 
 
 
 ---@class FNiagaraCulledComponentInfo
-FNiagaraCulledComponentInfo = {}
+local FNiagaraCulledComponentInfo = {}
 
 
 ---@class FNiagaraDataInterfaceEmitterBinding
 ---@field BindingMode ENiagaraDataInterfaceEmitterBindingMode
 ---@field EmitterName FName
-FNiagaraDataInterfaceEmitterBinding = {}
+local FNiagaraDataInterfaceEmitterBinding = {}
 
 
 
@@ -283,7 +283,7 @@ FNiagaraDataInterfaceEmitterBinding = {}
 ---@field SplineDistanceStep float
 ---@field InvSplineDistanceStep float
 ---@field MaxIndex int32
-FNiagaraDataInterfaceSplineLUT = {}
+local FNiagaraDataInterfaceSplineLUT = {}
 
 
 
@@ -296,21 +296,21 @@ FNiagaraDataInterfaceSplineLUT = {}
 ---@field TotalHalfComponents uint32
 ---@field bRequiresPersistentIDs boolean
 ---@field SimTarget ENiagaraSimTarget
-FNiagaraDataSetCompiledData = {}
+local FNiagaraDataSetCompiledData = {}
 
 
 
 ---@class FNiagaraDataSetID
 ---@field Name FName
 ---@field Type ENiagaraDataSetType
-FNiagaraDataSetID = {}
+local FNiagaraDataSetID = {}
 
 
 
 ---@class FNiagaraDataSetProperties
 ---@field ID FNiagaraDataSetID
 ---@field Variables TArray<FNiagaraVariable>
-FNiagaraDataSetProperties = {}
+local FNiagaraDataSetProperties = {}
 
 
 
@@ -382,14 +382,14 @@ FNiagaraDataSetProperties = {}
 ---@field bLoopTimeEnabled boolean
 ---@field LoopTime float
 ---@field bShowGlobalBudgetInfo boolean
-FNiagaraDebugHUDSettingsData = {}
+local FNiagaraDebugHUDSettingsData = {}
 
 
 
 ---@class FNiagaraDebugHUDVariable
 ---@field bEnabled boolean
 ---@field Name FString
-FNiagaraDebugHUDVariable = {}
+local FNiagaraDebugHUDVariable = {}
 
 
 
@@ -398,41 +398,41 @@ FNiagaraDebugHUDVariable = {}
 ---@field HorizontalAlignment ENiagaraDebugHudHAlign
 ---@field VerticalAlignment ENiagaraDebugHudVAlign
 ---@field ScreenOffset FVector2D
-FNiagaraDebugHudTextOptions = {}
+local FNiagaraDebugHudTextOptions = {}
 
 
 
 ---@class FNiagaraDebuggerAcceptConnection
 ---@field SessionId FGuid
 ---@field InstanceId FGuid
-FNiagaraDebuggerAcceptConnection = {}
+local FNiagaraDebuggerAcceptConnection = {}
 
 
 
 ---@class FNiagaraDebuggerConnectionClosed
 ---@field SessionId FGuid
 ---@field InstanceId FGuid
-FNiagaraDebuggerConnectionClosed = {}
+local FNiagaraDebuggerConnectionClosed = {}
 
 
 
 ---@class FNiagaraDebuggerExecuteConsoleCommand
 ---@field Command FString
 ---@field bRequiresWorld boolean
-FNiagaraDebuggerExecuteConsoleCommand = {}
+local FNiagaraDebuggerExecuteConsoleCommand = {}
 
 
 
 ---@class FNiagaraDebuggerOutlinerUpdate
 ---@field OutlinerData FNiagaraOutlinerData
-FNiagaraDebuggerOutlinerUpdate = {}
+local FNiagaraDebuggerOutlinerUpdate = {}
 
 
 
 ---@class FNiagaraDebuggerRequestConnection
 ---@field SessionId FGuid
 ---@field InstanceId FGuid
-FNiagaraDebuggerRequestConnection = {}
+local FNiagaraDebuggerRequestConnection = {}
 
 
 
@@ -442,7 +442,7 @@ FNiagaraDebuggerRequestConnection = {}
 ---@field High float
 ---@field Epic float
 ---@field Cine float
-FNiagaraDetailsLevelScaleOverrides = {}
+local FNiagaraDetailsLevelScaleOverrides = {}
 
 
 
@@ -450,7 +450,7 @@ FNiagaraDetailsLevelScaleOverrides = {}
 ---@field ProfileName FName
 ---@field QualityLevelMask uint32
 ---@field SetQualityLevelMask uint32
-FNiagaraDeviceProfileStateEntry = {}
+local FNiagaraDeviceProfileStateEntry = {}
 
 
 
@@ -464,7 +464,7 @@ FNiagaraDeviceProfileStateEntry = {}
 ---@field EmitterInstanceSeedVar FNiagaraVariable
 ---@field EmitterTotalSpawnedParticlesVar FNiagaraVariable
 ---@field DataSetCompiledData FNiagaraDataSetCompiledData
-FNiagaraEmitterCompiledData = {}
+local FNiagaraEmitterCompiledData = {}
 
 
 
@@ -475,26 +475,26 @@ FNiagaraEmitterCompiledData = {}
 ---@field Name FName
 ---@field Instance UNiagaraEmitter
 ---@field VersionedInstance FVersionedNiagaraEmitter
-FNiagaraEmitterHandle = {}
+local FNiagaraEmitterHandle = {}
 
 
 
 ---@class FNiagaraEmitterNameSettingsRef
 ---@field SystemName FName
 ---@field EmitterName FString
-FNiagaraEmitterNameSettingsRef = {}
+local FNiagaraEmitterNameSettingsRef = {}
 
 
 
 ---@class FNiagaraEmitterScalabilityOverride : FNiagaraEmitterScalabilitySettings
 ---@field bOverrideSpawnCountScale boolean
-FNiagaraEmitterScalabilityOverride = {}
+local FNiagaraEmitterScalabilityOverride = {}
 
 
 
 ---@class FNiagaraEmitterScalabilityOverrides
 ---@field Overrides TArray<FNiagaraEmitterScalabilityOverride>
-FNiagaraEmitterScalabilityOverrides = {}
+local FNiagaraEmitterScalabilityOverrides = {}
 
 
 
@@ -502,13 +502,13 @@ FNiagaraEmitterScalabilityOverrides = {}
 ---@field Platforms FNiagaraPlatformSet
 ---@field bScaleSpawnCount boolean
 ---@field SpawnCountScale float
-FNiagaraEmitterScalabilitySettings = {}
+local FNiagaraEmitterScalabilitySettings = {}
 
 
 
 ---@class FNiagaraEmitterScalabilitySettingsArray
 ---@field Settings TArray<FNiagaraEmitterScalabilitySettings>
-FNiagaraEmitterScalabilitySettingsArray = {}
+local FNiagaraEmitterScalabilitySettingsArray = {}
 
 
 
@@ -516,7 +516,7 @@ FNiagaraEmitterScalabilitySettingsArray = {}
 ---@field Script UNiagaraScript
 ---@field EventReceivers TArray<FNiagaraEventReceiverProperties>
 ---@field EventGenerators TArray<FNiagaraEventGeneratorProperties>
-FNiagaraEmitterScriptProperties = {}
+local FNiagaraEmitterScriptProperties = {}
 
 
 
@@ -525,7 +525,7 @@ FNiagaraEmitterScriptProperties = {}
 ---@field IconOverride UTexture2D
 ---@field bUseColorOverride boolean
 ---@field ColorOverride FLinearColor
-FNiagaraEnumParameterMetaData = {}
+local FNiagaraEnumParameterMetaData = {}
 
 
 
@@ -533,7 +533,7 @@ FNiagaraEnumParameterMetaData = {}
 ---@field MaxEventsPerFrame int32
 ---@field ID FName
 ---@field DataSetCompiledData FNiagaraDataSetCompiledData
-FNiagaraEventGeneratorProperties = {}
+local FNiagaraEventGeneratorProperties = {}
 
 
 
@@ -541,7 +541,7 @@ FNiagaraEventGeneratorProperties = {}
 ---@field Name FName
 ---@field SourceEventGenerator FName
 ---@field SourceEmitter FName
-FNiagaraEventReceiverProperties = {}
+local FNiagaraEventReceiverProperties = {}
 
 
 
@@ -554,13 +554,13 @@ FNiagaraEventReceiverProperties = {}
 ---@field bRandomSpawnNumber boolean
 ---@field MinSpawnNumber uint32
 ---@field UpdateAttributeInitialValues boolean
-FNiagaraEventScriptProperties = {}
+local FNiagaraEventScriptProperties = {}
 
 
 
 ---@class FNiagaraFloat
 ---@field Value float
-FNiagaraFloat = {}
+local FNiagaraFloat = {}
 
 
 
@@ -583,7 +583,7 @@ FNiagaraFloat = {}
 ---@field ModuleUsageBitmask int32
 ---@field ContextStageIndex int32
 ---@field FunctionSpecifiers TMap<FName, FName>
-FNiagaraFunctionSignature = {}
+local FNiagaraFunctionSignature = {}
 
 
 
@@ -596,7 +596,7 @@ FNiagaraFunctionSignature = {}
 ---@field MaxDistanceScaleByGlobalBudgetUse FNiagaraLinearRamp
 ---@field MaxInstanceCountScaleByGlobalBudgetUse FNiagaraLinearRamp
 ---@field MaxSystemInstanceCountScaleByGlobalBudgetUse FNiagaraLinearRamp
-FNiagaraGlobalBudgetScaling = {}
+local FNiagaraGlobalBudgetScaling = {}
 
 
 
@@ -604,20 +604,20 @@ FNiagaraGlobalBudgetScaling = {}
 ---@field Location FVector2D
 ---@field Zoom float
 ---@field bIsValid boolean
-FNiagaraGraphViewSettings = {}
+local FNiagaraGraphViewSettings = {}
 
 
 
 ---@class FNiagaraHalf
 ---@field Value uint16
-FNiagaraHalf = {}
+local FNiagaraHalf = {}
 
 
 
 ---@class FNiagaraHalfVector2
 ---@field X uint16
 ---@field Y uint16
-FNiagaraHalfVector2 = {}
+local FNiagaraHalfVector2 = {}
 
 
 
@@ -625,7 +625,7 @@ FNiagaraHalfVector2 = {}
 ---@field X uint16
 ---@field Y uint16
 ---@field Z uint16
-FNiagaraHalfVector3 = {}
+local FNiagaraHalfVector3 = {}
 
 
 
@@ -634,27 +634,27 @@ FNiagaraHalfVector3 = {}
 ---@field Y uint16
 ---@field Z uint16
 ---@field W uint16
-FNiagaraHalfVector4 = {}
+local FNiagaraHalfVector4 = {}
 
 
 
 ---@class FNiagaraID
 ---@field Index int32
 ---@field AcquireTag int32
-FNiagaraID = {}
+local FNiagaraID = {}
 
 
 
 ---@class FNiagaraInputConditionMetadata
 ---@field InputName FName
 ---@field TargetValues TArray<FString>
-FNiagaraInputConditionMetadata = {}
+local FNiagaraInputConditionMetadata = {}
 
 
 
 ---@class FNiagaraInt32
 ---@field Value int32
-FNiagaraInt32 = {}
+local FNiagaraInt32 = {}
 
 
 
@@ -663,13 +663,13 @@ FNiagaraInt32 = {}
 ---@field StartY float
 ---@field EndX float
 ---@field EndY float
-FNiagaraLinearRamp = {}
+local FNiagaraLinearRamp = {}
 
 
 
 ---@class FNiagaraLwcStructConverter
 ---@field ConversionSteps TArray<FNiagaraStructConversionStep>
-FNiagaraLwcStructConverter = {}
+local FNiagaraLwcStructConverter = {}
 
 
 
@@ -678,7 +678,7 @@ FNiagaraLwcStructConverter = {}
 ---@field NiagaraVariable FNiagaraVariableBase
 ---@field ResolvedNiagaraVariable FNiagaraVariableBase
 ---@field NiagaraChildVariable FNiagaraVariableBase
-FNiagaraMaterialAttributeBinding = {}
+local FNiagaraMaterialAttributeBinding = {}
 
 
 
@@ -687,14 +687,14 @@ FNiagaraMaterialAttributeBinding = {}
 ---@field Row1 FVector4f
 ---@field Row2 FVector4f
 ---@field Row3 FVector4f
-FNiagaraMatrix = {}
+local FNiagaraMatrix = {}
 
 
 
 ---@class FNiagaraMeshMaterialOverride
 ---@field ExplicitMat UMaterialInterface
 ---@field UserParamBinding FNiagaraUserParameterBinding
-FNiagaraMeshMaterialOverride = {}
+local FNiagaraMeshMaterialOverride = {}
 
 
 
@@ -705,7 +705,7 @@ FNiagaraMeshMaterialOverride = {}
 ---@field Rotation FRotator
 ---@field PivotOffset FVector
 ---@field PivotOffsetSpace ENiagaraMeshPivotOffsetSpace
-FNiagaraMeshRendererMeshProperties = {}
+local FNiagaraMeshRendererMeshProperties = {}
 
 
 
@@ -716,12 +716,12 @@ FNiagaraMeshRendererMeshProperties = {}
 ---@field RequiredVersion FString
 ---@field OnlyEvaluateInScriptUsage int32
 ---@field Description FText
-FNiagaraModuleDependency = {}
+local FNiagaraModuleDependency = {}
 
 
 
 ---@class FNiagaraNumeric
-FNiagaraNumeric = {}
+local FNiagaraNumeric = {}
 
 
 ---@class FNiagaraOutlinerCaptureSettings
@@ -729,13 +729,13 @@ FNiagaraNumeric = {}
 ---@field CaptureDelayFrames uint32
 ---@field bGatherPerfData boolean
 ---@field SimCacheCaptureFrames uint32
-FNiagaraOutlinerCaptureSettings = {}
+local FNiagaraOutlinerCaptureSettings = {}
 
 
 
 ---@class FNiagaraOutlinerData
 ---@field WorldData TMap<FString, FNiagaraOutlinerWorldData>
-FNiagaraOutlinerData = {}
+local FNiagaraOutlinerData = {}
 
 
 
@@ -745,7 +745,7 @@ FNiagaraOutlinerData = {}
 ---@field ExecState ENiagaraExecutionState
 ---@field NumParticles int32
 ---@field bRequiresPersistentIDs boolean
-FNiagaraOutlinerEmitterInstanceData = {}
+local FNiagaraOutlinerEmitterInstanceData = {}
 
 
 
@@ -755,7 +755,7 @@ FNiagaraOutlinerEmitterInstanceData = {}
 ---@field MaxPerFrameTime FNiagaraOutlinerTimingData
 ---@field AveragePerInstanceTime FNiagaraOutlinerTimingData
 ---@field MaxPerInstanceTime FNiagaraOutlinerTimingData
-FNiagaraOutlinerSystemData = {}
+local FNiagaraOutlinerSystemData = {}
 
 
 
@@ -779,14 +779,14 @@ FNiagaraOutlinerSystemData = {}
 ---@field bRequiresEarlyViewData boolean
 ---@field bRequiresViewUniformBuffer boolean
 ---@field bRequiresRayTracingScene boolean
-FNiagaraOutlinerSystemInstanceData = {}
+local FNiagaraOutlinerSystemInstanceData = {}
 
 
 
 ---@class FNiagaraOutlinerTimingData
 ---@field GameThread float
 ---@field RenderThread float
-FNiagaraOutlinerTimingData = {}
+local FNiagaraOutlinerTimingData = {}
 
 
 
@@ -797,26 +797,26 @@ FNiagaraOutlinerTimingData = {}
 ---@field NetMode uint8
 ---@field AveragePerFrameTime FNiagaraOutlinerTimingData
 ---@field MaxPerFrameTime FNiagaraOutlinerTimingData
-FNiagaraOutlinerWorldData = {}
+local FNiagaraOutlinerWorldData = {}
 
 
 
 ---@class FNiagaraParameterDataSetBinding
 ---@field ParameterOffset int32
 ---@field DataSetComponentOffset int32
-FNiagaraParameterDataSetBinding = {}
+local FNiagaraParameterDataSetBinding = {}
 
 
 
 ---@class FNiagaraParameterDataSetBindingCollection
 ---@field FloatOffsets TArray<FNiagaraParameterDataSetBinding>
 ---@field Int32Offsets TArray<FNiagaraParameterDataSetBinding>
-FNiagaraParameterDataSetBindingCollection = {}
+local FNiagaraParameterDataSetBindingCollection = {}
 
 
 
 ---@class FNiagaraParameterMap
-FNiagaraParameterMap = {}
+local FNiagaraParameterMap = {}
 
 
 ---@class FNiagaraParameterStore
@@ -826,13 +826,13 @@ FNiagaraParameterMap = {}
 ---@field DataInterfaces TArray<UNiagaraDataInterface>
 ---@field UObjects TArray<UObject>
 ---@field OriginalPositionData TArray<FNiagaraPositionSource>
-FNiagaraParameterStore = {}
+local FNiagaraParameterStore = {}
 
 
 
 ---@class FNiagaraParameters
 ---@field Parameters TArray<FNiagaraVariable>
-FNiagaraParameters = {}
+local FNiagaraParameters = {}
 
 
 
@@ -841,7 +841,7 @@ FNiagaraParameters = {}
 ---@field PerInstanceAvg_RT float
 ---@field PerInstanceMax_GT float
 ---@field PerInstanceMax_RT float
-FNiagaraPerfBaselineStats = {}
+local FNiagaraPerfBaselineStats = {}
 
 
 
@@ -849,7 +849,7 @@ FNiagaraPerfBaselineStats = {}
 ---@field QualityLevelMask int32
 ---@field DeviceProfileStates TArray<FNiagaraDeviceProfileStateEntry>
 ---@field CVarConditions TArray<FNiagaraPlatformSetCVarCondition>
-FNiagaraPlatformSet = {}
+local FNiagaraPlatformSet = {}
 
 
 
@@ -866,14 +866,14 @@ FNiagaraPlatformSet = {}
 ---@field bUseMaxInt boolean
 ---@field bUseMinFloat boolean
 ---@field bUseMaxFloat boolean
-FNiagaraPlatformSetCVarCondition = {}
+local FNiagaraPlatformSetCVarCondition = {}
 
 
 
 ---@class FNiagaraPlatformSetConflictEntry
 ---@field ProfileName FName
 ---@field QualityLevelMask int32
-FNiagaraPlatformSetConflictEntry = {}
+local FNiagaraPlatformSetConflictEntry = {}
 
 
 
@@ -881,7 +881,7 @@ FNiagaraPlatformSetConflictEntry = {}
 ---@field SetAIndex int32
 ---@field SetBIndex int32
 ---@field Conflicts TArray<FNiagaraPlatformSetConflictEntry>
-FNiagaraPlatformSetConflictInfo = {}
+local FNiagaraPlatformSetConflictInfo = {}
 
 
 
@@ -891,18 +891,18 @@ FNiagaraPlatformSetConflictInfo = {}
 ---@field RedirectProfileName FName
 ---@field CVarConditionEnabled FNiagaraPlatformSetCVarCondition
 ---@field CVarConditionDisabled FNiagaraPlatformSetCVarCondition
-FNiagaraPlatformSetRedirect = {}
+local FNiagaraPlatformSetRedirect = {}
 
 
 
 ---@class FNiagaraPosition : FVector3f
-FNiagaraPosition = {}
+local FNiagaraPosition = {}
 
 
 ---@class FNiagaraPositionSource
 ---@field Name FName
 ---@field Value FVector
-FNiagaraPositionSource = {}
+local FNiagaraPositionSource = {}
 
 
 
@@ -910,7 +910,7 @@ FNiagaraPositionSource = {}
 ---@field Seed1 int32
 ---@field Seed2 int32
 ---@field Seed3 int32
-FNiagaraRandInfo = {}
+local FNiagaraRandInfo = {}
 
 
 
@@ -919,40 +919,40 @@ FNiagaraRandInfo = {}
 ---@field ScalarParameters TArray<FNiagaraRendererMaterialScalarParameter>
 ---@field VectorParameters TArray<FNiagaraRendererMaterialVectorParameter>
 ---@field TextureParameters TArray<FNiagaraRendererMaterialTextureParameter>
-FNiagaraRendererMaterialParameters = {}
+local FNiagaraRendererMaterialParameters = {}
 
 
 
 ---@class FNiagaraRendererMaterialScalarParameter
 ---@field MaterialParameterName FName
 ---@field Value float
-FNiagaraRendererMaterialScalarParameter = {}
+local FNiagaraRendererMaterialScalarParameter = {}
 
 
 
 ---@class FNiagaraRendererMaterialTextureParameter
 ---@field MaterialParameterName FName
 ---@field Texture UTexture
-FNiagaraRendererMaterialTextureParameter = {}
+local FNiagaraRendererMaterialTextureParameter = {}
 
 
 
 ---@class FNiagaraRendererMaterialVectorParameter
 ---@field MaterialParameterName FName
 ---@field Value FLinearColor
-FNiagaraRendererMaterialVectorParameter = {}
+local FNiagaraRendererMaterialVectorParameter = {}
 
 
 
 ---@class FNiagaraRequestSimpleClientInfoMessage
-FNiagaraRequestSimpleClientInfoMessage = {}
+local FNiagaraRequestSimpleClientInfoMessage = {}
 
 
 ---@class FNiagaraRibbonShapeCustomVertex
 ---@field Position FVector2f
 ---@field Normal FVector2f
 ---@field TextureV float
-FNiagaraRibbonShapeCustomVertex = {}
+local FNiagaraRibbonShapeCustomVertex = {}
 
 
 
@@ -965,14 +965,14 @@ FNiagaraRibbonShapeCustomVertex = {}
 ---@field Scale FVector2D
 ---@field bEnablePerParticleUOverride boolean
 ---@field bEnablePerParticleVRangeOverride boolean
-FNiagaraRibbonUVSettings = {}
+local FNiagaraRibbonUVSettings = {}
 
 
 
 ---@class FNiagaraScalabilityManager
 ---@field EffectType UNiagaraEffectType
 ---@field ManagedComponents TArray<UNiagaraComponent>
-FNiagaraScalabilityManager = {}
+local FNiagaraScalabilityManager = {}
 
 
 
@@ -985,7 +985,7 @@ FNiagaraScalabilityManager = {}
 ---@field bCulledByInstanceCount boolean
 ---@field bCulledByVisibility boolean
 ---@field bCulledByGlobalBudget boolean
-FNiagaraScalabilityState = {}
+local FNiagaraScalabilityState = {}
 
 
 
@@ -996,7 +996,7 @@ FNiagaraScalabilityState = {}
 ---@field RegisteredParameterMapRead FName
 ---@field RegisteredParameterMapWrite FName
 ---@field bIsPlaceholder boolean
-FNiagaraScriptDataInterfaceCompileInfo = {}
+local FNiagaraScriptDataInterfaceCompileInfo = {}
 
 
 
@@ -1007,13 +1007,13 @@ FNiagaraScriptDataInterfaceCompileInfo = {}
 ---@field Type FNiagaraTypeDefinition
 ---@field RegisteredParameterMapRead FName
 ---@field RegisteredParameterMapWrite FName
-FNiagaraScriptDataInterfaceInfo = {}
+local FNiagaraScriptDataInterfaceInfo = {}
 
 
 
 ---@class FNiagaraScriptDataUsageInfo
 ---@field bReadsAttributeData boolean
-FNiagaraScriptDataUsageInfo = {}
+local FNiagaraScriptDataUsageInfo = {}
 
 
 
@@ -1022,7 +1022,7 @@ FNiagaraScriptDataUsageInfo = {}
 ---@field DestOffset uint16
 ---@field SrcSize uint16
 ---@field DestSize uint16
-FNiagaraScriptExecutionPaddingInfo = {}
+local FNiagaraScriptExecutionPaddingInfo = {}
 
 
 
@@ -1031,24 +1031,24 @@ FNiagaraScriptExecutionPaddingInfo = {}
 ---@field PaddedParameterSize uint32
 ---@field PaddingInfo TArray<FNiagaraScriptExecutionPaddingInfo>
 ---@field bInitialized boolean
-FNiagaraScriptExecutionParameterStore = {}
+local FNiagaraScriptExecutionParameterStore = {}
 
 
 
 ---@class FNiagaraScriptHighlight
 ---@field Color FLinearColor
 ---@field DisplayName FText
-FNiagaraScriptHighlight = {}
+local FNiagaraScriptHighlight = {}
 
 
 
 ---@class FNiagaraScriptInstanceParameterStore : FNiagaraParameterStore
-FNiagaraScriptInstanceParameterStore = {}
+local FNiagaraScriptInstanceParameterStore = {}
 
 
 ---@class FNiagaraScriptVariableBinding
 ---@field Name FName
-FNiagaraScriptVariableBinding = {}
+local FNiagaraScriptVariableBinding = {}
 
 
 
@@ -1059,7 +1059,7 @@ FNiagaraScriptVariableBinding = {}
 ---@field RebaseIncludeAttributes TArray<FName>
 ---@field RebaseExcludeAttributes TArray<FName>
 ---@field ExplicitCaptureAttributes TArray<FName>
-FNiagaraSimCacheCreateParameters = {}
+local FNiagaraSimCacheCreateParameters = {}
 
 
 
@@ -1070,7 +1070,7 @@ FNiagaraSimCacheCreateParameters = {}
 ---@field Int32Data TArray<uint8>
 ---@field IDToIndexTable TArray<int32>
 ---@field IDAcquireTag uint32
-FNiagaraSimCacheDataBuffers = {}
+local FNiagaraSimCacheDataBuffers = {}
 
 
 
@@ -1083,7 +1083,7 @@ FNiagaraSimCacheDataBuffers = {}
 ---@field Int32Count uint16
 ---@field bLocalSpace boolean
 ---@field RebaseVariableNames TArray<FName>
-FNiagaraSimCacheDataBuffersLayout = {}
+local FNiagaraSimCacheDataBuffersLayout = {}
 
 
 
@@ -1091,7 +1091,7 @@ FNiagaraSimCacheDataBuffersLayout = {}
 ---@field LocalBounds FBox
 ---@field TotalSpawnedParticles int32
 ---@field ParticleDataBuffers FNiagaraSimCacheDataBuffers
-FNiagaraSimCacheEmitterFrame = {}
+local FNiagaraSimCacheEmitterFrame = {}
 
 
 
@@ -1100,21 +1100,21 @@ FNiagaraSimCacheEmitterFrame = {}
 ---@field LWCTile FVector3f
 ---@field SystemData FNiagaraSimCacheSystemFrame
 ---@field EmitterData TArray<FNiagaraSimCacheEmitterFrame>
-FNiagaraSimCacheFrame = {}
+local FNiagaraSimCacheFrame = {}
 
 
 
 ---@class FNiagaraSimCacheLayout
 ---@field SystemLayout FNiagaraSimCacheDataBuffersLayout
 ---@field EmitterLayouts TArray<FNiagaraSimCacheDataBuffersLayout>
-FNiagaraSimCacheLayout = {}
+local FNiagaraSimCacheLayout = {}
 
 
 
 ---@class FNiagaraSimCacheSystemFrame
 ---@field LocalBounds FBox
 ---@field SystemDataBuffers FNiagaraSimCacheDataBuffers
-FNiagaraSimCacheSystemFrame = {}
+local FNiagaraSimCacheSystemFrame = {}
 
 
 
@@ -1126,7 +1126,7 @@ FNiagaraSimCacheSystemFrame = {}
 ---@field HalfCount uint16
 ---@field Int32Offset uint16
 ---@field Int32Count uint16
-FNiagaraSimCacheVariable = {}
+local FNiagaraSimCacheVariable = {}
 
 
 
@@ -1135,7 +1135,7 @@ FNiagaraSimCacheVariable = {}
 ---@field Actors TArray<FString>
 ---@field Components TArray<FString>
 ---@field Emitters TArray<FString>
-FNiagaraSimpleClientInfo = {}
+local FNiagaraSimpleClientInfo = {}
 
 
 
@@ -1144,7 +1144,7 @@ FNiagaraSimpleClientInfo = {}
 ---@field InterpStartDt float
 ---@field IntervalDt float
 ---@field SpawnGroup int32
-FNiagaraSpawnInfo = {}
+local FNiagaraSpawnInfo = {}
 
 
 
@@ -1153,14 +1153,14 @@ FNiagaraSpawnInfo = {}
 ---@field SectionDisplayName FText
 ---@field Categories TArray<FText>
 ---@field bEnabled boolean
-FNiagaraStackSection = {}
+local FNiagaraStackSection = {}
 
 
 
 ---@class FNiagaraStatScope
 ---@field FullName FName
 ---@field FriendlyName FName
-FNiagaraStatScope = {}
+local FNiagaraStatScope = {}
 
 
 
@@ -1170,13 +1170,13 @@ FNiagaraStatScope = {}
 ---@field SimulationBytes int32
 ---@field SimulationOffset int32
 ---@field ConversionType ENiagaraStructConversionType
-FNiagaraStructConversionStep = {}
+local FNiagaraStructConversionStep = {}
 
 
 
 ---@class FNiagaraSystemCompileRequest
 ---@field RootObjects TArray<UObject>
-FNiagaraSystemCompileRequest = {}
+local FNiagaraSystemCompileRequest = {}
 
 
 
@@ -1193,7 +1193,7 @@ FNiagaraSystemCompileRequest = {}
 ---@field UpdateInstanceSystemBinding FNiagaraParameterDataSetBindingCollection
 ---@field UpdateInstanceOwnerBinding FNiagaraParameterDataSetBindingCollection
 ---@field UpdateInstanceEmitterBindings TArray<FNiagaraParameterDataSetBindingCollection>
-FNiagaraSystemCompiledData = {}
+local FNiagaraSystemCompiledData = {}
 
 
 
@@ -1204,13 +1204,13 @@ FNiagaraSystemCompiledData = {}
 ---@field bOverrideVisibilitySettings boolean
 ---@field bOverrideGlobalBudgetScalingSettings boolean
 ---@field bOverrideCullProxySettings boolean
-FNiagaraSystemScalabilityOverride = {}
+local FNiagaraSystemScalabilityOverride = {}
 
 
 
 ---@class FNiagaraSystemScalabilityOverrides
 ---@field Overrides TArray<FNiagaraSystemScalabilityOverride>
-FNiagaraSystemScalabilityOverrides = {}
+local FNiagaraSystemScalabilityOverrides = {}
 
 
 
@@ -1228,20 +1228,20 @@ FNiagaraSystemScalabilityOverrides = {}
 ---@field MaxSystemProxies int32
 ---@field VisibilityCulling FNiagaraSystemVisibilityCullingSettings
 ---@field BudgetScaling FNiagaraGlobalBudgetScaling
-FNiagaraSystemScalabilitySettings = {}
+local FNiagaraSystemScalabilitySettings = {}
 
 
 
 ---@class FNiagaraSystemScalabilitySettingsArray
 ---@field Settings TArray<FNiagaraSystemScalabilitySettings>
-FNiagaraSystemScalabilitySettingsArray = {}
+local FNiagaraSystemScalabilitySettingsArray = {}
 
 
 
 ---@class FNiagaraSystemSimCacheCaptureReply
 ---@field ComponentName FName
 ---@field SimCacheData TArray<uint8>
-FNiagaraSystemSimCacheCaptureReply = {}
+local FNiagaraSystemSimCacheCaptureReply = {}
 
 
 
@@ -1249,7 +1249,7 @@ FNiagaraSystemSimCacheCaptureReply = {}
 ---@field ComponentName FName
 ---@field CaptureDelayFrames uint32
 ---@field CaptureFrames uint32
-FNiagaraSystemSimCacheCaptureRequest = {}
+local FNiagaraSystemSimCacheCaptureRequest = {}
 
 
 
@@ -1259,7 +1259,7 @@ FNiagaraSystemSimCacheCaptureRequest = {}
 ---@field ComponentsToNotifySimDestroy TArray<UNiagaraComponent>
 ---@field SystemSimsToDestroy TArray<UNiagaraSystem>
 ---@field SystemSimsToRecache TArray<UNiagaraSystem>
-FNiagaraSystemUpdateContext = {}
+local FNiagaraSystemUpdateContext = {}
 
 
 
@@ -1269,7 +1269,7 @@ FNiagaraSystemUpdateContext = {}
 ---@field bAllowPreCullingByViewFrustum boolean
 ---@field MaxTimeOutsideViewFrustum float
 ---@field MaxTimeWithoutRender float
-FNiagaraSystemVisibilityCullingSettings = {}
+local FNiagaraSystemVisibilityCullingSettings = {}
 
 
 
@@ -1277,13 +1277,13 @@ FNiagaraSystemVisibilityCullingSettings = {}
 ---@field ClassStructOrEnum UObject
 ---@field UnderlyingType uint16
 ---@field Flags uint8
-FNiagaraTypeDefinition = {}
+local FNiagaraTypeDefinition = {}
 
 
 
 ---@class FNiagaraTypeDefinitionHandle
 ---@field RegisteredTypeIndex int32
-FNiagaraTypeDefinitionHandle = {}
+local FNiagaraTypeDefinitionHandle = {}
 
 
 
@@ -1294,33 +1294,33 @@ FNiagaraTypeDefinitionHandle = {}
 ---@field Int32ComponentRegisterOffsets TArray<uint32>
 ---@field HalfComponentByteOffsets TArray<uint32>
 ---@field HalfComponentRegisterOffsets TArray<uint32>
-FNiagaraTypeLayoutInfo = {}
+local FNiagaraTypeLayoutInfo = {}
 
 
 
 ---@class FNiagaraUObjectPropertyReaderRemap
 ---@field GraphName FName
 ---@field RemapName FName
-FNiagaraUObjectPropertyReaderRemap = {}
+local FNiagaraUObjectPropertyReaderRemap = {}
 
 
 
 ---@class FNiagaraUserParameterBinding
 ---@field Parameter FNiagaraVariable
-FNiagaraUserParameterBinding = {}
+local FNiagaraUserParameterBinding = {}
 
 
 
 ---@class FNiagaraUserRedirectionParameterStore : FNiagaraParameterStore
 ---@field UserParameterRedirects TMap<FNiagaraVariable, FNiagaraVariable>
-FNiagaraUserRedirectionParameterStore = {}
+local FNiagaraUserRedirectionParameterStore = {}
 
 
 
 ---@class FNiagaraVMExecutableByteCode
 ---@field Data TArray<uint8>
 ---@field UncompressedSize int32
-FNiagaraVMExecutableByteCode = {}
+local FNiagaraVMExecutableByteCode = {}
 
 
 
@@ -1344,7 +1344,7 @@ FNiagaraVMExecutableByteCode = {}
 ---@field ExperimentalContextData TArray<uint8>
 ---@field bReadsSignificanceIndex boolean
 ---@field bNeedsGPUContextInit boolean
-FNiagaraVMExecutableData = {}
+local FNiagaraVMExecutableData = {}
 
 
 
@@ -1359,13 +1359,13 @@ FNiagaraVMExecutableData = {}
 ---@field BaseScriptID FGuid
 ---@field BaseScriptCompileHash FNiagaraCompileHash
 ---@field ScriptVersionID FGuid
-FNiagaraVMExecutableDataId = {}
+local FNiagaraVMExecutableDataId = {}
 
 
 
 ---@class FNiagaraVariable : FNiagaraVariableBase
 ---@field VarData TArray<uint8>
-FNiagaraVariable = {}
+local FNiagaraVariable = {}
 
 
 
@@ -1376,20 +1376,20 @@ FNiagaraVariable = {}
 ---@field BindingSourceMode ENiagaraBindingSource
 ---@field bBindingExistsOnSource boolean
 ---@field bIsCachedParticleValue boolean
-FNiagaraVariableAttributeBinding = {}
+local FNiagaraVariableAttributeBinding = {}
 
 
 
 ---@class FNiagaraVariableBase
 ---@field Name FName
 ---@field TypeDefHandle FNiagaraTypeDefinitionHandle
-FNiagaraVariableBase = {}
+local FNiagaraVariableBase = {}
 
 
 
 ---@class FNiagaraVariableDataInterfaceBinding
 ---@field BoundVariable FNiagaraVariable
-FNiagaraVariableDataInterfaceBinding = {}
+local FNiagaraVariableDataInterfaceBinding = {}
 
 
 
@@ -1397,7 +1397,7 @@ FNiagaraVariableDataInterfaceBinding = {}
 ---@field Variable FNiagaraVariable
 ---@field Definition FText
 ---@field DataInterface UNiagaraDataInterface
-FNiagaraVariableInfo = {}
+local FNiagaraVariableInfo = {}
 
 
 
@@ -1406,7 +1406,7 @@ FNiagaraVariableInfo = {}
 ---@field Int32ComponentStart uint32
 ---@field HalfComponentStart uint32
 ---@field LayoutInfo FNiagaraTypeLayoutInfo
-FNiagaraVariableLayoutInfo = {}
+local FNiagaraVariableLayoutInfo = {}
 
 
 
@@ -1431,14 +1431,14 @@ FNiagaraVariableLayoutInfo = {}
 ---@field VariableGuid FGuid
 ---@field bIsStaticSwitch boolean
 ---@field StaticSwitchDefaultValue int32
-FNiagaraVariableMetaData = {}
+local FNiagaraVariableMetaData = {}
 
 
 
 ---@class FNiagaraVariableWithOffset : FNiagaraVariableBase
 ---@field Offset int32
 ---@field StructConverter FNiagaraLwcStructConverter
-FNiagaraVariableWithOffset = {}
+local FNiagaraVariableWithOffset = {}
 
 
 
@@ -1447,20 +1447,20 @@ FNiagaraVariableWithOffset = {}
 ---@field DataInterface UNiagaraDataInterface
 ---@field Bytes TArray<uint8>
 ---@field CurrentMode ENiagaraVariantMode
-FNiagaraVariant = {}
+local FNiagaraVariant = {}
 
 
 
 ---@class FNiagaraWildcard
-FNiagaraWildcard = {}
+local FNiagaraWildcard = {}
 
 
 ---@class FNiagaraWorldManagerTickFunction : FTickFunction
-FNiagaraWorldManagerTickFunction = {}
+local FNiagaraWorldManagerTickFunction = {}
 
 
 ---@class FParameterDefinitionsSubscription
-FParameterDefinitionsSubscription = {}
+local FParameterDefinitionsSubscription = {}
 
 
 ---@class FVMExternalFunctionBindingInfo
@@ -1469,21 +1469,21 @@ FParameterDefinitionsSubscription = {}
 ---@field InputParamLocations TArray<boolean>
 ---@field NumOutputs int32
 ---@field FunctionSpecifiers TArray<FVMFunctionSpecifier>
-FVMExternalFunctionBindingInfo = {}
+local FVMExternalFunctionBindingInfo = {}
 
 
 
 ---@class FVMFunctionSpecifier
 ---@field Key FName
 ---@field Value FName
-FVMFunctionSpecifier = {}
+local FVMFunctionSpecifier = {}
 
 
 
 ---@class FVersionedNiagaraEmitter
 ---@field Emitter UNiagaraEmitter
 ---@field Version FGuid
-FVersionedNiagaraEmitter = {}
+local FVersionedNiagaraEmitter = {}
 
 
 
@@ -1520,16 +1520,16 @@ FVersionedNiagaraEmitter = {}
 ---@field GPUComputeScript UNiagaraScript
 ---@field SharedEventGeneratorIds TArray<FName>
 ---@field CurrentScalabilitySettings FNiagaraEmitterScalabilitySettings
-FVersionedNiagaraEmitterData = {}
+local FVersionedNiagaraEmitterData = {}
 
 
 
 ---@class FVersionedNiagaraScriptData
-FVersionedNiagaraScriptData = {}
+local FVersionedNiagaraScriptData = {}
 
 
 ---@class INiagaraParticleCallbackHandler : IInterface
-INiagaraParticleCallbackHandler = {}
+local INiagaraParticleCallbackHandler = {}
 
 ---@param Data TArray<FBasicParticleData>
 ---@param NiagaraSystem UNiagaraSystem
@@ -1538,7 +1538,7 @@ function INiagaraParticleCallbackHandler:ReceiveParticleData(Data, NiagaraSystem
 
 
 ---@class INiagaraPhysicsAssetDICollectorInterface : IInterface
-INiagaraPhysicsAssetDICollectorInterface = {}
+local INiagaraPhysicsAssetDICollectorInterface = {}
 
 
 ---@class UAsyncNiagaraCaptureSimCache : UBlueprintAsyncActionBase
@@ -1551,7 +1551,7 @@ INiagaraPhysicsAssetDICollectorInterface = {}
 ---@field CaptureComplete FAsyncNiagaraCaptureSimCacheCaptureComplete
 ---@field bAdvanceSimulation boolean
 ---@field AdvanceDeltaTime float
-UAsyncNiagaraCaptureSimCache = {}
+local UAsyncNiagaraCaptureSimCache = {}
 
 ---@param bSuccess boolean
 function UAsyncNiagaraCaptureSimCache:OnCaptureComplete__DelegateSignature(bSuccess) end
@@ -1577,24 +1577,24 @@ function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheMultiFrame(SimCache,
 
 
 ---@class UMovieSceneNiagaraBoolParameterTrack : UMovieSceneNiagaraParameterTrack
-UMovieSceneNiagaraBoolParameterTrack = {}
+local UMovieSceneNiagaraBoolParameterTrack = {}
 
 
 ---@class UMovieSceneNiagaraColorParameterTrack : UMovieSceneNiagaraParameterTrack
-UMovieSceneNiagaraColorParameterTrack = {}
+local UMovieSceneNiagaraColorParameterTrack = {}
 
 
 ---@class UMovieSceneNiagaraFloatParameterTrack : UMovieSceneNiagaraParameterTrack
-UMovieSceneNiagaraFloatParameterTrack = {}
+local UMovieSceneNiagaraFloatParameterTrack = {}
 
 
 ---@class UMovieSceneNiagaraIntegerParameterTrack : UMovieSceneNiagaraParameterTrack
-UMovieSceneNiagaraIntegerParameterTrack = {}
+local UMovieSceneNiagaraIntegerParameterTrack = {}
 
 
 ---@class UMovieSceneNiagaraParameterTrack : UMovieSceneNiagaraTrack
 ---@field Parameter FNiagaraVariable
-UMovieSceneNiagaraParameterTrack = {}
+local UMovieSceneNiagaraParameterTrack = {}
 
 
 
@@ -1604,36 +1604,36 @@ UMovieSceneNiagaraParameterTrack = {}
 ---@field SectionEndBehavior ENiagaraSystemSpawnSectionEndBehavior
 ---@field AgeUpdateMode ENiagaraAgeUpdateMode
 ---@field bAllowScalability boolean
-UMovieSceneNiagaraSystemSpawnSection = {}
+local UMovieSceneNiagaraSystemSpawnSection = {}
 
 
 
 ---@class UMovieSceneNiagaraSystemTrack : UMovieSceneNiagaraTrack
-UMovieSceneNiagaraSystemTrack = {}
+local UMovieSceneNiagaraSystemTrack = {}
 
 
 ---@class UMovieSceneNiagaraTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneNiagaraTrack = {}
+local UMovieSceneNiagaraTrack = {}
 
 
 
 ---@class UMovieSceneNiagaraVectorParameterTrack : UMovieSceneNiagaraParameterTrack
 ---@field ChannelsUsed int32
-UMovieSceneNiagaraVectorParameterTrack = {}
+local UMovieSceneNiagaraVectorParameterTrack = {}
 
 
 
 ---@class UNiagaraBakerOutput : UObject
 ---@field OutputName FString
-UNiagaraBakerOutput = {}
+local UNiagaraBakerOutput = {}
 
 
 
 ---@class UNiagaraBakerOutputSimCache : UNiagaraBakerOutput
 ---@field SimCacheAssetPathFormat FString
 ---@field CreateParameters FNiagaraSimCacheCreateParameters
-UNiagaraBakerOutputSimCache = {}
+local UNiagaraBakerOutputSimCache = {}
 
 
 
@@ -1651,7 +1651,7 @@ UNiagaraBakerOutputSimCache = {}
 ---@field AtlasAssetPathFormat FString
 ---@field FramesAssetPathFormat FString
 ---@field FramesExportPathFormat FString
-UNiagaraBakerOutputTexture2D = {}
+local UNiagaraBakerOutputTexture2D = {}
 
 
 
@@ -1663,7 +1663,7 @@ UNiagaraBakerOutputTexture2D = {}
 ---@field AtlasAssetPathFormat FString
 ---@field FramesAssetPathFormat FString
 ---@field FramesExportPathFormat FString
-UNiagaraBakerOutputVolumeTexture = {}
+local UNiagaraBakerOutputVolumeTexture = {}
 
 
 
@@ -1687,7 +1687,7 @@ UNiagaraBakerOutputVolumeTexture = {}
 ---@field CameraOrthoWidth float
 ---@field bUseCameraAspectRatio boolean
 ---@field CameraAspectRatio float
-UNiagaraBakerSettings = {}
+local UNiagaraBakerSettings = {}
 
 
 
@@ -1696,7 +1696,7 @@ UNiagaraBakerSettings = {}
 ---@field EffectType UNiagaraEffectType
 ---@field Owner ANiagaraPerfBaselineActor
 ---@field System TSoftObjectPtr<UNiagaraSystem>
-UNiagaraBaselineController = {}
+local UNiagaraBaselineController = {}
 
 ---@return boolean
 function UNiagaraBaselineController:OnTickTest() end
@@ -1712,7 +1712,7 @@ function UNiagaraBaselineController:GetSystem() end
 ---@class UNiagaraBaselineController_Basic : UNiagaraBaselineController
 ---@field NumInstances int32
 ---@field SpawnedComponents TArray<UNiagaraComponent>
-UNiagaraBaselineController_Basic = {}
+local UNiagaraBaselineController_Basic = {}
 
 
 
@@ -1737,7 +1737,7 @@ UNiagaraBaselineController_Basic = {}
 ---@field bAllowScalability boolean
 ---@field SimCache UNiagaraSimCache
 ---@field CullProxy UNiagaraCullProxyComponent
-UNiagaraComponent = {}
+local UNiagaraComponent = {}
 
 ---@param InVariableName FName
 ---@param InValue FVector4
@@ -1941,7 +1941,7 @@ function UNiagaraComponent:AdvanceSimulation(TickCount, TickDeltaSeconds) end
 
 ---@class UNiagaraComponentPool : UObject
 ---@field WorldParticleSystemPools TMap<UNiagaraSystem, FNCPool>
-UNiagaraComponentPool = {}
+local UNiagaraComponentPool = {}
 
 
 
@@ -1956,7 +1956,7 @@ UNiagaraComponentPool = {}
 ---@field RendererVisibility int32
 ---@field TemplateComponent USceneComponent
 ---@field PropertyBindings TArray<FNiagaraComponentPropertyBinding>
-UNiagaraComponentRendererProperties = {}
+local UNiagaraComponentRendererProperties = {}
 
 
 
@@ -1966,22 +1966,22 @@ UNiagaraComponentRendererProperties = {}
 ---@field SuppressEmitterList TSet<FNiagaraEmitterNameSettingsRef>
 ---@field GPUEmitterAllowList TSet<FNiagaraEmitterNameSettingsRef>
 ---@field GpuDataInterfaceDenyList TSet<FName>
-UNiagaraComponentSettings = {}
+local UNiagaraComponentSettings = {}
 
 
 
 ---@class UNiagaraConvertInPlaceUtilityBase : UObject
-UNiagaraConvertInPlaceUtilityBase = {}
+local UNiagaraConvertInPlaceUtilityBase = {}
 
 
 ---@class UNiagaraCullProxyComponent : UNiagaraComponent
 ---@field Instances TArray<FNiagaraCulledComponentInfo>
-UNiagaraCullProxyComponent = {}
+local UNiagaraCullProxyComponent = {}
 
 
 
 ---@class UNiagaraDIRigidMeshCollisionFunctionLibrary : UBlueprintFunctionLibrary
-UNiagaraDIRigidMeshCollisionFunctionLibrary = {}
+local UNiagaraDIRigidMeshCollisionFunctionLibrary = {}
 
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
@@ -1990,13 +1990,13 @@ function UNiagaraDIRigidMeshCollisionFunctionLibrary:SetSourceActors(NiagaraSyst
 
 
 ---@class UNiagaraDataInterface : UNiagaraDataInterfaceBase
-UNiagaraDataInterface = {}
+local UNiagaraDataInterface = {}
 
 
 ---@class UNiagaraDataInterface2DArrayTexture : UNiagaraDataInterface
 ---@field Texture UTexture
 ---@field TextureUserParameter FNiagaraUserParameterBinding
-UNiagaraDataInterface2DArrayTexture = {}
+local UNiagaraDataInterface2DArrayTexture = {}
 
 
 
@@ -2006,55 +2006,55 @@ UNiagaraDataInterface2DArrayTexture = {}
 ---@field LocalPlayerIndex int32
 ---@field SourceActor TLazyObjectPtr<AActor>
 ---@field ActorOrComponentParameter FNiagaraUserParameterBinding
-UNiagaraDataInterfaceActorComponent = {}
+local UNiagaraDataInterfaceActorComponent = {}
 
 
 
 ---@class UNiagaraDataInterfaceArray : UNiagaraDataInterfaceRWBase
 ---@field GpuSyncMode ENiagaraGpuSyncMode
 ---@field MaxElements int32
-UNiagaraDataInterfaceArray = {}
+local UNiagaraDataInterfaceArray = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayBool : UNiagaraDataInterfaceArray
 ---@field BoolData TArray<boolean>
-UNiagaraDataInterfaceArrayBool = {}
+local UNiagaraDataInterfaceArrayBool = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayColor : UNiagaraDataInterfaceArray
 ---@field ColorData TArray<FLinearColor>
-UNiagaraDataInterfaceArrayColor = {}
+local UNiagaraDataInterfaceArrayColor = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayFloat : UNiagaraDataInterfaceArray
 ---@field FloatData TArray<float>
-UNiagaraDataInterfaceArrayFloat = {}
+local UNiagaraDataInterfaceArrayFloat = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayFloat2 : UNiagaraDataInterfaceArray
 ---@field InternalFloatData TArray<FVector2f>
-UNiagaraDataInterfaceArrayFloat2 = {}
+local UNiagaraDataInterfaceArrayFloat2 = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayFloat3 : UNiagaraDataInterfaceArray
 ---@field InternalFloatData TArray<FVector3f>
-UNiagaraDataInterfaceArrayFloat3 = {}
+local UNiagaraDataInterfaceArrayFloat3 = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayFloat4 : UNiagaraDataInterfaceArray
 ---@field InternalFloatData TArray<FVector4f>
-UNiagaraDataInterfaceArrayFloat4 = {}
+local UNiagaraDataInterfaceArrayFloat4 = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayFunctionLibrary : UBlueprintFunctionLibrary
-UNiagaraDataInterfaceArrayFunctionLibrary = {}
+local UNiagaraDataInterfaceArrayFunctionLibrary = {}
 
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
@@ -2250,31 +2250,31 @@ function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayBool(NiagaraSy
 
 ---@class UNiagaraDataInterfaceArrayInt32 : UNiagaraDataInterfaceArray
 ---@field IntData TArray<int32>
-UNiagaraDataInterfaceArrayInt32 = {}
+local UNiagaraDataInterfaceArrayInt32 = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayNiagaraID : UNiagaraDataInterfaceArray
 ---@field IntData TArray<FNiagaraID>
-UNiagaraDataInterfaceArrayNiagaraID = {}
+local UNiagaraDataInterfaceArrayNiagaraID = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayPosition : UNiagaraDataInterfaceArray
 ---@field PositionData TArray<FNiagaraPosition>
-UNiagaraDataInterfaceArrayPosition = {}
+local UNiagaraDataInterfaceArrayPosition = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayQuat : UNiagaraDataInterfaceArray
 ---@field InternalQuatData TArray<FQuat4f>
-UNiagaraDataInterfaceArrayQuat = {}
+local UNiagaraDataInterfaceArrayQuat = {}
 
 
 
 ---@class UNiagaraDataInterfaceArrayUInt8 : UNiagaraDataInterfaceArray
 ---@field InternalIntData TArray<uint8>
-UNiagaraDataInterfaceArrayUInt8 = {}
+local UNiagaraDataInterfaceArrayUInt8 = {}
 
 
 
@@ -2282,7 +2282,7 @@ UNiagaraDataInterfaceArrayUInt8 = {}
 ---@field MaxTracesPerParticle int32
 ---@field MaxRetraces int32
 ---@field TraceProvider ENDICollisionQuery_AsyncGpuTraceProvider::Type
-UNiagaraDataInterfaceAsyncGpuTrace = {}
+local UNiagaraDataInterfaceAsyncGpuTrace = {}
 
 
 
@@ -2290,7 +2290,7 @@ UNiagaraDataInterfaceAsyncGpuTrace = {}
 ---@field Submix USoundSubmix
 ---@field Resolution int32
 ---@field ScopeInMilliseconds float
-UNiagaraDataInterfaceAudioOscilloscope = {}
+local UNiagaraDataInterfaceAudioOscilloscope = {}
 
 
 
@@ -2303,7 +2303,7 @@ UNiagaraDataInterfaceAudioOscilloscope = {}
 ---@field MaxPlaysPerTick int32
 ---@field bStopWhenComponentIsDestroyed boolean
 ---@field bAllowLoopingOneShotSounds boolean
-UNiagaraDataInterfaceAudioPlayer = {}
+local UNiagaraDataInterfaceAudioPlayer = {}
 
 
 
@@ -2312,25 +2312,25 @@ UNiagaraDataInterfaceAudioPlayer = {}
 ---@field MinimumFrequency float
 ---@field MaximumFrequency float
 ---@field NoiseFloorDb float
-UNiagaraDataInterfaceAudioSpectrum = {}
+local UNiagaraDataInterfaceAudioSpectrum = {}
 
 
 
 ---@class UNiagaraDataInterfaceAudioSubmix : UNiagaraDataInterface
 ---@field Submix USoundSubmix
-UNiagaraDataInterfaceAudioSubmix = {}
+local UNiagaraDataInterfaceAudioSubmix = {}
 
 
 
 ---@class UNiagaraDataInterfaceCamera : UNiagaraDataInterface
 ---@field PlayerControllerIndex int32
 ---@field bRequireCurrentFrameData boolean
-UNiagaraDataInterfaceCamera = {}
+local UNiagaraDataInterfaceCamera = {}
 
 
 
 ---@class UNiagaraDataInterfaceCollisionQuery : UNiagaraDataInterface
-UNiagaraDataInterfaceCollisionQuery = {}
+local UNiagaraDataInterfaceCollisionQuery = {}
 
 
 ---@class UNiagaraDataInterfaceColorCurve : UNiagaraDataInterfaceCurveBase
@@ -2338,26 +2338,26 @@ UNiagaraDataInterfaceCollisionQuery = {}
 ---@field GreenCurve FRichCurve
 ---@field BlueCurve FRichCurve
 ---@field AlphaCurve FRichCurve
-UNiagaraDataInterfaceColorCurve = {}
+local UNiagaraDataInterfaceColorCurve = {}
 
 
 
 ---@class UNiagaraDataInterfaceCubeTexture : UNiagaraDataInterface
 ---@field Texture UTexture
 ---@field TextureUserParameter FNiagaraUserParameterBinding
-UNiagaraDataInterfaceCubeTexture = {}
+local UNiagaraDataInterfaceCubeTexture = {}
 
 
 
 ---@class UNiagaraDataInterfaceCurlNoise : UNiagaraDataInterface
 ---@field Seed uint32
-UNiagaraDataInterfaceCurlNoise = {}
+local UNiagaraDataInterfaceCurlNoise = {}
 
 
 
 ---@class UNiagaraDataInterfaceCurve : UNiagaraDataInterfaceCurveBase
 ---@field Curve FRichCurve
-UNiagaraDataInterfaceCurve = {}
+local UNiagaraDataInterfaceCurve = {}
 
 
 
@@ -2371,19 +2371,19 @@ UNiagaraDataInterfaceCurve = {}
 ---@field bExposeCurve boolean
 ---@field ExposedName FName
 ---@field ExposedTexture UTexture2D
-UNiagaraDataInterfaceCurveBase = {}
+local UNiagaraDataInterfaceCurveBase = {}
 
 
 
 ---@class UNiagaraDataInterfaceDebugDraw : UNiagaraDataInterface
 ---@field OverrideMaxLineInstances uint32
-UNiagaraDataInterfaceDebugDraw = {}
+local UNiagaraDataInterfaceDebugDraw = {}
 
 
 
 ---@class UNiagaraDataInterfaceEmitterProperties : UNiagaraDataInterface
 ---@field EmitterBinding FNiagaraDataInterfaceEmitterBinding
-UNiagaraDataInterfaceEmitterProperties = {}
+local UNiagaraDataInterfaceEmitterProperties = {}
 
 
 
@@ -2392,12 +2392,12 @@ UNiagaraDataInterfaceEmitterProperties = {}
 ---@field GPUAllocationMode ENDIExport_GPUAllocationMode
 ---@field GPUAllocationFixedSize int32
 ---@field GPUAllocationPerParticleSize float
-UNiagaraDataInterfaceExport = {}
+local UNiagaraDataInterfaceExport = {}
 
 
 
 ---@class UNiagaraDataInterfaceGBuffer : UNiagaraDataInterface
-UNiagaraDataInterfaceGBuffer = {}
+local UNiagaraDataInterfaceGBuffer = {}
 
 
 ---@class UNiagaraDataInterfaceGrid2D : UNiagaraDataInterfaceRWBase
@@ -2407,7 +2407,7 @@ UNiagaraDataInterfaceGBuffer = {}
 ---@field NumAttributes int32
 ---@field SetGridFromMaxAxis boolean
 ---@field WorldBBoxSize FVector2D
-UNiagaraDataInterfaceGrid2D = {}
+local UNiagaraDataInterfaceGrid2D = {}
 
 
 
@@ -2416,7 +2416,7 @@ UNiagaraDataInterfaceGrid2D = {}
 ---@field OverrideBufferFormat ENiagaraGpuBufferFormat
 ---@field bOverrideFormat boolean
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2DArray>
-UNiagaraDataInterfaceGrid2DCollection = {}
+local UNiagaraDataInterfaceGrid2DCollection = {}
 
 ---@param Component UNiagaraComponent
 ---@param SizeX int32
@@ -2442,7 +2442,7 @@ function UNiagaraDataInterfaceGrid2DCollection:FillRawTexture2D(Component, Dest,
 ---@class UNiagaraDataInterfaceGrid2DCollectionReader : UNiagaraDataInterfaceGrid2DCollection
 ---@field EmitterName FString
 ---@field DIName FString
-UNiagaraDataInterfaceGrid2DCollectionReader = {}
+local UNiagaraDataInterfaceGrid2DCollectionReader = {}
 
 
 
@@ -2452,7 +2452,7 @@ UNiagaraDataInterfaceGrid2DCollectionReader = {}
 ---@field NumCellsMaxAxis int32
 ---@field SetResolutionMethod ESetResolutionMethod
 ---@field WorldBBoxSize FVector
-UNiagaraDataInterfaceGrid3D = {}
+local UNiagaraDataInterfaceGrid3D = {}
 
 
 
@@ -2461,7 +2461,7 @@ UNiagaraDataInterfaceGrid3D = {}
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field OverrideBufferFormat ENiagaraGpuBufferFormat
 ---@field bOverrideFormat boolean
-UNiagaraDataInterfaceGrid3DCollection = {}
+local UNiagaraDataInterfaceGrid3DCollection = {}
 
 ---@param Component UNiagaraComponent
 ---@param SizeX int32
@@ -2490,7 +2490,7 @@ function UNiagaraDataInterfaceGrid3DCollection:FillRawVolumeTexture(Component, D
 ---@class UNiagaraDataInterfaceGrid3DCollectionReader : UNiagaraDataInterfaceGrid3DCollection
 ---@field EmitterName FString
 ---@field DIName FString
-UNiagaraDataInterfaceGrid3DCollectionReader = {}
+local UNiagaraDataInterfaceGrid3DCollectionReader = {}
 
 
 
@@ -2498,7 +2498,7 @@ UNiagaraDataInterfaceGrid3DCollectionReader = {}
 ---@field Size FIntPoint
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2D>
-UNiagaraDataInterfaceIntRenderTarget2D = {}
+local UNiagaraDataInterfaceIntRenderTarget2D = {}
 
 
 
@@ -2506,29 +2506,29 @@ UNiagaraDataInterfaceIntRenderTarget2D = {}
 ---@field SourceLandscape AActor
 ---@field SourceMode ENDILandscape_SourceMode
 ---@field PhysicalMaterials TArray<UPhysicalMaterial>
-UNiagaraDataInterfaceLandscape = {}
+local UNiagaraDataInterfaceLandscape = {}
 
 
 
 ---@class UNiagaraDataInterfaceMeshRendererInfo : UNiagaraDataInterface
 ---@field MeshRenderer UNiagaraMeshRendererProperties
-UNiagaraDataInterfaceMeshRendererInfo = {}
+local UNiagaraDataInterfaceMeshRendererInfo = {}
 
 
 
 ---@class UNiagaraDataInterfaceNeighborGrid3D : UNiagaraDataInterfaceGrid3D
 ---@field MaxNeighborsPerCell uint32
-UNiagaraDataInterfaceNeighborGrid3D = {}
+local UNiagaraDataInterfaceNeighborGrid3D = {}
 
 
 
 ---@class UNiagaraDataInterfaceOcclusion : UNiagaraDataInterface
-UNiagaraDataInterfaceOcclusion = {}
+local UNiagaraDataInterfaceOcclusion = {}
 
 
 ---@class UNiagaraDataInterfaceParticleRead : UNiagaraDataInterfaceRWBase
 ---@field EmitterName FString
-UNiagaraDataInterfaceParticleRead = {}
+local UNiagaraDataInterfaceParticleRead = {}
 
 
 
@@ -2536,25 +2536,25 @@ UNiagaraDataInterfaceParticleRead = {}
 ---@field DefaultSource UPhysicsAsset
 ---@field SoftSourceActor TSoftObjectPtr<AActor>
 ---@field MeshUserParameter FNiagaraUserParameterBinding
-UNiagaraDataInterfacePhysicsAsset = {}
+local UNiagaraDataInterfacePhysicsAsset = {}
 
 
 
 ---@class UNiagaraDataInterfacePlatformSet : UNiagaraDataInterface
 ---@field Platforms FNiagaraPlatformSet
-UNiagaraDataInterfacePlatformSet = {}
+local UNiagaraDataInterfacePlatformSet = {}
 
 
 
 ---@class UNiagaraDataInterfaceRWBase : UNiagaraDataInterface
-UNiagaraDataInterfaceRWBase = {}
+local UNiagaraDataInterfaceRWBase = {}
 
 
 ---@class UNiagaraDataInterfaceRasterizationGrid3D : UNiagaraDataInterfaceGrid3D
 ---@field NumAttributes int32
 ---@field Precision float
 ---@field ResetValue int32
-UNiagaraDataInterfaceRasterizationGrid3D = {}
+local UNiagaraDataInterfaceRasterizationGrid3D = {}
 
 
 
@@ -2567,7 +2567,7 @@ UNiagaraDataInterfaceRasterizationGrid3D = {}
 ---@field bOverrideFormat boolean
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2D>
-UNiagaraDataInterfaceRenderTarget2D = {}
+local UNiagaraDataInterfaceRenderTarget2D = {}
 
 
 
@@ -2578,7 +2578,7 @@ UNiagaraDataInterfaceRenderTarget2D = {}
 ---@field bOverrideFormat boolean
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2DArray>
-UNiagaraDataInterfaceRenderTarget2DArray = {}
+local UNiagaraDataInterfaceRenderTarget2DArray = {}
 
 
 
@@ -2589,7 +2589,7 @@ UNiagaraDataInterfaceRenderTarget2DArray = {}
 ---@field bOverrideFormat boolean
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTargetCube>
-UNiagaraDataInterfaceRenderTargetCube = {}
+local UNiagaraDataInterfaceRenderTargetCube = {}
 
 
 
@@ -2600,7 +2600,7 @@ UNiagaraDataInterfaceRenderTargetCube = {}
 ---@field bOverrideFormat boolean
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTargetVolume>
-UNiagaraDataInterfaceRenderTargetVolume = {}
+local UNiagaraDataInterfaceRenderTargetVolume = {}
 
 
 
@@ -2613,7 +2613,7 @@ UNiagaraDataInterfaceRenderTargetVolume = {}
 ---@field GlobalSearchForced boolean
 ---@field GlobalSearchFallback_Unscripted boolean
 ---@field MaxNumPrimitives int32
-UNiagaraDataInterfaceRigidMeshCollisionQuery = {}
+local UNiagaraDataInterfaceRigidMeshCollisionQuery = {}
 
 
 
@@ -2621,14 +2621,14 @@ UNiagaraDataInterfaceRigidMeshCollisionQuery = {}
 ---@field SimCacheBinding FNiagaraUserParameterBinding
 ---@field SimCache UNiagaraSimCache
 ---@field EmitterBinding FName
-UNiagaraDataInterfaceSimCacheReader = {}
+local UNiagaraDataInterfaceSimCacheReader = {}
 
 
 
 ---@class UNiagaraDataInterfaceSimpleCounter : UNiagaraDataInterface
 ---@field GpuSyncMode ENiagaraGpuSyncMode
 ---@field InitialValue int32
-UNiagaraDataInterfaceSimpleCounter = {}
+local UNiagaraDataInterfaceSimpleCounter = {}
 
 
 
@@ -2647,7 +2647,7 @@ UNiagaraDataInterfaceSimpleCounter = {}
 ---@field bExcludeBone boolean
 ---@field UvSetIndex int32
 ---@field bRequireCurrentFrameData boolean
-UNiagaraDataInterfaceSkeletalMesh = {}
+local UNiagaraDataInterfaceSkeletalMesh = {}
 
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
@@ -2659,13 +2659,13 @@ function UNiagaraDataInterfaceSkeletalMesh:OnSourceEndPlay(InSource, Reason) end
 ---@field SplineUserParameter FNiagaraUserParameterBinding
 ---@field bUseLUT boolean
 ---@field NumLUTSteps int32
-UNiagaraDataInterfaceSpline = {}
+local UNiagaraDataInterfaceSpline = {}
 
 
 
 ---@class UNiagaraDataInterfaceSpriteRendererInfo : UNiagaraDataInterface
 ---@field SpriteRenderer UNiagaraSpriteRendererProperties
-UNiagaraDataInterfaceSpriteRendererInfo = {}
+local UNiagaraDataInterfaceSpriteRendererInfo = {}
 
 
 
@@ -2677,7 +2677,7 @@ UNiagaraDataInterfaceSpriteRendererInfo = {}
 ---@field SectionFilter FNDIStaticMeshSectionFilter
 ---@field bUsePhysicsBodyVelocity boolean
 ---@field FilteredSockets TArray<FName>
-UNiagaraDataInterfaceStaticMesh = {}
+local UNiagaraDataInterfaceStaticMesh = {}
 
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
@@ -2687,7 +2687,7 @@ function UNiagaraDataInterfaceStaticMesh:OnSourceEndPlay(InSource, Reason) end
 ---@class UNiagaraDataInterfaceTexture : UNiagaraDataInterface
 ---@field Texture UTexture
 ---@field TextureUserParameter FNiagaraUserParameterBinding
-UNiagaraDataInterfaceTexture = {}
+local UNiagaraDataInterfaceTexture = {}
 
 
 
@@ -2696,7 +2696,7 @@ UNiagaraDataInterfaceTexture = {}
 ---@field PropertyRemap TArray<FNiagaraUObjectPropertyReaderRemap>
 ---@field SourceActor TSoftObjectPtr<AActor>
 ---@field SourceActorComponentClass TObjectPtr<UClass>
-UNiagaraDataInterfaceUObjectPropertyReader = {}
+local UNiagaraDataInterfaceUObjectPropertyReader = {}
 
 ---@param NiagaraComponent UNiagaraComponent
 ---@param UserParameterName FName
@@ -2708,7 +2708,7 @@ function UNiagaraDataInterfaceUObjectPropertyReader:SetUObjectReaderPropertyRema
 ---@class UNiagaraDataInterfaceVector2DCurve : UNiagaraDataInterfaceCurveBase
 ---@field XCurve FRichCurve
 ---@field YCurve FRichCurve
-UNiagaraDataInterfaceVector2DCurve = {}
+local UNiagaraDataInterfaceVector2DCurve = {}
 
 
 
@@ -2717,7 +2717,7 @@ UNiagaraDataInterfaceVector2DCurve = {}
 ---@field YCurve FRichCurve
 ---@field ZCurve FRichCurve
 ---@field WCurve FRichCurve
-UNiagaraDataInterfaceVector4Curve = {}
+local UNiagaraDataInterfaceVector4Curve = {}
 
 
 
@@ -2725,7 +2725,7 @@ UNiagaraDataInterfaceVector4Curve = {}
 ---@field XCurve FRichCurve
 ---@field YCurve FRichCurve
 ---@field ZCurve FRichCurve
-UNiagaraDataInterfaceVectorCurve = {}
+local UNiagaraDataInterfaceVectorCurve = {}
 
 
 
@@ -2734,42 +2734,42 @@ UNiagaraDataInterfaceVectorCurve = {}
 ---@field bTileX boolean
 ---@field bTileY boolean
 ---@field bTileZ boolean
-UNiagaraDataInterfaceVectorField = {}
+local UNiagaraDataInterfaceVectorField = {}
 
 
 
 ---@class UNiagaraDataInterfaceVirtualTexture : UNiagaraDataInterface
 ---@field Texture URuntimeVirtualTexture
 ---@field TextureUserParameter FNiagaraUserParameterBinding
-UNiagaraDataInterfaceVirtualTexture = {}
+local UNiagaraDataInterfaceVirtualTexture = {}
 
 
 
 ---@class UNiagaraDataInterfaceVolumeCache : UNiagaraDataInterface
 ---@field VolumeCache UVolumeCache
-UNiagaraDataInterfaceVolumeCache = {}
+local UNiagaraDataInterfaceVolumeCache = {}
 
 
 
 ---@class UNiagaraDataInterfaceVolumeTexture : UNiagaraDataInterface
 ---@field Texture UTexture
 ---@field TextureUserParameter FNiagaraUserParameterBinding
-UNiagaraDataInterfaceVolumeTexture = {}
+local UNiagaraDataInterfaceVolumeTexture = {}
 
 
 
 ---@class UNiagaraDebugHUDSettings : UObject
 ---@field Data FNiagaraDebugHUDSettingsData
-UNiagaraDebugHUDSettings = {}
+local UNiagaraDebugHUDSettings = {}
 
 
 
 ---@class UNiagaraEditorDataBase : UObject
-UNiagaraEditorDataBase = {}
+local UNiagaraEditorDataBase = {}
 
 
 ---@class UNiagaraEditorParametersAdapterBase : UObject
-UNiagaraEditorParametersAdapterBase = {}
+local UNiagaraEditorParametersAdapterBase = {}
 
 
 ---@class UNiagaraEffectType : UObject
@@ -2784,7 +2784,7 @@ UNiagaraEditorParametersAdapterBase = {}
 ---@field PerformanceBaselineController UNiagaraBaselineController
 ---@field PerfBaselineStats FNiagaraPerfBaselineStats
 ---@field PerfBaselineVersion FGuid
-UNiagaraEffectType = {}
+local UNiagaraEffectType = {}
 
 
 
@@ -2798,22 +2798,22 @@ UNiagaraEffectType = {}
 ---@field SimulationStages TArray<UNiagaraSimulationStageBase>
 ---@field GPUComputeScript UNiagaraScript
 ---@field SharedEventGeneratorIds TArray<FName>
-UNiagaraEmitter = {}
+local UNiagaraEmitter = {}
 
 
 
 ---@class UNiagaraEventReceiverEmitterAction : UObject
-UNiagaraEventReceiverEmitterAction = {}
+local UNiagaraEventReceiverEmitterAction = {}
 
 
 ---@class UNiagaraEventReceiverEmitterAction_SpawnParticles : UNiagaraEventReceiverEmitterAction
 ---@field NumParticles uint32
-UNiagaraEventReceiverEmitterAction_SpawnParticles = {}
+local UNiagaraEventReceiverEmitterAction_SpawnParticles = {}
 
 
 
 ---@class UNiagaraFunctionLibrary : UBlueprintFunctionLibrary
-UNiagaraFunctionLibrary = {}
+local UNiagaraFunctionLibrary = {}
 
 ---@param SpawnParams FFXSystemSpawnParameters
 ---@return UNiagaraComponent
@@ -2917,7 +2917,7 @@ function UNiagaraFunctionLibrary:AcquireNiagaraGPURayTracedCollisionGroup(WorldC
 ---@field RadiusBinding FNiagaraVariableAttributeBinding
 ---@field VolumetricScatteringBinding FNiagaraVariableAttributeBinding
 ---@field RendererVisibilityTagBinding FNiagaraVariableAttributeBinding
-UNiagaraLightRendererProperties = {}
+local UNiagaraLightRendererProperties = {}
 
 
 
@@ -2967,12 +2967,12 @@ UNiagaraLightRendererProperties = {}
 ---@field ParticleMesh UStaticMesh
 ---@field PivotOffset FVector
 ---@field PivotOffsetSpace ENiagaraMeshPivotOffsetSpace
-UNiagaraMeshRendererProperties = {}
+local UNiagaraMeshRendererProperties = {}
 
 
 
 ---@class UNiagaraMessageDataBase : UObject
-UNiagaraMessageDataBase = {}
+local UNiagaraMessageDataBase = {}
 
 
 ---@class UNiagaraParameterCollection : UObject
@@ -2981,7 +2981,7 @@ UNiagaraMessageDataBase = {}
 ---@field SourceMaterialCollection UMaterialParameterCollection
 ---@field DefaultInstance UNiagaraParameterCollectionInstance
 ---@field CompileId FGuid
-UNiagaraParameterCollection = {}
+local UNiagaraParameterCollection = {}
 
 
 
@@ -2989,7 +2989,7 @@ UNiagaraParameterCollection = {}
 ---@field Collection UNiagaraParameterCollection
 ---@field OverridenParameters TArray<FNiagaraVariable>
 ---@field ParameterStorage FNiagaraParameterStore
-UNiagaraParameterCollectionInstance = {}
+local UNiagaraParameterCollectionInstance = {}
 
 ---@param InVariableName FString
 ---@param InValue FVector
@@ -3042,18 +3042,18 @@ function UNiagaraParameterCollectionInstance:GetBoolParameter(InVariableName) en
 
 
 ---@class UNiagaraParameterDefinitionsBase : UObject
-UNiagaraParameterDefinitionsBase = {}
+local UNiagaraParameterDefinitionsBase = {}
 
 
 ---@class UNiagaraPrecompileContainer : UObject
 ---@field Scripts TArray<UNiagaraScript>
 ---@field System UNiagaraSystem
-UNiagaraPrecompileContainer = {}
+local UNiagaraPrecompileContainer = {}
 
 
 
 ---@class UNiagaraPreviewAxis : UObject
-UNiagaraPreviewAxis = {}
+local UNiagaraPreviewAxis = {}
 
 ---@return int32
 function UNiagaraPreviewAxis:Num() end
@@ -3067,49 +3067,49 @@ function UNiagaraPreviewAxis:ApplyToPreview(PreviewComponent, PreviewIndex, bIsX
 ---@class UNiagaraPreviewAxis_InterpParamBase : UNiagaraPreviewAxis
 ---@field Param FName
 ---@field Count int32
-UNiagaraPreviewAxis_InterpParamBase = {}
+local UNiagaraPreviewAxis_InterpParamBase = {}
 
 
 
 ---@class UNiagaraPreviewAxis_InterpParamFloat : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min float
 ---@field Max float
-UNiagaraPreviewAxis_InterpParamFloat = {}
+local UNiagaraPreviewAxis_InterpParamFloat = {}
 
 
 
 ---@class UNiagaraPreviewAxis_InterpParamInt32 : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min int32
 ---@field Max int32
-UNiagaraPreviewAxis_InterpParamInt32 = {}
+local UNiagaraPreviewAxis_InterpParamInt32 = {}
 
 
 
 ---@class UNiagaraPreviewAxis_InterpParamLinearColor : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min FLinearColor
 ---@field Max FLinearColor
-UNiagaraPreviewAxis_InterpParamLinearColor = {}
+local UNiagaraPreviewAxis_InterpParamLinearColor = {}
 
 
 
 ---@class UNiagaraPreviewAxis_InterpParamVector : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min FVector
 ---@field Max FVector
-UNiagaraPreviewAxis_InterpParamVector = {}
+local UNiagaraPreviewAxis_InterpParamVector = {}
 
 
 
 ---@class UNiagaraPreviewAxis_InterpParamVector2D : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min FVector2D
 ---@field Max FVector2D
-UNiagaraPreviewAxis_InterpParamVector2D = {}
+local UNiagaraPreviewAxis_InterpParamVector2D = {}
 
 
 
 ---@class UNiagaraPreviewAxis_InterpParamVector4 : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min FVector4
 ---@field Max FVector4
-UNiagaraPreviewAxis_InterpParamVector4 = {}
+local UNiagaraPreviewAxis_InterpParamVector4 = {}
 
 
 
@@ -3122,7 +3122,7 @@ UNiagaraPreviewAxis_InterpParamVector4 = {}
 ---@field bAllowInCullProxies boolean
 ---@field OuterEmitterVersion FGuid
 ---@field bMotionBlurEnabled boolean
-UNiagaraRendererProperties = {}
+local UNiagaraRendererProperties = {}
 
 
 
@@ -3171,12 +3171,12 @@ UNiagaraRendererProperties = {}
 ---@field PrevRibbonWidthBinding FNiagaraVariableAttributeBinding
 ---@field PrevRibbonFacingBinding FNiagaraVariableAttributeBinding
 ---@field PrevRibbonTwistBinding FNiagaraVariableAttributeBinding
-UNiagaraRibbonRendererProperties = {}
+local UNiagaraRibbonRendererProperties = {}
 
 
 
 ---@class UNiagaraScratchPadContainer : UObject
-UNiagaraScratchPadContainer = {}
+local UNiagaraScratchPadContainer = {}
 
 
 ---@class UNiagaraScript : UNiagaraScriptBase
@@ -3189,13 +3189,13 @@ UNiagaraScratchPadContainer = {}
 ---@field CachedScriptVM FNiagaraVMExecutableData
 ---@field CachedParameterCollectionReferences TArray<UNiagaraParameterCollection>
 ---@field CachedDefaultDataInterfaces TArray<FNiagaraScriptDataInterfaceInfo>
-UNiagaraScript = {}
+local UNiagaraScript = {}
 
 function UNiagaraScript:RaiseOnGPUCompilationComplete() end
 
 
 ---@class UNiagaraScriptSourceBase : UObject
-UNiagaraScriptSourceBase = {}
+local UNiagaraScriptSourceBase = {}
 
 
 ---@class UNiagaraSettings : UDeveloperSettings
@@ -3219,20 +3219,20 @@ UNiagaraScriptSourceBase = {}
 ---@field NDIStaticMesh_AllowDistanceFields boolean
 ---@field NDICollisionQuery_AsyncGpuTraceProviderOrder TArray<ENDICollisionQuery_AsyncGpuTraceProvider::Type>
 ---@field PlatformSetRedirects TArray<FNiagaraPlatformSetRedirect>
-UNiagaraSettings = {}
+local UNiagaraSettings = {}
 
 
 
 ---@class UNiagaraSignificanceHandler : UObject
-UNiagaraSignificanceHandler = {}
+local UNiagaraSignificanceHandler = {}
 
 
 ---@class UNiagaraSignificanceHandlerAge : UNiagaraSignificanceHandler
-UNiagaraSignificanceHandlerAge = {}
+local UNiagaraSignificanceHandlerAge = {}
 
 
 ---@class UNiagaraSignificanceHandlerDistance : UNiagaraSignificanceHandler
-UNiagaraSignificanceHandlerDistance = {}
+local UNiagaraSignificanceHandlerDistance = {}
 
 
 ---@class UNiagaraSimCache : UObject
@@ -3244,7 +3244,7 @@ UNiagaraSignificanceHandlerDistance = {}
 ---@field CacheLayout FNiagaraSimCacheLayout
 ---@field CacheFrames TArray<FNiagaraSimCacheFrame>
 ---@field DataInterfaceStorage TMap<FNiagaraVariableBase, UObject>
-UNiagaraSimCache = {}
+local UNiagaraSimCache = {}
 
 ---@param OutValues TArray<FVector>
 ---@param AttributeName FName
@@ -3320,7 +3320,7 @@ function UNiagaraSimCache:GetAttributeCaptureMode() end
 
 
 ---@class UNiagaraSimCacheFunctionLibrary : UBlueprintFunctionLibrary
-UNiagaraSimCacheFunctionLibrary = {}
+local UNiagaraSimCacheFunctionLibrary = {}
 
 ---@param WorldContextObject UObject
 ---@return UNiagaraSimCache
@@ -3339,7 +3339,7 @@ function UNiagaraSimCacheFunctionLibrary:CaptureNiagaraSimCacheImmediate(SimCach
 ---@field Script UNiagaraScript
 ---@field SimulationStageName FName
 ---@field bEnabled boolean
-UNiagaraSimulationStageBase = {}
+local UNiagaraSimulationStageBase = {}
 
 
 
@@ -3364,7 +3364,7 @@ UNiagaraSimulationStageBase = {}
 ---@field OverrideGpuDispatchType ENiagaraGpuDispatchType
 ---@field bOverrideGpuDispatchNumThreads boolean
 ---@field OverrideGpuDispatchNumThreads FIntVector
-UNiagaraSimulationStageGeneric = {}
+local UNiagaraSimulationStageGeneric = {}
 
 
 
@@ -3419,7 +3419,7 @@ UNiagaraSimulationStageGeneric = {}
 ---@field PrevSpriteAlignmentBinding FNiagaraVariableAttributeBinding
 ---@field PrevCameraOffsetBinding FNiagaraVariableAttributeBinding
 ---@field PrevPivotOffsetBinding FNiagaraVariableAttributeBinding
-UNiagaraSpriteRendererProperties = {}
+local UNiagaraSpriteRendererProperties = {}
 
 
 
@@ -3468,12 +3468,12 @@ UNiagaraSpriteRendererProperties = {}
 ---@field bHasSystemScriptDIsWithPerInstanceData boolean
 ---@field bNeedsGPUContextInitForDataInterfaces boolean
 ---@field UserDINamesReadInSystemScripts TArray<FName>
-UNiagaraSystem = {}
+local UNiagaraSystem = {}
 
 
 
 ---@class UNiagaraValidationRule : UObject
-UNiagaraValidationRule = {}
+local UNiagaraValidationRule = {}
 
 
 ---@class UVolumeCache : UObject
@@ -3482,7 +3482,7 @@ UNiagaraValidationRule = {}
 ---@field Resolution FIntVector
 ---@field FrameRangeStart int32
 ---@field FrameRangeEnd int32
-UVolumeCache = {}
+local UVolumeCache = {}
 
 
 

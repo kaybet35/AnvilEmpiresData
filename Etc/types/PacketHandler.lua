@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class UHandlerComponentFactory : UObject
-UHandlerComponentFactory = {}
+local UHandlerComponentFactory = {}
 
 
 ---@class UPacketHandlerProfileConfig : UObject
 ---@field Components TArray<FString>
-UPacketHandlerProfileConfig = {}
+local UPacketHandlerProfileConfig = {}
 
 
 

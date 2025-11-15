@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisWallT3_C : AVisSpline
-ABPVisWallT3_C = {}
+local ABPVisWallT3_C = {}
 
 

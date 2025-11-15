@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UUnderworldModuleDynamicBranchPlaceholder_C : UEntityTemplate
-UUnderworldModuleDynamicBranchPlaceholder_C = {}
+local UUnderworldModuleDynamicBranchPlaceholder_C = {}
 
 

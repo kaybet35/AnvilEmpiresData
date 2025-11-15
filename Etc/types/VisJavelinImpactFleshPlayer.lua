@@ -2,7 +2,7 @@
 
 ---@class AVisJavelinImpactFleshPlayer_C : AVisEffect
 ---@field Vocals UAudioComponent
-AVisJavelinImpactFleshPlayer_C = {}
+local AVisJavelinImpactFleshPlayer_C = {}
 
 
 

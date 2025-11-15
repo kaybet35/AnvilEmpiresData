@@ -1,19 +1,19 @@
 ---@enum EDeadZoneType
-EDeadZoneType = {
+local EDeadZoneType = {
     Axial = 0,
     Radial = 1,
     EDeadZoneType_MAX = 2,
 }
 
 ---@enum EFOVScalingType
-EFOVScalingType = {
+local EFOVScalingType = {
     Standard = 0,
     UE4_BackCompat = 1,
     EFOVScalingType_MAX = 2,
 }
 
 ---@enum EInputActionValueType
-EInputActionValueType = {
+local EInputActionValueType = {
     Boolean = 0,
     Axis1D = 1,
     Axis2D = 2,
@@ -22,7 +22,7 @@ EInputActionValueType = {
 }
 
 ---@enum EInputAxisSwizzle
-EInputAxisSwizzle = {
+local EInputAxisSwizzle = {
     YXZ = 0,
     ZYX = 1,
     XZY = 2,
@@ -32,7 +32,7 @@ EInputAxisSwizzle = {
 }
 
 ---@enum EInputMappingRebuildType
-EInputMappingRebuildType = {
+local EInputMappingRebuildType = {
     None = 0,
     Rebuild = 1,
     RebuildWithFlush = 2,
@@ -40,7 +40,7 @@ EInputMappingRebuildType = {
 }
 
 ---@enum EMappingQueryIssue
-EMappingQueryIssue = {
+local EMappingQueryIssue = {
     NoIssue = 0,
     ReservedByAction = 1,
     HidesExistingMapping = 2,
@@ -52,7 +52,7 @@ EMappingQueryIssue = {
 }
 
 ---@enum EMappingQueryResult
-EMappingQueryResult = {
+local EMappingQueryResult = {
     Error_EnhancedInputNotEnabled = 0,
     Error_InputContextNotInActiveContexts = 1,
     Error_InvalidAction = 2,
@@ -62,7 +62,7 @@ EMappingQueryResult = {
 }
 
 ---@enum ETriggerEvent
-ETriggerEvent = {
+local ETriggerEvent = {
     None = 0,
     Triggered = 1,
     Started = 2,
@@ -73,7 +73,7 @@ ETriggerEvent = {
 }
 
 ---@enum ETriggerEventsSupported
-ETriggerEventsSupported = {
+local ETriggerEventsSupported = {
     None = 0,
     Instant = 1,
     Uninterruptible = 2,
@@ -83,7 +83,7 @@ ETriggerEventsSupported = {
 }
 
 ---@enum ETriggerState
-ETriggerState = {
+local ETriggerState = {
     None = 0,
     Ongoing = 1,
     Triggered = 2,
@@ -91,7 +91,7 @@ ETriggerState = {
 }
 
 ---@enum ETriggerType
-ETriggerType = {
+local ETriggerType = {
     Explicit = 0,
     Implicit = 1,
     Blocker = 2,

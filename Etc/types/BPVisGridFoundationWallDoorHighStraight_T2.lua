@@ -2,7 +2,7 @@
 
 ---@class ABPVisGridFoundationWallDoorHighStraight_T2_C : AVisStructure
 ---@field StaticMesh UStaticMeshComponent
-ABPVisGridFoundationWallDoorHighStraight_T2_C = {}
+local ABPVisGridFoundationWallDoorHighStraight_T2_C = {}
 
 
 

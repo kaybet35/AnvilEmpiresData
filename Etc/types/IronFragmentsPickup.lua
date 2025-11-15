@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UIronFragmentsPickup_C : UEntityTemplate
-UIronFragmentsPickup_C = {}
+local UIronFragmentsPickup_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAxeFlint_C : UItemTemplate
-UAxeFlint_C = {}
+local UAxeFlint_C = {}
 
 

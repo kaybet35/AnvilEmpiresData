@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemFoodBread_C : UVisItem
-UBPVisItemFoodBread_C = {}
+local UBPVisItemFoodBread_C = {}
 
 

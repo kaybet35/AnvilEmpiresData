@@ -135,7 +135,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationSideRampDiagonal_T2_C = {}
+local ABPVisGridFoundationSideRampDiagonal_T2_C = {}
 
 
 

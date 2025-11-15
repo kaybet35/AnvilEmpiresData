@@ -2,7 +2,7 @@
 
 ---@class AMediumBoatFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AMediumBoatFootprint_C = {}
+local AMediumBoatFootprint_C = {}
 
 
 

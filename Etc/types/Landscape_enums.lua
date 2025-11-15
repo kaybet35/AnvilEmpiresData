@@ -1,5 +1,5 @@
 ---@enum EGrassScaling
-EGrassScaling = {
+local EGrassScaling = {
     Uniform = 0,
     Free = 1,
     LockXY = 2,
@@ -7,7 +7,7 @@ EGrassScaling = {
 }
 
 ---@enum EHeightmapRTType
-EHeightmapRTType = {
+local EHeightmapRTType = {
     HeightmapRT_CombinedAtlas = 0,
     HeightmapRT_CombinedNonAtlas = 1,
     HeightmapRT_Scratch1 = 2,
@@ -25,14 +25,14 @@ EHeightmapRTType = {
 }
 
 ---@enum ELandscapeBlendMode
-ELandscapeBlendMode = {
+local ELandscapeBlendMode = {
     LSBM_AdditiveBlend = 0,
     LSBM_AlphaBlend = 1,
     LSBM_MAX = 2,
 }
 
 ---@enum ELandscapeClearMode
-ELandscapeClearMode = {
+local ELandscapeClearMode = {
     Clear_Weightmap = 1,
     Clear_Heightmap = 2,
     Clear_All = 3,
@@ -40,7 +40,7 @@ ELandscapeClearMode = {
 }
 
 ---@enum ELandscapeCustomizedCoordType
-ELandscapeCustomizedCoordType = {
+local ELandscapeCustomizedCoordType = {
     LCCT_None = 0,
     LCCT_CustomUV0 = 1,
     LCCT_CustomUV1 = 2,
@@ -50,7 +50,7 @@ ELandscapeCustomizedCoordType = {
 }
 
 ---@enum ELandscapeGizmoType
-ELandscapeGizmoType = {
+local ELandscapeGizmoType = {
     LGT_None = 0,
     LGT_Height = 1,
     LGT_Weight = 2,
@@ -58,21 +58,21 @@ ELandscapeGizmoType = {
 }
 
 ---@enum ELandscapeImportAlphamapType
-ELandscapeImportAlphamapType = {
+local ELandscapeImportAlphamapType = {
     Additive = 0,
     Layered = 1,
     ELandscapeImportAlphamapType_MAX = 2,
 }
 
 ---@enum ELandscapeLODFalloff
-ELandscapeLODFalloff = {
+local ELandscapeLODFalloff = {
     Linear = 0,
     SquareRoot = 1,
     ELandscapeLODFalloff_MAX = 2,
 }
 
 ---@enum ELandscapeLayerBlendType
-ELandscapeLayerBlendType = {
+local ELandscapeLayerBlendType = {
     LB_WeightBlend = 0,
     LB_AlphaBlend = 1,
     LB_HeightBlend = 2,
@@ -80,7 +80,7 @@ ELandscapeLayerBlendType = {
 }
 
 ---@enum ELandscapeLayerDisplayMode
-ELandscapeLayerDisplayMode = {
+local ELandscapeLayerDisplayMode = {
     Default = 0,
     Alphabetical = 1,
     UserSpecific = 2,
@@ -88,7 +88,7 @@ ELandscapeLayerDisplayMode = {
 }
 
 ---@enum ELandscapeLayerPaintingRestriction
-ELandscapeLayerPaintingRestriction = {
+local ELandscapeLayerPaintingRestriction = {
     None = 0,
     UseMaxLayers = 1,
     ExistingOnly = 2,
@@ -97,7 +97,7 @@ ELandscapeLayerPaintingRestriction = {
 }
 
 ---@enum ELandscapeResizeMode
-ELandscapeResizeMode = {
+local ELandscapeResizeMode = {
     Resample = 0,
     Clip = 1,
     Expand = 2,
@@ -105,7 +105,7 @@ ELandscapeResizeMode = {
 }
 
 ---@enum ELandscapeSetupErrors
-ELandscapeSetupErrors = {
+local ELandscapeSetupErrors = {
     LSE_None = 0,
     LSE_NoLandscapeInfo = 1,
     LSE_CollsionXY = 2,
@@ -114,7 +114,7 @@ ELandscapeSetupErrors = {
 }
 
 ---@enum ERTDrawingType
-ERTDrawingType = {
+local ERTDrawingType = {
     RTAtlas = 0,
     RTAtlasToNonAtlas = 1,
     RTNonAtlasToAtlas = 2,
@@ -124,7 +124,7 @@ ERTDrawingType = {
 }
 
 ---@enum ESplineModulationColorMask
-ESplineModulationColorMask = {
+local ESplineModulationColorMask = {
     Red = 0,
     Green = 1,
     Blue = 2,
@@ -133,7 +133,7 @@ ESplineModulationColorMask = {
 }
 
 ---@enum ETerrainCoordMappingType
-ETerrainCoordMappingType = {
+local ETerrainCoordMappingType = {
     TCMT_Auto = 0,
     TCMT_XY = 1,
     TCMT_XZ = 2,
@@ -142,7 +142,7 @@ ETerrainCoordMappingType = {
 }
 
 ---@enum EWeightmapRTType
-EWeightmapRTType = {
+local EWeightmapRTType = {
     WeightmapRT_Scratch_RGBA = 0,
     WeightmapRT_Scratch1 = 1,
     WeightmapRT_Scratch2 = 2,
@@ -160,7 +160,7 @@ EWeightmapRTType = {
 }
 
 ---@enum LandscapeSplineMeshOrientation
-LandscapeSplineMeshOrientation = {
+local LandscapeSplineMeshOrientation = {
     LSMO_XUp = 0,
     LSMO_YUp = 1,
     LSMO_MAX = 2,

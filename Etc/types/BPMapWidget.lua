@@ -6,7 +6,7 @@
 ---@field BPTimeSeasonWidget UBPTimeSeasonWidget_C
 ---@field Frame UImage
 ---@field DynamicMaterialInstance UMaterialInstanceDynamic
-UBPMapWidget_C = {}
+local UBPMapWidget_C = {}
 
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float

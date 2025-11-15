@@ -7,14 +7,14 @@
 ---@field AutoEscalateTime int16
 ---@field HighestTimePeriod int8
 ---@field AllTimePeriods TArray<int8>
-FEscalationState = {}
+local FEscalationState = {}
 
 
 
 ---@class FFastArraySerializer
 ---@field ArrayReplicationKey int32
 ---@field DeltaFlags EFastArraySerializerDeltaFlags
-FFastArraySerializer = {}
+local FFastArraySerializer = {}
 
 
 
@@ -22,14 +22,14 @@ FFastArraySerializer = {}
 ---@field ReplicationID int32
 ---@field ReplicationKey int32
 ---@field MostRecentArrayReplicationKey int32
-FFastArraySerializerItem = {}
+local FFastArraySerializerItem = {}
 
 
 
 ---@class FNetAnalyticsDataConfig
 ---@field DataName FName
 ---@field bEnabled boolean
-FNetAnalyticsDataConfig = {}
+local FNetAnalyticsDataConfig = {}
 
 
 
@@ -40,32 +40,32 @@ FNetAnalyticsDataConfig = {}
 ---@field DescalateQuotaFaultsPerPeriod int16
 ---@field DescalateQuotaFaultPercentPerPeriod int8
 ---@field EscalateQuotaTimePeriod int8
-FNetFaultState = {}
+local FNetFaultState = {}
 
 
 
 ---@class FStateStruct
 ---@field StateName FString
-FStateStruct = {}
+local FStateStruct = {}
 
 
 
 ---@class UEscalationManagerConfig : UStatePerObjectConfig
 ---@field EscalationSeverity TArray<FString>
-UEscalationManagerConfig = {}
+local UEscalationManagerConfig = {}
 
 
 
 ---@class UNetAnalyticsAggregatorConfig : UObject
 ---@field NetAnalyticsData TArray<FNetAnalyticsDataConfig>
-UNetAnalyticsAggregatorConfig = {}
+local UNetAnalyticsAggregatorConfig = {}
 
 
 
 ---@class UStatePerObjectConfig : UObject
 ---@field PerObjectConfigSection FString
 ---@field bEnabled boolean
-UStatePerObjectConfig = {}
+local UStatePerObjectConfig = {}
 
 
 

@@ -2,7 +2,7 @@
 
 ---@class ATownCraftingStoneFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ATownCraftingStoneFootprint_C = {}
+local ATownCraftingStoneFootprint_C = {}
 
 
 

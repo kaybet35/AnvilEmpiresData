@@ -341,7 +341,7 @@
 ---@field AmbientUnderworld01_cue UAudioComponent
 ---@field CustomHeightmap UCustomHeightmapComponent
 ---@field ['Static Meshes'] USceneComponent
-ABPUnderworldDynamicModuleStraight01_C = {}
+local ABPUnderworldDynamicModuleStraight01_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPGenericLocation_C : UMapIcon
-UBPGenericLocation_C = {}
+local UBPGenericLocation_C = {}
 
 

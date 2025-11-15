@@ -2,7 +2,7 @@
 
 ---@class ABPVisGridFoundationRampTriangularCWDiagonal_C : AVisStructure
 ---@field StaticMesh UStaticMeshComponent
-ABPVisGridFoundationRampTriangularCWDiagonal_C = {}
+local ABPVisGridFoundationRampTriangularCWDiagonal_C = {}
 
 
 

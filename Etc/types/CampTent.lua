@@ -2,7 +2,7 @@
 
 ---@class ACampTent_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ACampTent_C = {}
+local ACampTent_C = {}
 
 
 

@@ -7,7 +7,7 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field StructurePanel UBPAnvilPanel_C
-UBPRelicTechCenterWindow_C = {}
+local UBPRelicTechCenterWindow_C = {}
 
 
 

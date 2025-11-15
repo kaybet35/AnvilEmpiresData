@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterCeilingInteriorTurnDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterCeilingInteriorTurnDiagonalFootprint_C = {}
+local AFamilyCenterCeilingInteriorTurnDiagonalFootprint_C = {}
 
 
 

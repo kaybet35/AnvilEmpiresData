@@ -2,7 +2,7 @@
 
 ---@class ABeaconTowerFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ABeaconTowerFootprint_C = {}
+local ABeaconTowerFootprint_C = {}
 
 
 

@@ -2,12 +2,12 @@
 
 ---@class UAndroidPermissionCallbackProxy : UObject
 ---@field OnPermissionsGrantedDynamicDelegate FAndroidPermissionCallbackProxyOnPermissionsGrantedDynamicDelegate
-UAndroidPermissionCallbackProxy = {}
+local UAndroidPermissionCallbackProxy = {}
 
 
 
 ---@class UAndroidPermissionFunctionLibrary : UBlueprintFunctionLibrary
-UAndroidPermissionFunctionLibrary = {}
+local UAndroidPermissionFunctionLibrary = {}
 
 ---@param permission FString
 ---@return boolean

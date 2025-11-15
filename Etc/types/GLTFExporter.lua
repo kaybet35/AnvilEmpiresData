@@ -4,7 +4,7 @@
 ---@field Suggestions TArray<FString>
 ---@field Warnings TArray<FString>
 ---@field Errors TArray<FString>
-FGLTFExportMessages = {}
+local FGLTFExportMessages = {}
 
 
 
@@ -15,12 +15,12 @@ FGLTFExportMessages = {}
 ---@field Filter TextureFilter
 ---@field bOverrideTiling boolean
 ---@field Tiling TextureAddress
-FGLTFOverrideMaterialBakeSettings = {}
+local FGLTFOverrideMaterialBakeSettings = {}
 
 
 
 ---@class UGLTFAnimSequenceExporter : UGLTFExporter
-UGLTFAnimSequenceExporter = {}
+local UGLTFAnimSequenceExporter = {}
 
 
 ---@class UGLTFExportOptions : UObject
@@ -61,13 +61,13 @@ UGLTFAnimSequenceExporter = {}
 ---@field ExportMaterialVariants EGLTFMaterialVariantMode
 ---@field bExportMeshVariants boolean
 ---@field bExportVisibilityVariants boolean
-UGLTFExportOptions = {}
+local UGLTFExportOptions = {}
 
 function UGLTFExportOptions:ResetToDefault() end
 
 
 ---@class UGLTFExporter : UExporter
-UGLTFExporter = {}
+local UGLTFExporter = {}
 
 ---@param Object UObject
 ---@param FilePath FString
@@ -79,28 +79,28 @@ function UGLTFExporter:ExportToGLTF(Object, FilePath, Options, SelectedActors, O
 
 
 ---@class UGLTFLevelExporter : UGLTFExporter
-UGLTFLevelExporter = {}
+local UGLTFLevelExporter = {}
 
 
 ---@class UGLTFLevelSequenceExporter : UGLTFExporter
-UGLTFLevelSequenceExporter = {}
+local UGLTFLevelSequenceExporter = {}
 
 
 ---@class UGLTFLevelVariantSetsExporter : UGLTFExporter
-UGLTFLevelVariantSetsExporter = {}
+local UGLTFLevelVariantSetsExporter = {}
 
 
 ---@class UGLTFMaterialExportOptions : UAssetUserData
 ---@field Proxy UMaterialInterface
 ---@field Default FGLTFOverrideMaterialBakeSettings
 ---@field Inputs TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>
-UGLTFMaterialExportOptions = {}
+local UGLTFMaterialExportOptions = {}
 
 
 
 ---@class UGLTFMaterialExporter : UGLTFExporter
 ---@field DefaultPreviewMesh UStaticMesh
-UGLTFMaterialExporter = {}
+local UGLTFMaterialExporter = {}
 
 
 
@@ -110,16 +110,16 @@ UGLTFMaterialExporter = {}
 ---@field DefaultMaterialBakeFilter TextureFilter
 ---@field DefaultMaterialBakeTiling TextureAddress
 ---@field DefaultInputBakeSettings TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>
-UGLTFProxyOptions = {}
+local UGLTFProxyOptions = {}
 
 function UGLTFProxyOptions:ResetToDefault() end
 
 
 ---@class UGLTFSkeletalMeshExporter : UGLTFExporter
-UGLTFSkeletalMeshExporter = {}
+local UGLTFSkeletalMeshExporter = {}
 
 
 ---@class UGLTFStaticMeshExporter : UGLTFExporter
-UGLTFStaticMeshExporter = {}
+local UGLTFStaticMeshExporter = {}
 
 

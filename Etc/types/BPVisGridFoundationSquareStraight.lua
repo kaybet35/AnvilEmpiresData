@@ -42,7 +42,7 @@
 ---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field Scene USceneComponent
 ---@field TopMesh UStaticMeshComponent
-ABPVisGridFoundationSquareStraight_C = {}
+local ABPVisGridFoundationSquareStraight_C = {}
 
 
 

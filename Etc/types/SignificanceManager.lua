@@ -2,7 +2,7 @@
 
 ---@class USignificanceManager : UObject
 ---@field SignificanceManagerClassName FSoftClassPath
-USignificanceManager = {}
+local USignificanceManager = {}
 
 
 

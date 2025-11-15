@@ -7,7 +7,7 @@
 ---@field HorseBG UImage
 ---@field HungerIcon UImage
 ---@field StaminaIcon UImage
-UBPHorseVitalityWidget_C = {}
+local UBPHorseVitalityWidget_C = {}
 
 
 

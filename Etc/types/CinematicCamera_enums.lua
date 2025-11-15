@@ -1,5 +1,5 @@
 ---@enum ECameraFocusMethod
-ECameraFocusMethod = {
+local ECameraFocusMethod = {
     DoNotOverride = 0,
     Manual = 1,
     Tracking = 2,

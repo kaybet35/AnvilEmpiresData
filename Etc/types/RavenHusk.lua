@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URavenHusk_C : UEntityTemplate
-URavenHusk_C = {}
+local URavenHusk_C = {}
 
 

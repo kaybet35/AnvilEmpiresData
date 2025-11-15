@@ -2,7 +2,7 @@
 
 ---@class ARoadBodyFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ARoadBodyFootprint_C = {}
+local ARoadBodyFootprint_C = {}
 
 
 

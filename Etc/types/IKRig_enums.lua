@@ -1,5 +1,5 @@
 ---@enum EBasicAxis
-EBasicAxis = {
+local EBasicAxis = {
     X = 0,
     Y = 1,
     Z = 2,
@@ -10,7 +10,7 @@ EBasicAxis = {
 }
 
 ---@enum EIKRigGoalSpace
-EIKRigGoalSpace = {
+local EIKRigGoalSpace = {
     Component = 0,
     Additive = 1,
     World = 2,
@@ -18,7 +18,7 @@ EIKRigGoalSpace = {
 }
 
 ---@enum EIKRigGoalTransformSource
-EIKRigGoalTransformSource = {
+local EIKRigGoalTransformSource = {
     Manual = 0,
     Bone = 1,
     ActorComponent = 2,
@@ -26,7 +26,7 @@ EIKRigGoalTransformSource = {
 }
 
 ---@enum ERetargetRotationMode
-ERetargetRotationMode = {
+local ERetargetRotationMode = {
     Interpolated = 0,
     OneToOne = 1,
     OneToOneReversed = 2,
@@ -35,7 +35,7 @@ ERetargetRotationMode = {
 }
 
 ---@enum ERetargetTranslationMode
-ERetargetTranslationMode = {
+local ERetargetTranslationMode = {
     None = 0,
     GloballyScaled = 1,
     Absolute = 2,
@@ -43,7 +43,7 @@ ERetargetTranslationMode = {
 }
 
 ---@enum EWarpingDirectionSource
-EWarpingDirectionSource = {
+local EWarpingDirectionSource = {
     Goals = 0,
     Chain = 1,
     EWarpingDirectionSource_MAX = 2,

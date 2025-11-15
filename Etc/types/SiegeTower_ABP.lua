@@ -24,7 +24,7 @@
 ---@field __StructProperty_128 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -33,7 +33,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
 ---@field __FloatProperty_2 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -73,7 +73,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field ['Niagara Ladder Impact M'] UActorComponent
 ---@field ['Niagara Ladder Movement Audio'] UActorComponent
 ---@field ['Niagara Drawbridge Movement Audio'] UActorComponent
-USiegeTower_ABP_C = {}
+local USiegeTower_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function USiegeTower_ABP_C:AnimGraph(AnimGraph) end

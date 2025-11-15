@@ -2,7 +2,7 @@
 
 ---@class AConstraintsActor : AActor
 ---@field ConstraintsManager UConstraintsManager
-AConstraintsActor = {}
+local AConstraintsActor = {}
 
 
 
@@ -10,28 +10,28 @@ AConstraintsActor = {}
 ---@field Constraint TSoftObjectPtr<UTickableConstraint>
 ---@field ActiveChannel FMovieSceneConstraintChannel
 ---@field ConstraintCopyToSpawn UTickableConstraint
-FConstraintAndActiveChannel = {}
+local FConstraintAndActiveChannel = {}
 
 
 
 ---@class FConstraintTickFunction : FTickFunction
-FConstraintTickFunction = {}
+local FConstraintTickFunction = {}
 
 
 ---@class FMovieSceneConstraintChannel : FMovieSceneBoolChannel
-FMovieSceneConstraintChannel = {}
+local FMovieSceneConstraintChannel = {}
 
 
 ---@class UConstraintsManager : UObject
 ---@field OnConstraintAdded_BP FConstraintsManagerOnConstraintAdded_BP
 ---@field OnConstraintRemoved_BP FConstraintsManagerOnConstraintRemoved_BP
 ---@field Constraints TArray<UTickableConstraint>
-UConstraintsManager = {}
+local UConstraintsManager = {}
 
 
 
 ---@class UConstraintsScriptingLibrary : UBlueprintFunctionLibrary
-UConstraintsScriptingLibrary = {}
+local UConstraintsScriptingLibrary = {}
 
 ---@param InWorld UWorld
 ---@param InIndex int32
@@ -61,32 +61,32 @@ function UConstraintsScriptingLibrary:AddConstraint(InWorld, InParentHandle, InC
 ---@class UTickableConstraint : UObject
 ---@field ConstraintTick FConstraintTickFunction
 ---@field Active boolean
-UTickableConstraint = {}
+local UTickableConstraint = {}
 
 
 
 ---@class UTickableLookAtConstraint : UTickableTransformConstraint
 ---@field Axis FVector
-UTickableLookAtConstraint = {}
+local UTickableLookAtConstraint = {}
 
 
 
 ---@class UTickableParentConstraint : UTickableTransformConstraint
 ---@field OffsetTransform FTransform
 ---@field bScaling boolean
-UTickableParentConstraint = {}
+local UTickableParentConstraint = {}
 
 
 
 ---@class UTickableRotationConstraint : UTickableTransformConstraint
 ---@field OffsetRotation FQuat
-UTickableRotationConstraint = {}
+local UTickableRotationConstraint = {}
 
 
 
 ---@class UTickableScaleConstraint : UTickableTransformConstraint
 ---@field OffsetScale FVector
-UTickableScaleConstraint = {}
+local UTickableScaleConstraint = {}
 
 
 
@@ -97,26 +97,26 @@ UTickableScaleConstraint = {}
 ---@field Weight float
 ---@field bDynamicOffset boolean
 ---@field Type ETransformConstraintType
-UTickableTransformConstraint = {}
+local UTickableTransformConstraint = {}
 
 
 
 ---@class UTickableTranslationConstraint : UTickableTransformConstraint
 ---@field OffsetTranslation FVector
-UTickableTranslationConstraint = {}
+local UTickableTranslationConstraint = {}
 
 
 
 ---@class UTransformableComponentHandle : UTransformableHandle
 ---@field Component TWeakObjectPtr<USceneComponent>
 ---@field SocketName FName
-UTransformableComponentHandle = {}
+local UTransformableComponentHandle = {}
 
 
 
 ---@class UTransformableHandle : UObject
 ---@field ConstraintBindingID FMovieSceneObjectBindingID
-UTransformableHandle = {}
+local UTransformableHandle = {}
 
 
 

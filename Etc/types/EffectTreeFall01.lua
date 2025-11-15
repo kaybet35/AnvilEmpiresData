@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectTreeFall01_C : UEntityTemplate
-UEffectTreeFall01_C = {}
+local UEffectTreeFall01_C = {}
 
 

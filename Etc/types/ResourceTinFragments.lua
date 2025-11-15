@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceTinFragments_C : UItemTemplate
-UResourceTinFragments_C = {}
+local UResourceTinFragments_C = {}
 
 

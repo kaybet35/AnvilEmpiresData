@@ -5,7 +5,7 @@
 ---@field CreditsText URichTextBlock
 ---@field Logo UImage
 ---@field SiegeCampLogo UImage
-UBPCreditsScreen_C = {}
+local UBPCreditsScreen_C = {}
 
 
 

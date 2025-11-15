@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnerWorldEntrance_C : UEntityTemplate
-USpawnerWorldEntrance_C = {}
+local USpawnerWorldEntrance_C = {}
 
 

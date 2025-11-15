@@ -32,7 +32,7 @@
 ---@field VisRandomMeshDecor22 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor15 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationWallRoundStraight_C = {}
+local ABPVisGridFoundationWallRoundStraight_C = {}
 
 
 

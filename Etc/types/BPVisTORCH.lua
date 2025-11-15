@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisTorch_C : UVisItem
-UBPVisTorch_C = {}
+local UBPVisTorch_C = {}
 
 

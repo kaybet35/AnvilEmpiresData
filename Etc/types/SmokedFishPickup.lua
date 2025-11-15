@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USmokedFishPickup_C : UEntityTemplate
-USmokedFishPickup_C = {}
+local USmokedFishPickup_C = {}
 
 

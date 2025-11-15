@@ -11,7 +11,7 @@
 ---@field OptionsMenu_Video_Widget UBPOptionsMenuVideoWidget_C
 ---@field OptionsMenuGameplayWidget UBPOptionsMenuGameplayWidget_C
 ---@field VideoButton UBPAnvilButtonWidget_C
-UBPOptionsScreen_C = {}
+local UBPOptionsScreen_C = {}
 
 
 

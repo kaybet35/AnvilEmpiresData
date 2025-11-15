@@ -16,14 +16,14 @@
 ---@field __NameProperty_46 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -40,7 +40,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field localRelativeAngle double
 ---@field localWindIntensity double
-UABP_BoatWindIndicator_C = {}
+local UABP_BoatWindIndicator_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_BoatWindIndicator_C:AnimGraph(AnimGraph) end

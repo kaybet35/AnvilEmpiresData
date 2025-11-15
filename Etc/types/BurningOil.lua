@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBurningOil_C : UItemTemplate
-UBurningOil_C = {}
+local UBurningOil_C = {}
 
 

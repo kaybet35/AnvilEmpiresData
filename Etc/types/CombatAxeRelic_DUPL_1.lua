@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCombatAxeRelic_C : UItemTemplate
-UCombatAxeRelic_C = {}
+local UCombatAxeRelic_C = {}
 
 

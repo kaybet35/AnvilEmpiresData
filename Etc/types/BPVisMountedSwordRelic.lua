@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisMountedSwordRelic_C : UVisItem
-UBPVisMountedSwordRelic_C = {}
+local UBPVisMountedSwordRelic_C = {}
 
 

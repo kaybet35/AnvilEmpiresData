@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemFeathers_C : UVisItem
-UBPVisItemFeathers_C = {}
+local UBPVisItemFeathers_C = {}
 
 

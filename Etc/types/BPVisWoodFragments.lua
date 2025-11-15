@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisWoodFragments_C : AVisPickupItem
-ABPVisWoodFragments_C = {}
+local ABPVisWoodFragments_C = {}
 
 

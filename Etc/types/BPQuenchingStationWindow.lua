@@ -8,7 +8,7 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field StructurePanel UBPAnvilPanel_C
-UBPQuenchingStationWindow_C = {}
+local UBPQuenchingStationWindow_C = {}
 
 
 

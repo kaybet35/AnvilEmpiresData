@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationCeilingInteriorADiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationCeilingInteriorADiagonalFootprint_C = {}
+local AGridFoundationCeilingInteriorADiagonalFootprint_C = {}
 
 
 

@@ -14,7 +14,7 @@
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field Image UImage
 ---@field Image_84 UImage
-UBPRefineryWindow_C = {}
+local UBPRefineryWindow_C = {}
 
 ---@param IsDesignTime boolean
 function UBPRefineryWindow_C:PreConstruct(IsDesignTime) end

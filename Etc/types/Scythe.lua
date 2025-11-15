@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UScythe_C : UItemTemplate
-UScythe_C = {}
+local UScythe_C = {}
 
 

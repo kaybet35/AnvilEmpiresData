@@ -2,7 +2,7 @@
 
 ---@class ABPVisClayPile_C : AVisResource
 ---@field Decal UDecalComponent
-ABPVisClayPile_C = {}
+local ABPVisClayPile_C = {}
 
 
 

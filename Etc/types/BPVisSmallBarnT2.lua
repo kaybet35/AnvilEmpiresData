@@ -8,7 +8,7 @@
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field Roof UVisStaticMeshComponent
 ---@field AnvilMesh UVisStaticMeshComponent
-ABPVisSmallBarnT2_C = {}
+local ABPVisSmallBarnT2_C = {}
 
 
 

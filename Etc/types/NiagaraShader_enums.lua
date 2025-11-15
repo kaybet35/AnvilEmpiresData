@@ -1,5 +1,5 @@
 ---@enum ENiagaraGpuDispatchType
-ENiagaraGpuDispatchType = {
+local ENiagaraGpuDispatchType = {
     OneD = 0,
     TwoD = 1,
     ThreeD = 2,
@@ -8,7 +8,7 @@ ENiagaraGpuDispatchType = {
 }
 
 ---@enum ENiagaraMipMapGenerationType
-ENiagaraMipMapGenerationType = {
+local ENiagaraMipMapGenerationType = {
     Unfiltered = 0,
     Linear = 1,
     Blur1 = 2,
@@ -19,7 +19,7 @@ ENiagaraMipMapGenerationType = {
 }
 
 ---@enum ENiagaraSimStageExecuteBehavior
-ENiagaraSimStageExecuteBehavior = {
+local ENiagaraSimStageExecuteBehavior = {
     Always = 0,
     OnSimulationReset = 1,
     NotOnSimulationReset = 2,
@@ -27,7 +27,7 @@ ENiagaraSimStageExecuteBehavior = {
 }
 
 ---@enum FNiagaraCompileEventSeverity
-FNiagaraCompileEventSeverity = {
+local FNiagaraCompileEventSeverity = {
     Log = 0,
     Display = 1,
     Warning = 2,
@@ -36,7 +36,7 @@ FNiagaraCompileEventSeverity = {
 }
 
 ---@enum FNiagaraCompileEventSource
-FNiagaraCompileEventSource = {
+local FNiagaraCompileEventSource = {
     Unset = 0,
     ScriptDependency = 1,
     FNiagaraCompileEventSource_MAX = 2,

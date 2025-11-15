@@ -11,7 +11,7 @@
 ---@field ExrDecoderThreads uint32
 ---@field DefaultProxy FString
 ---@field UseDefaultProxy boolean
-UImgMediaSettings = {}
+local UImgMediaSettings = {}
 
 
 

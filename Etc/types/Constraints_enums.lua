@@ -1,5 +1,5 @@
 ---@enum EHandleEvent
-EHandleEvent = {
+local EHandleEvent = {
     LocalTransformUpdated = 0,
     GlobalTransformUpdated = 1,
     ComponentUpdated = 2,

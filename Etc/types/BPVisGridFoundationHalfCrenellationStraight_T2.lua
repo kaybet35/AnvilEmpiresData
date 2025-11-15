@@ -9,7 +9,7 @@
 ---@field Scene USceneComponent
 ---@field VisFoundationFillerMeshDecor UVisFoundationFillerMeshDecorComponent
 ---@field VisFoundationFillerMeshDecor1 UVisFoundationFillerMeshDecorComponent
-ABPVisGridFoundationHalfCrenellationStraight_T2_C = {}
+local ABPVisGridFoundationHalfCrenellationStraight_T2_C = {}
 
 
 

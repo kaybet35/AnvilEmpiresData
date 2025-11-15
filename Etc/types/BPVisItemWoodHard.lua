@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemWoodHard_C : UVisItem
-UBPVisItemWoodHard_C = {}
+local UBPVisItemWoodHard_C = {}
 
 

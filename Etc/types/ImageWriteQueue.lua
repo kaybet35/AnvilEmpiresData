@@ -6,12 +6,12 @@
 ---@field CompressionQuality int32
 ---@field bOverwriteFile boolean
 ---@field bAsync boolean
-FImageWriteOptions = {}
+local FImageWriteOptions = {}
 
 
 
 ---@class UImageWriteBlueprintLibrary : UBlueprintFunctionLibrary
-UImageWriteBlueprintLibrary = {}
+local UImageWriteBlueprintLibrary = {}
 
 ---@param Texture UTexture
 ---@param Filename FString

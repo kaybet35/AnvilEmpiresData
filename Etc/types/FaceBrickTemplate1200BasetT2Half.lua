@@ -14,7 +14,7 @@
 ---@field VisRandomMeshDecor7 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor27 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor13 UVisRandomMeshDecorComponent
-AFaceBrickTemplate1200BasetT2Half_C = {}
+local AFaceBrickTemplate1200BasetT2Half_C = {}
 
 
 

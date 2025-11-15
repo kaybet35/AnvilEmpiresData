@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectSpearImpact_C : UEntityTemplate
-UEffectSpearImpact_C = {}
+local UEffectSpearImpact_C = {}
 
 

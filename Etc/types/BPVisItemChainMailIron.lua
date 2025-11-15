@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemChainMailIron_C : UVisItem
-UBPVisItemChainMailIron_C = {}
+local UBPVisItemChainMailIron_C = {}
 
 

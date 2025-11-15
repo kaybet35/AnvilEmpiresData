@@ -3,7 +3,7 @@
 ---@class ABPVisBoar_C : AVisAnimal
 ---@field Fur USkeletalMeshComponent
 ---@field Idle UAudioComponent
-ABPVisBoar_C = {}
+local ABPVisBoar_C = {}
 
 function ABPVisBoar_C:UserConstructionScript() end
 

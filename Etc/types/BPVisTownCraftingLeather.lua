@@ -24,7 +24,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh8 UStaticMeshComponent
 ---@field StaticMesh7 UStaticMeshComponent
-ABPVisTownCraftingLeather_C = {}
+local ABPVisTownCraftingLeather_C = {}
 
 
 

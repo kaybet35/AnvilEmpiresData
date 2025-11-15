@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UNails_C : UItemTemplate
-UNails_C = {}
+local UNails_C = {}
 
 

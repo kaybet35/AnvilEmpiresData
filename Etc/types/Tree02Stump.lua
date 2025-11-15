@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTree02Stump_C : UEntityTemplate
-UTree02Stump_C = {}
+local UTree02Stump_C = {}
 
 

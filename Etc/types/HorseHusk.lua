@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHorseHusk_C : UEntityTemplate
-UHorseHusk_C = {}
+local UHorseHusk_C = {}
 
 

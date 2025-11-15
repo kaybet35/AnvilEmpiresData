@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisMountedFactionBanner_C : UVisItem
-UBPVisMountedFactionBanner_C = {}
+local UBPVisMountedFactionBanner_C = {}
 
 

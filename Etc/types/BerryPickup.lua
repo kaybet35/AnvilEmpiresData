@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBerryPickup_C : UEntityTemplate
-UBerryPickup_C = {}
+local UBerryPickup_C = {}
 
 

@@ -5,7 +5,7 @@
 ---@field SeekTime FTimespan
 ---@field PlayOnOpen EMediaPlayerOptionBooleanOverride
 ---@field Loop EMediaPlayerOptionBooleanOverride
-FMediaPlayerOptions = {}
+local FMediaPlayerOptions = {}
 
 
 
@@ -17,7 +17,7 @@ FMediaPlayerOptions = {}
 ---@field Subtitle int32
 ---@field Text int32
 ---@field Video int32
-FMediaPlayerTrackOptions = {}
+local FMediaPlayerTrackOptions = {}
 
 
 

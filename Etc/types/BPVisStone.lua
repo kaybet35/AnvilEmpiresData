@@ -3,7 +3,7 @@
 ---@class ABPVisStone_C : AVisPickupItem
 ---@field StaticMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisStone_C = {}
+local ABPVisStone_C = {}
 
 
 

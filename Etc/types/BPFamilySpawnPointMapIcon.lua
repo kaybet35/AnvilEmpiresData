@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFamilySpawnPointMapIcon_C : UWorldFamilySpawnMapIcon
-UBPFamilySpawnPointMapIcon_C = {}
+local UBPFamilySpawnPointMapIcon_C = {}
 
 

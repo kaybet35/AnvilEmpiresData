@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGateT3_C : UBPBaseStructureEntity_C
-UGateT3_C = {}
+local UGateT3_C = {}
 
 

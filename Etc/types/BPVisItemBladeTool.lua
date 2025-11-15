@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemBladeTool_C : UVisItem
-UBPVisItemBladeTool_C = {}
+local UBPVisItemBladeTool_C = {}
 
 

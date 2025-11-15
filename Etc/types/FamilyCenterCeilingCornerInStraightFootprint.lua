@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterCeilingCornerInStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterCeilingCornerInStraightFootprint_C = {}
+local AFamilyCenterCeilingCornerInStraightFootprint_C = {}
 
 
 

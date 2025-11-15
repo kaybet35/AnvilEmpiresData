@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UForge_C : UBPBaseStructureEntity_C
-UForge_C = {}
+local UForge_C = {}
 
 

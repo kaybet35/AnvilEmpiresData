@@ -2,7 +2,7 @@
 
 ---@class ABPVisCampGateBuildSite_C : AVisBuildSite
 ---@field StaticMesh UStaticMeshComponent
-ABPVisCampGateBuildSite_C = {}
+local ABPVisCampGateBuildSite_C = {}
 
 
 

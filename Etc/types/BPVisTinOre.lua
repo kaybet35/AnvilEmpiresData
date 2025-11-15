@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisTinOre_C : AVisPickupItem
-ABPVisTinOre_C = {}
+local ABPVisTinOre_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisIronHelmet_C : UVisItem
-UBPVisIronHelmet_C = {}
+local UBPVisIronHelmet_C = {}
 
 

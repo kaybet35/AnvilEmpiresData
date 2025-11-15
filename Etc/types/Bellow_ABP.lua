@@ -12,7 +12,7 @@
 ---@field __NameProperty_28 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -21,7 +21,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
 ---@field __FloatProperty_2 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -35,7 +35,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimSlowAmount double
-UBellow_ABP_C = {}
+local UBellow_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UBellow_ABP_C:AnimGraph(AnimGraph) end

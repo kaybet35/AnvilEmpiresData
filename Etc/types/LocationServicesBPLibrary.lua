@@ -7,12 +7,12 @@
 ---@field HorizontalAccuracy float
 ---@field VerticalAccuracy float
 ---@field Altitude float
-FLocationServicesData = {}
+local FLocationServicesData = {}
 
 
 
 ---@class ULocationServices : UBlueprintFunctionLibrary
-ULocationServices = {}
+local ULocationServices = {}
 
 ---@return boolean
 function ULocationServices:StopLocationServices() end
@@ -36,7 +36,7 @@ function ULocationServices:AreLocationServicesEnabled() end
 
 ---@class ULocationServicesImpl : UObject
 ---@field OnLocationChanged FLocationServicesImplOnLocationChanged
-ULocationServicesImpl = {}
+local ULocationServicesImpl = {}
 
 
 

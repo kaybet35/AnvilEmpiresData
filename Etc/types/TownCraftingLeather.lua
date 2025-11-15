@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTownCraftingLeather_C : UBPBaseStructureEntity_C
-UTownCraftingLeather_C = {}
+local UTownCraftingLeather_C = {}
 
 

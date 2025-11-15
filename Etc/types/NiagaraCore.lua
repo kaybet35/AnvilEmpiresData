@@ -2,15 +2,15 @@
 
 ---@class FNiagaraCompileHash
 ---@field DataHash TArray<uint8>
-FNiagaraCompileHash = {}
+local FNiagaraCompileHash = {}
 
 
 
 ---@class UNiagaraDataInterfaceBase : UNiagaraMergeable
-UNiagaraDataInterfaceBase = {}
+local UNiagaraDataInterfaceBase = {}
 
 
 ---@class UNiagaraMergeable : UObject
-UNiagaraMergeable = {}
+local UNiagaraMergeable = {}
 
 

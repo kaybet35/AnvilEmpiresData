@@ -1,5 +1,5 @@
 ---@enum EGameplayTaskRunResult
-EGameplayTaskRunResult = {
+local EGameplayTaskRunResult = {
     Error = 0,
     Failed = 1,
     Success_Paused = 2,
@@ -9,7 +9,7 @@ EGameplayTaskRunResult = {
 }
 
 ---@enum EGameplayTaskState
-EGameplayTaskState = {
+local EGameplayTaskState = {
     Uninitialized = 0,
     AwaitingActivation = 1,
     Paused = 2,
@@ -19,7 +19,7 @@ EGameplayTaskState = {
 }
 
 ---@enum ETaskResourceOverlapPolicy
-ETaskResourceOverlapPolicy = {
+local ETaskResourceOverlapPolicy = {
     StartOnTop = 0,
     StartAtEnd = 1,
     RequestCancelAndStartOnTop = 2,

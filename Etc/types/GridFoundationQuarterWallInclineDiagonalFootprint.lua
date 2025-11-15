@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationQuarterWallInclineDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationQuarterWallInclineDiagonalFootprint_C = {}
+local AGridFoundationQuarterWallInclineDiagonalFootprint_C = {}
 
 
 

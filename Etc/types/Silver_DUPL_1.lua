@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USilver_C : UItemTemplate
-USilver_C = {}
+local USilver_C = {}
 
 

@@ -3,7 +3,7 @@
 ---@class UAudioCurveSourceComponent : UAudioComponent
 ---@field CurveSourceBindingName FName
 ---@field CurveSyncOffset float
-UAudioCurveSourceComponent = {}
+local UAudioCurveSourceComponent = {}
 
 
 

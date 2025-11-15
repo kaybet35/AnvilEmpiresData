@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisHitEffectRam_C : AVisEffect
-AVisHitEffectRam_C = {}
+local AVisHitEffectRam_C = {}
 
 

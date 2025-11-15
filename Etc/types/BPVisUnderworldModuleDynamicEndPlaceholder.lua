@@ -4,7 +4,7 @@
 ---@field EdgeLeft UStaticMeshComponent
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisUnderworldModuleDynamicEndPlaceholder_C = {}
+local ABPVisUnderworldModuleDynamicEndPlaceholder_C = {}
 
 
 

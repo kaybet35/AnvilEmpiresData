@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffect2HAxeImpact_C : UEntityTemplate
-UEffect2HAxeImpact_C = {}
+local UEffect2HAxeImpact_C = {}
 
 

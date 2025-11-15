@@ -5,19 +5,19 @@
 ---@field LookUp_Axis FAxis
 ---@field bUseLookUp boolean
 ---@field LookUpTarget FVector
-FAimConstraintDescription = {}
+local FAimConstraintDescription = {}
 
 
 
 ---@class FAxis
 ---@field Axis FVector
 ---@field bInLocalSpace boolean
-FAxis = {}
+local FAxis = {}
 
 
 
 ---@class FCCDIKChainLink
-FCCDIKChainLink = {}
+local FCCDIKChainLink = {}
 
 
 ---@class FConstraintData
@@ -26,7 +26,7 @@ FCCDIKChainLink = {}
 ---@field bMaintainOffset boolean
 ---@field Offset FTransform
 ---@field CurrentTransform FTransform
-FConstraintData = {}
+local FConstraintData = {}
 
 
 
@@ -38,19 +38,19 @@ FConstraintData = {}
 ---@field TranslationAxes FFilterOptionPerAxis
 ---@field RotationAxes FFilterOptionPerAxis
 ---@field ScaleAxes FFilterOptionPerAxis
-FConstraintDescription = {}
+local FConstraintDescription = {}
 
 
 
 ---@class FConstraintDescriptionEx
 ---@field AxesFilterOption FFilterOptionPerAxis
-FConstraintDescriptionEx = {}
+local FConstraintDescriptionEx = {}
 
 
 
 ---@class FConstraintDescriptor
 ---@field Type EConstraintType
-FConstraintDescriptor = {}
+local FConstraintDescriptor = {}
 
 
 
@@ -59,7 +59,7 @@ FConstraintDescriptor = {}
 ---@field Rotation FQuat
 ---@field Scale FVector
 ---@field Parent FTransform
-FConstraintOffset = {}
+local FConstraintOffset = {}
 
 
 
@@ -67,25 +67,25 @@ FConstraintOffset = {}
 ---@field Location FVector
 ---@field Rotation FRotator
 ---@field Scale FVector
-FEulerTransform = {}
+local FEulerTransform = {}
 
 
 
 ---@class FFABRIKChainLink
-FFABRIKChainLink = {}
+local FFABRIKChainLink = {}
 
 
 ---@class FFilterOptionPerAxis
 ---@field bX boolean
 ---@field bY boolean
 ---@field bZ boolean
-FFilterOptionPerAxis = {}
+local FFilterOptionPerAxis = {}
 
 
 
 ---@class FNodeChain
 ---@field Nodes TArray<FName>
-FNodeChain = {}
+local FNodeChain = {}
 
 
 
@@ -93,20 +93,20 @@ FNodeChain = {}
 ---@field Nodes TArray<FNodeObject>
 ---@field Transforms TArray<FTransform>
 ---@field NodeNameToIndexMapping TMap<FName, int32>
-FNodeHierarchyData = {}
+local FNodeHierarchyData = {}
 
 
 
 ---@class FNodeHierarchyWithUserData
 ---@field Hierarchy FNodeHierarchyData
-FNodeHierarchyWithUserData = {}
+local FNodeHierarchyWithUserData = {}
 
 
 
 ---@class FNodeObject
 ---@field Name FName
 ---@field ParentName FName
-FNodeObject = {}
+local FNodeObject = {}
 
 
 
@@ -116,13 +116,13 @@ FNodeObject = {}
 ---@field TargetNode FName
 ---@field Weight float
 ---@field bMaintainOffset boolean
-FTransformConstraint = {}
+local FTransformConstraint = {}
 
 
 
 ---@class FTransformConstraintDescription : FConstraintDescriptionEx
 ---@field TransformType ETransformConstraintType
-FTransformConstraintDescription = {}
+local FTransformConstraintDescription = {}
 
 
 
@@ -130,20 +130,20 @@ FTransformConstraintDescription = {}
 ---@field TranslationFilter FFilterOptionPerAxis
 ---@field RotationFilter FFilterOptionPerAxis
 ---@field ScaleFilter FFilterOptionPerAxis
-FTransformFilter = {}
+local FTransformFilter = {}
 
 
 
 ---@class FTransformNoScale
 ---@field Location FVector
 ---@field Rotation FQuat
-FTransformNoScale = {}
+local FTransformNoScale = {}
 
 
 
 ---@class UAnimationDataSourceRegistry : UObject
 ---@field DataSources TMap<FName, TWeakObjectPtr<UObject>>
-UAnimationDataSourceRegistry = {}
+local UAnimationDataSourceRegistry = {}
 
 
 

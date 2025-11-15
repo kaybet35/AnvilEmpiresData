@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UAssetTagsSubsystem : UEngineSubsystem
-UAssetTagsSubsystem = {}
+local UAssetTagsSubsystem = {}
 
 ---@param AssetPath FSoftObjectPath
 ---@return TArray<FName>

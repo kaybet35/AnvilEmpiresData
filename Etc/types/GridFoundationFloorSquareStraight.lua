@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationFloorSquareStraight_C : UBPBaseFoundationModularEntity_C
-UGridFoundationFloorSquareStraight_C = {}
+local UGridFoundationFloorSquareStraight_C = {}
 
 

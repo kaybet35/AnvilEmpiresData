@@ -1,5 +1,5 @@
 ---@enum EAngularConstraintMotion
-EAngularConstraintMotion = {
+local EAngularConstraintMotion = {
     ACM_Free = 0,
     ACM_Limited = 1,
     ACM_Locked = 2,
@@ -7,14 +7,14 @@ EAngularConstraintMotion = {
 }
 
 ---@enum EBodyCollisionResponse
-EBodyCollisionResponse = {
+local EBodyCollisionResponse = {
     BodyCollision_Enabled = 0,
     BodyCollision_Disabled = 1,
     BodyCollision_MAX = 2,
 }
 
 ---@enum ECollisionTraceFlag
-ECollisionTraceFlag = {
+local ECollisionTraceFlag = {
     CTF_UseDefault = 0,
     CTF_UseSimpleAndComplex = 1,
     CTF_UseSimpleAsComplex = 2,
@@ -23,14 +23,14 @@ ECollisionTraceFlag = {
 }
 
 ---@enum EConstraintFrame
-EConstraintFrame = {
+local EConstraintFrame = {
     Frame1 = 0,
     Frame2 = 1,
     EConstraintFrame_MAX = 2,
 }
 
 ---@enum EConstraintPlasticityType
-EConstraintPlasticityType = {
+local EConstraintPlasticityType = {
     CCPT_Free = 0,
     CCPT_Shrink = 1,
     CCPT_Grow = 2,
@@ -38,7 +38,7 @@ EConstraintPlasticityType = {
 }
 
 ---@enum EFrictionCombineMode
-EFrictionCombineMode = {
+local EFrictionCombineMode = {
     Average = 0,
     Min = 1,
     Multiply = 2,
@@ -46,7 +46,7 @@ EFrictionCombineMode = {
 }
 
 ---@enum ELinearConstraintMotion
-ELinearConstraintMotion = {
+local ELinearConstraintMotion = {
     LCM_Free = 0,
     LCM_Limited = 1,
     LCM_Locked = 2,
@@ -54,7 +54,7 @@ ELinearConstraintMotion = {
 }
 
 ---@enum EPhysicalSurface
-EPhysicalSurface = {
+local EPhysicalSurface = {
     SurfaceType_Default = 0,
     SurfaceType1 = 1,
     SurfaceType2 = 2,
@@ -123,7 +123,7 @@ EPhysicalSurface = {
 }
 
 ---@enum EPhysicsType
-EPhysicsType = {
+local EPhysicsType = {
     PhysType_Default = 0,
     PhysType_Kinematic = 1,
     PhysType_Simulated = 2,
@@ -131,14 +131,14 @@ EPhysicsType = {
 }
 
 ---@enum ERadialImpulseFalloff
-ERadialImpulseFalloff = {
+local ERadialImpulseFalloff = {
     RIF_Constant = 0,
     RIF_Linear = 1,
     RIF_MAX = 2,
 }
 
 ---@enum ESleepFamily
-ESleepFamily = {
+local ESleepFamily = {
     Normal = 0,
     Sensitive = 1,
     Custom = 2,

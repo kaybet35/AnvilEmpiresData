@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UAutomationUtilsBlueprintLibrary : UBlueprintFunctionLibrary
-UAutomationUtilsBlueprintLibrary = {}
+local UAutomationUtilsBlueprintLibrary = {}
 
 ---@param ScreenshotName FString
 ---@param MaxGlobalError float

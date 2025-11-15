@@ -1,5 +1,5 @@
 ---@enum EFireEventsAtPosition
-EFireEventsAtPosition = {
+local EFireEventsAtPosition = {
     AtStartOfEvaluation = 0,
     AtEndOfEvaluation = 1,
     AfterSpawn = 2,
@@ -7,14 +7,14 @@ EFireEventsAtPosition = {
 }
 
 ---@enum ELevelVisibility
-ELevelVisibility = {
+local ELevelVisibility = {
     Visible = 0,
     Hidden = 1,
     ELevelVisibility_MAX = 2,
 }
 
 ---@enum EParticleKey
-EParticleKey = {
+local EParticleKey = {
     Activate = 0,
     Deactivate = 1,
     Trigger = 2,
@@ -22,7 +22,7 @@ EParticleKey = {
 }
 
 ---@enum MovieScene3DPathSection_Axis
-MovieScene3DPathSection_Axis = {
+local MovieScene3DPathSection_Axis = {
     X = 0,
     Y = 1,
     Z = 2,

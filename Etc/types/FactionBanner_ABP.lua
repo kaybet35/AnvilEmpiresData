@@ -6,7 +6,7 @@
 ---@field __NameProperty_3 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -15,7 +15,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
 ---@field AnimBlueprintExtension_Base FAnimSubsystemInstance
 ---@field AnimGraphNode_Root FAnimNode_Root
-UFactionBanner_ABP_C = {}
+local UFactionBanner_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UFactionBanner_ABP_C:AnimGraph(AnimGraph) end

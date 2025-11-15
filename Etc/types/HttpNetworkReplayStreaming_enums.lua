@@ -1,5 +1,5 @@
 ---@enum EHttpReplayResult
-EHttpReplayResult = {
+local EHttpReplayResult = {
     Success = 0,
     FailedJsonParse = 1,
     DataUnavailable = 2,

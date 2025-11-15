@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnerCaveCoalPile_C : UEntityTemplate
-USpawnerCaveCoalPile_C = {}
+local USpawnerCaveCoalPile_C = {}
 
 

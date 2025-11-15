@@ -19,7 +19,7 @@
 ---@field __StructProperty_87 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -48,7 +48,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field AnimGraphNode_ApplyAdditive FAnimNode_ApplyAdditive
 ---@field localYaw float
 ---@field localPitch double
-URaven_ABP_C = {}
+local URaven_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function URaven_ABP_C:AnimGraph(AnimGraph) end

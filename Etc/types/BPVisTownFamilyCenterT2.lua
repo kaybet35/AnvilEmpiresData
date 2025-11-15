@@ -14,7 +14,7 @@
 ---@field VisibilityToggleDebugBox UBoxComponent
 ---@field FamilyCenterMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisTownFamilyCenterT2_C = {}
+local ABPVisTownFamilyCenterT2_C = {}
 
 
 

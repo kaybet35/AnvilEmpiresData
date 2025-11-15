@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisMaceImpactFlesh_C : AVisEffect
-AVisMaceImpactFlesh_C = {}
+local AVisMaceImpactFlesh_C = {}
 
 

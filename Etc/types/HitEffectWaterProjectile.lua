@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHitEffectWaterProjectile_C : UEntityTemplate
-UHitEffectWaterProjectile_C = {}
+local UHitEffectWaterProjectile_C = {}
 
 

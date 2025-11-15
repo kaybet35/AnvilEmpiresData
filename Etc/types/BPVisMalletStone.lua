@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisMalletStone_C : UVisItem
-UBPVisMalletStone_C = {}
+local UBPVisMalletStone_C = {}
 
 

@@ -13,7 +13,7 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field Decal UDecalComponent
-ABPVisHenhouseT2_C = {}
+local ABPVisHenhouseT2_C = {}
 
 
 

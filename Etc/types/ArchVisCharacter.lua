@@ -9,7 +9,7 @@
 ---@field MoveRightAxisName FString
 ---@field MouseSensitivityScale_Pitch float
 ---@field MouseSensitivityScale_Yaw float
-AArchVisCharacter = {}
+local AArchVisCharacter = {}
 
 
 
@@ -22,7 +22,7 @@ AArchVisCharacter = {}
 ---@field WalkingFriction float
 ---@field WalkingSpeed float
 ---@field WalkingAcceleration float
-UArchVisCharMovementComponent = {}
+local UArchVisCharMovementComponent = {}
 
 
 

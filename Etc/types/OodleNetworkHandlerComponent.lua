@@ -9,7 +9,7 @@
 ---@field TrialRandomness int32
 ---@field TrialGenerations int32
 ---@field bNoTrials boolean
-UOodleNetworkTrainerCommandlet = {}
+local UOodleNetworkTrainerCommandlet = {}
 
 
 

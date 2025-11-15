@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationRampSpiralStraight_T2_C : UBPBaseModularEntity_C
-UGridFoundationRampSpiralStraight_T2_C = {}
+local UGridFoundationRampSpiralStraight_T2_C = {}
 
 

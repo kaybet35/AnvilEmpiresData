@@ -296,7 +296,7 @@
 ---@field CustomHeightmap UCustomHeightmapComponent
 ---@field Floor UStaticMeshComponent
 ---@field Pivot USceneComponent
-ABPUnderworldDynamicModuleStraight02_C = {}
+local ABPUnderworldDynamicModuleStraight02_C = {}
 
 
 

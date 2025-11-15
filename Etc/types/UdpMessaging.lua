@@ -2,7 +2,7 @@
 
 ---@class FUdpMockMessage
 ---@field Data TArray<uint8>
-FUdpMockMessage = {}
+local FUdpMockMessage = {}
 
 
 
@@ -24,7 +24,7 @@ FUdpMockMessage = {}
 ---@field TunnelUnicastEndpoint FString
 ---@field TunnelMulticastEndpoint FString
 ---@field RemoteTunnelEndpoints TArray<FString>
-UUdpMessagingSettings = {}
+local UUdpMessagingSettings = {}
 
 
 

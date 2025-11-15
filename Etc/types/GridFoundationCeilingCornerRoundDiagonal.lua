@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationCeilingCornerRoundDiagonal_C : UBPBaseFoundationModularEntity_C
-UGridFoundationCeilingCornerRoundDiagonal_C = {}
+local UGridFoundationCeilingCornerRoundDiagonal_C = {}
 
 

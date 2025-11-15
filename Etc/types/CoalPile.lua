@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCoalPile_C : UEntityTemplate
-UCoalPile_C = {}
+local UCoalPile_C = {}
 
 

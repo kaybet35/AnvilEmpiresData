@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFamilyCenterInteriorStairQuarterSizeDiagonal_T1_C : UBPBaseModularEntity_C
-UFamilyCenterInteriorStairQuarterSizeDiagonal_T1_C = {}
+local UFamilyCenterInteriorStairQuarterSizeDiagonal_T1_C = {}
 
 

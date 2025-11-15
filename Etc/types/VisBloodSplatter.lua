@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Decal UDecalComponent
 ---@field DefaultSceneRoot USceneComponent
-AVisBloodSplatter_C = {}
+local AVisBloodSplatter_C = {}
 
 function AVisBloodSplatter_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

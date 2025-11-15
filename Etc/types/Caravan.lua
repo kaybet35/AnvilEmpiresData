@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCaravan_C : UEntityTemplate
-UCaravan_C = {}
+local UCaravan_C = {}
 
 

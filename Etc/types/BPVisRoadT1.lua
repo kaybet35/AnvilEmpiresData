@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisRoadT1_C : AVisSpline
-ABPVisRoadT1_C = {}
+local ABPVisRoadT1_C = {}
 
 

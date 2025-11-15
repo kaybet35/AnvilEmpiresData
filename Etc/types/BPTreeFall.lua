@@ -4,7 +4,7 @@
 ---@field ShadowProxyMesh UStaticMeshComponent
 ---@field Stump UStaticMeshComponent
 ---@field Decal UDecalComponent
-ABPTreeFall_C = {}
+local ABPTreeFall_C = {}
 
 
 

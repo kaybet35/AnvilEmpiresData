@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisCabbagePickup_C : AVisPickupItem
-ABPVisCabbagePickup_C = {}
+local ABPVisCabbagePickup_C = {}
 
 

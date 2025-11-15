@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPowerRopeEndPiece_C : UEntityTemplate
-UPowerRopeEndPiece_C = {}
+local UPowerRopeEndPiece_C = {}
 
 

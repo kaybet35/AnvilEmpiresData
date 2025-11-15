@@ -3,7 +3,7 @@
 ---@class ABPVisBoarDenSpawner_C : AVisMine
 ---@field StaticMesh UStaticMeshComponent
 ---@field Mesh UStaticMeshComponent
-ABPVisBoarDenSpawner_C = {}
+local ABPVisBoarDenSpawner_C = {}
 
 
 

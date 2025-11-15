@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisCabbageField_C : AVisResource
-ABPVisCabbageField_C = {}
+local ABPVisCabbageField_C = {}
 
 

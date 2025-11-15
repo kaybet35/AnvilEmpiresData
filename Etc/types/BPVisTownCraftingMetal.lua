@@ -12,7 +12,7 @@
 ---@field Niagara UNiagaraComponent
 ---@field MainStructureCollapsedMesh UVisStaticMeshComponent
 ---@field MainStructureMesh UVisStaticMeshComponent
-ABPVisTownCraftingMetal_C = {}
+local ABPVisTownCraftingMetal_C = {}
 
 
 

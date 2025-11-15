@@ -2,7 +2,7 @@
 
 ---@class AVisKnifeImpactShieldBreak_C : AVisEffect
 ---@field Audio UAudioComponent
-AVisKnifeImpactShieldBreak_C = {}
+local AVisKnifeImpactShieldBreak_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UDeployedTrap_C : UEntityTemplate
-UDeployedTrap_C = {}
+local UDeployedTrap_C = {}
 
 

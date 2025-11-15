@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceFlax_C : UItemTemplate
-UResourceFlax_C = {}
+local UResourceFlax_C = {}
 
 

@@ -11,20 +11,20 @@
 ---@field bRecursivePaths boolean
 ---@field bRecursiveClasses boolean
 ---@field bIncludeOnlyOnDiskAssets boolean
-FARFilter = {}
+local FARFilter = {}
 
 
 
 ---@class FAssetBundleData
 ---@field Bundles TArray<FAssetBundleEntry>
-FAssetBundleData = {}
+local FAssetBundleData = {}
 
 
 
 ---@class FAssetBundleEntry
 ---@field BundleName FName
 ---@field AssetPaths TArray<FTopLevelAssetPath>
-FAssetBundleEntry = {}
+local FAssetBundleEntry = {}
 
 
 
@@ -34,7 +34,7 @@ FAssetBundleEntry = {}
 ---@field AssetName FName
 ---@field AssetClass FName
 ---@field AssetClassPath FTopLevelAssetPath
-FAssetData = {}
+local FAssetData = {}
 
 
 
@@ -43,7 +43,7 @@ FAssetData = {}
 ---@field Message FString
 ---@field Context FString
 ---@field Artifact FGuid
-FAutomationEvent = {}
+local FAutomationEvent = {}
 
 
 
@@ -52,7 +52,7 @@ FAutomationEvent = {}
 ---@field Filename FString
 ---@field LineNumber int32
 ---@field Timestamp FDateTime
-FAutomationExecutionEntry = {}
+local FAutomationExecutionEntry = {}
 
 
 
@@ -60,7 +60,7 @@ FAutomationExecutionEntry = {}
 ---@field Min FVector
 ---@field Max FVector
 ---@field IsValid uint8
-FBox = {}
+local FBox = {}
 
 
 
@@ -68,7 +68,7 @@ FBox = {}
 ---@field Min FVector2D
 ---@field Max FVector2D
 ---@field bIsValid uint8
-FBox2D = {}
+local FBox2D = {}
 
 
 
@@ -76,7 +76,7 @@ FBox2D = {}
 ---@field Min FVector2f
 ---@field Max FVector2f
 ---@field bIsValid uint8
-FBox2f = {}
+local FBox2f = {}
 
 
 
@@ -84,7 +84,7 @@ FBox2f = {}
 ---@field Min FVector3d
 ---@field Max FVector3d
 ---@field IsValid uint8
-FBox3d = {}
+local FBox3d = {}
 
 
 
@@ -92,7 +92,7 @@ FBox3d = {}
 ---@field Min FVector3f
 ---@field Max FVector3f
 ---@field IsValid uint8
-FBox3f = {}
+local FBox3f = {}
 
 
 
@@ -100,7 +100,7 @@ FBox3f = {}
 ---@field Origin FVector
 ---@field BoxExtent FVector
 ---@field SphereRadius double
-FBoxSphereBounds = {}
+local FBoxSphereBounds = {}
 
 
 
@@ -108,7 +108,7 @@ FBoxSphereBounds = {}
 ---@field Origin FVector3d
 ---@field BoxExtent FVector3d
 ---@field SphereRadius double
-FBoxSphereBounds3d = {}
+local FBoxSphereBounds3d = {}
 
 
 
@@ -116,7 +116,7 @@ FBoxSphereBounds3d = {}
 ---@field Origin FVector3f
 ---@field BoxExtent FVector3f
 ---@field SphereRadius float
-FBoxSphereBounds3f = {}
+local FBoxSphereBounds3f = {}
 
 
 
@@ -125,100 +125,100 @@ FBoxSphereBounds3f = {}
 ---@field G uint8
 ---@field R uint8
 ---@field A uint8
-FColor = {}
+local FColor = {}
 
 
 
 ---@class FDateTime
-FDateTime = {}
+local FDateTime = {}
 
 
 ---@class FDefault__ScriptStruct
-FDefault__ScriptStruct = {}
+local FDefault__ScriptStruct = {}
 
 
 ---@class FDirectoryPath
 ---@field Path FString
-FDirectoryPath = {}
+local FDirectoryPath = {}
 
 
 
 ---@class FDoubleRange
 ---@field LowerBound FDoubleRangeBound
 ---@field UpperBound FDoubleRangeBound
-FDoubleRange = {}
+local FDoubleRange = {}
 
 
 
 ---@class FDoubleRangeBound
 ---@field Type ERangeBoundTypes::Type
 ---@field Value double
-FDoubleRangeBound = {}
+local FDoubleRangeBound = {}
 
 
 
 ---@class FFallbackStruct
-FFallbackStruct = {}
+local FFallbackStruct = {}
 
 
 ---@class FFilePath
 ---@field FilePath FString
-FFilePath = {}
+local FFilePath = {}
 
 
 
 ---@class FFloatInterval
 ---@field Min float
 ---@field Max float
-FFloatInterval = {}
+local FFloatInterval = {}
 
 
 
 ---@class FFloatRange
 ---@field LowerBound FFloatRangeBound
 ---@field UpperBound FFloatRangeBound
-FFloatRange = {}
+local FFloatRange = {}
 
 
 
 ---@class FFloatRangeBound
 ---@field Type ERangeBoundTypes::Type
 ---@field Value float
-FFloatRangeBound = {}
+local FFloatRangeBound = {}
 
 
 
 ---@class FFrameNumber
 ---@field Value int32
-FFrameNumber = {}
+local FFrameNumber = {}
 
 
 
 ---@class FFrameNumberRange
 ---@field LowerBound FFrameNumberRangeBound
 ---@field UpperBound FFrameNumberRangeBound
-FFrameNumberRange = {}
+local FFrameNumberRange = {}
 
 
 
 ---@class FFrameNumberRangeBound
 ---@field Type ERangeBoundTypes::Type
 ---@field Value FFrameNumber
-FFrameNumberRangeBound = {}
+local FFrameNumberRangeBound = {}
 
 
 
 ---@class FFrameRate
 ---@field Numerator int32
 ---@field Denominator int32
-FFrameRate = {}
+local FFrameRate = {}
 
 
 
 ---@class FFrameTime
 ---@field FrameNumber FFrameNumber
 ---@field SubFrame float
-FFrameTime = {}
+local FFrameTime = {}
 
 
 
@@ -227,41 +227,41 @@ FFrameTime = {}
 ---@field B int32
 ---@field C int32
 ---@field D int32
-FGuid = {}
+local FGuid = {}
 
 
 
 ---@class FInputDeviceId
 ---@field InternalId int32
-FInputDeviceId = {}
+local FInputDeviceId = {}
 
 
 
 ---@class FInt32Interval
 ---@field Min int32
 ---@field Max int32
-FInt32Interval = {}
+local FInt32Interval = {}
 
 
 
 ---@class FInt32Point
 ---@field X int32
 ---@field Y int32
-FInt32Point = {}
+local FInt32Point = {}
 
 
 
 ---@class FInt32Range
 ---@field LowerBound FInt32RangeBound
 ---@field UpperBound FInt32RangeBound
-FInt32Range = {}
+local FInt32Range = {}
 
 
 
 ---@class FInt32RangeBound
 ---@field Type ERangeBoundTypes::Type
 ---@field Value int32
-FInt32RangeBound = {}
+local FInt32RangeBound = {}
 
 
 
@@ -269,14 +269,14 @@ FInt32RangeBound = {}
 ---@field X int32
 ---@field Y int32
 ---@field Z int32
-FInt32Vector = {}
+local FInt32Vector = {}
 
 
 
 ---@class FInt32Vector2
 ---@field X int32
 ---@field Y int32
-FInt32Vector2 = {}
+local FInt32Vector2 = {}
 
 
 
@@ -285,14 +285,14 @@ FInt32Vector2 = {}
 ---@field Y int32
 ---@field Z int32
 ---@field W int32
-FInt32Vector4 = {}
+local FInt32Vector4 = {}
 
 
 
 ---@class FInt64Point
 ---@field X int64
 ---@field Y int64
-FInt64Point = {}
+local FInt64Point = {}
 
 
 
@@ -300,14 +300,14 @@ FInt64Point = {}
 ---@field X int64
 ---@field Y int64
 ---@field Z int64
-FInt64Vector = {}
+local FInt64Vector = {}
 
 
 
 ---@class FInt64Vector2
 ---@field X int64
 ---@field Y int64
-FInt64Vector2 = {}
+local FInt64Vector2 = {}
 
 
 
@@ -316,14 +316,14 @@ FInt64Vector2 = {}
 ---@field Y int64
 ---@field Z int64
 ---@field W int64
-FInt64Vector4 = {}
+local FInt64Vector4 = {}
 
 
 
 ---@class FIntPoint
 ---@field X int32
 ---@field Y int32
-FIntPoint = {}
+local FIntPoint = {}
 
 
 
@@ -331,14 +331,14 @@ FIntPoint = {}
 ---@field X int32
 ---@field Y int32
 ---@field Z int32
-FIntVector = {}
+local FIntVector = {}
 
 
 
 ---@class FIntVector2
 ---@field X int32
 ---@field Y int32
-FIntVector2 = {}
+local FIntVector2 = {}
 
 
 
@@ -347,7 +347,7 @@ FIntVector2 = {}
 ---@field Y int32
 ---@field Z int32
 ---@field W int32
-FIntVector4 = {}
+local FIntVector4 = {}
 
 
 
@@ -355,7 +355,7 @@ FIntVector4 = {}
 ---@field Points TArray<FInterpCurvePointFloat>
 ---@field bIsLooped boolean
 ---@field LoopKeyOffset float
-FInterpCurveFloat = {}
+local FInterpCurveFloat = {}
 
 
 
@@ -363,7 +363,7 @@ FInterpCurveFloat = {}
 ---@field Points TArray<FInterpCurvePointLinearColor>
 ---@field bIsLooped boolean
 ---@field LoopKeyOffset float
-FInterpCurveLinearColor = {}
+local FInterpCurveLinearColor = {}
 
 
 
@@ -373,7 +373,7 @@ FInterpCurveLinearColor = {}
 ---@field ArriveTangent float
 ---@field LeaveTangent float
 ---@field InterpMode EInterpCurveMode
-FInterpCurvePointFloat = {}
+local FInterpCurvePointFloat = {}
 
 
 
@@ -383,7 +383,7 @@ FInterpCurvePointFloat = {}
 ---@field ArriveTangent FLinearColor
 ---@field LeaveTangent FLinearColor
 ---@field InterpMode EInterpCurveMode
-FInterpCurvePointLinearColor = {}
+local FInterpCurvePointLinearColor = {}
 
 
 
@@ -393,7 +393,7 @@ FInterpCurvePointLinearColor = {}
 ---@field ArriveTangent FQuat
 ---@field LeaveTangent FQuat
 ---@field InterpMode EInterpCurveMode
-FInterpCurvePointQuat = {}
+local FInterpCurvePointQuat = {}
 
 
 
@@ -403,7 +403,7 @@ FInterpCurvePointQuat = {}
 ---@field ArriveTangent FTwoVectors
 ---@field LeaveTangent FTwoVectors
 ---@field InterpMode EInterpCurveMode
-FInterpCurvePointTwoVectors = {}
+local FInterpCurvePointTwoVectors = {}
 
 
 
@@ -413,7 +413,7 @@ FInterpCurvePointTwoVectors = {}
 ---@field ArriveTangent FVector
 ---@field LeaveTangent FVector
 ---@field InterpMode EInterpCurveMode
-FInterpCurvePointVector = {}
+local FInterpCurvePointVector = {}
 
 
 
@@ -423,7 +423,7 @@ FInterpCurvePointVector = {}
 ---@field ArriveTangent FVector2D
 ---@field LeaveTangent FVector2D
 ---@field InterpMode EInterpCurveMode
-FInterpCurvePointVector2D = {}
+local FInterpCurvePointVector2D = {}
 
 
 
@@ -431,7 +431,7 @@ FInterpCurvePointVector2D = {}
 ---@field Points TArray<FInterpCurvePointQuat>
 ---@field bIsLooped boolean
 ---@field LoopKeyOffset float
-FInterpCurveQuat = {}
+local FInterpCurveQuat = {}
 
 
 
@@ -439,7 +439,7 @@ FInterpCurveQuat = {}
 ---@field Points TArray<FInterpCurvePointTwoVectors>
 ---@field bIsLooped boolean
 ---@field LoopKeyOffset float
-FInterpCurveTwoVectors = {}
+local FInterpCurveTwoVectors = {}
 
 
 
@@ -447,7 +447,7 @@ FInterpCurveTwoVectors = {}
 ---@field Points TArray<FInterpCurvePointVector>
 ---@field bIsLooped boolean
 ---@field LoopKeyOffset float
-FInterpCurveVector = {}
+local FInterpCurveVector = {}
 
 
 
@@ -455,7 +455,7 @@ FInterpCurveVector = {}
 ---@field Points TArray<FInterpCurvePointVector2D>
 ---@field bIsLooped boolean
 ---@field LoopKeyOffset float
-FInterpCurveVector2D = {}
+local FInterpCurveVector2D = {}
 
 
 
@@ -464,7 +464,7 @@ FInterpCurveVector2D = {}
 ---@field G float
 ---@field B float
 ---@field A float
-FLinearColor = {}
+local FLinearColor = {}
 
 
 
@@ -473,7 +473,7 @@ FLinearColor = {}
 ---@field YPlane FPlane
 ---@field ZPlane FPlane
 ---@field WPlane FPlane
-FMatrix = {}
+local FMatrix = {}
 
 
 
@@ -482,7 +482,7 @@ FMatrix = {}
 ---@field YPlane FPlane4d
 ---@field ZPlane FPlane4d
 ---@field WPlane FPlane4d
-FMatrix44d = {}
+local FMatrix44d = {}
 
 
 
@@ -491,7 +491,7 @@ FMatrix44d = {}
 ---@field YPlane FPlane4f
 ---@field ZPlane FPlane4f
 ---@field WPlane FPlane4f
-FMatrix44f = {}
+local FMatrix44f = {}
 
 
 
@@ -503,7 +503,7 @@ FMatrix44f = {}
 ---@field ExtentX double
 ---@field ExtentY double
 ---@field ExtentZ double
-FOrientedBox = {}
+local FOrientedBox = {}
 
 
 
@@ -512,51 +512,51 @@ FOrientedBox = {}
 ---@field Y uint8
 ---@field Z uint8
 ---@field W uint8
-FPackedNormal = {}
+local FPackedNormal = {}
 
 
 
 ---@class FPackedRGB10A2N
 ---@field Packed int32
-FPackedRGB10A2N = {}
+local FPackedRGB10A2N = {}
 
 
 
 ---@class FPackedRGBA16N
 ---@field XY int32
 ---@field ZW int32
-FPackedRGBA16N = {}
+local FPackedRGBA16N = {}
 
 
 
 ---@class FPlane : FVector
 ---@field W double
-FPlane = {}
+local FPlane = {}
 
 
 
 ---@class FPlane4d : FVector3d
 ---@field W double
-FPlane4d = {}
+local FPlane4d = {}
 
 
 
 ---@class FPlane4f : FVector3f
 ---@field W float
-FPlane4f = {}
+local FPlane4f = {}
 
 
 
 ---@class FPlatformInputDeviceState
 ---@field OwningPlatformUser FPlatformUserId
 ---@field ConnectionState EInputDeviceConnectionState
-FPlatformInputDeviceState = {}
+local FPlatformInputDeviceState = {}
 
 
 
 ---@class FPlatformUserId
 ---@field InternalId int32
-FPlatformUserId = {}
+local FPlatformUserId = {}
 
 
 
@@ -569,27 +569,27 @@ FPlatformUserId = {}
 ---@field LocalizedStrings TMap<FString, FString>
 ---@field bIsMinimalPatch boolean
 ---@field CachedText FText
-FPolyglotTextData = {}
+local FPolyglotTextData = {}
 
 
 
 ---@class FPrimaryAssetId
 ---@field PrimaryAssetType FPrimaryAssetType
 ---@field PrimaryAssetName FName
-FPrimaryAssetId = {}
+local FPrimaryAssetId = {}
 
 
 
 ---@class FPrimaryAssetType
 ---@field Name FName
-FPrimaryAssetType = {}
+local FPrimaryAssetType = {}
 
 
 
 ---@class FQualifiedFrameTime
 ---@field Time FFrameTime
 ---@field Rate FFrameRate
-FQualifiedFrameTime = {}
+local FQualifiedFrameTime = {}
 
 
 
@@ -598,7 +598,7 @@ FQualifiedFrameTime = {}
 ---@field Y double
 ---@field Z double
 ---@field W double
-FQuat = {}
+local FQuat = {}
 
 
 
@@ -607,7 +607,7 @@ FQuat = {}
 ---@field Y double
 ---@field Z double
 ---@field W double
-FQuat4d = {}
+local FQuat4d = {}
 
 
 
@@ -616,14 +616,14 @@ FQuat4d = {}
 ---@field Y float
 ---@field Z float
 ---@field W float
-FQuat4f = {}
+local FQuat4f = {}
 
 
 
 ---@class FRandomStream
 ---@field InitialSeed int32
 ---@field Seed int32
-FRandomStream = {}
+local FRandomStream = {}
 
 
 
@@ -631,7 +631,7 @@ FRandomStream = {}
 ---@field Pitch double
 ---@field Yaw double
 ---@field Roll double
-FRotator = {}
+local FRotator = {}
 
 
 
@@ -639,7 +639,7 @@ FRotator = {}
 ---@field Pitch double
 ---@field Yaw double
 ---@field Roll double
-FRotator3d = {}
+local FRotator3d = {}
 
 
 
@@ -647,24 +647,24 @@ FRotator3d = {}
 ---@field Pitch float
 ---@field Yaw float
 ---@field Roll float
-FRotator3f = {}
+local FRotator3f = {}
 
 
 
 ---@class FSoftClassPath : FSoftObjectPath
-FSoftClassPath = {}
+local FSoftClassPath = {}
 
 
 ---@class FSoftObjectPath
 ---@field AssetPath FTopLevelAssetPath
 ---@field SubPathString FString
-FSoftObjectPath = {}
+local FSoftObjectPath = {}
 
 
 
 ---@class FTemplateString
 ---@field Template FString
-FTemplateString = {}
+local FTemplateString = {}
 
 
 
@@ -672,7 +672,7 @@ FTemplateString = {}
 ---@field UninitializedObjectReference UObject
 ---@field InitializedObjectReference UObject
 ---@field UnusedValue float
-FTestUninitializedScriptStructMembersTest = {}
+local FTestUninitializedScriptStructMembersTest = {}
 
 
 
@@ -682,18 +682,18 @@ FTestUninitializedScriptStructMembersTest = {}
 ---@field Seconds int32
 ---@field Frames int32
 ---@field bDropFrameFormat boolean
-FTimecode = {}
+local FTimecode = {}
 
 
 
 ---@class FTimespan
-FTimespan = {}
+local FTimespan = {}
 
 
 ---@class FTopLevelAssetPath
 ---@field PackageName FName
 ---@field AssetName FName
-FTopLevelAssetPath = {}
+local FTopLevelAssetPath = {}
 
 
 
@@ -701,7 +701,7 @@ FTopLevelAssetPath = {}
 ---@field Rotation FQuat
 ---@field Translation FVector
 ---@field Scale3D FVector
-FTransform = {}
+local FTransform = {}
 
 
 
@@ -709,7 +709,7 @@ FTransform = {}
 ---@field Rotation FQuat4d
 ---@field Translation FVector3d
 ---@field Scale3D FVector3d
-FTransform3d = {}
+local FTransform3d = {}
 
 
 
@@ -717,21 +717,21 @@ FTransform3d = {}
 ---@field Rotation FQuat4f
 ---@field Translation FVector3f
 ---@field Scale3D FVector3f
-FTransform3f = {}
+local FTransform3f = {}
 
 
 
 ---@class FTwoVectors
 ---@field v1 FVector
 ---@field v2 FVector
-FTwoVectors = {}
+local FTwoVectors = {}
 
 
 
 ---@class FUint32Point
 ---@field X int32
 ---@field Y int32
-FUint32Point = {}
+local FUint32Point = {}
 
 
 
@@ -739,14 +739,14 @@ FUint32Point = {}
 ---@field X uint32
 ---@field Y uint32
 ---@field Z uint32
-FUint32Vector = {}
+local FUint32Vector = {}
 
 
 
 ---@class FUint32Vector2
 ---@field X uint32
 ---@field Y uint32
-FUint32Vector2 = {}
+local FUint32Vector2 = {}
 
 
 
@@ -755,14 +755,14 @@ FUint32Vector2 = {}
 ---@field Y uint32
 ---@field Z uint32
 ---@field W uint32
-FUint32Vector4 = {}
+local FUint32Vector4 = {}
 
 
 
 ---@class FUint64Point
 ---@field X int64
 ---@field Y int64
-FUint64Point = {}
+local FUint64Point = {}
 
 
 
@@ -770,14 +770,14 @@ FUint64Point = {}
 ---@field X uint64
 ---@field Y uint64
 ---@field Z uint64
-FUint64Vector = {}
+local FUint64Vector = {}
 
 
 
 ---@class FUint64Vector2
 ---@field X uint64
 ---@field Y uint64
-FUint64Vector2 = {}
+local FUint64Vector2 = {}
 
 
 
@@ -786,14 +786,14 @@ FUint64Vector2 = {}
 ---@field Y uint64
 ---@field Z uint64
 ---@field W uint64
-FUint64Vector4 = {}
+local FUint64Vector4 = {}
 
 
 
 ---@class FUintPoint
 ---@field X int32
 ---@field Y int32
-FUintPoint = {}
+local FUintPoint = {}
 
 
 
@@ -801,14 +801,14 @@ FUintPoint = {}
 ---@field X uint32
 ---@field Y uint32
 ---@field Z uint32
-FUintVector = {}
+local FUintVector = {}
 
 
 
 ---@class FUintVector2
 ---@field X uint32
 ---@field Y uint32
-FUintVector2 = {}
+local FUintVector2 = {}
 
 
 
@@ -817,7 +817,7 @@ FUintVector2 = {}
 ---@field Y uint32
 ---@field Z uint32
 ---@field W uint32
-FUintVector4 = {}
+local FUintVector4 = {}
 
 
 
@@ -825,21 +825,21 @@ FUintVector4 = {}
 ---@field X double
 ---@field Y double
 ---@field Z double
-FVector = {}
+local FVector = {}
 
 
 
 ---@class FVector2D
 ---@field X double
 ---@field Y double
-FVector2D = {}
+local FVector2D = {}
 
 
 
 ---@class FVector2f
 ---@field X float
 ---@field Y float
-FVector2f = {}
+local FVector2f = {}
 
 
 
@@ -847,7 +847,7 @@ FVector2f = {}
 ---@field X double
 ---@field Y double
 ---@field Z double
-FVector3d = {}
+local FVector3d = {}
 
 
 
@@ -855,7 +855,7 @@ FVector3d = {}
 ---@field X float
 ---@field Y float
 ---@field Z float
-FVector3f = {}
+local FVector3f = {}
 
 
 
@@ -864,7 +864,7 @@ FVector3f = {}
 ---@field Y double
 ---@field Z double
 ---@field W double
-FVector4 = {}
+local FVector4 = {}
 
 
 
@@ -873,7 +873,7 @@ FVector4 = {}
 ---@field Y double
 ---@field Z double
 ---@field W double
-FVector4d = {}
+local FVector4d = {}
 
 
 
@@ -882,239 +882,239 @@ FVector4d = {}
 ---@field Y float
 ---@field Z float
 ---@field W float
-FVector4f = {}
+local FVector4f = {}
 
 
 
 ---@class IInterface : UObject
-IInterface = {}
+local IInterface = {}
 
 
 ---@class UArrayProperty : UProperty
-UArrayProperty = {}
+local UArrayProperty = {}
 
 
 ---@class UBoolProperty : UProperty
-UBoolProperty = {}
+local UBoolProperty = {}
 
 
 ---@class UByteProperty : UNumericProperty
-UByteProperty = {}
+local UByteProperty = {}
 
 
 ---@class UClass : UStruct
-UClass = {}
+local UClass = {}
 
 
 ---@class UClassProperty : UObjectProperty
-UClassProperty = {}
+local UClassProperty = {}
 
 
 ---@class UDefault__Class
-UDefault__Class = {}
+local UDefault__Class = {}
 
 
 ---@class UDefault__DynamicClass
-UDefault__DynamicClass = {}
+local UDefault__DynamicClass = {}
 
 
 ---@class UDefault__LinkerPlaceholderClass
-UDefault__LinkerPlaceholderClass = {}
+local UDefault__LinkerPlaceholderClass = {}
 
 
 ---@class UDelegateFunction : UFunction
-UDelegateFunction = {}
+local UDelegateFunction = {}
 
 
 ---@class UDelegateProperty : UProperty
-UDelegateProperty = {}
+local UDelegateProperty = {}
 
 
 ---@class UDoubleProperty : UNumericProperty
-UDoubleProperty = {}
+local UDoubleProperty = {}
 
 
 ---@class UDynamicClass : UClass
-UDynamicClass = {}
+local UDynamicClass = {}
 
 
 ---@class UEnum : UField
-UEnum = {}
+local UEnum = {}
 
 
 ---@class UEnumProperty : UProperty
-UEnumProperty = {}
+local UEnumProperty = {}
 
 
 ---@class UField : UObject
-UField = {}
+local UField = {}
 
 
 ---@class UFloatProperty : UNumericProperty
-UFloatProperty = {}
+local UFloatProperty = {}
 
 
 ---@class UFunction : UStruct
-UFunction = {}
+local UFunction = {}
 
 
 ---@class UGCObjectReferencer : UObject
-UGCObjectReferencer = {}
+local UGCObjectReferencer = {}
 
 
 ---@class UInt16Property : UNumericProperty
-UInt16Property = {}
+local UInt16Property = {}
 
 
 ---@class UInt64Property : UNumericProperty
-UInt64Property = {}
+local UInt64Property = {}
 
 
 ---@class UInt8Property : UNumericProperty
-UInt8Property = {}
+local UInt8Property = {}
 
 
 ---@class UIntProperty : UNumericProperty
-UIntProperty = {}
+local UIntProperty = {}
 
 
 ---@class UInterfaceProperty : UProperty
-UInterfaceProperty = {}
+local UInterfaceProperty = {}
 
 
 ---@class ULazyObjectProperty : UObjectPropertyBase
-ULazyObjectProperty = {}
+local ULazyObjectProperty = {}
 
 
 ---@class ULinkerPlaceholderClass : UClass
-ULinkerPlaceholderClass = {}
+local ULinkerPlaceholderClass = {}
 
 
 ---@class ULinkerPlaceholderExportObject : UObject
-ULinkerPlaceholderExportObject = {}
+local ULinkerPlaceholderExportObject = {}
 
 
 ---@class ULinkerPlaceholderFunction : UFunction
-ULinkerPlaceholderFunction = {}
+local ULinkerPlaceholderFunction = {}
 
 
 ---@class UMapProperty : UProperty
-UMapProperty = {}
+local UMapProperty = {}
 
 
 ---@class UMetaData : UObject
-UMetaData = {}
+local UMetaData = {}
 
 
 ---@class UMulticastDelegateProperty : UProperty
-UMulticastDelegateProperty = {}
+local UMulticastDelegateProperty = {}
 
 
 ---@class UMulticastDelegatePropertyWrapper : UPropertyWrapper
-UMulticastDelegatePropertyWrapper = {}
+local UMulticastDelegatePropertyWrapper = {}
 
 
 ---@class UMulticastInlineDelegateProperty : UMulticastDelegateProperty
-UMulticastInlineDelegateProperty = {}
+local UMulticastInlineDelegateProperty = {}
 
 
 ---@class UMulticastInlineDelegatePropertyWrapper : UMulticastDelegatePropertyWrapper
-UMulticastInlineDelegatePropertyWrapper = {}
+local UMulticastInlineDelegatePropertyWrapper = {}
 
 
 ---@class UMulticastSparseDelegateProperty : UMulticastDelegateProperty
-UMulticastSparseDelegateProperty = {}
+local UMulticastSparseDelegateProperty = {}
 
 
 ---@class UNameProperty : UProperty
-UNameProperty = {}
+local UNameProperty = {}
 
 
 ---@class UNumericProperty : UProperty
-UNumericProperty = {}
+local UNumericProperty = {}
 
 
 ---@class UObjectProperty : UObjectPropertyBase
-UObjectProperty = {}
+local UObjectProperty = {}
 
 
 ---@class UObjectPropertyBase : UProperty
-UObjectPropertyBase = {}
+local UObjectPropertyBase = {}
 
 
 ---@class UObjectRedirector : UObject
-UObjectRedirector = {}
+local UObjectRedirector = {}
 
 
 ---@class UPackage : UObject
-UPackage = {}
+local UPackage = {}
 
 
 ---@class UPackageMap : UObject
-UPackageMap = {}
+local UPackageMap = {}
 
 
 ---@class UProperty : UField
-UProperty = {}
+local UProperty = {}
 
 
 ---@class UPropertyWrapper : UObject
-UPropertyWrapper = {}
+local UPropertyWrapper = {}
 
 
 ---@class UScriptStruct : UStruct
-UScriptStruct = {}
+local UScriptStruct = {}
 
 
 ---@class USetProperty : UProperty
-USetProperty = {}
+local USetProperty = {}
 
 
 ---@class USoftClassProperty : USoftObjectProperty
-USoftClassProperty = {}
+local USoftClassProperty = {}
 
 
 ---@class USoftObjectProperty : UObjectPropertyBase
-USoftObjectProperty = {}
+local USoftObjectProperty = {}
 
 
 ---@class USparseDelegateFunction : UDelegateFunction
-USparseDelegateFunction = {}
+local USparseDelegateFunction = {}
 
 
 ---@class UStrProperty : UProperty
-UStrProperty = {}
+local UStrProperty = {}
 
 
 ---@class UStruct : UField
-UStruct = {}
+local UStruct = {}
 
 
 ---@class UStructProperty : UProperty
-UStructProperty = {}
+local UStructProperty = {}
 
 
 ---@class UTextBuffer : UObject
-UTextBuffer = {}
+local UTextBuffer = {}
 
 
 ---@class UTextProperty : UProperty
-UTextProperty = {}
+local UTextProperty = {}
 
 
 ---@class UUInt16Property : UNumericProperty
-UUInt16Property = {}
+local UUInt16Property = {}
 
 
 ---@class UUInt32Property : UNumericProperty
-UUInt32Property = {}
+local UUInt32Property = {}
 
 
 ---@class UUInt64Property : UNumericProperty
-UUInt64Property = {}
+local UUInt64Property = {}
 
 
 ---@class UWeakObjectProperty : UObjectPropertyBase
-UWeakObjectProperty = {}
+local UWeakObjectProperty = {}
 
 

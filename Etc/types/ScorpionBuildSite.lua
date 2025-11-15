@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UScorpionBuildSite_C : UBPBaseBuildSiteEntity_C
-UScorpionBuildSite_C = {}
+local UScorpionBuildSite_C = {}
 
 

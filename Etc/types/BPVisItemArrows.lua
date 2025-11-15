@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemArrows_C : UVisItem
-UBPVisItemArrows_C = {}
+local UBPVisItemArrows_C = {}
 
 

@@ -1,5 +1,5 @@
 ---@enum EGLTFMaterialBakeMode
-EGLTFMaterialBakeMode = {
+local EGLTFMaterialBakeMode = {
     Disabled = 0,
     Simple = 1,
     UseMeshData = 2,
@@ -7,7 +7,7 @@ EGLTFMaterialBakeMode = {
 }
 
 ---@enum EGLTFMaterialBakeSizePOT
-EGLTFMaterialBakeSizePOT = {
+local EGLTFMaterialBakeSizePOT = {
     POT_1 = 0,
     POT_2 = 1,
     POT_4 = 2,
@@ -26,7 +26,7 @@ EGLTFMaterialBakeSizePOT = {
 }
 
 ---@enum EGLTFMaterialPropertyGroup
-EGLTFMaterialPropertyGroup = {
+local EGLTFMaterialPropertyGroup = {
     None = 0,
     BaseColorOpacity = 1,
     MetallicRoughness = 2,
@@ -39,7 +39,7 @@ EGLTFMaterialPropertyGroup = {
 }
 
 ---@enum EGLTFMaterialVariantMode
-EGLTFMaterialVariantMode = {
+local EGLTFMaterialVariantMode = {
     None = 0,
     Simple = 1,
     UseMeshData = 2,
@@ -47,7 +47,7 @@ EGLTFMaterialVariantMode = {
 }
 
 ---@enum EGLTFSceneMobility
-EGLTFSceneMobility = {
+local EGLTFSceneMobility = {
     None = 0,
     Static = 1,
     Stationary = 2,
@@ -57,14 +57,14 @@ EGLTFSceneMobility = {
 }
 
 ---@enum EGLTFTextureHDREncoding
-EGLTFTextureHDREncoding = {
+local EGLTFTextureHDREncoding = {
     None = 0,
     RGBM = 1,
     EGLTFTextureHDREncoding_MAX = 2,
 }
 
 ---@enum EGLTFTextureImageFormat
-EGLTFTextureImageFormat = {
+local EGLTFTextureImageFormat = {
     None = 0,
     PNG = 1,
     JPEG = 2,
@@ -72,7 +72,7 @@ EGLTFTextureImageFormat = {
 }
 
 ---@enum EGLTFTextureType
-EGLTFTextureType = {
+local EGLTFTextureType = {
     None = 0,
     HDR = 1,
     Normalmaps = 2,
@@ -82,7 +82,7 @@ EGLTFTextureType = {
 }
 
 ---@enum EGLTFVariantSetsMode
-EGLTFVariantSetsMode = {
+local EGLTFVariantSetsMode = {
     None = 0,
     Khronos = 1,
     Epic = 2,

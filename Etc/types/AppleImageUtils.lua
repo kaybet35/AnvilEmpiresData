@@ -3,19 +3,19 @@
 ---@class FAppleImageUtilsImageConversionResult
 ---@field Error FString
 ---@field ImageData TArray<uint8>
-FAppleImageUtilsImageConversionResult = {}
+local FAppleImageUtilsImageConversionResult = {}
 
 
 
 ---@class IAppleImageInterface : IInterface
-IAppleImageInterface = {}
+local IAppleImageInterface = {}
 
 
 ---@class UAppleImageUtilsBaseAsyncTaskBlueprintProxy : UObject
 ---@field OnSuccess FAppleImageUtilsBaseAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFailure FAppleImageUtilsBaseAsyncTaskBlueprintProxyOnFailure
 ---@field ConversionResult FAppleImageUtilsImageConversionResult
-UAppleImageUtilsBaseAsyncTaskBlueprintProxy = {}
+local UAppleImageUtilsBaseAsyncTaskBlueprintProxy = {}
 
 ---@param SourceImage UTexture
 ---@param bWantColor boolean

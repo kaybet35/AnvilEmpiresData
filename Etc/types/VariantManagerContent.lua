@@ -3,7 +3,7 @@
 ---@class ALevelVariantSetsActor : AActor
 ---@field LevelVariantSets FSoftObjectPath
 ---@field DirectorInstances TMap<TObjectPtr<UClass>, ULevelVariantSetsFunctionDirector>
-ALevelVariantSetsActor = {}
+local ALevelVariantSetsActor = {}
 
 ---@param VariantSetName FString
 ---@param VariantName FString
@@ -23,7 +23,7 @@ function ALevelVariantSetsActor:GetLevelVariantSets(bLoad) end
 ---@class ASwitchActor : AActor
 ---@field SceneComponent USceneComponent
 ---@field LastSelectedOption int32
-ASwitchActor = {}
+local ASwitchActor = {}
 
 ---@param OptionIndex int32
 function ASwitchActor:SelectOption(OptionIndex) end
@@ -37,13 +37,13 @@ function ASwitchActor:GetOptions() end
 ---@field PropertyName FString
 ---@field PropertyIndex int32
 ---@field ComponentName FString
-FCapturedPropSegment = {}
+local FCapturedPropSegment = {}
 
 
 
 ---@class FFunctionCaller
 ---@field FunctionName FName
-FFunctionCaller = {}
+local FFunctionCaller = {}
 
 
 
@@ -51,14 +51,14 @@ FFunctionCaller = {}
 ---@field VariantSet TSoftObjectPtr<UVariantSet>
 ---@field Variant TSoftObjectPtr<UVariant>
 ---@field bEnabled boolean
-FVariantDependency = {}
+local FVariantDependency = {}
 
 
 
 ---@class ULevelVariantSets : UObject
 ---@field DirectorClass TObjectPtr<UClass>
 ---@field VariantSets TArray<UVariantSet>
-ULevelVariantSets = {}
+local ULevelVariantSets = {}
 
 ---@param VariantSetName FString
 ---@return UVariantSet
@@ -71,7 +71,7 @@ function ULevelVariantSets:GetNumVariantSets() end
 
 
 ---@class ULevelVariantSetsFunctionDirector : UObject
-ULevelVariantSetsFunctionDirector = {}
+local ULevelVariantSetsFunctionDirector = {}
 
 
 ---@class UPropertyValue : UObject
@@ -85,7 +85,7 @@ ULevelVariantSetsFunctionDirector = {}
 ---@field LeafPropertyClass TObjectPtr<UClass>
 ---@field ValueBytes TArray<uint8>
 ---@field PropCategory EPropertyValueCategory
-UPropertyValue = {}
+local UPropertyValue = {}
 
 ---@return boolean
 function UPropertyValue:HasRecordedData() end
@@ -96,27 +96,27 @@ function UPropertyValue:GetFullDisplayString() end
 
 
 ---@class UPropertyValueColor : UPropertyValue
-UPropertyValueColor = {}
+local UPropertyValueColor = {}
 
 
 ---@class UPropertyValueMaterial : UPropertyValue
-UPropertyValueMaterial = {}
+local UPropertyValueMaterial = {}
 
 
 ---@class UPropertyValueOption : UPropertyValue
-UPropertyValueOption = {}
+local UPropertyValueOption = {}
 
 
 ---@class UPropertyValueSoftObject : UPropertyValue
-UPropertyValueSoftObject = {}
+local UPropertyValueSoftObject = {}
 
 
 ---@class UPropertyValueTransform : UPropertyValue
-UPropertyValueTransform = {}
+local UPropertyValueTransform = {}
 
 
 ---@class UPropertyValueVisibility : UPropertyValue
-UPropertyValueVisibility = {}
+local UPropertyValueVisibility = {}
 
 
 ---@class UVariant : UObject
@@ -124,7 +124,7 @@ UPropertyValueVisibility = {}
 ---@field DisplayText FText
 ---@field ObjectBindings TArray<UVariantObjectBinding>
 ---@field Thumbnail UTexture2D
-UVariant = {}
+local UVariant = {}
 
 function UVariant:SwitchOn() end
 ---@param NewThumbnail UTexture2D
@@ -178,7 +178,7 @@ function UVariant:AddDependency(Dependency) end
 ---@field LazyObjectPtr TLazyObjectPtr<UObject>
 ---@field CapturedProperties TArray<UPropertyValue>
 ---@field FunctionCallers TArray<FFunctionCaller>
-UVariantObjectBinding = {}
+local UVariantObjectBinding = {}
 
 
 
@@ -187,7 +187,7 @@ UVariantObjectBinding = {}
 ---@field bExpanded boolean
 ---@field Variants TArray<UVariant>
 ---@field Thumbnail UTexture2D
-UVariantSet = {}
+local UVariantSet = {}
 
 ---@param NewThumbnail UTexture2D
 function UVariantSet:SetThumbnailFromTexture(NewThumbnail) end

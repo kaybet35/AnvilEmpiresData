@@ -2,7 +2,7 @@
 
 ---@class ABPVisResinPileHusk_C : AVisEffect
 ---@field StaticMesh UStaticMeshComponent
-ABPVisResinPileHusk_C = {}
+local ABPVisResinPileHusk_C = {}
 
 
 

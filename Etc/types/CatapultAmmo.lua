@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCatapultAmmo_C : UItemTemplate
-UCatapultAmmo_C = {}
+local UCatapultAmmo_C = {}
 
 

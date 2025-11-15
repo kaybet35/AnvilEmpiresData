@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URichSoil_C : UEntityTemplate
-URichSoil_C = {}
+local URichSoil_C = {}
 
 

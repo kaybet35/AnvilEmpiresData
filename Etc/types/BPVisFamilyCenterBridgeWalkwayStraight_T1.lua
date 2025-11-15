@@ -9,7 +9,7 @@
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterBridgeWalkwayStraight_T1_C = {}
+local ABPVisFamilyCenterBridgeWalkwayStraight_T1_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFortStairsShortBuildSite_C : UBPBaseBuildSiteEntity_C
-UFortStairsShortBuildSite_C = {}
+local UFortStairsShortBuildSite_C = {}
 
 

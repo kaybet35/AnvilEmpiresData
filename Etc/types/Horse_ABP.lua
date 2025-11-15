@@ -27,7 +27,7 @@
 ---@field __NameProperty_132 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -39,7 +39,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_3 float
 ---@field __FloatProperty_4 float
 ---@field __FloatProperty_5 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -70,7 +70,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace FAnimNode_RotationOffsetBlendSpace
-UHorse_ABP_C = {}
+local UHorse_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UHorse_ABP_C:AnimGraph(AnimGraph) end

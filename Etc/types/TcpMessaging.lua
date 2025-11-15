@@ -7,7 +7,7 @@
 ---@field ConnectionRetryDelay int32
 ---@field ConnectionRetryPeriod int32
 ---@field bStopServiceWhenAppDeactivates boolean
-UTcpMessagingSettings = {}
+local UTcpMessagingSettings = {}
 
 
 

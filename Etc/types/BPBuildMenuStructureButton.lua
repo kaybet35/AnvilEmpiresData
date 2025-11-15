@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBuildMenuStructureButton_C : UBuildMenuStructureButton
-UBPBuildMenuStructureButton_C = {}
+local UBPBuildMenuStructureButton_C = {}
 
 

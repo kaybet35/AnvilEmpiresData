@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class AAnvilPrefab : AActor
-AAnvilPrefab = {}
+local AAnvilPrefab = {}
 
 
 ---@class AAnvilRockActor : AAnvilPrefab
 ---@field ArrowComponent UArrowComponent
 ---@field RockMeshComponent UStaticMeshComponent
-AAnvilRockActor = {}
+local AAnvilRockActor = {}
 
 
 
@@ -15,14 +15,14 @@ AAnvilRockActor = {}
 ---@field EntityTemplate TSubclassOf<UEntityTemplate>
 ---@field ArrowComponent UArrowComponent
 ---@field StaticMesh UStaticMeshComponent
-AAnvilTreeActor = {}
+local AAnvilTreeActor = {}
 
 
 
 ---@class AAnvilWaterPlane : AActor
 ---@field Arrow UArrowComponent
 ---@field WaterMesh UStaticMeshComponent
-AAnvilWaterPlane = {}
+local AAnvilWaterPlane = {}
 
 
 
@@ -30,7 +30,7 @@ AAnvilWaterPlane = {}
 ---@field CodeNameString FString
 ---@field CodeName int32
 ---@field ArrowComponent UArrowComponent
-ADynamicPrefab = {}
+local ADynamicPrefab = {}
 
 
 
@@ -46,24 +46,24 @@ ADynamicPrefab = {}
 ---@field FootprintVisualizer UCollisionVisualizerComponent
 ---@field MeshVisualizers TArray<UCollisionVisualizerComponent>
 ---@field StaticMeshVisualizers TArray<UStaticMeshComponent>
-AFootprint = {}
+local AFootprint = {}
 
 
 
 ---@class ATemplate : AActor
-ATemplate = {}
+local ATemplate = {}
 
 
 ---@class AUnderworldModulePrefab : AAnvilPrefab
 ---@field ArrowComponent UArrowComponent
 ---@field ModuleFootprint UBoxComponent
-AUnderworldModulePrefab = {}
+local AUnderworldModulePrefab = {}
 
 
 
 ---@class AVisActorBase : AActor
 ---@field TemplateCDO UEntityTemplate
-AVisActorBase = {}
+local AVisActorBase = {}
 
 
 
@@ -72,7 +72,7 @@ AVisActorBase = {}
 ---@field OutputCodeNameVisVar int32
 ---@field NumHitsToConvert int32
 ---@field TargetHeat float
-FAnvilOutput = {}
+local FAnvilOutput = {}
 
 
 
@@ -91,7 +91,7 @@ FAnvilOutput = {}
 ---@field StaminaCost float
 ---@field AimedStaminaCost float
 ---@field bUsableWithLowStamina boolean
-FAnvilSimActivity = {}
+local FAnvilSimActivity = {}
 
 
 
@@ -102,27 +102,27 @@ FAnvilSimActivity = {}
 ---@field OwnerId int64
 ---@field StackSize int32
 ---@field Attributes TArray<float>
-FAvatarProfile = {}
+local FAvatarProfile = {}
 
 
 
 ---@class FAvatarProfilesRequestData
 ---@field Profiles TArray<FAvatarProfile>
-FAvatarProfilesRequestData = {}
+local FAvatarProfilesRequestData = {}
 
 
 
 ---@class FBasedEntityEntry
 ---@field Handle FEntityHandle
 ---@field RelativeTransform FTransform
-FBasedEntityEntry = {}
+local FBasedEntityEntry = {}
 
 
 
 ---@class FBasicCount
 ---@field CodeName int32
 ---@field Count int32
-FBasicCount = {}
+local FBasicCount = {}
 
 
 
@@ -131,7 +131,7 @@ FBasicCount = {}
 ---@field CodeNameVisVar int32
 ---@field Payload uint8
 ---@field Count int32
-FBasicItemAndPayloadCount = {}
+local FBasicItemAndPayloadCount = {}
 
 
 
@@ -139,7 +139,7 @@ FBasicItemAndPayloadCount = {}
 ---@field CodeName TSubclassOf<UItemTemplate>
 ---@field CodeNameVisVar int32
 ---@field Count int32
-FBasicItemCount = {}
+local FBasicItemCount = {}
 
 
 
@@ -147,7 +147,7 @@ FBasicItemCount = {}
 ---@field Position FVector
 ---@field Rotation FRotator
 ---@field Extents FVector
-FBoundingBox = {}
+local FBoundingBox = {}
 
 
 
@@ -162,7 +162,7 @@ FBoundingBox = {}
 ---@field UndergroundArea boolean
 ---@field WildernessArea boolean
 ---@field WildernessAreaFriendlyRequired boolean
-FBuildAreaInfo = {}
+local FBuildAreaInfo = {}
 
 
 
@@ -177,7 +177,7 @@ FBuildAreaInfo = {}
 ---@field RequiredAgeSeconds float
 ---@field NearbyPlayersRequired int32
 ---@field TierPrerequisite uint8
-FBuildRuleInfo = {}
+local FBuildRuleInfo = {}
 
 
 
@@ -191,7 +191,7 @@ FBuildRuleInfo = {}
 ---@field BeaconTowerAltitudePercent float
 ---@field NumBeaconTowerNeighbours uint8
 ---@field DistanceToTown int32
-FBuildSitePlacementInfo = {}
+local FBuildSitePlacementInfo = {}
 
 
 
@@ -201,13 +201,13 @@ FBuildSitePlacementInfo = {}
 ---@field PricePerItem int32
 ---@field ListingOwnerOnlineId int64
 ---@field NumItemsFulfilled int32
-FCentralMarketplaceListing = {}
+local FCentralMarketplaceListing = {}
 
 
 
 ---@class FCentralMarketplaceOrderItem
 ---@field Base FGridItem
-FCentralMarketplaceOrderItem = {}
+local FCentralMarketplaceOrderItem = {}
 
 
 
@@ -217,7 +217,7 @@ FCentralMarketplaceOrderItem = {}
 ---@field DataForMarketMapHash int32
 ---@field SaleListings TArray<FCentralMarketplaceListing>
 ---@field OrderListings TArray<FCentralMarketplaceListing>
-FCentralMarketplaceUserData = {}
+local FCentralMarketplaceUserData = {}
 
 
 
@@ -226,14 +226,14 @@ FCentralMarketplaceUserData = {}
 ---@field SenderId int64
 ---@field SenderName FString
 ---@field Text FString
-FClientChatMessage = {}
+local FClientChatMessage = {}
 
 
 
 ---@class FCompHandleData
 ---@field Target FEntityHandle
 ---@field Index int32
-FCompHandleData = {}
+local FCompHandleData = {}
 
 
 
@@ -243,14 +243,14 @@ FCompHandleData = {}
 ---@field Layer int32
 ---@field DataSize uint32
 ---@field DataIndex int32
-FCompressedTileLayerDataInfo = {}
+local FCompressedTileLayerDataInfo = {}
 
 
 
 ---@class FContextfulPlacementStatus
 ---@field Status EAnvilPlacementStatus
 ---@field Context int32
-FContextfulPlacementStatus = {}
+local FContextfulPlacementStatus = {}
 
 
 
@@ -260,7 +260,7 @@ FContextfulPlacementStatus = {}
 ---@field DimensionYZ float
 ---@field bVertical boolean
 ---@field bInvertedControls boolean
-FControlSurface = {}
+local FControlSurface = {}
 
 
 
@@ -269,7 +269,7 @@ FControlSurface = {}
 ---@field OutputItems TArray<FBasicItemCount>
 ---@field CookDurationSec float
 ---@field TargetNormalizedTemperature float
-FCookingRecipe = {}
+local FCookingRecipe = {}
 
 
 
@@ -279,7 +279,7 @@ FCookingRecipe = {}
 ---@field CraftedItemVisVar int32
 ---@field QualityIngredient TSubclassOf<UItemTemplate>
 ---@field QualityIngredientVisVar int32
-FCraftingRecipe = {}
+local FCraftingRecipe = {}
 
 
 
@@ -287,14 +287,14 @@ FCraftingRecipe = {}
 ---@field CodeName TSubclassOf<UItemTemplate>
 ---@field CodeNameVisVar int32
 ---@field StackLimit int32
-FCustomStackLimit = {}
+local FCustomStackLimit = {}
 
 
 
 ---@class FDeploymentAvatarUserData
 ---@field EntityInfo FEntityIdAndMapHash
 ---@field AvatarProfiles TArray<FAvatarProfile>
-FDeploymentAvatarUserData = {}
+local FDeploymentAvatarUserData = {}
 
 
 
@@ -302,7 +302,7 @@ FDeploymentAvatarUserData = {}
 ---@field VoterId int64
 ---@field VoteTime int32
 ---@field VoteCount uint8
-FDismantleVoteInfo = {}
+local FDismantleVoteInfo = {}
 
 
 
@@ -312,7 +312,7 @@ FDismantleVoteInfo = {}
 ---@field OutputItem TSubclassOf<UItemTemplate>
 ---@field OutputItemVisVar int32
 ---@field DryingDurationSeconds float
-FDryingRackRecipe = {}
+local FDryingRackRecipe = {}
 
 
 
@@ -321,21 +321,21 @@ FDryingRackRecipe = {}
 ---@field CodeNameVisVar int32
 ---@field SpawnWeight float
 ---@field SpawnWeightVisVar float
-FDynamicPrefabSpawnInfo = {}
+local FDynamicPrefabSpawnInfo = {}
 
 
 
 ---@class FEntityHandle
 ---@field ID uint64
 ---@field CachedPtr AVisActorBase
-FEntityHandle = {}
+local FEntityHandle = {}
 
 
 
 ---@class FEntityIdAndMapHash
 ---@field EntityId int64
 ---@field MapHash int32
-FEntityIdAndMapHash = {}
+local FEntityIdAndMapHash = {}
 
 
 
@@ -343,7 +343,7 @@ FEntityIdAndMapHash = {}
 ---@field EntityTypeToAvoid TSubclassOf<UEntityTemplate>
 ---@field EntityTypeToAvoidVisVar int32
 ---@field Distance float
-FExplorationSpawnedEntityAvoidInfo = {}
+local FExplorationSpawnedEntityAvoidInfo = {}
 
 
 
@@ -363,7 +363,7 @@ FExplorationSpawnedEntityAvoidInfo = {}
 ---@field CompatibleSurfaceTypes int32
 ---@field ForbiddenSurfaceTypes int32
 ---@field OtherResourcesToAvoidByDistance TArray<FExplorationSpawnedEntityAvoidInfo>
-FExplorationSpawnedEntityInfo = {}
+local FExplorationSpawnedEntityInfo = {}
 
 
 
@@ -371,7 +371,7 @@ FExplorationSpawnedEntityInfo = {}
 ---@field MapHash int32
 ---@field FamilyId int32
 ---@field bHasHousePledge boolean
-FFamilyHouseInfoType = {}
+local FFamilyHouseInfoType = {}
 
 
 
@@ -380,7 +380,7 @@ FFamilyHouseInfoType = {}
 ---@field bHighlight boolean
 ---@field bHide boolean
 ---@field bNoCopyToBuildSite boolean
-FFootprintSharedCompEntry = {}
+local FFootprintSharedCompEntry = {}
 
 
 
@@ -390,7 +390,7 @@ FFootprintSharedCompEntry = {}
 ---@field BurnDurationSec float
 ---@field NormalizedTemperature float
 ---@field AshGenerated int32
-FFuelType = {}
+local FFuelType = {}
 
 
 
@@ -399,7 +399,7 @@ FFuelType = {}
 ---@field OutputItem FBasicItemCount
 ---@field ProductionDuration float
 ---@field TargetCoarseness float
-FGrainMillRecipe = {}
+local FGrainMillRecipe = {}
 
 
 
@@ -407,7 +407,7 @@ FGrainMillRecipe = {}
 ---@field CodeName int32
 ---@field UnderlyingCodeName int32
 ---@field Payload uint8
-FGridItem = {}
+local FGridItem = {}
 
 
 
@@ -418,7 +418,7 @@ FGridItem = {}
 ---@field OutputStackSizeVisVar int32
 ---@field NumHitsToConvert int32
 ---@field bOutputScalesWithInputStackSize boolean
-FHitConverterInput = {}
+local FHitConverterInput = {}
 
 
 
@@ -427,7 +427,7 @@ FHitConverterInput = {}
 ---@field OutputCodeNameVisVar int32
 ---@field InputList TArray<FHitConverterInput>
 ---@field InputListVisVar TArray<FHitConverterInput>
-FHitConverterOutput = {}
+local FHitConverterOutput = {}
 
 
 
@@ -439,13 +439,13 @@ FHitConverterOutput = {}
 ---@field Time float
 ---@field Surface EAnvilPhysicalSurfaceType
 ---@field bInitialOverlap boolean
-FHitInfo = {}
+local FHitInfo = {}
 
 
 
 ---@class FHousePledgedPlayerArray
 ---@field WrappedArray TArray<int64>
-FHousePledgedPlayerArray = {}
+local FHousePledgedPlayerArray = {}
 
 
 
@@ -471,7 +471,7 @@ FHousePledgedPlayerArray = {}
 ---@field RequiredEnablingItemVisVar int32
 ---@field BackgroundType EAnvilItemSlotBackgroundType
 ---@field CustomStackLimits TArray<FCustomStackLimit>
-FInventorySlot = {}
+local FInventorySlot = {}
 
 
 
@@ -481,7 +481,7 @@ FInventorySlot = {}
 ---@field bIsDisabled boolean
 ---@field bCantArmDueToHeavyItem boolean
 ---@field PriorityGroup uint8
-FInventorySlotData = {}
+local FInventorySlotData = {}
 
 
 
@@ -495,7 +495,7 @@ FInventorySlotData = {}
 ---@field ItemFlags TArray<EAnvilItemFlag>
 ---@field ItemFlagsVisVar int64
 ---@field Payload uint8
-FItemCount = {}
+local FItemCount = {}
 
 
 
@@ -504,7 +504,7 @@ FItemCount = {}
 ---@field NormalizedChanceToDrop float
 ---@field MinDurability float
 ---@field MaxDurability float
-FLootTableItem = {}
+local FLootTableItem = {}
 
 
 
@@ -513,14 +513,14 @@ FLootTableItem = {}
 ---@field PositionX float
 ---@field PositionY float
 ---@field NumAvatars int32
-FMapAvatarInfo = {}
+local FMapAvatarInfo = {}
 
 
 
 ---@class FMineChunk
 ---@field TypeIdx int32
 ---@field WorldPosition FVector
-FMineChunk = {}
+local FMineChunk = {}
 
 
 
@@ -530,7 +530,7 @@ FMineChunk = {}
 ---@field Right boolean
 ---@field Left boolean
 ---@field Sprint boolean
-FMovementInputState = {}
+local FMovementInputState = {}
 
 
 
@@ -539,14 +539,14 @@ FMovementInputState = {}
 ---@field NumVerts int32
 ---@field bWalkable boolean
 ---@field Layer int32
-FNavMeshTri = {}
+local FNavMeshTri = {}
 
 
 
 ---@class FNightShroudLightSource
 ---@field LightPosition FVector
 ---@field LightRadius float
-FNightShroudLightSource = {}
+local FNightShroudLightSource = {}
 
 
 
@@ -558,7 +558,7 @@ FNightShroudLightSource = {}
 ---@field AllowedToSpawnUnixTimeStamp int64
 ---@field OfflineCharacterServerName FString
 ---@field bIsOfflineAtFamilyCenter boolean
-FPlayerAgeDeployData = {}
+local FPlayerAgeDeployData = {}
 
 
 
@@ -567,12 +567,12 @@ FPlayerAgeDeployData = {}
 ---@field TownHallId int32
 ---@field bHasHousePledge boolean
 ---@field bHasBedPledge boolean
-FPledgeInfoType = {}
+local FPledgeInfoType = {}
 
 
 
 ---@class FPledgedPlayer
-FPledgedPlayer = {}
+local FPledgedPlayer = {}
 
 
 ---@class FProducableItem
@@ -584,7 +584,7 @@ FPledgedPlayer = {}
 ---@field bRequiresResearch boolean
 ---@field bMakePublic boolean
 ---@field RequiredStructure TSubclassOf<UEntityTemplate>
-FProducableItem = {}
+local FProducableItem = {}
 
 
 
@@ -595,14 +595,14 @@ FProducableItem = {}
 ---@field FortressAreaRadius float
 ---@field FortressToTownPaddingDist float
 ---@field CampToCampPaddingDist float
-FR2ConfigArea = {}
+local FR2ConfigArea = {}
 
 
 
 ---@class FR2ConfigBuildSite
 ---@field BuildSiteDistanceRules TArray<FR2ConfigBuildSiteDistanceRule>
 ---@field FamilyStructureWorldEntranceAvoidDist float
-FR2ConfigBuildSite = {}
+local FR2ConfigBuildSite = {}
 
 
 
@@ -614,19 +614,19 @@ FR2ConfigBuildSite = {}
 ---@field NeighbourLimit uint8
 ---@field FriendlyTeam EAnvilTrinaryRequirement
 ---@field ErrorCode EAnvilPlacementStatus
-FR2ConfigBuildSiteDistanceRule = {}
+local FR2ConfigBuildSiteDistanceRule = {}
 
 
 
 ---@class FR2ConfigCombustion
 ---@field FuelList TArray<FFuelType>
-FR2ConfigCombustion = {}
+local FR2ConfigCombustion = {}
 
 
 
 ---@class FR2ConfigItem
 ---@field CrateAcceptedTags TArray<EAnvilItemTag>
-FR2ConfigItem = {}
+local FR2ConfigItem = {}
 
 
 
@@ -635,13 +635,13 @@ FR2ConfigItem = {}
 ---@field MaxLifeTime float
 ---@field LifeTimeChangeByUpvote float
 ---@field LifeTimeChangeByDownvote float
-FR2ConfigSignPost = {}
+local FR2ConfigSignPost = {}
 
 
 
 ---@class FR2ConfigTradeResources
 ---@field TradeResources TArray<TSubclassOf<UEntityTemplate>>
-FR2ConfigTradeResources = {}
+local FR2ConfigTradeResources = {}
 
 
 
@@ -655,21 +655,21 @@ FR2ConfigTradeResources = {}
 ---@field bIsAbandoned boolean
 ---@field MemberOnlineIdList TArray<FR2FamilyMember>
 ---@field AlliedFamilyIdList TArray<int32>
-FR2Family = {}
+local FR2Family = {}
 
 
 
 ---@class FR2FamilyMember
 ---@field OnlineId int64
 ---@field Role EAnvilR2FamilyRoleType
-FR2FamilyMember = {}
+local FR2FamilyMember = {}
 
 
 
 ---@class FR2FloatRange
 ---@field Min float
 ---@field Max float
-FR2FloatRange = {}
+local FR2FloatRange = {}
 
 
 
@@ -677,7 +677,7 @@ FR2FloatRange = {}
 ---@field TargetFamilyMarkerEntityId int64
 ---@field InviterOnlineId int64
 ---@field InviterPlayerName FString
-FR2InviteToJoinFamilyRequest = {}
+local FR2InviteToJoinFamilyRequest = {}
 
 
 
@@ -687,14 +687,14 @@ FR2InviteToJoinFamilyRequest = {}
 ---@field RequesterOnlineId int64
 ---@field RequesterPlayerName FString
 ---@field RequesterTeamId uint8
-FR2RequestToJoinFamilyRequest = {}
+local FR2RequestToJoinFamilyRequest = {}
 
 
 
 ---@class FR2WeatherEvent
 ---@field Config FR2WeatherEventConfig
 ---@field StartUnixTimestamp int64
-FR2WeatherEvent = {}
+local FR2WeatherEvent = {}
 
 
 
@@ -708,14 +708,14 @@ FR2WeatherEvent = {}
 ---@field VelocityY float
 ---@field MaxDurationSec int32
 ---@field PeakIntensity float
-FR2WeatherEventConfig = {}
+local FR2WeatherEventConfig = {}
 
 
 
 ---@class FRayCastResult
 ---@field bHasBlockingHit boolean
 ---@field BlockingHit FHitInfo
-FRayCastResult = {}
+local FRayCastResult = {}
 
 
 
@@ -723,7 +723,7 @@ FRayCastResult = {}
 ---@field Index uint8
 ---@field Resources TArray<FItemCount>
 ---@field ItemQuality uint8
-FRefineQueueItem = {}
+local FRefineQueueItem = {}
 
 
 
@@ -732,7 +732,7 @@ FRefineQueueItem = {}
 ---@field PersonalList TArray<FMapAvatarInfo>
 ---@field FamilyList TArray<FMapAvatarInfo>
 ---@field PublicList TArray<FMapAvatarInfo>
-FRegionMapAvatarInfoLists = {}
+local FRegionMapAvatarInfoLists = {}
 
 
 
@@ -741,20 +741,20 @@ FRegionMapAvatarInfoLists = {}
 ---@field TargetNameVisVar int32
 ---@field NormalizedHealth float
 ---@field TargetArea EAnvilTargetAreaType
-FRepairMessage = {}
+local FRepairMessage = {}
 
 
 
 ---@class FReplicatedRefineQueueItem
 ---@field Index uint8
 ---@field ItemQuality uint8
-FReplicatedRefineQueueItem = {}
+local FReplicatedRefineQueueItem = {}
 
 
 
 ---@class FStatusMessage
 ---@field MessageType EAnvilStatusMessageType
-FStatusMessage = {}
+local FStatusMessage = {}
 
 
 
@@ -796,7 +796,7 @@ FStatusMessage = {}
 ---@field CurrentCoarseness float
 ---@field ProductionSpeed float
 ---@field ProductionTime float
-FStructureStats = {}
+local FStructureStats = {}
 
 
 
@@ -804,19 +804,19 @@ FStructureStats = {}
 ---@field NumPlayer uint8
 ---@field Level uint8
 ---@field Duration float
-FTavernBuffConfig = {}
+local FTavernBuffConfig = {}
 
 
 
 ---@class FTestStruct
 ---@field Num int32
-FTestStruct = {}
+local FTestStruct = {}
 
 
 
 ---@class FUnderworldModuleDebugInfo
 ---@field Modules TArray<FUnderworldModuleDebugInfoEntry>
-FUnderworldModuleDebugInfo = {}
+local FUnderworldModuleDebugInfo = {}
 
 
 
@@ -828,7 +828,7 @@ FUnderworldModuleDebugInfo = {}
 ---@field NumRotations uint8
 ---@field SpawnedPrefabCodeName int32
 ---@field SequenceNumber int32
-FUnderworldModuleDebugInfoEntry = {}
+local FUnderworldModuleDebugInfoEntry = {}
 
 
 
@@ -837,21 +837,21 @@ FUnderworldModuleDebugInfoEntry = {}
 ---@field Minor int32
 ---@field Patch int32
 ---@field ChangeList int32
-FVersionInfo = {}
+local FVersionInfo = {}
 
 
 
 ---@class FVictoryInfo
 ---@field VictorTeamId uint8
 ---@field VictoryUnixTimeStamp int64
-FVictoryInfo = {}
+local FVictoryInfo = {}
 
 
 
 ---@class FVictoryInfoUpdate
 ---@field Type EAnvilVictoryType
 ---@field Info FVictoryInfo
-FVictoryInfoUpdate = {}
+local FVictoryInfoUpdate = {}
 
 
 
@@ -860,7 +860,7 @@ FVictoryInfoUpdate = {}
 ---@field InnerWidth float
 ---@field OuterWidth float
 ---@field ID uint64
-FVisvarPowerConnection = {}
+local FVisvarPowerConnection = {}
 
 
 
@@ -872,7 +872,7 @@ FVisvarPowerConnection = {}
 ---@field Wetness float
 ---@field Wind float
 ---@field WindDir FVector
-FWeatherData = {}
+local FWeatherData = {}
 
 
 
@@ -881,13 +881,13 @@ FWeatherData = {}
 ---@field bActive boolean
 ---@field LinkRange float
 ---@field DetectionRange float
-FWorldEntityBeaconTowerData = {}
+local FWorldEntityBeaconTowerData = {}
 
 
 
 ---@class FWorldEntityCentralMarketplaceData
 ---@field DataVersion int32
-FWorldEntityCentralMarketplaceData = {}
+local FWorldEntityCentralMarketplaceData = {}
 
 
 
@@ -899,7 +899,7 @@ FWorldEntityCentralMarketplaceData = {}
 ---@field FamilyCenterData FWorldEntityFamilyCenterData
 ---@field CentralMarketplaceData FWorldEntityCentralMarketplaceData
 ---@field TempleData FWorldEntityTempleData
-FWorldEntityData = {}
+local FWorldEntityData = {}
 
 
 
@@ -911,27 +911,27 @@ FWorldEntityData = {}
 ---@field TeamId uint8
 ---@field WorldPos FVector
 ---@field Data FWorldEntityData
-FWorldEntityEntry = {}
+local FWorldEntityEntry = {}
 
 
 
 ---@class FWorldEntityFamilyCenterData
 ---@field FamilyId int32
 ---@field StoredFoodCounts TArray<FBasicItemAndPayloadCount>
-FWorldEntityFamilyCenterData = {}
+local FWorldEntityFamilyCenterData = {}
 
 
 
 ---@class FWorldEntityInventoryUserData
 ---@field EntityInfo FEntityIdAndMapHash
 ---@field Items TArray<FBasicItemCount>
-FWorldEntityInventoryUserData = {}
+local FWorldEntityInventoryUserData = {}
 
 
 
 ---@class FWorldEntityTempleData
 ---@field bUnderAttack boolean
-FWorldEntityTempleData = {}
+local FWorldEntityTempleData = {}
 
 
 
@@ -949,21 +949,21 @@ FWorldEntityTempleData = {}
 ---@field StoredFoodCounts TArray<FBasicItemAndPayloadCount>
 ---@field bTownUnderAttack boolean
 ---@field bCallForReinforcements boolean
-FWorldEntityTownHallData = {}
+local FWorldEntityTownHallData = {}
 
 
 
 ---@class FWorldEntityWildSpawnData
 ---@field bIsActiveWildSpawn boolean
 ---@field bIsWildSpawnNearTown boolean
-FWorldEntityWildSpawnData = {}
+local FWorldEntityWildSpawnData = {}
 
 
 
 ---@class UAIStimulusProxyComponent : UProxyComponent
 ---@field Type EAnvilStimulusType
 ---@field bAgroTarget boolean
-UAIStimulusProxyComponent = {}
+local UAIStimulusProxyComponent = {}
 
 
 
@@ -978,12 +978,12 @@ UAIStimulusProxyComponent = {}
 ---@field bDebugCrowdIndentifier boolean
 ---@field StructureStatsList TArray<FStructureStats>
 ---@field DebugHUDSpeed int32
-UAdminEnvDataComponent = {}
+local UAdminEnvDataComponent = {}
 
 
 
 ---@class UAdminEnvProxyComponent : UProxyComponent
-UAdminEnvProxyComponent = {}
+local UAdminEnvProxyComponent = {}
 
 
 ---@class UAdvancedSnappingProxyComponent : UProxyComponent
@@ -996,13 +996,13 @@ UAdminEnvProxyComponent = {}
 ---@field NumSnappingRequired uint8
 ---@field NotEnoughSnappingErrorMessage EAnvilPlacementStatus
 ---@field MaxOverlapDistOverride float
-UAdvancedSnappingProxyComponent = {}
+local UAdvancedSnappingProxyComponent = {}
 
 
 
 ---@class UAnimalAIDataComponent : UDataComponent
 ---@field CurrentState EAnvilAnimalState
-UAnimalAIDataComponent = {}
+local UAnimalAIDataComponent = {}
 
 
 
@@ -1019,7 +1019,7 @@ UAnimalAIDataComponent = {}
 ---@field bAvoidRoads boolean
 ---@field bIsTrappable boolean
 ---@field HomingDistance float
-UAnimalAIProxyComponent = {}
+local UAnimalAIProxyComponent = {}
 
 
 
@@ -1040,7 +1040,7 @@ UAnimalAIProxyComponent = {}
 ---@field AttackDamage int32
 ---@field AttackDamageType EAnvilDamageType
 ---@field bDoesFirstAttackFail boolean
-UAnimalAttackProxyComponent = {}
+local UAnimalAttackProxyComponent = {}
 
 
 
@@ -1052,7 +1052,7 @@ UAnimalAttackProxyComponent = {}
 ---@field ClimbingSpeedModifier float
 ---@field DivingSpeedModifier float
 ---@field DiveRange float
-UAnimalFlyingProxyComponent = {}
+local UAnimalFlyingProxyComponent = {}
 
 
 
@@ -1065,30 +1065,30 @@ UAnimalFlyingProxyComponent = {}
 ---@field NormalizedChanceToProduceWithoutFood float
 ---@field TimeToBecomeWildSec float
 ---@field WildEntity TSubclassOf<UEntityTemplate>
-UAnimalLivestockProxyComponent = {}
+local UAnimalLivestockProxyComponent = {}
 
 
 
 ---@class UAnimalRopeAttachableDataComponent : UDataComponent
 ---@field AttachedTarget FEntityHandle
-UAnimalRopeAttachableDataComponent = {}
+local UAnimalRopeAttachableDataComponent = {}
 
 
 
 ---@class UAnimalRopeAttachableProxyComponent : UProxyComponent
 ---@field MaxFollowSpeed float
-UAnimalRopeAttachableProxyComponent = {}
+local UAnimalRopeAttachableProxyComponent = {}
 
 
 
 ---@class UAnimalRopeSlotDataComponent : UDataComponent
 ---@field AttachedTarget FEntityHandle
-UAnimalRopeSlotDataComponent = {}
+local UAnimalRopeSlotDataComponent = {}
 
 
 
 ---@class UAnimalRopeSlotProxyComponent : UProxyComponent
-UAnimalRopeSlotProxyComponent = {}
+local UAnimalRopeSlotProxyComponent = {}
 
 
 ---@class UAnimalScavengeProxyComponent : UProxyComponent
@@ -1096,7 +1096,7 @@ UAnimalRopeSlotProxyComponent = {}
 ---@field EatRange float
 ---@field ScavengeFrequency float
 ---@field TargetTypes TArray<TSubclassOf<UEntityTemplate>>
-UAnimalScavengeProxyComponent = {}
+local UAnimalScavengeProxyComponent = {}
 
 
 
@@ -1105,7 +1105,7 @@ UAnimalScavengeProxyComponent = {}
 ---@field FeedingFreqSeconds float
 ---@field TamingFood TSubclassOf<UItemTemplate>
 ---@field TamedEntity TSubclassOf<UEntityTemplate>
-UAnimalTameProxyComponent = {}
+local UAnimalTameProxyComponent = {}
 
 
 
@@ -1115,7 +1115,7 @@ UAnimalTameProxyComponent = {}
 ---@field CurrentSelectedOutputIndex uint8
 ---@field OutputList TArray<FAnvilOutput>
 ---@field HitCounter float
-UAnvilDataComponent = {}
+local UAnvilDataComponent = {}
 
 
 
@@ -1124,23 +1124,23 @@ UAnvilDataComponent = {}
 ---@field InputItemName TSubclassOf<UItemTemplate>
 ---@field OutputList TArray<FAnvilOutput>
 ---@field RequiredTool EAnvilToolType
-UAnvilProxyComponent = {}
+local UAnvilProxyComponent = {}
 
 
 
 ---@class UArmorDataComponent : UDataComponent
 ---@field HeadArmourType EAnvilArmourType
 ---@field BodyArmourType EAnvilArmourType
-UArmorDataComponent = {}
+local UArmorDataComponent = {}
 
 
 
 ---@class UArmorProxyComponent : UProxyComponent
-UArmorProxyComponent = {}
+local UArmorProxyComponent = {}
 
 
 ---@class UAvatarGroupProxyComponent : UProxyComponent
-UAvatarGroupProxyComponent = {}
+local UAvatarGroupProxyComponent = {}
 
 
 ---@class UBarnProxyComponent : UProxyComponent
@@ -1149,7 +1149,7 @@ UAvatarGroupProxyComponent = {}
 ---@field FoodType TSubclassOf<UItemTemplate>
 ---@field BreedingHoursMin uint8
 ---@field BreedingHoursMax uint8
-UBarnProxyComponent = {}
+local UBarnProxyComponent = {}
 
 
 
@@ -1163,7 +1163,7 @@ UBarnProxyComponent = {}
 ---@field ActionBoxComp UBoxCollisionProxyComponent
 ---@field DecayComp UDecayProxyComponent
 ---@field StructureComp UStructureProxyComponent
-UBaseBuildSiteEntity = {}
+local UBaseBuildSiteEntity = {}
 
 
 
@@ -1179,14 +1179,14 @@ UBaseBuildSiteEntity = {}
 ---@field ActionBoxComp UBoxCollisionProxyComponent
 ---@field DecayComp UDecayProxyComponent
 ---@field ScorchComp UScorchProxyComponent
-UBaseStructureEntity = {}
+local UBaseStructureEntity = {}
 
 
 
 ---@class UBeaconTowerDataComponent : UDataComponent
 ---@field bDetected boolean
 ---@field bInformed boolean
-UBeaconTowerDataComponent = {}
+local UBeaconTowerDataComponent = {}
 
 
 
@@ -1198,7 +1198,7 @@ UBeaconTowerDataComponent = {}
 ---@field AltitudeCheckRadius float
 ---@field DetectionFuelTimeMultiplier float
 ---@field InformingFuelTimeMultiplier float
-UBeaconTowerProxyComponent = {}
+local UBeaconTowerProxyComponent = {}
 
 
 
@@ -1213,7 +1213,7 @@ UBeaconTowerProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-UBoxCollisionProxyComponent = {}
+local UBoxCollisionProxyComponent = {}
 
 
 
@@ -1222,7 +1222,7 @@ UBoxCollisionProxyComponent = {}
 ---@field BuildGhostPlacementErrors TArray<FContextfulPlacementStatus>
 ---@field PlacementInfo FBuildSitePlacementInfo
 ---@field VisualGuideMinDistance float
-UBuildSiteDataComponent = {}
+local UBuildSiteDataComponent = {}
 
 
 
@@ -1244,12 +1244,12 @@ UBuildSiteDataComponent = {}
 ---@field GridDiagonalPair TSubclassOf<UEntityTemplate>
 ---@field MaterialRequirements TArray<FBasicCount>
 ---@field VisualGuideMinDistance float
-UBuildSiteProxyComponent = {}
+local UBuildSiteProxyComponent = {}
 
 
 
 ---@class UCannonProxyComponent : UProxyComponent
-UCannonProxyComponent = {}
+local UCannonProxyComponent = {}
 
 
 ---@class UCapsuleCollisionProxyComponent : UProxyComponent
@@ -1263,33 +1263,33 @@ UCannonProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-UCapsuleCollisionProxyComponent = {}
+local UCapsuleCollisionProxyComponent = {}
 
 
 
 ---@class UCentralMarketplaceDataComponent : UDataComponent
 ---@field DataVersion int32
-UCentralMarketplaceDataComponent = {}
+local UCentralMarketplaceDataComponent = {}
 
 
 
 ---@class UCentralMarketplaceProxyComponent : UProxyComponent
-UCentralMarketplaceProxyComponent = {}
+local UCentralMarketplaceProxyComponent = {}
 
 
 ---@class UChatMessage : UObject
-UChatMessage = {}
+local UChatMessage = {}
 
 
 ---@class UCollapsibleDataComponent : UDataComponent
 ---@field bIsCollapsed boolean
-UCollapsibleDataComponent = {}
+local UCollapsibleDataComponent = {}
 
 
 
 ---@class UCollapsibleProxyComponent : UProxyComponent
 ---@field bUseSeparateCollapsedCollisions boolean
-UCollapsibleProxyComponent = {}
+local UCollapsibleProxyComponent = {}
 
 
 
@@ -1300,7 +1300,7 @@ UCollapsibleProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-UCollisionProxyComponent = {}
+local UCollisionProxyComponent = {}
 
 
 
@@ -1310,7 +1310,7 @@ UCollisionProxyComponent = {}
 ---@field Color FLinearColor
 ---@field bHighlight boolean
 ---@field bIsCapsule boolean
-UCollisionVisualizerComponent = {}
+local UCollisionVisualizerComponent = {}
 
 
 
@@ -1320,7 +1320,7 @@ UCollisionVisualizerComponent = {}
 ---@field TotalFuelTime float
 ---@field InputInventory FCompHandleData
 ---@field OutputInventory FCompHandleData
-UCombustionDataComponent = {}
+local UCombustionDataComponent = {}
 
 
 
@@ -1328,7 +1328,7 @@ UCombustionDataComponent = {}
 ---@field bGenerateAsh boolean
 ---@field OverrideAcceptableFuels TArray<TSubclassOf<UItemTemplate>>
 ---@field FuelTimeMultiplier float
-UCombustionProxyComponent = {}
+local UCombustionProxyComponent = {}
 
 
 
@@ -1341,7 +1341,7 @@ UCombustionProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-UConvexCollisionProxyComponent = {}
+local UConvexCollisionProxyComponent = {}
 
 
 
@@ -1358,7 +1358,7 @@ UConvexCollisionProxyComponent = {}
 ---@field bCanCookWithExistingOutputs uint8
 ---@field bIsFoodBurning boolean
 ---@field bIsWatered boolean
-UCookingDataComponent = {}
+local UCookingDataComponent = {}
 
 
 
@@ -1372,33 +1372,33 @@ UCookingDataComponent = {}
 ---@field TemperatureDiffMedQuality float
 ---@field TemperatureDiffLowQuality float
 ---@field bCanCookWithExistingOutputs uint8
-UCookingProxyComponent = {}
+local UCookingProxyComponent = {}
 
 
 
 ---@class UCraftingDataComponent : UDataComponent
 ---@field RecipeList TArray<FCraftingRecipe>
-UCraftingDataComponent = {}
+local UCraftingDataComponent = {}
 
 
 
 ---@class UCraftingProxyComponent : UProxyComponent
 ---@field RecipeList TArray<FCraftingRecipe>
-UCraftingProxyComponent = {}
+local UCraftingProxyComponent = {}
 
 
 
 ---@class UCustomHeightmapComponent : USceneComponent
-UCustomHeightmapComponent = {}
+local UCustomHeightmapComponent = {}
 
 
 ---@class UCustomNavmeshVolumeComponent : USceneComponent
-UCustomNavmeshVolumeComponent = {}
+local UCustomNavmeshVolumeComponent = {}
 
 
 ---@class UDataComponent : UActorComponent
 ---@field ComponentIndex int32
-UDataComponent = {}
+local UDataComponent = {}
 
 
 
@@ -1407,7 +1407,7 @@ UDataComponent = {}
 ---@field bDecayingDueToNotEnclosed boolean
 ---@field bDecayingDueToNoWater boolean
 ---@field SecondsUntilFullDecay float
-UDecayDataComponent = {}
+local UDecayDataComponent = {}
 
 
 
@@ -1416,7 +1416,7 @@ UDecayDataComponent = {}
 ---@field StartDelayHours float
 ---@field DecayTimeHours float
 ---@field bForceDecayPreventionFromTown boolean
-UDecayProxyComponent = {}
+local UDecayProxyComponent = {}
 
 
 
@@ -1424,20 +1424,20 @@ UDecayProxyComponent = {}
 ---@field bCopyHealthPercentage boolean
 ---@field bForceShowBuildMenu boolean
 ---@field DeployableBuildSites TArray<TSubclassOf<UEntityTemplate>>
-UDeployProxyComponent = {}
+local UDeployProxyComponent = {}
 
 
 
 ---@class UDestroyableProxyComponent : UProxyComponent
 ---@field DestructionEffectEntity TSubclassOf<UEntityTemplate>
-UDestroyableProxyComponent = {}
+local UDestroyableProxyComponent = {}
 
 
 
 ---@class UDryingRackDataComponent : UDataComponent
 ---@field Recipes TArray<FDryingRackRecipe>
 ---@field ReplicatedCurrentItemDryingProgress float
-UDryingRackDataComponent = {}
+local UDryingRackDataComponent = {}
 
 
 
@@ -1445,30 +1445,30 @@ UDryingRackDataComponent = {}
 ---@field Recipes TArray<FDryingRackRecipe>
 ---@field DesiredTempRange FR2FloatRange
 ---@field QualityChangeTime float
-UDryingRackProxyComponent = {}
+local UDryingRackProxyComponent = {}
 
 
 
 ---@class UDynamicPrefabDataComponent : UDataComponent
 ---@field SpawnedPrefabCodeName int32
-UDynamicPrefabDataComponent = {}
+local UDynamicPrefabDataComponent = {}
 
 
 
 ---@class UDynamicPrefabProxyComponent : UProxyComponent
 ---@field PrefabSpawnList TArray<FDynamicPrefabSpawnInfo>
-UDynamicPrefabProxyComponent = {}
+local UDynamicPrefabProxyComponent = {}
 
 
 
 ---@class UEditorSpawnerProxyComponent : UProxyComponent
-UEditorSpawnerProxyComponent = {}
+local UEditorSpawnerProxyComponent = {}
 
 
 ---@class UEntityAttachableDataComponent : UDataComponent
 ---@field AttachedChildEntity FEntityHandle
 ---@field AttachedParentEntity FEntityHandle
-UEntityAttachableDataComponent = {}
+local UEntityAttachableDataComponent = {}
 
 
 
@@ -1484,7 +1484,7 @@ UEntityAttachableDataComponent = {}
 ---@field bMirrorDetachLocation boolean
 ---@field TargetEntityTypes TArray<TSubclassOf<UEntityTemplate>>
 ---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>
-UEntityAttachableProxyComponent = {}
+local UEntityAttachableProxyComponent = {}
 
 
 
@@ -1510,7 +1510,7 @@ UEntityAttachableProxyComponent = {}
 ---@field VisActorTemplateClass TSubclassOf<AVisActorBase>
 ---@field bIgnoreErrorNoInteractionMask boolean
 ---@field VisActorDefaultObject AVisActorBase
-UEntityTemplate = {}
+local UEntityTemplate = {}
 
 ---@param EntityType UClass
 ---@param ComponentType UClass
@@ -1519,12 +1519,12 @@ function UEntityTemplate:GetProxyComponent(EntityType, ComponentType) end
 
 
 ---@class UEquipmentProxyComponent : UProxyComponent
-UEquipmentProxyComponent = {}
+local UEquipmentProxyComponent = {}
 
 
 ---@class UExplorationSpawnerProxyComponent : UProxyComponent
 ---@field SpawnedEntitiesData TArray<FExplorationSpawnedEntityInfo>
-UExplorationSpawnerProxyComponent = {}
+local UExplorationSpawnerProxyComponent = {}
 
 
 
@@ -1532,32 +1532,32 @@ UExplorationSpawnerProxyComponent = {}
 ---@field FamilyAreaExtent float
 ---@field AllowPublicPledging boolean
 ---@field bHasMembers boolean
-UFamilyCenterDataComponent = {}
+local UFamilyCenterDataComponent = {}
 
 
 
 ---@class UFamilyCenterProxyComponent : UProxyComponent
 ---@field Tier uint8
-UFamilyCenterProxyComponent = {}
+local UFamilyCenterProxyComponent = {}
 
 
 
 ---@class UFamilyListProxyComponent : UProxyComponent
-UFamilyListProxyComponent = {}
+local UFamilyListProxyComponent = {}
 
 
 ---@class UFamilyLockProxyComponent : UProxyComponent
-UFamilyLockProxyComponent = {}
+local UFamilyLockProxyComponent = {}
 
 
 ---@class UFamilyUserProxyComponent : UProxyComponent
-UFamilyUserProxyComponent = {}
+local UFamilyUserProxyComponent = {}
 
 
 ---@class UFarmDataComponent : UDataComponent
 ---@field NormalizedWaterDuration float
 ---@field NormalizedFertilizeDuration float
-UFarmDataComponent = {}
+local UFarmDataComponent = {}
 
 
 
@@ -1568,7 +1568,7 @@ UFarmDataComponent = {}
 ---@field WaterDurationPerUnitItem float
 ---@field EnvWetnessWaterDurationIncreaseMultiplier float
 ---@field FertilizeDurationPerUnitItem float
-UFarmProxyComponent = {}
+local UFarmProxyComponent = {}
 
 
 
@@ -1578,7 +1578,7 @@ UFarmProxyComponent = {}
 ---@field FishingTimeMax float
 ---@field ReelWindowTime float
 ---@field FishType TSubclassOf<UItemTemplate>
-UFishResourceProxyComponent = {}
+local UFishResourceProxyComponent = {}
 
 
 
@@ -1592,13 +1592,13 @@ UFishResourceProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-UFootprintCollisionProxyComponent = {}
+local UFootprintCollisionProxyComponent = {}
 
 
 
 ---@class UGateDataComponent : UDataComponent
 ---@field OpenCloseState EAnvilGateState
-UGateDataComponent = {}
+local UGateDataComponent = {}
 
 
 
@@ -1606,7 +1606,7 @@ UGateDataComponent = {}
 ---@field AutoCloseRange float
 ---@field AutoCloseTime float
 ---@field BreachProbCurve UCurveFloat
-UGateProxyComponent = {}
+local UGateProxyComponent = {}
 
 
 
@@ -1619,7 +1619,7 @@ UGateProxyComponent = {}
 ---@field OutputInventory FCompHandleData
 ---@field CurrentCoarsenessKnobSeatTransform FTransform
 ---@field CrankPlayer FCompHandleData
-UGrainMillDataComponent = {}
+local UGrainMillDataComponent = {}
 
 
 
@@ -1633,7 +1633,7 @@ UGrainMillDataComponent = {}
 ---@field CoarsenessQualityMapRange FR2FloatRange
 ---@field PlayerCrankPower float
 ---@field MinActivationPower float
-UGrainMillProxyComponent = {}
+local UGrainMillProxyComponent = {}
 
 
 
@@ -1643,13 +1643,13 @@ UGrainMillProxyComponent = {}
 ---@field Rotation FRotator
 ---@field Extents FVector
 ---@field GroundCheckPoints TArray<FVector>
-UGroundCheckBoxProxyComponent = {}
+local UGroundCheckBoxProxyComponent = {}
 
 
 
 ---@class UHandsProxyComponent : UProxyComponent
 ---@field HandSlots TArray<FInventorySlot>
-UHandsProxyComponent = {}
+local UHandsProxyComponent = {}
 
 
 
@@ -1658,7 +1658,7 @@ UHandsProxyComponent = {}
 ---@field Health float
 ---@field HealthLimit float
 ---@field VisualBloodAmount float
-UHealthDataComponent = {}
+local UHealthDataComponent = {}
 
 
 
@@ -1673,34 +1673,34 @@ UHealthDataComponent = {}
 ---@field VisualBloodAmountRecoveryRate float
 ---@field AttackerVisualBloodAmountRatio float
 ---@field AttackerVisualBloodAmountMax float
-UHealthProxyComponent = {}
+local UHealthProxyComponent = {}
 
 
 
 ---@class UHeatingDataComponent : UDataComponent
 ---@field bIsBellowBoosted boolean
 ---@field ItemInventory FCompHandleData
-UHeatingDataComponent = {}
+local UHeatingDataComponent = {}
 
 
 
 ---@class UHeatingProxyComponent : UProxyComponent
 ---@field NumItems int32
-UHeatingProxyComponent = {}
+local UHeatingProxyComponent = {}
 
 
 
 ---@class UHitConverterDataComponent : UDataComponent
 ---@field OutputList TArray<FHitConverterOutput>
 ---@field HitCounter float
-UHitConverterDataComponent = {}
+local UHitConverterDataComponent = {}
 
 
 
 ---@class UHitConverterProxyComponent : UProxyComponent
 ---@field OutputList TArray<FHitConverterOutput>
 ---@field RequiredTool EAnvilToolType
-UHitConverterProxyComponent = {}
+local UHitConverterProxyComponent = {}
 
 
 
@@ -1710,7 +1710,7 @@ UHitConverterProxyComponent = {}
 ---@field IsGroupHouse boolean
 ---@field bIsTownTent boolean
 ---@field PledgedPlayerIds FHousePledgedPlayerArray
-UHousingDataComponent = {}
+local UHousingDataComponent = {}
 
 
 
@@ -1718,32 +1718,32 @@ UHousingDataComponent = {}
 ---@field PlayerCapacity uint8
 ---@field IsGroupHouse boolean
 ---@field bIsTownTent boolean
-UHousingProxyComponent = {}
+local UHousingProxyComponent = {}
 
 
 
 ---@class UHungerDataComponent : UDataComponent
 ---@field Hunger float
-UHungerDataComponent = {}
+local UHungerDataComponent = {}
 
 
 
 ---@class UHungerProxyComponent : UProxyComponent
 ---@field HungerPerTick float
 ---@field bSlowHungerWhenLow boolean
-UHungerProxyComponent = {}
+local UHungerProxyComponent = {}
 
 
 
 ---@class UImpactSurfaceDataComponent : UDataComponent
 ---@field HitSurface EAnvilPhysicalSurfaceType
 ---@field HitTarget FEntityHandle
-UImpactSurfaceDataComponent = {}
+local UImpactSurfaceDataComponent = {}
 
 
 
 ---@class UImpactSurfaceProxyComponent : UProxyComponent
-UImpactSurfaceProxyComponent = {}
+local UImpactSurfaceProxyComponent = {}
 
 
 ---@class UInventoryProxyComponent : UProxyComponent
@@ -1759,7 +1759,7 @@ UImpactSurfaceProxyComponent = {}
 ---@field bAllowWithdrawal boolean
 ---@field bAllowSubmission boolean
 ---@field bIsPublicInventory boolean
-UInventoryProxyComponent = {}
+local UInventoryProxyComponent = {}
 
 
 
@@ -1849,13 +1849,13 @@ UInventoryProxyComponent = {}
 ---@field SecondaryMovementSpeedModifier float
 ---@field PrimaryChanceToPenetrateGuard float
 ---@field SecondaryChanceToPenetrateGuard float
-UItemTemplate = {}
+local UItemTemplate = {}
 
 
 
 ---@class ULadderDataComponent : UDataComponent
 ---@field CurrentHalfLength float
-ULadderDataComponent = {}
+local ULadderDataComponent = {}
 
 
 
@@ -1871,14 +1871,14 @@ ULadderDataComponent = {}
 ---@field PlayerFallDamage float
 ---@field LadderFallDamage float
 ---@field ValidHalfLengths TArray<float>
-ULadderProxyComponent = {}
+local ULadderProxyComponent = {}
 
 
 
 ---@class ULatticeMineDataComponent : UDataComponent
 ---@field MeshVisibilityLevel int32
 ---@field MineChunks TArray<FMineChunk>
-ULatticeMineDataComponent = {}
+local ULatticeMineDataComponent = {}
 
 
 
@@ -1893,14 +1893,14 @@ ULatticeMineDataComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-ULatticeMineProxyComponent = {}
+local ULatticeMineProxyComponent = {}
 
 
 
 ---@class ULifetimeDataComponent : UDataComponent
 ---@field Age float
 ---@field LifeSpan float
-ULifetimeDataComponent = {}
+local ULifetimeDataComponent = {}
 
 
 
@@ -1908,14 +1908,14 @@ ULifetimeDataComponent = {}
 ---@field DropResourceOnDeath boolean
 ---@field ResetIfObserved boolean
 ---@field LifeSpan float
-ULifetimeProxyComponent = {}
+local ULifetimeProxyComponent = {}
 
 
 
 ---@class ULivestockStructureProxyComponent : UProxyComponent
 ---@field LivestockType TSubclassOf<UEntityTemplate>
 ---@field MaxAnimalCount int32
-ULivestockStructureProxyComponent = {}
+local ULivestockStructureProxyComponent = {}
 
 
 
@@ -1923,19 +1923,19 @@ ULivestockStructureProxyComponent = {}
 ---@field DayLengthSeconds int32
 ---@field NightStartSeconds int32
 ---@field NightEndSeconds int32
-UMapIntelProxyComponent = {}
+local UMapIntelProxyComponent = {}
 
 
 
 ---@class UMapPostDataComponent : UDataComponent
 ---@field PostType EAnvilMapPostType
 ---@field BuilderId int64
-UMapPostDataComponent = {}
+local UMapPostDataComponent = {}
 
 
 
 ---@class UMapPostProxyComponent : UProxyComponent
-UMapPostProxyComponent = {}
+local UMapPostProxyComponent = {}
 
 
 ---@class UMeshCollisionProxyComponent : UProxyComponent
@@ -1949,26 +1949,26 @@ UMapPostProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-UMeshCollisionProxyComponent = {}
+local UMeshCollisionProxyComponent = {}
 
 
 
 ---@class UMeshVisibilityDataComponent : UDataComponent
 ---@field bIsVisible boolean
 ---@field bGroup2IsVisible boolean
-UMeshVisibilityDataComponent = {}
+local UMeshVisibilityDataComponent = {}
 
 
 
 ---@class UMeshVisibilityProxyComponent : UProxyComponent
-UMeshVisibilityProxyComponent = {}
+local UMeshVisibilityProxyComponent = {}
 
 
 ---@class UMineProxyComponent : UProxyComponent
 ---@field InitialReserveCapacity int32
 ---@field MiningRatePerUpdate int32
 ---@field MiningUpdateTime float
-UMineProxyComponent = {}
+local UMineProxyComponent = {}
 
 
 
@@ -1979,7 +1979,7 @@ UMineProxyComponent = {}
 ---@field bFiring boolean
 ---@field AimYaw float
 ---@field AimPitch float
-UMountedWeaponDataComponent = {}
+local UMountedWeaponDataComponent = {}
 
 
 
@@ -1991,29 +1991,29 @@ UMountedWeaponDataComponent = {}
 ---@field bShowAimMesh boolean
 ---@field PrimingTime float
 ---@field Weapon TSubclassOf<UItemTemplate>
-UMountedWeaponProxyComponent = {}
+local UMountedWeaponProxyComponent = {}
 
 
 
 ---@class UMovementTestProxyComponent : UProxyComponent
 ---@field Velocity FVector
-UMovementTestProxyComponent = {}
+local UMovementTestProxyComponent = {}
 
 
 
 ---@class UOfflineCharacterDataComponent : UDataComponent
 ---@field OwnerPlayerName FString
-UOfflineCharacterDataComponent = {}
+local UOfflineCharacterDataComponent = {}
 
 
 
 ---@class UOfflineCharacterProxyComponent : UProxyComponent
-UOfflineCharacterProxyComponent = {}
+local UOfflineCharacterProxyComponent = {}
 
 
 ---@class UPackingProxyComponent : UProxyComponent
 ---@field PackingResource TSubclassOf<UItemTemplate>
-UPackingProxyComponent = {}
+local UPackingProxyComponent = {}
 
 
 
@@ -2021,7 +2021,7 @@ UPackingProxyComponent = {}
 ---@field Damage float
 ---@field Frequency float
 ---@field DamageType EAnvilDamageType
-UPassiveDamageProxyComponent = {}
+local UPassiveDamageProxyComponent = {}
 
 
 
@@ -2034,25 +2034,25 @@ UPassiveDamageProxyComponent = {}
 ---@field EngineForcePosition FVector
 ---@field SeatThrustForce float
 ---@field SeatSprintThrustFactor float
-UPhysMovementProxyComponent = {}
+local UPhysMovementProxyComponent = {}
 
 
 
 ---@class UPickupDataComponent : UDataComponent
 ---@field Item FItemCount
-UPickupDataComponent = {}
+local UPickupDataComponent = {}
 
 
 
 ---@class UPickupProxyComponent : UProxyComponent
 ---@field Item FItemCount
-UPickupProxyComponent = {}
+local UPickupProxyComponent = {}
 
 
 
 ---@class UPlantGrowthDataComponent : UDataComponent
 ---@field GrowthStage uint8
-UPlantGrowthDataComponent = {}
+local UPlantGrowthDataComponent = {}
 
 
 
@@ -2063,7 +2063,7 @@ UPlantGrowthDataComponent = {}
 ---@field RequiredTemperature float
 ---@field GrowthStage uint8
 ---@field bCanGrow boolean
-UPlantGrowthProxyComponent = {}
+local UPlantGrowthProxyComponent = {}
 
 
 
@@ -2075,12 +2075,12 @@ UPlantGrowthProxyComponent = {}
 ---@field RedeployTarget uint8
 ---@field LastDeathMapId uint8
 ---@field LastDeathLocation FVector
-UPlayerControllerDataComponent = {}
+local UPlayerControllerDataComponent = {}
 
 
 
 ---@class UPlayerControllerProxyComponent : UProxyComponent
-UPlayerControllerProxyComponent = {}
+local UPlayerControllerProxyComponent = {}
 
 
 ---@class UPlayerInputDataComponent : UDataComponent
@@ -2105,7 +2105,7 @@ UPlayerControllerProxyComponent = {}
 ---@field UsePrompt int32
 ---@field VehicleInput FMovementInputState
 ---@field CameraCurrentPosition FVector
-UPlayerInputDataComponent = {}
+local UPlayerInputDataComponent = {}
 
 
 
@@ -2115,25 +2115,25 @@ UPlayerInputDataComponent = {}
 ---@field StanceToCameraPanMaxDistance TMap<EAnvilCharacterStance, float>
 ---@field CameraMousePositionNormalizedEdgePanThreshold float
 ---@field RangedAimStartOffset FVector
-UPlayerInputProxyComponent = {}
+local UPlayerInputProxyComponent = {}
 
 
 
 ---@class UPlayerMountDataComponent : UDataComponent
 ---@field CurrentMountedEntity FEntityHandle
 ---@field CurrentVehicleSeat FCompHandleData
-UPlayerMountDataComponent = {}
+local UPlayerMountDataComponent = {}
 
 
 
 ---@class UPlayerMountProxyComponent : UProxyComponent
-UPlayerMountProxyComponent = {}
+local UPlayerMountProxyComponent = {}
 
 
 ---@class UPlayerSpawnerDataComponent : UDataComponent
 ---@field Type EAnvilSpawnType
 ---@field Faction EAnvilFactionId
-UPlayerSpawnerDataComponent = {}
+local UPlayerSpawnerDataComponent = {}
 
 
 
@@ -2144,42 +2144,42 @@ UPlayerSpawnerDataComponent = {}
 ---@field SpawnBoxRotation FRotator
 ---@field SpawnRadius float
 ---@field Faction EAnvilFactionId
-UPlayerSpawnerProxyComponent = {}
+local UPlayerSpawnerProxyComponent = {}
 
 
 
 ---@class UPlayerStatusDataComponent : UDataComponent
 ---@field RestedLevel uint8
-UPlayerStatusDataComponent = {}
+local UPlayerStatusDataComponent = {}
 
 
 
 ---@class UPlayerStatusProxyComponent : UProxyComponent
-UPlayerStatusProxyComponent = {}
+local UPlayerStatusProxyComponent = {}
 
 
 ---@class UPlayerUnstuckProxyComponent : UProxyComponent
-UPlayerUnstuckProxyComponent = {}
+local UPlayerUnstuckProxyComponent = {}
 
 
 ---@class UPowerMillDataComponent : UDataComponent
 ---@field bAnimalActive boolean
 ---@field Rotation float
-UPowerMillDataComponent = {}
+local UPowerMillDataComponent = {}
 
 
 
 ---@class UPowerMillProxyComponent : UProxyComponent
 ---@field MaxRotationSpeed float
 ---@field RotationAcceleration float
-UPowerMillProxyComponent = {}
+local UPowerMillProxyComponent = {}
 
 
 
 ---@class UPowerToActionConverterProxyComponent : UProxyComponent
 ---@field ConversionType EAnvilConvertedActionType
 ---@field PowerDrainPerAction float
-UPowerToActionConverterProxyComponent = {}
+local UPowerToActionConverterProxyComponent = {}
 
 
 
@@ -2189,7 +2189,7 @@ UPowerToActionConverterProxyComponent = {}
 ---@field VisVarUpdateHook int32
 ---@field InFlowDirection float
 ---@field InFlowHeight float
-UPowerUnitDataComponent = {}
+local UPowerUnitDataComponent = {}
 
 
 
@@ -2202,13 +2202,13 @@ UPowerUnitDataComponent = {}
 ---@field ResistanceSlopeModifier float
 ---@field InnerWidth float
 ---@field OuterWidth float
-UPowerUnitProxyComponent = {}
+local UPowerUnitProxyComponent = {}
 
 
 
 ---@class UProjectileMovementDataComponent : UDataComponent
 ---@field bHidden boolean
-UProjectileMovementDataComponent = {}
+local UProjectileMovementDataComponent = {}
 
 
 
@@ -2241,18 +2241,18 @@ UProjectileMovementDataComponent = {}
 ---@field bForceKillPlayers boolean
 ---@field bHitEffectNoPitch boolean
 ---@field bScaleDamageWithAccuracy boolean
-UProjectileMovementProxyComponent = {}
+local UProjectileMovementProxyComponent = {}
 
 
 
 ---@class UProxyComponent : UObject
 ---@field Order int32
-UProxyComponent = {}
+local UProxyComponent = {}
 
 
 
 ---@class UProxyEntityProxyComponent : UProxyComponent
-UProxyEntityProxyComponent = {}
+local UProxyEntityProxyComponent = {}
 
 
 ---@class UProxyEntitySpawnerProxyComponent : UProxyComponent
@@ -2260,13 +2260,13 @@ UProxyEntityProxyComponent = {}
 ---@field SpawnedEntity TSubclassOf<UEntityTemplate>
 ---@field Position FVector
 ---@field Rotation FRotator
-UProxyEntitySpawnerProxyComponent = {}
+local UProxyEntitySpawnerProxyComponent = {}
 
 
 
 ---@class UQuenchingProxyComponent : UProxyComponent
 ---@field QuenchingResource TSubclassOf<UItemTemplate>
-UQuenchingProxyComponent = {}
+local UQuenchingProxyComponent = {}
 
 
 
@@ -2277,14 +2277,14 @@ UQuenchingProxyComponent = {}
 ---@field SignPost FR2ConfigSignPost
 ---@field TradeResourcesConfig FR2ConfigTradeResources
 ---@field Item FR2ConfigItem
-UR2ConfigProxyComponent = {}
+local UR2ConfigProxyComponent = {}
 
 
 
 ---@class URareResourceAreaMarkerProxyComponent : UProxyComponent
 ---@field RareResourceAreaType EAnvilRareResourceAreaType
 ---@field AreaRadius float
-URareResourceAreaMarkerProxyComponent = {}
+local URareResourceAreaMarkerProxyComponent = {}
 
 
 
@@ -2295,54 +2295,54 @@ URareResourceAreaMarkerProxyComponent = {}
 ---@field ItemProductionTimeLeft float
 ---@field EstItemProductionTimeLeft float
 ---@field TotalProductionTimeLeft float
-URefineResourceDataComponent = {}
+local URefineResourceDataComponent = {}
 
 
 
 ---@class URefineResourceProxyComponent : UProxyComponent
 ---@field ProducableItemList TArray<FProducableItem>
-URefineResourceProxyComponent = {}
+local URefineResourceProxyComponent = {}
 
 
 
 ---@class URelicSiteProxyComponent : UProxyComponent
-URelicSiteProxyComponent = {}
+local URelicSiteProxyComponent = {}
 
 
 ---@class URelicSiteSpawnLocationProxyComponent : UProxyComponent
-URelicSiteSpawnLocationProxyComponent = {}
+local URelicSiteSpawnLocationProxyComponent = {}
 
 
 ---@class URelicTechCenterDataComponent : UDataComponent
 ---@field RelicTechCosts TArray<FBasicItemCount>
 ---@field TechItemsDeposited TArray<int32>
-URelicTechCenterDataComponent = {}
+local URelicTechCenterDataComponent = {}
 
 
 
 ---@class URelicTechCenterProxyComponent : UProxyComponent
 ---@field RelicTechCosts TArray<FBasicItemCount>
-URelicTechCenterProxyComponent = {}
+local URelicTechCenterProxyComponent = {}
 
 
 
 ---@class URepTestProxyComponent : UProxyComponent
 ---@field BytesToRep int32
-URepTestProxyComponent = {}
+local URepTestProxyComponent = {}
 
 
 
 ---@class URepairProxyComponent : UProxyComponent
-URepairProxyComponent = {}
+local URepairProxyComponent = {}
 
 
 ---@class URepairStationProxyComponent : UProxyComponent
-URepairStationProxyComponent = {}
+local URepairStationProxyComponent = {}
 
 
 ---@class UResourceDataComponent : UDataComponent
 ---@field GatherHitCount int32
-UResourceDataComponent = {}
+local UResourceDataComponent = {}
 
 
 
@@ -2364,7 +2364,7 @@ UResourceDataComponent = {}
 ---@field SilverDropMultiplier float
 ---@field DestructionEffect TSubclassOf<UEntityTemplate>
 ---@field LootTable TArray<FLootTableItem>
-UResourceProxyComponent = {}
+local UResourceProxyComponent = {}
 
 
 
@@ -2396,50 +2396,50 @@ UResourceProxyComponent = {}
 ---@field CompatibleSurfaceTypes int32
 ---@field OtherResourcesToAvoid TArray<TSubclassOf<UEntityTemplate>>
 ---@field OtherResourcesToCountForSpawnLimit TArray<TSubclassOf<UEntityTemplate>>
-UResourceSpawnerProxyComponent = {}
+local UResourceSpawnerProxyComponent = {}
 
 
 
 ---@class URichSoilDataComponent : UDataComponent
 ---@field Radius float
-URichSoilDataComponent = {}
+local URichSoilDataComponent = {}
 
 
 
 ---@class URichSoilProxyComponent : UProxyComponent
 ---@field Radius float
-URichSoilProxyComponent = {}
+local URichSoilProxyComponent = {}
 
 
 
 ---@class URoadProxyComponent : UProxyComponent
 ---@field SpeedFactor float
-URoadProxyComponent = {}
+local URoadProxyComponent = {}
 
 
 
 ---@class UScorchDataComponent : UDataComponent
 ---@field ScorchVisualBits uint8
-UScorchDataComponent = {}
+local UScorchDataComponent = {}
 
 
 
 ---@class UScorchProxyComponent : UProxyComponent
 ---@field BurnRate float
 ---@field ScorchDamagePerSecond float
-UScorchProxyComponent = {}
+local UScorchProxyComponent = {}
 
 
 
 ---@class USeekerProxyComponent : UProxyComponent
-USeekerProxyComponent = {}
+local USeekerProxyComponent = {}
 
 
 ---@class UShipMovementDataComponent : UDataComponent
 ---@field bIsSailOpen boolean
 ---@field bIsGangplankLeftOpen boolean
 ---@field bIsGangplankRightOpen boolean
-UShipMovementDataComponent = {}
+local UShipMovementDataComponent = {}
 
 
 
@@ -2461,14 +2461,14 @@ UShipMovementDataComponent = {}
 ---@field NoSailThrustHorizonalMultiplier float
 ---@field NoSailInputFactor float
 ---@field SailInputCurve UCurveFloat
-UShipMovementProxyComponent = {}
+local UShipMovementProxyComponent = {}
 
 
 
 ---@class USiegeTowerDataComponent : UDataComponent
 ---@field RampState EAnvilSiegeTowerState
 ---@field CurrentRampAngle float
-USiegeTowerDataComponent = {}
+local USiegeTowerDataComponent = {}
 
 
 
@@ -2477,7 +2477,7 @@ USiegeTowerDataComponent = {}
 ---@field RampOpenSpeed float
 ---@field ValidRampAngleRange FR2FloatRange
 ---@field RampOperationBox FBoundingBox
-USiegeTowerProxyComponent = {}
+local USiegeTowerProxyComponent = {}
 
 
 
@@ -2485,13 +2485,13 @@ USiegeTowerProxyComponent = {}
 ---@field Message FString
 ---@field VisualType EAnvilSignPostVisualType
 ---@field ClientVote EAnvilVoteType
-USignPostDataComponent = {}
+local USignPostDataComponent = {}
 
 
 
 ---@class USignPostProxyComponent : UProxyComponent
 ---@field VisualType EAnvilSignPostVisualType
-USignPostProxyComponent = {}
+local USignPostProxyComponent = {}
 
 
 
@@ -2547,7 +2547,7 @@ USignPostProxyComponent = {}
 ---@field Avatar EAnvilAvatarType
 ---@field AvatarXP float
 ---@field ControlledAvatarProfile FAvatarProfile
-USimPlayerDataComponent = {}
+local USimPlayerDataComponent = {}
 
 
 
@@ -2583,7 +2583,7 @@ USimPlayerDataComponent = {}
 ---@field AutoPushMaxDistance float
 ---@field AutoPushMinDistance float
 ---@field AutoPushConeHalfAngleCosine float
-USimPlayerProxyComponent = {}
+local USimPlayerProxyComponent = {}
 
 
 
@@ -2600,7 +2600,7 @@ USimPlayerProxyComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-USnapPointProxyComponent = {}
+local USnapPointProxyComponent = {}
 
 
 
@@ -2609,7 +2609,7 @@ USnapPointProxyComponent = {}
 ---@field End FVector
 ---@field SegmentLength float
 ---@field Slope float
-USplineDataComponent = {}
+local USplineDataComponent = {}
 
 
 
@@ -2633,27 +2633,27 @@ USplineDataComponent = {}
 ---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
-USplineProxyComponent = {}
+local USplineProxyComponent = {}
 
 
 
 ---@class UStaminaDataComponent : UDataComponent
 ---@field Stamina float
 ---@field StaminaLimit float
-UStaminaDataComponent = {}
+local UStaminaDataComponent = {}
 
 
 
 ---@class UStaminaProxyComponent : UProxyComponent
 ---@field StaminaRegenCD float
 ---@field StaminaRegenSpeed float
-UStaminaProxyComponent = {}
+local UStaminaProxyComponent = {}
 
 
 
 ---@class UStaticTorchProxyComponent : UProxyComponent
 ---@field NightShroudRadius float
-UStaticTorchProxyComponent = {}
+local UStaticTorchProxyComponent = {}
 
 
 
@@ -2663,7 +2663,7 @@ UStaticTorchProxyComponent = {}
 ---@field ViewerRentExpireTime int32
 ---@field ViewerCanRelease boolean
 ---@field ViewerInventory FCompHandleData
-UStorehouseDataComponent = {}
+local UStorehouseDataComponent = {}
 
 
 
@@ -2675,7 +2675,7 @@ UStorehouseDataComponent = {}
 ---@field RentDuration int32
 ---@field ExtendPrice int32
 ---@field ExtendDuration int32
-UStorehouseProxyComponent = {}
+local UStorehouseProxyComponent = {}
 
 
 
@@ -2694,13 +2694,13 @@ UStorehouseProxyComponent = {}
 ---@field BuilderId int64
 ---@field TownFamilyAreaId int32
 ---@field FamilyAccessLevel EAnvilR2FamilyRoleType
-UStructureDataComponent = {}
+local UStructureDataComponent = {}
 
 
 
 ---@class UStructureProtectionProxyComponent : UProxyComponent
 ---@field SnappedFoundationDamageMitigation float
-UStructureProtectionProxyComponent = {}
+local UStructureProtectionProxyComponent = {}
 
 
 
@@ -2717,25 +2717,25 @@ UStructureProtectionProxyComponent = {}
 ---@field CrenellationLevel uint8
 ---@field StructureType EAnvilBuildStructureType
 ---@field ReinforcementCosts TArray<FBasicItemCount>
-UStructureProxyComponent = {}
+local UStructureProxyComponent = {}
 
 
 
 ---@class UTavernDataComponent : UDataComponent
 ---@field CurrentBuffLevel uint8
-UTavernDataComponent = {}
+local UTavernDataComponent = {}
 
 
 
 ---@class UTavernProxyComponent : UProxyComponent
 ---@field Buffs TArray<FTavernBuffConfig>
-UTavernProxyComponent = {}
+local UTavernProxyComponent = {}
 
 
 
 ---@class UTeamDataComponent : UDataComponent
 ---@field TeamId uint8
-UTeamDataComponent = {}
+local UTeamDataComponent = {}
 
 
 
@@ -2744,7 +2744,7 @@ UTeamDataComponent = {}
 ---@field Accessibility EAnvilAccessibilityType
 ---@field bAlwaysAllowAccessWhenScorched boolean
 ---@field bAllowAccessUsingVehicles boolean
-UTeamProxyComponent = {}
+local UTeamProxyComponent = {}
 
 
 
@@ -2754,13 +2754,13 @@ UTeamProxyComponent = {}
 ---@field NameText FText
 ---@field Description FText
 ---@field Image UTexture2D
-UTechItemTemplate = {}
+local UTechItemTemplate = {}
 
 
 
 ---@class UTemperatureDataComponent : UDataComponent
 ---@field CurrentNormalizedTemperature float
-UTemperatureDataComponent = {}
+local UTemperatureDataComponent = {}
 
 
 
@@ -2769,19 +2769,19 @@ UTemperatureDataComponent = {}
 ---@field StructureInteriorTempIncreasePerSec float
 ---@field WarmStructureTempIncreasePerSec float
 ---@field WarmStructureSearchRadius float
-UTemperatureProxyComponent = {}
+local UTemperatureProxyComponent = {}
 
 
 
 ---@class UTemplateComponent : USceneComponent
 ---@field TemplateActor TSubclassOf<ATemplate>
 ---@field SpawnedComponents TArray<UActorComponent>
-UTemplateComponent = {}
+local UTemplateComponent = {}
 
 
 
 ---@class UTempleProxyComponent : UProxyComponent
-UTempleProxyComponent = {}
+local UTempleProxyComponent = {}
 
 
 ---@class UTownHallDataComponent : UDataComponent
@@ -2798,7 +2798,7 @@ UTempleProxyComponent = {}
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
 ---@field TownFamilyId int32
-UTownHallDataComponent = {}
+local UTownHallDataComponent = {}
 
 
 
@@ -2809,17 +2809,17 @@ UTownHallDataComponent = {}
 ---@field SubType EAnvilTownSubType
 ---@field AbandonedStartTime float
 ---@field OriginalOwnerTeamId uint8
-UTownHallProxyComponent = {}
+local UTownHallProxyComponent = {}
 
 
 
 ---@class UTownSiteProxyComponent : UProxyComponent
-UTownSiteProxyComponent = {}
+local UTownSiteProxyComponent = {}
 
 
 ---@class UTrapDataComponent : UDataComponent
 ---@field bWasTriggered boolean
-UTrapDataComponent = {}
+local UTrapDataComponent = {}
 
 
 
@@ -2828,18 +2828,18 @@ UTrapDataComponent = {}
 ---@field AnimalBleedDamagePerSec float
 ---@field NormalizedAnimalEscapeChance float
 ---@field MissEffect TSubclassOf<UEntityTemplate>
-UTrapProxyComponent = {}
+local UTrapProxyComponent = {}
 
 
 
 ---@class UTreeFallDataComponent : UDataComponent
 ---@field FallingDir float
-UTreeFallDataComponent = {}
+local UTreeFallDataComponent = {}
 
 
 
 ---@class UTreeFallProxyComponent : UProxyComponent
-UTreeFallProxyComponent = {}
+local UTreeFallProxyComponent = {}
 
 
 ---@class UTweakableDataComponent : UDataComponent
@@ -2853,12 +2853,12 @@ UTreeFallProxyComponent = {}
 ---@field bClientsUseVisActorPool boolean
 ---@field bGlobalMaxVelocity float
 ---@field ForcedTimeOfDayNormalized uint8
-UTweakableDataComponent = {}
+local UTweakableDataComponent = {}
 
 
 
 ---@class UTweakableProxyComponent : UProxyComponent
-UTweakableProxyComponent = {}
+local UTweakableProxyComponent = {}
 
 
 ---@class UUnderworldModuleProxyComponent : UProxyComponent
@@ -2872,14 +2872,14 @@ UTweakableProxyComponent = {}
 ---@field TelegraphEventStartTimeBeforeCollapse_Hrs float
 ---@field TelegraphEventIntervalMin_Sec float
 ---@field TelegraphEventIntervalMax_Sec float
-UUnderworldModuleProxyComponent = {}
+local UUnderworldModuleProxyComponent = {}
 
 
 
 ---@class UUpgradeDataComponent : UDataComponent
 ---@field MaterialSubmissions TArray<int32>
 ---@field bIsUpgrading boolean
-UUpgradeDataComponent = {}
+local UUpgradeDataComponent = {}
 
 
 
@@ -2887,7 +2887,7 @@ UUpgradeDataComponent = {}
 ---@field UpgradeTarget TSubclassOf<UEntityTemplate>
 ---@field TierPrerequisite uint8
 ---@field MaterialRequirements TArray<FBasicCount>
-UUpgradeProxyComponent = {}
+local UUpgradeProxyComponent = {}
 
 
 
@@ -2895,7 +2895,7 @@ UUpgradeProxyComponent = {}
 ---@field FrontAxleCastHit FVector
 ---@field RearAxleCastHit FVector
 ---@field BasedEntities TArray<FBasedEntityEntry>
-UVehicleMovementDataComponent = {}
+local UVehicleMovementDataComponent = {}
 
 
 
@@ -2936,13 +2936,13 @@ UVehicleMovementDataComponent = {}
 ---@field MaxSubmersionDepth float
 ---@field FallingDistRange FR2FloatRange
 ---@field FallingDamageRange FR2FloatRange
-UVehicleMovementProxyComponent = {}
+local UVehicleMovementProxyComponent = {}
 
 
 
 ---@class UVehicleSeatDataComponent : UDataComponent
 ---@field Occupant FCompHandleData
-UVehicleSeatDataComponent = {}
+local UVehicleSeatDataComponent = {}
 
 
 
@@ -2968,7 +2968,7 @@ UVehicleSeatDataComponent = {}
 ---@field AnimationIndex int32
 ---@field MountedAttackDamageMultiplier float
 ---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>
-UVehicleSeatProxyComponent = {}
+local UVehicleSeatProxyComponent = {}
 
 
 
@@ -2981,7 +2981,7 @@ UVehicleSeatProxyComponent = {}
 ---@field VisMeshProfile EVisMeshProfile
 ---@field bMeshVisibility boolean
 ---@field bMeshVisibilityGroup2 boolean
-UVisStaticMeshComponentBase = {}
+local UVisStaticMeshComponentBase = {}
 
 
 
@@ -2993,49 +2993,49 @@ UVisStaticMeshComponentBase = {}
 ---@field GlobalNormalizedWind float
 ---@field GlobalWindDirectionX float
 ---@field GlobalWindDirectionY float
-UWeatherDataComponent = {}
+local UWeatherDataComponent = {}
 
 
 
 ---@class UWeatherProxyComponent : UProxyComponent
-UWeatherProxyComponent = {}
+local UWeatherProxyComponent = {}
 
 
 ---@class UWellDataComponent : UDataComponent
 ---@field TotalLevel float
-UWellDataComponent = {}
+local UWellDataComponent = {}
 
 
 
 ---@class UWellProxyComponent : UProxyComponent
 ---@field WaterGenerationTimeSec int32
-UWellProxyComponent = {}
+local UWellProxyComponent = {}
 
 
 
 ---@class UWindMillDataComponent : UDataComponent
 ---@field Rotation float
-UWindMillDataComponent = {}
+local UWindMillDataComponent = {}
 
 
 
 ---@class UWindMillProxyComponent : UProxyComponent
 ---@field MaxRotationSpeed float
 ---@field RotationAcceleration float
-UWindMillProxyComponent = {}
+local UWindMillProxyComponent = {}
 
 
 
 ---@class UWorldEntranceDataComponent : UDataComponent
 ---@field ArrivalPosition FVector
-UWorldEntranceDataComponent = {}
+local UWorldEntranceDataComponent = {}
 
 
 
 ---@class UWorldEntranceProxyComponent : UProxyComponent
 ---@field ArrivalPosition FVector
 ---@field DestinationMapId EAnvilMapId
-UWorldEntranceProxyComponent = {}
+local UWorldEntranceProxyComponent = {}
 
 
 

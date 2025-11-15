@@ -5,7 +5,7 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisFamilyCenterFloorTriangularHalfSizeStraight_T2_C = {}
+local ABPVisFamilyCenterFloorTriangularHalfSizeStraight_T2_C = {}
 
 
 

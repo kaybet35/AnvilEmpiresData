@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPInventoryContainerWidget_C : UInventoryContainerWidget
-UBPInventoryContainerWidget_C = {}
+local UBPInventoryContainerWidget_C = {}
 
 

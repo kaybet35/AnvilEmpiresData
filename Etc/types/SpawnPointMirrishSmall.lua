@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnPointMirrishSmall_C : UEntityTemplate
-USpawnPointMirrishSmall_C = {}
+local USpawnPointMirrishSmall_C = {}
 
 

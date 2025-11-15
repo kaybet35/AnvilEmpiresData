@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMountedMace_C : UItemTemplate
-UMountedMace_C = {}
+local UMountedMace_C = {}
 
 

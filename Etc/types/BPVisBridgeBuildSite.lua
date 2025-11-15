@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisBridgeBuildSite_C : AVisSplineBuildSite
-ABPVisBridgeBuildSite_C = {}
+local ABPVisBridgeBuildSite_C = {}
 
 

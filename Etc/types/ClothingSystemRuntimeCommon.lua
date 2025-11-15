@@ -28,7 +28,7 @@
 ---@field CollisionThickness float
 ---@field AnimDriveSpringStiffness float
 ---@field AnimDriveDamperStiffness float
-FClothConfig_Legacy = {}
+local FClothConfig_Legacy = {}
 
 
 
@@ -37,7 +37,7 @@ FClothConfig_Legacy = {}
 ---@field StiffnessMultiplier float
 ---@field StretchLimit float
 ---@field CompressionLimit float
-FClothConstraintSetup_Legacy = {}
+local FClothConstraintSetup_Legacy = {}
 
 
 
@@ -47,7 +47,7 @@ FClothConstraintSetup_Legacy = {}
 ---@field bUseMultipleInfluences boolean
 ---@field SkinningKernelRadius float
 ---@field bSmoothTransition boolean
-FClothLODDataCommon = {}
+local FClothLODDataCommon = {}
 
 
 
@@ -58,7 +58,7 @@ FClothLODDataCommon = {}
 ---@field MinValue float
 ---@field Values TArray<float>
 ---@field bEnabled boolean
-FClothParameterMask_Legacy = {}
+local FClothParameterMask_Legacy = {}
 
 
 
@@ -74,34 +74,34 @@ FClothParameterMask_Legacy = {}
 ---@field GeodesicTethers FClothTetherData
 ---@field MaxBoneWeights int32
 ---@field NumFixedVerts int32
-FClothPhysicalMeshData = {}
+local FClothPhysicalMeshData = {}
 
 
 
 ---@class FClothTetherData
-FClothTetherData = {}
+local FClothTetherData = {}
 
 
 ---@class FPointWeightMap
 ---@field Values TArray<float>
-FPointWeightMap = {}
+local FPointWeightMap = {}
 
 
 
 ---@class UClothConfigCommon : UClothConfigBase
-UClothConfigCommon = {}
+local UClothConfigCommon = {}
 
 
 ---@class UClothLODDataCommon_Legacy : UObject
 ---@field PhysicalMeshData UClothPhysicalMeshDataBase_Legacy
 ---@field ClothPhysicalMeshData FClothPhysicalMeshData
 ---@field CollisionData FClothCollisionData
-UClothLODDataCommon_Legacy = {}
+local UClothLODDataCommon_Legacy = {}
 
 
 
 ---@class UClothSharedConfigCommon : UClothConfigCommon
-UClothSharedConfigCommon = {}
+local UClothSharedConfigCommon = {}
 
 
 ---@class UClothingAssetCommon : UClothingAssetBase
@@ -113,11 +113,11 @@ UClothSharedConfigCommon = {}
 ---@field UsedBoneIndices TArray<int32>
 ---@field ReferenceBoneIndex int32
 ---@field CustomData UClothingAssetCustomData
-UClothingAssetCommon = {}
+local UClothingAssetCommon = {}
 
 
 
 ---@class UClothingAssetCustomData : UObject
-UClothingAssetCustomData = {}
+local UClothingAssetCustomData = {}
 
 

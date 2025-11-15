@@ -18,13 +18,13 @@
 ---@field AttenuationRadius float
 ---@field SpotlightInnerAngle float
 ---@field SpotlightOuterAngle float
-ADatasmithAreaLightActor = {}
+local ADatasmithAreaLightActor = {}
 
 
 
 ---@class ADatasmithImportedSequencesActor : AActor
 ---@field ImportedSequences TArray<ULevelSequence>
-ADatasmithImportedSequencesActor = {}
+local ADatasmithImportedSequencesActor = {}
 
 ---@param SequenceToPlay ULevelSequence
 function ADatasmithImportedSequencesActor:PlayLevelSequence(SequenceToPlay) end
@@ -33,33 +33,33 @@ function ADatasmithImportedSequencesActor:PlayLevelSequence(SequenceToPlay) end
 ---@class ADatasmithSceneActor : AActor
 ---@field Scene UDatasmithScene
 ---@field RelatedActors TMap<FName, TSoftObjectPtr<AActor>>
-ADatasmithSceneActor = {}
+local ADatasmithSceneActor = {}
 
 
 
 ---@class FDatasmithAssetImportOptions
 ---@field PackagePath FName
-FDatasmithAssetImportOptions = {}
+local FDatasmithAssetImportOptions = {}
 
 
 
 ---@class FDatasmithCameraFilmbackSettingsTemplate
 ---@field SensorWidth float
 ---@field SensorHeight float
-FDatasmithCameraFilmbackSettingsTemplate = {}
+local FDatasmithCameraFilmbackSettingsTemplate = {}
 
 
 
 ---@class FDatasmithCameraFocusSettingsTemplate
 ---@field FocusMethod ECameraFocusMethod
 ---@field ManualFocusDistance float
-FDatasmithCameraFocusSettingsTemplate = {}
+local FDatasmithCameraFocusSettingsTemplate = {}
 
 
 
 ---@class FDatasmithCameraLensSettingsTemplate
 ---@field MaxFStop float
-FDatasmithCameraLensSettingsTemplate = {}
+local FDatasmithCameraLensSettingsTemplate = {}
 
 
 
@@ -67,7 +67,7 @@ FDatasmithCameraLensSettingsTemplate = {}
 ---@field bEnableLookAtTracking boolean
 ---@field bAllowRoll boolean
 ---@field ActorToTrack TSoftObjectPtr<AActor>
-FDatasmithCameraLookatTrackingSettingsTemplate = {}
+local FDatasmithCameraLookatTrackingSettingsTemplate = {}
 
 
 
@@ -80,12 +80,12 @@ FDatasmithCameraLookatTrackingSettingsTemplate = {}
 ---@field bIncludeAnimation boolean
 ---@field AssetOptions FDatasmithAssetImportOptions
 ---@field StaticMeshOptions FDatasmithStaticMeshImportOptions
-FDatasmithImportBaseOptions = {}
+local FDatasmithImportBaseOptions = {}
 
 
 
 ---@class FDatasmithImportInfo
-FDatasmithImportInfo = {}
+local FDatasmithImportInfo = {}
 
 
 ---@class FDatasmithMeshBuildSettingsTemplate
@@ -99,19 +99,19 @@ FDatasmithImportInfo = {}
 ---@field MinLightmapResolution int32
 ---@field SrcLightmapIndex int32
 ---@field DstLightmapIndex int32
-FDatasmithMeshBuildSettingsTemplate = {}
+local FDatasmithMeshBuildSettingsTemplate = {}
 
 
 
 ---@class FDatasmithMeshSectionInfoMapTemplate
 ---@field Map TMap<uint32, FDatasmithMeshSectionInfoTemplate>
-FDatasmithMeshSectionInfoMapTemplate = {}
+local FDatasmithMeshSectionInfoMapTemplate = {}
 
 
 
 ---@class FDatasmithMeshSectionInfoTemplate
 ---@field MaterialIndex int32
-FDatasmithMeshSectionInfoTemplate = {}
+local FDatasmithMeshSectionInfoTemplate = {}
 
 
 
@@ -130,27 +130,27 @@ FDatasmithMeshSectionInfoTemplate = {}
 ---@field CameraISO float
 ---@field CameraShutterSpeed float
 ---@field DepthOfFieldFstop float
-FDatasmithPostProcessSettingsTemplate = {}
+local FDatasmithPostProcessSettingsTemplate = {}
 
 
 
 ---@class FDatasmithReimportOptions
 ---@field bUpdateActors boolean
 ---@field bRespawnDeletedActors boolean
-FDatasmithReimportOptions = {}
+local FDatasmithReimportOptions = {}
 
 
 
 ---@class FDatasmithRetessellationOptions : FDatasmithTessellationOptions
 ---@field RetessellationRule EDatasmithCADRetessellationRule
-FDatasmithRetessellationOptions = {}
+local FDatasmithRetessellationOptions = {}
 
 
 
 ---@class FDatasmithStaticMaterialTemplate
 ---@field MaterialSlotName FName
 ---@field MaterialInterface UMaterialInterface
-FDatasmithStaticMaterialTemplate = {}
+local FDatasmithStaticMaterialTemplate = {}
 
 
 
@@ -159,13 +159,13 @@ FDatasmithStaticMaterialTemplate = {}
 ---@field MaxLightmapResolution EDatasmithImportLightmapMax
 ---@field bGenerateLightmapUVs boolean
 ---@field bRemoveDegenerates boolean
-FDatasmithStaticMeshImportOptions = {}
+local FDatasmithStaticMeshImportOptions = {}
 
 
 
 ---@class FDatasmithStaticParameterSetTemplate
 ---@field StaticSwitchParameters TMap<FName, boolean>
-FDatasmithStaticParameterSetTemplate = {}
+local FDatasmithStaticParameterSetTemplate = {}
 
 
 
@@ -174,19 +174,19 @@ FDatasmithStaticParameterSetTemplate = {}
 ---@field MaxEdgeLength float
 ---@field NormalTolerance float
 ---@field StitchingTechnique EDatasmithCADStitchingTechnique
-FDatasmithTessellationOptions = {}
+local FDatasmithTessellationOptions = {}
 
 
 
 ---@class UDatasmithActorTemplate : UDatasmithObjectTemplate
 ---@field LayerS TSet<FName>
 ---@field Tags TSet<FName>
-UDatasmithActorTemplate = {}
+local UDatasmithActorTemplate = {}
 
 
 
 ---@class UDatasmithAdditionalData : UObject
-UDatasmithAdditionalData = {}
+local UDatasmithAdditionalData = {}
 
 
 ---@class UDatasmithAreaLightActorTemplate : UDatasmithObjectTemplate
@@ -204,27 +204,27 @@ UDatasmithAdditionalData = {}
 ---@field SourceRadius float
 ---@field SourceLength float
 ---@field AttenuationRadius float
-UDatasmithAreaLightActorTemplate = {}
+local UDatasmithAreaLightActorTemplate = {}
 
 
 
 ---@class UDatasmithAssetImportData : UAssetImportData
-UDatasmithAssetImportData = {}
+local UDatasmithAssetImportData = {}
 
 
 ---@class UDatasmithAssetUserData : UAssetUserData
 ---@field MetaData TMap<FName, FString>
-UDatasmithAssetUserData = {}
+local UDatasmithAssetUserData = {}
 
 
 
 ---@class UDatasmithCADImportSceneData : UDatasmithSceneImportData
-UDatasmithCADImportSceneData = {}
+local UDatasmithCADImportSceneData = {}
 
 
 ---@class UDatasmithCineCameraActorTemplate : UDatasmithObjectTemplate
 ---@field LookatTrackingSettings FDatasmithCameraLookatTrackingSettingsTemplate
-UDatasmithCineCameraActorTemplate = {}
+local UDatasmithCineCameraActorTemplate = {}
 
 
 
@@ -235,18 +235,18 @@ UDatasmithCineCameraActorTemplate = {}
 ---@field CurrentFocalLength float
 ---@field CurrentAperture float
 ---@field PostProcessSettings FDatasmithPostProcessSettingsTemplate
-UDatasmithCineCameraComponentTemplate = {}
+local UDatasmithCineCameraComponentTemplate = {}
 
 
 
 ---@class UDatasmithCommonTessellationOptions : UDatasmithOptionsBase
 ---@field Options FDatasmithTessellationOptions
-UDatasmithCommonTessellationOptions = {}
+local UDatasmithCommonTessellationOptions = {}
 
 
 
 ---@class UDatasmithContentBlueprintLibrary : UBlueprintFunctionLibrary
-UDatasmithContentBlueprintLibrary = {}
+local UDatasmithContentBlueprintLibrary = {}
 
 ---@param Object UObject
 ---@param Key FName
@@ -269,19 +269,19 @@ function UDatasmithContentBlueprintLibrary:GetDatasmithUserData(Object) end
 
 
 ---@class UDatasmithCustomActionBase : UObject
-UDatasmithCustomActionBase = {}
+local UDatasmithCustomActionBase = {}
 
 
 ---@class UDatasmithDecalComponentTemplate : UDatasmithObjectTemplate
 ---@field SortOrder int32
 ---@field DecalSize FVector
 ---@field Material UMaterialInterface
-UDatasmithDecalComponentTemplate = {}
+local UDatasmithDecalComponentTemplate = {}
 
 
 
 ---@class UDatasmithDeltaGenAssetImportData : UDatasmithAssetImportData
-UDatasmithDeltaGenAssetImportData = {}
+local UDatasmithDeltaGenAssetImportData = {}
 
 
 ---@class UDatasmithDeltaGenSceneImportData : UDatasmithFBXSceneImportData
@@ -295,7 +295,7 @@ UDatasmithDeltaGenAssetImportData = {}
 ---@field PosPath FString
 ---@field bImportTml boolean
 ---@field TmlPath FString
-UDatasmithDeltaGenSceneImportData = {}
+local UDatasmithDeltaGenSceneImportData = {}
 
 
 
@@ -304,7 +304,7 @@ UDatasmithDeltaGenSceneImportData = {}
 ---@field TexturesDir FString
 ---@field IntermediateSerialization uint8
 ---@field bColorizeMaterials boolean
-UDatasmithFBXSceneImportData = {}
+local UDatasmithFBXSceneImportData = {}
 
 
 
@@ -314,12 +314,12 @@ UDatasmithFBXSceneImportData = {}
 ---@field Author FString
 ---@field License FString
 ---@field Source FString
-UDatasmithGLTFSceneImportData = {}
+local UDatasmithGLTFSceneImportData = {}
 
 
 
 ---@class UDatasmithIFCSceneImportData : UDatasmithSceneImportData
-UDatasmithIFCSceneImportData = {}
+local UDatasmithIFCSceneImportData = {}
 
 
 ---@class UDatasmithImportOptions : UDatasmithOptionsBase
@@ -336,14 +336,14 @@ UDatasmithIFCSceneImportData = {}
 ---@field Filename FString
 ---@field FilePath FString
 ---@field SourceUri FString
-UDatasmithImportOptions = {}
+local UDatasmithImportOptions = {}
 
 
 
 ---@class UDatasmithLandscapeTemplate : UDatasmithObjectTemplate
 ---@field LandscapeMaterial UMaterialInterface
 ---@field StaticLightingLOD int32
-UDatasmithLandscapeTemplate = {}
+local UDatasmithLandscapeTemplate = {}
 
 
 
@@ -358,12 +358,12 @@ UDatasmithLandscapeTemplate = {}
 ---@field LightColor FLinearColor
 ---@field LightFunctionMaterial UMaterialInterface
 ---@field IESTexture UTextureLightProfile
-UDatasmithLightComponentTemplate = {}
+local UDatasmithLightComponentTemplate = {}
 
 
 
 ---@class UDatasmithMDLSceneImportData : UDatasmithSceneImportData
-UDatasmithMDLSceneImportData = {}
+local UDatasmithMDLSceneImportData = {}
 
 
 ---@class UDatasmithMaterialInstanceTemplate : UDatasmithObjectTemplate
@@ -372,16 +372,16 @@ UDatasmithMDLSceneImportData = {}
 ---@field VectorParameterValues TMap<FName, FLinearColor>
 ---@field TextureParameterValues TMap<FName, TSoftObjectPtr<UTexture>>
 ---@field StaticParameters FDatasmithStaticParameterSetTemplate
-UDatasmithMaterialInstanceTemplate = {}
+local UDatasmithMaterialInstanceTemplate = {}
 
 
 
 ---@class UDatasmithObjectTemplate : UObject
-UDatasmithObjectTemplate = {}
+local UDatasmithObjectTemplate = {}
 
 
 ---@class UDatasmithOptionsBase : UObject
-UDatasmithOptionsBase = {}
+local UDatasmithOptionsBase = {}
 
 
 ---@class UDatasmithPointLightComponentTemplate : UDatasmithObjectTemplate
@@ -389,7 +389,7 @@ UDatasmithOptionsBase = {}
 ---@field SourceRadius float
 ---@field SourceLength float
 ---@field AttenuationRadius float
-UDatasmithPointLightComponentTemplate = {}
+local UDatasmithPointLightComponentTemplate = {}
 
 
 
@@ -397,12 +397,12 @@ UDatasmithPointLightComponentTemplate = {}
 ---@field Settings FDatasmithPostProcessSettingsTemplate
 ---@field bEnabled boolean
 ---@field bUnbound boolean
-UDatasmithPostProcessVolumeTemplate = {}
+local UDatasmithPostProcessVolumeTemplate = {}
 
 
 
 ---@class UDatasmithScene : UObject
-UDatasmithScene = {}
+local UDatasmithScene = {}
 
 
 ---@class UDatasmithSceneComponentTemplate : UDatasmithObjectTemplate
@@ -412,54 +412,54 @@ UDatasmithScene = {}
 ---@field bVisible boolean
 ---@field bCastShadow boolean
 ---@field Tags TSet<FName>
-UDatasmithSceneComponentTemplate = {}
+local UDatasmithSceneComponentTemplate = {}
 
 
 
 ---@class UDatasmithSceneImportData : UAssetImportData
-UDatasmithSceneImportData = {}
+local UDatasmithSceneImportData = {}
 
 
 ---@class UDatasmithSkyLightComponentTemplate : UDatasmithObjectTemplate
 ---@field SourceType ESkyLightSourceType
 ---@field CubemapResolution int32
 ---@field Cubemap UTextureCube
-UDatasmithSkyLightComponentTemplate = {}
+local UDatasmithSkyLightComponentTemplate = {}
 
 
 
 ---@class UDatasmithSpotLightComponentTemplate : UDatasmithObjectTemplate
 ---@field InnerConeAngle float
 ---@field OuterConeAngle float
-UDatasmithSpotLightComponentTemplate = {}
+local UDatasmithSpotLightComponentTemplate = {}
 
 
 
 ---@class UDatasmithStaticMeshCADImportData : UDatasmithStaticMeshImportData
-UDatasmithStaticMeshCADImportData = {}
+local UDatasmithStaticMeshCADImportData = {}
 
 
 ---@class UDatasmithStaticMeshComponentTemplate : UDatasmithObjectTemplate
 ---@field StaticMesh UStaticMesh
 ---@field OverrideMaterials TArray<UMaterialInterface>
-UDatasmithStaticMeshComponentTemplate = {}
+local UDatasmithStaticMeshComponentTemplate = {}
 
 
 
 ---@class UDatasmithStaticMeshGLTFImportData : UDatasmithStaticMeshImportData
 ---@field SourceMeshName FString
-UDatasmithStaticMeshGLTFImportData = {}
+local UDatasmithStaticMeshGLTFImportData = {}
 
 
 
 ---@class UDatasmithStaticMeshIFCImportData : UDatasmithStaticMeshImportData
 ---@field SourceGlobalId FString
-UDatasmithStaticMeshIFCImportData = {}
+local UDatasmithStaticMeshIFCImportData = {}
 
 
 
 ---@class UDatasmithStaticMeshImportData : UDatasmithAssetImportData
-UDatasmithStaticMeshImportData = {}
+local UDatasmithStaticMeshImportData = {}
 
 
 ---@class UDatasmithStaticMeshTemplate : UDatasmithObjectTemplate
@@ -468,16 +468,16 @@ UDatasmithStaticMeshImportData = {}
 ---@field LightMapResolution int32
 ---@field BuildSettings TArray<FDatasmithMeshBuildSettingsTemplate>
 ---@field StaticMaterials TArray<FDatasmithStaticMaterialTemplate>
-UDatasmithStaticMeshTemplate = {}
+local UDatasmithStaticMeshTemplate = {}
 
 
 
 ---@class UDatasmithTranslatedSceneImportData : UDatasmithSceneImportData
-UDatasmithTranslatedSceneImportData = {}
+local UDatasmithTranslatedSceneImportData = {}
 
 
 ---@class UDatasmithVREDAssetImportData : UDatasmithAssetImportData
-UDatasmithVREDAssetImportData = {}
+local UDatasmithVREDAssetImportData = {}
 
 
 ---@class UDatasmithVREDSceneImportData : UDatasmithFBXSceneImportData
@@ -492,7 +492,7 @@ UDatasmithVREDAssetImportData = {}
 ---@field LightInfoPath FString
 ---@field bImportClipInfo boolean
 ---@field ClipInfoPath FString
-UDatasmithVREDSceneImportData = {}
+local UDatasmithVREDSceneImportData = {}
 
 
 

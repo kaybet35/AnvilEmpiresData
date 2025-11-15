@@ -5,7 +5,7 @@
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field PowerUnitData UPowerUnitDataComponent
-ABPVisWoodSaw_C = {}
+local ABPVisWoodSaw_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisWoodSaw_C:ReceiveTick(DeltaSeconds) end

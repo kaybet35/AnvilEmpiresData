@@ -1,5 +1,5 @@
 ---@enum EWaveTableCurve
-EWaveTableCurve = {
+local EWaveTableCurve = {
     Linear = 0,
     Linear_Inv = 1,
     Exp = 2,
@@ -16,7 +16,7 @@ EWaveTableCurve = {
 }
 
 ---@enum EWaveTableResolution
-EWaveTableResolution = {
+local EWaveTableResolution = {
     None = 0,
     Res_8 = 3,
     Res_16 = 4,

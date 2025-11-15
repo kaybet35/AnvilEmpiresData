@@ -3,7 +3,7 @@
 ---@class AGeometryCollectionActor : AActor
 ---@field GeometryCollectionComponent UGeometryCollectionComponent
 ---@field GeometryCollectionDebugDrawComponent UGeometryCollectionDebugDrawComponent
-AGeometryCollectionActor = {}
+local AGeometryCollectionActor = {}
 
 ---@param Start FVector
 ---@param End FVector
@@ -74,13 +74,13 @@ function AGeometryCollectionActor:RaycastSingle(Start, End, OutHit) end
 ---@field VertexIndexColor FColor
 ---@field VertexNormalColor FColor
 ---@field SpriteComponent UBillboardComponent
-AGeometryCollectionDebugDrawActor = {}
+local AGeometryCollectionDebugDrawActor = {}
 
 
 
 ---@class AGeometryCollectionISMPoolActor : AActor
 ---@field ISMPoolComp UGeometryCollectionISMPoolComponent
-AGeometryCollectionISMPoolActor = {}
+local AGeometryCollectionISMPoolActor = {}
 
 
 
@@ -91,7 +91,7 @@ AGeometryCollectionISMPoolActor = {}
 ---@field Isovalue float
 ---@field Enabled boolean
 ---@field RenderVolumeBoundingBox boolean
-AGeometryCollectionRenderLevelSetActor = {}
+local AGeometryCollectionRenderLevelSetActor = {}
 
 
 
@@ -99,7 +99,7 @@ AGeometryCollectionRenderLevelSetActor = {}
 ---@field Location FVector
 ---@field Velocity FVector
 ---@field Mass float
-FChaosBreakingEventData = {}
+local FChaosBreakingEventData = {}
 
 
 
@@ -110,7 +110,7 @@ FChaosBreakingEventData = {}
 ---@field MinMass float
 ---@field MaxDistance float
 ---@field SortMethod EChaosBreakingSortMethod
-FChaosBreakingEventRequestSettings = {}
+local FChaosBreakingEventRequestSettings = {}
 
 
 
@@ -122,7 +122,7 @@ FChaosBreakingEventRequestSettings = {}
 ---@field Mass1 float
 ---@field Mass2 float
 ---@field Impulse FVector
-FChaosCollisionEventData = {}
+local FChaosCollisionEventData = {}
 
 
 
@@ -133,7 +133,7 @@ FChaosCollisionEventData = {}
 ---@field MinImpulse float
 ---@field MaxDistance float
 ---@field SortMethod EChaosCollisionSortMethod
-FChaosCollisionEventRequestSettings = {}
+local FChaosCollisionEventRequestSettings = {}
 
 
 
@@ -141,7 +141,7 @@ FChaosCollisionEventRequestSettings = {}
 ---@field Location FVector
 ---@field Mass float
 ---@field ParticleIndex int32
-FChaosRemovalEventData = {}
+local FChaosRemovalEventData = {}
 
 
 
@@ -150,7 +150,7 @@ FChaosRemovalEventData = {}
 ---@field MinMass float
 ---@field MaxDistance float
 ---@field SortMethod EChaosRemovalSortMethod
-FChaosRemovalEventRequestSettings = {}
+local FChaosRemovalEventRequestSettings = {}
 
 
 
@@ -160,7 +160,7 @@ FChaosRemovalEventRequestSettings = {}
 ---@field AngularVelocity FVector
 ---@field Mass float
 ---@field ParticleIndex int32
-FChaosTrailingEventData = {}
+local FChaosTrailingEventData = {}
 
 
 
@@ -171,7 +171,7 @@ FChaosTrailingEventData = {}
 ---@field MinAngularSpeed float
 ---@field MaxDistance float
 ---@field SortMethod EChaosTrailingSortMethod
-FChaosTrailingEventRequestSettings = {}
+local FChaosTrailingEventRequestSettings = {}
 
 
 
@@ -196,21 +196,21 @@ FChaosTrailingEventRequestSettings = {}
 ---@field TrailingDataSizeMax int32
 ---@field TrailingMinSpeedThreshold float
 ---@field TrailingMinVolumeThreshold float
-FGeomComponentCacheParameters = {}
+local FGeomComponentCacheParameters = {}
 
 
 
 ---@class FGeometryCollectionAutoInstanceMesh
 ---@field StaticMesh FSoftObjectPath
 ---@field Materials TArray<UMaterialInterface>
-FGeometryCollectionAutoInstanceMesh = {}
+local FGeometryCollectionAutoInstanceMesh = {}
 
 
 
 ---@class FGeometryCollectionCollisionParticleData
 ---@field CollisionParticlesFraction float
 ---@field MaximumCollisionParticles int32
-FGeometryCollectionCollisionParticleData = {}
+local FGeometryCollectionCollisionParticleData = {}
 
 
 
@@ -221,7 +221,7 @@ FGeometryCollectionCollisionParticleData = {}
 ---@field CollisionParticles FGeometryCollectionCollisionParticleData
 ---@field CollisionObjectReductionPercentage float
 ---@field CollisionMarginFraction float
-FGeometryCollectionCollisionTypeData = {}
+local FGeometryCollectionCollisionTypeData = {}
 
 
 
@@ -229,7 +229,7 @@ FGeometryCollectionCollisionTypeData = {}
 ---@field bEnabled boolean
 ---@field BreakDamagePropagationFactor float
 ---@field ShockDamagePropagationFactor float
-FGeometryCollectionDamagePropagationData = {}
+local FGeometryCollectionDamagePropagationData = {}
 
 
 
@@ -237,12 +237,12 @@ FGeometryCollectionDamagePropagationData = {}
 ---@field ID int32
 ---@field Solver AChaosSolverActor
 ---@field GeometryCollection AGeometryCollectionActor
-FGeometryCollectionDebugDrawActorSelectedRigidBody = {}
+local FGeometryCollectionDebugDrawActorSelectedRigidBody = {}
 
 
 
 ---@class FGeometryCollectionDebugDrawWarningMessage
-FGeometryCollectionDebugDrawWarningMessage = {}
+local FGeometryCollectionDebugDrawWarningMessage = {}
 
 
 ---@class FGeometryCollectionEmbeddedExemplar
@@ -250,7 +250,7 @@ FGeometryCollectionDebugDrawWarningMessage = {}
 ---@field StartCullDistance float
 ---@field EndCullDistance float
 ---@field InstanceCount int32
-FGeometryCollectionEmbeddedExemplar = {}
+local FGeometryCollectionEmbeddedExemplar = {}
 
 
 
@@ -259,19 +259,19 @@ FGeometryCollectionEmbeddedExemplar = {}
 ---@field MaxLevelSetResolution int32
 ---@field MinClusterLevelSetResolution int32
 ---@field MaxClusterLevelSetResolution int32
-FGeometryCollectionLevelSetData = {}
+local FGeometryCollectionLevelSetData = {}
 
 
 
 ---@class FGeometryCollectionRepData
-FGeometryCollectionRepData = {}
+local FGeometryCollectionRepData = {}
 
 
 ---@class FGeometryCollectionSizeSpecificData
 ---@field MaxSize float
 ---@field CollisionShapes TArray<FGeometryCollectionCollisionTypeData>
 ---@field DamageThreshold int32
-FGeometryCollectionSizeSpecificData = {}
+local FGeometryCollectionSizeSpecificData = {}
 
 
 
@@ -281,7 +281,7 @@ FGeometryCollectionSizeSpecificData = {}
 ---@field SourceMaterial TArray<UMaterialInterface>
 ---@field bAddInternalMaterials boolean
 ---@field bSplitComponents boolean
-FGeometryCollectionSource = {}
+local FGeometryCollectionSource = {}
 
 
 
@@ -300,7 +300,7 @@ FGeometryCollectionSource = {}
 ---@field OnBreakingEvents FChaosDestructionListenerOnBreakingEvents
 ---@field OnTrailingEvents FChaosDestructionListenerOnTrailingEvents
 ---@field OnRemovalEvents FChaosDestructionListenerOnRemovalEvents
-UChaosDestructionListener = {}
+local UChaosDestructionListener = {}
 
 ---@param TrailingEvents TArray<FChaosTrailingEventData>
 ---@param SortMethod EChaosTrailingSortMethod
@@ -375,7 +375,7 @@ function UChaosDestructionListener:AddChaosSolverActor(ChaosSolverActor) end
 ---@field PersistentGuid FGuid
 ---@field StateGuid FGuid
 ---@field BoneSelectedMaterialIndex int32
-UGeometryCollection = {}
+local UGeometryCollection = {}
 
 
 
@@ -383,7 +383,7 @@ UGeometryCollection = {}
 ---@field RecordedData FRecordedTransformTrack
 ---@field SupportedCollection UGeometryCollection
 ---@field CompatibleCollectionState FGuid
-UGeometryCollectionCache = {}
+local UGeometryCollectionCache = {}
 
 
 
@@ -438,7 +438,7 @@ UGeometryCollectionCache = {}
 ---@field RepData FGeometryCollectionRepData
 ---@field DummyBodySetup UBodySetup
 ---@field EmbeddedGeometryComponents TArray<UInstancedStaticMeshComponent>
-UGeometryCollectionComponent = {}
+local UGeometryCollectionComponent = {}
 
 ---@param RestCollectionIn UGeometryCollection
 function UGeometryCollectionComponent:SetRestCollection(RestCollectionIn) end
@@ -504,11 +504,11 @@ function UGeometryCollectionComponent:ApplyAngularVelocity(ItemIndex, AngularVel
 ---@class UGeometryCollectionDebugDrawComponent : UActorComponent
 ---@field GeometryCollectionDebugDrawActor AGeometryCollectionDebugDrawActor
 ---@field GeometryCollectionRenderLevelSetActor AGeometryCollectionRenderLevelSetActor
-UGeometryCollectionDebugDrawComponent = {}
+local UGeometryCollectionDebugDrawComponent = {}
 
 
 
 ---@class UGeometryCollectionISMPoolComponent : USceneComponent
-UGeometryCollectionISMPoolComponent = {}
+local UGeometryCollectionISMPoolComponent = {}
 
 

@@ -3,7 +3,7 @@
 ---@class ABPVisBearEliteHusk_C : AVisEffect
 ---@field Fur USkeletalMeshComponent
 ---@field Decal UDecalComponent
-ABPVisBearEliteHusk_C = {}
+local ABPVisBearEliteHusk_C = {}
 
 
 

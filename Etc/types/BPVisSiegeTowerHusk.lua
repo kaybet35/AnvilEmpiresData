@@ -2,7 +2,7 @@
 
 ---@class ABPVisSiegeTowerHusk_C : AVisEffect
 ---@field StaticMesh UStaticMeshComponent
-ABPVisSiegeTowerHusk_C = {}
+local ABPVisSiegeTowerHusk_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFortStairsShortBuildSite_C : AVisBuildSite
-ABPVisFortStairsShortBuildSite_C = {}
+local ABPVisFortStairsShortBuildSite_C = {}
 
 

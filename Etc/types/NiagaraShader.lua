@@ -9,7 +9,7 @@
 ---@field PinGuid FGuid
 ---@field StackGuids TArray<FGuid>
 ---@field Source FNiagaraCompileEventSource
-FNiagaraCompileEvent = {}
+local FNiagaraCompileEvent = {}
 
 
 
@@ -18,18 +18,18 @@ FNiagaraCompileEvent = {}
 ---@field DIClassName FString
 ---@field ShaderParametersOffset uint32
 ---@field GeneratedFunctions TArray<FNiagaraDataInterfaceGeneratedFunction>
-FNiagaraDataInterfaceGPUParamInfo = {}
+local FNiagaraDataInterfaceGPUParamInfo = {}
 
 
 
 ---@class FNiagaraDataInterfaceGeneratedFunction
-FNiagaraDataInterfaceGeneratedFunction = {}
+local FNiagaraDataInterfaceGeneratedFunction = {}
 
 
 ---@class FNiagaraShaderScriptExternalConstant
 ---@field Type FName
 ---@field Name FString
-FNiagaraShaderScriptExternalConstant = {}
+local FNiagaraShaderScriptExternalConstant = {}
 
 
 
@@ -38,7 +38,7 @@ FNiagaraShaderScriptExternalConstant = {}
 ---@field LooseMetadataNames TArray<FString>
 ---@field bExternalConstantsInterpolated boolean
 ---@field ExternalConstants TArray<FNiagaraShaderScriptExternalConstant>
-FNiagaraShaderScriptParametersMetadata = {}
+local FNiagaraShaderScriptParametersMetadata = {}
 
 
 
@@ -62,11 +62,11 @@ FNiagaraShaderScriptParametersMetadata = {}
 ---@field NumIterationsBinding FName
 ---@field GpuDispatchType ENiagaraGpuDispatchType
 ---@field GpuDispatchNumThreads FIntVector
-FSimulationStageMetaData = {}
+local FSimulationStageMetaData = {}
 
 
 
 ---@class UNiagaraScriptBase : UObject
-UNiagaraScriptBase = {}
+local UNiagaraScriptBase = {}
 
 

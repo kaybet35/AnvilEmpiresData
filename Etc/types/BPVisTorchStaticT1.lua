@@ -4,7 +4,7 @@
 ---@field VisPointLight UVisPointLightComponent
 ---@field Campfire_Cue UAudioComponent
 ---@field WorkshopFire UNiagaraComponent
-ABPVisTorchStaticT1_C = {}
+local ABPVisTorchStaticT1_C = {}
 
 
 

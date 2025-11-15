@@ -2,13 +2,13 @@
 
 ---@class FMyPluginStruct
 ---@field TestString FString
-FMyPluginStruct = {}
+local FMyPluginStruct = {}
 
 
 
 ---@class UMyPluginObject : UObject
 ---@field MyStruct FMyPluginStruct
-UMyPluginObject = {}
+local UMyPluginObject = {}
 
 
 

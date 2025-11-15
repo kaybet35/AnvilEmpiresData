@@ -8,7 +8,7 @@
 ---@field BPSecondaryActionStrip UBPSecondaryActionStrip_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field StructurePanel UBPAnvilPanel_C
-UBPInventoryStructureWindow_C = {}
+local UBPInventoryStructureWindow_C = {}
 
 
 

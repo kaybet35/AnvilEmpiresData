@@ -4,7 +4,7 @@
 ---@field ['Windmill Cue'] UAudioComponent
 ---@field Windvane USkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisWindMill_C = {}
+local ABPVisWindMill_C = {}
 
 
 

@@ -6,7 +6,7 @@
 ---@field EdgeLeft UStaticMeshComponent
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisUnderworldModuleDynamicCornerPlaceholder_C = {}
+local ABPVisUnderworldModuleDynamicCornerPlaceholder_C = {}
 
 
 

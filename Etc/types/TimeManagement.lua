@@ -1,23 +1,23 @@
 ---@meta
 
 ---@class FTimedDataChannelSampleTime
-FTimedDataChannelSampleTime = {}
+local FTimedDataChannelSampleTime = {}
 
 
 ---@class FTimedDataInputEvaluationData
 ---@field DistanceToNewestSampleSeconds float
 ---@field DistanceToOldestSampleSeconds float
-FTimedDataInputEvaluationData = {}
+local FTimedDataInputEvaluationData = {}
 
 
 
 ---@class UFixedFrameRateCustomTimeStep : UEngineCustomTimeStep
-UFixedFrameRateCustomTimeStep = {}
+local UFixedFrameRateCustomTimeStep = {}
 
 
 ---@class UGenlockedCustomTimeStep : UFixedFrameRateCustomTimeStep
 ---@field bAutoDetectFormat boolean
-UGenlockedCustomTimeStep = {}
+local UGenlockedCustomTimeStep = {}
 
 
 
@@ -25,18 +25,18 @@ UGenlockedCustomTimeStep = {}
 ---@field FrameRate FFrameRate
 ---@field bShouldBlock boolean
 ---@field bForceSingleFrameDeltaTime boolean
-UGenlockedFixedRateCustomTimeStep = {}
+local UGenlockedFixedRateCustomTimeStep = {}
 
 
 
 ---@class UGenlockedTimecodeProvider : UTimecodeProvider
 ---@field bUseGenlockToCount boolean
-UGenlockedTimecodeProvider = {}
+local UGenlockedTimecodeProvider = {}
 
 
 
 ---@class UTimeManagementBlueprintLibrary : UBlueprintFunctionLibrary
-UTimeManagementBlueprintLibrary = {}
+local UTimeManagementBlueprintLibrary = {}
 
 ---@param SourceTime FFrameTime
 ---@param SourceRate FFrameRate
@@ -105,7 +105,7 @@ function UTimeManagementBlueprintLibrary:Add_FrameNumberFrameNumber(A, B) end
 ---@class UTimeSynchronizationSource : UObject
 ---@field bUseForSynchronization boolean
 ---@field FrameOffset int32
-UTimeSynchronizationSource = {}
+local UTimeSynchronizationSource = {}
 
 
 

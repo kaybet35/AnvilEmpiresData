@@ -13,7 +13,7 @@
 ---@field MemberContainer UBPMainAreaContainer_C
 ---@field MemberHeader UBPHeaderContainer_C
 ---@field MemberPanel UBPAnvilPanel_C
-UBPFamilyAreaMarkerWindow_C = {}
+local UBPFamilyAreaMarkerWindow_C = {}
 
 ---@param EntryPoint int32
 function UBPFamilyAreaMarkerWindow_C:ExecuteUbergraph_BPFamilyAreaMarkerWindow(EntryPoint) end

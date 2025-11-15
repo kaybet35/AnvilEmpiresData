@@ -4,7 +4,7 @@
 ---@field Decal UDecalComponent
 ---@field ResourceStump UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisRavenDenStump_C = {}
+local ABPVisRavenDenStump_C = {}
 
 
 

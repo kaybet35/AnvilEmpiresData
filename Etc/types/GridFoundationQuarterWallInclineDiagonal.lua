@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationQuarterWallInclineDiagonal_C : UBPBaseFoundationModularEntity_C
-UGridFoundationQuarterWallInclineDiagonal_C = {}
+local UGridFoundationQuarterWallInclineDiagonal_C = {}
 
 

@@ -3,7 +3,7 @@
 ---@class FMoviePipelinePostProcessPass
 ---@field bEnabled boolean
 ---@field Material TSoftObjectPtr<UMaterialInterface>
-FMoviePipelinePostProcessPass = {}
+local FMoviePipelinePostProcessPass = {}
 
 
 
@@ -18,64 +18,64 @@ FMoviePipelinePostProcessPass = {}
 ---@field DataLayers TArray<FSoftObjectPath>
 ---@field ActivePostProcessMaterials TArray<UMaterialInterface>
 ---@field StencilLayerMaterial UMaterialInterface
-UMoviePipelineDeferredPassBase = {}
+local UMoviePipelineDeferredPassBase = {}
 
 
 
 ---@class UMoviePipelineDeferredPass_DetailLighting : UMoviePipelineDeferredPassBase
-UMoviePipelineDeferredPass_DetailLighting = {}
+local UMoviePipelineDeferredPass_DetailLighting = {}
 
 
 ---@class UMoviePipelineDeferredPass_LightingOnly : UMoviePipelineDeferredPassBase
-UMoviePipelineDeferredPass_LightingOnly = {}
+local UMoviePipelineDeferredPass_LightingOnly = {}
 
 
 ---@class UMoviePipelineDeferredPass_PathTracer : UMoviePipelineDeferredPassBase
 ---@field bReferenceMotionBlur boolean
-UMoviePipelineDeferredPass_PathTracer = {}
+local UMoviePipelineDeferredPass_PathTracer = {}
 
 
 
 ---@class UMoviePipelineDeferredPass_ReflectionsOnly : UMoviePipelineDeferredPassBase
-UMoviePipelineDeferredPass_ReflectionsOnly = {}
+local UMoviePipelineDeferredPass_ReflectionsOnly = {}
 
 
 ---@class UMoviePipelineDeferredPass_Unlit : UMoviePipelineDeferredPassBase
-UMoviePipelineDeferredPass_Unlit = {}
+local UMoviePipelineDeferredPass_Unlit = {}
 
 
 ---@class UMoviePipelineImagePassBase : UMoviePipelineRenderPass
-UMoviePipelineImagePassBase = {}
+local UMoviePipelineImagePassBase = {}
 
 
 ---@class UMoviePipelineImageSequenceOutputBase : UMoviePipelineOutputBase
-UMoviePipelineImageSequenceOutputBase = {}
+local UMoviePipelineImageSequenceOutputBase = {}
 
 
 ---@class UMoviePipelineImageSequenceOutput_BMP : UMoviePipelineImageSequenceOutputBase
-UMoviePipelineImageSequenceOutput_BMP = {}
+local UMoviePipelineImageSequenceOutput_BMP = {}
 
 
 ---@class UMoviePipelineImageSequenceOutput_EXR : UMoviePipelineImageSequenceOutputBase
 ---@field Compression EEXRCompressionFormat
 ---@field bMultilayer boolean
-UMoviePipelineImageSequenceOutput_EXR = {}
+local UMoviePipelineImageSequenceOutput_EXR = {}
 
 
 
 ---@class UMoviePipelineImageSequenceOutput_JPG : UMoviePipelineImageSequenceOutputBase
-UMoviePipelineImageSequenceOutput_JPG = {}
+local UMoviePipelineImageSequenceOutput_JPG = {}
 
 
 ---@class UMoviePipelineImageSequenceOutput_PNG : UMoviePipelineImageSequenceOutputBase
 ---@field bWriteAlpha boolean
-UMoviePipelineImageSequenceOutput_PNG = {}
+local UMoviePipelineImageSequenceOutput_PNG = {}
 
 
 
 ---@class UMoviePipelineWaveOutput : UMoviePipelineOutputBase
 ---@field FileNameFormatOverride FString
-UMoviePipelineWaveOutput = {}
+local UMoviePipelineWaveOutput = {}
 
 
 

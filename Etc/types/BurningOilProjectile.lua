@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBurningOilProjectile_C : UEntityTemplate
-UBurningOilProjectile_C = {}
+local UBurningOilProjectile_C = {}
 
 

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class FImgMediaSourceCustomizationSequenceProxy
-FImgMediaSourceCustomizationSequenceProxy = {}
+local FImgMediaSourceCustomizationSequenceProxy = {}
 
 
 ---@class UImgMediaSource : UBaseMediaSource
@@ -10,7 +10,7 @@ FImgMediaSourceCustomizationSequenceProxy = {}
 ---@field ProxyOverride FString
 ---@field bFillGapsInSequence boolean
 ---@field SequencePath FDirectoryPath
-UImgMediaSource = {}
+local UImgMediaSource = {}
 
 ---@param Path FString
 function UImgMediaSource:SetTokenizedSequencePath(Path) end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisPickaxe_C : UVisItem
-UBPVisPickaxe_C = {}
+local UBPVisPickaxe_C = {}
 
 

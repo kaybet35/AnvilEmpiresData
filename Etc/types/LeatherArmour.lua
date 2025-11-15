@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULeatherArmour_C : UItemTemplate
-ULeatherArmour_C = {}
+local ULeatherArmour_C = {}
 
 

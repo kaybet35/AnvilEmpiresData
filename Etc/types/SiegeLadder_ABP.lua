@@ -12,7 +12,7 @@
 ---@field __NameProperty_58 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -26,7 +26,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field AnimGraphNode_SequencePlayer_2 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
-USiegeLadder_ABP_C = {}
+local USiegeLadder_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function USiegeLadder_ABP_C:AnimGraph(AnimGraph) end

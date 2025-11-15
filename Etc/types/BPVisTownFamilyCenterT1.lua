@@ -12,7 +12,7 @@
 ---@field RoofMesh UVisStaticMeshComponent
 ---@field FamilyCenterMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisTownFamilyCenterT1_C = {}
+local ABPVisTownFamilyCenterT1_C = {}
 
 
 

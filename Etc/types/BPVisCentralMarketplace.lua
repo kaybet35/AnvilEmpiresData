@@ -9,7 +9,7 @@
 ---@field PropsMeshes1 UVisStaticMeshComponent
 ---@field Decal UDecalComponent
 ---@field Structure UVisStaticMeshComponent
-ABPVisCentralMarketplace_C = {}
+local ABPVisCentralMarketplace_C = {}
 
 
 

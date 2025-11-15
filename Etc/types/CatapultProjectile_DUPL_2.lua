@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCatapultProjectile_C : UEntityTemplate
-UCatapultProjectile_C = {}
+local UCatapultProjectile_C = {}
 
 

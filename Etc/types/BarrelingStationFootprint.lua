@@ -2,7 +2,7 @@
 
 ---@class ABarrelingStationFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ABarrelingStationFootprint_C = {}
+local ABarrelingStationFootprint_C = {}
 
 
 

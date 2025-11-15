@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UUnderworldModuleDynamicCornerPlaceholder_C : UEntityTemplate
-UUnderworldModuleDynamicCornerPlaceholder_C = {}
+local UUnderworldModuleDynamicCornerPlaceholder_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisEffectTorchSwing_C : AVisEffect
-AVisEffectTorchSwing_C = {}
+local AVisEffectTorchSwing_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URareAreaClay_C : UEntityTemplate
-URareAreaClay_C = {}
+local URareAreaClay_C = {}
 
 

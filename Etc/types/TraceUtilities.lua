@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UTraceUtilLibrary : UBlueprintFunctionLibrary
-UTraceUtilLibrary = {}
+local UTraceUtilLibrary = {}
 
 ---@param Name FString
 function UTraceUtilLibrary:TraceMarkRegionStart(Name) end

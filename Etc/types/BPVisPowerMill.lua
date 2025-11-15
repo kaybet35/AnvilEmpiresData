@@ -4,7 +4,7 @@
 ---@field PowerUnitData UPowerUnitDataComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisPowerMill_C = {}
+local ABPVisPowerMill_C = {}
 
 
 

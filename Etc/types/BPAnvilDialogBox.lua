@@ -2,7 +2,7 @@
 
 ---@class UBPAnvilDialogBox_C : UAnvilDialogBox
 ---@field BlackBG UImage
-UBPAnvilDialogBox_C = {}
+local UBPAnvilDialogBox_C = {}
 
 
 

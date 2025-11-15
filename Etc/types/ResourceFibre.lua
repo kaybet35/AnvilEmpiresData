@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceFibre_C : UItemTemplate
-UResourceFibre_C = {}
+local UResourceFibre_C = {}
 
 

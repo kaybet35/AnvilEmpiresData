@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisRavenDenFall_C : ABPTreeFall_C
-ABPVisRavenDenFall_C = {}
+local ABPVisRavenDenFall_C = {}
 
 

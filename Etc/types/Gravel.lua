@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGravel_C : UItemTemplate
-UGravel_C = {}
+local UGravel_C = {}
 
 

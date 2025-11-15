@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFlaxPlant_C : AVisResource
-ABPVisFlaxPlant_C = {}
+local ABPVisFlaxPlant_C = {}
 
 

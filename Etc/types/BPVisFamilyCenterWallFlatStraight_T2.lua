@@ -4,7 +4,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterWallFlatStraight_T2_C = {}
+local ABPVisFamilyCenterWallFlatStraight_T2_C = {}
 
 
 

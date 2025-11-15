@@ -5,7 +5,7 @@
 ---@field VisInstancedStockpile UVisInstancedStockpileComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field Decal UDecalComponent
-ABPVisFoodTrough_C = {}
+local ABPVisFoodTrough_C = {}
 
 
 

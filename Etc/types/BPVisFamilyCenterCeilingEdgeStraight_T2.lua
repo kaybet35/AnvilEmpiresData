@@ -5,7 +5,7 @@
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
-ABPVisFamilyCenterCeilingEdgeStraight_T2_C = {}
+local ABPVisFamilyCenterCeilingEdgeStraight_T2_C = {}
 
 
 

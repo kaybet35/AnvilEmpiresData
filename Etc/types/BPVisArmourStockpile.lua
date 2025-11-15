@@ -5,7 +5,7 @@
 ---@field VisSingleItemStockpileBody UVisSingleItemStockpileComponent
 ---@field VisSingleItemStockpileHead UVisSingleItemStockpileComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisArmourStockpile_C = {}
+local ABPVisArmourStockpile_C = {}
 
 
 

@@ -1,5 +1,5 @@
 ---@enum EMetaSoundMessageLevel
-EMetaSoundMessageLevel = {
+local EMetaSoundMessageLevel = {
     Error = 0,
     Warning = 1,
     Info = 2,
@@ -7,7 +7,7 @@ EMetaSoundMessageLevel = {
 }
 
 ---@enum EMetasoundSourceAudioFormat
-EMetasoundSourceAudioFormat = {
+local EMetasoundSourceAudioFormat = {
     Mono = 0,
     Stereo = 1,
     Quad = 2,

@@ -7,7 +7,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterWallPowerConnectorDiagonal_T2_C = {}
+local ABPVisFamilyCenterWallPowerConnectorDiagonal_T2_C = {}
 
 ---@param DeltaSeconds float
 function ABPVisFamilyCenterWallPowerConnectorDiagonal_T2_C:ReceiveTick(DeltaSeconds) end

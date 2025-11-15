@@ -17,7 +17,7 @@
 ---@field VisSingleItemStockpile1 UVisSingleItemStockpileComponent
 ---@field VisSingleItemStockpile UVisSingleItemStockpileComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisFoodTable_C = {}
+local ABPVisFoodTable_C = {}
 
 
 

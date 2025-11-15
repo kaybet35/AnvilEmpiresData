@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMace_C : UItemTemplate
-UMace_C = {}
+local UMace_C = {}
 
 

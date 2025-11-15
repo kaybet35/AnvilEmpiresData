@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisBowImpactDefault_C : AVisEffect
-AVisBowImpactDefault_C = {}
+local AVisBowImpactDefault_C = {}
 
 

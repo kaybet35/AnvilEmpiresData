@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMapAvatarWidget_C : UMapAvatarWidget
-UBPMapAvatarWidget_C = {}
+local UBPMapAvatarWidget_C = {}
 
 

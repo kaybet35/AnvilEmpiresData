@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceLeather_C : UItemTemplate
-UResourceLeather_C = {}
+local UResourceLeather_C = {}
 
 

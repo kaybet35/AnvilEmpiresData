@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemTree03Seed_C : UVisItem
-UBPVisItemTree03Seed_C = {}
+local UBPVisItemTree03Seed_C = {}
 
 

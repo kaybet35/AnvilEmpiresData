@@ -1,5 +1,5 @@
 ---@enum EVectorVMBaseTypes
-EVectorVMBaseTypes = {
+local EVectorVMBaseTypes = {
     Float = 0,
     Int = 1,
     Bool = 2,
@@ -8,7 +8,7 @@ EVectorVMBaseTypes = {
 }
 
 ---@enum EVectorVMOperandLocation
-EVectorVMOperandLocation = {
+local EVectorVMOperandLocation = {
     Register = 0,
     Constant = 1,
     Num = 2,

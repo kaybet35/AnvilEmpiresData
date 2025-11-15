@@ -9,7 +9,7 @@
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field Idle UAudioComponent
 ---@field Arrow UArrowComponent
-ABPVisSmallBoat_C = {}
+local ABPVisSmallBoat_C = {}
 
 
 

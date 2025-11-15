@@ -2,32 +2,32 @@
 
 ---@class FPerPlatformSettings
 ---@field Settings TArray<UPlatformSettings>
-FPerPlatformSettings = {}
+local FPerPlatformSettings = {}
 
 
 
 ---@class FPlatformSettingsInstances
 ---@field PlatformInstance UPlatformSettings
 ---@field OtherPlatforms TMap<FName, UPlatformSettings>
-FPlatformSettingsInstances = {}
+local FPlatformSettingsInstances = {}
 
 
 
 ---@class UDeveloperSettings : UObject
-UDeveloperSettings = {}
+local UDeveloperSettings = {}
 
 
 ---@class UDeveloperSettingsBackedByCVars : UDeveloperSettings
-UDeveloperSettingsBackedByCVars = {}
+local UDeveloperSettingsBackedByCVars = {}
 
 
 ---@class UPlatformSettings : UObject
-UPlatformSettings = {}
+local UPlatformSettings = {}
 
 
 ---@class UPlatformSettingsManager : UObject
 ---@field SettingsMap TMap<TSubclassOf<UPlatformSettings>, FPlatformSettingsInstances>
-UPlatformSettingsManager = {}
+local UPlatformSettingsManager = {}
 
 
 

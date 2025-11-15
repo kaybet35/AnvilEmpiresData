@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field EntryBorder UBorder
 ---@field EntryHorizontalBox UHorizontalBox
-UBPAnvilKeyEntryWidget_C = {}
+local UBPAnvilKeyEntryWidget_C = {}
 
 ---@param IsDesignTime boolean
 function UBPAnvilKeyEntryWidget_C:PreConstruct(IsDesignTime) end

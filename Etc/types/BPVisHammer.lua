@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisHammer_C : UVisItem
-UBPVisHammer_C = {}
+local UBPVisHammer_C = {}
 
 

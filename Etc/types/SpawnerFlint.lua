@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnerFlint_C : UEntityTemplate
-USpawnerFlint_C = {}
+local USpawnerFlint_C = {}
 
 

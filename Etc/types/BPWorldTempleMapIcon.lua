@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWorldTempleMapIcon_C : UWorldTempleMapIcon
-UBPWorldTempleMapIcon_C = {}
+local UBPWorldTempleMapIcon_C = {}
 
 

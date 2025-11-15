@@ -1,5 +1,5 @@
 ---@enum EMediaPlayerOptionBooleanOverride
-EMediaPlayerOptionBooleanOverride = {
+local EMediaPlayerOptionBooleanOverride = {
     UseMediaPlayerSetting = 0,
     Enabled = 1,
     Disabled = 2,

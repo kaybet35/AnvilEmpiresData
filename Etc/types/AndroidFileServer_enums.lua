@@ -1,5 +1,5 @@
 ---@enum EAFSActiveType
-EAFSActiveType = {
+local EAFSActiveType = {
     None = 0,
     USBOnly = 1,
     NetworkOnly = 2,

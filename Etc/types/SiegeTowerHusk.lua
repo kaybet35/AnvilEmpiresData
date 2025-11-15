@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USiegeTowerHusk_C : UEntityTemplate
-USiegeTowerHusk_C = {}
+local USiegeTowerHusk_C = {}
 
 

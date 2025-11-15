@@ -7,7 +7,7 @@
 ---@field Image_3 UImage
 ---@field Image_4 UImage
 ---@field Image_78 UImage
-UBPWinConditionWidget_C = {}
+local UBPWinConditionWidget_C = {}
 
 
 

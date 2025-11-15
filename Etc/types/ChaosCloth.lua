@@ -3,7 +3,7 @@
 ---@class FChaosClothWeightedValue
 ---@field Low float
 ---@field High float
-FChaosClothWeightedValue = {}
+local FChaosClothWeightedValue = {}
 
 
 
@@ -49,7 +49,7 @@ FChaosClothWeightedValue = {}
 ---@field bUseTetrahedralConstraints boolean
 ---@field bUseThinShellVolumeConstraints boolean
 ---@field bUseContinuousCollisionDetection boolean
-UChaosClothConfig = {}
+local UChaosClothConfig = {}
 
 
 
@@ -59,12 +59,12 @@ UChaosClothConfig = {}
 ---@field SubdivisionCount int32
 ---@field bUseLocalSpaceSimulation boolean
 ---@field bUseXPBDConstraints boolean
-UChaosClothSharedSimConfig = {}
+local UChaosClothSharedSimConfig = {}
 
 
 
 ---@class UChaosClothingInteractor : UClothingInteractor
-UChaosClothingInteractor = {}
+local UChaosClothingInteractor = {}
 
 ---@param Drag FVector2D
 ---@param Lift FVector2D
@@ -120,10 +120,10 @@ function UChaosClothingInteractor:ResetAndTeleport(bReset, bTeleport) end
 
 
 ---@class UChaosClothingSimulationFactory : UClothingSimulationFactory
-UChaosClothingSimulationFactory = {}
+local UChaosClothingSimulationFactory = {}
 
 
 ---@class UChaosClothingSimulationInteractor : UClothingSimulationInteractor
-UChaosClothingSimulationInteractor = {}
+local UChaosClothingSimulationInteractor = {}
 
 

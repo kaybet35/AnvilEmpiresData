@@ -33,7 +33,7 @@
 ---@field __StructProperty_252 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -41,7 +41,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -99,7 +99,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field isBearStanding boolean
 ---@field posturingTimerLength double
 ---@field posturingTimerCurrent double
-UBear_ABP_C = {}
+local UBear_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UBear_ABP_C:AnimGraph(AnimGraph) end

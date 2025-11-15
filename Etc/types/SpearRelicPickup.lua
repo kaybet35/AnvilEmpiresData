@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpearRelicPickup_C : UEntityTemplate
-USpearRelicPickup_C = {}
+local USpearRelicPickup_C = {}
 
 

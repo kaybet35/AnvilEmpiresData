@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectBurningArea_C : UEntityTemplate
-UEffectBurningArea_C = {}
+local UEffectBurningArea_C = {}
 
 

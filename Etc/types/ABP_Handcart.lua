@@ -23,7 +23,7 @@
 ---@field __StructProperty_99 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -31,7 +31,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __BoolProperty boolean
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -54,7 +54,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field WheelAxleRadius double
-UABP_Handcart_C = {}
+local UABP_Handcart_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Handcart_C:AnimGraph(AnimGraph) end

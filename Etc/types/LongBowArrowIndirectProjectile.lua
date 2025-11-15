@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULongBowArrowIndirectProjectile_C : UEntityTemplate
-ULongBowArrowIndirectProjectile_C = {}
+local ULongBowArrowIndirectProjectile_C = {}
 
 

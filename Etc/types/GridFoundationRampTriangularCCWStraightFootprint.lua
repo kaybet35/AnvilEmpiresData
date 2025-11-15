@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationRampTriangularCCWStraightFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationRampTriangularCCWStraightFootprint_C = {}
+local AGridFoundationRampTriangularCCWStraightFootprint_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPOptionsMenuGameplayWidget_C : UOptionsMenuGameplayWidget
-UBPOptionsMenuGameplayWidget_C = {}
+local UBPOptionsMenuGameplayWidget_C = {}
 
 

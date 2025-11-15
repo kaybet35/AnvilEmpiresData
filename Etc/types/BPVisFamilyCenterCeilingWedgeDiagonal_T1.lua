@@ -5,7 +5,7 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisFamilyCenterCeilingWedgeDiagonal_T1_C = {}
+local ABPVisFamilyCenterCeilingWedgeDiagonal_T1_C = {}
 
 
 

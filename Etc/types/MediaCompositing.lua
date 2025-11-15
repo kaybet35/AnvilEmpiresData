@@ -4,7 +4,7 @@
 ---@field MediaSource UMediaSource
 ---@field SectionStartFrame FFrameNumber
 ---@field bLoop boolean
-FMovieSceneMediaPlayerPropertySectionTemplate = {}
+local FMovieSceneMediaPlayerPropertySectionTemplate = {}
 
 
 
@@ -17,25 +17,25 @@ FMovieSceneMediaPlayerPropertySectionTemplate = {}
 ---@field SectionEndFrame FFrameNumber
 ---@field bLooping boolean
 ---@field StartFrameOffset FFrameNumber
-FMovieSceneMediaSectionParams = {}
+local FMovieSceneMediaSectionParams = {}
 
 
 
 ---@class FMovieSceneMediaSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneMediaSectionParams
-FMovieSceneMediaSectionTemplate = {}
+local FMovieSceneMediaSectionTemplate = {}
 
 
 
 ---@class UMovieSceneMediaPlayerPropertySection : UMovieSceneSection
 ---@field MediaSource UMediaSource
 ---@field bLoop boolean
-UMovieSceneMediaPlayerPropertySection = {}
+local UMovieSceneMediaPlayerPropertySection = {}
 
 
 
 ---@class UMovieSceneMediaPlayerPropertyTrack : UMovieScenePropertyTrack
-UMovieSceneMediaPlayerPropertyTrack = {}
+local UMovieSceneMediaPlayerPropertyTrack = {}
 
 
 ---@class UMovieSceneMediaSection : UMovieSceneSection
@@ -48,13 +48,13 @@ UMovieSceneMediaPlayerPropertyTrack = {}
 ---@field ExternalMediaPlayer UMediaPlayer
 ---@field CacheSettings FMediaSourceCacheSettings
 ---@field bHasMediaPlayerProxy boolean
-UMovieSceneMediaSection = {}
+local UMovieSceneMediaSection = {}
 
 
 
 ---@class UMovieSceneMediaTrack : UMovieSceneNameableTrack
 ---@field MediaSections TArray<UMovieSceneSection>
-UMovieSceneMediaTrack = {}
+local UMovieSceneMediaTrack = {}
 
 
 

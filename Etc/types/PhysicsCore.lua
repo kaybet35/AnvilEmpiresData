@@ -8,7 +8,7 @@
 ---@field bStartAwake boolean
 ---@field bGenerateWakeEvents boolean
 ---@field bUpdateMassWhenScaleChanges boolean
-FBodyInstanceCore = {}
+local FBodyInstanceCore = {}
 
 
 
@@ -17,7 +17,7 @@ FBodyInstanceCore = {}
 ---@field PhysicsType EPhysicsType
 ---@field CollisionTraceFlag ECollisionTraceFlag
 ---@field CollisionReponse EBodyCollisionResponse::Type
-UBodySetupCore = {}
+local UBodySetupCore = {}
 
 
 
@@ -29,12 +29,12 @@ UBodySetupCore = {}
 ---@field AngularEtherDrag float
 ---@field SleepingLinearVelocityThreshold float
 ---@field SleepingAngularVelocityThreshold float
-UChaosPhysicalMaterial = {}
+local UChaosPhysicalMaterial = {}
 
 
 
 ---@class UDEPRECATED_PhysicalMaterialPropertyBase : UObject
-UDEPRECATED_PhysicalMaterialPropertyBase = {}
+local UDEPRECATED_PhysicalMaterialPropertyBase = {}
 
 
 ---@class UPhysicalMaterial : UObject
@@ -53,7 +53,7 @@ UDEPRECATED_PhysicalMaterialPropertyBase = {}
 ---@field DestructibleDamageThresholdScale float
 ---@field PhysicalMaterialProperty UDEPRECATED_PhysicalMaterialPropertyBase
 ---@field SurfaceType EPhysicalSurface
-UPhysicalMaterial = {}
+local UPhysicalMaterial = {}
 
 
 
@@ -81,7 +81,7 @@ UPhysicalMaterial = {}
 ---@field bSimulateSkeletalMeshOnDedicatedServer boolean
 ---@field DefaultShapeComplexity ECollisionTraceFlag
 ---@field SolverOptions FChaosSolverConfiguration
-UPhysicsSettingsCore = {}
+local UPhysicsSettingsCore = {}
 
 
 

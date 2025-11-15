@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemMortar_C : UVisItem
-UBPVisItemMortar_C = {}
+local UBPVisItemMortar_C = {}
 
 

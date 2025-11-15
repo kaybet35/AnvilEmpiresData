@@ -2,7 +2,7 @@
 
 ---@class UBPDismantleButtonWidget_C : UDismantleButtonWidget
 ---@field ReinforcedIconImage UImage
-UBPDismantleButtonWidget_C = {}
+local UBPDismantleButtonWidget_C = {}
 
 
 

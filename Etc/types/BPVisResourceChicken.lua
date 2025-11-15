@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisResourceChicken_C : UVisItem
-UBPVisResourceChicken_C = {}
+local UBPVisResourceChicken_C = {}
 
 

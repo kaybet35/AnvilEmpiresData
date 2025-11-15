@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationHalfRampStraight_C : UBPBaseModularEntity_C
-UGridFoundationHalfRampStraight_C = {}
+local UGridFoundationHalfRampStraight_C = {}
 
 

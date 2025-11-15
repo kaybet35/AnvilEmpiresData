@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceSinew_C : UItemTemplate
-UResourceSinew_C = {}
+local UResourceSinew_C = {}
 
 

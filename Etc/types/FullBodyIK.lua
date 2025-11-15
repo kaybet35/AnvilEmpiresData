@@ -5,7 +5,7 @@
 ---@field LimitType_Y EFBIKBoneLimitType
 ---@field LimitType_Z EFBIKBoneLimitType
 ---@field Limit FVector
-FFBIKBoneLimit = {}
+local FFBIKBoneLimit = {}
 
 
 
@@ -21,7 +21,7 @@ FFBIKBoneLimit = {}
 ---@field PoleVectorOption EPoleVectorOption
 ---@field PoleVector FVector
 ---@field OffsetRotation FRotator
-FFBIKConstraintOption = {}
+local FFBIKConstraintOption = {}
 
 
 
@@ -34,7 +34,7 @@ FFBIKConstraintOption = {}
 ---@field bDrawDebugConstraints boolean
 ---@field DrawWorldOffset FTransform
 ---@field DrawSize float
-FFBIKDebugOption = {}
+local FFBIKDebugOption = {}
 
 
 
@@ -47,14 +47,14 @@ FFBIKDebugOption = {}
 ---@field RotationAlpha float
 ---@field RotationDepth int32
 ---@field Pull float
-FFBIKEndEffector = {}
+local FFBIKEndEffector = {}
 
 
 
 ---@class FMotionProcessInput
 ---@field bForceEffectorRotationTarget boolean
 ---@field bOnlyApplyWhenReachedToTarget boolean
-FMotionProcessInput = {}
+local FMotionProcessInput = {}
 
 
 
@@ -67,12 +67,12 @@ FMotionProcessInput = {}
 ---@field bPropagateToChildren boolean
 ---@field DebugOption FFBIKDebugOption
 ---@field WorkData FRigUnit_FullbodyIK_WorkData
-FRigUnit_FullbodyIK = {}
+local FRigUnit_FullbodyIK = {}
 
 
 
 ---@class FRigUnit_FullbodyIK_WorkData
-FRigUnit_FullbodyIK_WorkData = {}
+local FRigUnit_FullbodyIK_WorkData = {}
 
 
 ---@class FSolverInput
@@ -85,7 +85,7 @@ FRigUnit_FullbodyIK_WorkData = {}
 ---@field Damping float
 ---@field MaxIterations int32
 ---@field bUseJacobianTranspose boolean
-FSolverInput = {}
+local FSolverInput = {}
 
 
 

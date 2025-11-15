@@ -1,18 +1,18 @@
 ---@meta
 
 ---@class FGameplayResourceSet
-FGameplayResourceSet = {}
+local FGameplayResourceSet = {}
 
 
 ---@class IGameplayTaskOwnerInterface : IInterface
-IGameplayTaskOwnerInterface = {}
+local IGameplayTaskOwnerInterface = {}
 
 
 ---@class UGameplayTask : UObject
 ---@field InstanceName FName
 ---@field ResourceOverlapPolicy ETaskResourceOverlapPolicy
 ---@field ChildTask UGameplayTask
-UGameplayTask = {}
+local UGameplayTask = {}
 
 function UGameplayTask:ReadyForActivation() end
 function UGameplayTask:GenericGameplayTaskDelegate__DelegateSignature() end
@@ -23,12 +23,12 @@ function UGameplayTask:EndTask() end
 ---@field ManualResourceID int32
 ---@field AutoResourceID int8
 ---@field bManuallySetID boolean
-UGameplayTaskResource = {}
+local UGameplayTaskResource = {}
 
 
 
 ---@class UGameplayTask_ClaimResource : UGameplayTask
-UGameplayTask_ClaimResource = {}
+local UGameplayTask_ClaimResource = {}
 
 ---@param InTaskOwner TScriptInterface<IGameplayTaskOwnerInterface>
 ---@param ResourceClasses TArray<TSubclassOf<UGameplayTaskResource>>
@@ -48,7 +48,7 @@ function UGameplayTask_ClaimResource:ClaimResource(InTaskOwner, ResourceClass, P
 ---@field Success FGameplayTask_SpawnActorSuccess
 ---@field DidNotSpawn FGameplayTask_SpawnActorDidNotSpawn
 ---@field ClassToSpawn TSubclassOf<AActor>
-UGameplayTask_SpawnActor = {}
+local UGameplayTask_SpawnActor = {}
 
 ---@param TaskOwner TScriptInterface<IGameplayTaskOwnerInterface>
 ---@param SpawnLocation FVector
@@ -69,13 +69,13 @@ function UGameplayTask_SpawnActor:BeginSpawningActor(WorldContextObject, Spawned
 ---@class UGameplayTask_TimeLimitedExecution : UGameplayTask
 ---@field OnFinished FGameplayTask_TimeLimitedExecutionOnFinished
 ---@field OnTimeExpired FGameplayTask_TimeLimitedExecutionOnTimeExpired
-UGameplayTask_TimeLimitedExecution = {}
+local UGameplayTask_TimeLimitedExecution = {}
 
 
 
 ---@class UGameplayTask_WaitDelay : UGameplayTask
 ---@field OnFinish FGameplayTask_WaitDelayOnFinish
-UGameplayTask_WaitDelay = {}
+local UGameplayTask_WaitDelay = {}
 
 ---@param TaskOwner TScriptInterface<IGameplayTaskOwnerInterface>
 ---@param Time float
@@ -92,7 +92,7 @@ function UGameplayTask_WaitDelay:TaskDelayDelegate__DelegateSignature() end
 ---@field KnownTasks TArray<UGameplayTask>
 ---@field OnClaimedResourcesChange FGameplayTasksComponentOnClaimedResourcesChange
 ---@field SimulatedTasks TArray<UGameplayTask>
-UGameplayTasksComponent = {}
+local UGameplayTasksComponent = {}
 
 ---@param PreviousSimulatedTasks TArray<UGameplayTask>
 function UGameplayTasksComponent:OnRep_SimulatedTasks(PreviousSimulatedTasks) end

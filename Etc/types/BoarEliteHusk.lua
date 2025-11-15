@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBoarEliteHusk_C : UEntityTemplate
-UBoarEliteHusk_C = {}
+local UBoarEliteHusk_C = {}
 
 

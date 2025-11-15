@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBearCave_C : UEntityTemplate
-UBearCave_C = {}
+local UBearCave_C = {}
 
 

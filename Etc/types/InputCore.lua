@@ -2,11 +2,11 @@
 
 ---@class FKey
 ---@field KeyName FName
-FKey = {}
+local FKey = {}
 
 
 
 ---@class UInputCoreTypes : UObject
-UInputCoreTypes = {}
+local UInputCoreTypes = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AVisHitEffectLeatherArmourGlancing_C : AVisEffect
-AVisHitEffectLeatherArmourGlancing_C = {}
+local AVisHitEffectLeatherArmourGlancing_C = {}
 
 

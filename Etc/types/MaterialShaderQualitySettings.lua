@@ -9,19 +9,19 @@
 ---@field bForceDisablePreintegratedGF boolean
 ---@field bDisableMaterialNormalCalculation boolean
 ---@field MobileShadowQuality EMobileShadowQuality
-FMaterialQualityOverrides = {}
+local FMaterialQualityOverrides = {}
 
 
 
 ---@class UMaterialShaderQualitySettings : UObject
 ---@field ForwardSettingMap TMap<FName, UShaderPlatformQualitySettings>
-UMaterialShaderQualitySettings = {}
+local UMaterialShaderQualitySettings = {}
 
 
 
 ---@class UShaderPlatformQualitySettings : UObject
 ---@field QualityOverrides FMaterialQualityOverrides
-UShaderPlatformQualitySettings = {}
+local UShaderPlatformQualitySettings = {}
 
 
 

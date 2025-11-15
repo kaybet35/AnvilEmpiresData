@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisBranchesRaw_C : AVisPickupItem
-ABPVisBranchesRaw_C = {}
+local ABPVisBranchesRaw_C = {}
 
 

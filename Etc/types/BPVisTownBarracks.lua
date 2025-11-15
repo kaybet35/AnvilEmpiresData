@@ -7,7 +7,7 @@
 ---@field RoofMesh UVisStaticMeshComponent
 ---@field BarracksMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisTownBarracks_C = {}
+local ABPVisTownBarracks_C = {}
 
 
 

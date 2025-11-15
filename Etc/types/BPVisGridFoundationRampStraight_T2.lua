@@ -22,7 +22,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationRampStraight_T2_C = {}
+local ABPVisGridFoundationRampStraight_T2_C = {}
 
 
 

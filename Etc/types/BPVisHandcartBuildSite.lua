@@ -2,7 +2,7 @@
 
 ---@class ABPVisHandcartBuildSite_C : AVisBuildSite
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisHandcartBuildSite_C = {}
+local ABPVisHandcartBuildSite_C = {}
 
 
 

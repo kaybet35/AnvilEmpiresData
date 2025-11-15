@@ -21,7 +21,7 @@
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationWallArchDiagonal_C = {}
+local ABPVisGridFoundationWallArchDiagonal_C = {}
 
 
 

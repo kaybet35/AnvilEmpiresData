@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRelicTechProgressWidget_C : URelicTechProgressWidget
-UBPRelicTechProgressWidget_C = {}
+local UBPRelicTechProgressWidget_C = {}
 
 

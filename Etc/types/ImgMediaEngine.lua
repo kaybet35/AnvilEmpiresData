@@ -2,7 +2,7 @@
 
 ---@class UImgMediaPlaybackComponent : UActorComponent
 ---@field LODBias float
-UImgMediaPlaybackComponent = {}
+local UImgMediaPlaybackComponent = {}
 
 
 

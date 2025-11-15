@@ -1,5 +1,5 @@
 ---@enum EComputeNTBsOptions
-EComputeNTBsOptions = {
+local EComputeNTBsOptions = {
     None = 0,
     Normals = 1,
     Tangents = 2,

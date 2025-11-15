@@ -4,7 +4,7 @@
 ---@field PoseableMesh UPoseableMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
-ABPVisGridFoundationCeilingInclineStraight_T2_C = {}
+local ABPVisGridFoundationCeilingInclineStraight_T2_C = {}
 
 
 

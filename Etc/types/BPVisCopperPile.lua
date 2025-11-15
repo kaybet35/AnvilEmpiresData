@@ -3,7 +3,7 @@
 ---@class ABPVisCopperPile_C : AVisResource
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
 ---@field Decal UDecalComponent
-ABPVisCopperPile_C = {}
+local ABPVisCopperPile_C = {}
 
 
 

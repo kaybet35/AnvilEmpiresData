@@ -2,7 +2,7 @@
 
 ---@class ABPVisFarmGate_C : AVisGate
 ---@field Scaffolding UStaticMeshComponent
-ABPVisFarmGate_C = {}
+local ABPVisFarmGate_C = {}
 
 
 

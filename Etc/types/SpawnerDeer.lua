@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USpawnerDeer_C : UEntityTemplate
-USpawnerDeer_C = {}
+local USpawnerDeer_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWorldRelicSiteMapIcon_C : UWorldRelicSiteMapIcon
-UBPWorldRelicSiteMapIcon_C = {}
+local UBPWorldRelicSiteMapIcon_C = {}
 
 

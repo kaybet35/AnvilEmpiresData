@@ -4,7 +4,7 @@
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field StaticMesh UStaticMeshComponent
-ACampfireSet01_C = {}
+local ACampfireSet01_C = {}
 
 
 

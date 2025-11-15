@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationHalfHeightDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationHalfHeightDiagonalFootprint_C = {}
+local AGridFoundationHalfHeightDiagonalFootprint_C = {}
 
 
 

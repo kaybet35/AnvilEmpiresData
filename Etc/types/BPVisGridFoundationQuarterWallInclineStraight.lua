@@ -10,7 +10,7 @@
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationQuarterWallInclineStraight_C = {}
+local ABPVisGridFoundationQuarterWallInclineStraight_C = {}
 
 
 

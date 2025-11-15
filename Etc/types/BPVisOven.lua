@@ -14,7 +14,7 @@
 ---@field Fire USceneComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisOven_C = {}
+local ABPVisOven_C = {}
 
 function ABPVisOven_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

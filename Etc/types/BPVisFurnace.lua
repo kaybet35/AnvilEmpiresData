@@ -9,7 +9,7 @@
 ---@field Refining UNiagaraComponent
 ---@field Fueled UNiagaraComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisFurnace_C = {}
+local ABPVisFurnace_C = {}
 
 function ABPVisFurnace_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

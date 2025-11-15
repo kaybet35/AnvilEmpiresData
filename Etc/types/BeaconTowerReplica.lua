@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBeaconTowerReplica_C : UEntityTemplate
-UBeaconTowerReplica_C = {}
+local UBeaconTowerReplica_C = {}
 
 

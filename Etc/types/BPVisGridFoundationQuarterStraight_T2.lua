@@ -22,7 +22,7 @@
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationQuarterStraight_T2_C = {}
+local ABPVisGridFoundationQuarterStraight_T2_C = {}
 
 
 

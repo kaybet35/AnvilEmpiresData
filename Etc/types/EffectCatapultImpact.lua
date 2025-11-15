@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectCatapultImpact_C : UEntityTemplate
-UEffectCatapultImpact_C = {}
+local UEffectCatapultImpact_C = {}
 
 

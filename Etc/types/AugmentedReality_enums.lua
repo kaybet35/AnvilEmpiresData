@@ -1,5 +1,5 @@
 ---@enum EARAltitudeSource
-EARAltitudeSource = {
+local EARAltitudeSource = {
     Precise = 0,
     Coarse = 1,
     UserDefined = 2,
@@ -8,14 +8,14 @@ EARAltitudeSource = {
 }
 
 ---@enum EARCandidateImageOrientation
-EARCandidateImageOrientation = {
+local EARCandidateImageOrientation = {
     Landscape = 0,
     Portrait = 1,
     EARCandidateImageOrientation_MAX = 2,
 }
 
 ---@enum EARCaptureType
-EARCaptureType = {
+local EARCaptureType = {
     Camera = 0,
     QRCode = 1,
     SpatialMapping = 2,
@@ -25,7 +25,7 @@ EARCaptureType = {
 }
 
 ---@enum EARDepthAccuracy
-EARDepthAccuracy = {
+local EARDepthAccuracy = {
     Unkown = 0,
     Approximate = 1,
     Accurate = 2,
@@ -33,7 +33,7 @@ EARDepthAccuracy = {
 }
 
 ---@enum EARDepthQuality
-EARDepthQuality = {
+local EARDepthQuality = {
     Unkown = 0,
     Low = 1,
     High = 2,
@@ -41,7 +41,7 @@ EARDepthQuality = {
 }
 
 ---@enum EAREnvironmentCaptureProbeType
-EAREnvironmentCaptureProbeType = {
+local EAREnvironmentCaptureProbeType = {
     None = 0,
     Manual = 1,
     Automatic = 2,
@@ -49,14 +49,14 @@ EAREnvironmentCaptureProbeType = {
 }
 
 ---@enum EAREye
-EAREye = {
+local EAREye = {
     LeftEye = 0,
     RightEye = 1,
     EAREye_MAX = 2,
 }
 
 ---@enum EARFaceBlendShape
-EARFaceBlendShape = {
+local EARFaceBlendShape = {
     EyeBlinkLeft = 0,
     EyeLookDownLeft = 1,
     EyeLookInLeft = 2,
@@ -122,21 +122,21 @@ EARFaceBlendShape = {
 }
 
 ---@enum EARFaceTrackingDirection
-EARFaceTrackingDirection = {
+local EARFaceTrackingDirection = {
     FaceRelative = 0,
     FaceMirrored = 1,
     EARFaceTrackingDirection_MAX = 2,
 }
 
 ---@enum EARFaceTrackingUpdate
-EARFaceTrackingUpdate = {
+local EARFaceTrackingUpdate = {
     CurvesAndGeo = 0,
     CurvesOnly = 1,
     EARFaceTrackingUpdate_MAX = 2,
 }
 
 ---@enum EARFaceTransformMixing
-EARFaceTransformMixing = {
+local EARFaceTransformMixing = {
     ComponentOnly = 0,
     ComponentLocationTrackedRotation = 1,
     ComponentWithTracked = 2,
@@ -145,14 +145,14 @@ EARFaceTransformMixing = {
 }
 
 ---@enum EARFrameSyncMode
-EARFrameSyncMode = {
+local EARFrameSyncMode = {
     SyncTickWithCameraImage = 0,
     SyncTickWithoutCameraImage = 1,
     EARFrameSyncMode_MAX = 2,
 }
 
 ---@enum EARGeoTrackingAccuracy
-EARGeoTrackingAccuracy = {
+local EARGeoTrackingAccuracy = {
     Undetermined = 0,
     Low = 1,
     Medium = 2,
@@ -161,7 +161,7 @@ EARGeoTrackingAccuracy = {
 }
 
 ---@enum EARGeoTrackingState
-EARGeoTrackingState = {
+local EARGeoTrackingState = {
     Initializing = 0,
     Localized = 1,
     Localizing = 2,
@@ -170,7 +170,7 @@ EARGeoTrackingState = {
 }
 
 ---@enum EARGeoTrackingStateReason
-EARGeoTrackingStateReason = {
+local EARGeoTrackingStateReason = {
     None = 0,
     NotAvailableAtLocation = 1,
     NeedLocationPermissions = 2,
@@ -184,14 +184,14 @@ EARGeoTrackingStateReason = {
 }
 
 ---@enum EARJointTransformSpace
-EARJointTransformSpace = {
+local EARJointTransformSpace = {
     Model = 0,
     ParentJoint = 1,
     EARJointTransformSpace_MAX = 2,
 }
 
 ---@enum EARLightEstimationMode
-EARLightEstimationMode = {
+local EARLightEstimationMode = {
     None = 0,
     AmbientLightEstimate = 1,
     DirectionalLightEstimate = 2,
@@ -199,7 +199,7 @@ EARLightEstimationMode = {
 }
 
 ---@enum EARLineTraceChannels
-EARLineTraceChannels = {
+local EARLineTraceChannels = {
     None = 0,
     FeaturePoint = 1,
     GroundPlane = 2,
@@ -209,7 +209,7 @@ EARLineTraceChannels = {
 }
 
 ---@enum EARObjectClassification
-EARObjectClassification = {
+local EARObjectClassification = {
     NotApplicable = 0,
     Unknown = 1,
     Wall = 2,
@@ -228,7 +228,7 @@ EARObjectClassification = {
 }
 
 ---@enum EARPlaneDetectionMode
-EARPlaneDetectionMode = {
+local EARPlaneDetectionMode = {
     None = 0,
     HorizontalPlaneDetection = 1,
     VerticalPlaneDetection = 2,
@@ -236,7 +236,7 @@ EARPlaneDetectionMode = {
 }
 
 ---@enum EARPlaneOrientation
-EARPlaneOrientation = {
+local EARPlaneOrientation = {
     Horizontal = 0,
     Vertical = 1,
     Diagonal = 2,
@@ -244,7 +244,7 @@ EARPlaneOrientation = {
 }
 
 ---@enum EARSceneReconstruction
-EARSceneReconstruction = {
+local EARSceneReconstruction = {
     None = 0,
     MeshOnly = 1,
     MeshWithClassification = 2,
@@ -252,7 +252,7 @@ EARSceneReconstruction = {
 }
 
 ---@enum EARServiceAvailability
-EARServiceAvailability = {
+local EARServiceAvailability = {
     UnknownError = 0,
     UnknownChecking = 1,
     UnknownTimedOut = 2,
@@ -264,7 +264,7 @@ EARServiceAvailability = {
 }
 
 ---@enum EARServiceInstallRequestResult
-EARServiceInstallRequestResult = {
+local EARServiceInstallRequestResult = {
     Installed = 0,
     DeviceNotCompatible = 1,
     UserDeclinedInstallation = 2,
@@ -273,14 +273,14 @@ EARServiceInstallRequestResult = {
 }
 
 ---@enum EARServicePermissionRequestResult
-EARServicePermissionRequestResult = {
+local EARServicePermissionRequestResult = {
     Granted = 0,
     Denied = 1,
     EARServicePermissionRequestResult_MAX = 2,
 }
 
 ---@enum EARSessionConfigFlags
-EARSessionConfigFlags = {
+local EARSessionConfigFlags = {
     None = 0,
     GenerateMeshData = 1,
     RenderMeshDataInWireframe = 2,
@@ -291,7 +291,7 @@ EARSessionConfigFlags = {
 }
 
 ---@enum EARSessionStatus
-EARSessionStatus = {
+local EARSessionStatus = {
     NotStarted = 0,
     Running = 1,
     NotSupported = 2,
@@ -303,7 +303,7 @@ EARSessionStatus = {
 }
 
 ---@enum EARSessionTrackingFeature
-EARSessionTrackingFeature = {
+local EARSessionTrackingFeature = {
     None = 0,
     PoseDetection2D = 1,
     PersonSegmentation = 2,
@@ -314,7 +314,7 @@ EARSessionTrackingFeature = {
 }
 
 ---@enum EARSessionType
-EARSessionType = {
+local EARSessionType = {
     None = 0,
     Orientation = 1,
     World = 2,
@@ -327,7 +327,7 @@ EARSessionType = {
 }
 
 ---@enum EARSpatialMeshUsageFlags
-EARSpatialMeshUsageFlags = {
+local EARSpatialMeshUsageFlags = {
     NotApplicable = 0,
     Visible = 1,
     Collision = 2,
@@ -335,7 +335,7 @@ EARSpatialMeshUsageFlags = {
 }
 
 ---@enum EARTextureType
-EARTextureType = {
+local EARTextureType = {
     Unknown = 0,
     CameraImage = 1,
     CameraDepth = 2,
@@ -348,7 +348,7 @@ EARTextureType = {
 }
 
 ---@enum EARTrackingQuality
-EARTrackingQuality = {
+local EARTrackingQuality = {
     NotTracking = 0,
     OrientationOnly = 1,
     OrientationAndPosition = 2,
@@ -356,7 +356,7 @@ EARTrackingQuality = {
 }
 
 ---@enum EARTrackingQualityReason
-EARTrackingQualityReason = {
+local EARTrackingQualityReason = {
     None = 0,
     Initializing = 1,
     Relocalizing = 2,
@@ -368,7 +368,7 @@ EARTrackingQualityReason = {
 }
 
 ---@enum EARTrackingState
-EARTrackingState = {
+local EARTrackingState = {
     Unknown = 0,
     Tracking = 1,
     NotTracking = 2,
@@ -377,7 +377,7 @@ EARTrackingState = {
 }
 
 ---@enum EARWorldAlignment
-EARWorldAlignment = {
+local EARWorldAlignment = {
     Gravity = 0,
     GravityAndHeading = 1,
     Camera = 2,
@@ -385,7 +385,7 @@ EARWorldAlignment = {
 }
 
 ---@enum EARWorldMappingState
-EARWorldMappingState = {
+local EARWorldMappingState = {
     NotAvailable = 0,
     StillMappingNotRelocalizable = 1,
     StillMappingRelocalizable = 2,
@@ -394,7 +394,7 @@ EARWorldMappingState = {
 }
 
 ---@enum EFaceComponentDebugMode
-EFaceComponentDebugMode = {
+local EFaceComponentDebugMode = {
     None = 0,
     ShowEyeVectors = 1,
     ShowFaceMesh = 2,
@@ -402,21 +402,21 @@ EFaceComponentDebugMode = {
 }
 
 ---@enum EGeoAnchorComponentDebugMode
-EGeoAnchorComponentDebugMode = {
+local EGeoAnchorComponentDebugMode = {
     None = 0,
     ShowGeoData = 1,
     EGeoAnchorComponentDebugMode_MAX = 2,
 }
 
 ---@enum EImageComponentDebugMode
-EImageComponentDebugMode = {
+local EImageComponentDebugMode = {
     None = 0,
     ShowDetectedImage = 1,
     EImageComponentDebugMode_MAX = 2,
 }
 
 ---@enum EPlaneComponentDebugMode
-EPlaneComponentDebugMode = {
+local EPlaneComponentDebugMode = {
     None = 0,
     ShowNetworkRole = 1,
     ShowClassification = 2,
@@ -424,14 +424,14 @@ EPlaneComponentDebugMode = {
 }
 
 ---@enum EPoseComponentDebugMode
-EPoseComponentDebugMode = {
+local EPoseComponentDebugMode = {
     None = 0,
     ShowSkeleton = 1,
     EPoseComponentDebugMode_MAX = 2,
 }
 
 ---@enum EQRCodeComponentDebugMode
-EQRCodeComponentDebugMode = {
+local EQRCodeComponentDebugMode = {
     None = 0,
     ShowQRCode = 1,
     EQRCodeComponentDebugMode_MAX = 2,

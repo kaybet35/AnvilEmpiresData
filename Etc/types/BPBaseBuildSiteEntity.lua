@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBaseBuildSiteEntity_C : UBaseBuildSiteEntity
-UBPBaseBuildSiteEntity_C = {}
+local UBPBaseBuildSiteEntity_C = {}
 
 

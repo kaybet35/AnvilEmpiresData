@@ -6,7 +6,7 @@
 ---@field BPMainAreaContainer_46 UBPMainAreaContainer_C
 ---@field Image UImage
 ---@field Image_84 UImage
-UBPPlayerInventoryWindow_C = {}
+local UBPPlayerInventoryWindow_C = {}
 
 
 

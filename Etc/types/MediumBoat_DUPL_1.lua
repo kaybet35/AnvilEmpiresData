@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UMediumBoat_C : UEntityTemplate
-UMediumBoat_C = {}
+local UMediumBoat_C = {}
 
 

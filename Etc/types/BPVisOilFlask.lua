@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisOilFlask_C : UVisItem
-UBPVisOilFlask_C = {}
+local UBPVisOilFlask_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTavernBuildSite_C : UBPBaseBuildSiteEntity_C
-UTavernBuildSite_C = {}
+local UTavernBuildSite_C = {}
 
 

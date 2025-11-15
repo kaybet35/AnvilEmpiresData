@@ -5,7 +5,7 @@
 ---@field ['Occupied Mesh'] UVisStaticMeshComponent
 ---@field Decal UDecalComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisFamilyBed_C = {}
+local ABPVisFamilyBed_C = {}
 
 
 

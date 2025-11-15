@@ -1,5 +1,5 @@
 ---@enum EAudioParameterType
-EAudioParameterType = {
+local EAudioParameterType = {
     None = 0,
     Boolean = 1,
     Integer = 2,
@@ -17,7 +17,7 @@ EAudioParameterType = {
 }
 
 ---@enum EPcmBitDepthConversion
-EPcmBitDepthConversion = {
+local EPcmBitDepthConversion = {
     SameAsSource = 0,
     Int16 = 1,
     Float32 = 2,

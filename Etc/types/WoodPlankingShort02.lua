@@ -8,7 +8,7 @@
 ---@field Plank1 UStaticMeshComponent
 ---@field Plank UStaticMeshComponent
 ---@field Scene USceneComponent
-AWoodPlankingShort02_C = {}
+local AWoodPlankingShort02_C = {}
 
 
 

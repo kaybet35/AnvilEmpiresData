@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceLimestone_C : UItemTemplate
-UResourceLimestone_C = {}
+local UResourceLimestone_C = {}
 
 

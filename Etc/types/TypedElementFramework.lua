@@ -1,15 +1,15 @@
 ---@meta
 
 ---@class FScriptTypedElementHandle
-FScriptTypedElementHandle = {}
+local FScriptTypedElementHandle = {}
 
 
 ---@class FScriptTypedElementListProxy
-FScriptTypedElementListProxy = {}
+local FScriptTypedElementListProxy = {}
 
 
 ---@class ITestTypedElementInterfaceA : IInterface
-ITestTypedElementInterfaceA = {}
+local ITestTypedElementInterfaceA = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InNewName FText
@@ -22,7 +22,7 @@ function ITestTypedElementInterfaceA:GetDisplayName(InElementHandle) end
 
 
 ---@class ITestTypedElementInterfaceB : IInterface
-ITestTypedElementInterfaceB = {}
+local ITestTypedElementInterfaceB = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
@@ -30,7 +30,7 @@ function ITestTypedElementInterfaceB:MarkAsTested(InElementHandle) end
 
 
 ---@class ITestTypedElementInterfaceC : IInterface
-ITestTypedElementInterfaceC = {}
+local ITestTypedElementInterfaceC = {}
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
@@ -38,23 +38,23 @@ function ITestTypedElementInterfaceC:GetIsTested(InElementHandle) end
 
 
 ---@class ITypedElementCounterInterface : IInterface
-ITypedElementCounterInterface = {}
+local ITypedElementCounterInterface = {}
 
 
 ---@class UTestTypedElementInterfaceA_ImplTyped : UObject
-UTestTypedElementInterfaceA_ImplTyped = {}
+local UTestTypedElementInterfaceA_ImplTyped = {}
 
 
 ---@class UTestTypedElementInterfaceA_ImplUntyped : UObject
-UTestTypedElementInterfaceA_ImplUntyped = {}
+local UTestTypedElementInterfaceA_ImplUntyped = {}
 
 
 ---@class UTestTypedElementInterfaceBAndC_Typed : UObject
-UTestTypedElementInterfaceBAndC_Typed = {}
+local UTestTypedElementInterfaceBAndC_Typed = {}
 
 
 ---@class UTypedElementHandleLibrary : UObject
-UTypedElementHandleLibrary = {}
+local UTypedElementHandleLibrary = {}
 
 ---@param ElementHandle FScriptTypedElementHandle
 function UTypedElementHandleLibrary:Release(ElementHandle) end
@@ -72,7 +72,7 @@ function UTypedElementHandleLibrary:Equal(LHS, RHS) end
 
 
 ---@class UTypedElementListLibrary : UObject
-UTypedElementListLibrary = {}
+local UTypedElementListLibrary = {}
 
 ---@param ElementList FScriptTypedElementListProxy
 function UTypedElementListLibrary:Shrink(ElementList) end
@@ -147,7 +147,7 @@ function UTypedElementListLibrary:Add(ElementList, ElementHandle) end
 
 
 ---@class UTypedElementRegistry : UObject
-UTypedElementRegistry = {}
+local UTypedElementRegistry = {}
 
 ---@return UTypedElementRegistry
 function UTypedElementRegistry:GetInstance() end

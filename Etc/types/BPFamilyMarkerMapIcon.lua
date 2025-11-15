@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFamilyMarkerMapIcon_C : UFamilyMarkerMapIcon
-UBPFamilyMarkerMapIcon_C = {}
+local UBPFamilyMarkerMapIcon_C = {}
 
 

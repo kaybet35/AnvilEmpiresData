@@ -2,7 +2,7 @@
 
 ---@class AGridFoundationQuarterFloorDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AGridFoundationQuarterFloorDiagonalFootprint_C = {}
+local AGridFoundationQuarterFloorDiagonalFootprint_C = {}
 
 
 

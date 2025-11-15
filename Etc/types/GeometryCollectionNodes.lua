@@ -3,20 +3,20 @@
 ---@class FBoolToStringDataflowNode : FDataflowNode
 ---@field bool boolean
 ---@field String FString
-FBoolToStringDataflowNode = {}
+local FBoolToStringDataflowNode = {}
 
 
 
 ---@class FBoundingBoxDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
 ---@field BoundingBox FBox
-FBoundingBoxDataflowNode = {}
+local FBoundingBoxDataflowNode = {}
 
 
 
 ---@class FCloseGeometryOnCollectionDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
-FCloseGeometryOnCollectionDataflowNode = {}
+local FCloseGeometryOnCollectionDataflowNode = {}
 
 
 
@@ -25,21 +25,21 @@ FCloseGeometryOnCollectionDataflowNode = {}
 ---@field CanRemoveFraction float
 ---@field CanExceedFraction float
 ---@field SimplificationDistanceThreshold float
-FCreateNonOverlappingConvexHullsDataflowNode = {}
+local FCreateNonOverlappingConvexHullsDataflowNode = {}
 
 
 
 ---@class FDegreesToRadiansDataflowNode : FDataflowNode
 ---@field Degrees float
 ---@field Radians float
-FDegreesToRadiansDataflowNode = {}
+local FDegreesToRadiansDataflowNode = {}
 
 
 
 ---@class FExampleCollectionEditDataflowNode : FDataflowNode
 ---@field Scale float
 ---@field Collection FManagedArrayCollection
-FExampleCollectionEditDataflowNode = {}
+local FExampleCollectionEditDataflowNode = {}
 
 
 
@@ -50,7 +50,7 @@ FExampleCollectionEditDataflowNode = {}
 ---@field Center FVector
 ---@field HalfExtents FVector
 ---@field Volume float
-FExpandBoundingBoxDataflowNode = {}
+local FExpandBoundingBoxDataflowNode = {}
 
 
 
@@ -59,7 +59,7 @@ FExpandBoundingBoxDataflowNode = {}
 ---@field X float
 ---@field Y float
 ---@field Z float
-FExpandVectorDataflowNode = {}
+local FExpandVectorDataflowNode = {}
 
 
 
@@ -67,7 +67,7 @@ FExpandVectorDataflowNode = {}
 ---@field Collection FManagedArrayCollection
 ---@field UniformScale float
 ---@field Scale FVector
-FExplodedViewDataflowNode = {}
+local FExplodedViewDataflowNode = {}
 
 
 
@@ -75,61 +75,61 @@ FExplodedViewDataflowNode = {}
 ---@field Function EFloatToIntFunctionEnum
 ---@field float float
 ---@field Int int32
-FFloatToIntDataflowNode = {}
+local FFloatToIntDataflowNode = {}
 
 
 
 ---@class FFloatToStringDataflowNode : FDataflowNode
 ---@field float float
 ---@field String FString
-FFloatToStringDataflowNode = {}
+local FFloatToStringDataflowNode = {}
 
 
 
 ---@class FGenerateTetrahedralCollectionDataflowNodes : FDataflowNode
 ---@field Collection FManagedArrayCollection
-FGenerateTetrahedralCollectionDataflowNodes = {}
+local FGenerateTetrahedralCollectionDataflowNodes = {}
 
 
 
 ---@class FGetCollectionAssetDataflowNode : FDataflowNode
 ---@field Output FManagedArrayCollection
-FGetCollectionAssetDataflowNode = {}
+local FGetCollectionAssetDataflowNode = {}
 
 
 
 ---@class FHashStringDataflowNode : FDataflowNode
 ---@field String FString
 ---@field Hash int32
-FHashStringDataflowNode = {}
+local FHashStringDataflowNode = {}
 
 
 
 ---@class FHashVectorDataflowNode : FDataflowNode
 ---@field Vector FVector
 ---@field Hash int32
-FHashVectorDataflowNode = {}
+local FHashVectorDataflowNode = {}
 
 
 
 ---@class FIntToFloatDataflowNode : FDataflowNode
 ---@field Int int32
 ---@field float float
-FIntToFloatDataflowNode = {}
+local FIntToFloatDataflowNode = {}
 
 
 
 ---@class FIntToStringDataflowNode : FDataflowNode
 ---@field Int int32
 ---@field String FString
-FIntToStringDataflowNode = {}
+local FIntToStringDataflowNode = {}
 
 
 
 ---@class FLogStringDataflowNode : FDataflowNode
 ---@field PrintToLog boolean
 ---@field String FString
-FLogStringDataflowNode = {}
+local FLogStringDataflowNode = {}
 
 
 
@@ -140,56 +140,56 @@ FLogStringDataflowNode = {}
 ---@field Center FVector
 ---@field Size FVector
 ---@field Box FBox
-FMakeBoxDataflowNode = {}
+local FMakeBoxDataflowNode = {}
 
 
 
 ---@class FMakeLiteralBoolDataflowNode : FDataflowNode
 ---@field Value boolean
 ---@field bool boolean
-FMakeLiteralBoolDataflowNode = {}
+local FMakeLiteralBoolDataflowNode = {}
 
 
 
 ---@class FMakeLiteralFloatDataflowNode : FDataflowNode
 ---@field Value float
 ---@field float float
-FMakeLiteralFloatDataflowNode = {}
+local FMakeLiteralFloatDataflowNode = {}
 
 
 
 ---@class FMakeLiteralIntDataflowNode : FDataflowNode
 ---@field Value int32
 ---@field Int int32
-FMakeLiteralIntDataflowNode = {}
+local FMakeLiteralIntDataflowNode = {}
 
 
 
 ---@class FMakeLiteralStringDataflowNode : FDataflowNode
 ---@field Value FString
 ---@field String FString
-FMakeLiteralStringDataflowNode = {}
+local FMakeLiteralStringDataflowNode = {}
 
 
 
 ---@class FMakeLiteralVectorDataflowNode : FDataflowNode
 ---@field Value FVector
 ---@field Vector FVector
-FMakeLiteralVectorDataflowNode = {}
+local FMakeLiteralVectorDataflowNode = {}
 
 
 
 ---@class FMakePointsDataflowNode : FDataflowNode
 ---@field Point TArray<FVector>
 ---@field Points TArray<FVector>
-FMakePointsDataflowNode = {}
+local FMakePointsDataflowNode = {}
 
 
 
 ---@class FMathConstantsDataflowNode : FDataflowNode
 ---@field Constant EMathConstantsEnum
 ---@field float float
-FMathConstantsDataflowNode = {}
+local FMathConstantsDataflowNode = {}
 
 
 
@@ -207,7 +207,7 @@ FMathConstantsDataflowNode = {}
 ---@field PointSpacing float
 ---@field AddSamplesForCollision boolean
 ---@field CollisionSampleSpacing float
-FPlaneCutterDataflowNode = {}
+local FPlaneCutterDataflowNode = {}
 
 
 
@@ -217,7 +217,7 @@ FPlaneCutterDataflowNode = {}
 ---@field Color FColor
 ---@field Duration float
 ---@field String FString
-FPrintStringDataflowNode = {}
+local FPrintStringDataflowNode = {}
 
 
 
@@ -231,14 +231,14 @@ FPrintStringDataflowNode = {}
 ---@field Variability float
 ---@field RandomSeed float
 ---@field Points TArray<FVector>
-FRadialScatterPointsDataflowNode = {}
+local FRadialScatterPointsDataflowNode = {}
 
 
 
 ---@class FRadiansToDegreesDataflowNode : FDataflowNode
 ---@field Radians float
 ---@field Degrees float
-FRadiansToDegreesDataflowNode = {}
+local FRadiansToDegreesDataflowNode = {}
 
 
 
@@ -246,7 +246,7 @@ FRadiansToDegreesDataflowNode = {}
 ---@field Deterministic boolean
 ---@field RandomSeed float
 ---@field float float
-FRandomFloatDataflowNode = {}
+local FRandomFloatDataflowNode = {}
 
 
 
@@ -256,7 +256,7 @@ FRandomFloatDataflowNode = {}
 ---@field Min float
 ---@field Max float
 ---@field float float
-FRandomFloatInRangeDataflowNode = {}
+local FRandomFloatInRangeDataflowNode = {}
 
 
 
@@ -264,7 +264,7 @@ FRandomFloatInRangeDataflowNode = {}
 ---@field Deterministic boolean
 ---@field RandomSeed float
 ---@field Vector FVector
-FRandomUnitVectorDataflowNode = {}
+local FRandomUnitVectorDataflowNode = {}
 
 
 
@@ -274,26 +274,26 @@ FRandomUnitVectorDataflowNode = {}
 ---@field ConeDirection FVector
 ---@field ConeHalfAngle float
 ---@field Vector FVector
-FRandomUnitVectorInConeDataflowNode = {}
+local FRandomUnitVectorInConeDataflowNode = {}
 
 
 
 ---@class FResetGeometryCollectionDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
-FResetGeometryCollectionDataflowNode = {}
+local FResetGeometryCollectionDataflowNode = {}
 
 
 
 ---@class FSetCollectionAssetDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
-FSetCollectionAssetDataflowNode = {}
+local FSetCollectionAssetDataflowNode = {}
 
 
 
 ---@class FSkeletalMeshToCollectionDataflowNode : FDataflowNode
 ---@field SkeletalMesh USkeletalMesh
 ---@field Collection FManagedArrayCollection
-FSkeletalMeshToCollectionDataflowNode = {}
+local FSkeletalMeshToCollectionDataflowNode = {}
 
 
 
@@ -301,7 +301,7 @@ FSkeletalMeshToCollectionDataflowNode = {}
 ---@field String1 FString
 ---@field String2 FString
 ---@field String FString
-FStringAppendDataflowNode = {}
+local FStringAppendDataflowNode = {}
 
 
 
@@ -311,14 +311,14 @@ FStringAppendDataflowNode = {}
 ---@field RandomSeed float
 ---@field BoundingBox FBox
 ---@field Points TArray<FVector>
-FUniformScatterPointsDataflowNode = {}
+local FUniformScatterPointsDataflowNode = {}
 
 
 
 ---@class FVectorToStringDataflowNode : FDataflowNode
 ---@field Vector FVector
 ---@field String FString
-FVectorToStringDataflowNode = {}
+local FVectorToStringDataflowNode = {}
 
 
 
@@ -337,7 +337,7 @@ FVectorToStringDataflowNode = {}
 ---@field PointSpacing float
 ---@field AddSamplesForCollision boolean
 ---@field CollisionSampleSpacing float
-FVoronoiFractureDataflowNode = {}
+local FVoronoiFractureDataflowNode = {}
 
 
 

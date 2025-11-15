@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWorldEntranceSandbox_C : UEntityTemplate
-UWorldEntranceSandbox_C = {}
+local UWorldEntranceSandbox_C = {}
 
 

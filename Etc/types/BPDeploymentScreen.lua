@@ -2,7 +2,7 @@
 
 ---@class UBPDeploymentScreen_C : UDeploymentScreen
 ---@field FamilyCenterDeployHeaderText UTextBlock
-UBPDeploymentScreen_C = {}
+local UBPDeploymentScreen_C = {}
 
 
 

@@ -2,7 +2,7 @@
 
 ---@class AVisJavelinImpactShieldBreak_C : AVisEffect
 ---@field Audio UAudioComponent
-AVisJavelinImpactShieldBreak_C = {}
+local AVisJavelinImpactShieldBreak_C = {}
 
 
 

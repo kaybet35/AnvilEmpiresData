@@ -1,5 +1,5 @@
 ---@enum EHMDTrackingOrigin
-EHMDTrackingOrigin = {
+local EHMDTrackingOrigin = {
     Floor = 0,
     Eye = 1,
     Stage = 2,
@@ -7,7 +7,7 @@ EHMDTrackingOrigin = {
 }
 
 ---@enum EHMDWornState
-EHMDWornState = {
+local EHMDWornState = {
     Unknown = 0,
     Worn = 1,
     NotWorn = 2,
@@ -15,7 +15,7 @@ EHMDWornState = {
 }
 
 ---@enum EHandKeypoint
-EHandKeypoint = {
+local EHandKeypoint = {
     Palm = 0,
     Wrist = 1,
     ThumbMetacarpal = 2,
@@ -46,7 +46,7 @@ EHandKeypoint = {
 }
 
 ---@enum EOrientPositionSelector
-EOrientPositionSelector = {
+local EOrientPositionSelector = {
     Orientation = 0,
     Position = 1,
     OrientationAndPosition = 2,
@@ -54,7 +54,7 @@ EOrientPositionSelector = {
 }
 
 ---@enum ESpatialInputGestureAxis
-ESpatialInputGestureAxis = {
+local ESpatialInputGestureAxis = {
     None = 0,
     Manipulation = 1,
     Navigation = 2,
@@ -63,7 +63,7 @@ ESpatialInputGestureAxis = {
 }
 
 ---@enum ESpectatorScreenMode
-ESpectatorScreenMode = {
+local ESpectatorScreenMode = {
     Disabled = 0,
     SingleEyeLetterboxed = 1,
     Undistorted = 2,
@@ -76,7 +76,7 @@ ESpectatorScreenMode = {
 }
 
 ---@enum ETrackingStatus
-ETrackingStatus = {
+local ETrackingStatus = {
     NotTracked = 0,
     InertialOnly = 1,
     Tracked = 2,
@@ -84,7 +84,7 @@ ETrackingStatus = {
 }
 
 ---@enum EXRDeviceConnectionResult
-EXRDeviceConnectionResult = {
+local EXRDeviceConnectionResult = {
     NoTrackingSystem = 0,
     FeatureNotSupported = 1,
     NoValidViewport = 2,
@@ -94,7 +94,7 @@ EXRDeviceConnectionResult = {
 }
 
 ---@enum EXRSystemFlags
-EXRSystemFlags = {
+local EXRSystemFlags = {
     NoFlags = 0,
     IsAR = 1,
     IsTablet = 2,
@@ -104,7 +104,7 @@ EXRSystemFlags = {
 }
 
 ---@enum EXRTrackedDeviceType
-EXRTrackedDeviceType = {
+local EXRTrackedDeviceType = {
     HeadMountedDisplay = 0,
     Controller = 1,
     TrackingReference = 2,
@@ -115,7 +115,7 @@ EXRTrackedDeviceType = {
 }
 
 ---@enum EXRVisualType
-EXRVisualType = {
+local EXRVisualType = {
     Controller = 0,
     Hand = 1,
     EXRVisualType_MAX = 2,

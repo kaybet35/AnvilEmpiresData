@@ -2,7 +2,7 @@
 
 ---@class ABPVisResourceMeatSmall_C : AVisPickupItem
 ---@field StaticMesh UStaticMeshComponent
-ABPVisResourceMeatSmall_C = {}
+local ABPVisResourceMeatSmall_C = {}
 
 
 

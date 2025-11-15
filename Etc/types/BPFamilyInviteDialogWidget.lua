@@ -10,7 +10,7 @@
 ---@field BPFamilyInviteDialogPlayerListEntryWidget_5 UBPFamilyInviteDialogPlayerListEntryWidget_C
 ---@field BPFamilyInviteDialogPlayerListEntryWidget_6 UBPFamilyInviteDialogPlayerListEntryWidget_C
 ---@field BPFamilyInviteDialogPlayerListEntryWidget_7 UBPFamilyInviteDialogPlayerListEntryWidget_C
-UBPFamilyInviteDialogWidget_C = {}
+local UBPFamilyInviteDialogWidget_C = {}
 
 
 

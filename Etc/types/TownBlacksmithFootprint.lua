@@ -2,7 +2,7 @@
 
 ---@class ATownBlacksmithFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ATownBlacksmithFootprint_C = {}
+local ATownBlacksmithFootprint_C = {}
 
 
 

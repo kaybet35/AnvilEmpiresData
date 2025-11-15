@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULeadPickup_C : UEntityTemplate
-ULeadPickup_C = {}
+local ULeadPickup_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBerryBushSpawner_C : UEntityTemplate
-UBerryBushSpawner_C = {}
+local UBerryBushSpawner_C = {}
 
 

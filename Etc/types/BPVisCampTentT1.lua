@@ -4,7 +4,7 @@
 ---@field OwnerFlagMesh UStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisCampTentT1_C = {}
+local ABPVisCampTentT1_C = {}
 
 
 

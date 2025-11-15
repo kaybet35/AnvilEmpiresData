@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBeaconTowerBuildsite_C : UBPBaseBuildSiteEntity_C
-UBeaconTowerBuildsite_C = {}
+local UBeaconTowerBuildsite_C = {}
 
 

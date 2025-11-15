@@ -1,5 +1,5 @@
 ---@enum ERigVMBreakpointAction
-ERigVMBreakpointAction = {
+local ERigVMBreakpointAction = {
     None = 0,
     Resume = 1,
     StepOver = 2,
@@ -9,7 +9,7 @@ ERigVMBreakpointAction = {
 }
 
 ---@enum ERigVMCopyType
-ERigVMCopyType = {
+local ERigVMCopyType = {
     Default = 0,
     FloatToDouble = 1,
     DoubleToFloat = 2,
@@ -17,7 +17,7 @@ ERigVMCopyType = {
 }
 
 ---@enum ERigVMMemoryType
-ERigVMMemoryType = {
+local ERigVMMemoryType = {
     Work = 0,
     Literal = 1,
     External = 2,
@@ -27,7 +27,7 @@ ERigVMMemoryType = {
 }
 
 ---@enum ERigVMOpCode
-ERigVMOpCode = {
+local ERigVMOpCode = {
     Execute_0_Operands = 0,
     Execute_1_Operands = 1,
     Execute_2_Operands = 2,
@@ -135,7 +135,7 @@ ERigVMOpCode = {
 }
 
 ---@enum ERigVMParameterType
-ERigVMParameterType = {
+local ERigVMParameterType = {
     Input = 0,
     Output = 1,
     Invalid = 2,
@@ -143,7 +143,7 @@ ERigVMParameterType = {
 }
 
 ---@enum ERigVMPinDirection
-ERigVMPinDirection = {
+local ERigVMPinDirection = {
     Input = 0,
     Output = 1,
     IO = 2,
@@ -154,7 +154,7 @@ ERigVMPinDirection = {
 }
 
 ---@enum ERigVMRegisterType
-ERigVMRegisterType = {
+local ERigVMRegisterType = {
     Plain = 0,
     String = 1,
     Name = 2,
@@ -164,7 +164,7 @@ ERigVMRegisterType = {
 }
 
 ---@enum ERigVMUserWorkflowType
-ERigVMUserWorkflowType = {
+local ERigVMUserWorkflowType = {
     Invalid = 0,
     NodeContext = 1,
     PinContext = 2,

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationQuarterCeilingInclineDiagonalBuildsite_C : UBPBaseFoundationModularBuildSiteEntity_C
-UGridFoundationQuarterCeilingInclineDiagonalBuildsite_C = {}
+local UGridFoundationQuarterCeilingInclineDiagonalBuildsite_C = {}
 
 

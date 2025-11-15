@@ -1,5 +1,5 @@
 ---@enum EClusterConnectionTypeEnum
-EClusterConnectionTypeEnum = {
+local EClusterConnectionTypeEnum = {
     Chaos_PointImplicit = 0,
     Chaos_DelaunayTriangulation = 1,
     Chaos_MinimalSpanningSubsetDelaunayTriangulation = 2,

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCanalEndPieceBuildSite_C : UEntityTemplate
-UCanalEndPieceBuildSite_C = {}
+local UCanalEndPieceBuildSite_C = {}
 
 

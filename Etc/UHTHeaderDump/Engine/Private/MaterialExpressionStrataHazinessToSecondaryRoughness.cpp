@@ -1,0 +1,6 @@
+#include "MaterialExpressionStrataHazinessToSecondaryRoughness.h"
+
+UMaterialExpressionStrataHazinessToSecondaryRoughness::UMaterialExpressionStrataHazinessToSecondaryRoughness() {
+}
+
+

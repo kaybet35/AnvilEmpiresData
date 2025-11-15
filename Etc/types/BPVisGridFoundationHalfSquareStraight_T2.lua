@@ -37,7 +37,7 @@
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationHalfSquareStraight_T2_C = {}
+local ABPVisGridFoundationHalfSquareStraight_T2_C = {}
 
 
 

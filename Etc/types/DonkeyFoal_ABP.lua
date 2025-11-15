@@ -24,7 +24,7 @@
 ---@field __StructProperty_97 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -32,7 +32,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty float
 ---@field __FloatProperty_0 float
 ---@field __FloatProperty_1 float
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -57,7 +57,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
-UDonkeyFoal_ABP_C = {}
+local UDonkeyFoal_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UDonkeyFoal_ABP_C:AnimGraph(AnimGraph) end

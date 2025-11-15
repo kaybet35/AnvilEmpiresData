@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHammerFlint_C : UItemTemplate
-UHammerFlint_C = {}
+local UHammerFlint_C = {}
 
 

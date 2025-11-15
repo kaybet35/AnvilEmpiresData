@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPikePickup_C : UEntityTemplate
-UPikePickup_C = {}
+local UPikePickup_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UDeer_C : UEntityTemplate
-UDeer_C = {}
+local UDeer_C = {}
 
 

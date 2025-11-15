@@ -2,7 +2,7 @@
 
 ---@class ABPVisSpearBronzeProjectile_C : AVisProjectile
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPVisSpearBronzeProjectile_C = {}
+local ABPVisSpearBronzeProjectile_C = {}
 
 
 

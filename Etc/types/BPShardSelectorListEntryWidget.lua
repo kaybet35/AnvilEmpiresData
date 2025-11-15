@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPShardSelectorListEntryWidget_C : UShardSelectorListEntryWidget
-UBPShardSelectorListEntryWidget_C = {}
+local UBPShardSelectorListEntryWidget_C = {}
 
 

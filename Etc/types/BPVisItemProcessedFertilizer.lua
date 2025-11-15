@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemProcessedFertilizer_C : UVisItem
-UBPVisItemProcessedFertilizer_C = {}
+local UBPVisItemProcessedFertilizer_C = {}
 
 

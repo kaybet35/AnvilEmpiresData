@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCombatAxe_C : UItemTemplate
-UCombatAxe_C = {}
+local UCombatAxe_C = {}
 
 

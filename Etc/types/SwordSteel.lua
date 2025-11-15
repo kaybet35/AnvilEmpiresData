@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USwordSteel_C : UItemTemplate
-USwordSteel_C = {}
+local USwordSteel_C = {}
 
 

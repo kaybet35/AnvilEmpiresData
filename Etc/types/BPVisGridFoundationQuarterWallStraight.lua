@@ -9,7 +9,7 @@
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationQuarterWallStraight_C = {}
+local ABPVisGridFoundationQuarterWallStraight_C = {}
 
 
 

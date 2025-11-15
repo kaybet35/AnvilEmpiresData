@@ -6,7 +6,7 @@
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterCorridorStraight_T2_C = {}
+local ABPVisFamilyCenterCorridorStraight_T2_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCabbagePlant_C : UEntityTemplate
-UCabbagePlant_C = {}
+local UCabbagePlant_C = {}
 
 

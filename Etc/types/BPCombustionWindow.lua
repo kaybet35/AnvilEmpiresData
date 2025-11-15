@@ -8,7 +8,7 @@
 ---@field BPFooterContainer UBPFooterContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field FuelPanel_1 UBPMainAreaContainer_C
-UBPCombustionWindow_C = {}
+local UBPCombustionWindow_C = {}
 
 
 

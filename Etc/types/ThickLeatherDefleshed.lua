@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UThickLeatherDefleshed_C : UItemTemplate
-UThickLeatherDefleshed_C = {}
+local UThickLeatherDefleshed_C = {}
 
 

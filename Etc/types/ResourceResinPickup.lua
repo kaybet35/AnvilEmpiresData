@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceResinPickup_C : UEntityTemplate
-UResourceResinPickup_C = {}
+local UResourceResinPickup_C = {}
 
 

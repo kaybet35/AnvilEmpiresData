@@ -4,7 +4,7 @@
 ---@field Billboard UBillboardComponent
 ---@field referenceMesh2 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisSpawnerBerryBush_C = {}
+local ABPVisSpawnerBerryBush_C = {}
 
 
 

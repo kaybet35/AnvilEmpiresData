@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemHalberd_C : UVisItem
-UBPVisItemHalberd_C = {}
+local UBPVisItemHalberd_C = {}
 
 

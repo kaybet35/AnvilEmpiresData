@@ -9,7 +9,7 @@
 ---@field Plank1 UStaticMeshComponent
 ---@field Plank UStaticMeshComponent
 ---@field Scene USceneComponent
-AWoodPathLong01_C = {}
+local AWoodPathLong01_C = {}
 
 
 

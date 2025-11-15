@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UMobileInstalledContent : UObject
-UMobileInstalledContent = {}
+local UMobileInstalledContent = {}
 
 ---@param PakOrder int32
 ---@param MountPoint FString
@@ -14,7 +14,7 @@ function UMobileInstalledContent:GetDiskFreeSpace() end
 
 
 ---@class UMobilePatchingLibrary : UBlueprintFunctionLibrary
-UMobilePatchingLibrary = {}
+local UMobilePatchingLibrary = {}
 
 ---@param RemoteManifestURL FString
 ---@param CloudURL FString
@@ -34,7 +34,7 @@ function UMobilePatchingLibrary:GetActiveDeviceProfileName() end
 
 
 ---@class UMobilePendingContent : UMobileInstalledContent
-UMobilePendingContent = {}
+local UMobilePendingContent = {}
 
 ---@param OnSucceeded FStartInstallOnSucceeded
 ---@param OnFailed FStartInstallOnFailed

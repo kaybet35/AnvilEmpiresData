@@ -3,11 +3,11 @@
 ---@class UDataflow : UEdGraph
 ---@field bActive boolean
 ---@field Targets TArray<UObject>
-UDataflow = {}
+local UDataflow = {}
 
 
 
 ---@class UDataflowEdNode : UEdGraphNode
-UDataflowEdNode = {}
+local UDataflowEdNode = {}
 
 

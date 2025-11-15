@@ -16,7 +16,7 @@
 ---@field StartMesh UStaticMeshComponent
 ---@field VisCanalWaterController UVisCanalWaterControllerComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisAqueductSlope10_C = {}
+local ABPVisAqueductSlope10_C = {}
 
 
 

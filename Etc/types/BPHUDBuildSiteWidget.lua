@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHUDBuildSiteWidget_C : UHUDBuildSiteWidget
-UBPHUDBuildSiteWidget_C = {}
+local UBPHUDBuildSiteWidget_C = {}
 
 

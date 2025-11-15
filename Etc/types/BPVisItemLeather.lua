@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemLeather_C : UVisItem
-UBPVisItemLeather_C = {}
+local UBPVisItemLeather_C = {}
 
 

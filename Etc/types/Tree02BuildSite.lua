@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTree02BuildSite_C : UEntityTemplate
-UTree02BuildSite_C = {}
+local UTree02BuildSite_C = {}
 
 

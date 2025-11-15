@@ -6,14 +6,14 @@
 ---@field SectionLocalBox FBox
 ---@field bEnableCollision boolean
 ---@field bSectionVisible boolean
-FProcMeshSection = {}
+local FProcMeshSection = {}
 
 
 
 ---@class FProcMeshTangent
 ---@field TangentX FVector
 ---@field bFlipTangentY boolean
-FProcMeshTangent = {}
+local FProcMeshTangent = {}
 
 
 
@@ -26,12 +26,12 @@ FProcMeshTangent = {}
 ---@field UV1 FVector2D
 ---@field UV2 FVector2D
 ---@field UV3 FVector2D
-FProcMeshVertex = {}
+local FProcMeshVertex = {}
 
 
 
 ---@class UKismetProceduralMeshLibrary : UBlueprintFunctionLibrary
-UKismetProceduralMeshLibrary = {}
+local UKismetProceduralMeshLibrary = {}
 
 ---@param InProcMesh UProceduralMeshComponent
 ---@param PlanePosition FVector
@@ -112,7 +112,7 @@ function UKismetProceduralMeshLibrary:CalculateTangentsForMesh(Vertices, Triangl
 ---@field CollisionConvexElems TArray<FKConvexElem>
 ---@field LocalBounds FBoxSphereBounds
 ---@field AsyncBodySetupQueue TArray<UBodySetup>
-UProceduralMeshComponent = {}
+local UProceduralMeshComponent = {}
 
 ---@param SectionIndex int32
 ---@param Vertices TArray<FVector>

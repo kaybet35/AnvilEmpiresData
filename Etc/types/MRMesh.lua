@@ -1,13 +1,13 @@
 ---@meta
 
 ---@class FMRMeshConfiguration
-FMRMeshConfiguration = {}
+local FMRMeshConfiguration = {}
 
 
 ---@class UMRMeshBodyHolder : UObject
 ---@field BodySetup UBodySetup
 ---@field BodyInstance FBodyInstance
-UMRMeshBodyHolder = {}
+local UMRMeshBodyHolder = {}
 
 
 
@@ -18,7 +18,7 @@ UMRMeshBodyHolder = {}
 ---@field bUpdateNavMeshOnMeshUpdate boolean
 ---@field bNeverCreateCollisionMesh boolean
 ---@field BodyHolders TArray<UMRMeshBodyHolder>
-UMRMeshComponent = {}
+local UMRMeshComponent = {}
 
 ---@param InMaterial UMaterialInterface
 function UMRMeshComponent:SetWireframeMaterial(InMaterial) end
@@ -42,7 +42,7 @@ function UMRMeshComponent:Clear() end
 
 
 ---@class UMeshReconstructorBase : UObject
-UMeshReconstructorBase = {}
+local UMeshReconstructorBase = {}
 
 function UMeshReconstructorBase:StopReconstruction() end
 function UMeshReconstructorBase:StartReconstruction() end
@@ -67,7 +67,7 @@ function UMeshReconstructorBase:ConnectMRMesh(Mesh) end
 ---@field VertexColorFromConfidenceOne FLinearColor
 ---@field UpdateInterval float
 ---@field MRMesh UMRMeshComponent
-UMockDataMeshTrackerComponent = {}
+local UMockDataMeshTrackerComponent = {}
 
 ---@param Index int32
 ---@param Vertices TArray<FVector>

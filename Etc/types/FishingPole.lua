@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFishingPole_C : UItemTemplate
-UFishingPole_C = {}
+local UFishingPole_C = {}
 
 

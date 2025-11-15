@@ -7,7 +7,7 @@
 ---@field referenceMesh4 UStaticMeshComponent
 ---@field referenceMesh2 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisRabbitSpawner_C = {}
+local ABPVisRabbitSpawner_C = {}
 
 
 

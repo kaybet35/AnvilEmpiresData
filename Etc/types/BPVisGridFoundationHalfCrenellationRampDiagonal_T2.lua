@@ -4,7 +4,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field GrassRemovalVolume1 UGrassRemovalVolumeComponent
-ABPVisGridFoundationHalfCrenellationRampDiagonal_T2_C = {}
+local ABPVisGridFoundationHalfCrenellationRampDiagonal_T2_C = {}
 
 
 

@@ -6,7 +6,7 @@
 ---@field Smoke1 UNiagaraComponent
 ---@field LargeFire UNiagaraComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisBeaconTowerT1_C = {}
+local ABPVisBeaconTowerT1_C = {}
 
 
 

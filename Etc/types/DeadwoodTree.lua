@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UDeadwoodTree_C : UEntityTemplate
-UDeadwoodTree_C = {}
+local UDeadwoodTree_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisSilverPile_C : AVisResource
-ABPVisSilverPile_C = {}
+local ABPVisSilverPile_C = {}
 
 

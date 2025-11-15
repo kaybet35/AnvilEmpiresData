@@ -9,7 +9,7 @@
 ---@field OutputChannelArray TArray<EAudioMixerChannelType>
 ---@field bIsSystemDefault boolean
 ---@field bIsCurrentDevice boolean
-FAudioOutputDeviceInfo = {}
+local FAudioOutputDeviceInfo = {}
 
 
 
@@ -17,7 +17,7 @@ FAudioOutputDeviceInfo = {}
 ---@field bEnabled boolean
 ---@field Cutoff float
 ---@field GainDb float
-FSubmixEffectDynamicProcessorFilterSettings = {}
+local FSubmixEffectDynamicProcessorFilterSettings = {}
 
 
 
@@ -43,7 +43,7 @@ FSubmixEffectDynamicProcessorFilterSettings = {}
 ---@field OutputGainDb float
 ---@field KeyHighshelf FSubmixEffectDynamicProcessorFilterSettings
 ---@field KeyLowshelf FSubmixEffectDynamicProcessorFilterSettings
-FSubmixEffectDynamicsProcessorSettings = {}
+local FSubmixEffectDynamicsProcessorSettings = {}
 
 
 
@@ -52,7 +52,7 @@ FSubmixEffectDynamicsProcessorSettings = {}
 ---@field Bandwidth float
 ---@field GainDb float
 ---@field bEnabled boolean
-FSubmixEffectEQBand = {}
+local FSubmixEffectEQBand = {}
 
 
 
@@ -73,13 +73,13 @@ FSubmixEffectEQBand = {}
 ---@field WetLevel float
 ---@field DryLevel float
 ---@field bBypass boolean
-FSubmixEffectReverbSettings = {}
+local FSubmixEffectReverbSettings = {}
 
 
 
 ---@class FSubmixEffectSubmixEQSettings
 ---@field EQBands TArray<FSubmixEffectEQBand>
-FSubmixEffectSubmixEQSettings = {}
+local FSubmixEffectSubmixEQSettings = {}
 
 
 
@@ -87,7 +87,7 @@ FSubmixEffectSubmixEQSettings = {}
 ---@field CurrentDeviceId FString
 ---@field RequestedDeviceId FString
 ---@field Result ESwapAudioOutputDeviceResultState
-FSwapAudioOutputResult = {}
+local FSwapAudioOutputResult = {}
 
 
 
@@ -98,16 +98,16 @@ FSwapAudioOutputResult = {}
 ---@field DeviceRemoved FAudioDeviceNotificationSubsystemDeviceRemoved
 ---@field DeviceStateChanged FAudioDeviceNotificationSubsystemDeviceStateChanged
 ---@field DeviceSwitched FAudioDeviceNotificationSubsystemDeviceSwitched
-UAudioDeviceNotificationSubsystem = {}
+local UAudioDeviceNotificationSubsystem = {}
 
 
 
 ---@class UAudioGenerator : UObject
-UAudioGenerator = {}
+local UAudioGenerator = {}
 
 
 ---@class UAudioMixerBlueprintLibrary : UBlueprintFunctionLibrary
-UAudioMixerBlueprintLibrary = {}
+local UAudioMixerBlueprintLibrary = {}
 
 ---@param InMegabytesToFree float
 ---@return float
@@ -270,7 +270,7 @@ function UAudioMixerBlueprintLibrary:AddMasterSubmixEffect(WorldContextObject, S
 
 
 ---@class UQuartzClockHandle : UObject
-UQuartzClockHandle = {}
+local UQuartzClockHandle = {}
 
 ---@param WorldContextObject UObject
 ---@param InQuantizationBoundary EQuartzCommandQuantization
@@ -376,7 +376,7 @@ function UQuartzClockHandle:GetBeatsPerMinute(WorldContextObject) end
 
 
 ---@class UQuartzSubsystem : UTickableWorldSubsystem
-UQuartzSubsystem = {}
+local UQuartzSubsystem = {}
 
 ---@return boolean
 function UQuartzSubsystem:IsQuartzEnabled() end
@@ -447,7 +447,7 @@ function UQuartzSubsystem:CreateNewClock(WorldContextObject, ClockName, InSettin
 
 ---@class USubmixEffectDynamicsProcessorPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectDynamicsProcessorSettings
-USubmixEffectDynamicsProcessorPreset = {}
+local USubmixEffectDynamicsProcessorPreset = {}
 
 ---@param Settings FSubmixEffectDynamicsProcessorSettings
 function USubmixEffectDynamicsProcessorPreset:SetSettings(Settings) end
@@ -460,7 +460,7 @@ function USubmixEffectDynamicsProcessorPreset:ResetKey() end
 
 ---@class USubmixEffectReverbPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectReverbSettings
-USubmixEffectReverbPreset = {}
+local USubmixEffectReverbPreset = {}
 
 ---@param InReverbEffect UReverbEffect
 ---@param WetLevel float
@@ -472,7 +472,7 @@ function USubmixEffectReverbPreset:SetSettings(InSettings) end
 
 ---@class USubmixEffectSubmixEQPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectSubmixEQSettings
-USubmixEffectSubmixEQPreset = {}
+local USubmixEffectSubmixEQPreset = {}
 
 ---@param InSettings FSubmixEffectSubmixEQSettings
 function USubmixEffectSubmixEQPreset:SetSettings(InSettings) end
@@ -503,7 +503,7 @@ function USubmixEffectSubmixEQPreset:SetSettings(InSettings) end
 ---@field OnAudioEnvelopeValue FSynthComponentOnAudioEnvelopeValue
 ---@field Synth USynthSound
 ---@field AudioComponent UAudioComponent
-USynthComponent = {}
+local USynthComponent = {}
 
 function USynthComponent:Stop() end
 function USynthComponent:Start() end
@@ -537,7 +537,7 @@ function USynthComponent:AdjustVolume(AdjustVolumeDuration, AdjustVolumeLevel, F
 
 ---@class USynthSound : USoundWaveProcedural
 ---@field OwningSynthComponent TWeakObjectPtr<USynthComponent>
-USynthSound = {}
+local USynthSound = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTorch_C : UItemTemplate
-UTorch_C = {}
+local UTorch_C = {}
 
 

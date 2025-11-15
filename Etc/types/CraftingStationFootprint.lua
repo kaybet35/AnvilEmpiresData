@@ -2,7 +2,7 @@
 
 ---@class ACraftingStationFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-ACraftingStationFootprint_C = {}
+local ACraftingStationFootprint_C = {}
 
 
 

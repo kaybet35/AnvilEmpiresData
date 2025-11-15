@@ -67,7 +67,7 @@
 ---@field VisRandomMeshDecor26 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor30 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
-ABPVisGridFoundationRoundStraight_C = {}
+local ABPVisGridFoundationRoundStraight_C = {}
 
 
 

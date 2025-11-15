@@ -1,5 +1,5 @@
 ---@enum EButtonClickMethod
-EButtonClickMethod = {
+local EButtonClickMethod = {
     DownAndUp = 0,
     MouseDown = 1,
     MouseUp = 2,
@@ -8,7 +8,7 @@ EButtonClickMethod = {
 }
 
 ---@enum EButtonPressMethod
-EButtonPressMethod = {
+local EButtonPressMethod = {
     DownAndUp = 0,
     ButtonPress = 1,
     ButtonRelease = 2,
@@ -16,7 +16,7 @@ EButtonPressMethod = {
 }
 
 ---@enum EButtonTouchMethod
-EButtonTouchMethod = {
+local EButtonTouchMethod = {
     DownAndUp = 0,
     Down = 1,
     PreciseTap = 2,
@@ -24,7 +24,7 @@ EButtonTouchMethod = {
 }
 
 ---@enum ECheckBoxState
-ECheckBoxState = {
+local ECheckBoxState = {
     Unchecked = 0,
     Checked = 1,
     Undetermined = 2,
@@ -32,7 +32,7 @@ ECheckBoxState = {
 }
 
 ---@enum EColorVisionDeficiency
-EColorVisionDeficiency = {
+local EColorVisionDeficiency = {
     NormalVision = 0,
     Deuteranope = 1,
     Protanope = 2,
@@ -41,7 +41,7 @@ EColorVisionDeficiency = {
 }
 
 ---@enum EConsumeMouseWheel
-EConsumeMouseWheel = {
+local EConsumeMouseWheel = {
     WhenScrollingPossible = 0,
     Always = 1,
     Never = 2,
@@ -49,7 +49,7 @@ EConsumeMouseWheel = {
 }
 
 ---@enum EFlowDirectionPreference
-EFlowDirectionPreference = {
+local EFlowDirectionPreference = {
     Inherit = 0,
     Culture = 1,
     LeftToRight = 2,
@@ -58,7 +58,7 @@ EFlowDirectionPreference = {
 }
 
 ---@enum EFocusCause
-EFocusCause = {
+local EFocusCause = {
     Mouse = 0,
     Navigation = 1,
     SetDirectly = 2,
@@ -69,7 +69,7 @@ EFocusCause = {
 }
 
 ---@enum EFontHinting
-EFontHinting = {
+local EFontHinting = {
     Default = 0,
     Auto = 1,
     AutoLight = 2,
@@ -79,14 +79,14 @@ EFontHinting = {
 }
 
 ---@enum EFontLayoutMethod
-EFontLayoutMethod = {
+local EFontLayoutMethod = {
     Metrics = 0,
     BoundingBox = 1,
     EFontLayoutMethod_MAX = 2,
 }
 
 ---@enum EFontLoadingPolicy
-EFontLoadingPolicy = {
+local EFontLoadingPolicy = {
     LazyLoad = 0,
     Stream = 1,
     Inline = 2,
@@ -94,7 +94,7 @@ EFontLoadingPolicy = {
 }
 
 ---@enum EHorizontalAlignment
-EHorizontalAlignment = {
+local EHorizontalAlignment = {
     HAlign_Fill = 0,
     HAlign_Left = 1,
     HAlign_Center = 2,
@@ -103,7 +103,7 @@ EHorizontalAlignment = {
 }
 
 ---@enum EMenuPlacement
-EMenuPlacement = {
+local EMenuPlacement = {
     MenuPlacement_BelowAnchor = 0,
     MenuPlacement_CenteredBelowAnchor = 1,
     MenuPlacement_BelowRightAnchor = 2,
@@ -121,7 +121,7 @@ EMenuPlacement = {
 }
 
 ---@enum ENavigationGenesis
-ENavigationGenesis = {
+local ENavigationGenesis = {
     Keyboard = 0,
     Controller = 1,
     User = 2,
@@ -129,28 +129,28 @@ ENavigationGenesis = {
 }
 
 ---@enum ENavigationSource
-ENavigationSource = {
+local ENavigationSource = {
     FocusedWidget = 0,
     WidgetUnderCursor = 1,
     ENavigationSource_MAX = 2,
 }
 
 ---@enum EOrientation
-EOrientation = {
+local EOrientation = {
     Orient_Horizontal = 0,
     Orient_Vertical = 1,
     Orient_MAX = 2,
 }
 
 ---@enum EScrollDirection
-EScrollDirection = {
+local EScrollDirection = {
     Scroll_Down = 0,
     Scroll_Up = 1,
     Scroll_MAX = 2,
 }
 
 ---@enum ESelectInfo
-ESelectInfo = {
+local ESelectInfo = {
     OnKeyPress = 0,
     OnNavigation = 1,
     OnMouseClick = 2,
@@ -159,7 +159,7 @@ ESelectInfo = {
 }
 
 ---@enum ESlateBrushDrawType
-ESlateBrushDrawType = {
+local ESlateBrushDrawType = {
     NoDrawType = 0,
     Box = 1,
     Border = 2,
@@ -169,7 +169,7 @@ ESlateBrushDrawType = {
 }
 
 ---@enum ESlateBrushImageType
-ESlateBrushImageType = {
+local ESlateBrushImageType = {
     NoImage = 0,
     FullColor = 1,
     Linear = 2,
@@ -178,7 +178,7 @@ ESlateBrushImageType = {
 }
 
 ---@enum ESlateBrushMirrorType
-ESlateBrushMirrorType = {
+local ESlateBrushMirrorType = {
     NoMirror = 0,
     Horizontal = 1,
     Vertical = 2,
@@ -187,14 +187,14 @@ ESlateBrushMirrorType = {
 }
 
 ---@enum ESlateBrushRoundingType
-ESlateBrushRoundingType = {
+local ESlateBrushRoundingType = {
     FixedRadius = 0,
     HalfHeightRadius = 1,
     ESlateBrushRoundingType_MAX = 2,
 }
 
 ---@enum ESlateBrushTileType
-ESlateBrushTileType = {
+local ESlateBrushTileType = {
     NoTile = 0,
     Horizontal = 1,
     Vertical = 2,
@@ -203,14 +203,14 @@ ESlateBrushTileType = {
 }
 
 ---@enum ESlateCheckBoxType
-ESlateCheckBoxType = {
+local ESlateCheckBoxType = {
     CheckBox = 0,
     ToggleButton = 1,
     ESlateCheckBoxType_MAX = 2,
 }
 
 ---@enum ESlateColorStylingMode
-ESlateColorStylingMode = {
+local ESlateColorStylingMode = {
     UseColor_Specified = 0,
     UseColor_ColorTable = 1,
     UseColor_Foreground = 2,
@@ -220,7 +220,7 @@ ESlateColorStylingMode = {
 }
 
 ---@enum ESlateDebuggingFocusEvent
-ESlateDebuggingFocusEvent = {
+local ESlateDebuggingFocusEvent = {
     FocusChanging = 0,
     FocusLost = 1,
     FocusReceived = 2,
@@ -228,7 +228,7 @@ ESlateDebuggingFocusEvent = {
 }
 
 ---@enum ESlateDebuggingInputEvent
-ESlateDebuggingInputEvent = {
+local ESlateDebuggingInputEvent = {
     MouseMove = 0,
     MouseEnter = 1,
     MouseLeave = 2,
@@ -259,7 +259,7 @@ ESlateDebuggingInputEvent = {
 }
 
 ---@enum ESlateDebuggingNavigationMethod
-ESlateDebuggingNavigationMethod = {
+local ESlateDebuggingNavigationMethod = {
     Unknown = 0,
     Explicit = 1,
     CustomDelegateBound = 2,
@@ -270,21 +270,21 @@ ESlateDebuggingNavigationMethod = {
 }
 
 ---@enum ESlateDebuggingStateChangeEvent
-ESlateDebuggingStateChangeEvent = {
+local ESlateDebuggingStateChangeEvent = {
     MouseCaptureGained = 0,
     MouseCaptureLost = 1,
     ESlateDebuggingStateChangeEvent_MAX = 2,
 }
 
 ---@enum ESlateParentWindowSearchMethod
-ESlateParentWindowSearchMethod = {
+local ESlateParentWindowSearchMethod = {
     ActiveWindow = 0,
     MainWindow = 1,
     ESlateParentWindowSearchMethod_MAX = 2,
 }
 
 ---@enum EStyleColor
-EStyleColor = {
+local EStyleColor = {
     Black = 0,
     Background = 1,
     Title = 2,
@@ -350,7 +350,7 @@ EStyleColor = {
 }
 
 ---@enum ETextCommit
-ETextCommit = {
+local ETextCommit = {
     Default = 0,
     OnEnter = 1,
     OnUserMovedFocus = 2,
@@ -359,14 +359,14 @@ ETextCommit = {
 }
 
 ---@enum ETextOverflowPolicy
-ETextOverflowPolicy = {
+local ETextOverflowPolicy = {
     Clip = 0,
     Ellipsis = 1,
     ETextOverflowPolicy_MAX = 2,
 }
 
 ---@enum ETextShapingMethod
-ETextShapingMethod = {
+local ETextShapingMethod = {
     Auto = 0,
     KerningOnly = 1,
     FullShaping = 2,
@@ -374,7 +374,7 @@ ETextShapingMethod = {
 }
 
 ---@enum ETextTransformPolicy
-ETextTransformPolicy = {
+local ETextTransformPolicy = {
     None = 0,
     ToLower = 1,
     ToUpper = 2,
@@ -382,7 +382,7 @@ ETextTransformPolicy = {
 }
 
 ---@enum EUINavigation
-EUINavigation = {
+local EUINavigation = {
     Left = 0,
     Right = 1,
     Up = 2,
@@ -395,7 +395,7 @@ EUINavigation = {
 }
 
 ---@enum EUINavigationAction
-EUINavigationAction = {
+local EUINavigationAction = {
     Accept = 0,
     Back = 1,
     Num = 2,
@@ -404,7 +404,7 @@ EUINavigationAction = {
 }
 
 ---@enum EUINavigationRule
-EUINavigationRule = {
+local EUINavigationRule = {
     Escape = 0,
     Explicit = 1,
     Wrap = 2,
@@ -416,7 +416,7 @@ EUINavigationRule = {
 }
 
 ---@enum EVerticalAlignment
-EVerticalAlignment = {
+local EVerticalAlignment = {
     VAlign_Fill = 0,
     VAlign_Top = 1,
     VAlign_Center = 2,
@@ -425,7 +425,7 @@ EVerticalAlignment = {
 }
 
 ---@enum EWidgetClipping
-EWidgetClipping = {
+local EWidgetClipping = {
     Inherit = 0,
     ClipToBounds = 1,
     ClipToBoundsWithoutIntersecting = 2,

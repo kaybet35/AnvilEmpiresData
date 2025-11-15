@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USheetIron_C : UItemTemplate
-USheetIron_C = {}
+local USheetIron_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULatticeMineStoneIronSquare_C : UEntityTemplate
-ULatticeMineStoneIronSquare_C = {}
+local ULatticeMineStoneIronSquare_C = {}
 
 

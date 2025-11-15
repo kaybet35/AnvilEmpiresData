@@ -4,7 +4,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterWallFlatQuarterSizeDiagonal_T2_C = {}
+local ABPVisFamilyCenterWallFlatQuarterSizeDiagonal_T2_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisBurningOilPickup_C : AVisPickupItem
-ABPVisBurningOilPickup_C = {}
+local ABPVisBurningOilPickup_C = {}
 
 

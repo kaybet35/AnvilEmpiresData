@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTownCenterKeepT2_C : UBPBaseStructureEntity_C
-UTownCenterKeepT2_C = {}
+local UTownCenterKeepT2_C = {}
 
 

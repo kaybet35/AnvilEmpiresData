@@ -6,7 +6,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterCorridorDiagonal_T1_C = {}
+local ABPVisFamilyCenterCorridorDiagonal_T1_C = {}
 
 
 

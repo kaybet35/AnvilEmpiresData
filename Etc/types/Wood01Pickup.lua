@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UWood01Pickup_C : UEntityTemplate
-UWood01Pickup_C = {}
+local UWood01Pickup_C = {}
 
 

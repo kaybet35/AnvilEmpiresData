@@ -95,7 +95,7 @@
 ---@field VisRandomMeshDecor71 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor48 UVisRandomMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationGateDiagonal_T2_C = {}
+local ABPVisGridFoundationGateDiagonal_T2_C = {}
 
 
 

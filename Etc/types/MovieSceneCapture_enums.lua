@@ -1,5 +1,5 @@
 ---@enum EHDRCaptureGamut
-EHDRCaptureGamut = {
+local EHDRCaptureGamut = {
     HCGM_Rec709 = 0,
     HCGM_P3DCI = 1,
     HCGM_Rec2020 = 2,
@@ -10,7 +10,7 @@ EHDRCaptureGamut = {
 }
 
 ---@enum EMovieSceneCaptureProtocolState
-EMovieSceneCaptureProtocolState = {
+local EMovieSceneCaptureProtocolState = {
     Idle = 0,
     Initialized = 1,
     Capturing = 2,

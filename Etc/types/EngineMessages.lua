@@ -3,33 +3,33 @@
 ---@class FEngineServiceAuthDeny
 ---@field UserName FString
 ---@field UserToDeny FString
-FEngineServiceAuthDeny = {}
+local FEngineServiceAuthDeny = {}
 
 
 
 ---@class FEngineServiceAuthGrant
 ---@field UserName FString
 ---@field UserToGrant FString
-FEngineServiceAuthGrant = {}
+local FEngineServiceAuthGrant = {}
 
 
 
 ---@class FEngineServiceExecuteCommand
 ---@field Command FString
 ---@field UserName FString
-FEngineServiceExecuteCommand = {}
+local FEngineServiceExecuteCommand = {}
 
 
 
 ---@class FEngineServiceNotification
 ---@field Text FString
 ---@field TimeSeconds double
-FEngineServiceNotification = {}
+local FEngineServiceNotification = {}
 
 
 
 ---@class FEngineServicePing
-FEngineServicePing = {}
+local FEngineServicePing = {}
 
 
 ---@class FEngineServicePong
@@ -40,13 +40,13 @@ FEngineServicePing = {}
 ---@field InstanceType FString
 ---@field SessionId FGuid
 ---@field WorldTimeSeconds float
-FEngineServicePong = {}
+local FEngineServicePong = {}
 
 
 
 ---@class FEngineServiceTerminate
 ---@field UserName FString
-FEngineServiceTerminate = {}
+local FEngineServiceTerminate = {}
 
 
 

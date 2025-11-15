@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UResourceManure_C : UItemTemplate
-UResourceManure_C = {}
+local UResourceManure_C = {}
 
 

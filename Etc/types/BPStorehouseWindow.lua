@@ -8,7 +8,7 @@
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field StructurePanel UBPAnvilPanel_C
 ---@field TimerIcon UImage
-UBPStorehouseWindow_C = {}
+local UBPStorehouseWindow_C = {}
 
 
 

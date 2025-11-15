@@ -12,7 +12,7 @@
 ---@field Plank1 UStaticMeshComponent
 ---@field Plank UStaticMeshComponent
 ---@field Scene USceneComponent
-AWoodPlankingLong02_C = {}
+local AWoodPlankingLong02_C = {}
 
 
 

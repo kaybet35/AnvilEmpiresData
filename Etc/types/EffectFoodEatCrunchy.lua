@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectFoodEatCrunchy_C : UEntityTemplate
-UEffectFoodEatCrunchy_C = {}
+local UEffectFoodEatCrunchy_C = {}
 
 

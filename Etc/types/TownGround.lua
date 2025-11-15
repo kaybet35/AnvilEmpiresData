@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTownGround_C : UBPBaseStructureEntity_C
-UTownGround_C = {}
+local UTownGround_C = {}
 
 

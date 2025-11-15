@@ -2,7 +2,7 @@
 
 ---@class ABPVisArrowProjectile_C : AVisProjectile
 ---@field Audio UAudioComponent
-ABPVisArrowProjectile_C = {}
+local ABPVisArrowProjectile_C = {}
 
 
 

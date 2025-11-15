@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisCampWallBuildSite_C : AVisSplineBuildSite
-ABPVisCampWallBuildSite_C = {}
+local ABPVisCampWallBuildSite_C = {}
 
 

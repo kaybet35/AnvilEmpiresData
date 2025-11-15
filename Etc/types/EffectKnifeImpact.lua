@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectKnifeImpact_C : UEntityTemplate
-UEffectKnifeImpact_C = {}
+local UEffectKnifeImpact_C = {}
 
 

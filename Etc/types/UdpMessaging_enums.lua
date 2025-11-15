@@ -1,5 +1,5 @@
 ---@enum EUdpMessageFormat
-EUdpMessageFormat = {
+local EUdpMessageFormat = {
     None = 0,
     Json = 1,
     TaggedProperty = 2,

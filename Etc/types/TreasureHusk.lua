@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTreasureHusk_C : UEntityTemplate
-UTreasureHusk_C = {}
+local UTreasureHusk_C = {}
 
 

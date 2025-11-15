@@ -2,7 +2,7 @@
 
 ---@class UBPAnvilButtonWidget_C : UAnvilButtonWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
-UBPAnvilButtonWidget_C = {}
+local UBPAnvilButtonWidget_C = {}
 
 ---@param IsDesignTime boolean
 function UBPAnvilButtonWidget_C:PreConstruct(IsDesignTime) end

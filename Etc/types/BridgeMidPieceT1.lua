@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBridgeMidPieceT1_C : UEntityTemplate
-UBridgeMidPieceT1_C = {}
+local UBridgeMidPieceT1_C = {}
 
 

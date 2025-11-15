@@ -10,12 +10,12 @@
 ---@field EaseOutCurrentTime float
 ---@field bIsEasingIn boolean
 ---@field bIsEasingOut boolean
-FActiveCameraAnimationInfo = {}
+local FActiveCameraAnimationInfo = {}
 
 
 
 ---@class FCameraAnimationHandle
-FCameraAnimationHandle = {}
+local FCameraAnimationHandle = {}
 
 
 ---@class FCameraAnimationParams
@@ -30,7 +30,7 @@ FCameraAnimationHandle = {}
 ---@field DurationOverride float
 ---@field PlaySpace ECameraAnimationPlaySpace
 ---@field UserPlaySpaceRot FRotator
-FCameraAnimationParams = {}
+local FCameraAnimationParams = {}
 
 
 
@@ -39,14 +39,14 @@ FCameraAnimationParams = {}
 ---@field Frequency float
 ---@field InitialOffset EInitialOscillatorOffset
 ---@field Waveform EOscillatorWaveform
-FFOscillator = {}
+local FFOscillator = {}
 
 
 
 ---@class FPerlinNoiseShaker
 ---@field Amplitude float
 ---@field Frequency float
-FPerlinNoiseShaker = {}
+local FPerlinNoiseShaker = {}
 
 
 
@@ -54,7 +54,7 @@ FPerlinNoiseShaker = {}
 ---@field Pitch FFOscillator
 ---@field Yaw FFOscillator
 ---@field Roll FFOscillator
-FROscillator = {}
+local FROscillator = {}
 
 
 
@@ -62,7 +62,7 @@ FROscillator = {}
 ---@field X FFOscillator
 ---@field Y FFOscillator
 ---@field Z FFOscillator
-FVOscillator = {}
+local FVOscillator = {}
 
 
 
@@ -70,14 +70,14 @@ FVOscillator = {}
 ---@field Amplitude float
 ---@field Frequency float
 ---@field InitialOffsetType EInitialWaveOscillatorOffsetType
-FWaveOscillator = {}
+local FWaveOscillator = {}
 
 
 
 ---@class UCameraAnimationCameraModifier : UCameraModifier
 ---@field ActiveAnimations TArray<FActiveCameraAnimationInfo>
 ---@field NextInstanceSerialNumber uint16
-UCameraAnimationCameraModifier = {}
+local UCameraAnimationCameraModifier = {}
 
 ---@param Handle FCameraAnimationHandle
 ---@param bImmediate boolean
@@ -109,23 +109,23 @@ function UCameraAnimationCameraModifier:GetCameraAnimationCameraModifier(WorldCo
 
 ---@class UCompositeCameraShakePattern : UCameraShakePattern
 ---@field ChildPatterns TArray<UCameraShakePattern>
-UCompositeCameraShakePattern = {}
+local UCompositeCameraShakePattern = {}
 
 
 
 ---@class UConstantCameraShakePattern : USimpleCameraShakePattern
 ---@field LocationOffset FVector
 ---@field RotationOffset FRotator
-UConstantCameraShakePattern = {}
+local UConstantCameraShakePattern = {}
 
 
 
 ---@class UDefaultCameraShakeBase : UCameraShakeBase
-UDefaultCameraShakeBase = {}
+local UDefaultCameraShakeBase = {}
 
 
 ---@class UGameplayCamerasFunctionLibrary : UBlueprintFunctionLibrary
-UGameplayCamerasFunctionLibrary = {}
+local UGameplayCamerasFunctionLibrary = {}
 
 ---@param CameraAnimationPlaySpace ECameraAnimationPlaySpace
 ---@return ECameraShakePlaySpace
@@ -139,7 +139,7 @@ function UGameplayCamerasFunctionLibrary:Conv_CameraAnimationCameraModifier(Play
 
 
 ---@class UGameplayCamerasSubsystem : UWorldSubsystem
-UGameplayCamerasSubsystem = {}
+local UGameplayCamerasSubsystem = {}
 
 ---@param PlayerController APlayerController
 ---@param Handle FCameraAnimationHandle
@@ -179,7 +179,7 @@ function UGameplayCamerasSubsystem:IsCameraAnimationActive(PlayerController, Han
 ---@field bRandomAnimSegment boolean
 ---@field OscillatorTimeRemaining float
 ---@field SequenceShakePattern USequenceCameraShakePattern
-ULegacyCameraShake = {}
+local ULegacyCameraShake = {}
 
 ---@param PlayerCameraManager APlayerCameraManager
 ---@param ShakeClass TSubclassOf<ULegacyCameraShake>
@@ -210,7 +210,7 @@ function ULegacyCameraShake:BlueprintUpdateCameraShake(DeltaTime, Alpha, POV, Mo
 
 
 ---@class ULegacyCameraShakeFunctionLibrary : UBlueprintFunctionLibrary
-ULegacyCameraShakeFunctionLibrary = {}
+local ULegacyCameraShakeFunctionLibrary = {}
 
 ---@param CameraShake UCameraShakeBase
 ---@return ULegacyCameraShake
@@ -218,7 +218,7 @@ function ULegacyCameraShakeFunctionLibrary:Conv_LegacyCameraShake(CameraShake) e
 
 
 ---@class ULegacyCameraShakePattern : UCameraShakePattern
-ULegacyCameraShakePattern = {}
+local ULegacyCameraShakePattern = {}
 
 
 ---@class UPerlinNoiseCameraShakePattern : USimpleCameraShakePattern
@@ -233,7 +233,7 @@ ULegacyCameraShakePattern = {}
 ---@field Yaw FPerlinNoiseShaker
 ---@field Roll FPerlinNoiseShaker
 ---@field FOV FPerlinNoiseShaker
-UPerlinNoiseCameraShakePattern = {}
+local UPerlinNoiseCameraShakePattern = {}
 
 
 
@@ -241,12 +241,12 @@ UPerlinNoiseCameraShakePattern = {}
 ---@field Duration float
 ---@field BlendInTime float
 ---@field BlendOutTime float
-USimpleCameraShakePattern = {}
+local USimpleCameraShakePattern = {}
 
 
 
 ---@class UTestCameraShake : UCameraShakeBase
-UTestCameraShake = {}
+local UTestCameraShake = {}
 
 
 ---@class UWaveOscillatorCameraShakePattern : USimpleCameraShakePattern
@@ -261,7 +261,7 @@ UTestCameraShake = {}
 ---@field Yaw FWaveOscillator
 ---@field Roll FWaveOscillator
 ---@field FOV FWaveOscillator
-UWaveOscillatorCameraShakePattern = {}
+local UWaveOscillatorCameraShakePattern = {}
 
 
 

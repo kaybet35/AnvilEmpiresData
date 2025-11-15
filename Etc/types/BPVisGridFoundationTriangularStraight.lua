@@ -42,7 +42,7 @@
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
 ---@field TopMesh UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationTriangularStraight_C = {}
+local ABPVisGridFoundationTriangularStraight_C = {}
 
 
 

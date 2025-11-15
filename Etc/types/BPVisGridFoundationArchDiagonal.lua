@@ -139,7 +139,7 @@
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationArchDiagonal_C = {}
+local ABPVisGridFoundationArchDiagonal_C = {}
 
 
 

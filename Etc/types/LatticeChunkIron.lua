@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ULatticeChunkIron_C : UEntityTemplate
-ULatticeChunkIron_C = {}
+local ULatticeChunkIron_C = {}
 
 

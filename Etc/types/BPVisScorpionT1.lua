@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisScorpionT1_C : AVisMobileWeapon
-ABPVisScorpionT1_C = {}
+local ABPVisScorpionT1_C = {}
 
 

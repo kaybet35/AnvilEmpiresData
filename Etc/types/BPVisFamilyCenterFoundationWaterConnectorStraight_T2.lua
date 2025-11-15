@@ -6,7 +6,7 @@
 ---@field PoolWaterLevel UVisCanalWaterControllerComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field Scene USceneComponent
-ABPVisFamilyCenterFoundationWaterConnectorStraight_T2_C = {}
+local ABPVisFamilyCenterFoundationWaterConnectorStraight_T2_C = {}
 
 
 

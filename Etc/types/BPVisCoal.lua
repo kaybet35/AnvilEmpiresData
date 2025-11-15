@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisCoal_C : AVisPickupItem
-ABPVisCoal_C = {}
+local ABPVisCoal_C = {}
 
 

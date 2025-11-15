@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectRockBreak_C : UEntityTemplate
-UEffectRockBreak_C = {}
+local UEffectRockBreak_C = {}
 
 

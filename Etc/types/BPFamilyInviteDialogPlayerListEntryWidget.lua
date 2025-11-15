@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFamilyInviteDialogPlayerListEntryWidget_C : UFamilyInviteDialogPlayerListEntryWidget
-UBPFamilyInviteDialogPlayerListEntryWidget_C = {}
+local UBPFamilyInviteDialogPlayerListEntryWidget_C = {}
 
 

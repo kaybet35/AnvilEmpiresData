@@ -5,7 +5,7 @@
 ---@field SharedRoot USceneComponent
 ---@field Scene USceneComponent
 ---@field Mesh UStaticMeshComponent
-ATownWall04_C = {}
+local ATownWall04_C = {}
 
 
 

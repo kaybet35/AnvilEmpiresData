@@ -8,7 +8,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field BucketProp UStaticMeshComponent
 ---@field ['Shallow Well'] UStaticMeshComponent
-ABPVisWellT2_C = {}
+local ABPVisWellT2_C = {}
 
 
 

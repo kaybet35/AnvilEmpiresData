@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisPickaxeWeak_C : UVisItem
-UBPVisPickaxeWeak_C = {}
+local UBPVisPickaxeWeak_C = {}
 
 

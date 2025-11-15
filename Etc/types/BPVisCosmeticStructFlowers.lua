@@ -8,7 +8,7 @@
 ---@field Flower2 UVisStaticMeshComponent
 ---@field Flower1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
-ABPVisCosmeticStructFlowers_C = {}
+local ABPVisCosmeticStructFlowers_C = {}
 
 
 

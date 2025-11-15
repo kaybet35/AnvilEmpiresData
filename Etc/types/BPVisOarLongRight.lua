@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisOarLongRight_C : UVisItem
-UBPVisOarLongRight_C = {}
+local UBPVisOarLongRight_C = {}
 
 

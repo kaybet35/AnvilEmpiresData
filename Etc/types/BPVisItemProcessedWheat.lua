@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemProcessedWheat_C : UVisItem
-UBPVisItemProcessedWheat_C = {}
+local UBPVisItemProcessedWheat_C = {}
 
 

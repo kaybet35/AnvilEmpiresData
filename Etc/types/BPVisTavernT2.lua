@@ -45,7 +45,7 @@
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
 ---@field Audio UAudioComponent
 ---@field RangeMarkerVisibility boolean
-ABPVisTavernT2_C = {}
+local ABPVisTavernT2_C = {}
 
 function ABPVisTavernT2_C:ReceiveBeginPlay() end
 ---@param DeltaSeconds float

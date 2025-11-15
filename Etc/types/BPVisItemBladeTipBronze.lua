@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemBladeTipBronze_C : UVisItem
-UBPVisItemBladeTipBronze_C = {}
+local UBPVisItemBladeTipBronze_C = {}
 
 

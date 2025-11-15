@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationQuarterDiagonalBuildSite_C : UBPBaseFoundationBuildSiteEntity_C
-UGridFoundationQuarterDiagonalBuildSite_C = {}
+local UGridFoundationQuarterDiagonalBuildSite_C = {}
 
 

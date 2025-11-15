@@ -5,7 +5,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field VisFoundationFillerMeshDecor UVisFoundationFillerMeshDecorComponent
 ---@field Scene USceneComponent
-ABPVisGridFoundationHalfCrenellationDiagonal_T2_C = {}
+local ABPVisGridFoundationHalfCrenellationDiagonal_T2_C = {}
 
 
 

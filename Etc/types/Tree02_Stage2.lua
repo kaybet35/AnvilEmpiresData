@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTree02_Stage2_C : UEntityTemplate
-UTree02_Stage2_C = {}
+local UTree02_Stage2_C = {}
 
 

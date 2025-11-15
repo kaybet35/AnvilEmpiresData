@@ -2,7 +2,7 @@
 
 ---@class ABPVisFlintPile_C : AVisResource
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
-ABPVisFlintPile_C = {}
+local ABPVisFlintPile_C = {}
 
 
 

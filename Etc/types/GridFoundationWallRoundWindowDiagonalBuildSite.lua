@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationWallRoundWindowDiagonalBuildSite_C : UBPBaseFoundationModularBuildSiteEntity_C
-UGridFoundationWallRoundWindowDiagonalBuildSite_C = {}
+local UGridFoundationWallRoundWindowDiagonalBuildSite_C = {}
 
 

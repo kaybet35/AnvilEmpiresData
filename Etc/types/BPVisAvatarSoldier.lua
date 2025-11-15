@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisAvatarSoldier_C : UVisItem
-UBPVisAvatarSoldier_C = {}
+local UBPVisAvatarSoldier_C = {}
 
 

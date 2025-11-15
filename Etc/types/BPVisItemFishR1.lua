@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemFishR1_C : UVisItem
-UBPVisItemFishR1_C = {}
+local UBPVisItemFishR1_C = {}
 
 

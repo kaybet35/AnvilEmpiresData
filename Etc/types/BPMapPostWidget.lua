@@ -6,7 +6,7 @@
 ---@field BPMapPostReplyWidget_2 UBPMapPostReplyWidget_C
 ---@field Image UImage
 ---@field Image_67 UImage
-UBPMapPostWidget_C = {}
+local UBPMapPostWidget_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPVisItemTrap_C : UVisItem
-UBPVisItemTrap_C = {}
+local UBPVisItemTrap_C = {}
 
 

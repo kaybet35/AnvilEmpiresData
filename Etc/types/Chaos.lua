@@ -19,12 +19,12 @@
 ---@field Iterations int32
 ---@field PushOutIterations int32
 ---@field bGenerateContactGraph boolean
-FChaosSolverConfiguration = {}
+local FChaosSolverConfiguration = {}
 
 
 
 ---@class FManagedArrayCollection
-FManagedArrayCollection = {}
+local FManagedArrayCollection = {}
 
 
 ---@class FRecordedFrame
@@ -36,13 +36,13 @@ FManagedArrayCollection = {}
 ---@field Breakings TArray<FSolverBreakingData>
 ---@field Trailings TSet<FSolverTrailingData>
 ---@field Timestamp float
-FRecordedFrame = {}
+local FRecordedFrame = {}
 
 
 
 ---@class FRecordedTransformTrack
 ---@field Records TArray<FRecordedFrame>
-FRecordedTransformTrack = {}
+local FRecordedTransformTrack = {}
 
 
 
@@ -53,7 +53,7 @@ FRecordedTransformTrack = {}
 ---@field Mass float
 ---@field ParticleIndex int32
 ---@field ParticleIndexMesh int32
-FSolverBreakingData = {}
+local FSolverBreakingData = {}
 
 
 
@@ -62,7 +62,7 @@ FSolverBreakingData = {}
 ---@field MinMass float
 ---@field MinSpeed float
 ---@field MinVolume float
-FSolverBreakingFilterSettings = {}
+local FSolverBreakingFilterSettings = {}
 
 
 
@@ -80,7 +80,7 @@ FSolverBreakingFilterSettings = {}
 ---@field LevelsetIndex int32
 ---@field ParticleIndexMesh int32
 ---@field LevelsetIndexMesh int32
-FSolverCollisionData = {}
+local FSolverCollisionData = {}
 
 
 
@@ -89,7 +89,7 @@ FSolverCollisionData = {}
 ---@field MinMass float
 ---@field MinSpeed float
 ---@field MinImpulse float
-FSolverCollisionFilterSettings = {}
+local FSolverCollisionFilterSettings = {}
 
 
 
@@ -97,7 +97,7 @@ FSolverCollisionFilterSettings = {}
 ---@field FilterEnabled boolean
 ---@field MinMass float
 ---@field MinVolume float
-FSolverRemovalFilterSettings = {}
+local FSolverRemovalFilterSettings = {}
 
 
 
@@ -108,7 +108,7 @@ FSolverRemovalFilterSettings = {}
 ---@field Mass float
 ---@field ParticleIndex int32
 ---@field ParticleIndexMesh int32
-FSolverTrailingData = {}
+local FSolverTrailingData = {}
 
 
 
@@ -117,7 +117,7 @@ FSolverTrailingData = {}
 ---@field MinMass float
 ---@field MinSpeed float
 ---@field MinVolume float
-FSolverTrailingFilterSettings = {}
+local FSolverTrailingFilterSettings = {}
 
 
 

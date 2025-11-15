@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UCrate_C : UItemTemplate
-UCrate_C = {}
+local UCrate_C = {}
 
 

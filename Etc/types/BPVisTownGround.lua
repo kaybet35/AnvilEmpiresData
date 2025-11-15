@@ -2,7 +2,7 @@
 
 ---@class ABPVisTownGround_C : AVisStructure
 ---@field UberGraphFrame FPointerToUberGraphFrame
-ABPVisTownGround_C = {}
+local ABPVisTownGround_C = {}
 
 function ABPVisTownGround_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

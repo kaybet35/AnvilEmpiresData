@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHitEffectLeatherArmourGlancing_C : UEntityTemplate
-UHitEffectLeatherArmourGlancing_C = {}
+local UHitEffectLeatherArmourGlancing_C = {}
 
 

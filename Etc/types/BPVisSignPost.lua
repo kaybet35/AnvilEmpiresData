@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisSignPost_C : AVisSignPost
-ABPVisSignPost_C = {}
+local ABPVisSignPost_C = {}
 
 

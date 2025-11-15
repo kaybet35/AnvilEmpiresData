@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UEffectMaceImpact_C : UEntityTemplate
-UEffectMaceImpact_C = {}
+local UEffectMaceImpact_C = {}
 
 

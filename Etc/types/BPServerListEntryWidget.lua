@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPServerListEntryWidget_C : UServerListEntryWidget
-UBPServerListEntryWidget_C = {}
+local UBPServerListEntryWidget_C = {}
 
 

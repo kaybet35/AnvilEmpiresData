@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBerryBushHusk_C : UEntityTemplate
-UBerryBushHusk_C = {}
+local UBerryBushHusk_C = {}
 
 

@@ -1,0 +1,13 @@
+#pragma once
+#include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=PacketHandler -ObjectName=HandlerComponentFactory -FallbackName=HandlerComponentFactory
+#include "EngineHandlerComponentFactory.generated.h"
+
+UCLASS(Blueprintable)
+class UEngineHandlerComponentFactory : public UHandlerComponentFactory {
+    GENERATED_BODY()
+public:
+    UEngineHandlerComponentFactory();
+
+};
+

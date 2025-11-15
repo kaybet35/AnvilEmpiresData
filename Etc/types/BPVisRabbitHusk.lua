@@ -2,7 +2,7 @@
 
 ---@class ABPVisRabbitHusk_C : AVisEffect
 ---@field Decal UDecalComponent
-ABPVisRabbitHusk_C = {}
+local ABPVisRabbitHusk_C = {}
 
 
 

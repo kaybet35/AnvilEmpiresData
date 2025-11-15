@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBoar_C : UEntityTemplate
-UBoar_C = {}
+local UBoar_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPVisFishingBobber_C : AVisFishingBobber
-ABPVisFishingBobber_C = {}
+local ABPVisFishingBobber_C = {}
 
 

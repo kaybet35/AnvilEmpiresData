@@ -3,14 +3,14 @@
 ---@class FGetSkeletalMeshDataflowNode : FDataflowNode
 ---@field SkeletalMesh USkeletalMesh
 ---@field PropertyName FName
-FGetSkeletalMeshDataflowNode = {}
+local FGetSkeletalMeshDataflowNode = {}
 
 
 
 ---@class FGetStaticMeshDataflowNode : FDataflowNode
 ---@field StaticMesh UStaticMesh
 ---@field PropertyName FName
-FGetStaticMeshDataflowNode = {}
+local FGetStaticMeshDataflowNode = {}
 
 
 
@@ -18,7 +18,7 @@ FGetStaticMeshDataflowNode = {}
 ---@field BoneName FName
 ---@field SkeletalMesh USkeletalMesh
 ---@field BoneIndexOut int32
-FSkeletalMeshBoneDataflowNode = {}
+local FSkeletalMeshBoneDataflowNode = {}
 
 
 

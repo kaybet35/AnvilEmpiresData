@@ -2,7 +2,7 @@
 
 ---@class AFamilyCenterPerimeterWallFlatDiagonalFootprint_C : AFootprint
 ---@field DefaultSceneRoot USceneComponent
-AFamilyCenterPerimeterWallFlatDiagonalFootprint_C = {}
+local AFamilyCenterPerimeterWallFlatDiagonalFootprint_C = {}
 
 
 

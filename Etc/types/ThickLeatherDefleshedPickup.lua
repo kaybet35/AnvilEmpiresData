@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UThickLeatherDefleshedPickup_C : UEntityTemplate
-UThickLeatherDefleshedPickup_C = {}
+local UThickLeatherDefleshedPickup_C = {}
 
 

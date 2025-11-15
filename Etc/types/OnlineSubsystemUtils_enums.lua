@@ -1,5 +1,5 @@
 ---@enum EBeaconConnectionState
-EBeaconConnectionState = {
+local EBeaconConnectionState = {
     Invalid = 0,
     Closed = 1,
     Pending = 2,
@@ -8,7 +8,7 @@ EBeaconConnectionState = {
 }
 
 ---@enum EClientRequestType
-EClientRequestType = {
+local EClientRequestType = {
     NonePending = 0,
     ExistingSessionReservation = 1,
     ReservationUpdate = 2,
@@ -21,7 +21,7 @@ EClientRequestType = {
 }
 
 ---@enum EInAppPurchaseStatus
-EInAppPurchaseStatus = {
+local EInAppPurchaseStatus = {
     Invalid = 0,
     Failed = 1,
     Deferred = 2,
@@ -32,7 +32,7 @@ EInAppPurchaseStatus = {
 }
 
 ---@enum EOnlineProxyStoreOfferDiscountType
-EOnlineProxyStoreOfferDiscountType = {
+local EOnlineProxyStoreOfferDiscountType = {
     NotOnSale = 0,
     Percentage = 1,
     DiscountAmount = 2,
@@ -41,7 +41,7 @@ EOnlineProxyStoreOfferDiscountType = {
 }
 
 ---@enum EPartyReservationResult
-EPartyReservationResult = {
+local EPartyReservationResult = {
     NoResult = 0,
     RequestPending = 1,
     GeneralError = 2,
@@ -62,7 +62,7 @@ EPartyReservationResult = {
 }
 
 ---@enum ESpectatorClientRequestType
-ESpectatorClientRequestType = {
+local ESpectatorClientRequestType = {
     NonePending = 0,
     ExistingSessionReservation = 1,
     ReservationUpdate = 2,
@@ -73,7 +73,7 @@ ESpectatorClientRequestType = {
 }
 
 ---@enum ESpectatorReservationResult
-ESpectatorReservationResult = {
+local ESpectatorReservationResult = {
     NoResult = 0,
     RequestPending = 1,
     GeneralError = 2,

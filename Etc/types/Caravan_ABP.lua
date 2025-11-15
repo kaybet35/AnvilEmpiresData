@@ -29,7 +29,7 @@
 ---@field __ArrayProperty_138 TArray<float>
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
-FAnimBlueprintGeneratedConstantData = {}
+local FAnimBlueprintGeneratedConstantData = {}
 
 
 
@@ -42,7 +42,7 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_4 float
 ---@field __FloatProperty_5 float
 ---@field __BoolProperty_6 boolean
-FAnimBlueprintGeneratedMutableData = {}
+local FAnimBlueprintGeneratedMutableData = {}
 
 
 
@@ -73,7 +73,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendListByBool FAnimNode_BlendListByBool
-UCaravan_ABP_C = {}
+local UCaravan_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
 function UCaravan_ABP_C:AnimGraph(AnimGraph) end

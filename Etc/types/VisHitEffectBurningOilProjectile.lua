@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Impact UParticleSystemComponent
 ---@field Decal UDecalComponent
-AVisHitEffectBurningOilProjectile_C = {}
+local AVisHitEffectBurningOilProjectile_C = {}
 
 function AVisHitEffectBurningOilProjectile_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

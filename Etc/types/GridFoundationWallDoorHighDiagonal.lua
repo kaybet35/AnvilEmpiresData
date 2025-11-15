@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UGridFoundationWallDoorHighDiagonal_C : UBPBaseFoundationModularEntity_C
-UGridFoundationWallDoorHighDiagonal_C = {}
+local UGridFoundationWallDoorHighDiagonal_C = {}
 
 

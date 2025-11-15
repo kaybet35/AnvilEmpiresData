@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URelicSite_C : UBPBaseStructureEntity_C
-URelicSite_C = {}
+local URelicSite_C = {}
 
 

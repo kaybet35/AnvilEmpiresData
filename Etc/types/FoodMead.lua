@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UFoodMead_C : UItemTemplate
-UFoodMead_C = {}
+local UFoodMead_C = {}
 
 

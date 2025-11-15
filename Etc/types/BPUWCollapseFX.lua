@@ -2,7 +2,7 @@
 
 ---@class UBPUWCollapseFX_C : USceneComponent
 ---@field UberGraphFrame FPointerToUberGraphFrame
-UBPUWCollapseFX_C = {}
+local UBPUWCollapseFX_C = {}
 
 function UBPUWCollapseFX_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

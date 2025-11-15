@@ -7,7 +7,7 @@
 ---@field referenceMesh4 UStaticMeshComponent
 ---@field referenceMesh2 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPVisFishingSpotSpawner_C = {}
+local ABPVisFishingSpotSpawner_C = {}
 
 
 

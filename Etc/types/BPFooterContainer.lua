@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFooterContainer_C : UFooterContainer
-UBPFooterContainer_C = {}
+local UBPFooterContainer_C = {}
 
 

@@ -21,7 +21,7 @@
 ---@field FF UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field DebugSphere UStaticMeshComponent
-ABpVisTownCenterKeepT3_C = {}
+local ABpVisTownCenterKeepT3_C = {}
 
 ---@param DeltaSeconds float
 function ABpVisTownCenterKeepT3_C:ReceiveTick(DeltaSeconds) end

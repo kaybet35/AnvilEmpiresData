@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Decal UDecalComponent
 ---@field Audio UAudioComponent
-ABPVisBurningOilprojectile_C = {}
+local ABPVisBurningOilprojectile_C = {}
 
 function ABPVisBurningOilprojectile_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

@@ -1,16 +1,16 @@
 ---@meta
 
 ---@class USteamAuthComponentModuleInterface : UHandlerComponentFactory
-USteamAuthComponentModuleInterface = {}
+local USteamAuthComponentModuleInterface = {}
 
 
 ---@class USteamNetConnection : UIpConnection
 ---@field bIsPassthrough boolean
-USteamNetConnection = {}
+local USteamNetConnection = {}
 
 
 
 ---@class USteamNetDriver : UIpNetDriver
-USteamNetDriver = {}
+local USteamNetDriver = {}
 
 

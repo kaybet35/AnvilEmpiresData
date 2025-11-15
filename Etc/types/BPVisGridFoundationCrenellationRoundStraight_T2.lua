@@ -19,7 +19,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field VisFoundationFillerMeshDecor1 UVisFoundationFillerMeshDecorComponent
 ---@field Scene1 USceneComponent
-ABPVisGridFoundationCrenellationRoundStraight_T2_C = {}
+local ABPVisGridFoundationCrenellationRoundStraight_T2_C = {}
 
 
 

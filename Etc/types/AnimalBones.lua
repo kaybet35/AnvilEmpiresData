@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UAnimalBones_C : UItemTemplate
-UAnimalBones_C = {}
+local UAnimalBones_C = {}
 
 

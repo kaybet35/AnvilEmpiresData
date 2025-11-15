@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UHeatingVat_C : UBPBaseStructureEntity_C
-UHeatingVat_C = {}
+local UHeatingVat_C = {}
 
 

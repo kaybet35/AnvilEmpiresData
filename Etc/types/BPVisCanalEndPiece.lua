@@ -7,7 +7,7 @@
 ---@field AngleTrimRight UVisStaticMeshComponent
 ---@field BalljointBase UVisStaticMeshComponent
 ---@field Base USceneComponent
-ABPVisCanalEndPiece_C = {}
+local ABPVisCanalEndPiece_C = {}
 
 
 

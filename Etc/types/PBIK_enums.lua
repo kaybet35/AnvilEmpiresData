@@ -1,5 +1,5 @@
 ---@enum EPBIKLimitType
-EPBIKLimitType = {
+local EPBIKLimitType = {
     Free = 0,
     Limited = 1,
     Locked = 2,
@@ -7,7 +7,7 @@ EPBIKLimitType = {
 }
 
 ---@enum EPBIKRootBehavior
-EPBIKRootBehavior = {
+local EPBIKRootBehavior = {
     PrePull = 0,
     PinToInput = 1,
     Free = 2,

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWorldEntityInventoryGridItem_C : UWorldEntityInventoryGridItem
-UBPWorldEntityInventoryGridItem_C = {}
+local UBPWorldEntityInventoryGridItem_C = {}
 
 
